@@ -1,0 +1,6 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🚀 Running pre-push tasks 🚀"
+npm run test:ci
+echo "🏁 Finished pre-push tasks 🏁"

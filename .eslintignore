@@ -1,0 +1,8 @@
+*.js
+.cache
+.git
+.github
+.idea
+coverage
+dist
+node_modules
