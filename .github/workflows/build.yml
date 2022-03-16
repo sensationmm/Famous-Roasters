@@ -59,4 +59,4 @@ jobs:
           path: coverage
 
       - name: Build & Package
-        run: yarn run build:ci
+        run: yarn run build
