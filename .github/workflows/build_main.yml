@@ -1,18 +1,17 @@
 # This workflow will run tests and build the docker container
 # for any branch different to main
 
-name: Test and Build
+name: Test, Build and Push
 
 on:
   push:
     branches:
-      - '**'
-      - '!main'
+      - main
 
 jobs:
 
-  test-and-build:
-    environment: test
+  test-build-and-push:
+    environment: prod
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -41,6 +40,16 @@ jobs:
           path: node_modules
           key: node-modules-${{ hashFiles('**/package-lock.json') }}
 
+      - name: Configure amplify
+        uses: ambientlight/amplify-cli-action@0.3.0
+        with:
+          amplify_command: configure
+          amplify_env: prod
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: eu-central-1
+
       - name: Install dependencies
         run: yarn install
 
@@ -59,3 +68,14 @@ jobs:
 
       - name: Build & Package
         run: yarn run build
+
+      - name: Deploy
+        uses: ambientlight/amplify-cli-action@0.3.0
+        with:
+          amplify_command: publish
+          amplify_env: prod
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: eu-central-1
+
