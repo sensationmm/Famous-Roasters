@@ -8,10 +8,6 @@
       "enableIterativeGSIUpdates": true,
       "secondaryKeyAsGSI": true,
       "skipOverrideMutationInputTypes": true,
-      "transformerVersion": 2,
-      "suppressSchemaMigrationPrompt": true,
-      "securityEnhancementNotification": false,
-      "showFieldAuthNotification": false
     },
     "frontend-ios": {
       "enableXcodeIntegration": true
@@ -21,7 +17,6 @@
       "useInclusiveTerminology": true,
       "breakCircularDependency": true,
       "forceAliasAttributes": false,
-      "useEnabledMFas": true
     },
     "codegen": {
       "useAppSyncModelGenPlugin": true,
@@ -45,9 +40,6 @@
       "rekognition": 1,
       "textRAct": 1,
       "comprehend": 1
-    },
-    "project": {
-      "overrides": true
     }
   }
 }
