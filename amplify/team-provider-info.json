@@ -10,6 +10,14 @@
       "StackName": "amplify-frontend-staging-11355",
       "StackId": "arn:aws:cloudformation:eu-central-1:169376574665:stack/amplify-frontend-staging-11355/2443bdb0-a587-11ec-ad94-0a799df39f3c",
       "AmplifyAppId": "d3t04dzytg0afb"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d3t04dzytg0afb",
+          "type": "manual"
+        }
+      }
     }
   }
 }
