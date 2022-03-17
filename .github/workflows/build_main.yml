@@ -11,7 +11,7 @@ on:
 jobs:
 
   test-build-and-push:
-    environment: prod
+    environment: staging
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
