@@ -1,24 +1,4 @@
 {
   "features": {
-    "codegen": {
-      "useAppSyncModelGenPlugin": true,
-      "useDocsGeneratorPlugin": true,
-      "useTypesGeneratorPlugin": true,
-      "cleanGeneratedModelsDirectory": true,
-      "retainCaseStyle": true,
-      "addTimestampFields": true,
-      "handleListNullabilityTransparently": true,
-      "emitAuthProvider": true,
-      "generateIndexRules": true,
-      "enabledArtNullSafety": true
-    },
-    "latestRegionSupport": {
-      "pinpoint": 1,
-      "translate": 1,
-      "transcribe": 1,
-      "rekognition": 1,
-      "textRAct": 1,
-      "comprehend": 1
-    }
   }
 }
