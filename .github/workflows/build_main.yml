@@ -7,6 +7,12 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+    inputs:
+      region:
+        description: 'AWS Region to deploy to'
+        required: true
+        default: 'eu-central-1'
 
 jobs:
 
