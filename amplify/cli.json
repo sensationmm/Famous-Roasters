@@ -1,24 +1,5 @@
 {
   "features": {
-    "graphQLTransformer": {
-      "addMissingOwnerFields": true,
-      "improvePluralization": false,
-      "validateTypeNameReservedWords": true,
-      "useExperimentalPipelinedTransformer": true,
-      "enableIterativeGSIUpdates": true,
-      "secondaryKeyAsGSI": true,
-      "skipOverrideMutationInputTypes": true,
-      "transformerVersion": 2
-    },
-    "frontend-ios": {
-      "enableXcodeIntegration": true
-    },
-    "auth": {
-      "enableCaseInsensitivity": true,
-      "useInclusiveTerminology": true,
-      "breakCircularDependency": true,
-      "forceAliasAttributes": false
-    },
     "codegen": {
       "useAppSyncModelGenPlugin": true,
       "useDocsGeneratorPlugin": true,
@@ -30,9 +11,6 @@
       "emitAuthProvider": true,
       "generateIndexRules": true,
       "enabledArtNullSafety": true
-    },
-    "appsync": {
-      "generateGraphQLPermissions": true
     },
     "latestRegionSupport": {
       "pinpoint": 1,
