@@ -1,10 +1,12 @@
-import { render, screen } from '@testing-library/react'
+import { render, waitFor } from '@testing-library/react'
 import React from 'react'
 
 import App from './App'
 
-test('renders learn react link', () => {
-  render(<App />)
-  const linkElement = screen.getByText(/hello Roaster!/i)
-  expect(linkElement).toBeInTheDocument()
+describe('App', () => {
+  it('Renders correctly', async () => {
+    const { container } = render(<App />)
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
 })
