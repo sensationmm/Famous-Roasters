@@ -17,7 +17,7 @@ on:
 jobs:
 
   test-build-deploy:
-    environment: test
+    environment: staging
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
