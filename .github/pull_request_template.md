@@ -1,5 +1,7 @@
 ## Description
 <!--- Describe your changes in detail -->
+✅ ...
+✅ ...
 
 ## Ticket(s)
 <!--- Link to the ticket(s) -->
@@ -19,8 +21,6 @@
 - [ ] I have tested my code locally.
 - [ ] I have added tests to cover my changes.
 - [ ] I have updated the documentation accordingly.
-- [ ] I have updated the ticket(s).
-- [ ] I have created follow up ticket(s) for anything related not covered here.
 - [ ] All new and existing tests passed.
 
 ## TODOs:
