@@ -9,6 +9,8 @@ module.exports = {
         colors: {
             transparent: 'transparent',
             current: 'currentColor',
+            primary: '#212121',
+            secondary: '#D4FF81',
             black: '#212121',
             grey: {
                 mine: '#343434',
@@ -30,14 +32,6 @@ module.exports = {
         screens: {
             md: '641px',
             xl: '1025px',
-        },
-        spacing: {
-            '1': '8px',
-            '2': '12px',
-            '3': '16px',
-            '4': '24px',
-            '5': '32px',
-            '6': '48px',
         },
     },
     plugins: [],

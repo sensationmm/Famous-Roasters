@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button component Renders correctly 1`] = `
+<div>
+  <button
+    class="inline-flex items-center font-bold px-4 py-2 text-base text-white bg-primary rounded-full"
+    role="button"
+  >
+    CTA
+  </button>
+</div>
+`;
