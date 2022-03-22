@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App Renders correctly 1`] = `
+exports[`Checkout view Renders correctly 1`] = `
 <div>
   <main
     class="h-screen flex items-center justify-center bg-grey-whisper"
@@ -24,7 +24,7 @@ exports[`App Renders correctly 1`] = `
       <div
         class="text-center"
       >
-        Homepage
+        Checkout page
       </div>
     </div>
   </main>
