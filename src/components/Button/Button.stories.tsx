@@ -14,7 +14,6 @@ export const Default = Template.bind({})
 Default.args = {
   emphasis: Emphasis.Contained,
   color: Color.Primary,
-  size: Size.lg,
   children: 'Button',
 }
 
@@ -22,7 +21,6 @@ export const PrimaryContained = Template.bind({})
 PrimaryContained.args = {
   emphasis: Emphasis.Contained,
   color: Color.Primary,
-  size: Size.md,
   children: 'Button',
 }
 
