@@ -2,13 +2,13 @@ import { render, waitFor } from '@testing-library/react'
 import React from 'react'
 import { MemoryRouter } from 'react-router-dom'
 
-import { Placeholder } from '.'
+import { Product } from '.'
 
-describe('Placeholder view', () => {
+describe('Product view', () => {
   it('Renders correctly', async () => {
     const { container } = render(
-      <MemoryRouter initialEntries={['/']}>
-        <Placeholder />
+      <MemoryRouter initialEntries={['/product/:id']}>
+        <Product />
       </MemoryRouter>,
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
