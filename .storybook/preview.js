@@ -18,5 +18,3 @@ export const parameters = {
     },
   },
 }
-
-console.log("INITIAL VIEWPORTS", INITIAL_VIEWPORTS)

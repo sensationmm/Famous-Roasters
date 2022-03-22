@@ -2,6 +2,9 @@
 
 exports[`Home view Renders correctly 1`] = `
 <div>
+  <div>
+    Navigation
+  </div>
   <main
     class="h-screen flex items-center justify-center bg-grey-whisper"
   >

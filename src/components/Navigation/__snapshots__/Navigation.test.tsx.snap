@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation component Renders correctly 1`] = `
+<div>
+  <div>
+    Navigation
+  </div>
+</div>
+`;
