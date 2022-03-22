@@ -105,6 +105,7 @@
   "jest": {
     "coveragePathIgnorePatterns": [
       "<rootDir>/src/index.tsx",
+      "<rootDir>/.*.stories.tsx$",
       "<rootDir>/src/reportWebVitals.ts"
     ]
   }

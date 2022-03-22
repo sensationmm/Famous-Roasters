@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import React from 'react'
 
-import { Button, Color, Emphasis, Size } from './Button'
+import { Button, Color, Emphasis } from './Button'
 
 export default {
   title: 'Components/Button',
