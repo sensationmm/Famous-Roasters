@@ -98,7 +98,9 @@
     "webpack": "5"
   },
   "resolutions": {
+    "glob-parent": "^5.1.2",
     "nth-check": "^2.0.1",
+    "trim": "^0.0.3",
     "webpack": "^5",
     "workbox-webpack-plugin": "6.2.0"
   },
