@@ -1,7 +1,7 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import React from 'react'
 
-import { Button, ButtonColor,ButtonEmphasis, ButtonSize } from '.'
+import { Button, ButtonColor, ButtonEmphasis, ButtonSize } from '.'
 
 global.alert = jest.fn()
 
