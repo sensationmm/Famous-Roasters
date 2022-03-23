@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout component Renders correctly 1`] = `
+<div>
+  <div
+    class="min-h-screen flex flex-col"
+  >
+    <span>
+      Test
+    </span>
+  </div>
+</div>
+`;
