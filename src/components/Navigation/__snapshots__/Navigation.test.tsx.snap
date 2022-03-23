@@ -52,7 +52,7 @@ exports[`Navigation component Renders correctly 1`] = `
               class="h-full flex space-x-8"
             >
               <a
-                class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                class="flex items-center text-gray-700 hover:text-gray-800"
                 href="/catalogue"
               >
                 Catalogue

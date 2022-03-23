@@ -83,11 +83,7 @@ export const Navigation: React.FC = () => {
             <Popover.Group className="hidden xl:flex-1 xl:block xl:self-stretch">
               <div className="h-full flex space-x-8">
                 {navigation.pages.map((page) => (
-                  <Link
-                    key={page.name}
-                    to={page.href}
-                    className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
-                  >
+                  <Link key={page.name} to={page.href} className="flex items-center text-gray-700 hover:text-gray-800">
                     {page.name}
                   </Link>
                 ))}
