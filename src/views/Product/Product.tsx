@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { Layout, Navigation } from 'src/components'
+import { Layout } from 'src/components'
 
 export const Product: React.FC = () => {
   const { id } = useParams()
@@ -10,7 +10,6 @@ export const Product: React.FC = () => {
 
   return (
     <Layout>
-      <Navigation />
       <main className="flex-grow flex items-center justify-center bg-grey-whisper">
         <div>
           <div className="font-syne flex justify-center text-4xl md:text-5xl xl:text-6xl">

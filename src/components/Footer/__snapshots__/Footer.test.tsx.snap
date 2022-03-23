@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component Renders correctly 1`] = `
+<div>
+  <footer
+    class="bg-white"
+  >
+    <div
+      class="max-w-7xl mx-auto py-6 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8"
+    >
+      <div
+        class="md:order-1"
+      >
+        <p
+          class="text-center text-base text-gray-400"
+        >
+          © 
+          2022
+           Famous Roasters. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+</div>
+`;
