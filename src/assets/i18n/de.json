@@ -1,0 +1,29 @@
+{
+  "brand": {
+    "name": "Famous Roasters",
+    "copyright": "© {{year}} Famous Roasters. Alle Rechte vorbehalten."
+  },
+  "navigation": {
+    "catalogue": "Katalog"
+  },
+  "pages": {
+    "catalogue": {
+      "title":"Katalog"
+    },
+    "checkout": {
+      "title":"Checkout"
+    },
+    "cart": {
+      "title":"Warenkorb"
+    },
+    "error": {
+      "title":"Fehler"
+    },
+    "home": {
+      "title":"Home"
+    },
+    "product": {
+      "title":"Produkt"
+    }
+  }
+}

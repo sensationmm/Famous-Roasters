@@ -2,14 +2,16 @@ import { Dialog, Popover, Transition } from '@headlessui/react'
 import { MenuIcon, ShoppingBagIcon, XIcon } from '@heroicons/react/outline'
 import React from 'react'
 import { Fragment, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
 const navigation = {
-  pages: [{ name: 'Catalogue', href: '/catalogue' }],
+  pages: [{ key: 'catalogue', href: '/catalogue' }],
 }
 
 export const Navigation: React.FC = () => {
   const [open, setOpen] = useState(false)
+  const { t } = useTranslation()
 
   return (
     <div className="bg-white">
@@ -52,9 +54,9 @@ export const Navigation: React.FC = () => {
 
               <div className="border-t border-gray-200 py-6 px-4 space-y-6">
                 {navigation.pages.map((page) => (
-                  <div key={page.name} className="flow-root">
+                  <div key={page.key} className="flow-root">
                     <Link to={page.href} className="-m-2 p-2 block font-medium text-gray-900">
-                      {page.name}
+                      {t(`navigation.${page.key}`)}
                     </Link>
                   </div>
                 ))}
@@ -83,8 +85,8 @@ export const Navigation: React.FC = () => {
             <Popover.Group className="hidden xl:flex-1 xl:block xl:self-stretch">
               <div className="h-full flex space-x-8">
                 {navigation.pages.map((page) => (
-                  <Link key={page.name} to={page.href} className="flex items-center text-gray-700 hover:text-gray-800">
-                    {page.name}
+                  <Link key={page.key} to={page.href} className="flex items-center text-gray-700 hover:text-gray-800">
+                    {t(`navigation.${page.key}`)}
                   </Link>
                 ))}
               </div>
