@@ -2,32 +2,157 @@
 
 exports[`Product view Renders correctly 1`] = `
 <div>
-  <main
-    class="h-screen flex items-center justify-center bg-grey-whisper"
+  <div
+    class="min-h-screen flex flex-col"
   >
-    <div>
-      <div
-        class="font-syne flex justify-center text-4xl md:text-5xl xl:text-6xl"
+    <div
+      class="bg-white"
+    >
+      <header
+        class="relative bg-white"
       >
-        <h1>
-          <span>
-            Famous
-          </span>
-           
-          <span
-            class="font-bold"
+        <nav
+          aria-label="Top"
+          class="max-w-7xl mx-auto px-4 sm:px-6 xl:px-8"
+        >
+          <div
+            class="h-16 flex items-center justify-between"
           >
-            Roasters
-          </span>
-        </h1>
-      </div>
-      <div
-        class="text-center"
-      >
-        Product page (product id = 
-        )
-      </div>
+            <div
+              class="flex-1 flex items-center xl:hidden"
+            >
+              <button
+                class="-ml-2 bg-white p-2 rounded-md text-gray-400"
+                data-testid="button-open"
+                type="button"
+              >
+                <span
+                  class="sr-only"
+                >
+                  Open menu
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 6h16M4 12h16M4 18h16"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="hidden xl:flex-1 xl:block xl:self-stretch"
+            >
+              <div
+                class="h-full flex space-x-8"
+              >
+                <a
+                  class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                  href="/catalogue"
+                >
+                  Catalogue
+                </a>
+              </div>
+            </div>
+            <a
+              class="flex"
+              href="/"
+            >
+              <span
+                class="sr-only"
+              >
+                FR
+              </span>
+              <span
+                class="font-syne text-3xl"
+              >
+                <span>
+                  F
+                </span>
+                <span
+                  class="font-extrabold"
+                >
+                  R
+                </span>
+              </span>
+            </a>
+            <div
+              class="flex-1 flex items-center justify-end"
+            >
+              <div
+                class="ml-4 flow-root xl:ml-6"
+              >
+                <a
+                  class="group -m-2 p-2 flex items-center"
+                  href="/cart"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span
+                    class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800"
+                  >
+                    0
+                  </span>
+                  <span
+                    class="sr-only"
+                  >
+                    items in cart, view bag
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
     </div>
-  </main>
+    <main
+      class="flex-grow flex items-center justify-center bg-grey-whisper"
+    >
+      <div>
+        <div
+          class="font-syne flex justify-center text-4xl md:text-5xl xl:text-6xl"
+        >
+          <h1>
+            <span>
+              Famous
+            </span>
+             
+            <span
+              class="font-bold"
+            >
+              Roasters
+            </span>
+          </h1>
+        </div>
+        <div
+          class="text-center"
+        >
+          Product page (product id = 
+          )
+        </div>
+      </div>
+    </main>
+  </div>
 </div>
 `;
