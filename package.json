@@ -29,7 +29,6 @@
     "prettier": "prettier --check src/**/*.{ts,tsx}",
     "prettier:write": "prettier --check src/**/*.{ts,tsx} --write",
     "postinstall": "husky install",
-    "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },

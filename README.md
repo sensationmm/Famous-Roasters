@@ -1,46 +1,189 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Famous Roasters - Frontend
 
-## Available Scripts
+[![Test and Build](https://github.com/Famous-Roasters/frontend/actions/workflows/build.yml/badge.svg)](https://github.com/Famous-Roasters/frontend/actions/workflows/build.yml)
+[![Test, Build and Deploy](https://github.com/Famous-Roasters/frontend/actions/workflows/build_main.yml/badge.svg)](https://github.com/Famous-Roasters/frontend/actions/workflows/build_main.yml)
 
-In the project directory, you can run:
+<details open="open">  
+  <summary>Table of Contents:</summary>  
+  <ol>  
+    <li><a href="#about">About</a></li>  
+    <li><a href="#getting-started">Getting started</a></li>  
+    <li><a href="#scripts">Scripts</a></li>  
+    <li><a href="#create-react-app">Create React App</a></li>  
+    <li><a href="#structure-overview">Structure Overview</a></li>  
+    <li><a href="#tailwind-css-and-tailwind-ui">Tailwind CSS & TailwindUI</a></li>  
+    <li><a href="#storybook">Storybook</a></li>
+    <li><a href="#i18n">i18n</a></li>  
+    <li><a href="#commiting-code">Commiting code</a></li>  
+    <li><a href="#unit-tests">Unit tests</a></li>
+    <li><a href="#github-actions">GitHub Actions</a></li>  
+    <li><a href="#deployment">Deployment</a></li>
+    <li><a href="#questions">Questions?</a></li>
+  </ol>  
+</details>  
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
+<!-- About -->  
+## About
+This frontend app for Famous Roasters is written in TypeScript, using Create React App, Tailwind CSS and Tailwind UI, Storybook and i18next.
+
+<!-- Getting Started -->  
+## Getting Started
+1. Make sure you have [Node](https://nodejs.org/) `^14.18.1` and [Yarn](https://yarnpkg.com/) `^1.22.17` running in your machine.
+2. Execute `yarn` to resolve dependencies.
+3. Run the project with `yarn start`
+
+For handling node versioning it is recommended to have node setup using [nvm](https://github.com/nvm-sh/nvm).
+
+For more info on getting started, please read the <a href="#scripts">Scripts</a> section.
+
+<!-- Scripts -->  
+## Scripts
+
+#### `yarn start`
+Runs the app in the development mode.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits.
 You will also see any lint errors in the console.
 
-### `npm test`
+#### `yarn build`
+Builds the app for production to the `build` folder.
+It correctly bundles React in production mode and optimises the build for the best performance. The build is minified and the filenames include the hashes.
+Your app is ready to be deployed! See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### `yarn serve`
+Serves the production build.
 
-### `npm run build`
+#### `yarn test`
+Launches the (unit/snapshot) test runner in the interactive watch mode.  See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### `yarn test:watch`
+Launches the (unit/snapshot) test runner scoping only the not commited changes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### `yarn test:watchAll`
+Launches the (unit/snapshot) test runner scoping all the project files.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### `yarn test:ci`
+Launches the (unit/snapshot) test runner in CI mode.
 
-### `npm run eject`
+#### `yarn test:fix`
+Launches the (unit/snapshot) test runner in CI mode and attempts to fix automatically any failing snapshot.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### `yarn lint`
+Runs linter. Lint configuration can be found at `.eslintrc` and `.eslintignore`.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### `yarn lint:fix`
+Runs linter and attempts to fix linting issues.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### `yarn prettier`
+Runs prettifier.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### `yarn prettier:write`
+Runs prettifier and attempts to fix pretty issues.
 
-## Learn More
+#### `yarn postinstall`
+(Post)installs Husky, pre-commit and pre-push hooks. See config in `.husky` folder.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### `yarn storybook`
+Compiles and runs storybook in dev mode.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### `yarn build-storybook`
+Builds storybook as a static build application.
+
+<!-- Create React App -->  
+## Create React App
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+<!-- Structure Overview -->  
+## Structure Overview
+```  
+/                                     # root folder  
+├── .github                           # github actions workflows (yml), PR template ├── .husky                            # pre-commit and pre-push actions  
+├── .storybook                        # storybook configuration files 
+├── public                            # static public files
+├── src                               # repo source files  
+│   ├── assets                        # source code assets  
+│   │   └── i18n                 	  # translations json files
+│   ├── components                    # components folder  
+│   │   ├── ...  
+│   │   ├── <Component>  
+│   │   │   ├── __snapshots__         # generated snapshots  
+│   │   │   ├── <Component>.test.tsx  # component test file  
+│   │   │   ├── <Component>.tsx       # component source code  
+│   │   │   └── index.ts              # module named exports
+│   │   └── ...  
+│   ├── config                        # i18n config  
+│   ├── docs                          # documentation
+│   │   └── storybook                 # storybook docs
+│   ├── views                         # pages/views  
+│   │   ├── ...  
+│   │   ├── <Page>  
+│   │   │   ├── __snapshots__         # generated snapshots  
+│   │   │   ├── <Page>.test.tsx       # page test file  
+│   │   │   ├── <Page>.tsx            # page source code  
+│   │   │   └── index.ts              # module named exports
+│   │   └── ...  
+│   ├── App.tsx                       # root app file, outer routing
+│   └── index.css                     # css including tailwind binding
+├── .commitlintrc.js                  # commitlint config  
+├── .eslintignore                     # ignores for eslint  
+├── .eslintrc                         # eslint config  
+├── .gitignore                        # gitignore  
+├── .prettierignore                   # ignores for code prettier  
+├── .prettierrc                       # code prettier config  
+├── package.json                      # package file  
+├── README.md                         # this file  
+├── tailwind.config.js                # tailwind config  
+├── tsconfig.json                     # typescript config  
+└── yarn.lock 		                  # lock file
+```  
+
+<!-- Tailwind -->  
+## Tailwind CSS and Tailwind UI
+This application uses [Tailwind CSS](https://tailwindcss.com/) framework and [Tailwind UI](https://tailwindui.com/) as UI references, [HeadlessUI](https://headlessui.dev/) as accessible UI components library and the icon library [Hero Icons](https://heroicons.com/).
+
+<!-- Storybook -->  
+## Storybook
+This app includes [Storybook](https://storybook.js.org/docs/react/get-started/introduction) to support building the UI, document it and facilitate the hand-by-hand work between engineers and designers. All the configuration can be found in `.storybook` folder, including `postcss`, `tailwind` and `i18next` plugins.
+
+<!-- i18n -->  
+## i18n
+i18n is handled by [i18next](https://www.i18next.com/). As of today, the only available language is german - `de`.
+
+The configs for i18next can be found at `src/config/i18n/i18n.ts` and the language json files at `src/assets/i18n`.
+
+<!-- Commiting code -->  
+## Commiting code
+When commiting code, this repository is following [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/). There is a precommit hook triggered following the commitlint configuration set at `.commitlintrc.json`.
+
+These commit patterns are enabling later on a correct semantic release integration.
+
+<!-- Unit tests -->  
+## Unit tests
+Each new file must have at least a snapshot test. Snapshots are generated on build and compared against the stored snapshots. Tests are written using [Jest](https://jestjs.io/) and [React-Testing-Library](https://testing-library.com/docs/react-testing-library/intro/)
+
+<!-- GitHub -->  
+## GitHub Actions
+GitHub workflows is our solution for CI/CD and the config can be found at `.github/workflows`.  There are as of today two workflows:
+
+#### `test-and-build`
+- Executes for any branch except of `main`
+- Environment name: `test`
+- Tasks: installs dependencies, executes lint, executes prettier, executes unit tests with coverage, builds and packages.
+
+#### `test-build-deploy`
+- Executes only for `main` branch (typically after a PR merge)
+- Environment name: `staging`
+- Tasks: all the tasks done by `test-and-build` plus configure credentials and push to AWS S3
+
+<!-- Deployment -->  
+## Deployment
+Deployment to staging is configured automatically for the `main` branch. For details, check the [GitHub Actions](#github-actions) section above.
+The deployed app can be found [here](https://d1ma33i6h3eq7r.cloudfront.net/).
+
+<!-- Questions? -->  
+## Questions?
+For more details or technical questions, please reach out! Made with love by BCGDV.
+
+Contact: [Juan Minnocci](mailto:juan.minnocci@bcgdv.com)
