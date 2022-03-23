@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router-dom'
 import { Layout } from 'src/components'
 
 export const Product: React.FC = () => {
   const { id } = useParams()
+  const { t } = useTranslation()
   useEffect(() => {
-    document.title = 'Famous Roasters | Product'
+    document.title = `${t('brand.name')} | ${t('pages.product.title')}`
   }, [])
 
   return (
@@ -17,7 +19,9 @@ export const Product: React.FC = () => {
               <span>Famous</span> <span className="font-bold">Roasters</span>
             </h1>
           </div>
-          <div className="text-center">Product page (product id = {id})</div>
+          <div className="text-center">
+            {t('pages.product.title')} (product id = {id})
+          </div>
         </div>
       </main>
     </Layout>

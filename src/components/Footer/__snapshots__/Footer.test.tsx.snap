@@ -14,9 +14,7 @@ exports[`Footer component Renders correctly 1`] = `
         <p
           class="text-center text-base text-gray-400"
         >
-          © 
-          2022
-           Famous Roasters. All rights reserved.
+          © 2022 Famous Roasters. Alle Rechte vorbehalten.
         </p>
       </div>
     </div>

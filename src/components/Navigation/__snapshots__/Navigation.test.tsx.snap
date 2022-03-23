@@ -55,7 +55,7 @@ exports[`Navigation component Renders correctly 1`] = `
                 class="flex items-center text-gray-700 hover:text-gray-800"
                 href="/catalogue"
               >
-                Catalogue
+                Katalog
               </a>
             </div>
           </div>

@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Layout } from 'src/components'
 
 export const Home: React.FC = () => {
+  const { t } = useTranslation()
   useEffect(() => {
-    document.title = 'Famous Roasters | Home'
+    document.title = `${t('brand.name')} | ${t('pages.home.title')}`
   }, [])
 
   return (
@@ -15,7 +17,7 @@ export const Home: React.FC = () => {
               <span>Famous</span> <span className="font-bold">Roasters</span>
             </h1>
           </div>
-          <div className="text-center">Homepage</div>
+          <div className="text-center">{t('pages.home.title')}</div>
         </div>
       </main>
     </Layout>
