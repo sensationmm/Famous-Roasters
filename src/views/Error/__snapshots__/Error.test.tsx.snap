@@ -127,7 +127,7 @@ exports[`Error view Renders correctly 1`] = `
       </header>
     </div>
     <main
-      class="flex-grow flex items-center justify-center bg-grey-whisper"
+      class="flex-grow flex items-center justify-center bg-brand-grey-whisper"
     >
       <div>
         <div

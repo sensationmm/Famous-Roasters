@@ -52,7 +52,7 @@ export const Navigation: React.FC = () => {
                 </button>
               </div>
 
-              <div className="border-t border-gray-200 py-6 px-4 space-y-6">
+              <div className="border-t border-coreUI-border py-6 px-4 space-y-6">
                 {navigation.pages.map((page) => (
                   <div key={page.key} className="flow-root">
                     <Link to={page.href} className="-m-2 p-2 block font-medium text-gray-900">
