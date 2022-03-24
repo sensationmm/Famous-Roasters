@@ -1,0 +1,33 @@
+import { Meta, Canvas, ColorPalette, ColorItem } from '@storybook/addon-docs'; import {
+    Typography, TypographySize,
+    TypographyType
+} from "src/components"
+
+<Meta title="DesignSystem/Typography" />
+
+# Typography
+
+Design primitives around typography.
+
+## Font families
+
+There are two font families:
+
+### Open Sans
+
+<Canvas columns={2} withSource="open" withToolbar>
+    <Typography as="div" type={TypographyType.Heading} size={TypographySize.Large}>
+        Lorem ipsum dolor sit amet
+    </Typography>
+</Canvas>
+
+### Syne
+<Canvas columns={2} withSource="open" withToolbar>
+    <Typography as="div" type={TypographyType.Heading} size={TypographySize.Large} className="font-syne">
+        Lorem ipsum dolor sit amet
+    </Typography>
+</Canvas>
+
+## Typography
+
+Please refer to the `<Typography/>` component below `Components`.
