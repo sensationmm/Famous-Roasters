@@ -4,45 +4,118 @@ import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs';
 
 # Colors
 
-These are the actual colors defined:
+These are the actual colors defined in the design primitives:
+
+## Foundation
 
 <ColorPalette>
     <ColorItem
-        title="theme.colors.primary"
-        subtitle="primary"
-        colors={{ black: '#212121' }}
-    />
-    <ColorItem
-        title="theme.colors.secondary"
-        subtitle="secondary"
+        title="Primary"
+        subtitle="theme.colors.primary"
         colors={{ 'funky green': '#D4FF81' }}
     />
     <ColorItem
-        title="theme.colors.grey"
-        subtitle="grey"
-        colors={{
-            mine: '#343434',
-            bombay: '#B4B5BC',
-            whisper: '#F0F1F7',
-        }}
-    />
-    <ColorItem
-        title="theme.colors.white"
-        subtitle="white"
+        title="White"
+        subtitle="theme.colors.white"
         colors={{ 'white': '#ffffff' }}
     />
     <ColorItem
-        title="theme.colors.green"
-        subtitle="green"
+        title="Negative"
+        subtitle="theme.colors.negative"
+        colors={{ 'froly red': '#F87171' }}
+    />
+    <ColorItem
+        title="Warning"
+        subtitle="theme.colors.warning"
+        colors={{ 'lightning yellow': '#FBBF24' }}
+    />
+    <ColorItem
+        title="Positive"
+        subtitle="theme.colors.positive"
+        colors={{ 'pastel green': '#71ED8A' }}
+    />
+</ColorPalette>
+
+## Core UI
+
+### Backgrounds
+
+<ColorPalette>
+    <ColorItem
+        title="Background Primary"
+        subtitle="theme.colors.coreUI.background.primary"
+        colors={{ white: '#FFFFFF' }}
+    />
+    <ColorItem
+        title="Background Images"
+        subtitle="theme.colors.coreUI.background.images"
+        colors={{ 'whisper grey': '#F0F1F7' }}
+    />
+</ColorPalette>
+
+### Text
+
+<ColorPalette>
+    <ColorItem
+        title="Text Primary"
+        subtitle="theme.colors.coreUI.text.primary"
+        colors={{ 'mine shaft black': '#212121' }}
+    />
+    <ColorItem
+        title="Text Secondary"
+        subtitle="theme.colors.coreUI.text.secondary"
+        colors={{ 'mid gray': '#646575' }}
+    />
+    <ColorItem
+        title="Text Tertiary"
+        subtitle="theme.colors.coreUI.text.tertiary"
+        colors={{ 'suit gray': '#BEBFCD' }}
+    />
+</ColorPalette>
+
+### Border
+
+<ColorPalette>
+    <ColorItem
+        title="Border"
+        subtitle="theme.colors.coreUI.border"
+        colors={{ 'whisper grey': '#F0F1F7' }}
+    />
+</ColorPalette>
+
+## Brand
+
+<ColorPalette>
+    <ColorItem
+        title="Black"
+        subtitle="theme.colors.brand.black"
+        colors={{ 'mine shaft black': '#212121' }}
+    />
+    <ColorItem
+        title="Grey"
+        subtitle="theme.colors.brand.grey"
         colors={{
-            ash: '#B8C6B1',
-            club: '#43F067',
-            funky: '#D4FF81',
+            'mine grey': '#343434',
+            'bombay grey': '#B4B5BC',
+            'whisper grey': '#F0F1F7',
         }}
     />
     <ColorItem
-        title="theme.colors.brown"
-        subtitle="brown"
+        title="White"
+        subtitle="theme.colors.brand.white"
+        colors={{ 'white': '#ffffff' }}
+    />
+    <ColorItem
+        title="Green"
+        subtitle="theme.colors.brand.green"
+        colors={{
+            'club green': '#43F067',
+            'ash green': '#B8C6B1',
+        }}
+    />
+    <ColorItem
+        title="Brown"
+        subtitle="theme.colors.brand.brown"
         colors={{ 'brown': '#8E7C7A' }}
     />
 </ColorPalette>
