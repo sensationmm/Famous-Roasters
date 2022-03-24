@@ -3,27 +3,36 @@
     "name": "Famous Roasters",
     "copyright": "© {{year}} Famous Roasters. Alle Rechte vorbehalten."
   },
-  "navigation": {
-    "catalogue": "Katalog"
-  },
   "pages": {
-    "catalogue": {
-      "title":"Katalog"
-    },
-    "checkout": {
-      "title":"Checkout"
+    "about": {
+      "title": "Über uns"
     },
     "cart": {
-      "title":"Warenkorb"
+      "title": "Warenkorb"
+    },
+    "catalogue": {
+      "title": "Katalog"
+    },
+    "checkout": {
+      "title": "Checkout"
+    },
+    "contact": {
+      "title": "Kontakt"
     },
     "error": {
-      "title":"Fehler"
+      "title": "Fehler"
     },
     "home": {
-      "title":"Home"
+      "title": "Home"
+    },
+    "ourRoasters": {
+      "title": "Unsere Röster"
     },
     "product": {
-      "title":"Produkt"
+      "title": "Produkt"
+    },
+    "tasteFinder": {
+      "title": "Tastefinder"
     }
   }
 }

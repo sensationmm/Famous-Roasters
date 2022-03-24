@@ -1,12 +1,20 @@
-import { Dialog, Popover, Transition } from '@headlessui/react'
-import { MenuIcon, ShoppingBagIcon, XIcon } from '@heroicons/react/outline'
+import { Dialog, Transition } from '@headlessui/react'
+import { MenuIcon, ShoppingBagIcon, UserIcon, XIcon } from '@heroicons/react/outline'
 import React from 'react'
 import { Fragment, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
+import { Typography, TypographySize, TypographyType } from 'src/components'
 
 const navigation = {
-  pages: [{ key: 'catalogue', href: '/catalogue' }],
+  pagesPrimary: [
+    { key: 'tasteFinder', href: '/taste-finder' },
+    { key: 'ourRoasters', href: '/our-roasters' },
+  ],
+  pagesSecondary: [
+    { key: 'about', href: '/about' },
+    { key: 'contact', href: '/contact' },
+  ],
 }
 
 export const Navigation: React.FC = () => {
@@ -53,10 +61,17 @@ export const Navigation: React.FC = () => {
               </div>
 
               <div className="border-t border-coreUI-border py-6 px-4 space-y-6">
-                {navigation.pages.map((page) => (
+                {navigation.pagesPrimary.map((page) => (
                   <div key={page.key} className="flow-root">
                     <Link to={page.href} className="-m-2 p-2 block font-medium text-gray-900">
-                      {t(`navigation.${page.key}`)}
+                      {t(`pages.${page.key}.title`)}
+                    </Link>
+                  </div>
+                ))}
+                {navigation.pagesSecondary.map((page) => (
+                  <div key={page.key} className="flow-root">
+                    <Link to={page.href} className="-m-2 p-2 block font-medium text-gray-900">
+                      {t(`pages.${page.key}.title`)}
                     </Link>
                   </div>
                 ))}
@@ -81,16 +96,23 @@ export const Navigation: React.FC = () => {
               </button>
             </div>
 
-            {/* Desktop menu */}
-            <Popover.Group className="hidden xl:flex-1 xl:block xl:self-stretch">
+            {/* Desktop menu primary pages */}
+            <div className="hidden xl:flex-1 xl:block xl:self-stretch">
               <div className="h-full flex space-x-8">
-                {navigation.pages.map((page) => (
+                {navigation.pagesPrimary.map((page) => (
                   <Link key={page.key} to={page.href} className="flex items-center text-gray-700 hover:text-gray-800">
-                    {t(`navigation.${page.key}`)}
+                    <Typography
+                      as="span"
+                      type={TypographyType.Paragraph}
+                      size={TypographySize.Small}
+                      className="uppercase"
+                    >
+                      {t(`pages.${page.key}.title`)}
+                    </Typography>
                   </Link>
                 ))}
               </div>
-            </Popover.Group>
+            </div>
 
             {/* Logo */}
             <Link to="/" className="flex">
@@ -101,7 +123,31 @@ export const Navigation: React.FC = () => {
               </span>
             </Link>
 
-            <div className="flex-1 flex items-center justify-end">
+            {/* Desktop menu secondary pages */}
+            <div className="hidden xl:flex-1 xl:block xl:self-stretch">
+              <div className="h-full flex space-x-8 justify-end">
+                {navigation.pagesSecondary.map((page) => (
+                  <Link key={page.key} to={page.href} className="flex items-center text-gray-700 hover:text-gray-800">
+                    <Typography
+                      as="span"
+                      type={TypographyType.Paragraph}
+                      size={TypographySize.Small}
+                      className="uppercase"
+                    >
+                      {t(`pages.${page.key}.title`)}
+                    </Typography>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex-1 flex items-center justify-end xl:flex-none">
+              {/* Account */}
+              <Link to="#" className="p-2 text-gray-400 hover:text-gray-500 xl:ml-4">
+                <span className="sr-only">Account</span>
+                <UserIcon className="w-6 h-6" aria-hidden="true" />
+              </Link>
+
               {/* Cart */}
               <div className="ml-4 flow-root xl:ml-6">
                 <Link to="/cart" className="group -m-2 p-2 flex items-center">

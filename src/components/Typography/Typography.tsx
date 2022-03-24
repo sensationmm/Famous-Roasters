@@ -42,7 +42,7 @@ const getTypographyClassNames = (type: Type, size: Size): string => {
     case Type.Label:
       switch (size) {
         case Size.Large:
-          classNames.push('text-lg • leading-7', 'font-semibold')
+          classNames.push('text-lg', 'leading-7', 'font-semibold')
           break
         case Size.Small:
           classNames.push('text-sm', 'leading-5', 'font-semibold')
