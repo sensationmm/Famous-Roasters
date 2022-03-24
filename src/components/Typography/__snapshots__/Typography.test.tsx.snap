@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Typography component Heading Renders correctly for size base 1`] = `
+<div>
+  <h1
+    class="text-3xl leading-8 font-semibold tracking-tight"
+  >
+    Text
+  </h1>
+</div>
+`;
+
+exports[`Typography component Heading Renders correctly for size large 1`] = `
+<div>
+  <h1
+    class="text-5xl leading-none font-normal"
+  >
+    Text
+  </h1>
+</div>
+`;
+
+exports[`Typography component Heading Renders correctly for size small 1`] = `
+<div>
+  <h1
+    class="text-2xl leading-8 font-semibold"
+  >
+    Text
+  </h1>
+</div>
+`;
+
+exports[`Typography component Heading Renders correctly for size tiny 1`] = `
+<div>
+  <h1
+    class="text-xl leading-7 font-semibold"
+  >
+    Text
+  </h1>
+</div>
+`;
+
+exports[`Typography component Label Renders correctly for size base 1`] = `
+<div>
+  <span
+    class="text-base leading-6 font-semibold"
+  >
+    Text
+  </span>
+</div>
+`;
+
+exports[`Typography component Label Renders correctly for size large 1`] = `
+<div>
+  <span
+    class="text-lg • leading-7 font-semibold"
+  >
+    Text
+  </span>
+</div>
+`;
+
+exports[`Typography component Label Renders correctly for size small 1`] = `
+<div>
+  <span
+    class="text-sm leading-5 font-semibold"
+  >
+    Text
+  </span>
+</div>
+`;
+
+exports[`Typography component Label Renders correctly for size tiny 1`] = `
+<div>
+  <span
+    class="text-xs leading-4 font-semibold"
+  >
+    Text
+  </span>
+</div>
+`;
+
+exports[`Typography component Paragraph Renders correctly for size base 1`] = `
+<div>
+  <p
+    class="text-base leading-6 font-normal"
+  >
+    Text
+  </p>
+</div>
+`;
+
+exports[`Typography component Paragraph Renders correctly for size large 1`] = `
+<div>
+  <p
+    class="text-lg leading-7 font-normal"
+  >
+    Text
+  </p>
+</div>
+`;
+
+exports[`Typography component Paragraph Renders correctly for size small 1`] = `
+<div>
+  <p
+    class="text-sm leading-5 font-normal"
+  >
+    Text
+  </p>
+</div>
+`;
+
+exports[`Typography component Paragraph Renders correctly for size tiny 1`] = `
+<div>
+  <p
+    class="text-xs leading-4 font-normal"
+  >
+    Text
+  </p>
+</div>
+`;

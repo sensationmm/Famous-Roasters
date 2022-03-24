@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router-dom'
-import { Layout } from 'src/components'
+import { Layout, Typography, TypographySize, TypographyType } from 'src/components'
 
 export const Product: React.FC = () => {
   const { id } = useParams()
@@ -19,9 +19,9 @@ export const Product: React.FC = () => {
               <span>Famous</span> <span className="font-bold">Roasters</span>
             </h1>
           </div>
-          <div className="text-center">
+          <Typography as="div" type={TypographyType.Paragraph} size={TypographySize.Large} className="text-center">
             {t('pages.product.title')} (product id = {id})
-          </div>
+          </Typography>
         </div>
       </main>
     </Layout>

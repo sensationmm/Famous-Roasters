@@ -146,7 +146,7 @@ exports[`Product view Renders correctly 1`] = `
           </h1>
         </div>
         <div
-          class="text-center"
+          class="text-center text-lg leading-7 font-normal"
         >
           Produkt
            (product id = 
