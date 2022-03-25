@@ -53,7 +53,7 @@ exports[`Typography component Label Renders correctly for size base 1`] = `
 exports[`Typography component Label Renders correctly for size large 1`] = `
 <div>
   <span
-    class="text-lg • leading-7 font-semibold"
+    class="text-lg leading-7 font-semibold"
   >
     Text
   </span>

@@ -10,7 +10,7 @@ describe('Error view', () => {
   it('Renders correctly', async () => {
     const { container } = render(
       <I18nextProvider i18n={i18n}>
-        <MemoryRouter initialEntries={['/']}>
+        <MemoryRouter initialEntries={['/wrong']}>
           <Error />
         </MemoryRouter>
       </I18nextProvider>,

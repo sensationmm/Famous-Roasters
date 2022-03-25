@@ -104,7 +104,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ├── public                            # static public files
 ├── src                               # repo source files  
 │   ├── assets                        # source code assets  
-│   │   └── i18n                 	  # translations json files
+│   │   └── i18n                      # translations json files
 │   ├── components                    # components folder  
 │   │   ├── ...  
 │   │   ├── <Component>  
@@ -136,7 +136,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ├── README.md                         # this file  
 ├── tailwind.config.js                # tailwind config  
 ├── tsconfig.json                     # typescript config  
-└── yarn.lock 		                  # lock file
+└── yarn.lock                         # lock file
 ```  
 
 <!-- Tailwind -->  

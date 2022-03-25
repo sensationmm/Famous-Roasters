@@ -4,14 +4,14 @@ import { I18nextProvider } from 'react-i18next'
 import { MemoryRouter } from 'react-router-dom'
 import { i18n } from 'src/config'
 
-import { Product } from '.'
+import { Account } from '.'
 
-describe('Product view', () => {
+describe('Account view', () => {
   it('Renders correctly', async () => {
     const { container } = render(
       <I18nextProvider i18n={i18n}>
-        <MemoryRouter initialEntries={['/product/12345']}>
-          <Product />
+        <MemoryRouter initialEntries={['/account']}>
+          <Account />
         </MemoryRouter>
       </I18nextProvider>,
     )
