@@ -3,10 +3,19 @@ import { MenuIcon, ShoppingBagIcon, UserIcon, XIcon } from '@heroicons/react/out
 import React from 'react'
 import { Fragment, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
-import { Typography, TypographySize, TypographyType } from 'src/components'
+import { Link, useNavigate } from 'react-router-dom'
+import { Button, ButtonSize, Typography, TypographySize, TypographyType } from 'src/components'
 
-const navigation = {
+export enum NavigationTheme {
+  Home = 'home',
+  Shop = 'shop',
+}
+
+interface NavigationProps {
+  theme: NavigationTheme
+}
+
+const navigationData = {
   pagesPrimary: [
     { key: 'tasteFinder', href: '/taste-finder' },
     { key: 'ourRoasters', href: '/our-roasters' },
@@ -17,8 +26,9 @@ const navigation = {
   ],
 }
 
-export const Navigation: React.FC = () => {
+export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps) => {
   const [open, setOpen] = useState(false)
+  const navigate = useNavigate()
   const { t } = useTranslation()
 
   return (
@@ -61,20 +71,27 @@ export const Navigation: React.FC = () => {
               </div>
 
               <div className="border-t border-coreUI-border py-6 px-4 space-y-6">
-                {navigation.pagesPrimary.map((page) => (
+                {navigationData.pagesPrimary.map((page) => (
                   <div key={page.key} className="flow-root">
                     <Link to={page.href} className="-m-2 p-2 block font-medium text-gray-900">
-                      {t(`pages.${page.key}.title`)}
+                      {t(`pages.${page.key}.navigation`)}
                     </Link>
                   </div>
                 ))}
-                {navigation.pagesSecondary.map((page) => (
+                <div className="border-t border-coreUI-border" />
+                {navigationData.pagesSecondary.map((page) => (
                   <div key={page.key} className="flow-root">
                     <Link to={page.href} className="-m-2 p-2 block font-medium text-gray-900">
-                      {t(`pages.${page.key}.title`)}
+                      {t(`pages.${page.key}.navigation`)}
                     </Link>
                   </div>
                 ))}
+                <div className="border-t border-coreUI-border" />
+                <div className="flow-root">
+                  <Link to="/account" className="-m-2 p-2 block font-medium text-gray-900">
+                    {t(`pages.account.navigation`)}
+                  </Link>
+                </div>
               </div>
             </div>
           </Transition.Child>
@@ -99,7 +116,7 @@ export const Navigation: React.FC = () => {
             {/* Desktop menu primary pages */}
             <div className="hidden xl:flex-1 xl:block xl:self-stretch">
               <div className="h-full flex space-x-8">
-                {navigation.pagesPrimary.map((page) => (
+                {navigationData.pagesPrimary.map((page) => (
                   <Link key={page.key} to={page.href} className="flex items-center text-gray-700 hover:text-gray-800">
                     <Typography
                       as="span"
@@ -107,7 +124,7 @@ export const Navigation: React.FC = () => {
                       size={TypographySize.Small}
                       className="uppercase"
                     >
-                      {t(`pages.${page.key}.title`)}
+                      {t(`pages.${page.key}.navigation`)}
                     </Typography>
                   </Link>
                 ))}
@@ -116,18 +133,22 @@ export const Navigation: React.FC = () => {
 
             {/* Logo */}
             <Link to="/" className="flex h-full items-center pl-2 pr-2">
-              <span className="sr-only">FR</span>
-              <span className="font-syne text-3xl">
+              <span className="sr-only">{t('brand.name')}</span>
+              <div className="xl:hidden font-syne text-3xl">
                 <span>F</span>
                 <span className="font-extrabold">R</span>
-              </span>
+              </div>
+              <div className="hidden xl:block font-syne text-xl text-center">
+                <div className="h-5">{t('brand.name').split(' ')[0]}</div>
+                <div className="font-extrabold">{t('brand.name').split(' ')[1]}</div>
+              </div>
             </Link>
 
             <div className="flex-1 flow-root flex h-full items-center">
               <div className="flex-1 flex h-full items-center justify-end xl:flex-none">
                 {/* Desktop menu secondary pages */}
                 <div className="hidden h-full xl:flex space-x-8 justify-end">
-                  {navigation.pagesSecondary.map((page) => (
+                  {navigationData.pagesSecondary.map((page) => (
                     <Link key={page.key} to={page.href} className="flex items-center text-gray-700 hover:text-gray-800">
                       <Typography
                         as="span"
@@ -135,28 +156,34 @@ export const Navigation: React.FC = () => {
                         size={TypographySize.Small}
                         className="uppercase"
                       >
-                        {t(`pages.${page.key}.title`)}
+                        {t(`pages.${page.key}.navigation`)}
                       </Typography>
                     </Link>
                   ))}
                 </div>
 
                 {/* Account */}
-                <Link to="#" className="p-2 text-gray-400 hover:text-gray-500 xl:ml-6">
-                  <span className="sr-only">Account</span>
+                <Link to="/account" className="hidden xl:block p-2 text-gray-400 hover:text-gray-500 xl:ml-6">
+                  <span className="sr-only">{t(`pages.account.navigation`)}</span>
                   <UserIcon className="w-6 h-6" aria-hidden="true" />
                 </Link>
 
                 {/* Cart */}
                 <div className="ml-4 flow-root xl:ml-6">
-                  <Link to="/cart" className="group -m-2 p-2 flex items-center">
-                    <ShoppingBagIcon
-                      className="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
-                      aria-hidden="true"
-                    />
-                    <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
-                    <span className="sr-only">items in cart, view bag</span>
-                  </Link>
+                  {theme === NavigationTheme.Shop ? (
+                    <Link to="/cart" className="group -m-2 p-2 flex items-center">
+                      <ShoppingBagIcon
+                        className="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
+                        aria-hidden="true"
+                      />
+                      <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
+                      <span className="sr-only">items in cart, view bag</span>
+                    </Link>
+                  ) : (
+                    <Button size={ButtonSize.sm} onClick={() => navigate('/catalogue')} data-testid="button-shop">
+                      {t(`pages.catalogue.navigation`)}
+                    </Button>
+                  )}
                 </div>
               </div>
             </div>

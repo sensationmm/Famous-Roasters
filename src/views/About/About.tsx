@@ -2,10 +2,10 @@ import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Layout, NavigationTheme, Typography, TypographySize, TypographyType } from 'src/components'
 
-export const Home: React.FC = () => {
+export const About: React.FC = () => {
   const { t } = useTranslation()
   useEffect(() => {
-    document.title = `${t('brand.name')} | ${t('pages.home.title')}`
+    document.title = `${t('brand.name')} | ${t('pages.about.title')}`
   }, [])
 
   return (
@@ -18,7 +18,7 @@ export const Home: React.FC = () => {
             </h1>
           </div>
           <Typography as="div" type={TypographyType.Paragraph} size={TypographySize.Large} className="text-center">
-            {t('pages.home.title')}
+            {t('pages.about.title')}
           </Typography>
         </div>
       </main>

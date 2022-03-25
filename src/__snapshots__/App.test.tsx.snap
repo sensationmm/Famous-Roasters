@@ -83,10 +83,10 @@ exports[`App Renders correctly 1`] = `
               <span
                 class="sr-only"
               >
-                FR
+                Famous Roasters
               </span>
-              <span
-                class="font-syne text-3xl"
+              <div
+                class="xl:hidden font-syne text-3xl"
               >
                 <span>
                   F
@@ -96,7 +96,21 @@ exports[`App Renders correctly 1`] = `
                 >
                   R
                 </span>
-              </span>
+              </div>
+              <div
+                class="hidden xl:block font-syne text-xl text-center"
+              >
+                <div
+                  class="h-5"
+                >
+                  Famous
+                </div>
+                <div
+                  class="font-extrabold"
+                >
+                  Roasters
+                </div>
+              </div>
             </a>
             <div
               class="flex-1 flow-root flex h-full items-center"
@@ -129,13 +143,13 @@ exports[`App Renders correctly 1`] = `
                   </a>
                 </div>
                 <a
-                  class="p-2 text-gray-400 hover:text-gray-500 xl:ml-6"
-                  href="/"
+                  class="hidden xl:block p-2 text-gray-400 hover:text-gray-500 xl:ml-6"
+                  href="/account"
                 >
                   <span
                     class="sr-only"
                   >
-                    Account
+                    Konto
                   </span>
                   <svg
                     aria-hidden="true"
@@ -156,36 +170,13 @@ exports[`App Renders correctly 1`] = `
                 <div
                   class="ml-4 flow-root xl:ml-6"
                 >
-                  <a
-                    class="group -m-2 p-2 flex items-center"
-                    href="/cart"
+                  <button
+                    class="inline-flex items-center px-4 py-2 text-sm text-white bg-brand-black rounded-full"
+                    data-testid="button-shop"
+                    role="button"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <span
-                      class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800"
-                    >
-                      0
-                    </span>
-                    <span
-                      class="sr-only"
-                    >
-                      items in cart, view bag
-                    </span>
-                  </a>
+                    Shop
+                  </button>
                 </div>
               </div>
             </div>

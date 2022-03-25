@@ -3,7 +3,7 @@
 exports[`Button component Renders correctly 1`] = `
 <div>
   <button
-    class="inline-flex items-center font-bold px-4 py-2 text-base text-white bg-primary rounded-full"
+    class="inline-flex items-center px-4 py-2 text-base text-white bg-brand-black rounded-full"
     role="button"
   >
     CTA
@@ -14,7 +14,7 @@ exports[`Button component Renders correctly 1`] = `
 exports[`Button component Renders correctly outlined 1`] = `
 <div>
   <button
-    class="inline-flex items-center font-bold px-4 py-2 text-base text-primary bg-transparent border-2 border-primary rounded-full"
+    class="inline-flex items-center px-4 py-2 text-base text-brand-black bg-transparent border-2 border-brand-black rounded-full"
     role="button"
   >
     CTA
@@ -25,7 +25,7 @@ exports[`Button component Renders correctly outlined 1`] = `
 exports[`Button component Renders correctly secondary 1`] = `
 <div>
   <button
-    class="inline-flex items-center font-bold px-4 py-2 text-base text-black bg-secondary rounded-full"
+    class="inline-flex items-center px-4 py-2 text-base text-black bg-brand-green-club rounded-full"
     role="button"
   >
     CTA
@@ -36,7 +36,7 @@ exports[`Button component Renders correctly secondary 1`] = `
 exports[`Button component Renders correctly size lg 1`] = `
 <div>
   <button
-    class="inline-flex items-center font-bold px-6 py-3 text-lg text-white bg-primary rounded-full"
+    class="inline-flex items-center px-6 py-3 text-lg text-white bg-brand-black rounded-full"
     role="button"
   >
     CTA
@@ -47,7 +47,7 @@ exports[`Button component Renders correctly size lg 1`] = `
 exports[`Button component Renders correctly size sm 1`] = `
 <div>
   <button
-    class="inline-flex items-center font-bold px-4 py-2 text-sm text-white bg-primary rounded-full"
+    class="inline-flex items-center px-4 py-2 text-sm text-white bg-brand-black rounded-full"
     role="button"
   >
     CTA
@@ -58,7 +58,7 @@ exports[`Button component Renders correctly size sm 1`] = `
 exports[`Button component Renders correctly text 1`] = `
 <div>
   <button
-    class="inline-flex items-center font-bold px-4 py-2 text-base text-current underline"
+    class="inline-flex items-center px-4 py-2 text-base text-current underline"
     role="button"
   >
     CTA
@@ -69,7 +69,7 @@ exports[`Button component Renders correctly text 1`] = `
 exports[`Button component Renders correctly with extra classes 1`] = `
 <div>
   <button
-    class="anotherClass inline-flex items-center font-bold px-4 py-2 text-base text-white bg-primary rounded-full"
+    class="anotherClass inline-flex items-center px-4 py-2 text-base text-white bg-brand-black rounded-full"
     role="button"
   >
     CTA

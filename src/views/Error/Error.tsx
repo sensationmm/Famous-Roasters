@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Layout, Typography, TypographySize, TypographyType } from 'src/components'
+import { Layout, NavigationTheme, Typography, TypographySize, TypographyType } from 'src/components'
 
 export const Error: React.FC = () => {
   const { t } = useTranslation()
@@ -9,7 +9,7 @@ export const Error: React.FC = () => {
   }, [])
 
   return (
-    <Layout>
+    <Layout navigationTheme={NavigationTheme.Home}>
       <main className="flex-grow flex items-center justify-center bg-brand-grey-whisper">
         <div>
           <div className="font-syne flex justify-center text-4xl md:text-5xl xl:text-6xl">

@@ -5,33 +5,47 @@
   },
   "pages": {
     "about": {
+      "navigation": "Über uns",
       "title": "Über uns"
     },
+    "account": {
+      "navigation": "Konto",
+      "title": "Konto"
+    },
     "cart": {
+      "navigation": "Warenkorb",
       "title": "Warenkorb"
     },
     "catalogue": {
+      "navigation": "Shop",
       "title": "Katalog"
     },
     "checkout": {
+      "navigation": "Checkout",
       "title": "Checkout"
     },
     "contact": {
+      "navigation": "Kontakt",
       "title": "Kontakt"
     },
     "error": {
+      "navigation": "Fehler",
       "title": "Fehler"
     },
     "home": {
+      "navigation": "Home",
       "title": "Home"
     },
     "ourRoasters": {
+      "navigation": "Unsere Röster",
       "title": "Unsere Röster"
     },
     "product": {
+      "navigation": "Produkt",
       "title": "Produkt"
     },
     "tasteFinder": {
+      "navigation": "Tastefinder",
       "title": "Tastefinder"
     }
   }

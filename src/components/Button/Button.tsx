@@ -24,7 +24,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const getButtonClassNames = (emphasis: Emphasis, size: Size, color: Color): string => {
-  const classNames: string[] = ['inline-flex', 'items-center', 'font-bold']
+  const classNames: string[] = ['inline-flex', 'items-center']
 
   // size
   switch (size) {
@@ -43,12 +43,12 @@ const getButtonClassNames = (emphasis: Emphasis, size: Size, color: Color): stri
   switch (emphasis) {
     case Emphasis.Contained:
       color === Color.Primary
-        ? classNames.push('text-white', 'bg-primary')
-        : classNames.push('text-black', 'bg-secondary')
+        ? classNames.push('text-white', 'bg-brand-black')
+        : classNames.push('text-black', 'bg-brand-green-club')
       classNames.push('rounded-full')
       break
     case Emphasis.Outlined:
-      classNames.push('text-primary', 'bg-transparent', 'border-2', 'border-primary')
+      classNames.push('text-brand-black', 'bg-transparent', 'border-2', 'border-brand-black')
       classNames.push('rounded-full')
       break
     case Emphasis.Text:

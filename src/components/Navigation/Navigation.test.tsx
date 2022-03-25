@@ -4,14 +4,26 @@ import { I18nextProvider } from 'react-i18next'
 import { MemoryRouter } from 'react-router-dom'
 import { i18n } from 'src/config'
 
-import { Navigation } from '.'
+import { Navigation, NavigationTheme } from '.'
 
 describe('Navigation component', () => {
-  it('Renders correctly', async () => {
+  it('Renders correctly with shop theme', async () => {
+    const { container } = render(
+      <I18nextProvider i18n={i18n}>
+        <MemoryRouter initialEntries={['/catalogue']}>
+          <Navigation theme={NavigationTheme.Shop} />
+        </MemoryRouter>
+      </I18nextProvider>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
+
+  it('Renders correctly with home theme', async () => {
     const { container } = render(
       <I18nextProvider i18n={i18n}>
         <MemoryRouter initialEntries={['/']}>
-          <Navigation />
+          <Navigation theme={NavigationTheme.Home} />
         </MemoryRouter>
       </I18nextProvider>,
     )
@@ -22,8 +34,8 @@ describe('Navigation component', () => {
   it('Can expand and collapse mobile menu', async () => {
     render(
       <I18nextProvider i18n={i18n}>
-        <MemoryRouter initialEntries={['/']}>
-          <Navigation />
+        <MemoryRouter initialEntries={['/catalogue']}>
+          <Navigation theme={NavigationTheme.Shop} />
         </MemoryRouter>
       </I18nextProvider>,
     )
@@ -33,5 +45,18 @@ describe('Navigation component', () => {
     const buttonClose = await screen.findByTestId('button-close')
     expect(buttonClose).toBeInTheDocument()
     fireEvent.click(buttonClose)
+  })
+
+  it('Can click on shop from the home theme', async () => {
+    render(
+      <I18nextProvider i18n={i18n}>
+        <MemoryRouter initialEntries={['/catalogue']}>
+          <Navigation theme={NavigationTheme.Home} />
+        </MemoryRouter>
+      </I18nextProvider>,
+    )
+    const buttonShop = await screen.findByTestId('button-shop')
+    expect(buttonShop).toBeInTheDocument()
+    fireEvent.click(buttonShop)
   })
 })

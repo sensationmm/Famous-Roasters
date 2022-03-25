@@ -83,10 +83,10 @@ exports[`Product view Renders correctly 1`] = `
               <span
                 class="sr-only"
               >
-                FR
+                Famous Roasters
               </span>
-              <span
-                class="font-syne text-3xl"
+              <div
+                class="xl:hidden font-syne text-3xl"
               >
                 <span>
                   F
@@ -96,7 +96,21 @@ exports[`Product view Renders correctly 1`] = `
                 >
                   R
                 </span>
-              </span>
+              </div>
+              <div
+                class="hidden xl:block font-syne text-xl text-center"
+              >
+                <div
+                  class="h-5"
+                >
+                  Famous
+                </div>
+                <div
+                  class="font-extrabold"
+                >
+                  Roasters
+                </div>
+              </div>
             </a>
             <div
               class="flex-1 flow-root flex h-full items-center"
@@ -129,13 +143,13 @@ exports[`Product view Renders correctly 1`] = `
                   </a>
                 </div>
                 <a
-                  class="p-2 text-gray-400 hover:text-gray-500 xl:ml-6"
-                  href="/product/:id"
+                  class="hidden xl:block p-2 text-gray-400 hover:text-gray-500 xl:ml-6"
+                  href="/account"
                 >
                   <span
                     class="sr-only"
                   >
-                    Account
+                    Konto
                   </span>
                   <svg
                     aria-hidden="true"
