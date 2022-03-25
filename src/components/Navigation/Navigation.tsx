@@ -115,7 +115,7 @@ export const Navigation: React.FC = () => {
             </div>
 
             {/* Logo */}
-            <Link to="/" className="flex">
+            <Link to="/" className="flex h-full items-center pl-2 pr-2">
               <span className="sr-only">FR</span>
               <span className="font-syne text-3xl">
                 <span>F</span>
@@ -123,41 +123,41 @@ export const Navigation: React.FC = () => {
               </span>
             </Link>
 
-            {/* Desktop menu secondary pages */}
-            <div className="hidden xl:flex-1 xl:block xl:self-stretch">
-              <div className="h-full flex space-x-8 justify-end">
-                {navigation.pagesSecondary.map((page) => (
-                  <Link key={page.key} to={page.href} className="flex items-center text-gray-700 hover:text-gray-800">
-                    <Typography
-                      as="span"
-                      type={TypographyType.Paragraph}
-                      size={TypographySize.Small}
-                      className="uppercase"
-                    >
-                      {t(`pages.${page.key}.title`)}
-                    </Typography>
-                  </Link>
-                ))}
-              </div>
-            </div>
+            <div className="flex-1 flow-root flex h-full items-center">
+              <div className="flex-1 flex h-full items-center justify-end xl:flex-none">
+                {/* Desktop menu secondary pages */}
+                <div className="hidden h-full xl:flex space-x-8 justify-end">
+                  {navigation.pagesSecondary.map((page) => (
+                    <Link key={page.key} to={page.href} className="flex items-center text-gray-700 hover:text-gray-800">
+                      <Typography
+                        as="span"
+                        type={TypographyType.Paragraph}
+                        size={TypographySize.Small}
+                        className="uppercase"
+                      >
+                        {t(`pages.${page.key}.title`)}
+                      </Typography>
+                    </Link>
+                  ))}
+                </div>
 
-            <div className="flex-1 flex items-center justify-end xl:flex-none">
-              {/* Account */}
-              <Link to="#" className="p-2 text-gray-400 hover:text-gray-500 xl:ml-4">
-                <span className="sr-only">Account</span>
-                <UserIcon className="w-6 h-6" aria-hidden="true" />
-              </Link>
-
-              {/* Cart */}
-              <div className="ml-4 flow-root xl:ml-6">
-                <Link to="/cart" className="group -m-2 p-2 flex items-center">
-                  <ShoppingBagIcon
-                    className="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
-                    aria-hidden="true"
-                  />
-                  <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
-                  <span className="sr-only">items in cart, view bag</span>
+                {/* Account */}
+                <Link to="#" className="p-2 text-gray-400 hover:text-gray-500 xl:ml-6">
+                  <span className="sr-only">Account</span>
+                  <UserIcon className="w-6 h-6" aria-hidden="true" />
                 </Link>
+
+                {/* Cart */}
+                <div className="ml-4 flow-root xl:ml-6">
+                  <Link to="/cart" className="group -m-2 p-2 flex items-center">
+                    <ShoppingBagIcon
+                      className="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
+                      aria-hidden="true"
+                    />
+                    <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
+                    <span className="sr-only">items in cart, view bag</span>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
