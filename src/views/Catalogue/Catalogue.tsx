@@ -2,6 +2,7 @@ import { useQuery } from '@apollo/client'
 import { loader } from 'graphql.macro'
 import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Collection } from 'shopify-storefront-api-typings'
 import { ErrorPrompt, Layout, Loader, Typography, TypographySize, TypographyType } from 'src/components'
 
 export const Catalogue: React.FC = () => {
@@ -12,11 +13,7 @@ export const Catalogue: React.FC = () => {
     document.title = `${t('brand.name')} | ${t('pages.catalogue.title')}`
   }, [])
 
-  const { loading, error, data } = useQuery(query)
-
-  // TODO: define typing
-  // TODO: make sure this works with SSR if we go for that
-  // TODO: add env vars to GH actions
+  const { loading, error, data } = useQuery<Collection>(query)
 
   const showTestData = () => {
     if (loading) {
@@ -25,12 +22,12 @@ export const Catalogue: React.FC = () => {
       if (error) {
         return <ErrorPrompt promptAction={() => history.go(0)} />
       } else {
-        const edges = data.products.edges
-        const productTitles = edges.map((edge: { node: { title: string } }) => edge.node.title)
+        const edges = data?.products.edges
+        const productTitles = edges?.map((edge) => edge.node.title)
         return (
           <div className="text-center">
             <div className="text-center mb-4">Some product titles:</div>
-            {productTitles.map((title: string, i: number) => (
+            {productTitles?.map((title, i: number) => (
               <div key={`title-${i}`}>{title}</div>
             ))}
           </div>
