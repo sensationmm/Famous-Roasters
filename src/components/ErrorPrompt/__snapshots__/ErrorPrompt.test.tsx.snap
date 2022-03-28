@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error prompt component Renders correctly with action 1`] = `
+<div>
+  <div
+    class="p-4 border border-coreUI-border bg-white"
+  >
+    <div
+      class="text-center text-base leading-6 font-normal"
+    >
+      Ein Fehler ist aufgetreten
+    </div>
+    <div
+      class="mt-4 flex justify-center"
+    >
+      <button
+        class="inline-flex items-center px-4 py-2 text-base text-white bg-brand-black rounded-full"
+        role="button"
+      >
+        Erneut versuchen
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Error prompt component Renders correctly without action 1`] = `
+<div>
+  <div
+    class="p-4 border border-coreUI-border bg-white"
+  >
+    <div
+      class="text-center text-base leading-6 font-normal"
+    >
+      Ein Fehler ist aufgetreten
+    </div>
+  </div>
+</div>
+`;

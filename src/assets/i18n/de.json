@@ -48,5 +48,13 @@
       "navigation": "Tastefinder",
       "title": "Tastefinder"
     }
+  },
+  "error": {
+    "generic": {
+      "text": "Ein Fehler ist aufgetreten",
+      "actions": {
+        "retry": "Erneut versuchen"
+      }
+    }
   }
 }
