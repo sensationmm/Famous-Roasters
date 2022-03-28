@@ -59,3 +59,28 @@ jobs:
 
       - name: Build & Package
         run: yarn run build
+        env:
+          REACT_APP_SHOPIFY_STOREFRONT_GRAPHQL_ENDPOINT: ${{ secrets.REACT_APP_SHOPIFY_STOREFRONT_GRAPHQL_ENDPOINT }}
+          REACT_APP_SHOPIFY_STOREFRONT_ACCESS_TOKEN: ${{ secrets.REACT_APP_SHOPIFY_STOREFRONT_ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  sonarcloud:
+    name: SonarCloud
+    needs: test-and-build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - uses: actions/download-artifact@master
+        with:
+          name: coverage
+          path: coverage
+
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

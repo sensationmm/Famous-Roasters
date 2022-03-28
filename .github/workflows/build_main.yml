@@ -64,6 +64,10 @@ jobs:
 
       - name: Build & Package
         run: yarn run build
+        env:
+          REACT_APP_SHOPIFY_STOREFRONT_GRAPHQL_ENDPOINT: ${{ secrets.REACT_APP_SHOPIFY_STOREFRONT_GRAPHQL_ENDPOINT }}
+          REACT_APP_SHOPIFY_STOREFRONT_ACCESS_TOKEN: ${{ secrets.REACT_APP_SHOPIFY_STOREFRONT_ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Configure AWS credentials
         id: creds
