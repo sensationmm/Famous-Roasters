@@ -40,8 +40,8 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
   const navigate = useNavigate()
   const { t } = useTranslation()
 
-  const renderMenuItemsMobile = (navigationData: NavigationDataItem[]) =>
-    navigationData.map((page) => (
+  const renderMenuItemsMobile = (data: NavigationDataItem[]) =>
+    data.map((page) => (
       <div key={page.key} className="flow-root">
         <Link to={page.href} className="-m-2 p-2 block font-medium text-gray-900">
           {t(`pages.${page.key}.navigation`)}
