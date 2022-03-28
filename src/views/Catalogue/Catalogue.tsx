@@ -1,8 +1,8 @@
 import { useQuery } from '@apollo/client'
+import { Collection } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
 import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Collection } from 'shopify-storefront-api-typings'
 import { ErrorPrompt, Layout, Loader, Typography, TypographySize, TypographyType } from 'src/components'
 
 export const Catalogue: React.FC = () => {
