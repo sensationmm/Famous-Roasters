@@ -1,7 +1,6 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { MenuIcon, ShoppingBagIcon, UserIcon, XIcon } from '@heroicons/react/outline'
-import React from 'react'
-import { Fragment, useState } from 'react'
+import React, { Fragment, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useNavigate } from 'react-router-dom'
 import { Button, ButtonSize, Typography, TypographySize, TypographyType } from 'src/components'
@@ -15,7 +14,17 @@ interface NavigationProps {
   theme: NavigationTheme
 }
 
-const navigationData = {
+interface NavigationDataItem {
+  key: string
+  href: string
+}
+
+interface NavigationData {
+  pagesPrimary: NavigationDataItem[]
+  pagesSecondary: NavigationDataItem[]
+}
+
+const navigationData: NavigationData = {
   pagesPrimary: [
     { key: 'tasteFinder', href: '/taste-finder' },
     { key: 'ourRoasters', href: '/our-roasters' },
@@ -30,6 +39,15 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
   const [open, setOpen] = useState(false)
   const navigate = useNavigate()
   const { t } = useTranslation()
+
+  const renderMenuItemsMobile = (data: NavigationDataItem[]) =>
+    data.map((page) => (
+      <div key={page.key} className="flow-root">
+        <Link to={page.href} className="-m-2 p-2 block font-medium text-gray-900">
+          {t(`pages.${page.key}.navigation`)}
+        </Link>
+      </div>
+    ))
 
   return (
     <div className="bg-white">
@@ -78,14 +96,9 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
                     </Link>
                   </div>
                 ))}
+                {renderMenuItemsMobile(navigationData.pagesPrimary)}
                 <div className="border-t border-coreUI-border" />
-                {navigationData.pagesSecondary.map((page) => (
-                  <div key={page.key} className="flow-root">
-                    <Link to={page.href} className="-m-2 p-2 block font-medium text-gray-900">
-                      {t(`pages.${page.key}.navigation`)}
-                    </Link>
-                  </div>
-                ))}
+                {renderMenuItemsMobile(navigationData.pagesSecondary)}
                 <div className="border-t border-coreUI-border" />
                 <div className="flow-root">
                   <Link to="/account" className="-m-2 p-2 block font-medium text-gray-900">

@@ -84,15 +84,13 @@ export const Typography: React.FC<TypographyProps> = ({
   size = Size.Base,
   className,
   children,
-  ...props
 }: TypographyProps) => {
-  const Element = ({ ...props }: React.HTMLAttributes<HTMLElement>) => React.createElement(as, props, children)
+  const Element = ({ ...props }) => React.createElement(as, props, children)
   return (
     <Element
       className={
         className ? `${className} ${getTypographyClassNames(type, size)}` : getTypographyClassNames(type, size)
       }
-      {...props}
     >
       {children}
     </Element>

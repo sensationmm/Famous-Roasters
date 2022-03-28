@@ -1,0 +1,18 @@
+query products {
+    products(first: 10) {
+        edges {
+            node {
+                id
+                title
+                vendor
+                variants(first: 10) {
+                    edges {
+                        node {
+                            title
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
