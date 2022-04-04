@@ -192,7 +192,7 @@ GitHub workflows is our solution for CI/CD and the config can be found at `.gith
 <!-- Deployment -->  
 ## Deployment
 Deployment to staging is configured automatically for the `main` branch. For details, check the [GitHub Actions](#github-actions) section above.
-The deployed app can be found [here](https://d1ma33i6h3eq7r.cloudfront.net/).
+The deployed app can be found [here](https://staging.venture-famous-roasters.de/).
 
 <!-- Questions? -->  
 ## Questions?
