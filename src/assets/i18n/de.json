@@ -1,7 +1,33 @@
 {
   "brand": {
+    "copyright": "© {{year}} Famous Roasters. Alle Rechte vorbehalten",
     "name": "Famous Roasters",
-    "copyright": "© {{year}} Famous Roasters. Alle Rechte vorbehalten."
+    "withLove": "Geröstet mit ❤️ in Berlin"
+  },
+  "error": {
+    "generic": {
+      "actions": {
+        "retry": "Erneut versuchen"
+      },
+      "text": "Ein Fehler ist aufgetreten"
+    }
+  },
+  "footer": {
+    "customerService": {
+      "cta": "Kunden Support",
+      "text": "Fragen? Kommentare? Bedenken? Oder möchtest du uns einfach ein paar schöne Worte senden?",
+      "title": "Kunden Support"
+    },
+    "newsletter": {
+      "cta": "Anmelden",
+      "disclaimer": "Hinweis: Sie können sich jederzeit abmelden. Siehe unsere Datenschutzrichtlinie und Bedingungen.",
+      "inputLabel": "Deine E-Mail",
+      "text": "Melde dich für den Newsletter an und erhalte, einmalige Angebote, Neuigkeiten, Tipps und Insights zum Thema Specialty Coffee und neuen Röstern. ",
+      "title": "Newsletter"
+    },
+    "slogan": {
+      "text": "A pleasure for every taste."
+    }
   },
   "pages": {
     "about": {
@@ -36,9 +62,25 @@
       "navigation": "Home",
       "title": "Home"
     },
+    "imprint": {
+      "navigation": "Impressum",
+      "title": "Impressum"
+    },
+    "jobs": {
+      "navigation": "Jobs",
+      "title": "Jobs"
+    },
     "ourRoasters": {
       "navigation": "Unsere Röster",
       "title": "Unsere Röster"
+    },
+    "privacy": {
+      "navigation": "Datenschutz-Bestimmungen",
+      "title": "Datenschutz-Bestimmungen"
+    },
+    "press": {
+      "navigation": "Presse",
+      "title": "Presse"
     },
     "product": {
       "navigation": "Produkt",
@@ -47,14 +89,6 @@
     "tasteFinder": {
       "navigation": "Tastefinder",
       "title": "Tastefinder"
-    }
-  },
-  "error": {
-    "generic": {
-      "text": "Ein Fehler ist aufgetreten",
-      "actions": {
-        "retry": "Erneut versuchen"
-      }
     }
   }
 }

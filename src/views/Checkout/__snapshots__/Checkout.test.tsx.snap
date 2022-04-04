@@ -234,20 +234,196 @@ exports[`Checkout view Renders correctly 1`] = `
       </div>
     </main>
     <footer
-      class="bg-white"
+      class="bg-brand-black text-base text-white px-6 sm:px-6 xl:px-10 py-10"
     >
       <div
-        class="max-w-7xl mx-auto py-6 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8"
+        class="w-full text-center mb-10 flex justify-center items-center"
+      >
+        <div>
+          [Badge]
+        </div>
+        <div
+          class="text-5xl leading-none font-normal"
+        >
+          A pleasure for every taste.
+        </div>
+      </div>
+      <div
+        class="max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2"
       >
         <div
-          class="md:order-1"
+          class="order-2 md:order-1"
         >
-          <p
-            class="text-center text-base text-gray-400"
-          >
-            © 2022 Famous Roasters. Alle Rechte vorbehalten.
-          </p>
+          <ul>
+            <li
+              class="mt-0"
+            >
+              <a
+                href="/catalogue"
+              >
+                Shop
+              </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <a
+                href="/taste-finder"
+              >
+                Tastefinder
+              </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <a
+                href="/our-roasters"
+              >
+                Unsere Röster
+              </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <a
+                href="/about"
+              >
+                Über uns
+              </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <a
+                href="/jobs"
+              >
+                Jobs
+              </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <a
+                href="/privacy"
+              >
+                Datenschutz-Bestimmungen
+              </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <a
+                href="/press"
+              >
+                Presse
+              </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <a
+                href="/imprint"
+              >
+                Impressum
+              </a>
+            </li>
+          </ul>
         </div>
+        <div
+          class="order-1 md:order-2"
+        >
+          <div>
+            <div>
+              <span
+                class="font-syne text-3xl leading-8 font-semibold tracking-tight"
+              >
+                Kunden Support
+              </span>
+            </div>
+            <div
+              class="mt-6"
+            >
+              <span
+                class="text-lg leading-7 font-normal"
+              >
+                Fragen? Kommentare? Bedenken? Oder möchtest du uns einfach ein paar schöne Worte senden?
+              </span>
+            </div>
+            <div
+              class="mt-6"
+            >
+              <button
+                class="inline-flex items-center px-4 py-2 text-base text-black bg-brand-green-club rounded-full"
+                role="button"
+                type="button"
+              >
+                Kunden Support
+              </button>
+            </div>
+          </div>
+          <div
+            class="mt-12"
+          >
+            <div>
+              <span
+                class="font-syne text-3xl leading-8 font-semibold tracking-tight"
+              >
+                Newsletter
+              </span>
+            </div>
+            <div
+              class="mt-6"
+            >
+              <span
+                class="text-lg leading-7 font-normal"
+              >
+                Melde dich für den Newsletter an und erhalte, einmalige Angebote, Neuigkeiten, Tipps und Insights zum Thema Specialty Coffee und neuen Röstern. 
+              </span>
+            </div>
+            <div
+              class="mt-6"
+            >
+              <input
+                type="text"
+              />
+            </div>
+            <div
+              class="mt-6"
+            >
+              <button
+                class="inline-flex items-center px-4 py-2 text-base text-black bg-brand-green-club rounded-full"
+                role="button"
+                type="button"
+              >
+                Anmelden
+              </button>
+            </div>
+            <div
+              class="mt-4"
+            >
+              <span
+                class="text-brand-grey-bombay text-base leading-6 font-normal"
+              >
+                Hinweis: Sie können sich jederzeit abmelden. Siehe unsere Datenschutzrichtlinie und Bedingungen.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-full text-center mt-10"
+      >
+        <span
+          class="text-center text-base leading-6 font-normal"
+        >
+          © 2022 Famous Roasters. Alle Rechte vorbehalten
+        </span>
+        <br />
+        <span
+          class="text-center text-base leading-6 font-normal"
+        >
+          Geröstet mit ❤️ in Berlin
+        </span>
       </div>
     </footer>
   </div>

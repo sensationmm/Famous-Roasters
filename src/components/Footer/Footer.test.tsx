@@ -1,6 +1,7 @@
 import { render, waitFor } from '@testing-library/react'
 import React from 'react'
 import { I18nextProvider } from 'react-i18next'
+import { MemoryRouter } from 'react-router-dom'
 import { i18n } from 'src/config'
 
 import { Footer } from '.'
@@ -9,7 +10,9 @@ describe('Footer component', () => {
   it('Renders correctly', async () => {
     const { container } = render(
       <I18nextProvider i18n={i18n}>
-        <Footer />
+        <MemoryRouter initialEntries={['/']}>
+          <Footer />
+        </MemoryRouter>
       </I18nextProvider>,
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
