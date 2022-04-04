@@ -15,7 +15,9 @@ export const ErrorPrompt: React.FC<ErrorPromptProps> = ({ promptAction }: ErrorP
       </Typography>
       {promptAction && (
         <div className="mt-4 flex justify-center">
-          <Button onClick={promptAction}>{t('error.generic.actions.retry')}</Button>
+          <Button onClick={promptAction} data-testid="button-prompt">
+            {t('error.generic.actions.retry')}
+          </Button>
         </div>
       )}
     </div>

@@ -1,6 +1,4 @@
-import { CurrencyCode, Product } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
-
-export const ProductMock: Product = {
+export const ProductMock = {
   availableForSale: false,
   collections: {
     edges: [],
@@ -12,18 +10,18 @@ export const ProductMock: Product = {
   compareAtPriceRange: {
     maxVariantPrice: {
       amount: '9.99',
-      currencyCode: CurrencyCode.Eur,
+      currencyCode: 'Eur',
     },
     minVariantPrice: {
       amount: '19.99',
-      currencyCode: CurrencyCode.Eur,
+      currencyCode: 'Eur',
     },
   },
   createdAt: '',
   description: '',
   descriptionHtml: '',
   featuredImage: {
-    url: 'http://www.myimageurl.com',
+    url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/prod-img_350x350_ee9b5d73-8cbf-4c38-a817-83313e1c9abf.png?v=1649064108',
     originalSrc: '',
     src: '',
     transformedSrc: '',
@@ -47,11 +45,11 @@ export const ProductMock: Product = {
   priceRange: {
     maxVariantPrice: {
       amount: '9.99',
-      currencyCode: CurrencyCode.Eur,
+      currencyCode: 'Eur',
     },
     minVariantPrice: {
       amount: '19.99',
-      currencyCode: CurrencyCode.Eur,
+      currencyCode: 'Eur',
     },
   },
   productType: '',
@@ -66,7 +64,7 @@ export const ProductMock: Product = {
   },
   seo: {},
   tags: [],
-  title: '',
+  title: 'Espresso Raritäten Set',
   updatedAt: '',
   variants: {
     edges: [],
@@ -75,7 +73,7 @@ export const ProductMock: Product = {
       hasPreviousPage: false,
     },
   },
-  vendor: '',
+  vendor: 'Famous Roasters',
   __typename: 'Product',
   id: '12312312',
   metafields: {

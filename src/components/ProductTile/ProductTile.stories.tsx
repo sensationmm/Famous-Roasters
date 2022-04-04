@@ -1,5 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import React from 'react'
+import { ProductMock } from 'src/_mocks'
 
 import { ProductTile } from './ProductTile'
 
@@ -11,4 +12,6 @@ export default {
 const Template: ComponentStory<typeof ProductTile> = (args) => <ProductTile {...args} />
 
 export const Default = Template.bind({})
-Default.args = {}
+Default.args = {
+  productNode: ProductMock,
+}

@@ -11,8 +11,8 @@ const formatPrice = (amount: string, currency: string) =>
   Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: currency,
-    minimumFractionDigits: Number.isInteger(amount) ? 0 : 2,
-    maximumFractionDigits: Number.isInteger(amount) ? 0 : 2,
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
   }).format(parseFloat(amount))
 
 export const ProductTile: React.FC<ProductTileProps> = ({ productNode }: ProductTileProps) => {
