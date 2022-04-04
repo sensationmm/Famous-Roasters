@@ -1,4 +1,4 @@
-import { render, waitFor } from '@testing-library/react'
+import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import React from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { i18n } from 'src/config'
@@ -26,5 +26,12 @@ describe('Error prompt component', () => {
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
     expect(container).toMatchSnapshot()
+  })
+
+  it('Can click on retry action', async () => {
+    render(<ErrorPrompt promptAction={() => alert('hello world!')} />)
+    const buttonPrompt = await screen.findByTestId('button-prompt')
+    expect(buttonPrompt).toBeInTheDocument()
+    fireEvent.click(buttonPrompt)
   })
 })

@@ -13,7 +13,7 @@ exports[`Navigation component Renders correctly with home theme 1`] = `
         class="max-w-7xl mx-auto px-4 sm:px-6 xl:px-8"
       >
         <div
-          class="h-16 flex items-center justify-between"
+          class="h-16 flex items-center justify-between border-b border-brand-grey-whisper"
         >
           <div
             class="flex-1 flex items-center xl:hidden"
@@ -197,7 +197,7 @@ exports[`Navigation component Renders correctly with shop theme 1`] = `
         class="max-w-7xl mx-auto px-4 sm:px-6 xl:px-8"
       >
         <div
-          class="h-16 flex items-center justify-between"
+          class="h-16 flex items-center justify-between border-b border-brand-grey-whisper"
         >
           <div
             class="flex-1 flex items-center xl:hidden"

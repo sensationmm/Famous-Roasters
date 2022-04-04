@@ -5,11 +5,13 @@ query products {
                 id
                 title
                 vendor
-                variants(first: 10) {
-                    edges {
-                        node {
-                            title
-                        }
+                featuredImage {
+                    url
+                }
+                priceRange {
+                    minVariantPrice {
+                        amount
+                        currencyCode
                     }
                 }
             }

@@ -30,3 +30,16 @@ export const CatalogueMockError = {
     errors: [new GraphQLError('Error!')],
   },
 }
+
+export const CatalogueMockMissingData = {
+  request: {
+    query,
+  },
+  result: {
+    data: {
+      products: {
+        edges: null,
+      },
+    },
+  },
+}

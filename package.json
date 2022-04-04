@@ -114,6 +114,9 @@
     "workbox-webpack-plugin": "6.2.0"
   },
   "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/?!(@shopify/hydrogen)"
+    ],
     "coveragePathIgnorePatterns": [
       "<rootDir>/src/index.tsx",
       "<rootDir>/.*.stories.tsx$",

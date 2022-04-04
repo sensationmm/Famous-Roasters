@@ -113,10 +113,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ├── .storybook                        # storybook configuration files 
 ├── public                            # static public files
 ├── src                               # repo source files  
+│   ├── _mocks                        # mock objects  
 │   ├── assets                        # source code assets  
 │   │   └── i18n                      # translations json files
 │   ├── components                    # components folder  
-│   │   ├── ...  
+│   │   ├── ...    
 │   │   ├── <Component>  
 │   │   │   ├── __snapshots__         # generated snapshots  
 │   │   │   ├── <Component>.test.tsx  # component test file  
@@ -126,6 +127,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 │   ├── config                        # i18n config  
 │   ├── docs                          # documentation
 │   │   └── storybook                 # storybook docs
+│   ├── utils                         # utilities and helpers  
 │   ├── views                         # pages/views  
 │   │   ├── ...  
 │   │   ├── <Page>  

@@ -4,6 +4,7 @@ import { Footer } from './Footer'
 import { Layout } from './Layout'
 import { Loader } from './Loader'
 import { Navigation, NavigationTheme } from './Navigation'
+import { ProductTile } from './ProductTile'
 import { Typography, TypographySize, TypographyType } from './Typography'
 
 export { Button as Button }
@@ -16,6 +17,7 @@ export { Layout as Layout }
 export { Loader as Loader }
 export { Navigation as Navigation }
 export { NavigationTheme as NavigationTheme }
+export { ProductTile as ProductTile }
 export { Typography as Typography }
 export { TypographyType as TypographyType }
 export { TypographySize as TypographySize }

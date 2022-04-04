@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product Tile component Renders correctly 1`] = `
+<div>
+  <div
+    class="flex p-6"
+  >
+    <div
+      class="shrink-0"
+    >
+      <img
+        alt="Espresso Raritäten Set"
+        class="w-32"
+        src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/prod-img_350x350_ee9b5d73-8cbf-4c38-a817-83313e1c9abf.png?v=1649064108"
+      />
+    </div>
+    <div
+      class="flex flex-col justify-between p-2"
+    >
+      <div
+        class="text-sm leading-5 font-semibold"
+      >
+        Espresso Raritäten Set
+      </div>
+      <div
+        class="text-coreUI-text-tertiary text-sm leading-5 font-normal"
+      >
+        Famous Roasters
+      </div>
+      <div
+        class="text-coreUI-text-tertiary text-sm leading-5 font-normal"
+      >
+        Kolumbien
+      </div>
+      <div
+        class="text-coreUI-text-tertiary text-sm leading-5 font-normal"
+      >
+        Filter
+      </div>
+      <div>
+        <span
+          class="mr-1 text-base leading-6 font-semibold"
+        >
+          19,99 €
+        </span>
+        <span
+          class="text-coreUI-text-tertiary text-xs leading-4 font-normal"
+        >
+          (XX.XX €/kg)
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
