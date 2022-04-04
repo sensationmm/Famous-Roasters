@@ -1,4 +1,6 @@
-export const ProductMock = {
+import { CurrencyCode, Product } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
+
+export const ProductMock: Product = {
   availableForSale: false,
   collections: {
     edges: [],
@@ -10,11 +12,11 @@ export const ProductMock = {
   compareAtPriceRange: {
     maxVariantPrice: {
       amount: '9.99',
-      currencyCode: 'Eur',
+      currencyCode: CurrencyCode.Eur,
     },
     minVariantPrice: {
       amount: '19.99',
-      currencyCode: 'Eur',
+      currencyCode: CurrencyCode.Eur,
     },
   },
   createdAt: '',
@@ -45,11 +47,11 @@ export const ProductMock = {
   priceRange: {
     maxVariantPrice: {
       amount: '9.99',
-      currencyCode: 'Eur',
+      currencyCode: CurrencyCode.Eur,
     },
     minVariantPrice: {
       amount: '19.99',
-      currencyCode: 'Eur',
+      currencyCode: CurrencyCode.Eur,
     },
   },
   productType: '',
@@ -74,7 +76,6 @@ export const ProductMock = {
     },
   },
   vendor: 'Famous Roasters',
-  __typename: 'Product',
   id: '12312312',
   metafields: {
     edges: [],

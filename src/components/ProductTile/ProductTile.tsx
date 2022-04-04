@@ -1,19 +1,11 @@
 import { Product } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import React from 'react'
 import { Typography, TypographySize, TypographyType } from 'src/components'
+import { formatPrice } from 'src/utils'
 
 interface ProductTileProps {
   productNode: Product
 }
-
-// TODO move this to utils
-const formatPrice = (amount: string, currency: string) =>
-  Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: currency,
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }).format(parseFloat(amount))
 
 export const ProductTile: React.FC<ProductTileProps> = ({ productNode }: ProductTileProps) => {
   const { title, vendor, featuredImage, priceRange } = productNode

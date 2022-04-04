@@ -41,7 +41,7 @@ exports[`Product Tile component Renders correctly 1`] = `
         <span
           class="mr-1 text-base leading-6 font-semibold"
         >
-          €19.99
+          19,99 €
         </span>
         <span
           class="text-coreUI-text-tertiary text-xs leading-4 font-normal"
