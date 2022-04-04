@@ -113,7 +113,7 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
 
       <header className="relative bg-white">
         <nav aria-label="Top" className="max-w-7xl mx-auto px-4 sm:px-6 xl:px-8">
-          <div className="h-16 flex items-center justify-between">
+          <div className="h-16 flex items-center justify-between border-b border-brand-grey-whisper">
             <div className="flex-1 flex items-center xl:hidden">
               <button
                 type="button"
