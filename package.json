@@ -32,7 +32,8 @@
     "prettier:write": "prettier --check src/**/*.{ts,tsx} --write",
     "postinstall": "husky install",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-aws-s3 --ci --out=.storybook-out --host-token-env-variable=GITHUB_TOKEN"
   },
   "eslintConfig": {
     "extends": [
@@ -86,6 +87,7 @@
     "@storybook/node-logger": "^6.4.19",
     "@storybook/preset-create-react-app": "^4.1.0",
     "@storybook/react": "^6.4.19",
+    "@storybook/storybook-deployer": "^2.8.11",
     "@storybook/testing-library": "^0.0.9",
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "autoprefixer": "^10.4.2",

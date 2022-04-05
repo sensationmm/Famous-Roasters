@@ -11,8 +11,11 @@
 # production
 /build
 
-#ide
+# ide
 /.idea
+
+# storybook
+/.storybook-out
 
 # misc
 .DS_Store
