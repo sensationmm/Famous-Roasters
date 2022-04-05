@@ -1,7 +1,7 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import React from 'react'
 
-import { Button, ButtonColor, ButtonEmphasis, ButtonSize } from '.'
+import { Button, ButtonEmphasis, ButtonSize } from '.'
 
 global.alert = jest.fn()
 
@@ -14,7 +14,27 @@ describe('Button component', () => {
 
   it('Renders correctly secondary', async () => {
     const { container } = render(
-      <Button emphasis={ButtonEmphasis.Contained} color={ButtonColor.Secondary} onClick={() => alert('click')}>
+      <Button emphasis={ButtonEmphasis.Secondary} onClick={() => alert('click')}>
+        CTA
+      </Button>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
+
+  it('Renders correctly tertiary', async () => {
+    const { container } = render(
+      <Button emphasis={ButtonEmphasis.Tertiary} onClick={() => alert('click')}>
+        CTA
+      </Button>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
+
+  it('Renders correctly size xs', async () => {
+    const { container } = render(
+      <Button size={ButtonSize.xs} onClick={() => alert('click')}>
         CTA
       </Button>,
     )
@@ -42,19 +62,9 @@ describe('Button component', () => {
     expect(container).toMatchSnapshot()
   })
 
-  it('Renders correctly outlined', async () => {
+  it('Renders correctly size xl', async () => {
     const { container } = render(
-      <Button emphasis={ButtonEmphasis.Outlined} onClick={() => alert('click')}>
-        CTA
-      </Button>,
-    )
-    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
-    expect(container).toMatchSnapshot()
-  })
-
-  it('Renders correctly text', async () => {
-    const { container } = render(
-      <Button emphasis={ButtonEmphasis.Text} onClick={() => alert('click')}>
+      <Button size={ButtonSize.xl} onClick={() => alert('click')}>
         CTA
       </Button>,
     )

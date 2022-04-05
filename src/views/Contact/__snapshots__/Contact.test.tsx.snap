@@ -171,7 +171,7 @@ exports[`Contact view Renders correctly 1`] = `
                   class="ml-4 flow-root xl:ml-6"
                 >
                   <button
-                    class="inline-flex items-center px-4 py-2 text-sm text-white bg-brand-black rounded-full"
+                    class="inline-flex items-center rounded-full border-2 px-3 py-2 text-sm font-semibold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
                     data-testid="button-shop"
                     role="button"
                   >
@@ -350,11 +350,26 @@ exports[`Contact view Renders correctly 1`] = `
               class="mt-6"
             >
               <button
-                class="inline-flex items-center px-4 py-2 text-base text-black bg-brand-green-club rounded-full"
+                class="inline-flex items-center rounded-full border-2 px-4 py-2 text-md font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
                 role="button"
                 type="button"
               >
                 Kunden Support
+                 
+                <svg
+                  aria-hidden="true"
+                  class="w-6 h-6 ml-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"
+                  />
+                  <path
+                    d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"
+                  />
+                </svg>
               </button>
             </div>
           </div>
@@ -388,7 +403,7 @@ exports[`Contact view Renders correctly 1`] = `
               class="mt-6"
             >
               <button
-                class="inline-flex items-center px-4 py-2 text-base text-black bg-brand-green-club rounded-full"
+                class="inline-flex items-center rounded-full border-2 px-4 py-2 text-md font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
                 role="button"
                 type="button"
               >

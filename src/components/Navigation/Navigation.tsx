@@ -3,7 +3,7 @@ import { MenuIcon, ShoppingBagIcon, UserIcon, XIcon } from '@heroicons/react/out
 import React, { Fragment, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useNavigate } from 'react-router-dom'
-import { Button, ButtonSize, Typography, TypographySize, TypographyType } from 'src/components'
+import { Button, ButtonEmphasis, ButtonSize, Typography, TypographySize, TypographyType } from 'src/components'
 
 export enum NavigationTheme {
   Home = 'home',
@@ -193,7 +193,12 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
                       <span className="sr-only">items in cart, view bag</span>
                     </Link>
                   ) : (
-                    <Button size={ButtonSize.sm} onClick={() => navigate('/catalogue')} data-testid="button-shop">
+                    <Button
+                      emphasis={ButtonEmphasis.Secondary}
+                      size={ButtonSize.sm}
+                      onClick={() => navigate('/catalogue')}
+                      data-testid="button-shop"
+                    >
                       {t(`pages.catalogue.navigation`)}
                     </Button>
                   )}

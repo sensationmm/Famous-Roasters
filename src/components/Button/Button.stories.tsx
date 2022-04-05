@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import React from 'react'
 
-import { Button, Color, Emphasis } from './Button'
+import { Button, Emphasis } from './Button'
 
 export default {
   title: 'Components/Button',
@@ -12,33 +12,24 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-  emphasis: Emphasis.Contained,
-  color: Color.Primary,
+  emphasis: Emphasis.Primary,
   children: 'Button',
 }
 
-export const PrimaryContained = Template.bind({})
-PrimaryContained.args = {
-  emphasis: Emphasis.Contained,
-  color: Color.Primary,
+export const Primary = Template.bind({})
+Primary.args = {
+  emphasis: Emphasis.Primary,
   children: 'Button',
 }
 
-export const SecondaryContained = Template.bind({})
-SecondaryContained.args = {
-  emphasis: Emphasis.Contained,
-  color: Color.Secondary,
+export const Secondary = Template.bind({})
+Secondary.args = {
+  emphasis: Emphasis.Secondary,
   children: 'Button',
 }
 
-export const Outlined = Template.bind({})
-Outlined.args = {
-  emphasis: Emphasis.Outlined,
-  children: 'Button',
-}
-
-export const TextButton = Template.bind({})
-TextButton.args = {
-  emphasis: Emphasis.Text,
+export const Tertiary = Template.bind({})
+Tertiary.args = {
+  emphasis: Emphasis.Tertiary,
   children: 'Button',
 }

@@ -36,6 +36,7 @@ module.exports = {
                 green: {
                     ash: '#B8C6B1',
                     club: '#43F067',
+                    starship: '#BCF253',
                 },
                 brown: '#8E7C7A',
             },

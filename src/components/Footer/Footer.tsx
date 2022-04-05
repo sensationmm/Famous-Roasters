@@ -1,7 +1,8 @@
+import { ChatAlt2Icon } from '@heroicons/react/solid'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import { Badge, Button, ButtonColor, ButtonEmphasis, Typography, TypographySize, TypographyType } from 'src/components'
+import { Badge, Button, ButtonEmphasis, ButtonSize, Typography, TypographySize, TypographyType } from 'src/components'
 
 interface FooterLink {
   key: string
@@ -57,8 +58,8 @@ export const Footer: React.FC = () => {
               </Typography>
             </div>
             <div className="mt-6">
-              <Button type="button" emphasis={ButtonEmphasis.Contained} color={ButtonColor.Secondary}>
-                {t('footer.customerService.cta')}
+              <Button type="button" emphasis={ButtonEmphasis.Tertiary} size={ButtonSize.lg}>
+                {t('footer.customerService.cta')} <ChatAlt2Icon className="w-6 h-6 ml-2" />
               </Button>
             </div>
           </div>
@@ -78,7 +79,7 @@ export const Footer: React.FC = () => {
               <input type="text" />
             </div>
             <div className="mt-6">
-              <Button type="button" emphasis={ButtonEmphasis.Contained} color={ButtonColor.Secondary}>
+              <Button type="button" emphasis={ButtonEmphasis.Tertiary} size={ButtonSize.lg}>
                 {t('footer.newsletter.cta')}
               </Button>
             </div>

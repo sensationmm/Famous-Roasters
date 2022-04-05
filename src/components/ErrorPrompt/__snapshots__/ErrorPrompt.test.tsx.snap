@@ -14,7 +14,7 @@ exports[`Error prompt component Renders correctly with action 1`] = `
       class="mt-4 flex justify-center"
     >
       <button
-        class="inline-flex items-center px-4 py-2 text-base text-white bg-brand-black rounded-full"
+        class="inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
         data-testid="button-prompt"
         role="button"
       >

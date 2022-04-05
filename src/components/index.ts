@@ -1,5 +1,5 @@
 import { Badge } from './Badge'
-import { Button, ButtonColor, ButtonEmphasis, ButtonSize } from './Button'
+import { Button, ButtonEmphasis, ButtonSize } from './Button'
 import { ErrorPrompt } from './ErrorPrompt'
 import { Footer } from './Footer'
 import { Layout } from './Layout'
@@ -10,7 +10,6 @@ import { Typography, TypographySize, TypographyType } from './Typography'
 
 export { Badge as Badge }
 export { Button as Button }
-export { ButtonColor as ButtonColor }
 export { ButtonEmphasis as ButtonEmphasis }
 export { ButtonSize as ButtonSize }
 export { ErrorPrompt as ErrorPrompt }
