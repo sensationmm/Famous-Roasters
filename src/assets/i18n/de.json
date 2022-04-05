@@ -22,6 +22,7 @@
       "cta": "Anmelden",
       "disclaimer": "Hinweis: Sie können sich jederzeit abmelden. Siehe unsere Datenschutzrichtlinie und Bedingungen.",
       "inputLabel": "Deine E-Mail",
+      "inputPlaceholder": "max.mustermann@email.com",
       "text": "Melde dich für den Newsletter an und erhalte, einmalige Angebote, Neuigkeiten, Tipps und Insights zum Thema Specialty Coffee und neuen Röstern. ",
       "title": "Newsletter"
     },

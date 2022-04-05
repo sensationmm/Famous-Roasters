@@ -392,24 +392,44 @@ exports[`Our Roasters view Renders correctly 1`] = `
                 Melde dich für den Newsletter an und erhalte, einmalige Angebote, Neuigkeiten, Tipps und Insights zum Thema Specialty Coffee und neuen Röstern. 
               </span>
             </div>
-            <div
-              class="mt-6"
-            >
-              <input
-                type="text"
-              />
-            </div>
-            <div
-              class="mt-6"
-            >
-              <button
-                class="inline-flex items-center rounded-full border-2 px-4 py-2 text-md font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
-                role="button"
-                type="button"
+            <form>
+              <div
+                class="mt-6"
               >
-                Anmelden
-              </button>
-            </div>
+                <label
+                  class="relative"
+                >
+                  <span
+                    class="absolute -top-6 left-3 px-2 bg-brand-black text-white"
+                  >
+                    <span
+                      class="text-sm leading-5 font-normal"
+                    >
+                      Deine E-Mail
+                    </span>
+                  </span>
+                  <input
+                    class="w-72 border rounded-full px-4 py-2 bg-brand-black border-white text-white"
+                    data-testid="newsletter-email"
+                    name="email"
+                    placeholder="max.mustermann@email.com"
+                    type="text"
+                  />
+                </label>
+              </div>
+              <div
+                class="mt-6"
+              >
+                <button
+                  class="inline-flex items-center rounded-full border-2 px-4 py-2 text-md font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
+                  data-testid="newsletter-submit"
+                  role="button"
+                  type="submit"
+                >
+                  Anmelden
+                </button>
+              </div>
+            </form>
             <div
               class="mt-4"
             >

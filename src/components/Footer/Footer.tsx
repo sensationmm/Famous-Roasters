@@ -1,8 +1,19 @@
 import { ChatAlt2Icon } from '@heroicons/react/solid'
 import React from 'react'
+import { FieldValues, SubmitHandler, useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import { Badge, Button, ButtonEmphasis, ButtonSize, Typography, TypographySize, TypographyType } from 'src/components'
+import {
+  Badge,
+  Button,
+  ButtonEmphasis,
+  ButtonSize,
+  Input,
+  InputMode,
+  Typography,
+  TypographySize,
+  TypographyType,
+} from 'src/components'
 
 interface FooterLink {
   key: string
@@ -20,8 +31,17 @@ const footerLinks: FooterLink[] = [
   { key: 'imprint', href: '/imprint' },
 ]
 
+type FormValues = {
+  email: string
+}
+
 export const Footer: React.FC = () => {
   const { t } = useTranslation()
+  const { register, handleSubmit } = useForm<FormValues>()
+
+  const onSubmit: SubmitHandler<FormValues> = (data: FieldValues) => {
+    console.log('user wants to register with email', data.email)
+  }
 
   return (
     <footer className="bg-brand-black text-base text-white px-6 sm:px-6 xl:px-10 py-10">
@@ -75,14 +95,29 @@ export const Footer: React.FC = () => {
                 {t('footer.newsletter.text')}
               </Typography>
             </div>
-            <div className="mt-6">
-              <input type="text" />
-            </div>
-            <div className="mt-6">
-              <Button type="button" emphasis={ButtonEmphasis.Tertiary} size={ButtonSize.lg}>
-                {t('footer.newsletter.cta')}
-              </Button>
-            </div>
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <div className="mt-6">
+                <Input
+                  type="text"
+                  mode={InputMode.dark}
+                  labelText={t('footer.newsletter.inputLabel')}
+                  placeholder={t('footer.newsletter.inputPlaceholder')}
+                  className="w-72"
+                  data-testid="newsletter-email"
+                  {...register('email')}
+                />
+              </div>
+              <div className="mt-6">
+                <Button
+                  type="submit"
+                  emphasis={ButtonEmphasis.Tertiary}
+                  size={ButtonSize.lg}
+                  data-testid="newsletter-submit"
+                >
+                  {t('footer.newsletter.cta')}
+                </Button>
+              </div>
+            </form>
             <div className="mt-4">
               <Typography type={TypographyType.Paragraph} className="text-brand-grey-bombay">
                 {t('footer.newsletter.disclaimer')}
