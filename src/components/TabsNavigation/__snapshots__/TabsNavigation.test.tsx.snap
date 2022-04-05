@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs Navigation component Renders correctly 1`] = `
+<div>
+  <div
+    class="flex"
+    role="tablist"
+  >
+    <button
+      aria-selected="true"
+      class="mr-6"
+      data-testid="tab-forYou"
+      role="tab"
+      type="button"
+    >
+      <span
+        class="text-brand-black font-semibold border-b-2 pb-1.5 text-sm leading-5"
+      >
+        Für Dich
+      </span>
+    </button>
+    <button
+      aria-selected="false"
+      class="mr-6"
+      data-testid="tab-discover"
+      role="tab"
+      type="button"
+    >
+      <span
+        class="text-coreUI-text-secondary pb-1.5 text-sm leading-5"
+      >
+        Entdecken
+      </span>
+    </button>
+  </div>
+</div>
+`;
