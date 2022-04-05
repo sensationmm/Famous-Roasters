@@ -1,9 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import { Button, ButtonColor, ButtonEmphasis, Typography } from 'src/components'
-
-import { Size, Type } from '../Typography/Typography'
+import { Badge, Button, ButtonColor, ButtonEmphasis, Typography, TypographySize, TypographyType } from 'src/components'
 
 interface FooterLink {
   key: string
@@ -27,8 +25,10 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-brand-black text-base text-white px-6 sm:px-6 xl:px-10 py-10">
       <div className="w-full text-center mb-10 flex justify-center items-center">
-        <div>[Badge]</div>
-        <Typography as="div" type={Type.Heading} size={Size.Large}>
+        <div className="mr-2">
+          <Badge />
+        </div>
+        <Typography as="div" type={TypographyType.Heading} size={TypographySize.Large}>
           {t('footer.slogan.text')}
         </Typography>
       </div>
@@ -47,12 +47,12 @@ export const Footer: React.FC = () => {
           {/* Customer service */}
           <div>
             <div>
-              <Typography type={Type.Heading} size={Size.Base} className="font-syne">
+              <Typography type={TypographyType.Heading} size={TypographySize.Base} className="font-syne">
                 {t('footer.customerService.title')}
               </Typography>
             </div>
             <div className="mt-6">
-              <Typography type={Type.Paragraph} size={Size.Large}>
+              <Typography type={TypographyType.Paragraph} size={TypographySize.Large}>
                 {t('footer.customerService.text')}
               </Typography>
             </div>
@@ -65,12 +65,12 @@ export const Footer: React.FC = () => {
           {/* Newsletter */}
           <div className="mt-12">
             <div>
-              <Typography type={Type.Heading} size={Size.Base} className="font-syne">
+              <Typography type={TypographyType.Heading} size={TypographySize.Base} className="font-syne">
                 {t('footer.newsletter.title')}
               </Typography>
             </div>
             <div className="mt-6">
-              <Typography type={Type.Paragraph} size={Size.Large}>
+              <Typography type={TypographyType.Paragraph} size={TypographySize.Large}>
                 {t('footer.newsletter.text')}
               </Typography>
             </div>
@@ -83,7 +83,7 @@ export const Footer: React.FC = () => {
               </Button>
             </div>
             <div className="mt-4">
-              <Typography type={Type.Paragraph} className="text-brand-grey-bombay">
+              <Typography type={TypographyType.Paragraph} className="text-brand-grey-bombay">
                 {t('footer.newsletter.disclaimer')}
               </Typography>
             </div>
@@ -91,11 +91,11 @@ export const Footer: React.FC = () => {
         </div>
       </div>
       <div className="w-full text-center mt-10">
-        <Typography type={Type.Paragraph} className="text-center">
+        <Typography type={TypographyType.Paragraph} className="text-center">
           {t('brand.copyright', { year: new Date().getFullYear() })}
         </Typography>
         <br />
-        <Typography type={Type.Paragraph} className="text-center">
+        <Typography type={TypographyType.Paragraph} className="text-center">
           {t('brand.withLove')}
         </Typography>
       </div>

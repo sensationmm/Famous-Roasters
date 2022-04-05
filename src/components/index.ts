@@ -1,3 +1,4 @@
+import { Badge } from './Badge'
 import { Button, ButtonColor, ButtonEmphasis, ButtonSize } from './Button'
 import { ErrorPrompt } from './ErrorPrompt'
 import { Footer } from './Footer'
@@ -7,6 +8,7 @@ import { Navigation, NavigationTheme } from './Navigation'
 import { ProductTile } from './ProductTile'
 import { Typography, TypographySize, TypographyType } from './Typography'
 
+export { Badge as Badge }
 export { Button as Button }
 export { ButtonColor as ButtonColor }
 export { ButtonEmphasis as ButtonEmphasis }
