@@ -96,6 +96,6 @@ jobs:
           fetch-depth: 1
 
       - name: Deploy storybook
-        run: yarn deploy-storybook
+        run: yarn deploy-storybook --ci --host-token-env-variable=GITHUB_TOKEN --bucket-path=famous-roasters-storybook-staging
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

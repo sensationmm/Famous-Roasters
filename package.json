@@ -33,7 +33,7 @@
     "postinstall": "husky install",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-aws-s3 --ci --out=.storybook-out --host-token-env-variable=GITHUB_TOKEN"
+    "deploy-storybook": "storybook-to-aws-s3 --out=.storybook-out"
   },
   "eslintConfig": {
     "extends": [
