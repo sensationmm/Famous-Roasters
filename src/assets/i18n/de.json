@@ -10,6 +10,9 @@
         "retry": "Erneut versuchen"
       },
       "text": "Ein Fehler ist aufgetreten"
+    },
+    "unavailable": {
+      "text": "Bald verfügbar!"
     }
   },
   "footer": {
@@ -45,7 +48,11 @@
     },
     "catalogue": {
       "navigation": "Shop",
-      "title": "Katalog"
+      "title": "Katalog",
+      "tabs": {
+        "discover": "Entdecken",
+        "forYou": "Für Dich"
+      }
     },
     "checkout": {
       "navigation": "Checkout",

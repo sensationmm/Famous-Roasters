@@ -25,7 +25,7 @@ const getTypographyClassNames = (type: Type, size: Size): string => {
     case Type.Heading:
       switch (size) {
         case Size.Large:
-          classNames.push('text-5xl', 'leading-none', 'font-normal')
+          classNames.push('text-5xl', 'leading-none')
           break
         case Size.Small:
           classNames.push('text-2xl', 'leading-8', 'font-semibold')
@@ -60,17 +60,17 @@ const getTypographyClassNames = (type: Type, size: Size): string => {
     default:
       switch (size) {
         case Size.Large:
-          classNames.push('text-lg', 'leading-7', 'font-normal')
+          classNames.push('text-lg', 'leading-7')
           break
         case Size.Small:
-          classNames.push('text-sm', 'leading-5', 'font-normal')
+          classNames.push('text-sm', 'leading-5')
           break
         case Size.Tiny:
-          classNames.push('text-xs', 'leading-4', 'font-normal')
+          classNames.push('text-xs', 'leading-4')
           break
         case Size.Base:
         default:
-          classNames.push('text-base', 'leading-6', 'font-normal')
+          classNames.push('text-base', 'leading-6')
           break
       }
       break

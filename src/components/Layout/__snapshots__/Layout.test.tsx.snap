@@ -59,7 +59,7 @@ exports[`Layout component Renders correctly 1`] = `
                   href="/taste-finder"
                 >
                   <span
-                    class="uppercase text-sm leading-5 font-normal"
+                    class="uppercase text-sm leading-5"
                   >
                     Tastefinder
                   </span>
@@ -69,7 +69,7 @@ exports[`Layout component Renders correctly 1`] = `
                   href="/our-roasters"
                 >
                   <span
-                    class="uppercase text-sm leading-5 font-normal"
+                    class="uppercase text-sm leading-5"
                   >
                     Unsere Röster
                   </span>
@@ -126,7 +126,7 @@ exports[`Layout component Renders correctly 1`] = `
                     href="/about"
                   >
                     <span
-                      class="uppercase text-sm leading-5 font-normal"
+                      class="uppercase text-sm leading-5"
                     >
                       Über uns
                     </span>
@@ -136,7 +136,7 @@ exports[`Layout component Renders correctly 1`] = `
                     href="/contact"
                   >
                     <span
-                      class="uppercase text-sm leading-5 font-normal"
+                      class="uppercase text-sm leading-5"
                     >
                       Kontakt
                     </span>
@@ -240,7 +240,7 @@ exports[`Layout component Renders correctly 1`] = `
           </svg>
         </div>
         <div
-          class="text-5xl leading-none font-normal"
+          class="text-5xl leading-none"
         >
           A pleasure for every taste.
         </div>
@@ -341,7 +341,7 @@ exports[`Layout component Renders correctly 1`] = `
               class="mt-6"
             >
               <span
-                class="text-lg leading-7 font-normal"
+                class="text-lg leading-7"
               >
                 Fragen? Kommentare? Bedenken? Oder möchtest du uns einfach ein paar schöne Worte senden?
               </span>
@@ -387,7 +387,7 @@ exports[`Layout component Renders correctly 1`] = `
               class="mt-6"
             >
               <span
-                class="text-lg leading-7 font-normal"
+                class="text-lg leading-7"
               >
                 Melde dich für den Newsletter an und erhalte, einmalige Angebote, Neuigkeiten, Tipps und Insights zum Thema Specialty Coffee und neuen Röstern. 
               </span>
@@ -403,7 +403,7 @@ exports[`Layout component Renders correctly 1`] = `
                     class="absolute -top-6 left-3 px-2 bg-brand-black text-white"
                   >
                     <span
-                      class="text-sm leading-5 font-normal"
+                      class="text-sm leading-5"
                     >
                       Deine E-Mail
                     </span>
@@ -434,7 +434,7 @@ exports[`Layout component Renders correctly 1`] = `
               class="mt-4"
             >
               <span
-                class="text-brand-grey-bombay text-base leading-6 font-normal"
+                class="text-brand-grey-bombay text-base leading-6"
               >
                 Hinweis: Sie können sich jederzeit abmelden. Siehe unsere Datenschutzrichtlinie und Bedingungen.
               </span>
@@ -446,13 +446,13 @@ exports[`Layout component Renders correctly 1`] = `
         class="w-full text-center mt-10"
       >
         <span
-          class="text-center text-base leading-6 font-normal"
+          class="text-center text-base leading-6"
         >
           © 2022 Famous Roasters. Alle Rechte vorbehalten
         </span>
         <br />
         <span
-          class="text-center text-base leading-6 font-normal"
+          class="text-center text-base leading-6"
         >
           Geröstet mit ❤️ in Berlin
         </span>

@@ -6,7 +6,7 @@ exports[`Error prompt component Renders correctly with action 1`] = `
     class="p-4 border border-coreUI-border bg-white"
   >
     <div
-      class="text-center text-base leading-6 font-normal"
+      class="text-center text-base leading-6"
     >
       Ein Fehler ist aufgetreten
     </div>
@@ -31,7 +31,7 @@ exports[`Error prompt component Renders correctly without action 1`] = `
     class="p-4 border border-coreUI-border bg-white"
   >
     <div
-      class="text-center text-base leading-6 font-normal"
+      class="text-center text-base leading-6"
     >
       Ein Fehler ist aufgetreten
     </div>

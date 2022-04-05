@@ -59,7 +59,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                   href="/taste-finder"
                 >
                   <span
-                    class="uppercase text-sm leading-5 font-normal"
+                    class="uppercase text-sm leading-5"
                   >
                     Tastefinder
                   </span>
@@ -69,7 +69,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                   href="/our-roasters"
                 >
                   <span
-                    class="uppercase text-sm leading-5 font-normal"
+                    class="uppercase text-sm leading-5"
                   >
                     Unsere Röster
                   </span>
@@ -126,7 +126,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                     href="/about"
                   >
                     <span
-                      class="uppercase text-sm leading-5 font-normal"
+                      class="uppercase text-sm leading-5"
                     >
                       Über uns
                     </span>
@@ -136,7 +136,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                     href="/contact"
                   >
                     <span
-                      class="uppercase text-sm leading-5 font-normal"
+                      class="uppercase text-sm leading-5"
                     >
                       Kontakt
                     </span>
@@ -214,6 +214,37 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
         class="w-full max-w-7xl mx-auto px-4 sm:px-6 xl:px-8"
       >
         <div
+          class="flex"
+          role="tablist"
+        >
+          <button
+            aria-selected="false"
+            class="mr-6"
+            data-testid="tab-forYou"
+            role="tab"
+            type="button"
+          >
+            <span
+              class="text-coreUI-text-secondary pb-1.5 text-sm leading-5"
+            >
+              Für Dich
+            </span>
+          </button>
+          <button
+            aria-selected="true"
+            class="mr-6"
+            data-testid="tab-discover"
+            role="tab"
+            type="button"
+          >
+            <span
+              class="text-brand-black font-semibold border-b-2 pb-1.5 text-sm leading-5"
+            >
+              Entdecken
+            </span>
+          </button>
+        </div>
+        <div
           class="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
         />
       </div>
@@ -248,7 +279,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
           </svg>
         </div>
         <div
-          class="text-5xl leading-none font-normal"
+          class="text-5xl leading-none"
         >
           A pleasure for every taste.
         </div>
@@ -349,7 +380,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="mt-6"
             >
               <span
-                class="text-lg leading-7 font-normal"
+                class="text-lg leading-7"
               >
                 Fragen? Kommentare? Bedenken? Oder möchtest du uns einfach ein paar schöne Worte senden?
               </span>
@@ -395,7 +426,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="mt-6"
             >
               <span
-                class="text-lg leading-7 font-normal"
+                class="text-lg leading-7"
               >
                 Melde dich für den Newsletter an und erhalte, einmalige Angebote, Neuigkeiten, Tipps und Insights zum Thema Specialty Coffee und neuen Röstern. 
               </span>
@@ -411,7 +442,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                     class="absolute -top-6 left-3 px-2 bg-brand-black text-white"
                   >
                     <span
-                      class="text-sm leading-5 font-normal"
+                      class="text-sm leading-5"
                     >
                       Deine E-Mail
                     </span>
@@ -442,7 +473,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="mt-4"
             >
               <span
-                class="text-brand-grey-bombay text-base leading-6 font-normal"
+                class="text-brand-grey-bombay text-base leading-6"
               >
                 Hinweis: Sie können sich jederzeit abmelden. Siehe unsere Datenschutzrichtlinie und Bedingungen.
               </span>
@@ -454,13 +485,13 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
         class="w-full text-center mt-10"
       >
         <span
-          class="text-center text-base leading-6 font-normal"
+          class="text-center text-base leading-6"
         >
           © 2022 Famous Roasters. Alle Rechte vorbehalten
         </span>
         <br />
         <span
-          class="text-center text-base leading-6 font-normal"
+          class="text-center text-base leading-6"
         >
           Geröstet mit ❤️ in Berlin
         </span>
@@ -529,7 +560,7 @@ exports[`Catalogue view Renders correctly for a successful call with missing dat
                   href="/taste-finder"
                 >
                   <span
-                    class="uppercase text-sm leading-5 font-normal"
+                    class="uppercase text-sm leading-5"
                   >
                     Tastefinder
                   </span>
@@ -539,7 +570,7 @@ exports[`Catalogue view Renders correctly for a successful call with missing dat
                   href="/our-roasters"
                 >
                   <span
-                    class="uppercase text-sm leading-5 font-normal"
+                    class="uppercase text-sm leading-5"
                   >
                     Unsere Röster
                   </span>
@@ -596,7 +627,7 @@ exports[`Catalogue view Renders correctly for a successful call with missing dat
                     href="/about"
                   >
                     <span
-                      class="uppercase text-sm leading-5 font-normal"
+                      class="uppercase text-sm leading-5"
                     >
                       Über uns
                     </span>
@@ -606,7 +637,7 @@ exports[`Catalogue view Renders correctly for a successful call with missing dat
                     href="/contact"
                   >
                     <span
-                      class="uppercase text-sm leading-5 font-normal"
+                      class="uppercase text-sm leading-5"
                     >
                       Kontakt
                     </span>
@@ -684,6 +715,37 @@ exports[`Catalogue view Renders correctly for a successful call with missing dat
         class="w-full max-w-7xl mx-auto px-4 sm:px-6 xl:px-8"
       >
         <div
+          class="flex"
+          role="tablist"
+        >
+          <button
+            aria-selected="false"
+            class="mr-6"
+            data-testid="tab-forYou"
+            role="tab"
+            type="button"
+          >
+            <span
+              class="text-coreUI-text-secondary pb-1.5 text-sm leading-5"
+            >
+              Für Dich
+            </span>
+          </button>
+          <button
+            aria-selected="true"
+            class="mr-6"
+            data-testid="tab-discover"
+            role="tab"
+            type="button"
+          >
+            <span
+              class="text-brand-black font-semibold border-b-2 pb-1.5 text-sm leading-5"
+            >
+              Entdecken
+            </span>
+          </button>
+        </div>
+        <div
           class="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
         />
       </div>
@@ -718,7 +780,7 @@ exports[`Catalogue view Renders correctly for a successful call with missing dat
           </svg>
         </div>
         <div
-          class="text-5xl leading-none font-normal"
+          class="text-5xl leading-none"
         >
           A pleasure for every taste.
         </div>
@@ -819,7 +881,7 @@ exports[`Catalogue view Renders correctly for a successful call with missing dat
               class="mt-6"
             >
               <span
-                class="text-lg leading-7 font-normal"
+                class="text-lg leading-7"
               >
                 Fragen? Kommentare? Bedenken? Oder möchtest du uns einfach ein paar schöne Worte senden?
               </span>
@@ -865,7 +927,7 @@ exports[`Catalogue view Renders correctly for a successful call with missing dat
               class="mt-6"
             >
               <span
-                class="text-lg leading-7 font-normal"
+                class="text-lg leading-7"
               >
                 Melde dich für den Newsletter an und erhalte, einmalige Angebote, Neuigkeiten, Tipps und Insights zum Thema Specialty Coffee und neuen Röstern. 
               </span>
@@ -881,7 +943,7 @@ exports[`Catalogue view Renders correctly for a successful call with missing dat
                     class="absolute -top-6 left-3 px-2 bg-brand-black text-white"
                   >
                     <span
-                      class="text-sm leading-5 font-normal"
+                      class="text-sm leading-5"
                     >
                       Deine E-Mail
                     </span>
@@ -912,7 +974,7 @@ exports[`Catalogue view Renders correctly for a successful call with missing dat
               class="mt-4"
             >
               <span
-                class="text-brand-grey-bombay text-base leading-6 font-normal"
+                class="text-brand-grey-bombay text-base leading-6"
               >
                 Hinweis: Sie können sich jederzeit abmelden. Siehe unsere Datenschutzrichtlinie und Bedingungen.
               </span>
@@ -924,13 +986,13 @@ exports[`Catalogue view Renders correctly for a successful call with missing dat
         class="w-full text-center mt-10"
       >
         <span
-          class="text-center text-base leading-6 font-normal"
+          class="text-center text-base leading-6"
         >
           © 2022 Famous Roasters. Alle Rechte vorbehalten
         </span>
         <br />
         <span
-          class="text-center text-base leading-6 font-normal"
+          class="text-center text-base leading-6"
         >
           Geröstet mit ❤️ in Berlin
         </span>
@@ -999,7 +1061,7 @@ exports[`Catalogue view Renders correctly for an error call 1`] = `
                   href="/taste-finder"
                 >
                   <span
-                    class="uppercase text-sm leading-5 font-normal"
+                    class="uppercase text-sm leading-5"
                   >
                     Tastefinder
                   </span>
@@ -1009,7 +1071,7 @@ exports[`Catalogue view Renders correctly for an error call 1`] = `
                   href="/our-roasters"
                 >
                   <span
-                    class="uppercase text-sm leading-5 font-normal"
+                    class="uppercase text-sm leading-5"
                   >
                     Unsere Röster
                   </span>
@@ -1066,7 +1128,7 @@ exports[`Catalogue view Renders correctly for an error call 1`] = `
                     href="/about"
                   >
                     <span
-                      class="uppercase text-sm leading-5 font-normal"
+                      class="uppercase text-sm leading-5"
                     >
                       Über uns
                     </span>
@@ -1076,7 +1138,7 @@ exports[`Catalogue view Renders correctly for an error call 1`] = `
                     href="/contact"
                   >
                     <span
-                      class="uppercase text-sm leading-5 font-normal"
+                      class="uppercase text-sm leading-5"
                     >
                       Kontakt
                     </span>
@@ -1154,10 +1216,41 @@ exports[`Catalogue view Renders correctly for an error call 1`] = `
         class="w-full max-w-7xl mx-auto px-4 sm:px-6 xl:px-8"
       >
         <div
+          class="flex"
+          role="tablist"
+        >
+          <button
+            aria-selected="false"
+            class="mr-6"
+            data-testid="tab-forYou"
+            role="tab"
+            type="button"
+          >
+            <span
+              class="text-coreUI-text-secondary pb-1.5 text-sm leading-5"
+            >
+              Für Dich
+            </span>
+          </button>
+          <button
+            aria-selected="true"
+            class="mr-6"
+            data-testid="tab-discover"
+            role="tab"
+            type="button"
+          >
+            <span
+              class="text-brand-black font-semibold border-b-2 pb-1.5 text-sm leading-5"
+            >
+              Entdecken
+            </span>
+          </button>
+        </div>
+        <div
           class="p-4 border border-coreUI-border bg-white"
         >
           <div
-            class="text-center text-base leading-6 font-normal"
+            class="text-center text-base leading-6"
           >
             Ein Fehler ist aufgetreten
           </div>
@@ -1205,7 +1298,7 @@ exports[`Catalogue view Renders correctly for an error call 1`] = `
           </svg>
         </div>
         <div
-          class="text-5xl leading-none font-normal"
+          class="text-5xl leading-none"
         >
           A pleasure for every taste.
         </div>
@@ -1306,7 +1399,7 @@ exports[`Catalogue view Renders correctly for an error call 1`] = `
               class="mt-6"
             >
               <span
-                class="text-lg leading-7 font-normal"
+                class="text-lg leading-7"
               >
                 Fragen? Kommentare? Bedenken? Oder möchtest du uns einfach ein paar schöne Worte senden?
               </span>
@@ -1352,7 +1445,7 @@ exports[`Catalogue view Renders correctly for an error call 1`] = `
               class="mt-6"
             >
               <span
-                class="text-lg leading-7 font-normal"
+                class="text-lg leading-7"
               >
                 Melde dich für den Newsletter an und erhalte, einmalige Angebote, Neuigkeiten, Tipps und Insights zum Thema Specialty Coffee und neuen Röstern. 
               </span>
@@ -1368,7 +1461,7 @@ exports[`Catalogue view Renders correctly for an error call 1`] = `
                     class="absolute -top-6 left-3 px-2 bg-brand-black text-white"
                   >
                     <span
-                      class="text-sm leading-5 font-normal"
+                      class="text-sm leading-5"
                     >
                       Deine E-Mail
                     </span>
@@ -1399,7 +1492,7 @@ exports[`Catalogue view Renders correctly for an error call 1`] = `
               class="mt-4"
             >
               <span
-                class="text-brand-grey-bombay text-base leading-6 font-normal"
+                class="text-brand-grey-bombay text-base leading-6"
               >
                 Hinweis: Sie können sich jederzeit abmelden. Siehe unsere Datenschutzrichtlinie und Bedingungen.
               </span>
@@ -1411,13 +1504,13 @@ exports[`Catalogue view Renders correctly for an error call 1`] = `
         class="w-full text-center mt-10"
       >
         <span
-          class="text-center text-base leading-6 font-normal"
+          class="text-center text-base leading-6"
         >
           © 2022 Famous Roasters. Alle Rechte vorbehalten
         </span>
         <br />
         <span
-          class="text-center text-base leading-6 font-normal"
+          class="text-center text-base leading-6"
         >
           Geröstet mit ❤️ in Berlin
         </span>

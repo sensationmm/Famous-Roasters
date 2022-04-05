@@ -13,7 +13,7 @@ exports[`Typography component Heading Renders correctly for size base 1`] = `
 exports[`Typography component Heading Renders correctly for size large 1`] = `
 <div>
   <h1
-    class="text-5xl leading-none font-normal"
+    class="text-5xl leading-none"
   >
     Text
   </h1>
@@ -83,7 +83,7 @@ exports[`Typography component Label Renders correctly for size tiny 1`] = `
 exports[`Typography component Paragraph Renders correctly for size base 1`] = `
 <div>
   <p
-    class="text-base leading-6 font-normal"
+    class="text-base leading-6"
   >
     Text
   </p>
@@ -93,7 +93,7 @@ exports[`Typography component Paragraph Renders correctly for size base 1`] = `
 exports[`Typography component Paragraph Renders correctly for size large 1`] = `
 <div>
   <p
-    class="text-lg leading-7 font-normal"
+    class="text-lg leading-7"
   >
     Text
   </p>
@@ -103,7 +103,7 @@ exports[`Typography component Paragraph Renders correctly for size large 1`] = `
 exports[`Typography component Paragraph Renders correctly for size small 1`] = `
 <div>
   <p
-    class="text-sm leading-5 font-normal"
+    class="text-sm leading-5"
   >
     Text
   </p>
@@ -113,7 +113,7 @@ exports[`Typography component Paragraph Renders correctly for size small 1`] = `
 exports[`Typography component Paragraph Renders correctly for size tiny 1`] = `
 <div>
   <p
-    class="text-xs leading-4 font-normal"
+    class="text-xs leading-4"
   >
     Text
   </p>
