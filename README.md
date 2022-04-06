@@ -14,6 +14,8 @@
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=Famous-Roasters_frontend&metric=sqale_index&token=d444da0936f388e6ec530f34ff77f9005eb8805d)](https://sonarcloud.io/summary/new_code?id=Famous-Roasters_frontend)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=Famous-Roasters_frontend&metric=vulnerabilities&token=d444da0936f388e6ec530f34ff77f9005eb8805d)](https://sonarcloud.io/summary/new_code?id=Famous-Roasters_frontend)
 
+[App - Staging](https://staging.venture-famous-roasters.de/) | [Storybook - Staging](https://storybook.staging.venture-famous-roasters.de/)
+
 <details open="open">  
   <summary>Table of Contents:</summary>  
   <ol>  
@@ -101,6 +103,9 @@ Compiles and runs storybook in dev mode.
 #### `yarn build-storybook`
 Builds storybook as a static build application.
 
+#### `yarn deploy-storybook`
+Deploy runner for storybook.
+
 <!-- Create React App -->  
 ## Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
@@ -187,12 +192,16 @@ GitHub workflows is our solution for CI/CD and the config can be found at `.gith
 #### `test-build-deploy`
 - Executes only for `main` branch (typically after a PR merge)
 - Environment name: `staging`
-- Tasks: all the tasks done by `test-and-build` plus configure credentials and push to AWS S3
+- Tasks: all the tasks done by `test-and-build` plus:
+  - configure AWS credentials
+  - deploy app (staging) to AWS S3
+  - deploy storybook (staging) to AWS S3
 
 <!-- Deployment -->  
 ## Deployment
 Deployment to staging is configured automatically for the `main` branch. For details, check the [GitHub Actions](#github-actions) section above.
-The deployed app can be found [here](https://staging.venture-famous-roasters.de/).
+The deployed app (staging) can be found [here](https://staging.venture-famous-roasters.de/).
+The deployed storybook (staging) can be found [here](https://storybook.staging.venture-famous-roasters.de/).
 
 <!-- Questions? -->  
 ## Questions?
