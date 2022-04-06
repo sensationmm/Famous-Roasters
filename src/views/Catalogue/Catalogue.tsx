@@ -3,7 +3,16 @@ import { Collection } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { ErrorPrompt, Layout, Loader, ProductTile, TabsNavigation, Typography } from 'src/components'
+import {
+  ErrorPrompt,
+  Layout,
+  Listbox,
+  ListBoxItem,
+  Loader,
+  ProductTile,
+  TabsNavigation,
+  Typography,
+} from 'src/components'
 
 interface TabsDataItem {
   key: string
@@ -13,6 +22,13 @@ interface TabsDataItem {
 const tabsData: TabsDataItem[] = [
   { key: 'forYou', translationKey: 'pages.catalogue.tabs.forYou' },
   { key: 'discover', translationKey: 'pages.catalogue.tabs.discover' },
+]
+
+const sortByItems: ListBoxItem[] = [
+  { name: 'Price increasing' },
+  { name: 'Price decreasing' },
+  { name: 'Newest first' },
+  { name: 'None' },
 ]
 
 export const Catalogue: React.FC = () => {
@@ -63,6 +79,9 @@ export const Catalogue: React.FC = () => {
             initialActiveTabKey="discover"
             setParentActiveTab={(k: string) => setActiveTab(k)}
           />
+          <div className="flex justify-end mt-8">
+            <Listbox items={sortByItems} label="Sort by..." />
+          </div>
           {activeTab === 'discover' ? renderDiscoverProducts() : renderForYouProducts()}
         </div>
       </main>
