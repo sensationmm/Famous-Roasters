@@ -24,16 +24,12 @@ const tabsData: TabsDataItem[] = [
   { key: 'discover', translationKey: 'pages.catalogue.tabs.discover' },
 ]
 
-const sortByItems: ListBoxItem[] = [
-  { name: 'Price increasing' },
-  { name: 'Price decreasing' },
-  { name: 'Newest first' },
-  { name: 'None' },
-]
+const sortByItems: ListBoxItem[] = [{ name: 'priceAsc' }, { name: 'priceDesc' }, { name: 'newDesc' }]
 
 export const Catalogue: React.FC = () => {
   const { t } = useTranslation()
   const [activeTab, setActiveTab] = useState<string>('discover')
+  const [sortValue, setSortValue] = useState<ListBoxItem>()
   const query = loader('src/graphql/queries/products.query.graphql')
 
   useEffect(() => {
@@ -54,7 +50,11 @@ export const Catalogue: React.FC = () => {
 
   const renderDiscoverProducts = () => {
     if (loading) {
-      return <Loader />
+      return (
+        <div className="flex h-64 mb-32 justify-center items-center">
+          <Loader />
+        </div>
+      )
     } else {
       if (error) {
         return <ErrorPrompt promptAction={() => history.go(0)} />
@@ -80,7 +80,15 @@ export const Catalogue: React.FC = () => {
             setParentActiveTab={(k: string) => setActiveTab(k)}
           />
           <div className="flex justify-end mt-8">
-            <Listbox items={sortByItems} label="Sort by..." />
+            <div className="w-1/2 md:w-1/3 xl:w-1/5">
+              <Listbox
+                items={sortByItems}
+                hasNoneItem={true}
+                translationPrefix="pages.catalogue.filters.sort"
+                value={sortValue}
+                onChange={setSortValue}
+              />
+            </div>
           </div>
           {activeTab === 'discover' ? renderDiscoverProducts() : renderForYouProducts()}
         </div>

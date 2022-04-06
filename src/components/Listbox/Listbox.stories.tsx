@@ -8,9 +8,15 @@ export default {
   component: Listbox,
 } as ComponentMeta<typeof Listbox>
 
-const Template: ComponentStory<typeof Listbox> = (args) => <Listbox {...args} />
+const Template: ComponentStory<typeof Listbox> = (args) => (
+  <div className="w-80 h-48">
+    <Listbox {...args} />
+  </div>
+)
 
 export const Default = Template.bind({})
 Default.args = {
-  items: [{ name: 'option 1' }, { name: 'option 2' }, { name: 'option 3' }],
+  items: [{ name: 'priceAsc' }, { name: 'priceDesc' }, { name: 'newDesc' }],
+  translationPrefix: 'pages.catalogue.filters.sort',
+  hasNoneItem: true,
 }

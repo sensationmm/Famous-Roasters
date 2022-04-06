@@ -52,6 +52,17 @@
       "tabs": {
         "discover": "Entdecken",
         "forYou": "Für Dich"
+      },
+      "filters": {
+        "sort": {
+          "label": "Sortieren nach...",
+          "options": {
+            "priceAsc": "Preis aufsteigend",
+            "priceDesc": "Preis absteigend",
+            "newDesc": "Neue zuerst",
+            "none": "Standard"
+          }
+        }
       }
     },
     "checkout": {
