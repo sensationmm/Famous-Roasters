@@ -72,4 +72,26 @@ describe('Catalogue view', () => {
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
     expect(container).toMatchSnapshot()
   })
+
+  it('The user can navigate across tabs', async () => {
+    render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
+        mocks={[CatalogueMock]}
+        addTypename={false}
+      >
+        <I18nextProvider i18n={i18n}>
+          <MemoryRouter initialEntries={['/catalogue']}>
+            <Catalogue />
+          </MemoryRouter>
+        </I18nextProvider>
+      </MockedProvider>,
+    )
+    const tabForYou = await screen.findByTestId('tab-forYou')
+    const tabDiscover = await screen.findByTestId('tab-discover')
+    expect(tabForYou).toBeInTheDocument()
+    expect(tabDiscover).toBeInTheDocument()
+    fireEvent.click(tabForYou)
+    fireEvent.click(tabDiscover)
+  })
 })

@@ -56,7 +56,7 @@ exports[`Navigation component Renders correctly with home theme 1`] = `
                 href="/taste-finder"
               >
                 <span
-                  class="uppercase text-sm leading-5 font-normal"
+                  class="uppercase text-sm leading-5"
                 >
                   Tastefinder
                 </span>
@@ -66,7 +66,7 @@ exports[`Navigation component Renders correctly with home theme 1`] = `
                 href="/our-roasters"
               >
                 <span
-                  class="uppercase text-sm leading-5 font-normal"
+                  class="uppercase text-sm leading-5"
                 >
                   Unsere Röster
                 </span>
@@ -123,7 +123,7 @@ exports[`Navigation component Renders correctly with home theme 1`] = `
                   href="/about"
                 >
                   <span
-                    class="uppercase text-sm leading-5 font-normal"
+                    class="uppercase text-sm leading-5"
                   >
                     Über uns
                   </span>
@@ -133,7 +133,7 @@ exports[`Navigation component Renders correctly with home theme 1`] = `
                   href="/contact"
                 >
                   <span
-                    class="uppercase text-sm leading-5 font-normal"
+                    class="uppercase text-sm leading-5"
                   >
                     Kontakt
                   </span>
@@ -240,7 +240,7 @@ exports[`Navigation component Renders correctly with shop theme 1`] = `
                 href="/taste-finder"
               >
                 <span
-                  class="uppercase text-sm leading-5 font-normal"
+                  class="uppercase text-sm leading-5"
                 >
                   Tastefinder
                 </span>
@@ -250,7 +250,7 @@ exports[`Navigation component Renders correctly with shop theme 1`] = `
                 href="/our-roasters"
               >
                 <span
-                  class="uppercase text-sm leading-5 font-normal"
+                  class="uppercase text-sm leading-5"
                 >
                   Unsere Röster
                 </span>
@@ -307,7 +307,7 @@ exports[`Navigation component Renders correctly with shop theme 1`] = `
                   href="/about"
                 >
                   <span
-                    class="uppercase text-sm leading-5 font-normal"
+                    class="uppercase text-sm leading-5"
                   >
                     Über uns
                   </span>
@@ -317,7 +317,7 @@ exports[`Navigation component Renders correctly with shop theme 1`] = `
                   href="/contact"
                 >
                   <span
-                    class="uppercase text-sm leading-5 font-normal"
+                    class="uppercase text-sm leading-5"
                   >
                     Kontakt
                   </span>

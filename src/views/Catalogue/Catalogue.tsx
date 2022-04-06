@@ -1,12 +1,23 @@
 import { useQuery } from '@apollo/client'
 import { Collection } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { ErrorPrompt, Layout, Loader, ProductTile } from 'src/components'
+import { ErrorPrompt, Layout, Loader, ProductTile, TabsNavigation, Typography } from 'src/components'
+
+interface TabsDataItem {
+  key: string
+  translationKey: string
+}
+
+const tabsData: TabsDataItem[] = [
+  { key: 'forYou', translationKey: 'pages.catalogue.tabs.forYou' },
+  { key: 'discover', translationKey: 'pages.catalogue.tabs.discover' },
+]
 
 export const Catalogue: React.FC = () => {
   const { t } = useTranslation()
+  const [activeTab, setActiveTab] = useState<string>('discover')
   const query = loader('src/graphql/queries/products.query.graphql')
 
   useEffect(() => {
@@ -17,7 +28,15 @@ export const Catalogue: React.FC = () => {
   const edges = data?.products.edges
   const productNodes = edges?.map((edge) => edge.node)
 
-  const renderProducts = () => {
+  const renderForYouProducts = () => {
+    return (
+      <div className="flex justify-center my-20">
+        <Typography>{t('error.unavailable.text')}</Typography>
+      </div>
+    )
+  }
+
+  const renderDiscoverProducts = () => {
     if (loading) {
       return <Loader />
     } else {
@@ -38,7 +57,14 @@ export const Catalogue: React.FC = () => {
   return (
     <Layout>
       <main className="flex flex-grow w-full items-start justify-center bg-white mt-4">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 xl:px-8">{renderProducts()}</div>
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 xl:px-8">
+          <TabsNavigation
+            tabsData={tabsData}
+            initialActiveTabKey="discover"
+            setParentActiveTab={(k: string) => setActiveTab(k)}
+          />
+          {activeTab === 'discover' ? renderDiscoverProducts() : renderForYouProducts()}
+        </div>
       </main>
     </Layout>
   )

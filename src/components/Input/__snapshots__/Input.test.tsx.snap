@@ -9,7 +9,7 @@ exports[`Badge component Renders correctly 1`] = `
       class="absolute -top-6 left-3 px-2 bg-white"
     >
       <span
-        class="text-sm leading-5 font-normal"
+        class="text-sm leading-5"
       >
         Name
       </span>
