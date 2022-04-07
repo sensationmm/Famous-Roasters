@@ -1,6 +1,8 @@
 
 # Famous Roasters - Frontend
 
+<!-- Status -->  
+## Status
 [![Test and Build](https://github.com/Famous-Roasters/frontend/actions/workflows/build.yml/badge.svg)](https://github.com/Famous-Roasters/frontend/actions/workflows/build.yml)
 [![Test, Build and Deploy](https://github.com/Famous-Roasters/frontend/actions/workflows/build_main.yml/badge.svg)](https://github.com/Famous-Roasters/frontend/actions/workflows/build_main.yml)
 
@@ -14,35 +16,42 @@
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=Famous-Roasters_frontend&metric=sqale_index&token=d444da0936f388e6ec530f34ff77f9005eb8805d)](https://sonarcloud.io/summary/new_code?id=Famous-Roasters_frontend)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=Famous-Roasters_frontend&metric=vulnerabilities&token=d444da0936f388e6ec530f34ff77f9005eb8805d)](https://sonarcloud.io/summary/new_code?id=Famous-Roasters_frontend)
 
-[App - Staging](https://staging.venture-famous-roasters.de/) | [Storybook - Staging](https://storybook.staging.venture-famous-roasters.de/)
+___
 
-<details open="open">  
-  <summary>Table of Contents:</summary>  
-  <ol>  
-    <li><a href="#about">About</a></li>  
-    <li><a href="#getting-started">Getting started</a></li>  
-    <li><a href="#scripts">Scripts</a></li>  
-    <li><a href="#create-react-app">Create React App</a></li>  
-    <li><a href="#structure-overview">Structure Overview</a></li>  
-    <li><a href="#tailwind-css-and-tailwind-ui">Tailwind CSS & TailwindUI</a></li>  
-    <li><a href="#storybook">Storybook</a></li>
-    <li><a href="#i18n">i18n</a></li>  
-    <li><a href="#commiting-code">Commiting code</a></li>  
-    <li><a href="#unit-tests">Unit tests</a></li>
-    <li><a href="#github-actions">GitHub Actions</a></li>  
-    <li><a href="#deployment">Deployment</a></li>
-    <li><a href="#questions">Questions?</a></li>
-  </ol>  
-</details>  
+<!-- Environments -->  
+## Environments
+- [App - Staging](https://staging.venture-famous-roasters.de/)
+- [Storybook - Staging](https://storybook.staging.venture-famous-roasters.de/)
+
+___
+
+<!-- Documentation -->  
+## Documentation
+<ol>  
+  <li><a href="#about">About</a></li>  
+  <li><a href="#getting-started">Getting started</a></li>  
+  <li><a href="#scripts">Scripts</a></li>  
+  <li><a href="#create-react-app">Create React App</a></li>  
+  <li><a href="#structure-overview">Structure Overview</a></li>  
+  <li><a href="#tailwind-css-and-tailwind-ui">Tailwind CSS & TailwindUI</a></li>  
+  <li><a href="#storybook">Storybook</a></li>
+  <li><a href="#i18n">i18n</a></li>  
+  <li><a href="#commiting-code">Commiting code</a></li>  
+  <li><a href="#unit-tests">Unit tests</a></li>
+  <li><a href="#github-actions">GitHub Actions</a></li>  
+  <li><a href="#deployment">Deployment</a></li>
+  <li><a href="#questions">Questions?</a></li>
+</ol>  
+
 
 
 
 <!-- About -->  
-## About
+### About
 This frontend app for Famous Roasters is written in TypeScript, using Create React App, Tailwind CSS and Tailwind UI, Storybook and i18next.
 
 <!-- Getting Started -->  
-## Getting Started
+### Getting Started
 1. Make sure you have [Node](https://nodejs.org/) `^14.18.1` and [Yarn](https://yarnpkg.com/) `^1.22.17` running in your machine.
 2. Execute `yarn` to resolve dependencies.
 3. Run the project with `yarn start`
@@ -52,7 +61,7 @@ For handling node versioning it is recommended to have node setup using [nvm](ht
 For more info on getting started, please read the <a href="#scripts">Scripts</a> section.
 
 <!-- Scripts -->  
-## Scripts
+### Scripts
 
 #### `yarn start`
 Runs the app in the development mode.
@@ -107,11 +116,11 @@ Builds storybook as a static build application.
 Deploy runner for storybook.
 
 <!-- Create React App -->  
-## Create React App
+### Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 <!-- Structure Overview -->  
-## Structure Overview
+### Structure Overview
 ```  
 /                                     # root folder  
 ├── .github                           # github actions workflows (yml), PR template ├── .husky                            # pre-commit and pre-push actions  
@@ -157,31 +166,31 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ```  
 
 <!-- Tailwind -->  
-## Tailwind CSS and Tailwind UI
+### Tailwind CSS and Tailwind UI
 This application uses [Tailwind CSS](https://tailwindcss.com/) framework and [Tailwind UI](https://tailwindui.com/) as UI references, [HeadlessUI](https://headlessui.dev/) as accessible UI components library and the icon library [Hero Icons](https://heroicons.com/).
 
 <!-- Storybook -->  
-## Storybook
+### Storybook
 This app includes [Storybook](https://storybook.js.org/docs/react/get-started/introduction) to support building the UI, document it and facilitate the hand-by-hand work between engineers and designers. All the configuration can be found in `.storybook` folder, including `postcss`, `tailwind` and `i18next` plugins.
 
 <!-- i18n -->  
-## i18n
+### i18n
 i18n is handled by [i18next](https://www.i18next.com/). As of today, the only available language is german - `de`.
 
 The configs for i18next can be found at `src/config/i18n/i18n.ts` and the language json files at `src/assets/i18n`.
 
 <!-- Commiting code -->  
-## Commiting code
+### Commiting code
 When commiting code, this repository is following [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/). There is a precommit hook triggered following the commitlint configuration set at `.commitlintrc.json`.
 
 These commit patterns are enabling later on a correct semantic release integration.
 
 <!-- Unit tests -->  
-## Unit tests
+### Unit tests
 Each new file must have at least a snapshot test. Snapshots are generated on build and compared against the stored snapshots. Tests are written using [Jest](https://jestjs.io/) and [React-Testing-Library](https://testing-library.com/docs/react-testing-library/intro/)
 
 <!-- GitHub -->  
-## GitHub Actions
+### GitHub Actions
 GitHub workflows is our solution for CI/CD and the config can be found at `.github/workflows`.  There are as of today two workflows:
 
 #### `test-and-build`
@@ -198,13 +207,13 @@ GitHub workflows is our solution for CI/CD and the config can be found at `.gith
   - deploy storybook (staging) to AWS S3
 
 <!-- Deployment -->  
-## Deployment
+### Deployment
 Deployment to staging is configured automatically for the `main` branch. For details, check the [GitHub Actions](#github-actions) section above.
 The deployed app (staging) can be found [here](https://staging.venture-famous-roasters.de/).
 The deployed storybook (staging) can be found [here](https://storybook.staging.venture-famous-roasters.de/).
 
 <!-- Questions? -->  
-## Questions?
+### Questions?
 For more details or technical questions, please reach out! Made with love by BCGDV.
 
 Contact: [Juan Minnocci](mailto:juan.minnocci@bcgdv.com)

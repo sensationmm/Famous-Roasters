@@ -3,11 +3,25 @@ import { Collection } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { ErrorPrompt, Layout, Loader, ProductTile, TabsNavigation, Typography } from 'src/components'
+import {
+  ErrorPrompt,
+  Layout,
+  Listbox,
+  ListBoxItem,
+  Loader,
+  ProductTile,
+  TabsNavigation,
+  Typography,
+} from 'src/components'
 
 interface TabsDataItem {
   key: string
   translationKey: string
+}
+
+interface SortParams {
+  sortKey: string
+  reverse: boolean
 }
 
 const tabsData: TabsDataItem[] = [
@@ -15,16 +29,46 @@ const tabsData: TabsDataItem[] = [
   { key: 'discover', translationKey: 'pages.catalogue.tabs.discover' },
 ]
 
+const sortByItems: ListBoxItem[] = [{ name: 'priceAsc' }, { name: 'priceDesc' }, { name: 'newDesc' }]
+
 export const Catalogue: React.FC = () => {
   const { t } = useTranslation()
   const [activeTab, setActiveTab] = useState<string>('discover')
-  const query = loader('src/graphql/queries/products.query.graphql')
+  const [sortValue, setSortValue] = useState<ListBoxItem>()
+  const [sortParams, setSortParams] = useState<SortParams>()
+  const GET_PRODUCTS = loader('src/graphql/queries/products.query.graphql')
 
   useEffect(() => {
     document.title = `${t('brand.name')} | ${t('pages.catalogue.title')}`
   }, [])
 
-  const { loading, error, data } = useQuery<Collection>(query)
+  useEffect(() => {
+    if (sortValue?.name) {
+      switch (sortValue.name) {
+        case 'priceAsc':
+          setSortParams({ sortKey: 'PRICE', reverse: false })
+          break
+        case 'priceDesc':
+          setSortParams({ sortKey: 'PRICE', reverse: true })
+          break
+        case 'newDesc':
+          setSortParams({ sortKey: 'CREATED_AT', reverse: false })
+          break
+        default:
+          setSortParams({ sortKey: 'BEST_SELLING', reverse: false })
+          break
+      }
+    }
+  }, [sortValue])
+
+  const { loading, error, data } = useQuery<Collection>(GET_PRODUCTS, {
+    variables: {
+      first: 20,
+      sortKey: sortParams?.sortKey,
+      reverse: sortParams?.reverse,
+    },
+  })
+
   const edges = data?.products.edges
   const productNodes = edges?.map((edge) => edge.node)
 
@@ -38,7 +82,11 @@ export const Catalogue: React.FC = () => {
 
   const renderDiscoverProducts = () => {
     if (loading) {
-      return <Loader />
+      return (
+        <div className="flex h-64 mb-32 justify-center items-center">
+          <Loader />
+        </div>
+      )
     } else {
       if (error) {
         return <ErrorPrompt promptAction={() => history.go(0)} />
@@ -63,6 +111,17 @@ export const Catalogue: React.FC = () => {
             initialActiveTabKey="discover"
             setParentActiveTab={(k: string) => setActiveTab(k)}
           />
+          <div className="flex justify-end mt-8">
+            <div className="w-1/2 md:w-1/3 xl:w-1/5">
+              <Listbox
+                items={sortByItems}
+                hasNoneItem={true}
+                translationPrefix="pages.catalogue.filters.sort"
+                value={sortValue}
+                onChange={setSortValue}
+              />
+            </div>
+          </div>
           {activeTab === 'discover' ? renderDiscoverProducts() : renderForYouProducts()}
         </div>
       </main>

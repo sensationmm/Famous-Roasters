@@ -94,4 +94,46 @@ describe('Catalogue view', () => {
     fireEvent.click(tabForYou)
     fireEvent.click(tabDiscover)
   })
+
+  it('The user can use sorting', async () => {
+    render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
+        mocks={[CatalogueMock]}
+        addTypename={false}
+      >
+        <I18nextProvider i18n={i18n}>
+          <MemoryRouter initialEntries={['/catalogue']}>
+            <Catalogue />
+          </MemoryRouter>
+        </I18nextProvider>
+      </MockedProvider>,
+    )
+    const button = await screen.findByTestId('button')
+    expect(button).toBeInTheDocument()
+    fireEvent.click(button)
+    await waitFor(() => {
+      const option = screen.getByTestId('option-0')
+      expect(option).toBeInTheDocument()
+      fireEvent.click(option)
+    })
+    fireEvent.click(button)
+    await waitFor(() => {
+      const option = screen.getByTestId('option-1')
+      expect(option).toBeInTheDocument()
+      fireEvent.click(option)
+    })
+    fireEvent.click(button)
+    await waitFor(() => {
+      const option = screen.getByTestId('option-2')
+      expect(option).toBeInTheDocument()
+      fireEvent.click(option)
+    })
+    fireEvent.click(button)
+    await waitFor(() => {
+      const option = screen.getByTestId('option-3')
+      expect(option).toBeInTheDocument()
+      fireEvent.click(option)
+    })
+  })
 })
