@@ -23,7 +23,7 @@ export const ProductMock: Product = {
   description: '',
   descriptionHtml: '',
   featuredImage: {
-    url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/prod-img_350x350_ee9b5d73-8cbf-4c38-a817-83313e1c9abf.png?v=1649064108',
+    url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153',
     originalSrc: '',
     src: '',
     transformedSrc: '',

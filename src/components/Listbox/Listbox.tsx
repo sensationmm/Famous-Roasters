@@ -35,26 +35,26 @@ export const Listbox: React.FC<ListboxProps> = ({
       }
     }
   }
-  const [active, setActive] = useState<ListBoxItem>(activeInitialValue)
+  const [activeItem, setActiveItem] = useState<ListBoxItem>(activeInitialValue)
   const { t } = useTranslation()
   const options = hasNoneItem ? [...items, noneItem] : items
 
   const selectedOption = () => {
-    if (hasNoneItem && active && active.name === noneItem.name) {
+    if (hasNoneItem && activeItem && activeItem.name === noneItem.name) {
       return t(`${translationPrefix}.label`)
     } else {
-      return t(`${translationPrefix}.options.${active?.name}`)
+      return t(`${translationPrefix}.options.${activeItem?.name}`)
     }
   }
 
   const onChangeHandler = (s: React.SetStateAction<ListBoxItem>) => {
-    setActive(s)
+    setActiveItem(s)
     onChange && onChange(s)
   }
 
   return (
     <div className="w-full relative" {...props}>
-      <HUIListbox value={active} onChange={onChangeHandler}>
+      <HUIListbox value={activeItem} onChange={onChangeHandler}>
         {({ open }) => (
           <>
             <HUIListbox.Button
@@ -62,7 +62,7 @@ export const Listbox: React.FC<ListboxProps> = ({
               data-testid="button"
             >
               <Typography size={TypographySize.Small} className="block truncate">
-                {active ? selectedOption() : t(`${translationPrefix}.label`)}
+                {activeItem ? selectedOption() : t(`${translationPrefix}.label`)}
               </Typography>
               {open ? (
                 <ChevronUpIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
@@ -92,12 +92,12 @@ export const Listbox: React.FC<ListboxProps> = ({
                       <>
                         <span
                           className={`block truncate ${
-                            selected || active?.name === option.name ? 'font-semibold' : 'font-normal'
+                            selected || activeItem?.name === option.name ? 'font-semibold' : 'font-normal'
                           }`}
                         >
                           {t(`${translationPrefix}.options.${option.name}`)}
                         </span>
-                        {selected || active?.name === option.name ? (
+                        {selected || activeItem?.name === option.name ? (
                           <span className="absolute inset-y-0 left-0 flex items-center pl-1.5">
                             <CheckIcon className="w-5 h-5 text-brand-green-club" aria-hidden="true" />
                           </span>
