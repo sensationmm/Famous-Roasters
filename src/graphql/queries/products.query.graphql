@@ -1,5 +1,5 @@
-query products {
-    products(first: 10) {
+query products($first: Int, $sortKey: ProductSortKeys, $reverse: Boolean) {
+    products(first: $first, sortKey: $sortKey, reverse: $reverse) {
         edges {
             node {
                 id
@@ -10,6 +10,10 @@ query products {
                 }
                 priceRange {
                     minVariantPrice {
+                        amount
+                        currencyCode
+                    }
+                    maxVariantPrice {
                         amount
                         currencyCode
                     }

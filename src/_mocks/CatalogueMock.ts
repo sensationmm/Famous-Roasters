@@ -1,10 +1,15 @@
 import { GraphQLError } from 'graphql'
 import { loader } from 'graphql.macro'
-const query = loader('src/graphql/queries/products.query.graphql')
+const GET_PRODUCTS = loader('src/graphql/queries/products.query.graphql')
 
 export const CatalogueMock = {
   request: {
-    query,
+    query: GET_PRODUCTS,
+    variables: {
+      first: 20,
+      sortKey: undefined,
+      reverse: undefined,
+    },
   },
   result: {
     data: {
@@ -24,7 +29,12 @@ export const CatalogueMock = {
 
 export const CatalogueMockError = {
   request: {
-    query,
+    query: GET_PRODUCTS,
+    variables: {
+      first: 20,
+      sortKey: undefined,
+      reverse: undefined,
+    },
   },
   result: {
     errors: [new GraphQLError('Error!')],
@@ -33,7 +43,12 @@ export const CatalogueMockError = {
 
 export const CatalogueMockMissingData = {
   request: {
-    query,
+    query: GET_PRODUCTS,
+    variables: {
+      first: 20,
+      sortKey: undefined,
+      reverse: undefined,
+    },
   },
   result: {
     data: {

@@ -19,6 +19,11 @@ interface TabsDataItem {
   translationKey: string
 }
 
+interface SortParams {
+  sortKey: string
+  reverse: boolean
+}
+
 const tabsData: TabsDataItem[] = [
   { key: 'forYou', translationKey: 'pages.catalogue.tabs.forYou' },
   { key: 'discover', translationKey: 'pages.catalogue.tabs.discover' },
@@ -30,13 +35,40 @@ export const Catalogue: React.FC = () => {
   const { t } = useTranslation()
   const [activeTab, setActiveTab] = useState<string>('discover')
   const [sortValue, setSortValue] = useState<ListBoxItem>()
-  const query = loader('src/graphql/queries/products.query.graphql')
+  const [sortParams, setSortParams] = useState<SortParams>()
+  const GET_PRODUCTS = loader('src/graphql/queries/products.query.graphql')
 
   useEffect(() => {
     document.title = `${t('brand.name')} | ${t('pages.catalogue.title')}`
   }, [])
 
-  const { loading, error, data } = useQuery<Collection>(query)
+  useEffect(() => {
+    if (sortValue?.name) {
+      switch (sortValue.name) {
+        case 'priceAsc':
+          setSortParams({ sortKey: 'PRICE', reverse: false })
+          break
+        case 'priceDesc':
+          setSortParams({ sortKey: 'PRICE', reverse: true })
+          break
+        case 'newDesc':
+          setSortParams({ sortKey: 'CREATED_AT', reverse: false })
+          break
+        default:
+          setSortParams({ sortKey: 'BEST_SELLING', reverse: false })
+          break
+      }
+    }
+  }, [sortValue])
+
+  const { loading, error, data } = useQuery<Collection>(GET_PRODUCTS, {
+    variables: {
+      first: 20,
+      sortKey: sortParams?.sortKey,
+      reverse: sortParams?.reverse,
+    },
+  })
+
   const edges = data?.products.edges
   const productNodes = edges?.map((edge) => edge.node)
 

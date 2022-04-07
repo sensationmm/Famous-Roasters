@@ -47,9 +47,9 @@ export const Listbox: React.FC<ListboxProps> = ({
     }
   }
 
-  const onChangeHandler = (e: React.SetStateAction<ListBoxItem>) => {
-    setActive(e)
-    onChange && onChange(active)
+  const onChangeHandler = (s: React.SetStateAction<ListBoxItem>) => {
+    setActive(s)
+    onChange && onChange(s)
   }
 
   return (
