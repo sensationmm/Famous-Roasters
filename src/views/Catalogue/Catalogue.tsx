@@ -13,6 +13,7 @@ import {
   TabsNavigation,
   Typography,
 } from 'src/components'
+import { Pagination } from 'src/components/Pagination'
 
 interface TabsDataItem {
   key: string
@@ -123,6 +124,9 @@ export const Catalogue: React.FC = () => {
             </div>
           </div>
           {activeTab === 'discover' ? renderDiscoverProducts() : renderForYouProducts()}
+          <div className="mb-8">
+            <Pagination />
+          </div>
         </div>
       </main>
     </Layout>

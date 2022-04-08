@@ -23,17 +23,17 @@ exports[`Product Tile component Renders correctly 1`] = `
         Espresso Raritäten Set
       </div>
       <div
-        class="text-coreUI-text-tertiary text-sm leading-5"
+        class="text-coreUI-text-secondary text-sm leading-5"
       >
         Famous Roasters
       </div>
       <div
-        class="text-coreUI-text-tertiary text-sm leading-5"
+        class="text-coreUI-text-secondary text-sm leading-5"
       >
         Kolumbien
       </div>
       <div
-        class="text-coreUI-text-tertiary text-sm leading-5"
+        class="text-coreUI-text-secondary text-sm leading-5"
       >
         Filter
       </div>
@@ -44,7 +44,7 @@ exports[`Product Tile component Renders correctly 1`] = `
           19,99 €
         </span>
         <span
-          class="text-coreUI-text-tertiary text-xs leading-4"
+          class="text-coreUI-text-secondary text-xs leading-4"
         >
           (XX.XX €/kg)
         </span>
