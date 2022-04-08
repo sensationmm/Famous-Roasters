@@ -3,7 +3,7 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import React from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { MemoryRouter } from 'react-router-dom'
-import { CatalogueMock, CatalogueMockError, CatalogueMockMissingData } from 'src/_mocks'
+import { CatalogueMockError, CatalogueMockMissingData,CatalogueMocks } from 'src/_mocks'
 import { i18n } from 'src/config'
 
 import { Catalogue } from '.'
@@ -20,7 +20,7 @@ describe('Catalogue view', () => {
     const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
-        mocks={[CatalogueMock]}
+        mocks={CatalogueMocks}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -32,6 +32,110 @@ describe('Catalogue view', () => {
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
     expect(container).toMatchSnapshot()
+  })
+
+  it('The user can navigate across tabs', async () => {
+    render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
+        mocks={CatalogueMocks}
+        addTypename={false}
+      >
+        <I18nextProvider i18n={i18n}>
+          <MemoryRouter initialEntries={['/catalogue']}>
+            <Catalogue />
+          </MemoryRouter>
+        </I18nextProvider>
+      </MockedProvider>,
+    )
+    const tabForYou = await screen.findByTestId('tab-forYou')
+    const tabDiscover = await screen.findByTestId('tab-discover')
+    expect(tabForYou).toBeInTheDocument()
+    expect(tabDiscover).toBeInTheDocument()
+    fireEvent.click(tabForYou)
+    fireEvent.click(tabDiscover)
+  })
+
+  it('The user can use sorting', async () => {
+    render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
+        mocks={CatalogueMocks}
+        addTypename={false}
+      >
+        <I18nextProvider i18n={i18n}>
+          <MemoryRouter initialEntries={['/catalogue']}>
+            <Catalogue />
+          </MemoryRouter>
+        </I18nextProvider>
+      </MockedProvider>,
+    )
+    await waitFor(async () => {
+      const button = await screen.findByTestId('button-listbox')
+      expect(button).toBeInTheDocument()
+      fireEvent.click(button)
+    })
+    await waitFor(() => {
+      const option = screen.getByTestId('option-0')
+      expect(option).toBeInTheDocument()
+      fireEvent.click(option)
+    })
+    await waitFor(async () => {
+      const button = await screen.findByTestId('button-listbox')
+      expect(button).toBeInTheDocument()
+      fireEvent.click(button)
+    })
+    await waitFor(() => {
+      const option = screen.getByTestId('option-1')
+      expect(option).toBeInTheDocument()
+      fireEvent.click(option)
+    })
+    await waitFor(async () => {
+      const button = await screen.findByTestId('button-listbox')
+      expect(button).toBeInTheDocument()
+      fireEvent.click(button)
+    })
+    await waitFor(() => {
+      const option = screen.getByTestId('option-2')
+      expect(option).toBeInTheDocument()
+      fireEvent.click(option)
+    })
+    await waitFor(async () => {
+      const button = await screen.findByTestId('button-listbox')
+      expect(button).toBeInTheDocument()
+      fireEvent.click(button)
+    })
+    await waitFor(() => {
+      const option = screen.getByTestId('option-3')
+      expect(option).toBeInTheDocument()
+      fireEvent.click(option)
+    })
+  })
+
+  it('The user can use pagination', async () => {
+    render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
+        mocks={CatalogueMocks}
+        addTypename={false}
+      >
+        <I18nextProvider i18n={i18n}>
+          <MemoryRouter initialEntries={['/catalogue']}>
+            <Catalogue />
+          </MemoryRouter>
+        </I18nextProvider>
+      </MockedProvider>,
+    )
+    await waitFor(async () => {
+      const button = await screen.findByTestId('pagination-next')
+      expect(button).toBeInTheDocument()
+      fireEvent.click(button)
+    })
+    await waitFor(async () => {
+      const button = await screen.findByTestId('pagination-previous')
+      expect(button).toBeInTheDocument()
+      fireEvent.click(button)
+    })
   })
 
   it('Renders correctly for an error call', async () => {
@@ -71,69 +175,5 @@ describe('Catalogue view', () => {
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
     expect(container).toMatchSnapshot()
-  })
-
-  it('The user can navigate across tabs', async () => {
-    render(
-      <MockedProvider
-        defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
-        mocks={[CatalogueMock]}
-        addTypename={false}
-      >
-        <I18nextProvider i18n={i18n}>
-          <MemoryRouter initialEntries={['/catalogue']}>
-            <Catalogue />
-          </MemoryRouter>
-        </I18nextProvider>
-      </MockedProvider>,
-    )
-    const tabForYou = await screen.findByTestId('tab-forYou')
-    const tabDiscover = await screen.findByTestId('tab-discover')
-    expect(tabForYou).toBeInTheDocument()
-    expect(tabDiscover).toBeInTheDocument()
-    fireEvent.click(tabForYou)
-    fireEvent.click(tabDiscover)
-  })
-
-  it('The user can use sorting', async () => {
-    render(
-      <MockedProvider
-        defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
-        mocks={[CatalogueMock]}
-        addTypename={false}
-      >
-        <I18nextProvider i18n={i18n}>
-          <MemoryRouter initialEntries={['/catalogue']}>
-            <Catalogue />
-          </MemoryRouter>
-        </I18nextProvider>
-      </MockedProvider>,
-    )
-    const button = await screen.findByTestId('button')
-    expect(button).toBeInTheDocument()
-    fireEvent.click(button)
-    await waitFor(() => {
-      const option = screen.getByTestId('option-0')
-      expect(option).toBeInTheDocument()
-      fireEvent.click(option)
-    })
-    fireEvent.click(button)
-    await waitFor(() => {
-      const option = screen.getByTestId('option-1')
-      expect(option).toBeInTheDocument()
-      fireEvent.click(option)
-    })
-    fireEvent.click(button)
-    await waitFor(() => {
-      const option = screen.getByTestId('option-2')
-      expect(option).toBeInTheDocument()
-      fireEvent.click(option)
-    })
-    fireEvent.click(button)
-    await waitFor(() => {
-      const option = screen.getByTestId('option-3')
-      expect(option).toBeInTheDocument()
-      fireEvent.click(option)
-    })
   })
 })

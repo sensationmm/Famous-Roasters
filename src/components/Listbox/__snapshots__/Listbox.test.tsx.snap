@@ -9,7 +9,7 @@ exports[`Listbox component Renders correctly 1`] = `
       aria-expanded="false"
       aria-haspopup="true"
       class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
-      data-testid="button"
+      data-testid="button-listbox"
       id="headlessui-listbox-button-1"
       type="button"
     >
@@ -45,7 +45,7 @@ exports[`Listbox component Renders correctly with initial value 1`] = `
       aria-expanded="false"
       aria-haspopup="true"
       class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
-      data-testid="button"
+      data-testid="button-listbox"
       id="headlessui-listbox-button-2"
       type="button"
     >
