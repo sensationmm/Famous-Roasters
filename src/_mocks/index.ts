@@ -1,4 +1,4 @@
-import { CatalogueMockError, CatalogueMockMissingData,CatalogueMocks } from './CatalogueMock'
+import { CatalogueMockError, CatalogueMockMissingData, CatalogueMocks } from './CatalogueMock'
 import { ProductMock } from './ProductMock'
 
 export { CatalogueMocks as CatalogueMocks }
