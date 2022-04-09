@@ -95,22 +95,25 @@ export const Catalogue: React.FC = () => {
   const pageInfo = data?.products.pageInfo
 
   const handleNextClicked = () => {
-    console.log('NEXT')
-    setPaginationParams({
-      first: totalItemsPerPage,
-      last: null,
-      before: null,
-      after: pageInfo?.endCursor || null,
-    })
+    if (pageInfo?.endCursor) {
+      setPaginationParams({
+        first: totalItemsPerPage,
+        last: null,
+        before: null,
+        after: pageInfo.endCursor,
+      })
+    }
   }
 
   const handlePreviousClicked = () => {
-    setPaginationParams({
-      first: null,
-      last: totalItemsPerPage,
-      before: pageInfo?.startCursor || null,
-      after: null,
-    })
+    if (pageInfo?.startCursor) {
+      setPaginationParams({
+        first: null,
+        last: totalItemsPerPage,
+        before: pageInfo.startCursor,
+        after: null,
+      })
+    }
   }
 
   const renderForYouProducts = () => {

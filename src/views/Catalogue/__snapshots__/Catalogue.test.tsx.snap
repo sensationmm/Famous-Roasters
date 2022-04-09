@@ -285,7 +285,596 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
         </div>
         <div
           class="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
-        />
+        >
+          <div
+            class="flex p-6"
+          >
+            <div
+              class="shrink-0"
+            >
+              <img
+                alt="Espresso Raritäten Set"
+                class="w-32"
+                src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+              />
+            </div>
+            <div
+              class="flex flex-col justify-between p-2"
+            >
+              <div
+                class="text-sm leading-5 font-semibold"
+              >
+                Espresso Raritäten Set
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Famous Roasters
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Kolumbien
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Filter
+              </div>
+              <div>
+                <span
+                  class="mr-1 text-base leading-6 font-semibold"
+                >
+                  19,99 €
+                </span>
+                <span
+                  class="text-coreUI-text-secondary text-xs leading-4"
+                >
+                  (XX.XX €/kg)
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex p-6"
+          >
+            <div
+              class="shrink-0"
+            >
+              <img
+                alt="Espresso Raritäten Set"
+                class="w-32"
+                src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+              />
+            </div>
+            <div
+              class="flex flex-col justify-between p-2"
+            >
+              <div
+                class="text-sm leading-5 font-semibold"
+              >
+                Espresso Raritäten Set
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Famous Roasters
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Kolumbien
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Filter
+              </div>
+              <div>
+                <span
+                  class="mr-1 text-base leading-6 font-semibold"
+                >
+                  19,99 €
+                </span>
+                <span
+                  class="text-coreUI-text-secondary text-xs leading-4"
+                >
+                  (XX.XX €/kg)
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex p-6"
+          >
+            <div
+              class="shrink-0"
+            >
+              <img
+                alt="Espresso Raritäten Set"
+                class="w-32"
+                src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+              />
+            </div>
+            <div
+              class="flex flex-col justify-between p-2"
+            >
+              <div
+                class="text-sm leading-5 font-semibold"
+              >
+                Espresso Raritäten Set
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Famous Roasters
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Kolumbien
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Filter
+              </div>
+              <div>
+                <span
+                  class="mr-1 text-base leading-6 font-semibold"
+                >
+                  19,99 €
+                </span>
+                <span
+                  class="text-coreUI-text-secondary text-xs leading-4"
+                >
+                  (XX.XX €/kg)
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex p-6"
+          >
+            <div
+              class="shrink-0"
+            >
+              <img
+                alt="Espresso Raritäten Set"
+                class="w-32"
+                src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+              />
+            </div>
+            <div
+              class="flex flex-col justify-between p-2"
+            >
+              <div
+                class="text-sm leading-5 font-semibold"
+              >
+                Espresso Raritäten Set
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Famous Roasters
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Kolumbien
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Filter
+              </div>
+              <div>
+                <span
+                  class="mr-1 text-base leading-6 font-semibold"
+                >
+                  19,99 €
+                </span>
+                <span
+                  class="text-coreUI-text-secondary text-xs leading-4"
+                >
+                  (XX.XX €/kg)
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex p-6"
+          >
+            <div
+              class="shrink-0"
+            >
+              <img
+                alt="Espresso Raritäten Set"
+                class="w-32"
+                src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+              />
+            </div>
+            <div
+              class="flex flex-col justify-between p-2"
+            >
+              <div
+                class="text-sm leading-5 font-semibold"
+              >
+                Espresso Raritäten Set
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Famous Roasters
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Kolumbien
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Filter
+              </div>
+              <div>
+                <span
+                  class="mr-1 text-base leading-6 font-semibold"
+                >
+                  19,99 €
+                </span>
+                <span
+                  class="text-coreUI-text-secondary text-xs leading-4"
+                >
+                  (XX.XX €/kg)
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex p-6"
+          >
+            <div
+              class="shrink-0"
+            >
+              <img
+                alt="Espresso Raritäten Set"
+                class="w-32"
+                src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+              />
+            </div>
+            <div
+              class="flex flex-col justify-between p-2"
+            >
+              <div
+                class="text-sm leading-5 font-semibold"
+              >
+                Espresso Raritäten Set
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Famous Roasters
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Kolumbien
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Filter
+              </div>
+              <div>
+                <span
+                  class="mr-1 text-base leading-6 font-semibold"
+                >
+                  19,99 €
+                </span>
+                <span
+                  class="text-coreUI-text-secondary text-xs leading-4"
+                >
+                  (XX.XX €/kg)
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex p-6"
+          >
+            <div
+              class="shrink-0"
+            >
+              <img
+                alt="Espresso Raritäten Set"
+                class="w-32"
+                src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+              />
+            </div>
+            <div
+              class="flex flex-col justify-between p-2"
+            >
+              <div
+                class="text-sm leading-5 font-semibold"
+              >
+                Espresso Raritäten Set
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Famous Roasters
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Kolumbien
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Filter
+              </div>
+              <div>
+                <span
+                  class="mr-1 text-base leading-6 font-semibold"
+                >
+                  19,99 €
+                </span>
+                <span
+                  class="text-coreUI-text-secondary text-xs leading-4"
+                >
+                  (XX.XX €/kg)
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex p-6"
+          >
+            <div
+              class="shrink-0"
+            >
+              <img
+                alt="Espresso Raritäten Set"
+                class="w-32"
+                src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+              />
+            </div>
+            <div
+              class="flex flex-col justify-between p-2"
+            >
+              <div
+                class="text-sm leading-5 font-semibold"
+              >
+                Espresso Raritäten Set
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Famous Roasters
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Kolumbien
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Filter
+              </div>
+              <div>
+                <span
+                  class="mr-1 text-base leading-6 font-semibold"
+                >
+                  19,99 €
+                </span>
+                <span
+                  class="text-coreUI-text-secondary text-xs leading-4"
+                >
+                  (XX.XX €/kg)
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex p-6"
+          >
+            <div
+              class="shrink-0"
+            >
+              <img
+                alt="Espresso Raritäten Set"
+                class="w-32"
+                src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+              />
+            </div>
+            <div
+              class="flex flex-col justify-between p-2"
+            >
+              <div
+                class="text-sm leading-5 font-semibold"
+              >
+                Espresso Raritäten Set
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Famous Roasters
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Kolumbien
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Filter
+              </div>
+              <div>
+                <span
+                  class="mr-1 text-base leading-6 font-semibold"
+                >
+                  19,99 €
+                </span>
+                <span
+                  class="text-coreUI-text-secondary text-xs leading-4"
+                >
+                  (XX.XX €/kg)
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex p-6"
+          >
+            <div
+              class="shrink-0"
+            >
+              <img
+                alt="Espresso Raritäten Set"
+                class="w-32"
+                src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+              />
+            </div>
+            <div
+              class="flex flex-col justify-between p-2"
+            >
+              <div
+                class="text-sm leading-5 font-semibold"
+              >
+                Espresso Raritäten Set
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Famous Roasters
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Kolumbien
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Filter
+              </div>
+              <div>
+                <span
+                  class="mr-1 text-base leading-6 font-semibold"
+                >
+                  19,99 €
+                </span>
+                <span
+                  class="text-coreUI-text-secondary text-xs leading-4"
+                >
+                  (XX.XX €/kg)
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex p-6"
+          >
+            <div
+              class="shrink-0"
+            >
+              <img
+                alt="Espresso Raritäten Set"
+                class="w-32"
+                src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+              />
+            </div>
+            <div
+              class="flex flex-col justify-between p-2"
+            >
+              <div
+                class="text-sm leading-5 font-semibold"
+              >
+                Espresso Raritäten Set
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Famous Roasters
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Kolumbien
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Filter
+              </div>
+              <div>
+                <span
+                  class="mr-1 text-base leading-6 font-semibold"
+                >
+                  19,99 €
+                </span>
+                <span
+                  class="text-coreUI-text-secondary text-xs leading-4"
+                >
+                  (XX.XX €/kg)
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex p-6"
+          >
+            <div
+              class="shrink-0"
+            >
+              <img
+                alt="Espresso Raritäten Set"
+                class="w-32"
+                src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+              />
+            </div>
+            <div
+              class="flex flex-col justify-between p-2"
+            >
+              <div
+                class="text-sm leading-5 font-semibold"
+              >
+                Espresso Raritäten Set
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Famous Roasters
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Kolumbien
+              </div>
+              <div
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Filter
+              </div>
+              <div>
+                <span
+                  class="mr-1 text-base leading-6 font-semibold"
+                >
+                  19,99 €
+                </span>
+                <span
+                  class="text-coreUI-text-secondary text-xs leading-4"
+                >
+                  (XX.XX €/kg)
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
         <div
           class="mb-8"
         >
@@ -322,9 +911,8 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex-1 flex justify-start -mt-0.5 ml-2"
             >
               <button
-                class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center text-sm font-bold text-coreUI-text-tertiary"
+                class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center text-sm font-bold text-coreUI-text-secondary hover:text-coreUI-text-primary"
                 data-testid="pagination-next"
-                disabled=""
               >
                 <span>
                   Weiter
@@ -858,7 +1446,7 @@ exports[`Catalogue view Renders correctly for a successful call with missing dat
                 aria-haspopup="true"
                 class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                 data-testid="button-listbox"
-                id="headlessui-listbox-button-34"
+                id="headlessui-listbox-button-36"
                 type="button"
               >
                 <span
