@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import {
   ErrorPrompt,
+  FiltersMenu,
   Layout,
   Listbox,
   ListBoxItem,
@@ -111,7 +112,10 @@ export const Catalogue: React.FC = () => {
             initialActiveTabKey="discover"
             setParentActiveTab={(k: string) => setActiveTab(k)}
           />
-          <div className="flex justify-end mt-8">
+          <div className="flex gap-x-4 justify-end mt-8">
+            <div className="w-1/2 md:hidden">
+              <FiltersMenu />
+            </div>
             <div className="w-1/2 md:w-1/3 xl:w-1/5">
               <Listbox
                 items={sortByItems}
