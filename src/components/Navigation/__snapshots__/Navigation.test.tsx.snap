@@ -10,7 +10,7 @@ exports[`Navigation component Renders correctly with home theme 1`] = `
     >
       <nav
         aria-label="Top"
-        class="max-w-7xl mx-auto px-4 sm:px-6 xl:px-8"
+        class="max-w-7xl mx-auto px-4 md:px-6 xl:px-8"
       >
         <div
           class="h-16 flex items-center justify-between border-b border-brand-grey-whisper"
@@ -194,7 +194,7 @@ exports[`Navigation component Renders correctly with shop theme 1`] = `
     >
       <nav
         aria-label="Top"
-        class="max-w-7xl mx-auto px-4 sm:px-6 xl:px-8"
+        class="max-w-7xl mx-auto px-4 md:px-6 xl:px-8"
       >
         <div
           class="h-16 flex items-center justify-between border-b border-brand-grey-whisper"
