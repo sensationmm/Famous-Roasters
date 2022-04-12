@@ -4,6 +4,14 @@ import { loader } from 'graphql.macro'
 import { ProductMock } from './ProductMock'
 const GET_PRODUCTS = loader('src/graphql/queries/products.query.graphql')
 
+const ProductEdge = {
+  node: {
+    ...ProductMock,
+  },
+}
+
+const ProductEdges = Array.from(Array(12).keys()).map(() => ProductEdge)
+
 const CatalogueMock1 = {
   request: {
     query: GET_PRODUCTS,
@@ -19,68 +27,7 @@ const CatalogueMock1 = {
   result: {
     data: {
       products: {
-        edges: [
-          {
-            node: {
-              ...ProductMock,
-            },
-          },
-          {
-            node: {
-              ...ProductMock,
-            },
-          },
-          {
-            node: {
-              ...ProductMock,
-            },
-          },
-          {
-            node: {
-              ...ProductMock,
-            },
-          },
-          {
-            node: {
-              ...ProductMock,
-            },
-          },
-          {
-            node: {
-              ...ProductMock,
-            },
-          },
-          {
-            node: {
-              ...ProductMock,
-            },
-          },
-          {
-            node: {
-              ...ProductMock,
-            },
-          },
-          {
-            node: {
-              ...ProductMock,
-            },
-          },
-          {
-            node: {
-              ...ProductMock,
-            },
-          },
-          {
-            node: {
-              ...ProductMock,
-            },
-          },
-          {
-            node: {
-              ...ProductMock,
-            },
-          },
-        ],
+        edges: [...ProductEdges],
         pageInfo: {
           hasNextPage: true,
           hasPreviousPage: false,
@@ -167,7 +114,7 @@ const CatalogueMock6 = {
   result: {
     data: {
       products: {
-        edges: CatalogueMock1.result.data.products.edges,
+        edges: [...ProductEdges],
         pageInfo: {
           hasNextPage: true,
           hasPreviousPage: false,
@@ -194,7 +141,7 @@ const CatalogueMock7 = {
   result: {
     data: {
       products: {
-        edges: CatalogueMock1.result.data.products.edges,
+        edges: [...ProductEdges],
         pageInfo: {
           hasNextPage: false,
           hasPreviousPage: true,
@@ -221,7 +168,7 @@ const CatalogueMock8 = {
   result: {
     data: {
       products: {
-        edges: CatalogueMock1.result.data.products.edges,
+        edges: [...ProductEdges],
         pageInfo: {
           hasNextPage: true,
           hasPreviousPage: false,
