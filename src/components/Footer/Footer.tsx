@@ -44,16 +44,16 @@ export const Footer: React.FC = () => {
   }
 
   return (
-    <footer className="bg-brand-black text-base text-white px-6 sm:px-6 xl:px-10 py-10">
-      <div className="w-full text-center mb-10 flex justify-center items-center">
-        <div className="mr-2">
+    <footer className="bg-brand-black text-base text-white py-10">
+      <div className="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10">
+        <div className="mb-2 md:mb-0 md:mr-2">
           <Badge />
         </div>
-        <Typography as="div" type={TypographyType.Heading} size={TypographySize.Large}>
+        <Typography as="div" type={TypographyType.Heading} size={TypographySize.Large} className="px-4">
           {t('footer.slogan.text')}
         </Typography>
       </div>
-      <div className="max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2">
+      <div className="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 mx-auto px-12 xl:px-14">
         <div className="order-2 md:order-1">
           {/* Links */}
           <ul>
@@ -126,7 +126,7 @@ export const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="w-full text-center mt-10">
+      <div className="w-full max-w-7xl mx-auto text-center mt-10 mx-auto px-12 xl:px-14">
         <Typography type={TypographyType.Paragraph} className="text-center">
           {t('brand.copyright', { year: new Date().getFullYear() })}
         </Typography>
