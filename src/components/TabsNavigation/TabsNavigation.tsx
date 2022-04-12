@@ -43,7 +43,9 @@ export const TabsNavigation: React.FC<TabsNavigationProps> = ({
             <Typography
               size={TypographySize.Small}
               className={
-                isActive ? 'text-brand-black font-semibold border-b-2 pb-1.5' : 'text-coreUI-text-secondary pb-1.5'
+                isActive
+                  ? 'text-brand-black font-semibold border-b-2 pb-1.5'
+                  : 'text-coreUI-text-secondary hover:text-coreUI-text-primary pb-1.5'
               }
             >
               {t(tabsDataItem.translationKey)}

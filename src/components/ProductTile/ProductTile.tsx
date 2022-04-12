@@ -23,7 +23,7 @@ export const ProductTile: React.FC<ProductTileProps> = ({ productNode }: Product
           as="div"
           type={TypographyType.Paragraph}
           size={TypographySize.Small}
-          className="text-coreUI-text-tertiary"
+          className="text-coreUI-text-secondary"
         >
           {vendor}
         </Typography>
@@ -31,7 +31,7 @@ export const ProductTile: React.FC<ProductTileProps> = ({ productNode }: Product
           as="div"
           type={TypographyType.Paragraph}
           size={TypographySize.Small}
-          className="text-coreUI-text-tertiary"
+          className="text-coreUI-text-secondary"
         >
           Kolumbien
         </Typography>
@@ -39,7 +39,7 @@ export const ProductTile: React.FC<ProductTileProps> = ({ productNode }: Product
           as="div"
           type={TypographyType.Paragraph}
           size={TypographySize.Small}
-          className="text-coreUI-text-tertiary"
+          className="text-coreUI-text-secondary"
         >
           Filter
         </Typography>
@@ -47,7 +47,7 @@ export const ProductTile: React.FC<ProductTileProps> = ({ productNode }: Product
           <Typography type={TypographyType.Label} size={TypographySize.Base} className="mr-1">
             {formatPrice(priceRange.minVariantPrice.amount, priceRange.minVariantPrice.currencyCode)}
           </Typography>
-          <Typography type={TypographyType.Paragraph} size={TypographySize.Tiny} className="text-coreUI-text-tertiary">
+          <Typography type={TypographyType.Paragraph} size={TypographySize.Tiny} className="text-coreUI-text-secondary">
             (XX.XX €/kg)
           </Typography>
         </div>

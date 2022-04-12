@@ -41,7 +41,7 @@ describe('Listbox component', () => {
         />
       </I18nextProvider>,
     )
-    const button = await screen.findByTestId('button')
+    const button = await screen.findByTestId('button-listbox')
     expect(button).toBeInTheDocument()
     fireEvent.click(button)
     await waitFor(() => {

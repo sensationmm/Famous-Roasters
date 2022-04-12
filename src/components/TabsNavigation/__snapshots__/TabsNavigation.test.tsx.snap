@@ -27,7 +27,7 @@ exports[`Tabs Navigation component Renders correctly 1`] = `
       type="button"
     >
       <span
-        class="text-coreUI-text-secondary pb-1.5 text-sm leading-5"
+        class="text-coreUI-text-secondary hover:text-coreUI-text-primary pb-1.5 text-sm leading-5"
       >
         Entdecken
       </span>
