@@ -169,7 +169,7 @@ export const Catalogue: React.FC = () => {
   return (
     <Layout>
       <main className="flex flex-grow w-full items-start justify-center bg-white mt-4">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 xl:px-8">
+        <div className="w-full max-w-7xl mx-auto px-6 xl:px-8">
           <TabsNavigation
             tabsData={tabsData}
             initialActiveTabKey="discover"
