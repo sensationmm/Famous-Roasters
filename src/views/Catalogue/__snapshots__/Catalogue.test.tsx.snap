@@ -1446,7 +1446,7 @@ exports[`Catalogue view Renders correctly for a successful call with missing dat
                 aria-haspopup="true"
                 class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                 data-testid="button-listbox"
-                id="headlessui-listbox-button-36"
+                id="headlessui-listbox-button-39"
                 type="button"
               >
                 <span

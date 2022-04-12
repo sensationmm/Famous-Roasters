@@ -41,8 +41,6 @@ const sortByItems: ListBoxItem[] = [{ name: 'priceAsc' }, { name: 'priceDesc' },
 
 const totalItemsPerPage = 6
 
-// TODO - Change CI env var REACT_APP_SHOPIFY_STOREFRONT_GRAPHQL_ENDPOINT to use 2022-04 version
-
 export const Catalogue: React.FC = () => {
   const { t } = useTranslation()
   const [activeTab, setActiveTab] = useState<string>('discover')
@@ -92,28 +90,29 @@ export const Catalogue: React.FC = () => {
 
   const edges = data?.products.edges
   const productNodes = edges?.map((edge) => edge.node)
-  const pageInfo = data?.products.pageInfo
+  const pageInfo = data?.products.pageInfo || {
+    hasNextPage: false,
+    hasPreviousPage: false,
+    startCursor: null,
+    endCursor: null,
+  }
 
   const handleNextClicked = () => {
-    if (pageInfo?.endCursor) {
-      setPaginationParams({
-        first: totalItemsPerPage,
-        last: null,
-        before: null,
-        after: pageInfo.endCursor,
-      })
-    }
+    setPaginationParams({
+      first: totalItemsPerPage,
+      last: null,
+      before: null,
+      after: pageInfo.endCursor || null,
+    })
   }
 
   const handlePreviousClicked = () => {
-    if (pageInfo?.startCursor) {
-      setPaginationParams({
-        first: null,
-        last: totalItemsPerPage,
-        before: pageInfo.startCursor,
-        after: null,
-      })
-    }
+    setPaginationParams({
+      first: null,
+      last: totalItemsPerPage,
+      before: pageInfo.startCursor || null,
+      after: null,
+    })
   }
 
   const renderForYouProducts = () => {
@@ -132,7 +131,7 @@ export const Catalogue: React.FC = () => {
         </div>
       )
     } else {
-      if (error) {
+      if (error || !pageInfo) {
         return <ErrorPrompt promptAction={() => history.go(0)} />
       } else {
         return (

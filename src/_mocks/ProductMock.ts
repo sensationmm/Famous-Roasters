@@ -91,3 +91,8 @@ export const ProductMock: Product = {
     },
   },
 }
+
+export const ProductMockNoImage: Product = {
+  ...ProductMock,
+  featuredImage: null,
+}

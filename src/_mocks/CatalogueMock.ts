@@ -180,6 +180,60 @@ const CatalogueMock8 = {
   },
 }
 
+const CatalogueMock9 = {
+  ...CatalogueMock6,
+  result: {
+    ...CatalogueMock6.result,
+    data: {
+      products: {
+        ...CatalogueMock6.result.data.products,
+        pageInfo: {
+          hasNextPage: true,
+          hasPreviousPage: false,
+          startCursor: null,
+          endCursor: null,
+        },
+      },
+    },
+  },
+}
+
+const CatalogueMock10 = {
+  ...CatalogueMock7,
+  result: {
+    ...CatalogueMock7.result,
+    data: {
+      products: {
+        ...CatalogueMock7.result.data.products,
+        pageInfo: {
+          hasNextPage: false,
+          hasPreviousPage: true,
+          startCursor: null,
+          endCursor: null,
+        },
+      },
+    },
+  },
+}
+
+const CatalogueMock11 = {
+  ...CatalogueMock8,
+  result: {
+    ...CatalogueMock8.result,
+    data: {
+      products: {
+        ...CatalogueMock8.result.data.products,
+        pageInfo: {
+          hasNextPage: true,
+          hasPreviousPage: false,
+          startCursor: null,
+          endCursor: null,
+        },
+      },
+    },
+  },
+}
+
 export const CatalogueMocks = [
   CatalogueMock1,
   CatalogueMock2,
@@ -189,6 +243,10 @@ export const CatalogueMocks = [
   CatalogueMock6,
 ]
 export const CatalogueMocksPagination = [CatalogueMock6, CatalogueMock7, CatalogueMock8]
+
+export const CatalogueMocksPaginationWrongForwards = [CatalogueMock9, CatalogueMock10, CatalogueMock11]
+
+export const CatalogueMocksPaginationWrongBackwards = [CatalogueMock6, CatalogueMock10, CatalogueMock11]
 
 export const CatalogueMockError = {
   request: {
