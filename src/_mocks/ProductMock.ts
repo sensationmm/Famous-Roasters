@@ -4,6 +4,7 @@ export const ProductMock: Product = {
   availableForSale: false,
   collections: {
     edges: [],
+    nodes: [],
     pageInfo: {
       hasNextPage: false,
       hasPreviousPage: false,
@@ -31,6 +32,7 @@ export const ProductMock: Product = {
   handle: '',
   images: {
     edges: [],
+    nodes: [],
     pageInfo: {
       hasNextPage: false,
       hasPreviousPage: false,
@@ -38,6 +40,7 @@ export const ProductMock: Product = {
   },
   media: {
     edges: [],
+    nodes: [],
     pageInfo: {
       hasNextPage: false,
       hasPreviousPage: false,
@@ -59,6 +62,7 @@ export const ProductMock: Product = {
   requiresSellingPlan: false,
   sellingPlanGroups: {
     edges: [],
+    nodes: [],
     pageInfo: {
       hasNextPage: false,
       hasPreviousPage: false,
@@ -70,6 +74,7 @@ export const ProductMock: Product = {
   updatedAt: '',
   variants: {
     edges: [],
+    nodes: [],
     pageInfo: {
       hasNextPage: false,
       hasPreviousPage: false,
@@ -79,9 +84,15 @@ export const ProductMock: Product = {
   id: '12312312',
   metafields: {
     edges: [],
+    nodes: [],
     pageInfo: {
       hasNextPage: false,
       hasPreviousPage: false,
     },
   },
+}
+
+export const ProductMockNoImage: Product = {
+  ...ProductMock,
+  featuredImage: null,
 }
