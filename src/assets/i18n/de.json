@@ -54,6 +54,30 @@
         "forYou": "Für Dich"
       },
       "filters": {
+        "beanType": {
+          "label": "Bohnensorte"
+        },
+        "common": {
+          "filtersMenu": {
+            "close": "Schließen",
+            "filter": "Filter",
+            "filterOptions": "Filteroptionen",
+            "open": "Öffnen",
+            "removeFilter": "Filter entfernen"
+          }
+        },
+        "origin": {
+          "label": "Origin"
+        },
+        "packageSize": {
+          "label": "Packungsgröße"
+        },
+        "pricePerKg": {
+          "label": "Preis je Kg"
+        },
+        "roaster": {
+          "label": "Röster"
+        },
         "sort": {
           "label": "Sortieren nach...",
           "options": {

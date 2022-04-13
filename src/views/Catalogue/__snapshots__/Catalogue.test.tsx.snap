@@ -16,7 +16,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
           class="max-w-7xl mx-auto px-4 md:px-6 xl:px-8"
         >
           <div
-            class="h-16 flex items-center justify-between border-b border-brand-grey-whisper"
+            class="h-16 mt-0.5 flex items-center justify-between border-b border-brand-grey-whisper"
           >
             <div
               class="flex-1 flex items-center xl:hidden"
@@ -251,14 +251,27 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             class="w-1/2 md:hidden"
           >
             <button
-              class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
-              data-testid="button-filters-menu"
+              class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default md:hidden"
+              data-testid="button-filters-menu-open"
             >
               <span
                 class="block truncate text-sm leading-5"
               >
                 Filter
               </span>
+              <svg
+                aria-hidden="true"
+                class="-mr-1 ml-2 h-5 w-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                  fill-rule="evenodd"
+                />
+              </svg>
             </button>
           </div>
           <div
@@ -1217,7 +1230,7 @@ exports[`Catalogue view Renders correctly for a successful call with missing dat
           class="max-w-7xl mx-auto px-4 md:px-6 xl:px-8"
         >
           <div
-            class="h-16 flex items-center justify-between border-b border-brand-grey-whisper"
+            class="h-16 mt-0.5 flex items-center justify-between border-b border-brand-grey-whisper"
           >
             <div
               class="flex-1 flex items-center xl:hidden"
@@ -1452,14 +1465,27 @@ exports[`Catalogue view Renders correctly for a successful call with missing dat
             class="w-1/2 md:hidden"
           >
             <button
-              class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
-              data-testid="button-filters-menu"
+              class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default md:hidden"
+              data-testid="button-filters-menu-open"
             >
               <span
                 class="block truncate text-sm leading-5"
               >
                 Filter
               </span>
+              <svg
+                aria-hidden="true"
+                class="-mr-1 ml-2 h-5 w-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                  fill-rule="evenodd"
+                />
+              </svg>
             </button>
           </div>
           <div
@@ -1830,7 +1856,7 @@ exports[`Catalogue view Renders correctly for an error call 1`] = `
           class="max-w-7xl mx-auto px-4 md:px-6 xl:px-8"
         >
           <div
-            class="h-16 flex items-center justify-between border-b border-brand-grey-whisper"
+            class="h-16 mt-0.5 flex items-center justify-between border-b border-brand-grey-whisper"
           >
             <div
               class="flex-1 flex items-center xl:hidden"

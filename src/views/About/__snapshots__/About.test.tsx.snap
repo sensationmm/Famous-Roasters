@@ -16,7 +16,7 @@ exports[`About view Renders correctly 1`] = `
           class="max-w-7xl mx-auto px-4 md:px-6 xl:px-8"
         >
           <div
-            class="h-16 flex items-center justify-between border-b border-brand-grey-whisper"
+            class="h-16 mt-0.5 flex items-center justify-between border-b border-brand-grey-whisper"
           >
             <div
               class="flex-1 flex items-center xl:hidden"
