@@ -3,7 +3,7 @@ import { TrashIcon } from '@heroicons/react/outline'
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid'
 import React, { Fragment, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Typography, TypographySize } from 'src/components'
+import { Button, ButtonEmphasis, ButtonSize, Typography, TypographySize } from 'src/components'
 
 interface FiltersData {
   key: string
@@ -79,6 +79,17 @@ export const FiltersMenu: React.FC = () => {
                     <ChevronRightIcon className="inline-flex h-6 w-6" aria-hidden="true" />
                   </div>
                 ))}
+              </div>
+              <div className="absolute inset-x-0 bottom-12 mx-5">
+                <Button
+                  emphasis={ButtonEmphasis.Secondary}
+                  size={ButtonSize.lg}
+                  className="w-full justify-center"
+                  onClick={() => setOpen(false)}
+                  data-testid="button-filters-menu-results"
+                >
+                  {t(`pages.catalogue.filters.common.filtersMenu.showResults`)}
+                </Button>
               </div>
             </div>
           </Transition.Child>

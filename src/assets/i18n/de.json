@@ -63,7 +63,8 @@
             "filter": "Filter",
             "filterOptions": "Filteroptionen",
             "open": "Öffnen",
-            "removeFilter": "Filter entfernen"
+            "removeFilter": "Filter entfernen",
+            "showResults": "Ergebnisse anzeigen"
           }
         },
         "origin": {

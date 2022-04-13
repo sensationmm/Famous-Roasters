@@ -36,5 +36,8 @@ describe('Filters Menu component', () => {
     const buttonClose = await screen.findByTestId('button-filters-menu-close')
     expect(buttonClose).toBeInTheDocument()
     fireEvent.click(buttonClose)
+    const buttonResults = await screen.findByTestId('button-filters-menu-results')
+    expect(buttonResults).toBeInTheDocument()
+    fireEvent.click(buttonResults)
   })
 })
