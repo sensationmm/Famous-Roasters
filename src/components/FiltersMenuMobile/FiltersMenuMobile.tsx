@@ -3,7 +3,15 @@ import { TrashIcon } from '@heroicons/react/outline'
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid'
 import React, { Fragment, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Button, ButtonEmphasis, ButtonSize, Typography, TypographySize } from 'src/components'
+import {
+  Button,
+  ButtonEmphasis,
+  ButtonSize,
+  FilterMobile,
+  Typography,
+  TypographySize,
+  TypographyType,
+} from 'src/components'
 
 interface FiltersData {
   key: string
@@ -17,14 +25,21 @@ const filtersData: FiltersData[] = [
   { key: 'packageSize' },
 ]
 
-export const FiltersMenu: React.FC = () => {
+export const FiltersMenuMobile: React.FC = () => {
   const [open, setOpen] = useState(false)
+  const [showFilter, setShowFilter] = useState<string | null>(null)
   const { t } = useTranslation()
+
+  const closeFilter = () => {
+    setOpen(true)
+    setShowFilter(null)
+  }
 
   return (
     <>
       <Transition.Root show={open} as={Fragment}>
-        <Dialog as="div" className="fixed inset-0 flex z-40 xl:hidden" onClose={setOpen}>
+        <Dialog as="div" className="fixed inset-0 flex z-40" onClose={setOpen}>
+          <FilterMobile filterKey={showFilter} show={!!showFilter} back={closeFilter} />
           <Transition.Child
             as={Fragment}
             enter="transition-opacity ease-linear duration-300"
@@ -57,7 +72,13 @@ export const FiltersMenu: React.FC = () => {
                   <span className="sr-only">{t(`pages.catalogue.filters.common.filtersMenu.close`)}</span>
                   <ChevronLeftIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
-                <Typography>{t(`pages.catalogue.filters.common.filtersMenu.filterOptions`)}</Typography>
+                <Typography
+                  type={TypographyType.Paragraph}
+                  size={TypographySize.Large}
+                  className="text-coreUI-text-secondary"
+                >
+                  {t(`pages.catalogue.filters.common.filtersMenu.filterOptions`)}
+                </Typography>
                 <button
                   type="button"
                   className="-m-2 p-2 rounded-md inline-flex items-center justify-center text-gray-400"
@@ -74,6 +95,8 @@ export const FiltersMenu: React.FC = () => {
                   <div
                     key={`filter-${filter.key}`}
                     className="flex justify-between px-5 py-5 border-b border-coreUI-text-tertiary"
+                    data-testid={`button-filter-mobile-${filter.key}`}
+                    onClick={() => setShowFilter(filter.key)}
                   >
                     <Typography className="inline-flex">{t(`pages.catalogue.filters.${filter.key}.label`)}</Typography>
                     <ChevronRightIcon className="inline-flex h-6 w-6" aria-hidden="true" />
@@ -96,7 +119,7 @@ export const FiltersMenu: React.FC = () => {
         </Dialog>
       </Transition.Root>
       <button
-        className="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default md:hidden"
+        className="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
         data-testid="button-filters-menu-open"
         onClick={() => setOpen(true)}
       >

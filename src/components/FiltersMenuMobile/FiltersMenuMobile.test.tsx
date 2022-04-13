@@ -4,15 +4,25 @@ import { I18nextProvider } from 'react-i18next'
 import { MemoryRouter } from 'react-router-dom'
 import { i18n } from 'src/config'
 
-import { FiltersMenu } from '.'
+import { FiltersMenuMobile } from '.'
 
 global.alert = jest.fn()
 
-describe('Filters Menu component', () => {
+const intersectionObserverMock = function () {
+  return {
+    observe: jest.fn(),
+    disconnect: jest.fn(),
+  }
+}
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+window.IntersectionObserver = intersectionObserverMock
+
+describe('Filters Menu Mobile component', () => {
   it('Renders correctly', async () => {
     const { container } = render(
       <I18nextProvider i18n={i18n}>
-        <FiltersMenu />
+        <FiltersMenuMobile />
       </I18nextProvider>,
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
@@ -23,7 +33,7 @@ describe('Filters Menu component', () => {
     render(
       <I18nextProvider i18n={i18n}>
         <MemoryRouter initialEntries={['/catalogue']}>
-          <FiltersMenu />
+          <FiltersMenuMobile />
         </MemoryRouter>
       </I18nextProvider>,
     )
@@ -39,5 +49,24 @@ describe('Filters Menu component', () => {
     const buttonResults = await screen.findByTestId('button-filters-menu-results')
     expect(buttonResults).toBeInTheDocument()
     fireEvent.click(buttonResults)
+  })
+
+  it('Can transition to filter dialog', async () => {
+    render(
+      <I18nextProvider i18n={i18n}>
+        <MemoryRouter initialEntries={['/catalogue']}>
+          <FiltersMenuMobile />
+        </MemoryRouter>
+      </I18nextProvider>,
+    )
+    const buttonOpen = await screen.findByTestId('button-filters-menu-open')
+    expect(buttonOpen).toBeInTheDocument()
+    fireEvent.click(buttonOpen)
+    const buttonFilter = await screen.findByTestId('button-filter-mobile-pricePerKg')
+    expect(buttonFilter).toBeInTheDocument()
+    fireEvent.click(buttonFilter)
+    const buttonFilterClose = await screen.findByTestId('button-filter-mobile-close')
+    expect(buttonFilterClose).toBeInTheDocument()
+    fireEvent.click(buttonFilterClose)
   })
 })

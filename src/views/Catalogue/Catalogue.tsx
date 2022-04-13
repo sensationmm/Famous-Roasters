@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import {
   ErrorPrompt,
-  FiltersMenu,
+  FiltersMenuMobile,
   Layout,
   Listbox,
   ListBoxItem,
@@ -139,7 +139,7 @@ export const Catalogue: React.FC = () => {
           <>
             <div className="flex gap-x-4 justify-end mt-8">
               <div className="w-1/2 md:hidden">
-                <FiltersMenu />
+                <FiltersMenuMobile />
               </div>
               <div className="w-1/2 md:w-1/3 xl:w-1/5">
                 <Listbox

@@ -65,6 +65,9 @@
             "open": "Öffnen",
             "removeFilter": "Filter entfernen",
             "showResults": "Ergebnisse anzeigen"
+          },
+          "filterMobile": {
+            "apply": "Übernehmen"
           }
         },
         "origin": {

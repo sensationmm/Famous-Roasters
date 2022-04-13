@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Filters Menu component Renders correctly 1`] = `
+exports[`Filters Menu Mobile component Renders correctly 1`] = `
 <div>
   <button
     class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default md:hidden"
