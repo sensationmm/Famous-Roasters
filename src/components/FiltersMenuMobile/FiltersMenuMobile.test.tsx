@@ -1,9 +1,11 @@
+import { MockedProvider } from '@apollo/client/testing'
 import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import React from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { MemoryRouter } from 'react-router-dom'
 import { i18n } from 'src/config'
 
+import { CatalogueMocks } from '../../_mocks'
 import { FiltersMenuMobile } from '.'
 
 global.alert = jest.fn()
@@ -21,9 +23,15 @@ window.IntersectionObserver = intersectionObserverMock
 describe('Filters Menu Mobile component', () => {
   it('Renders correctly', async () => {
     const { container } = render(
-      <I18nextProvider i18n={i18n}>
-        <FiltersMenuMobile />
-      </I18nextProvider>,
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
+        mocks={CatalogueMocks}
+        addTypename={false}
+      >
+        <I18nextProvider i18n={i18n}>
+          <FiltersMenuMobile />
+        </I18nextProvider>
+      </MockedProvider>,
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
     expect(container).toMatchSnapshot()
@@ -31,11 +39,17 @@ describe('Filters Menu Mobile component', () => {
 
   it('Can expand, collapse and click on remove', async () => {
     render(
-      <I18nextProvider i18n={i18n}>
-        <MemoryRouter initialEntries={['/catalogue']}>
-          <FiltersMenuMobile />
-        </MemoryRouter>
-      </I18nextProvider>,
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
+        mocks={CatalogueMocks}
+        addTypename={false}
+      >
+        <I18nextProvider i18n={i18n}>
+          <MemoryRouter initialEntries={['/catalogue']}>
+            <FiltersMenuMobile />
+          </MemoryRouter>
+        </I18nextProvider>
+      </MockedProvider>,
     )
     const buttonOpen = await screen.findByTestId('button-filters-menu-open')
     expect(buttonOpen).toBeInTheDocument()
@@ -53,11 +67,17 @@ describe('Filters Menu Mobile component', () => {
 
   it('Can transition to filter dialog', async () => {
     render(
-      <I18nextProvider i18n={i18n}>
-        <MemoryRouter initialEntries={['/catalogue']}>
-          <FiltersMenuMobile />
-        </MemoryRouter>
-      </I18nextProvider>,
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
+        mocks={CatalogueMocks}
+        addTypename={false}
+      >
+        <I18nextProvider i18n={i18n}>
+          <MemoryRouter initialEntries={['/catalogue']}>
+            <FiltersMenuMobile />
+          </MemoryRouter>
+        </I18nextProvider>
+      </MockedProvider>,
     )
     const buttonOpen = await screen.findByTestId('button-filters-menu-open')
     expect(buttonOpen).toBeInTheDocument()

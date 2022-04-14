@@ -1,7 +1,7 @@
 import { Badge } from './Badge'
 import { Button, ButtonEmphasis, ButtonSize } from './Button'
 import { ErrorPrompt } from './ErrorPrompt'
-import { FilterMobile } from './FilterMobile'
+import { FilterData, FilterMobile } from './FilterMobile'
 import { FiltersMenuMobile } from './FiltersMenuMobile'
 import { Footer } from './Footer'
 import { Input, InputMode } from './Input'
@@ -18,6 +18,7 @@ export { Button as Button }
 export { ButtonEmphasis as ButtonEmphasis }
 export { ButtonSize as ButtonSize }
 export { ErrorPrompt as ErrorPrompt }
+export type { FilterData as FilterData }
 export { FilterMobile as FilterMobile }
 export { FiltersMenuMobile as FiltersMenuMobile }
 export { Footer as Footer }

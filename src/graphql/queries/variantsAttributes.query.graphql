@@ -1,0 +1,13 @@
+query variantAttributes {
+    products(first: 30) {
+        nodes {
+            variants(first: 10) {
+                nodes {
+                    package_size: metafield(namespace: "my_fields", key: "package_size") {
+                        value
+                    }
+                }
+            }
+        }
+    }
+}

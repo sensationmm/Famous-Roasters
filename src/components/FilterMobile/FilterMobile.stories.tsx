@@ -16,7 +16,9 @@ const Template: ComponentStory<typeof FilterMobile> = (args) => (
 
 export const Default = Template.bind({})
 Default.args = {
-  filterKey: 'filter-key',
+  filter: {
+    key: 'filter-key',
+  },
   show: true,
   back: () => alert('back!'),
 }

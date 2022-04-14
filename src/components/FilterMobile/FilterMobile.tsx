@@ -5,13 +5,19 @@ import React, { Fragment } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button, ButtonEmphasis, ButtonSize, Typography, TypographySize, TypographyType } from 'src/components'
 
+export interface FilterData {
+  key: string
+  filterType?: 'enum'
+  filterValues?: string[]
+}
+
 interface FilterMobileProps {
-  filterKey: string | null
+  filter: FilterData | null
   show: boolean
   back: () => void
 }
 
-export const FilterMobile: React.FC<FilterMobileProps> = ({ filterKey, show, back }: FilterMobileProps) => {
+export const FilterMobile: React.FC<FilterMobileProps> = ({ filter, show, back }: FilterMobileProps) => {
   const { t } = useTranslation()
 
   const handleBack = () => {
@@ -58,7 +64,7 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({ filterKey, show, bac
                 size={TypographySize.Large}
                 className="text-coreUI-text-secondary"
               >
-                {t(`pages.catalogue.filters.${filterKey}.label`)}
+                {t(`pages.catalogue.filters.${filter?.key}.label`)}
               </Typography>
               <button
                 type="button"
@@ -71,7 +77,20 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({ filterKey, show, bac
               </button>
             </div>
 
-            <div className="border-t border-coreUI-text-tertiary">Content for the filter key {filterKey}</div>
+            <div className="border-t border-coreUI-text-tertiary">
+              {filter?.filterType === 'enum' && filter?.filterValues ? (
+                filter?.filterValues.map((filterValue, idx) => (
+                  <div
+                    key={`filter-${filter.key}-${idx}`}
+                    className="flex justify-between px-5 py-5 border-b border-coreUI-text-tertiary"
+                  >
+                    <Typography className="inline-flex">{filterValue}</Typography>
+                  </div>
+                ))
+              ) : (
+                <span>Content for the filter key {filter?.key}</span>
+              )}
+            </div>
             <div className="absolute inset-x-0 bottom-12 mx-5">
               <Button
                 emphasis={ButtonEmphasis.Secondary}

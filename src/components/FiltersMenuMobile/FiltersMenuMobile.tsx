@@ -1,45 +1,72 @@
+import { useQuery } from '@apollo/client'
 import { Dialog, Transition } from '@headlessui/react'
 import { TrashIcon } from '@heroicons/react/outline'
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid'
+import { Collection } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
+import { loader } from 'graphql.macro'
 import React, { Fragment, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import {
   Button,
   ButtonEmphasis,
   ButtonSize,
+  ErrorPrompt,
+  FilterData,
   FilterMobile,
   Typography,
   TypographySize,
   TypographyType,
 } from 'src/components'
 
-interface FiltersData {
-  key: string
-}
-
-const filtersData: FiltersData[] = [
-  { key: 'pricePerKg' },
-  { key: 'beanType' },
-  { key: 'roaster' },
-  { key: 'origin' },
-  { key: 'packageSize' },
-]
-
 export const FiltersMenuMobile: React.FC = () => {
   const [open, setOpen] = useState(false)
-  const [showFilter, setShowFilter] = useState<string | null>(null)
+  const [activeFilter, setActiveFilter] = useState<FilterData | null>(null)
   const { t } = useTranslation()
+
+  const GET_VARIANTS_ATTRIBUTES = loader('src/graphql/queries/variantsAttributes.query.graphql')
+
+  const { loading, error, data } = useQuery<Collection>(GET_VARIANTS_ATTRIBUTES)
+
+  const getFilterValues = (key: string) => {
+    switch (key) {
+      case 'package_size':
+      default:
+        return Array.from(
+          new Set(
+            data?.products.nodes
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-ignore
+              .map((productNode) => productNode.variants.nodes.map((variantNode) => variantNode['package_size'].value))
+              .flat(),
+          ),
+        )
+    }
+  }
 
   const closeFilter = () => {
     setOpen(true)
-    setShowFilter(null)
+    setActiveFilter(null)
   }
+
+  if (!data || loading) return null
+
+  if (error) {
+    return <ErrorPrompt promptAction={() => history.go(0)} />
+  }
+
+  const filtersData: FilterData[] = [
+    { key: 'pricePerKg' },
+    { key: 'beanType' },
+    { key: 'roaster' },
+    { key: 'origin' },
+    { key: 'packageSize', filterType: 'enum', filterValues: getFilterValues('package_size') },
+  ]
 
   return (
     <>
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="fixed inset-0 flex z-40" onClose={setOpen}>
-          <FilterMobile filterKey={showFilter} show={!!showFilter} back={closeFilter} />
+          <FilterMobile filter={activeFilter} show={!!activeFilter} back={closeFilter} />
           <Transition.Child
             as={Fragment}
             enter="transition-opacity ease-linear duration-300"
@@ -96,7 +123,7 @@ export const FiltersMenuMobile: React.FC = () => {
                     key={`filter-${filter.key}`}
                     className="flex justify-between px-5 py-5 border-b border-coreUI-text-tertiary"
                     data-testid={`button-filter-mobile-${filter.key}`}
-                    onClick={() => setShowFilter(filter.key)}
+                    onClick={() => setActiveFilter(filter)}
                   >
                     <Typography className="inline-flex">{t(`pages.catalogue.filters.${filter.key}.label`)}</Typography>
                     <ChevronRightIcon className="inline-flex h-6 w-6" aria-hidden="true" />
