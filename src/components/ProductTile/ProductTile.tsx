@@ -3,12 +3,18 @@ import React from 'react'
 import { Typography, TypographySize, TypographyType } from 'src/components'
 import { formatPrice } from 'src/utils'
 
+interface CustomProduct extends Product {
+  pricePerKg?: {
+    value: string
+  }
+}
+
 interface ProductTileProps {
-  productNode: Product
+  productNode: CustomProduct
 }
 
 export const ProductTile: React.FC<ProductTileProps> = ({ productNode }: ProductTileProps) => {
-  const { title, vendor, featuredImage, priceRange } = productNode
+  const { title, vendor, featuredImage, priceRange, pricePerKg } = productNode
   if (!featuredImage || !priceRange.minVariantPrice.amount) return null
   return (
     <div className="flex p-6">
@@ -47,9 +53,15 @@ export const ProductTile: React.FC<ProductTileProps> = ({ productNode }: Product
           <Typography type={TypographyType.Label} size={TypographySize.Base} className="mr-1">
             {formatPrice(priceRange.minVariantPrice.amount, priceRange.minVariantPrice.currencyCode)}
           </Typography>
-          <Typography type={TypographyType.Paragraph} size={TypographySize.Tiny} className="text-coreUI-text-secondary">
-            (XX.XX €/kg)
-          </Typography>
+          {pricePerKg && (
+            <Typography
+              type={TypographyType.Paragraph}
+              size={TypographySize.Tiny}
+              className="text-coreUI-text-secondary"
+            >
+              ({formatPrice(pricePerKg.value, 'EUR')}/kg)
+            </Typography>
+          )}
         </div>
       </div>
     </div>

@@ -4,13 +4,14 @@ import { loader } from 'graphql.macro'
 import { ProductMock } from './ProductMock'
 const GET_PRODUCTS = loader('src/graphql/queries/products.query.graphql')
 
-const ProductEdge = {
-  node: {
-    ...ProductMock,
+const ProductNode = {
+  ...ProductMock,
+  pricePerKg: {
+    value: '10.0',
   },
 }
 
-const ProductEdges = Array.from(Array(12).keys()).map(() => ProductEdge)
+const ProductNodes = Array.from(Array(12).keys()).map(() => ProductNode)
 
 const CatalogueMock1 = {
   request: {
@@ -27,7 +28,7 @@ const CatalogueMock1 = {
   result: {
     data: {
       products: {
-        edges: [...ProductEdges],
+        nodes: [...ProductNodes],
         pageInfo: {
           hasNextPage: true,
           hasPreviousPage: false,
@@ -114,7 +115,7 @@ const CatalogueMock6 = {
   result: {
     data: {
       products: {
-        edges: [...ProductEdges],
+        nodes: [...ProductNodes],
         pageInfo: {
           hasNextPage: true,
           hasPreviousPage: false,
@@ -141,7 +142,7 @@ const CatalogueMock7 = {
   result: {
     data: {
       products: {
-        edges: [...ProductEdges],
+        nodes: [...ProductNodes],
         pageInfo: {
           hasNextPage: false,
           hasPreviousPage: true,
@@ -168,7 +169,7 @@ const CatalogueMock8 = {
   result: {
     data: {
       products: {
-        edges: [...ProductEdges],
+        nodes: [...ProductNodes],
         pageInfo: {
           hasNextPage: true,
           hasPreviousPage: false,

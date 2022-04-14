@@ -2,7 +2,7 @@ import { ApolloProvider } from '@apollo/client'
 import React from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { apolloClient, i18n } from 'src/config'
+import { i18n, storeFrontClient } from 'src/config'
 import {
   About,
   Account,
@@ -19,7 +19,7 @@ import {
 
 function App() {
   return (
-    <ApolloProvider client={apolloClient()}>
+    <ApolloProvider client={storeFrontClient()}>
       <I18nextProvider i18n={i18n}>
         <BrowserRouter>
           <Routes>

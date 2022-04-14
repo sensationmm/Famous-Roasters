@@ -1,6 +1,6 @@
 import { ApolloClient, ApolloLink, createHttpLink, from, InMemoryCache, NormalizedCacheObject } from '@apollo/client'
 
-export const apolloClient = (): ApolloClient<NormalizedCacheObject> => {
+export const storeFrontClient = (): ApolloClient<NormalizedCacheObject> => {
   return new ApolloClient({
     cache: new InMemoryCache(),
     link: from([

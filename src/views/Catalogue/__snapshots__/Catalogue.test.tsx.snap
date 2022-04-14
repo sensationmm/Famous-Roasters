@@ -251,7 +251,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             class="w-1/2 md:hidden"
           >
             <button
-              class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default md:hidden"
+              class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
               data-testid="button-filters-menu-open"
             >
               <span
@@ -357,7 +357,9 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <span
                   class="text-coreUI-text-secondary text-xs leading-4"
                 >
-                  (XX.XX €/kg)
+                  (
+                  10,00 €
+                  /kg)
                 </span>
               </div>
             </div>
@@ -406,7 +408,9 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <span
                   class="text-coreUI-text-secondary text-xs leading-4"
                 >
-                  (XX.XX €/kg)
+                  (
+                  10,00 €
+                  /kg)
                 </span>
               </div>
             </div>
@@ -455,7 +459,9 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <span
                   class="text-coreUI-text-secondary text-xs leading-4"
                 >
-                  (XX.XX €/kg)
+                  (
+                  10,00 €
+                  /kg)
                 </span>
               </div>
             </div>
@@ -504,7 +510,9 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <span
                   class="text-coreUI-text-secondary text-xs leading-4"
                 >
-                  (XX.XX €/kg)
+                  (
+                  10,00 €
+                  /kg)
                 </span>
               </div>
             </div>
@@ -553,7 +561,9 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <span
                   class="text-coreUI-text-secondary text-xs leading-4"
                 >
-                  (XX.XX €/kg)
+                  (
+                  10,00 €
+                  /kg)
                 </span>
               </div>
             </div>
@@ -602,7 +612,9 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <span
                   class="text-coreUI-text-secondary text-xs leading-4"
                 >
-                  (XX.XX €/kg)
+                  (
+                  10,00 €
+                  /kg)
                 </span>
               </div>
             </div>
@@ -651,7 +663,9 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <span
                   class="text-coreUI-text-secondary text-xs leading-4"
                 >
-                  (XX.XX €/kg)
+                  (
+                  10,00 €
+                  /kg)
                 </span>
               </div>
             </div>
@@ -700,7 +714,9 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <span
                   class="text-coreUI-text-secondary text-xs leading-4"
                 >
-                  (XX.XX €/kg)
+                  (
+                  10,00 €
+                  /kg)
                 </span>
               </div>
             </div>
@@ -749,7 +765,9 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <span
                   class="text-coreUI-text-secondary text-xs leading-4"
                 >
-                  (XX.XX €/kg)
+                  (
+                  10,00 €
+                  /kg)
                 </span>
               </div>
             </div>
@@ -798,7 +816,9 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <span
                   class="text-coreUI-text-secondary text-xs leading-4"
                 >
-                  (XX.XX €/kg)
+                  (
+                  10,00 €
+                  /kg)
                 </span>
               </div>
             </div>
@@ -847,7 +867,9 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <span
                   class="text-coreUI-text-secondary text-xs leading-4"
                 >
-                  (XX.XX €/kg)
+                  (
+                  10,00 €
+                  /kg)
                 </span>
               </div>
             </div>
@@ -896,7 +918,9 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <span
                   class="text-coreUI-text-secondary text-xs leading-4"
                 >
-                  (XX.XX €/kg)
+                  (
+                  10,00 €
+                  /kg)
                 </span>
               </div>
             </div>
@@ -1465,7 +1489,7 @@ exports[`Catalogue view Renders correctly for a successful call with missing dat
             class="w-1/2 md:hidden"
           >
             <button
-              class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default md:hidden"
+              class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
               data-testid="button-filters-menu-open"
             >
               <span

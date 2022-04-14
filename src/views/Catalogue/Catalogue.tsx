@@ -1,5 +1,5 @@
 import { useQuery } from '@apollo/client'
-import { Collection, Maybe, Scalars } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
+import { Collection, Maybe, Product, Scalars } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -15,6 +15,12 @@ import {
   Typography,
 } from 'src/components'
 import { Pagination } from 'src/components/Pagination'
+
+interface CustomProduct extends Product {
+  pricePerKg?: {
+    value: string
+  }
+}
 
 interface TabsDataItem {
   key: string
@@ -89,8 +95,7 @@ export const Catalogue: React.FC = () => {
     },
   })
 
-  const edges = data?.products.edges
-  const productNodes = edges?.map((edge) => edge.node)
+  const productNodes = data?.products.nodes
   const pageInfo = data?.products.pageInfo || {
     hasNextPage: false,
     hasPreviousPage: false,
@@ -152,7 +157,7 @@ export const Catalogue: React.FC = () => {
               </div>
             </div>
             <div className="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-              {productNodes?.map((node, i: number) => (
+              {productNodes?.map((node: CustomProduct, i: number) => (
                 <ProductTile key={`title-${i}`} productNode={node} />
               ))}
             </div>

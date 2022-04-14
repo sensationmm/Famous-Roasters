@@ -1,23 +1,24 @@
 query products($first: Int, $last: Int, $before: String, $after: String, $sortKey: ProductSortKeys, $reverse: Boolean) {
     products(first: $first, last: $last, before: $before, after: $after, sortKey: $sortKey, reverse: $reverse) {
-        edges {
-            node {
-                id
-                title
-                vendor
-                featuredImage {
-                    url
+        nodes {
+            id
+            title
+            vendor
+            featuredImage {
+                url
+            }
+            priceRange {
+                minVariantPrice {
+                    amount
+                    currencyCode
                 }
-                priceRange {
-                    minVariantPrice {
-                        amount
-                        currencyCode
-                    }
-                    maxVariantPrice {
-                        amount
-                        currencyCode
-                    }
+                maxVariantPrice {
+                    amount
+                    currencyCode
                 }
+            }
+            pricePerKg: metafield(namespace: "my_fields", key:"price_per_kg"){
+                value
             }
         }
         pageInfo {
