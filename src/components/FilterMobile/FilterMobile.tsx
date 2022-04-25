@@ -1,30 +1,32 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { TrashIcon } from '@heroicons/react/outline'
 import { CheckIcon, ChevronLeftIcon } from '@heroicons/react/solid'
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button, ButtonEmphasis, ButtonSize, Typography, TypographySize, TypographyType } from 'src/components'
 
 export interface FilterData {
   key: string
+  isOpen: boolean
   filterType?: 'enum'
   filterValues?: string[]
   filterValuesSelected?: string[]
 }
 
 interface FilterMobileProps {
-  filter: FilterData | null
+  filter: FilterData
   show: boolean
-  back: () => void
+  back: (key: string) => void
+  update: (key: string, filterValuesSelected: string[]) => void
 }
 
-export const FilterMobile: React.FC<FilterMobileProps> = ({ filter, show, back }: FilterMobileProps) => {
+export const FilterMobile: React.FC<FilterMobileProps> = ({ filter, show, back, update }: FilterMobileProps) => {
   const { t } = useTranslation()
 
   const [activeItems, setActiveItems] = useState<string[]>([])
 
   const handleBack = () => {
-    back()
+    back(filter.key)
   }
 
   const isSelected = (item: string) => activeItems.indexOf(item) !== -1
@@ -37,9 +39,13 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({ filter, show, back }
 
   const resetFilter = () => setActiveItems([])
 
+  useEffect(() => {
+    update(filter.key, activeItems)
+  }, [activeItems])
+
   return (
     <Transition.Root show={show} as={Fragment}>
-      <Dialog as="div" className="fixed inset-0 flex z-40" onClose={back}>
+      <Dialog as="div" className="fixed inset-0 flex z-40" onClose={() => back}>
         <Transition.Child
           as={Fragment}
           enter="transition-opacity ease-linear duration-300"
@@ -78,6 +84,7 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({ filter, show, back }
                 className="text-coreUI-text-secondary"
               >
                 {t(`pages.catalogue.filters.${filter?.key}.label`)}
+                {filter?.filterValuesSelected?.length !== 0 && ` (${filter?.filterValuesSelected?.length})`}
               </Typography>
               <button
                 type="button"

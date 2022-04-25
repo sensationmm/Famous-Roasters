@@ -18,6 +18,7 @@ export const Default = Template.bind({})
 Default.args = {
   filter: {
     key: 'filter-key',
+    isOpen: true,
   },
   show: true,
   back: () => alert('back!'),

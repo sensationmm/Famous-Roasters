@@ -22,7 +22,12 @@ describe('Filter Mobile component', () => {
   it('Renders correctly', async () => {
     const { container } = render(
       <I18nextProvider i18n={i18n}>
-        <FilterMobile filter={{ key: 'filter-key' }} show={true} back={() => alert('back!')} />
+        <FilterMobile
+          filter={{ key: 'filter-key', isOpen: true }}
+          show={true}
+          back={() => alert('back!')}
+          update={() => alert('update!')}
+        />
       </I18nextProvider>,
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
@@ -33,7 +38,12 @@ describe('Filter Mobile component', () => {
     render(
       <I18nextProvider i18n={i18n}>
         <MemoryRouter initialEntries={['/catalogue']}>
-          <FilterMobile filter={{ key: 'filter-key' }} show={true} back={() => alert('back!')} />
+          <FilterMobile
+            filter={{ key: 'filter-key', isOpen: true }}
+            show={true}
+            back={() => alert('back!')}
+            update={() => alert('update!')}
+          />
         </MemoryRouter>
       </I18nextProvider>,
     )

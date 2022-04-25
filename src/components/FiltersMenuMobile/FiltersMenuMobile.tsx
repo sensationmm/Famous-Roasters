@@ -4,7 +4,7 @@ import { TrashIcon } from '@heroicons/react/outline'
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid'
 import { Collection } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import {
   Button,
@@ -20,7 +20,6 @@ import {
 
 export const FiltersMenuMobile: React.FC = () => {
   const [open, setOpen] = useState(false)
-  const [activeFilter, setActiveFilter] = useState<FilterData | null>(null)
   const { t } = useTranslation()
 
   const GET_VARIANTS_ATTRIBUTES = loader('src/graphql/queries/variantsAttributes.query.graphql')
@@ -44,30 +43,69 @@ export const FiltersMenuMobile: React.FC = () => {
     }
   }
 
-  const closeFilter = () => {
+  const filtersData: FilterData[] = [
+    { key: 'pricePerKg', isOpen: false },
+    { key: 'beanType', isOpen: false },
+    { key: 'roaster', isOpen: false },
+    { key: 'origin', isOpen: false },
+    { key: 'packageSize', isOpen: false, filterType: 'enum', filterValues: getFilterValues('package_size') },
+  ]
+
+  const [filters, setFilters] = useState<FilterData[]>([])
+
+  const closeFilter = (key: string) => {
+    const changingFilter = filters.filter((filter) => filter.key === key)[0]
+    const updatedFilter = { ...changingFilter, isOpen: false }
     setOpen(true)
-    setActiveFilter(null)
+    setFilters((prev) => [...prev.filter((filter) => filter.key !== key), updatedFilter])
   }
 
-  if (!data || loading) return null
+  const openFilter = (key: string) => {
+    const changingFilter = filters.filter((filter) => filter.key === key)[0]
+    const updatedFilter = { ...changingFilter, isOpen: true }
+    setFilters((prev) => [...prev.filter((filter) => filter.key !== key), updatedFilter])
+  }
+
+  const updateFilter = (key: string, filterValuesSelected: string[]) => {
+    const changingFilter = filters.filter((filter) => filter.key === key)[0]
+    const updatedFilter = { ...changingFilter, filterValuesSelected }
+    setFilters((prev) => [...prev.filter((filter) => filter.key !== key), updatedFilter])
+  }
+
+  useEffect(() => {
+    setFilters(filtersData)
+  }, [!loading])
+
+  if (!data || loading)
+    return (
+      <div
+        className="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
+        data-testid="button-filters-menu-open-loading"
+      >
+        <Typography size={TypographySize.Small} className="block truncate">
+          {t(`pages.catalogue.filters.common.filtersMenu.filter`)}
+        </Typography>
+        <ChevronRightIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
+      </div>
+    )
 
   if (error) {
     return <ErrorPrompt promptAction={() => history.go(0)} />
   }
 
-  const filtersData: FilterData[] = [
-    { key: 'pricePerKg' },
-    { key: 'beanType' },
-    { key: 'roaster' },
-    { key: 'origin' },
-    { key: 'packageSize', filterType: 'enum', filterValues: getFilterValues('package_size') },
-  ]
-
   return (
     <>
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="fixed inset-0 flex z-40" onClose={setOpen}>
-          <FilterMobile filter={activeFilter} show={!!activeFilter} back={closeFilter} />
+          {filters.map((filter) => (
+            <FilterMobile
+              key={`filter-${filter.key}`}
+              filter={filter}
+              show={filter.isOpen}
+              back={() => closeFilter(filter.key)}
+              update={(key: string, filterValuesSelected: string[]) => updateFilter(filter.key, filterValuesSelected)}
+            />
+          ))}
           <Transition.Child
             as={Fragment}
             enter="transition-opacity ease-linear duration-300"
@@ -124,7 +162,7 @@ export const FiltersMenuMobile: React.FC = () => {
                     key={`filter-${filter.key}`}
                     className="flex justify-between px-5 py-5 border-b border-coreUI-text-tertiary"
                     data-testid={`button-filter-mobile-${filter.key}`}
-                    onClick={() => setActiveFilter(filter)}
+                    onClick={() => openFilter(filter.key)}
                   >
                     <Typography className="inline-flex">{t(`pages.catalogue.filters.${filter.key}.label`)}</Typography>
                     <ChevronRightIcon className="inline-flex h-6 w-6" aria-hidden="true" />
