@@ -1,7 +1,7 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { TrashIcon } from '@heroicons/react/outline'
-import { ChevronLeftIcon } from '@heroicons/react/solid'
-import React, { Fragment } from 'react'
+import { CheckIcon, ChevronLeftIcon } from '@heroicons/react/solid'
+import React, { Fragment, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button, ButtonEmphasis, ButtonSize, Typography, TypographySize, TypographyType } from 'src/components'
 
@@ -9,6 +9,7 @@ export interface FilterData {
   key: string
   filterType?: 'enum'
   filterValues?: string[]
+  filterValuesSelected?: string[]
 }
 
 interface FilterMobileProps {
@@ -20,9 +21,21 @@ interface FilterMobileProps {
 export const FilterMobile: React.FC<FilterMobileProps> = ({ filter, show, back }: FilterMobileProps) => {
   const { t } = useTranslation()
 
+  const [activeItems, setActiveItems] = useState<string[]>([])
+
   const handleBack = () => {
     back()
   }
+
+  const isSelected = (item: string) => activeItems.indexOf(item) !== -1
+
+  const toggleSelected = (item: string) => {
+    isSelected(item)
+      ? setActiveItems((prev) => prev.filter((x) => x !== item))
+      : setActiveItems((prev) => [...prev, item])
+  }
+
+  const resetFilter = () => setActiveItems([])
 
   return (
     <Transition.Root show={show} as={Fragment}>
@@ -69,7 +82,7 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({ filter, show, back }
               <button
                 type="button"
                 className="-m-2 p-2 rounded-md inline-flex items-center justify-center text-gray-400"
-                onClick={() => alert('remove')}
+                onClick={() => resetFilter()}
                 data-testid="button-filter-mobile-remove"
               >
                 <span className="sr-only">{t(`pages.catalogue.filters.common.filterMobile.removeFilter`)}</span>
@@ -82,9 +95,17 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({ filter, show, back }
                 filter?.filterValues.map((filterValue, idx) => (
                   <div
                     key={`filter-${filter.key}-${idx}`}
-                    className="flex justify-between px-5 py-5 border-b border-coreUI-text-tertiary"
+                    className="flex justify-between px-5 py-5 border-b border-coreUI-text-tertiary cursor-pointer"
+                    onClick={() => toggleSelected(filterValue)}
                   >
-                    <Typography className="inline-flex">{filterValue}</Typography>
+                    {isSelected(filterValue) ? (
+                      <span className="inline-flex items-center">
+                        <CheckIcon className="w-5 h-5 mr-1 text-brand-green-club" aria-hidden="true" />
+                        <Typography>{filterValue}</Typography>
+                      </span>
+                    ) : (
+                      <Typography className="inline-flex">{filterValue}</Typography>
+                    )}
                   </div>
                 ))
               ) : (
