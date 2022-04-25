@@ -5,7 +5,7 @@ import { I18nextProvider } from 'react-i18next'
 import { MemoryRouter } from 'react-router-dom'
 import { i18n } from 'src/config'
 
-import { CatalogueMocks } from '../../_mocks'
+import { CatalogueMocks, VariantAttributesMock } from '../../_mocks'
 import { FiltersMenuMobile } from '.'
 
 global.alert = jest.fn()
@@ -25,7 +25,7 @@ describe('Filters Menu Mobile component', () => {
     const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
-        mocks={CatalogueMocks}
+        mocks={[...CatalogueMocks, VariantAttributesMock]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -41,7 +41,7 @@ describe('Filters Menu Mobile component', () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
-        mocks={CatalogueMocks}
+        mocks={[...CatalogueMocks, VariantAttributesMock]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -69,7 +69,7 @@ describe('Filters Menu Mobile component', () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
-        mocks={CatalogueMocks}
+        mocks={[...CatalogueMocks, VariantAttributesMock]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>

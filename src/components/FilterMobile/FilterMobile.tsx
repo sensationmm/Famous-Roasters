@@ -25,6 +25,10 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({ filter, show, back, 
 
   const [activeItems, setActiveItems] = useState<string[]>([])
 
+  useEffect(() => {
+    setActiveItems(filter.filterValuesSelected || [])
+  }, [filter])
+
   const handleBack = () => {
     back(filter.key)
   }
@@ -32,16 +36,22 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({ filter, show, back, 
   const isSelected = (item: string) => activeItems.indexOf(item) !== -1
 
   const toggleSelected = (item: string) => {
-    isSelected(item)
-      ? setActiveItems((prev) => prev.filter((x) => x !== item))
-      : setActiveItems((prev) => [...prev, item])
+    if (isSelected(item)) {
+      setActiveItems((prev) => prev.filter((x) => x !== item))
+      update(
+        filter.key,
+        activeItems.filter((x) => x !== item),
+      )
+    } else {
+      setActiveItems((prev) => [...prev, item])
+      update(filter.key, [...activeItems, item])
+    }
   }
 
-  const resetFilter = () => setActiveItems([])
-
-  useEffect(() => {
-    update(filter.key, activeItems)
-  }, [activeItems])
+  const resetFilter = () => {
+    setActiveItems([])
+    update(filter.key, [])
+  }
 
   return (
     <Transition.Root show={show} as={Fragment}>
@@ -84,7 +94,9 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({ filter, show, back, 
                 className="text-coreUI-text-secondary"
               >
                 {t(`pages.catalogue.filters.${filter?.key}.label`)}
-                {filter?.filterValuesSelected?.length !== 0 && ` (${filter?.filterValuesSelected?.length})`}
+                {filter?.filterValuesSelected &&
+                  filter.filterValuesSelected.length !== 0 &&
+                  ` (${filter?.filterValuesSelected?.length})`}
               </Typography>
               <button
                 type="button"
@@ -107,7 +119,7 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({ filter, show, back, 
                   >
                     {isSelected(filterValue) ? (
                       <span className="inline-flex items-center">
-                        <CheckIcon className="w-5 h-5 mr-1 text-brand-green-club" aria-hidden="true" />
+                        <CheckIcon className="w-5 h-5 mr-2 text-brand-green-club" aria-hidden="true" />
                         <Typography>{filterValue}</Typography>
                       </span>
                     ) : (

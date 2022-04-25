@@ -1,7 +1,7 @@
 import { useQuery } from '@apollo/client'
 import { Dialog, Transition } from '@headlessui/react'
 import { TrashIcon } from '@heroicons/react/outline'
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid'
+import { CheckIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid'
 import { Collection } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
 import React, { Fragment, useEffect, useState } from 'react'
@@ -55,22 +55,27 @@ export const FiltersMenuMobile: React.FC = () => {
 
   const closeFilter = (key: string) => {
     const changingFilter = filters.filter((filter) => filter.key === key)[0]
+    const idx = filters.indexOf(changingFilter)
     const updatedFilter = { ...changingFilter, isOpen: false }
     setOpen(true)
-    setFilters((prev) => [...prev.filter((filter) => filter.key !== key), updatedFilter])
+    setFilters((prev) => [...prev.slice(0, idx), updatedFilter, ...prev.slice(idx + 1, prev.length)])
   }
 
   const openFilter = (key: string) => {
     const changingFilter = filters.filter((filter) => filter.key === key)[0]
+    const idx = filters.indexOf(changingFilter)
     const updatedFilter = { ...changingFilter, isOpen: true }
-    setFilters((prev) => [...prev.filter((filter) => filter.key !== key), updatedFilter])
+    setFilters((prev) => [...prev.slice(0, idx), updatedFilter, ...prev.slice(idx + 1, prev.length)])
   }
 
   const updateFilter = (key: string, filterValuesSelected: string[]) => {
     const changingFilter = filters.filter((filter) => filter.key === key)[0]
+    const idx = filters.indexOf(changingFilter)
     const updatedFilter = { ...changingFilter, filterValuesSelected }
-    setFilters((prev) => [...prev.filter((filter) => filter.key !== key), updatedFilter])
+    setFilters((prev) => [...prev.slice(0, idx), updatedFilter, ...prev.slice(idx + 1, prev.length)])
   }
+
+  const resetAllFilters = () => setFilters(filtersData)
 
   useEffect(() => {
     setFilters(filtersData)
@@ -148,7 +153,7 @@ export const FiltersMenuMobile: React.FC = () => {
                 <button
                   type="button"
                   className="-m-2 p-2 rounded-md inline-flex items-center justify-center text-gray-400"
-                  onClick={() => alert('remove')}
+                  onClick={() => resetAllFilters()}
                   data-testid="button-filters-menu-remove"
                 >
                   <span className="sr-only">{t(`pages.catalogue.filters.common.filtersMenu.removeFilter`)}</span>
@@ -157,14 +162,21 @@ export const FiltersMenuMobile: React.FC = () => {
               </div>
 
               <div className="border-t border-coreUI-text-tertiary">
-                {filtersData.map((filter) => (
+                {filters.map((filter) => (
                   <div
                     key={`filter-${filter.key}`}
-                    className="flex justify-between px-5 py-5 border-b border-coreUI-text-tertiary"
+                    className="flex justify-between px-5 py-5 border-b border-coreUI-text-tertiary cursor-pointer"
                     data-testid={`button-filter-mobile-${filter.key}`}
                     onClick={() => openFilter(filter.key)}
                   >
-                    <Typography className="inline-flex">{t(`pages.catalogue.filters.${filter.key}.label`)}</Typography>
+                    <div className="flex">
+                      {filter?.filterValuesSelected && filter.filterValuesSelected.length > 0 && (
+                        <CheckIcon className="w-5 h-5 mr-2 text-brand-green-club" aria-hidden="true" />
+                      )}
+                      <Typography className="inline-flex">
+                        {t(`pages.catalogue.filters.${filter.key}.label`)}
+                      </Typography>
+                    </div>
                     <ChevronRightIcon className="inline-flex h-6 w-6" aria-hidden="true" />
                   </div>
                 ))}
