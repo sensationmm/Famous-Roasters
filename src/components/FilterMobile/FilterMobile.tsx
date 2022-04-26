@@ -11,6 +11,7 @@ export interface FilterData {
   filterType?: 'enum'
   filterValues?: string[]
   filterValuesSelected?: string[]
+  i18nValues?: boolean
 }
 
 interface FilterMobileProps {
@@ -53,6 +54,8 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({ filter, show, back, 
     update(filter.key, [])
   }
 
+  const filtersApplied = filter.filterValuesSelected?.length || 0
+
   return (
     <Transition.Root show={show} as={Fragment}>
       <Dialog as="div" className="fixed inset-0 flex z-40" onClose={() => back}>
@@ -94,9 +97,7 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({ filter, show, back, 
                 className="text-coreUI-text-secondary"
               >
                 {t(`pages.catalogue.filters.${filter?.key}.label`)}
-                {filter?.filterValuesSelected &&
-                  filter.filterValuesSelected.length !== 0 &&
-                  ` (${filter?.filterValuesSelected?.length})`}
+                {filtersApplied > 0 && ` (${filtersApplied})`}
               </Typography>
               <button
                 type="button"
@@ -115,15 +116,24 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({ filter, show, back, 
                   <div
                     key={`filter-${filter.key}-${idx}`}
                     className="flex justify-between px-5 py-5 border-b border-coreUI-text-tertiary cursor-pointer"
+                    data-testid={`button-filter-mobile-${filter.key}-option-${idx}`}
                     onClick={() => toggleSelected(filterValue)}
                   >
                     {isSelected(filterValue) ? (
                       <span className="inline-flex items-center">
                         <CheckIcon className="w-5 h-5 mr-2 text-brand-green-club" aria-hidden="true" />
-                        <Typography>{filterValue}</Typography>
+                        <Typography>
+                          {filter.i18nValues
+                            ? t(`pages.catalogue.filters.${filter.key}.values.${filterValue}`)
+                            : filterValue}
+                        </Typography>
                       </span>
                     ) : (
-                      <Typography className="inline-flex">{filterValue}</Typography>
+                      <Typography className="inline-flex">
+                        {filter.i18nValues
+                          ? t(`pages.catalogue.filters.${filter.key}.values.${filterValue}`)
+                          : filterValue}
+                      </Typography>
                     )}
                   </div>
                 ))

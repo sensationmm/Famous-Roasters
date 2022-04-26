@@ -1,12 +1,16 @@
-query variantAttributes {
+query productsVariantsAttributes {
     products(first: 30) {
         nodes {
+            vendor
+            bean_type: metafield(namespace: "my_fields", key: "bean_type") {
+                value
+            }
+            origin: metafield(namespace: "my_fields", key: "origin") {
+                value
+            }
             variants(first: 10) {
                 nodes {
                     package_size: metafield(namespace: "my_fields", key: "package_size") {
-                        value
-                    }
-                    grind_type: metafield(namespace: "my_fields", key: "grind_type") {
                         value
                     }
                 }

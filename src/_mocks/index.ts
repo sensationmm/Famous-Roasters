@@ -7,7 +7,10 @@ import {
   CatalogueMocksPaginationWrongForwards,
 } from './CatalogueMock'
 import { ProductMock, ProductMockNoImage } from './ProductMock'
-import { VariantAttributesMock } from './VariantAttributesMock'
+import {
+  ProductsVariantsAttributesMock,
+  ProductsVariantsAttributesMockMockError,
+} from './ProductsVariantsAttributesMock'
 
 export { CatalogueMocks as CatalogueMocks }
 export { CatalogueMocksPagination as CatalogueMocksPagination }
@@ -17,4 +20,5 @@ export { CatalogueMockError as CatalogueMockError }
 export { CatalogueMockMissingData as CatalogueMockMissingData }
 export { ProductMock as ProductMock }
 export { ProductMockNoImage as ProductMockNoImage }
-export { VariantAttributesMock as VariantAttributesMock }
+export { ProductsVariantsAttributesMock as ProductsVariantsAttributesMock }
+export { ProductsVariantsAttributesMockMockError as ProductsVariantsAttributesMockMockError }

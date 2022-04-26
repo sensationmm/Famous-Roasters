@@ -22,24 +22,51 @@ export const FiltersMenuMobile: React.FC = () => {
   const [open, setOpen] = useState(false)
   const { t } = useTranslation()
 
-  const GET_VARIANTS_ATTRIBUTES = loader('src/graphql/queries/variantsAttributes.query.graphql')
+  const GET_PRODUCTS_VARIANTS_ATTRIBUTES = loader('src/graphql/queries/productsVariantsAttributes.query.graphql')
 
-  const { loading, error, data } = useQuery<Collection>(GET_VARIANTS_ATTRIBUTES)
+  const { loading, error, data } = useQuery<Collection>(GET_PRODUCTS_VARIANTS_ATTRIBUTES)
 
   const getFilterValues = (key: string) => {
     switch (key) {
-      case 'grind_type':
+      case 'vendor':
         return Array.from(
           new Set(
             data?.products.nodes
               // eslint-disable-next-line @typescript-eslint/ban-ts-comment
               // @ts-ignore
-              .map((productNode) => productNode.variants.nodes.map((variantNode) => variantNode['grind_type']?.value))
+              .map((productNode) => productNode.vendor)
               .flat()
               .filter((x) => x !== undefined)
               .sort(),
           ),
         )
+      case 'origin':
+        return Array.from(
+          new Set(
+            data?.products.nodes
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-ignore
+              .map((productNode) => productNode['origin']?.value)
+              .map((jsonString) => JSON.parse(jsonString))
+              .map((mf) => mf.countries)
+              .flat()
+              .filter((x) => x !== undefined)
+              .sort(),
+          ),
+        )
+      case 'bean_type':
+        return Array.from(
+          new Set(
+            data?.products.nodes
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-ignore
+              .map((productNode) => productNode['bean_type']?.value)
+              .flat()
+              .filter((x) => x !== undefined)
+              .sort(),
+          ),
+        )
+      default:
       case 'package_size':
         return Array.from(
           new Set(
@@ -51,16 +78,13 @@ export const FiltersMenuMobile: React.FC = () => {
               .sort((a, b) => (parseFloat(a) > parseFloat(b) ? 1 : -1)),
           ),
         )
-      default:
-        return []
     }
   }
 
   const filtersData: FilterData[] = [
-    { key: 'pricePerKg', isOpen: false },
-    { key: 'grindType', isOpen: false, filterType: 'enum', filterValues: getFilterValues('grind_type') },
-    { key: 'roaster', isOpen: false },
-    { key: 'origin', isOpen: false },
+    { key: 'beanType', isOpen: false, filterType: 'enum', filterValues: getFilterValues('bean_type') },
+    { key: 'vendor', isOpen: false, filterType: 'enum', filterValues: getFilterValues('vendor') },
+    { key: 'origin', isOpen: false, filterType: 'enum', filterValues: getFilterValues('origin'), i18nValues: true },
     { key: 'packageSize', isOpen: false, filterType: 'enum', filterValues: getFilterValues('package_size') },
   ]
 
@@ -90,9 +114,15 @@ export const FiltersMenuMobile: React.FC = () => {
 
   const resetAllFilters = () => setFilters(filtersData)
 
+  const filtersApplied = filters.reduce((a, { filterValuesSelected }) => a + (filterValuesSelected?.length || 0), 0)
+
   useEffect(() => {
     setFilters(filtersData)
   }, [!loading])
+
+  if (error) {
+    return <ErrorPrompt promptAction={() => history.go(0)} />
+  }
 
   if (!data || loading)
     return (
@@ -106,10 +136,6 @@ export const FiltersMenuMobile: React.FC = () => {
         <ChevronRightIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
       </div>
     )
-
-  if (error) {
-    return <ErrorPrompt promptAction={() => history.go(0)} />
-  }
 
   return (
     <>
@@ -162,6 +188,7 @@ export const FiltersMenuMobile: React.FC = () => {
                   className="text-coreUI-text-secondary"
                 >
                   {t(`pages.catalogue.filters.common.filtersMenu.filterOptions`)}
+                  {filtersApplied > 0 && ` (${filtersApplied})`}
                 </Typography>
                 <button
                   type="button"

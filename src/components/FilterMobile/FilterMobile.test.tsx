@@ -54,4 +54,32 @@ describe('Filter Mobile component', () => {
     expect(buttonApplyFilter).toBeInTheDocument()
     fireEvent.click(buttonApplyFilter)
   })
+
+  it('Can select, unselect and remove filter options', async () => {
+    render(
+      <I18nextProvider i18n={i18n}>
+        <MemoryRouter initialEntries={['/catalogue']}>
+          <FilterMobile
+            filter={{ key: 'filter-key', isOpen: true, filterType: 'enum', filterValues: ['1', '2'] }}
+            show={true}
+            back={() => alert('back!')}
+            update={() => alert('update!')}
+          />
+        </MemoryRouter>
+      </I18nextProvider>,
+    )
+    const buttonFilterOption1 = await screen.findByTestId('button-filter-mobile-filter-key-option-0')
+    expect(buttonFilterOption1).toBeInTheDocument()
+    fireEvent.click(buttonFilterOption1)
+    const buttonFilterOption2 = await screen.findByTestId('button-filter-mobile-filter-key-option-1')
+    expect(buttonFilterOption2).toBeInTheDocument()
+    fireEvent.click(buttonFilterOption2)
+    fireEvent.click(buttonFilterOption1)
+    const buttonRemoveFilter = await screen.findByTestId('button-filter-mobile-remove')
+    expect(buttonRemoveFilter).toBeInTheDocument()
+    fireEvent.click(buttonRemoveFilter)
+    const buttonFilterClose = await screen.findByTestId('button-filter-mobile-close')
+    expect(buttonFilterClose).toBeInTheDocument()
+    fireEvent.click(buttonFilterClose)
+  })
 })
