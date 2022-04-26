@@ -143,6 +143,7 @@ const CatalogueMock7 = {
       after: '2',
       sortKey: undefined,
       reverse: undefined,
+      query: undefined,
     },
   },
   result: {
@@ -170,6 +171,7 @@ const CatalogueMock8 = {
       after: null,
       sortKey: undefined,
       reverse: undefined,
+      query: undefined,
     },
   },
   result: {
@@ -265,6 +267,7 @@ export const CatalogueMockError = {
       after: null,
       sortKey: undefined,
       reverse: undefined,
+      query: undefined,
     },
   },
   result: {
@@ -282,6 +285,7 @@ export const CatalogueMockMissingData = {
       after: null,
       sortKey: undefined,
       reverse: undefined,
+      query: undefined,
     },
   },
   result: {
