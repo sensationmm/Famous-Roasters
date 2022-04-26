@@ -1,5 +1,5 @@
-query products($first: Int, $last: Int, $before: String, $after: String, $sortKey: ProductSortKeys, $reverse: Boolean) {
-    products(first: $first, last: $last, before: $before, after: $after, sortKey: $sortKey, reverse: $reverse) {
+query products($first: Int, $last: Int, $before: String, $after: String, $sortKey: ProductSortKeys, $reverse: Boolean, $query: String) {
+    products(first: $first, last: $last, before: $before, after: $after, sortKey: $sortKey, reverse: $reverse, query: $query) {
         nodes {
             id
             title

@@ -36,7 +36,7 @@ describe('Filters Menu Mobile component', () => {
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
-          <FiltersMenuMobile />
+          <FiltersMenuMobile onUpdateFilters={() => alert('update!')} />
         </I18nextProvider>
       </MockedProvider>,
     )
@@ -53,7 +53,7 @@ describe('Filters Menu Mobile component', () => {
       >
         <I18nextProvider i18n={i18n}>
           <MemoryRouter initialEntries={['/catalogue']}>
-            <FiltersMenuMobile />
+            <FiltersMenuMobile onUpdateFilters={() => alert('update!')} />
           </MemoryRouter>
         </I18nextProvider>
       </MockedProvider>,
@@ -81,7 +81,7 @@ describe('Filters Menu Mobile component', () => {
       >
         <I18nextProvider i18n={i18n}>
           <MemoryRouter initialEntries={['/catalogue']}>
-            <FiltersMenuMobile />
+            <FiltersMenuMobile onUpdateFilters={() => alert('update!')} />
           </MemoryRouter>
         </I18nextProvider>
       </MockedProvider>,
@@ -106,7 +106,7 @@ describe('Filters Menu Mobile component', () => {
       >
         <I18nextProvider i18n={i18n}>
           <MemoryRouter initialEntries={['/catalogue']}>
-            <FiltersMenuMobile />
+            <FiltersMenuMobile onUpdateFilters={() => alert('update!')} />
           </MemoryRouter>
         </I18nextProvider>
       </MockedProvider>,
@@ -140,7 +140,7 @@ describe('Filters Menu Mobile component', () => {
       >
         <I18nextProvider i18n={i18n}>
           <MemoryRouter initialEntries={['/catalogue']}>
-            <FiltersMenuMobile />
+            <FiltersMenuMobile onUpdateFilters={() => alert('update!')} />
           </MemoryRouter>
         </I18nextProvider>
       </MockedProvider>,

@@ -18,7 +18,12 @@ import {
   TypographyType,
 } from 'src/components'
 
-export const FiltersMenuMobile: React.FC = () => {
+interface FiltersProps {
+  onUpdateFilters: (f: FilterData[]) => void
+  initialFilters?: FilterData[]
+}
+
+export const FiltersMenuMobile: React.FC<FiltersProps> = ({ onUpdateFilters, initialFilters }: FiltersProps) => {
   const [open, setOpen] = useState(false)
   const { t } = useTranslation()
 
@@ -112,12 +117,14 @@ export const FiltersMenuMobile: React.FC = () => {
     setFilters((prev) => [...prev.slice(0, idx), updatedFilter, ...prev.slice(idx + 1, prev.length)])
   }
 
-  const resetAllFilters = () => setFilters(filtersData)
+  const resetAllFilters = () => {
+    setFilters(filtersData)
+  }
 
   const filtersApplied = filters.reduce((a, { filterValuesSelected }) => a + (filterValuesSelected?.length || 0), 0)
 
   useEffect(() => {
-    setFilters(filtersData)
+    setFilters(initialFilters && initialFilters.length > 0 ? initialFilters : filtersData)
   }, [!loading])
 
   if (error) {
@@ -226,7 +233,10 @@ export const FiltersMenuMobile: React.FC = () => {
                   emphasis={ButtonEmphasis.Secondary}
                   size={ButtonSize.lg}
                   className="w-full justify-center"
-                  onClick={() => setOpen(false)}
+                  onClick={() => {
+                    onUpdateFilters(filters)
+                    setOpen(false)
+                  }}
                   data-testid="button-filters-menu-results"
                 >
                   {t(`pages.catalogue.filters.common.filtersMenu.showResults`)}

@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import {
   ErrorPrompt,
+  FilterData,
   FiltersMenuMobile,
   Layout,
   Listbox,
@@ -39,6 +40,10 @@ interface PaginationParams {
   after: Maybe<Scalars['String']>
 }
 
+interface FilterParams {
+  query: string
+}
+
 const tabsData: TabsDataItem[] = [
   { key: 'forYou', translationKey: 'pages.catalogue.tabs.forYou' },
   { key: 'discover', translationKey: 'pages.catalogue.tabs.discover' },
@@ -53,6 +58,8 @@ export const Catalogue: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('discover')
   const [sortValue, setSortValue] = useState<ListBoxItem>()
   const [sortParams, setSortParams] = useState<SortParams>()
+  const [filters, setFilters] = useState<FilterData[]>([])
+  const [filterParams, setFilterParams] = useState<FilterParams>()
   const [paginationParams, setPaginationParams] = useState<PaginationParams>({
     first: totalItemsPerPage,
     last: null,
@@ -84,6 +91,26 @@ export const Catalogue: React.FC = () => {
     }
   }, [sortValue])
 
+  useEffect(() => {
+    let query = ''
+    filters.map((filter) => {
+      if (filter.filterValuesSelected) {
+        switch (filter.key) {
+          case 'vendor':
+            query += filter.filterValuesSelected
+              .map((filterValue, idx) => (idx === 0 ? `vendor:${filterValue}` : ` OR vendor:${filterValue}`))
+              .join('')
+            break
+          default:
+            break
+        }
+      }
+    })
+    setFilterParams({ query })
+  }, [filters])
+
+  // console.log("filterParams", filterParams)
+
   const { loading, error, data } = useQuery<Collection>(GET_PRODUCTS, {
     variables: {
       first: paginationParams?.first,
@@ -92,6 +119,7 @@ export const Catalogue: React.FC = () => {
       after: paginationParams?.after,
       sortKey: sortParams?.sortKey,
       reverse: sortParams?.reverse,
+      query: filterParams?.query,
     },
   })
 
@@ -121,6 +149,10 @@ export const Catalogue: React.FC = () => {
     })
   }
 
+  const onUpdateFilters = (f: FilterData[]) => {
+    setFilters(f)
+  }
+
   const renderForYouProducts = () => {
     return (
       <div className="flex justify-center my-20">
@@ -144,7 +176,7 @@ export const Catalogue: React.FC = () => {
           <>
             <div className="flex gap-x-4 justify-end mt-8">
               <div className="w-1/2 md:hidden">
-                <FiltersMenuMobile />
+                <FiltersMenuMobile initialFilters={filters} onUpdateFilters={(f: FilterData[]) => onUpdateFilters(f)} />
               </div>
               <div className="w-1/2 md:w-1/3 xl:w-1/5">
                 <Listbox
