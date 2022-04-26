@@ -10,6 +10,7 @@ import {
   CatalogueMocksPagination,
   CatalogueMocksPaginationWrongBackwards,
   CatalogueMocksPaginationWrongForwards,
+  ProductsVariantsAttributesMock,
 } from 'src/_mocks'
 import { i18n } from 'src/config'
 
@@ -21,6 +22,16 @@ delete window.history
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 window.history = { go: jest.fn() }
+
+const intersectionObserverMock = function () {
+  return {
+    observe: jest.fn(),
+    disconnect: jest.fn(),
+  }
+}
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+window.IntersectionObserver = intersectionObserverMock
 
 describe('Catalogue view', () => {
   it('Renders correctly for a successful call', async () => {
@@ -206,6 +217,52 @@ describe('Catalogue view', () => {
       const option = screen.getByTestId('option-3')
       expect(option).toBeInTheDocument()
       fireEvent.click(option)
+    })
+  })
+
+  it('The user can use filtering', async () => {
+    render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
+        mocks={[...CatalogueMocks, ProductsVariantsAttributesMock]}
+        addTypename={false}
+      >
+        <I18nextProvider i18n={i18n}>
+          <MemoryRouter initialEntries={['/catalogue']}>
+            <Catalogue />
+          </MemoryRouter>
+        </I18nextProvider>
+      </MockedProvider>,
+    )
+    await waitFor(async () => {
+      const buttonOpen = await screen.findByTestId('button-filters-menu-open')
+      expect(buttonOpen).toBeInTheDocument()
+      fireEvent.click(buttonOpen)
+    })
+    await waitFor(async () => {
+      const buttonFilter = await screen.findByTestId('button-filter-mobile-vendor')
+      expect(buttonFilter).toBeInTheDocument()
+      fireEvent.click(buttonFilter)
+    })
+    await waitFor(async () => {
+      const buttonFilterOption1 = await screen.findByTestId('button-filter-mobile-vendor-option-0')
+      expect(buttonFilterOption1).toBeInTheDocument()
+      fireEvent.click(buttonFilterOption1)
+    })
+    await waitFor(async () => {
+      const buttonFilterOption1 = await screen.findByTestId('button-filter-mobile-vendor-option-1')
+      expect(buttonFilterOption1).toBeInTheDocument()
+      fireEvent.click(buttonFilterOption1)
+    })
+    await waitFor(async () => {
+      const buttonFilterClose = await screen.findByTestId('button-filter-mobile-close')
+      expect(buttonFilterClose).toBeInTheDocument()
+      fireEvent.click(buttonFilterClose)
+    })
+    await waitFor(async () => {
+      const buttonResults = await screen.findByTestId('button-filters-menu-results')
+      expect(buttonResults).toBeInTheDocument()
+      fireEvent.click(buttonResults)
     })
   })
 

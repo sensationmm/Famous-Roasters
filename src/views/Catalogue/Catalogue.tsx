@@ -41,7 +41,7 @@ interface PaginationParams {
 }
 
 interface FilterParams {
-  query: string
+  query: string | undefined
 }
 
 const tabsData: TabsDataItem[] = [
@@ -101,12 +101,10 @@ export const Catalogue: React.FC = () => {
               .map((filterValue, idx) => (idx === 0 ? `vendor:${filterValue}` : ` OR vendor:${filterValue}`))
               .join('')
             break
-          default:
-            break
         }
       }
     })
-    setFilterParams({ query })
+    query.length > 0 ? setFilterParams({ query }) : setFilterParams({ query: undefined })
   }, [filters])
 
   // console.log("filterParams", filterParams)

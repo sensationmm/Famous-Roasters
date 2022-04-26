@@ -23,6 +23,7 @@ const CatalogueMock1 = {
       after: null,
       sortKey: undefined,
       reverse: undefined,
+      query: undefined,
     },
   },
   result: {
@@ -51,6 +52,7 @@ const CatalogueMock2 = {
       after: null,
       sortKey: 'PRICE',
       reverse: false,
+      query: undefined,
     },
   },
 }
@@ -66,6 +68,7 @@ const CatalogueMock3 = {
       after: null,
       sortKey: 'PRICE',
       reverse: true,
+      query: undefined,
     },
   },
 }
@@ -81,6 +84,7 @@ const CatalogueMock4 = {
       after: null,
       sortKey: 'CREATED_AT',
       reverse: false,
+      query: undefined,
     },
   },
 }
@@ -96,6 +100,7 @@ const CatalogueMock5 = {
       after: null,
       sortKey: 'BEST_SELLING',
       reverse: false,
+      query: undefined,
     },
   },
 }
@@ -110,6 +115,7 @@ const CatalogueMock6 = {
       after: null,
       sortKey: undefined,
       reverse: undefined,
+      query: undefined,
     },
   },
   result: {

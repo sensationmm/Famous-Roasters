@@ -24,6 +24,7 @@ interface FilterMobileProps {
 export const FilterMobile: React.FC<FilterMobileProps> = ({ filter, show, back, update }: FilterMobileProps) => {
   const { t } = useTranslation()
 
+  const [open, setOpen] = useState(show)
   const [activeItems, setActiveItems] = useState<string[]>([])
 
   useEffect(() => {
@@ -58,7 +59,7 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({ filter, show, back, 
 
   return (
     <Transition.Root show={show} as={Fragment}>
-      <Dialog as="div" className="fixed inset-0 flex z-40" onClose={() => back}>
+      <Dialog as="div" className="fixed inset-0 flex z-40" onClose={setOpen}>
         <Transition.Child
           as={Fragment}
           enter="transition-opacity ease-linear duration-300"

@@ -41,6 +41,36 @@ export const ProductsVariantsAttributesMock = {
               ],
             },
           },
+          {
+            bean_type: {
+              value: 'Arabica',
+            },
+            origin: {
+              value: JSON.stringify({
+                countries: ['BR', 'CO'],
+              }),
+            },
+            vendor: 'Famous Roasters',
+            variants: {
+              nodes: [
+                {
+                  package_size: {
+                    value: '250g',
+                  },
+                },
+                {
+                  package_size: {
+                    value: '500g',
+                  },
+                },
+                {
+                  package_size: {
+                    value: '1000g',
+                  },
+                },
+              ],
+            },
+          },
         ],
       },
     },
