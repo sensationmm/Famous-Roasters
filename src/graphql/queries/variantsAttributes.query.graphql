@@ -6,6 +6,9 @@ query variantAttributes {
                     package_size: metafield(namespace: "my_fields", key: "package_size") {
                         value
                     }
+                    grind_type: metafield(namespace: "my_fields", key: "grind_type") {
+                        value
+                    }
                 }
             }
         }

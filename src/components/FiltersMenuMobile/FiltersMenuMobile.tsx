@@ -28,8 +28,19 @@ export const FiltersMenuMobile: React.FC = () => {
 
   const getFilterValues = (key: string) => {
     switch (key) {
+      case 'grind_type':
+        return Array.from(
+          new Set(
+            data?.products.nodes
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-ignore
+              .map((productNode) => productNode.variants.nodes.map((variantNode) => variantNode['grind_type']?.value))
+              .flat()
+              .filter((x) => x !== undefined)
+              .sort(),
+          ),
+        )
       case 'package_size':
-      default:
         return Array.from(
           new Set(
             data?.products.nodes
@@ -40,12 +51,14 @@ export const FiltersMenuMobile: React.FC = () => {
               .sort((a, b) => (parseFloat(a) > parseFloat(b) ? 1 : -1)),
           ),
         )
+      default:
+        return []
     }
   }
 
   const filtersData: FilterData[] = [
     { key: 'pricePerKg', isOpen: false },
-    { key: 'beanType', isOpen: false },
+    { key: 'grindType', isOpen: false, filterType: 'enum', filterValues: getFilterValues('grind_type') },
     { key: 'roaster', isOpen: false },
     { key: 'origin', isOpen: false },
     { key: 'packageSize', isOpen: false, filterType: 'enum', filterValues: getFilterValues('package_size') },

@@ -54,7 +54,7 @@
         "forYou": "Für Dich"
       },
       "filters": {
-        "beanType": {
+        "grindType": {
           "label": "Bohnensorte"
         },
         "common": {
