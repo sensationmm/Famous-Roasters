@@ -60,6 +60,7 @@ export const Listbox: React.FC<ListboxProps> = ({
             <HUIListbox.Button
               className="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
               data-testid="button-listbox"
+              id="button-listbox"
             >
               <Typography size={TypographySize.Small} className="block truncate">
                 {activeItem ? selectedOption() : t(`${translationPrefix}.label`)}
