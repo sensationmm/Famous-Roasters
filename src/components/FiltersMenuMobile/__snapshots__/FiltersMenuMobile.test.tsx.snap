@@ -27,28 +27,3 @@ exports[`Filters Menu Mobile component Renders correctly 1`] = `
   </button>
 </div>
 `;
-
-exports[`Filters Menu Mobile component Renders correctly for an error call 1`] = `
-<div>
-  <div
-    class="p-4 border border-coreUI-border bg-white"
-  >
-    <div
-      class="text-center text-base leading-6"
-    >
-      Ein Fehler ist aufgetreten
-    </div>
-    <div
-      class="mt-4 flex justify-center"
-    >
-      <button
-        class="inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
-        data-testid="button-prompt"
-        role="button"
-      >
-        Erneut versuchen
-      </button>
-    </div>
-  </div>
-</div>
-`;

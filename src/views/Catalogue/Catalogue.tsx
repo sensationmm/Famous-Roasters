@@ -1,4 +1,5 @@
 import { useQuery } from '@apollo/client'
+import { ChevronRightIcon } from '@heroicons/react/solid'
 import { Collection, Maybe, Product, Scalars } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
 import React, { useEffect, useState } from 'react'
@@ -14,6 +15,7 @@ import {
   ProductTile,
   TabsNavigation,
   Typography,
+  TypographySize,
 } from 'src/components'
 import { Pagination } from 'src/components/Pagination'
 
@@ -71,10 +73,85 @@ export const Catalogue: React.FC = () => {
     after: null,
   })
   const GET_PRODUCTS = loader('src/graphql/queries/products.query.graphql')
+  const GET_FILTER_ATTRIBUTES = loader('src/graphql/queries/filterAttributes.query.graphql')
 
   useEffect(() => {
     document.title = `${t('brand.name')} | ${t('pages.catalogue.title')}`
   }, [])
+
+  const {
+    loading: filterAttributesLoading,
+    error: filterAttributesError,
+    data: filterAttributesData,
+  } = useQuery<Collection>(GET_FILTER_ATTRIBUTES)
+
+  const getFilterValues = (key: string) => {
+    switch (key) {
+      case 'vendor':
+        return Array.from(
+          new Set(
+            filterAttributesData?.products.nodes
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-ignore
+              .map((productNode) => productNode.vendor)
+              .flat()
+              .filter((x) => x !== undefined)
+              .sort(),
+          ),
+        )
+      case 'origin':
+        return Array.from(
+          new Set(
+            filterAttributesData?.products.nodes
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-ignore
+              .map((productNode) => productNode['origin']?.value.split(','))
+              .flat()
+              .filter((x) => x !== undefined)
+              .sort(),
+          ),
+        )
+      case 'bean_type':
+        return Array.from(
+          new Set(
+            filterAttributesData?.products.nodes
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-ignore
+              .map((productNode) => productNode['bean_type']?.value)
+              .flat()
+              .filter((x) => x !== undefined)
+              .sort(),
+          ),
+        )
+      default:
+      case 'package_size':
+        return Array.from(
+          new Set(
+            filterAttributesData?.products.nodes
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-ignore
+              .map((productNode) => productNode.variants.nodes.map((variantNode) => variantNode['package_size'].value))
+              .flat()
+              .sort((a, b) => (parseFloat(a) > parseFloat(b) ? 1 : -1)),
+          ),
+        )
+    }
+  }
+
+  const filtersData: FilterData[] = [
+    { key: 'beanType', isOpen: false, filterType: 'enum', filterValues: getFilterValues('bean_type') },
+    { key: 'vendor', isOpen: false, filterType: 'enum', filterValues: getFilterValues('vendor') },
+    { key: 'origin', isOpen: false, filterType: 'enum', filterValues: getFilterValues('origin'), i18nValues: true },
+    { key: 'packageSize', isOpen: false, filterType: 'enum', filterValues: getFilterValues('package_size') },
+  ]
+
+  useEffect(() => {
+    setFilters(filtersData)
+  }, [!filterAttributesLoading])
+
+  if (filterAttributesError) {
+    return <ErrorPrompt promptAction={() => history.go(0)} />
+  }
 
   useEffect(() => {
     if (sortValue?.name) {
@@ -196,7 +273,22 @@ export const Catalogue: React.FC = () => {
           <>
             <div className="flex gap-x-4 justify-end mt-8">
               <div className="w-1/2 md:hidden">
-                <FiltersMenuMobile initialFilters={filters} onUpdateFilters={(f: FilterData[]) => onUpdateFilters(f)} />
+                {!filterAttributesData || filterAttributesLoading ? (
+                  <div
+                    className="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
+                    data-testid="button-filters-menu-open-loading"
+                  >
+                    <Typography size={TypographySize.Small} className="block truncate">
+                      {t(`pages.catalogue.filters.common.filtersMenu.filter`)}
+                    </Typography>
+                    <ChevronRightIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
+                  </div>
+                ) : (
+                  <FiltersMenuMobile
+                    initialFilters={filters}
+                    onUpdateFilters={(f: FilterData[]) => onUpdateFilters(f)}
+                  />
+                )}
               </div>
               <div className="w-1/2 md:w-1/3 xl:w-1/5">
                 <Listbox

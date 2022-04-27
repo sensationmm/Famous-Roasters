@@ -6,6 +6,7 @@ import { MemoryRouter } from 'react-router-dom'
 import { CatalogueMocks, FilterAttributesMock, FilterAttributesMockError } from 'src/_mocks'
 import { i18n } from 'src/config'
 
+import { FilterData } from '../index'
 import { FiltersMenuMobile } from '.'
 
 global.alert = jest.fn()
@@ -28,6 +29,13 @@ delete window.history
 window.history = { go: jest.fn() }
 
 describe('Filters Menu Mobile component', () => {
+  const initialFilters: FilterData[] = [
+    { key: 'beanType', isOpen: false, filterType: 'enum', filterValues: ['Arabica'] },
+    { key: 'vendor', isOpen: false, filterType: 'enum', filterValues: ['Rösttatte', 'Famous Roasters'] },
+    { key: 'origin', isOpen: false, filterType: 'enum', filterValues: ['BR,CO'], i18nValues: true },
+    { key: 'packageSize', isOpen: false, filterType: 'enum', filterValues: ['100g', '250g', '500g', '1kg'] },
+  ]
+
   it('Renders correctly', async () => {
     const { container } = render(
       <MockedProvider
@@ -36,7 +44,7 @@ describe('Filters Menu Mobile component', () => {
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
-          <FiltersMenuMobile onUpdateFilters={() => alert('update!')} />
+          <FiltersMenuMobile initialFilters={initialFilters} onUpdateFilters={() => alert('update!')} />
         </I18nextProvider>
       </MockedProvider>,
     )
@@ -53,7 +61,7 @@ describe('Filters Menu Mobile component', () => {
       >
         <I18nextProvider i18n={i18n}>
           <MemoryRouter initialEntries={['/catalogue']}>
-            <FiltersMenuMobile onUpdateFilters={() => alert('update!')} />
+            <FiltersMenuMobile initialFilters={initialFilters} onUpdateFilters={() => alert('update!')} />
           </MemoryRouter>
         </I18nextProvider>
       </MockedProvider>,
@@ -81,7 +89,7 @@ describe('Filters Menu Mobile component', () => {
       >
         <I18nextProvider i18n={i18n}>
           <MemoryRouter initialEntries={['/catalogue']}>
-            <FiltersMenuMobile onUpdateFilters={() => alert('update!')} />
+            <FiltersMenuMobile initialFilters={initialFilters} onUpdateFilters={() => alert('update!')} />
           </MemoryRouter>
         </I18nextProvider>
       </MockedProvider>,
@@ -106,7 +114,7 @@ describe('Filters Menu Mobile component', () => {
       >
         <I18nextProvider i18n={i18n}>
           <MemoryRouter initialEntries={['/catalogue']}>
-            <FiltersMenuMobile onUpdateFilters={() => alert('update!')} />
+            <FiltersMenuMobile initialFilters={initialFilters} onUpdateFilters={() => alert('update!')} />
           </MemoryRouter>
         </I18nextProvider>
       </MockedProvider>,
@@ -129,26 +137,5 @@ describe('Filters Menu Mobile component', () => {
     const buttonRemove = await screen.findByTestId('button-filters-menu-remove')
     expect(buttonRemove).toBeInTheDocument()
     fireEvent.click(buttonRemove)
-  })
-
-  it('Renders correctly for an error call', async () => {
-    const { container } = render(
-      <MockedProvider
-        defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
-        mocks={[FilterAttributesMockError]}
-        addTypename={false}
-      >
-        <I18nextProvider i18n={i18n}>
-          <MemoryRouter initialEntries={['/catalogue']}>
-            <FiltersMenuMobile onUpdateFilters={() => alert('update!')} />
-          </MemoryRouter>
-        </I18nextProvider>
-      </MockedProvider>,
-    )
-    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
-    expect(container).toMatchSnapshot()
-    const buttonPrompt = await screen.findByTestId('button-prompt')
-    expect(buttonPrompt).toBeInTheDocument()
-    fireEvent.click(buttonPrompt)
   })
 })

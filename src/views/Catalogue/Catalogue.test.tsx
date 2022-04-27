@@ -38,7 +38,7 @@ describe('Catalogue view', () => {
     const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
-        mocks={CatalogueMocks}
+        mocks={[...CatalogueMocks, FilterAttributesMock]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -56,7 +56,7 @@ describe('Catalogue view', () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
-        mocks={CatalogueMocks}
+        mocks={[...CatalogueMocks, FilterAttributesMock]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -78,7 +78,7 @@ describe('Catalogue view', () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
-        mocks={CatalogueMocksPagination}
+        mocks={[...CatalogueMocksPagination, FilterAttributesMock]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -108,7 +108,7 @@ describe('Catalogue view', () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
-        mocks={CatalogueMocksPaginationWrongForwards}
+        mocks={[...CatalogueMocksPaginationWrongForwards, FilterAttributesMock]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -138,7 +138,7 @@ describe('Catalogue view', () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
-        mocks={CatalogueMocksPaginationWrongBackwards}
+        mocks={[...CatalogueMocksPaginationWrongBackwards, FilterAttributesMock]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -168,7 +168,7 @@ describe('Catalogue view', () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
-        mocks={CatalogueMocks}
+        mocks={[...CatalogueMocks, FilterAttributesMock]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -270,7 +270,7 @@ describe('Catalogue view', () => {
     const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
-        mocks={[CatalogueMockError]}
+        mocks={[CatalogueMockError, FilterAttributesMock]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -291,7 +291,7 @@ describe('Catalogue view', () => {
     const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
-        mocks={[CatalogueMockMissingData]}
+        mocks={[CatalogueMockMissingData, FilterAttributesMock]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>

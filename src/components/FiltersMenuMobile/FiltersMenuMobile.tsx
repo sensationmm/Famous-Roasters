@@ -1,16 +1,12 @@
-import { useQuery } from '@apollo/client'
 import { Dialog, Transition } from '@headlessui/react'
 import { TrashIcon } from '@heroicons/react/outline'
 import { CheckIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid'
-import { Collection } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
-import { loader } from 'graphql.macro'
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { Fragment, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import {
   Button,
   ButtonEmphasis,
   ButtonSize,
-  ErrorPrompt,
   FilterData,
   FilterMobile,
   Typography,
@@ -20,78 +16,14 @@ import {
 
 interface FiltersProps {
   onUpdateFilters: (f: FilterData[]) => void
-  initialFilters?: FilterData[]
+  initialFilters: FilterData[]
 }
 
 export const FiltersMenuMobile: React.FC<FiltersProps> = ({ onUpdateFilters, initialFilters }: FiltersProps) => {
   const [open, setOpen] = useState(false)
   const { t } = useTranslation()
 
-  const GET_FILTER_ATTRIBUTES = loader('src/graphql/queries/filterAttributes.query.graphql')
-
-  const { loading, error, data } = useQuery<Collection>(GET_FILTER_ATTRIBUTES)
-
-  const getFilterValues = (key: string) => {
-    switch (key) {
-      case 'vendor':
-        return Array.from(
-          new Set(
-            data?.products.nodes
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-ignore
-              .map((productNode) => productNode.vendor)
-              .flat()
-              .filter((x) => x !== undefined)
-              .sort(),
-          ),
-        )
-      case 'origin':
-        return Array.from(
-          new Set(
-            data?.products.nodes
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-ignore
-              .map((productNode) => productNode['origin']?.value.split(','))
-              .flat()
-              .filter((x) => x !== undefined)
-              .sort(),
-          ),
-        )
-      case 'bean_type':
-        return Array.from(
-          new Set(
-            data?.products.nodes
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-ignore
-              .map((productNode) => productNode['bean_type']?.value)
-              .flat()
-              .filter((x) => x !== undefined)
-              .sort(),
-          ),
-        )
-      default:
-      case 'package_size':
-        return Array.from(
-          new Set(
-            data?.products.nodes
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-ignore
-              .map((productNode) => productNode.variants.nodes.map((variantNode) => variantNode['package_size'].value))
-              .flat()
-              .sort((a, b) => (parseFloat(a) > parseFloat(b) ? 1 : -1)),
-          ),
-        )
-    }
-  }
-
-  const filtersData: FilterData[] = [
-    { key: 'beanType', isOpen: false, filterType: 'enum', filterValues: getFilterValues('bean_type') },
-    { key: 'vendor', isOpen: false, filterType: 'enum', filterValues: getFilterValues('vendor') },
-    { key: 'origin', isOpen: false, filterType: 'enum', filterValues: getFilterValues('origin'), i18nValues: true },
-    { key: 'packageSize', isOpen: false, filterType: 'enum', filterValues: getFilterValues('package_size') },
-  ]
-
-  const [filters, setFilters] = useState<FilterData[]>([])
+  const [filters, setFilters] = useState<FilterData[]>(initialFilters)
 
   const closeFilter = (key: string) => {
     const changingFilter = filters.filter((filter) => filter.key === key)[0]
@@ -116,31 +48,11 @@ export const FiltersMenuMobile: React.FC<FiltersProps> = ({ onUpdateFilters, ini
   }
 
   const resetAllFilters = () => {
-    setFilters(filtersData)
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    setFilters((prev) => prev.map(({ filterValuesSelected, ...rest }) => rest))
   }
 
   const filtersApplied = filters.reduce((a, { filterValuesSelected }) => a + (filterValuesSelected?.length || 0), 0)
-
-  useEffect(() => {
-    setFilters(initialFilters && initialFilters.length > 0 ? initialFilters : filtersData)
-  }, [!loading])
-
-  if (error) {
-    return <ErrorPrompt promptAction={() => history.go(0)} />
-  }
-
-  if (!data || loading)
-    return (
-      <div
-        className="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
-        data-testid="button-filters-menu-open-loading"
-      >
-        <Typography size={TypographySize.Small} className="block truncate">
-          {t(`pages.catalogue.filters.common.filtersMenu.filter`)}
-        </Typography>
-        <ChevronRightIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
-      </div>
-    )
 
   return (
     <>
