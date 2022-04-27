@@ -1,11 +1,11 @@
 import { GraphQLError } from 'graphql'
 import { loader } from 'graphql.macro'
 
-const GET_PRODUCTS_VARIANTS_ATTRIBUTES = loader('src/graphql/queries/productsVariantsAttributes.query.graphql')
+const GET_FILTER_ATTRIBUTES = loader('src/graphql/queries/filterAttributes.query.graphql')
 
-export const ProductsVariantsAttributesMock = {
+export const FilterAttributesMock = {
   request: {
-    query: GET_PRODUCTS_VARIANTS_ATTRIBUTES,
+    query: GET_FILTER_ATTRIBUTES,
   },
   result: {
     data: {
@@ -16,9 +16,7 @@ export const ProductsVariantsAttributesMock = {
               value: 'Arabica',
             },
             origin: {
-              value: JSON.stringify({
-                countries: ['BR', 'CO'],
-              }),
+              value: 'BR,CO',
             },
             vendor: 'Cycle Roasters',
             variants: {
@@ -46,9 +44,7 @@ export const ProductsVariantsAttributesMock = {
               value: 'Arabica',
             },
             origin: {
-              value: JSON.stringify({
-                countries: ['BR', 'CO'],
-              }),
+              value: 'BR,CO',
             },
             vendor: 'Famous Roasters',
             variants: {
@@ -77,9 +73,9 @@ export const ProductsVariantsAttributesMock = {
   },
 }
 
-export const ProductsVariantsAttributesMockMockError = {
+export const FilterAttributesMockError = {
   request: {
-    query: GET_PRODUCTS_VARIANTS_ATTRIBUTES,
+    query: GET_FILTER_ATTRIBUTES,
   },
   result: {
     errors: [new GraphQLError('Error!')],

@@ -23,18 +23,20 @@ const CatalogueMock1 = {
       after: null,
       sortKey: undefined,
       reverse: undefined,
-      query: undefined,
+      filters: undefined,
     },
   },
   result: {
     data: {
-      products: {
-        nodes: [...ProductNodes],
-        pageInfo: {
-          hasNextPage: true,
-          hasPreviousPage: false,
-          startCursor: '111',
-          endCursor: '777',
+      collection: {
+        products: {
+          nodes: [...ProductNodes],
+          pageInfo: {
+            hasNextPage: true,
+            hasPreviousPage: false,
+            startCursor: '111',
+            endCursor: '777',
+          },
         },
       },
     },
@@ -52,7 +54,7 @@ const CatalogueMock2 = {
       after: null,
       sortKey: 'PRICE',
       reverse: false,
-      query: undefined,
+      filters: undefined,
     },
   },
 }
@@ -68,7 +70,7 @@ const CatalogueMock3 = {
       after: null,
       sortKey: 'PRICE',
       reverse: true,
-      query: undefined,
+      filters: undefined,
     },
   },
 }
@@ -82,9 +84,9 @@ const CatalogueMock4 = {
       last: null,
       before: null,
       after: null,
-      sortKey: 'CREATED_AT',
+      sortKey: 'CREATED',
       reverse: false,
-      query: undefined,
+      filters: undefined,
     },
   },
 }
@@ -100,7 +102,7 @@ const CatalogueMock5 = {
       after: null,
       sortKey: 'BEST_SELLING',
       reverse: false,
-      query: undefined,
+      filters: undefined,
     },
   },
 }
@@ -115,18 +117,20 @@ const CatalogueMock6 = {
       after: null,
       sortKey: undefined,
       reverse: undefined,
-      query: undefined,
+      filters: undefined,
     },
   },
   result: {
     data: {
-      products: {
-        nodes: [...ProductNodes],
-        pageInfo: {
-          hasNextPage: true,
-          hasPreviousPage: false,
-          startCursor: '1',
-          endCursor: '2',
+      collection: {
+        products: {
+          nodes: [...ProductNodes],
+          pageInfo: {
+            hasNextPage: true,
+            hasPreviousPage: false,
+            startCursor: '1',
+            endCursor: '2',
+          },
         },
       },
     },
@@ -143,18 +147,20 @@ const CatalogueMock7 = {
       after: '2',
       sortKey: undefined,
       reverse: undefined,
-      query: undefined,
+      filters: undefined,
     },
   },
   result: {
     data: {
-      products: {
-        nodes: [...ProductNodes],
-        pageInfo: {
-          hasNextPage: false,
-          hasPreviousPage: true,
-          startCursor: '2',
-          endCursor: '3',
+      collection: {
+        products: {
+          nodes: [...ProductNodes],
+          pageInfo: {
+            hasNextPage: false,
+            hasPreviousPage: true,
+            startCursor: '2',
+            endCursor: '3',
+          },
         },
       },
     },
@@ -171,18 +177,20 @@ const CatalogueMock8 = {
       after: null,
       sortKey: undefined,
       reverse: undefined,
-      query: undefined,
+      filters: undefined,
     },
   },
   result: {
     data: {
-      products: {
-        nodes: [...ProductNodes],
-        pageInfo: {
-          hasNextPage: true,
-          hasPreviousPage: false,
-          startCursor: '1',
-          endCursor: '2',
+      collection: {
+        products: {
+          nodes: [...ProductNodes],
+          pageInfo: {
+            hasNextPage: true,
+            hasPreviousPage: false,
+            startCursor: '1',
+            endCursor: '2',
+          },
         },
       },
     },
@@ -194,13 +202,15 @@ const CatalogueMock9 = {
   result: {
     ...CatalogueMock6.result,
     data: {
-      products: {
-        ...CatalogueMock6.result.data.products,
-        pageInfo: {
-          hasNextPage: true,
-          hasPreviousPage: false,
-          startCursor: null,
-          endCursor: null,
+      collection: {
+        products: {
+          ...CatalogueMock6.result.data.collection.products,
+          pageInfo: {
+            hasNextPage: true,
+            hasPreviousPage: false,
+            startCursor: null,
+            endCursor: null,
+          },
         },
       },
     },
@@ -212,13 +222,15 @@ const CatalogueMock10 = {
   result: {
     ...CatalogueMock7.result,
     data: {
-      products: {
-        ...CatalogueMock7.result.data.products,
-        pageInfo: {
-          hasNextPage: false,
-          hasPreviousPage: true,
-          startCursor: null,
-          endCursor: null,
+      collection: {
+        products: {
+          ...CatalogueMock7.result.data.collection.products,
+          pageInfo: {
+            hasNextPage: false,
+            hasPreviousPage: true,
+            startCursor: null,
+            endCursor: null,
+          },
         },
       },
     },
@@ -230,13 +242,15 @@ const CatalogueMock11 = {
   result: {
     ...CatalogueMock8.result,
     data: {
-      products: {
-        ...CatalogueMock8.result.data.products,
-        pageInfo: {
-          hasNextPage: true,
-          hasPreviousPage: false,
-          startCursor: null,
-          endCursor: null,
+      collection: {
+        products: {
+          ...CatalogueMock8.result.data.collection.products,
+          pageInfo: {
+            hasNextPage: true,
+            hasPreviousPage: false,
+            startCursor: null,
+            endCursor: null,
+          },
         },
       },
     },
@@ -267,7 +281,7 @@ export const CatalogueMockError = {
       after: null,
       sortKey: undefined,
       reverse: undefined,
-      query: undefined,
+      filters: undefined,
     },
   },
   result: {
@@ -285,13 +299,15 @@ export const CatalogueMockMissingData = {
       after: null,
       sortKey: undefined,
       reverse: undefined,
-      query: undefined,
+      filters: undefined,
     },
   },
   result: {
     data: {
-      products: {
-        edges: null,
+      collection: {
+        products: {
+          edges: null,
+        },
       },
     },
   },

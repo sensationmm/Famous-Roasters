@@ -10,7 +10,7 @@ import {
   CatalogueMocksPagination,
   CatalogueMocksPaginationWrongBackwards,
   CatalogueMocksPaginationWrongForwards,
-  ProductsVariantsAttributesMock,
+  FilterAttributesMock,
 } from 'src/_mocks'
 import { i18n } from 'src/config'
 
@@ -224,7 +224,7 @@ describe('Catalogue view', () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
-        mocks={[...CatalogueMocks, ProductsVariantsAttributesMock]}
+        mocks={[...CatalogueMocks, FilterAttributesMock]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>

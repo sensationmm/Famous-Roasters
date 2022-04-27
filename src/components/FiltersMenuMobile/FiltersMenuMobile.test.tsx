@@ -3,9 +3,9 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import React from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { MemoryRouter } from 'react-router-dom'
+import { CatalogueMocks, FilterAttributesMock, FilterAttributesMockError } from 'src/_mocks'
 import { i18n } from 'src/config'
 
-import { CatalogueMocks, ProductsVariantsAttributesMock, ProductsVariantsAttributesMockMockError } from '../../_mocks'
 import { FiltersMenuMobile } from '.'
 
 global.alert = jest.fn()
@@ -32,7 +32,7 @@ describe('Filters Menu Mobile component', () => {
     const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
-        mocks={[...CatalogueMocks, ProductsVariantsAttributesMock]}
+        mocks={[...CatalogueMocks, FilterAttributesMock]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -48,7 +48,7 @@ describe('Filters Menu Mobile component', () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
-        mocks={[...CatalogueMocks, ProductsVariantsAttributesMock]}
+        mocks={[...CatalogueMocks, FilterAttributesMock]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -76,7 +76,7 @@ describe('Filters Menu Mobile component', () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
-        mocks={[...CatalogueMocks, ProductsVariantsAttributesMock]}
+        mocks={[...CatalogueMocks, FilterAttributesMock]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -101,7 +101,7 @@ describe('Filters Menu Mobile component', () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
-        mocks={[...CatalogueMocks, ProductsVariantsAttributesMock]}
+        mocks={[...CatalogueMocks, FilterAttributesMock]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -135,7 +135,7 @@ describe('Filters Menu Mobile component', () => {
     const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
-        mocks={[ProductsVariantsAttributesMockMockError]}
+        mocks={[FilterAttributesMockError]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>

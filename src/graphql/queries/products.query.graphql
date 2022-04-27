@@ -1,31 +1,33 @@
-query products($first: Int, $last: Int, $before: String, $after: String, $sortKey: ProductSortKeys, $reverse: Boolean, $query: String) {
-    products(first: $first, last: $last, before: $before, after: $after, sortKey: $sortKey, reverse: $reverse, query: $query) {
-        nodes {
-            id
-            title
-            vendor
-            featuredImage {
-                url
-            }
-            priceRange {
-                minVariantPrice {
-                    amount
-                    currencyCode
+query products($first: Int, $last: Int, $before: String, $after: String, $sortKey: ProductCollectionSortKeys, $reverse: Boolean, $filters: [ProductFilter!]) {
+    collection(id: "gid://shopify/Collection/386655387864") {
+        products(first: $first, last: $last, before: $before, after: $after, sortKey: $sortKey, reverse: $reverse, filters: $filters) {
+            nodes {
+                id
+                title
+                vendor
+                featuredImage {
+                    url
                 }
-                maxVariantPrice {
-                    amount
-                    currencyCode
+                priceRange {
+                    minVariantPrice {
+                        amount
+                        currencyCode
+                    }
+                    maxVariantPrice {
+                        amount
+                        currencyCode
+                    }
+                }
+                pricePerKg: metafield(namespace: "my_fields", key:"price_per_kg"){
+                    value
                 }
             }
-            pricePerKg: metafield(namespace: "my_fields", key:"price_per_kg"){
-                value
+            pageInfo {
+                startCursor
+                endCursor
+                hasNextPage
+                hasPreviousPage
             }
-        }
-        pageInfo {
-            startCursor
-            endCursor
-            hasNextPage
-            hasPreviousPage
         }
     }
 }

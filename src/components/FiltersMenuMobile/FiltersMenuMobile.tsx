@@ -27,9 +27,9 @@ export const FiltersMenuMobile: React.FC<FiltersProps> = ({ onUpdateFilters, ini
   const [open, setOpen] = useState(false)
   const { t } = useTranslation()
 
-  const GET_PRODUCTS_VARIANTS_ATTRIBUTES = loader('src/graphql/queries/productsVariantsAttributes.query.graphql')
+  const GET_FILTER_ATTRIBUTES = loader('src/graphql/queries/filterAttributes.query.graphql')
 
-  const { loading, error, data } = useQuery<Collection>(GET_PRODUCTS_VARIANTS_ATTRIBUTES)
+  const { loading, error, data } = useQuery<Collection>(GET_FILTER_ATTRIBUTES)
 
   const getFilterValues = (key: string) => {
     switch (key) {
@@ -51,9 +51,7 @@ export const FiltersMenuMobile: React.FC<FiltersProps> = ({ onUpdateFilters, ini
             data?.products.nodes
               // eslint-disable-next-line @typescript-eslint/ban-ts-comment
               // @ts-ignore
-              .map((productNode) => productNode['origin']?.value)
-              .map((jsonString) => JSON.parse(jsonString))
-              .map((mf) => mf.countries)
+              .map((productNode) => productNode['origin']?.value.split(','))
               .flat()
               .filter((x) => x !== undefined)
               .sort(),

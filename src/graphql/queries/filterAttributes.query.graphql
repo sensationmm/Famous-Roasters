@@ -1,4 +1,4 @@
-query productsVariantsAttributes {
+query filterAttributes {
     products(first: 30) {
         nodes {
             vendor

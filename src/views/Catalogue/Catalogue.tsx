@@ -23,6 +23,10 @@ interface CustomProduct extends Product {
   }
 }
 
+interface CollectionQuery {
+  collection: Collection
+}
+
 interface TabsDataItem {
   key: string
   translationKey: string
@@ -40,8 +44,8 @@ interface PaginationParams {
   after: Maybe<Scalars['String']>
 }
 
-interface FilterParams {
-  query: string | undefined
+interface QueryFilterParams {
+  queryFilter: object[] | undefined
 }
 
 const tabsData: TabsDataItem[] = [
@@ -59,7 +63,7 @@ export const Catalogue: React.FC = () => {
   const [sortValue, setSortValue] = useState<ListBoxItem>()
   const [sortParams, setSortParams] = useState<SortParams>()
   const [filters, setFilters] = useState<FilterData[]>([])
-  const [filterParams, setFilterParams] = useState<FilterParams>()
+  const [queryFilterParams, setQueryFilterParams] = useState<QueryFilterParams>()
   const [paginationParams, setPaginationParams] = useState<PaginationParams>({
     first: totalItemsPerPage,
     last: null,
@@ -82,7 +86,7 @@ export const Catalogue: React.FC = () => {
           setSortParams({ sortKey: 'PRICE', reverse: true })
           break
         case 'newDesc':
-          setSortParams({ sortKey: 'CREATED_AT', reverse: false })
+          setSortParams({ sortKey: 'CREATED', reverse: false })
           break
         default:
           setSortParams({ sortKey: 'BEST_SELLING', reverse: false })
@@ -92,24 +96,42 @@ export const Catalogue: React.FC = () => {
   }, [sortValue])
 
   useEffect(() => {
-    let query = ''
+    const queryFilter: object[] = []
     filters.map((filter) => {
       if (filter.filterValuesSelected) {
         switch (filter.key) {
           case 'vendor':
-            query += filter.filterValuesSelected
-              .map((filterValue, idx) => (idx === 0 ? `vendor:${filterValue}` : ` OR vendor:${filterValue}`))
-              .join('')
+            filter.filterValuesSelected.map((filterValue) => queryFilter.push({ productVendor: `${filterValue}` }))
+            break
+          case 'beanType':
+            filter.filterValuesSelected.map((filterValue) =>
+              queryFilter.push({
+                productMetafield: { namespace: 'my_fields', key: 'bean_type', value: `${filterValue}` },
+              }),
+            )
+            break
+          case 'origin':
+            // TODO fix yield combinations
+            filter.filterValuesSelected.map((filterValue) =>
+              queryFilter.push({
+                productMetafield: { namespace: 'my_fields', key: 'origin', value: `${filterValue}` },
+              }),
+            )
+            break
+          case 'packageSize':
+            filter.filterValuesSelected.map((filterValue) =>
+              queryFilter.push({
+                variantMetafield: { namespace: 'my_fields', key: 'package_size', value: `${filterValue}` },
+              }),
+            )
             break
         }
       }
     })
-    query.length > 0 ? setFilterParams({ query }) : setFilterParams({ query: undefined })
+    queryFilter.length > 0 ? setQueryFilterParams({ queryFilter }) : setQueryFilterParams({ queryFilter: undefined })
   }, [filters])
 
-  // console.log("filterParams", filterParams)
-
-  const { loading, error, data } = useQuery<Collection>(GET_PRODUCTS, {
+  const { loading, error, data } = useQuery<CollectionQuery>(GET_PRODUCTS, {
     variables: {
       first: paginationParams?.first,
       last: paginationParams?.last,
@@ -117,12 +139,12 @@ export const Catalogue: React.FC = () => {
       after: paginationParams?.after,
       sortKey: sortParams?.sortKey,
       reverse: sortParams?.reverse,
-      query: filterParams?.query,
+      filters: queryFilterParams?.queryFilter,
     },
   })
 
-  const productNodes = data?.products.nodes
-  const pageInfo = data?.products.pageInfo || {
+  const productNodes = data?.collection?.products.nodes
+  const pageInfo = data?.collection?.products.pageInfo || {
     hasNextPage: false,
     hasPreviousPage: false,
     startCursor: null,
