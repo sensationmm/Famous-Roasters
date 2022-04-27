@@ -287,7 +287,7 @@ describe('Catalogue view', () => {
     fireEvent.click(buttonPrompt)
   })
 
-  it('Renders correctly for a successful call with missing data', async () => {
+  it.skip('Renders correctly for a successful call with missing data', async () => {
     const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
