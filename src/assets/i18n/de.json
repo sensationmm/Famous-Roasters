@@ -71,7 +71,7 @@
           }
         },
         "origin": {
-          "label": "Origin",
+          "label": "Herkunft",
           "values": {
             "BR": "Brasilien",
             "CO": "Kolumbien"

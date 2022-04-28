@@ -14,6 +14,7 @@ interface ListboxProps {
   value?: ListBoxItem
   onChange?: (active?: ListBoxItem) => void
   hasNoneItem?: boolean
+  hasTranslatedValues?: boolean
 }
 
 export const Listbox: React.FC<ListboxProps> = ({
@@ -22,6 +23,7 @@ export const Listbox: React.FC<ListboxProps> = ({
   value,
   onChange,
   hasNoneItem = false,
+  hasTranslatedValues = true,
   ...props
 }: ListboxProps) => {
   const noneItem: ListBoxItem = { name: 'none' }
@@ -43,7 +45,7 @@ export const Listbox: React.FC<ListboxProps> = ({
     if (hasNoneItem && activeItem && activeItem.name === noneItem.name) {
       return t(`${translationPrefix}.label`)
     } else {
-      return t(`${translationPrefix}.options.${activeItem?.name}`)
+      return hasTranslatedValues ? t(`${translationPrefix}.options.${activeItem?.name}`) : activeItem.name
     }
   }
 
@@ -76,7 +78,7 @@ export const Listbox: React.FC<ListboxProps> = ({
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <HUIListbox.Options className="absolute w-full mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 border border-coreUI-background-images focus:outline-none">
+              <HUIListbox.Options className="absolute z-10 w-full mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 border border-coreUI-background-images focus:outline-none">
                 {options.map((option, idx) => (
                   <HUIListbox.Option
                     key={idx}
@@ -95,7 +97,7 @@ export const Listbox: React.FC<ListboxProps> = ({
                             selected || activeItem?.name === option.name ? 'font-semibold' : 'font-normal'
                           }`}
                         >
-                          {t(`${translationPrefix}.options.${option.name}`)}
+                          {hasTranslatedValues ? t(`${translationPrefix}.options.${option.name}`) : option.name}
                         </span>
                         {selected || activeItem?.name === option.name ? (
                           <span className="absolute inset-y-0 left-0 flex items-center pl-1.5">

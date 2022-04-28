@@ -179,9 +179,9 @@ describe('Catalogue view', () => {
       </MockedProvider>,
     )
     await waitFor(async () => {
-      const button = await screen.findByTestId('button-listbox')
-      expect(button).toBeInTheDocument()
-      fireEvent.click(button)
+      const button = await screen.findAllByTestId('button-listbox')
+      expect(button[4]).toBeInTheDocument()
+      fireEvent.click(button[4])
     })
     await waitFor(() => {
       const option = screen.getByTestId('option-0')
@@ -189,9 +189,9 @@ describe('Catalogue view', () => {
       fireEvent.click(option)
     })
     await waitFor(async () => {
-      const button = await screen.findByTestId('button-listbox')
-      expect(button).toBeInTheDocument()
-      fireEvent.click(button)
+      const button = await screen.findAllByTestId('button-listbox')
+      expect(button[4]).toBeInTheDocument()
+      fireEvent.click(button[4])
     })
     await waitFor(() => {
       const option = screen.getByTestId('option-1')
@@ -199,9 +199,9 @@ describe('Catalogue view', () => {
       fireEvent.click(option)
     })
     await waitFor(async () => {
-      const button = await screen.findByTestId('button-listbox')
-      expect(button).toBeInTheDocument()
-      fireEvent.click(button)
+      const button = await screen.findAllByTestId('button-listbox')
+      expect(button[4]).toBeInTheDocument()
+      fireEvent.click(button[4])
     })
     await waitFor(() => {
       const option = screen.getByTestId('option-2')
@@ -209,9 +209,9 @@ describe('Catalogue view', () => {
       fireEvent.click(option)
     })
     await waitFor(async () => {
-      const button = await screen.findByTestId('button-listbox')
-      expect(button).toBeInTheDocument()
-      fireEvent.click(button)
+      const button = await screen.findAllByTestId('button-listbox')
+      expect(button[4]).toBeInTheDocument()
+      fireEvent.click(button[4])
     })
     await waitFor(() => {
       const option = screen.getByTestId('option-3')

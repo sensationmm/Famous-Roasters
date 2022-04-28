@@ -280,7 +280,60 @@ export const Catalogue: React.FC = () => {
       } else {
         return (
           <>
-            <div className="flex gap-x-4 justify-end mt-8">
+            <div className="hidden md:flex gap-x-4 mt-8">
+              <div className="md:w-1/4">
+                <Listbox
+                  items={
+                    filters.filter((filter) => filter.key === 'beanType')[0].filterValues?.map((x) => ({ name: x })) ||
+                    []
+                  }
+                  hasNoneItem={true}
+                  hasTranslatedValues={false}
+                  translationPrefix="pages.catalogue.filters.beanType"
+                  value={undefined}
+                  onChange={() => console.log('bean type changed')}
+                />
+              </div>
+              <div className="md:w-1/4">
+                <Listbox
+                  items={
+                    filters.filter((filter) => filter.key === 'vendor')[0].filterValues?.map((x) => ({ name: x })) || []
+                  }
+                  hasNoneItem={true}
+                  hasTranslatedValues={false}
+                  translationPrefix="pages.catalogue.filters.vendor"
+                  value={undefined}
+                  onChange={() => console.log('vendor changed')}
+                />
+              </div>
+              <div className="md:w-1/4">
+                <Listbox
+                  items={
+                    filters.filter((filter) => filter.key === 'origin')[0].filterValues?.map((x) => ({ name: x })) || []
+                  }
+                  hasNoneItem={true}
+                  hasTranslatedValues={false}
+                  translationPrefix="pages.catalogue.filters.origin"
+                  value={undefined}
+                  onChange={() => console.log('origin changed')}
+                />
+              </div>
+              <div className="md:w-1/4">
+                <Listbox
+                  items={
+                    filters
+                      .filter((filter) => filter.key === 'packageSize')[0]
+                      .filterValues?.map((x) => ({ name: x })) || []
+                  }
+                  hasNoneItem={true}
+                  hasTranslatedValues={false}
+                  translationPrefix="pages.catalogue.filters.packageSize"
+                  value={undefined}
+                  onChange={() => console.log('packageSize changed')}
+                />
+              </div>
+            </div>
+            <div className="flex gap-x-4 justify-end mt-4">
               <div className="w-1/2 md:hidden">
                 {!filterAttributesData || filterAttributesLoading ? (
                   <div
@@ -299,7 +352,10 @@ export const Catalogue: React.FC = () => {
                   />
                 )}
               </div>
-              <div className="w-1/2 md:w-1/3 xl:w-1/5">
+              {['1', '2', '3'].map((fillBlock) => (
+                <div key={`fill-block-${fillBlock}`} className="hidden md:block md:w-1/4" />
+              ))}
+              <div className="w-1/2 md:w-1/4">
                 <Listbox
                   items={sortByItems}
                   hasNoneItem={true}
