@@ -56,6 +56,12 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({ filter, show, back, 
 
   const filtersApplied = filter.filterValuesSelected?.length || 0
 
+  const renderFilterValue = (filterValue: string, flex: boolean) => (
+    <Typography className={flex ? 'inline-flex' : ''}>
+      {filter.i18nValues ? t(`pages.catalogue.filters.${filter.key}.values.${filterValue}`) : filterValue}
+    </Typography>
+  )
+
   return (
     <Transition.Root show={show} as={Fragment}>
       <Dialog as="div" className="fixed inset-0 flex z-40" onClose={() => null}>
@@ -112,7 +118,7 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({ filter, show, back, 
 
             <div className="border-t border-coreUI-text-tertiary">
               {filter?.filterType === 'enum' && filter?.filterValues ? (
-                filter?.filterValues.map((filterValue, idx) => (
+                filter?.filterValues.map((filterValue: string, idx) => (
                   <div
                     key={`filter-${filter.key}-${idx}`}
                     className="flex justify-between px-5 py-5 border-b border-coreUI-text-tertiary cursor-pointer"
@@ -122,18 +128,10 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({ filter, show, back, 
                     {isSelected(filterValue) ? (
                       <span className="inline-flex items-center">
                         <CheckIcon className="w-5 h-5 mr-2 text-brand-green-club" aria-hidden="true" />
-                        <Typography>
-                          {filter.i18nValues
-                            ? t(`pages.catalogue.filters.${filter.key}.values.${filterValue}`)
-                            : filterValue}
-                        </Typography>
+                        {renderFilterValue(filterValue, false)}
                       </span>
                     ) : (
-                      <Typography className="inline-flex">
-                        {filter.i18nValues
-                          ? t(`pages.catalogue.filters.${filter.key}.values.${filterValue}`)
-                          : filterValue}
-                      </Typography>
+                      renderFilterValue(filterValue, true)
                     )}
                   </div>
                 ))

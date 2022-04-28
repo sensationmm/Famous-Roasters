@@ -72,6 +72,7 @@ export const Catalogue: React.FC = () => {
     before: null,
     after: null,
   })
+  const [originMetaValues, setOriginMetaValues] = useState<string[]>([])
   const GET_PRODUCTS = loader('src/graphql/queries/products.query.graphql')
   const GET_FILTER_ATTRIBUTES = loader('src/graphql/queries/filterAttributes.query.graphql')
 
@@ -99,18 +100,24 @@ export const Catalogue: React.FC = () => {
               .sort(),
           ),
         )
-      case 'origin':
-        return Array.from(
+      case 'origin': {
+        const originMapping = Array.from(
           new Set(
             filterAttributesData?.products.nodes
               // eslint-disable-next-line @typescript-eslint/ban-ts-comment
               // @ts-ignore
-              .map((productNode) => productNode['origin']?.value.split(','))
+              .map((productNode) => productNode['origin']?.value)
               .flat()
               .filter((x) => x !== undefined)
               .sort(),
           ),
         )
+        setOriginMetaValues(originMapping)
+        return originMapping
+          .map((value) => value.split(','))
+          .flat()
+          .sort()
+      }
       case 'bean_type':
         return Array.from(
           new Set(
@@ -123,7 +130,6 @@ export const Catalogue: React.FC = () => {
               .sort(),
           ),
         )
-      default:
       case 'package_size':
         return Array.from(
           new Set(
@@ -138,7 +144,7 @@ export const Catalogue: React.FC = () => {
     }
   }
 
-  const filtersData: FilterData[] = [
+  const filtersData = (): FilterData[] => [
     { key: 'beanType', isOpen: false, filterType: 'enum', filterValues: getFilterValues('bean_type') },
     { key: 'vendor', isOpen: false, filterType: 'enum', filterValues: getFilterValues('vendor') },
     { key: 'origin', isOpen: false, filterType: 'enum', filterValues: getFilterValues('origin'), i18nValues: true },
@@ -146,7 +152,7 @@ export const Catalogue: React.FC = () => {
   ]
 
   useEffect(() => {
-    setFilters(filtersData)
+    setFilters(filtersData())
   }, [!filterAttributesLoading])
 
   if (filterAttributesError) {
@@ -188,12 +194,15 @@ export const Catalogue: React.FC = () => {
             )
             break
           case 'origin':
-            // TODO fix yield combinations
-            filter.filterValuesSelected.map((filterValue) =>
-              queryFilter.push({
-                productMetafield: { namespace: 'my_fields', key: 'origin', value: `${filterValue}` },
-              }),
-            )
+            filter.filterValuesSelected.map((filterValue) => {
+              originMetaValues
+                .filter((origin) => origin.indexOf(filterValue) !== -1)
+                .map((filterValue) =>
+                  queryFilter.push({
+                    productMetafield: { namespace: 'my_fields', key: 'origin', value: `${filterValue}` },
+                  }),
+                )
+            })
             break
           case 'packageSize':
             filter.filterValuesSelected.map((filterValue) =>

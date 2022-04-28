@@ -64,7 +64,7 @@ export const FiltersMenuMobile: React.FC<FiltersProps> = ({ onUpdateFilters, ini
               filter={filter}
               show={filter.isOpen}
               back={() => closeFilter(filter.key)}
-              update={(key: string, filterValuesSelected: string[]) => updateFilter(filter.key, filterValuesSelected)}
+              update={(key: string, filterValuesSelected: string[]) => updateFilter(key, filterValuesSelected)}
             />
           ))}
           <Transition.Child

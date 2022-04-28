@@ -3,7 +3,7 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import React from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { MemoryRouter } from 'react-router-dom'
-import { CatalogueMocks, FilterAttributesMock, FilterAttributesMockError } from 'src/_mocks'
+import { CatalogueMocks, FilterAttributesMock } from 'src/_mocks'
 import { i18n } from 'src/config'
 
 import { FilterData } from '../index'
