@@ -1,7 +1,7 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { TrashIcon } from '@heroicons/react/outline'
 import { CheckIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid'
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import {
   Button,
@@ -21,6 +21,7 @@ interface FiltersProps {
 
 export const FiltersMenuMobile: React.FC<FiltersProps> = ({ onUpdateFilters, initialFilters }: FiltersProps) => {
   const [open, setOpen] = useState(false)
+  const [filtersReady, setFiltersReady] = useState(false)
   const { t } = useTranslation()
 
   const [filters, setFilters] = useState<FilterData[]>(initialFilters)
@@ -53,6 +54,15 @@ export const FiltersMenuMobile: React.FC<FiltersProps> = ({ onUpdateFilters, ini
   }
 
   const filtersApplied = filters.reduce((a, { filterValuesSelected }) => a + (filterValuesSelected?.length || 0), 0)
+
+  useEffect(() => {
+    const ready = initialFilters.every((filter) => filter.filterValues && filter.filterValues?.length > 0)
+    setFiltersReady(ready)
+  }, [initialFilters])
+
+  if (!filtersReady) {
+    return null
+  }
 
   return (
     <>

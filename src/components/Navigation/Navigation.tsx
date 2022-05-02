@@ -89,13 +89,6 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
               </div>
 
               <div className="border-t border-coreUI-border py-6 px-4 space-y-6">
-                {navigationData.pagesPrimary.map((page) => (
-                  <div key={page.key} className="flow-root">
-                    <Link to={page.href} className="-m-2 p-2 block font-medium text-gray-900">
-                      {t(`pages.${page.key}.navigation`)}
-                    </Link>
-                  </div>
-                ))}
                 {renderMenuItemsMobile(navigationData.pagesPrimary)}
                 <div className="border-t border-coreUI-border" />
                 {renderMenuItemsMobile(navigationData.pagesSecondary)}
