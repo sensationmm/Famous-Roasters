@@ -54,6 +54,35 @@
         "forYou": "Für Dich"
       },
       "filters": {
+        "beanType": {
+          "label": "Bohnensorte"
+        },
+        "common": {
+          "filtersMenu": {
+            "close": "Schließen",
+            "filter": "Filter",
+            "filterOptions": "Filteroptionen",
+            "open": "Öffnen",
+            "removeFilter": "Filter entfernen",
+            "showResults": "Ergebnisse anzeigen"
+          },
+          "filterMobile": {
+            "apply": "Übernehmen"
+          }
+        },
+        "origin": {
+          "label": "Herkunft",
+          "values": {
+            "BR": "Brasilien",
+            "CO": "Kolumbien"
+          }
+        },
+        "packageSize": {
+          "label": "Packungsgröße"
+        },
+        "pricePerKg": {
+          "label": "Preis je Kg"
+        },
         "sort": {
           "label": "Sortieren nach...",
           "options": {
@@ -62,6 +91,9 @@
             "newDesc": "Neue zuerst",
             "none": "Standard"
           }
+        },
+        "vendor": {
+          "label": "Röster"
         }
       },
       "pagination": {

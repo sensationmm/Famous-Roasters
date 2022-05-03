@@ -89,13 +89,6 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
               </div>
 
               <div className="border-t border-coreUI-border py-6 px-4 space-y-6">
-                {navigationData.pagesPrimary.map((page) => (
-                  <div key={page.key} className="flow-root">
-                    <Link to={page.href} className="-m-2 p-2 block font-medium text-gray-900">
-                      {t(`pages.${page.key}.navigation`)}
-                    </Link>
-                  </div>
-                ))}
                 {renderMenuItemsMobile(navigationData.pagesPrimary)}
                 <div className="border-t border-coreUI-border" />
                 {renderMenuItemsMobile(navigationData.pagesSecondary)}
@@ -113,7 +106,7 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
 
       <header className="relative bg-white">
         <nav aria-label="Top" className="max-w-7xl mx-auto px-4 md:px-6 xl:px-8">
-          <div className="h-16 flex items-center justify-between border-b border-brand-grey-whisper">
+          <div className="h-16 mt-0.5 flex items-center justify-between border-b border-brand-grey-whisper">
             <div className="flex-1 flex items-center xl:hidden">
               <button
                 type="button"

@@ -13,5 +13,5 @@ const Template: ComponentStory<typeof ProductTile> = (args) => <ProductTile {...
 
 export const Default = Template.bind({})
 Default.args = {
-  productNode: ProductMock,
+  productNode: { ...ProductMock, pricePerKg: { value: '10.0' } },
 }
