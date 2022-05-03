@@ -4,6 +4,7 @@ import { Collection, Maybe, Product, Scalars } from '@shopify/hydrogen/dist/esne
 import { loader } from 'graphql.macro'
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 import {
   ErrorPrompt,
   FilterData,
@@ -18,6 +19,7 @@ import {
   TypographySize,
 } from 'src/components'
 import { Pagination } from 'src/components/Pagination'
+import { getSimplifiedProductId } from 'src/utils/formatters'
 
 interface CustomProduct extends Product {
   pricePerKg?: {
@@ -343,9 +345,14 @@ export const Catalogue: React.FC = () => {
           </div>
         </div>
         <div className="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-          {productNodes?.map((node: CustomProduct, i: number) => (
-            <ProductTile key={`title-${i}`} productNode={node} />
-          ))}
+          {productNodes?.map((node, i: number) => {
+            const id = getSimplifiedProductId(node.id)
+            return (
+              <Link to={`/product/${id}`} key={`product-tile-link-${id}`}>
+                <ProductTile key={`title-${i}`} productNode={node} />
+              </Link>
+            )
+          })}
         </div>
         <div className="mb-8">
           <Pagination

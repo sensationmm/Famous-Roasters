@@ -5,3 +5,5 @@ export const formatPrice = (amount: string, currency: string) =>
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   }).format(parseFloat(amount))
+
+export const getSimplifiedProductId = (id: string) => id.split('gid://shopify/Product/')[1]

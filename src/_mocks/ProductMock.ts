@@ -30,6 +30,7 @@ export const ProductMock: Product = {
     transformedSrc: '',
   },
   handle: '',
+  id: 'gid://shopify/Product/7655228866776',
   images: {
     edges: [],
     nodes: [],
@@ -81,7 +82,6 @@ export const ProductMock: Product = {
     },
   },
   vendor: 'Famous Roasters',
-  id: '12312312',
   metafields: {
     edges: [],
     nodes: [],
