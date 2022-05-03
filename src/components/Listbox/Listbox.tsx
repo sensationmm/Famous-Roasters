@@ -12,7 +12,7 @@ interface ListboxProps {
   items: ListBoxItem[]
   multiple?: boolean
   translationPrefix: string
-  value?: ListBoxItem[] | undefined
+  value?: ListBoxItem[]
   onChange?: (active?: ListBoxItem[]) => void
   hasNoneItem?: boolean
   hasTranslatedValues?: boolean
@@ -31,18 +31,13 @@ export const Listbox: React.FC<ListboxProps> = ({
   const noneItem: ListBoxItem = { name: 'none' }
 
   const activeInitialValue = (): ListBoxItem[] => {
-    if (multiple) {
-      if (value) {
-        return value
-      }
-      return hasNoneItem ? [noneItem] : []
+    if (value) {
+      return value
     } else {
-      if (value) {
-        return value
-      }
       return hasNoneItem ? [noneItem] : []
     }
   }
+
   const [activeItems, setActiveItems] = useState<ListBoxItem[]>(activeInitialValue())
   const { t } = useTranslation()
   const options = hasNoneItem ? [...items, noneItem] : items

@@ -11,6 +11,7 @@ import {
   CatalogueMocksPaginationWrongBackwards,
   CatalogueMocksPaginationWrongForwards,
   FilterAttributesMock,
+  FilterAttributesMockError,
 } from 'src/_mocks'
 import { i18n } from 'src/config'
 
@@ -220,7 +221,7 @@ describe('Catalogue view', () => {
     })
   })
 
-  it('The user can use filtering', async () => {
+  it('The user can use mobile filtering', async () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
@@ -266,7 +267,103 @@ describe('Catalogue view', () => {
     })
   })
 
-  it('Renders correctly for an error call', async () => {
+  it('The user can filter per bean type on desktop', async () => {
+    render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
+        mocks={[...CatalogueMocks, FilterAttributesMock]}
+        addTypename={false}
+      >
+        <I18nextProvider i18n={i18n}>
+          <MemoryRouter initialEntries={['/catalogue']}>
+            <Catalogue />
+          </MemoryRouter>
+        </I18nextProvider>
+      </MockedProvider>,
+    )
+    const button = await screen.findAllByTestId('button-listbox')
+    expect(button[0]).toBeInTheDocument()
+    await waitFor(async () => {
+      fireEvent.click(button[0])
+      const option = screen.getByTestId('option-0')
+      expect(option).toBeInTheDocument()
+      fireEvent.click(option)
+    })
+  })
+
+  it('The user can filter per roaster on desktop', async () => {
+    render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
+        mocks={[...CatalogueMocks, FilterAttributesMock]}
+        addTypename={false}
+      >
+        <I18nextProvider i18n={i18n}>
+          <MemoryRouter initialEntries={['/catalogue']}>
+            <Catalogue />
+          </MemoryRouter>
+        </I18nextProvider>
+      </MockedProvider>,
+    )
+    const button = await screen.findAllByTestId('button-listbox')
+    expect(button[1]).toBeInTheDocument()
+    await waitFor(async () => {
+      fireEvent.click(button[1])
+      const option = screen.getByTestId('option-0')
+      expect(option).toBeInTheDocument()
+      fireEvent.click(option)
+    })
+  })
+
+  it('The user can filter per country on desktop', async () => {
+    render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
+        mocks={[...CatalogueMocks, FilterAttributesMock]}
+        addTypename={false}
+      >
+        <I18nextProvider i18n={i18n}>
+          <MemoryRouter initialEntries={['/catalogue']}>
+            <Catalogue />
+          </MemoryRouter>
+        </I18nextProvider>
+      </MockedProvider>,
+    )
+    const button = await screen.findAllByTestId('button-listbox')
+    expect(button[2]).toBeInTheDocument()
+    await waitFor(async () => {
+      fireEvent.click(button[2])
+      const option = screen.getByTestId('option-0')
+      expect(option).toBeInTheDocument()
+      fireEvent.click(option)
+    })
+  })
+
+  it('The user can filter per package size on desktop', async () => {
+    render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
+        mocks={[...CatalogueMocks, FilterAttributesMock]}
+        addTypename={false}
+      >
+        <I18nextProvider i18n={i18n}>
+          <MemoryRouter initialEntries={['/catalogue']}>
+            <Catalogue />
+          </MemoryRouter>
+        </I18nextProvider>
+      </MockedProvider>,
+    )
+    const button = await screen.findAllByTestId('button-listbox')
+    expect(button[3]).toBeInTheDocument()
+    await waitFor(async () => {
+      fireEvent.click(button[3])
+      const option = screen.getByTestId('option-0')
+      expect(option).toBeInTheDocument()
+      fireEvent.click(option)
+    })
+  })
+
+  it('Renders correctly for an error call on catalogue', async () => {
     const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
@@ -285,23 +382,5 @@ describe('Catalogue view', () => {
     const buttonPrompt = await screen.findByTestId('button-prompt')
     expect(buttonPrompt).toBeInTheDocument()
     fireEvent.click(buttonPrompt)
-  })
-
-  it.skip('Renders correctly for a successful call with missing data', async () => {
-    const { container } = render(
-      <MockedProvider
-        defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
-        mocks={[CatalogueMockMissingData, FilterAttributesMock]}
-        addTypename={false}
-      >
-        <I18nextProvider i18n={i18n}>
-          <MemoryRouter initialEntries={['/catalogue']}>
-            <Catalogue />
-          </MemoryRouter>
-        </I18nextProvider>
-      </MockedProvider>,
-    )
-    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
-    expect(container).toMatchSnapshot()
   })
 })

@@ -197,9 +197,9 @@ export const Catalogue: React.FC = () => {
             filter.filterValuesSelected.map((filterValue) => {
               originMetaValues
                 .filter((origin) => origin.indexOf(filterValue) !== -1)
-                .map((filterValue) =>
+                .map((fv) =>
                   queryFilter.push({
-                    productMetafield: { namespace: 'my_fields', key: 'origin', value: `${filterValue}` },
+                    productMetafield: { namespace: 'my_fields', key: 'origin', value: `${fv}` },
                   }),
                 )
             })
@@ -259,17 +259,28 @@ export const Catalogue: React.FC = () => {
     setFilters(f)
   }
 
-  const onUpdateFiltersDesktop = (t: ListBoxItem[] | undefined, key: string) => {
+  const onUpdateFiltersDesktop = (items: ListBoxItem[] | undefined, key: string) => {
     setFilters((prev) => {
       const rest = prev.filter((filter) => filter.key !== key)
       const original = filtersData().filter((filter) => filter.key === key)[0]
       const actual: FilterData = {
         ...original,
-        filterValuesSelected: t?.map((x: { name: string }) => x.name) || [],
+        filterValuesSelected: items?.map((x: { name: string }) => x.name) || [],
       }
       return [...rest, actual]
     })
   }
+
+  const renderFilterDesktop = (key: string) => (
+    <Listbox
+      items={filters.filter((filter) => filter.key === key)[0].filterValues?.map((x) => ({ name: x })) || []}
+      hasTranslatedValues={false}
+      translationPrefix={`pages.catalogue.filters.${key}`}
+      value={filters.filter((filter) => filter.key === key)[0].filterValuesSelected?.map((fv) => ({ name: fv }))}
+      multiple={true}
+      onChange={(v) => onUpdateFiltersDesktop(v, key)}
+    />
+  )
 
   const renderForYouProducts = () => {
     return (
@@ -280,128 +291,72 @@ export const Catalogue: React.FC = () => {
   }
 
   const renderDiscoverProducts = () => {
-    if (loading) {
+    if (loading || !filters.every((filter) => filter.filterValues && filter.filterValues?.length > 0)) {
       return (
         <div className="flex h-64 mb-32 justify-center items-center">
           <Loader />
         </div>
       )
-    } else {
-      if (error || !pageInfo) {
-        return <ErrorPrompt promptAction={() => history.go(0)} />
-      } else {
-        return (
-          <>
-            <div className="hidden md:flex gap-x-4 mt-8">
-              <div className="md:w-1/4">
-                <Listbox
-                  items={
-                    filters.filter((filter) => filter.key === 'beanType')[0].filterValues?.map((x) => ({ name: x })) ||
-                    []
-                  }
-                  hasTranslatedValues={false}
-                  translationPrefix="pages.catalogue.filters.beanType"
-                  value={filters
-                    .filter((filter) => filter.key === 'beanType')[0]
-                    .filterValuesSelected?.map((fv) => ({ name: fv }))}
-                  multiple={true}
-                  onChange={(v) => onUpdateFiltersDesktop(v, 'beanType')}
-                />
-              </div>
-              <div className="md:w-1/4">
-                <Listbox
-                  items={
-                    filters.filter((filter) => filter.key === 'vendor')[0].filterValues?.map((x) => ({ name: x })) || []
-                  }
-                  hasTranslatedValues={false}
-                  translationPrefix="pages.catalogue.filters.vendor"
-                  value={filters
-                    .filter((filter) => filter.key === 'vendor')[0]
-                    .filterValuesSelected?.map((fv) => ({ name: fv }))}
-                  multiple={true}
-                  onChange={(v) => onUpdateFiltersDesktop(v, 'vendor')}
-                />
-              </div>
-              <div className="md:w-1/4">
-                <Listbox
-                  items={
-                    filters.filter((filter) => filter.key === 'origin')[0].filterValues?.map((x) => ({ name: x })) || []
-                  }
-                  hasTranslatedValues={false}
-                  translationPrefix="pages.catalogue.filters.origin"
-                  value={filters
-                    .filter((filter) => filter.key === 'origin')[0]
-                    .filterValuesSelected?.map((fv) => ({ name: fv }))}
-                  multiple={true}
-                  onChange={(v) => onUpdateFiltersDesktop(v, 'origin')}
-                />
-              </div>
-              <div className="md:w-1/4">
-                <Listbox
-                  items={
-                    filters
-                      .filter((filter) => filter.key === 'packageSize')[0]
-                      .filterValues?.map((x) => ({ name: x })) || []
-                  }
-                  hasTranslatedValues={false}
-                  translationPrefix="pages.catalogue.filters.packageSize"
-                  value={filters
-                    .filter((filter) => filter.key === 'packageSize')[0]
-                    .filterValuesSelected?.map((fv) => ({ name: fv }))}
-                  multiple={true}
-                  onChange={(v) => onUpdateFiltersDesktop(v, 'packageSize')}
-                />
-              </div>
-            </div>
-            <div className="flex gap-x-4 justify-end mt-4">
-              <div className="w-1/2 md:hidden">
-                {!filterAttributesData || filterAttributesLoading ? (
-                  <div
-                    className="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
-                    data-testid="button-filters-menu-open-loading"
-                  >
-                    <Typography size={TypographySize.Small} className="block truncate">
-                      {t(`pages.catalogue.filters.common.filtersMenu.filter`)}
-                    </Typography>
-                    <ChevronRightIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
-                  </div>
-                ) : (
-                  <FiltersMenuMobile
-                    initialFilters={filters}
-                    onUpdateFilters={(f: FilterData[]) => onUpdateFiltersMobile(f)}
-                  />
-                )}
-              </div>
-              {['1', '2', '3'].map((fillBlock) => (
-                <div key={`fill-block-${fillBlock}`} className="hidden md:block md:w-1/4" />
-              ))}
-              <div className="w-1/2 md:w-1/4">
-                <Listbox
-                  items={sortByItems}
-                  hasNoneItem={true}
-                  translationPrefix="pages.catalogue.filters.sort"
-                  value={sortValue ? [sortValue[0]] : undefined}
-                  onChange={setSortValue}
-                />
-              </div>
-            </div>
-            <div className="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-              {productNodes?.map((node: CustomProduct, i: number) => (
-                <ProductTile key={`title-${i}`} productNode={node} />
-              ))}
-            </div>
-            <div className="mb-8">
-              <Pagination
-                hasNextPage={pageInfo?.hasNextPage || false}
-                hasPreviousPage={pageInfo?.hasPreviousPage || false}
-                next={handleNextClicked}
-                previous={handlePreviousClicked}
-              />
-            </div>
-          </>
-        )
-      }
     }
+    if (error || !pageInfo) {
+      return <ErrorPrompt promptAction={() => history.go(0)} />
+    }
+
+    return (
+      <>
+        <div className="hidden md:flex gap-x-4 mt-8">
+          <div className="md:w-1/4">{renderFilterDesktop('beanType')}</div>
+          <div className="md:w-1/4">{renderFilterDesktop('vendor')}</div>
+          <div className="md:w-1/4">{renderFilterDesktop('origin')}</div>
+          <div className="md:w-1/4">{renderFilterDesktop('packageSize')}</div>
+        </div>
+        <div className="flex gap-x-4 justify-end mt-4">
+          <div className="w-1/2 md:hidden">
+            {!filterAttributesData || filterAttributesLoading ? (
+              <div
+                className="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
+                data-testid="button-filters-menu-open-loading"
+              >
+                <Typography size={TypographySize.Small} className="block truncate">
+                  {t(`pages.catalogue.filters.common.filtersMenu.filter`)}
+                </Typography>
+                <ChevronRightIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
+              </div>
+            ) : (
+              <FiltersMenuMobile
+                initialFilters={filters}
+                onUpdateFilters={(f: FilterData[]) => onUpdateFiltersMobile(f)}
+              />
+            )}
+          </div>
+          {['1', '2', '3'].map((fillBlock) => (
+            <div key={`fill-block-${fillBlock}`} className="hidden md:block md:w-1/4" />
+          ))}
+          <div className="w-1/2 md:w-1/4">
+            <Listbox
+              items={sortByItems}
+              hasNoneItem={true}
+              translationPrefix="pages.catalogue.filters.sort"
+              value={sortValue ? [sortValue[0]] : undefined}
+              onChange={setSortValue}
+            />
+          </div>
+        </div>
+        <div className="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+          {productNodes?.map((node: CustomProduct, i: number) => (
+            <ProductTile key={`title-${i}`} productNode={node} />
+          ))}
+        </div>
+        <div className="mb-8">
+          <Pagination
+            hasNextPage={pageInfo?.hasNextPage || false}
+            hasPreviousPage={pageInfo?.hasPreviousPage || false}
+            next={handleNextClicked}
+            previous={handlePreviousClicked}
+          />
+        </div>
+      </>
+    )
   }
 
   return (
