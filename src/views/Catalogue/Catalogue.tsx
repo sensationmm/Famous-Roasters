@@ -62,7 +62,7 @@ const totalItemsPerPage = 6
 export const Catalogue: React.FC = () => {
   const { t } = useTranslation()
   const [activeTab, setActiveTab] = useState<string>('discover')
-  const [sortValue, setSortValue] = useState<ListBoxItem>()
+  const [sortValue, setSortValue] = useState<ListBoxItem[]>()
   const [sortParams, setSortParams] = useState<SortParams>()
   const [filters, setFilters] = useState<FilterData[]>([])
   const [queryFilterParams, setQueryFilterParams] = useState<QueryFilterParams>()
@@ -160,8 +160,8 @@ export const Catalogue: React.FC = () => {
   }
 
   useEffect(() => {
-    if (sortValue?.name) {
-      switch (sortValue.name) {
+    if (sortValue && sortValue[0]?.name) {
+      switch (sortValue[0].name) {
         case 'priceAsc':
           setSortParams({ sortKey: 'PRICE', reverse: false })
           break
@@ -255,8 +255,20 @@ export const Catalogue: React.FC = () => {
     })
   }
 
-  const onUpdateFilters = (f: FilterData[]) => {
+  const onUpdateFiltersMobile = (f: FilterData[]) => {
     setFilters(f)
+  }
+
+  const onUpdateFiltersDesktop = (t: ListBoxItem[] | undefined, key: string) => {
+    setFilters((prev) => {
+      const rest = prev.filter((filter) => filter.key !== key)
+      const original = filtersData().filter((filter) => filter.key === key)[0]
+      const actual: FilterData = {
+        ...original,
+        filterValuesSelected: t?.map((x: { name: string }) => x.name) || [],
+      }
+      return [...rest, actual]
+    })
   }
 
   const renderForYouProducts = () => {
@@ -287,11 +299,13 @@ export const Catalogue: React.FC = () => {
                     filters.filter((filter) => filter.key === 'beanType')[0].filterValues?.map((x) => ({ name: x })) ||
                     []
                   }
-                  hasNoneItem={true}
                   hasTranslatedValues={false}
                   translationPrefix="pages.catalogue.filters.beanType"
-                  value={undefined}
-                  onChange={() => console.log('bean type changed')}
+                  value={filters
+                    .filter((filter) => filter.key === 'beanType')[0]
+                    .filterValuesSelected?.map((fv) => ({ name: fv }))}
+                  multiple={true}
+                  onChange={(v) => onUpdateFiltersDesktop(v, 'beanType')}
                 />
               </div>
               <div className="md:w-1/4">
@@ -299,11 +313,13 @@ export const Catalogue: React.FC = () => {
                   items={
                     filters.filter((filter) => filter.key === 'vendor')[0].filterValues?.map((x) => ({ name: x })) || []
                   }
-                  hasNoneItem={true}
                   hasTranslatedValues={false}
                   translationPrefix="pages.catalogue.filters.vendor"
-                  value={undefined}
-                  onChange={() => console.log('vendor changed')}
+                  value={filters
+                    .filter((filter) => filter.key === 'vendor')[0]
+                    .filterValuesSelected?.map((fv) => ({ name: fv }))}
+                  multiple={true}
+                  onChange={(v) => onUpdateFiltersDesktop(v, 'vendor')}
                 />
               </div>
               <div className="md:w-1/4">
@@ -311,11 +327,13 @@ export const Catalogue: React.FC = () => {
                   items={
                     filters.filter((filter) => filter.key === 'origin')[0].filterValues?.map((x) => ({ name: x })) || []
                   }
-                  hasNoneItem={true}
                   hasTranslatedValues={false}
                   translationPrefix="pages.catalogue.filters.origin"
-                  value={undefined}
-                  onChange={() => console.log('origin changed')}
+                  value={filters
+                    .filter((filter) => filter.key === 'origin')[0]
+                    .filterValuesSelected?.map((fv) => ({ name: fv }))}
+                  multiple={true}
+                  onChange={(v) => onUpdateFiltersDesktop(v, 'origin')}
                 />
               </div>
               <div className="md:w-1/4">
@@ -325,11 +343,13 @@ export const Catalogue: React.FC = () => {
                       .filter((filter) => filter.key === 'packageSize')[0]
                       .filterValues?.map((x) => ({ name: x })) || []
                   }
-                  hasNoneItem={true}
                   hasTranslatedValues={false}
                   translationPrefix="pages.catalogue.filters.packageSize"
-                  value={undefined}
-                  onChange={() => console.log('packageSize changed')}
+                  value={filters
+                    .filter((filter) => filter.key === 'packageSize')[0]
+                    .filterValuesSelected?.map((fv) => ({ name: fv }))}
+                  multiple={true}
+                  onChange={(v) => onUpdateFiltersDesktop(v, 'packageSize')}
                 />
               </div>
             </div>
@@ -348,7 +368,7 @@ export const Catalogue: React.FC = () => {
                 ) : (
                   <FiltersMenuMobile
                     initialFilters={filters}
-                    onUpdateFilters={(f: FilterData[]) => onUpdateFilters(f)}
+                    onUpdateFilters={(f: FilterData[]) => onUpdateFiltersMobile(f)}
                   />
                 )}
               </div>
@@ -360,7 +380,7 @@ export const Catalogue: React.FC = () => {
                   items={sortByItems}
                   hasNoneItem={true}
                   translationPrefix="pages.catalogue.filters.sort"
-                  value={sortValue}
+                  value={sortValue ? [sortValue[0]] : undefined}
                   onChange={setSortValue}
                 />
               </div>

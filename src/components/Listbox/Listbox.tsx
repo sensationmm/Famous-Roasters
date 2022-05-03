@@ -10,17 +10,19 @@ export interface ListBoxItem {
 
 interface ListboxProps {
   items: ListBoxItem[]
+  multiple?: boolean
   translationPrefix: string
-  value?: ListBoxItem
-  onChange?: (active?: ListBoxItem) => void
+  value?: ListBoxItem[] | undefined
+  onChange?: (active?: ListBoxItem[]) => void
   hasNoneItem?: boolean
   hasTranslatedValues?: boolean
 }
 
 export const Listbox: React.FC<ListboxProps> = ({
   items,
+  multiple = false,
   translationPrefix,
-  value,
+  value = undefined,
   onChange,
   hasNoneItem = false,
   hasTranslatedValues = true,
@@ -28,35 +30,50 @@ export const Listbox: React.FC<ListboxProps> = ({
 }: ListboxProps) => {
   const noneItem: ListBoxItem = { name: 'none' }
 
-  const activeInitialValue = () => {
-    if (value) {
-      return value
-    } else {
-      if (hasNoneItem) {
-        return noneItem
+  const activeInitialValue = (): ListBoxItem[] => {
+    if (multiple) {
+      if (value) {
+        return value
       }
+      return hasNoneItem ? [noneItem] : []
+    } else {
+      if (value) {
+        return value
+      }
+      return hasNoneItem ? [noneItem] : []
     }
   }
-  const [activeItem, setActiveItem] = useState<ListBoxItem>(activeInitialValue)
+  const [activeItems, setActiveItems] = useState<ListBoxItem[]>(activeInitialValue())
   const { t } = useTranslation()
   const options = hasNoneItem ? [...items, noneItem] : items
 
   const selectedOption = () => {
-    if (hasNoneItem && activeItem && activeItem.name === noneItem.name) {
+    if (multiple) {
       return t(`${translationPrefix}.label`)
     } else {
-      return hasTranslatedValues ? t(`${translationPrefix}.options.${activeItem?.name}`) : activeItem.name
+      if (hasNoneItem && activeItems[0] && activeItems[0]?.name === noneItem.name) {
+        return t(`${translationPrefix}.label`)
+      }
+      return hasTranslatedValues ? t(`${translationPrefix}.options.${activeItems[0]?.name}`) : activeItems[0].name
     }
   }
 
-  const onChangeHandler = (s: React.SetStateAction<ListBoxItem>) => {
-    setActiveItem(s)
-    onChange && onChange(s)
+  const onChangeHandler = (s: ListBoxItem | ListBoxItem[]) => {
+    if (Array.isArray(s)) {
+      const last = s[s.length - 1]
+      const isRemove = s.findIndex((x) => x.name === last.name) !== s.length - 1
+      const next = isRemove ? s.filter((x) => x.name !== last.name) : s
+      setActiveItems(next)
+      onChange && onChange(next)
+    } else {
+      setActiveItems([s])
+      onChange && onChange([s])
+    }
   }
 
   return (
     <div className="w-full relative" {...props}>
-      <HUIListbox value={activeItem} onChange={onChangeHandler}>
+      <HUIListbox value={activeItems} onChange={onChangeHandler} multiple={multiple}>
         {({ open }) => (
           <>
             <HUIListbox.Button
@@ -64,7 +81,7 @@ export const Listbox: React.FC<ListboxProps> = ({
               data-testid="button-listbox"
             >
               <Typography size={TypographySize.Small} className="block truncate">
-                {activeItem ? selectedOption() : t(`${translationPrefix}.label`)}
+                {selectedOption()}
               </Typography>
               {open ? (
                 <ChevronUpIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
@@ -94,12 +111,14 @@ export const Listbox: React.FC<ListboxProps> = ({
                       <>
                         <span
                           className={`block truncate ${
-                            selected || activeItem?.name === option.name ? 'font-semibold' : 'font-normal'
+                            selected || activeItems?.find((activeItem) => activeItem.name === option.name)
+                              ? 'font-semibold'
+                              : 'font-normal'
                           }`}
                         >
                           {hasTranslatedValues ? t(`${translationPrefix}.options.${option.name}`) : option.name}
                         </span>
-                        {selected || activeItem?.name === option.name ? (
+                        {selected || activeItems?.find((activeItem) => activeItem.name === option.name) ? (
                           <span className="absolute inset-y-0 left-0 flex items-center pl-1.5">
                             <CheckIcon className="w-5 h-5 text-brand-green-club" aria-hidden="true" />
                           </span>

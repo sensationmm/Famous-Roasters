@@ -6,6 +6,16 @@ import { i18n } from 'src/config'
 
 import { Navigation, NavigationTheme } from '.'
 
+const intersectionObserverMock = function () {
+  return {
+    observe: jest.fn(),
+    disconnect: jest.fn(),
+  }
+}
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+window.IntersectionObserver = intersectionObserverMock
+
 describe('Navigation component', () => {
   it('Renders correctly with shop theme', async () => {
     const { container } = render(
