@@ -64,7 +64,7 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({ filter, show, back, 
 
   return (
     <Transition.Root show={show} as={Fragment}>
-      <Dialog as="div" className="fixed inset-0 flex z-40" onClose={() => null}>
+      <Dialog as="div" className="fixed inset-0 flex z-40" onClose={() => handleBack()}>
         <Transition.Child
           as={Fragment}
           enter="transition-opacity ease-linear duration-300"

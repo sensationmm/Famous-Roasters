@@ -17,9 +17,12 @@ const Template: ComponentStory<typeof FilterMobile> = (args) => (
 export const Default = Template.bind({})
 Default.args = {
   filter: {
-    key: 'filter-key',
+    key: 'vendor',
+    filterType: 'enum',
+    filterValues: ['Roaster A', 'Roaster B'],
     isOpen: true,
   },
   show: true,
   back: () => alert('back!'),
+  update: () => null,
 }

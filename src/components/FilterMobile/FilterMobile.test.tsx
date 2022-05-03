@@ -82,4 +82,20 @@ describe('Filter Mobile component', () => {
     expect(buttonFilterClose).toBeInTheDocument()
     fireEvent.click(buttonFilterClose)
   })
+
+  it('Can be closed', async () => {
+    render(
+      <I18nextProvider i18n={i18n}>
+        <MemoryRouter initialEntries={['/catalogue']}>
+          <FilterMobile
+            filter={{ key: 'filter-key', isOpen: true }}
+            show={true}
+            back={() => alert('back!')}
+            update={() => alert('update!')}
+          />
+        </MemoryRouter>
+      </I18nextProvider>,
+    )
+    fireEvent.keyDown(window, { key: 'Escape', code: '27' })
+  })
 })

@@ -5,13 +5,11 @@ import { I18nextProvider } from 'react-i18next'
 import { MemoryRouter } from 'react-router-dom'
 import {
   CatalogueMockError,
-  CatalogueMockMissingData,
   CatalogueMocks,
   CatalogueMocksPagination,
   CatalogueMocksPaginationWrongBackwards,
   CatalogueMocksPaginationWrongForwards,
   FilterAttributesMock,
-  FilterAttributesMockError,
 } from 'src/_mocks'
 import { i18n } from 'src/config'
 

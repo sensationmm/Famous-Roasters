@@ -1,7 +1,13 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import React from 'react'
 
+import { FilterData } from '../index'
 import { FiltersMenuMobile } from './FiltersMenuMobile'
+
+const initialFilters: FilterData[] = [
+  { key: 'vendor', isOpen: false, filterType: 'enum', filterValues: ['Rösttatte', 'Famous Roasters'] },
+  { key: 'packageSize', isOpen: false, filterType: 'enum', filterValues: ['100g', '250g', '500g', '1kg'] },
+]
 
 export default {
   title: 'Components/FiltersMenuMobile',
@@ -15,4 +21,7 @@ const Template: ComponentStory<typeof FiltersMenuMobile> = (args) => (
 )
 
 export const Default = Template.bind({})
-Default.args = {}
+Default.args = {
+  initialFilters,
+  onUpdateFilters: () => null,
+}
