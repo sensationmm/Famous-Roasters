@@ -52,7 +52,7 @@ exports[`Listbox component Renders correctly multiple 1`] = `
       <span
         class="block truncate text-sm leading-5"
       >
-        Sortieren nach...
+        Sortieren nach... (1)
       </span>
       <svg
         aria-hidden="true"

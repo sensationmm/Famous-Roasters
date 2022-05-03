@@ -49,7 +49,10 @@ export const Listbox: React.FC<ListboxProps> = ({
 
   const selectedOption = () => {
     if (multiple) {
-      return t(`${translationPrefix}.label`)
+      const appliedFiltersCount = activeItems.length
+      return appliedFiltersCount
+        ? t(`${translationPrefix}.label`) + ` (${appliedFiltersCount})`
+        : t(`${translationPrefix}.label`)
     } else {
       if (hasNoneItem && activeItems[0] && activeItems[0]?.name === noneItem.name) {
         return t(`${translationPrefix}.label`)
