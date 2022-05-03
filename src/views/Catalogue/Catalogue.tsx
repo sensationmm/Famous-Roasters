@@ -1,9 +1,10 @@
 import { useQuery } from '@apollo/client'
 import { ChevronRightIcon } from '@heroicons/react/solid'
-import { Collection, Maybe, Product, Scalars } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
+import { Collection, Maybe, Scalars } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 import {
   ErrorPrompt,
   FilterData,
@@ -18,12 +19,7 @@ import {
   TypographySize,
 } from 'src/components'
 import { Pagination } from 'src/components/Pagination'
-
-interface CustomProduct extends Product {
-  pricePerKg?: {
-    value: string
-  }
-}
+import { getSimplifiedProductId } from 'src/utils/formatters'
 
 interface CollectionQuery {
   collection: Collection
@@ -291,7 +287,11 @@ export const Catalogue: React.FC = () => {
   }
 
   const renderDiscoverProducts = () => {
-    if (loading || !filters.every((filter) => filter.filterValues && filter.filterValues?.length > 0)) {
+    if (
+      loading ||
+      !filters.length ||
+      !filters.every((filter) => filter.filterValues && filter.filterValues?.length > 0)
+    ) {
       return (
         <div className="flex h-64 mb-32 justify-center items-center">
           <Loader />
@@ -343,9 +343,14 @@ export const Catalogue: React.FC = () => {
           </div>
         </div>
         <div className="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-          {productNodes?.map((node: CustomProduct, i: number) => (
-            <ProductTile key={`title-${i}`} productNode={node} />
-          ))}
+          {productNodes?.map((node, i: number) => {
+            const id = getSimplifiedProductId(node.id)
+            return (
+              <Link to={`/product/${id}`} key={`product-tile-link-${i}`}>
+                <ProductTile key={`title-${i}`} productNode={node} />
+              </Link>
+            )
+          })}
         </div>
         <div className="mb-8">
           <Pagination
