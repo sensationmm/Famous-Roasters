@@ -1,6 +1,6 @@
 import { useQuery } from '@apollo/client'
 import { ChevronRightIcon } from '@heroicons/react/solid'
-import { Collection, Maybe, Product, Scalars } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
+import { Collection, Maybe, Scalars } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -20,12 +20,6 @@ import {
 } from 'src/components'
 import { Pagination } from 'src/components/Pagination'
 import { getSimplifiedProductId } from 'src/utils/formatters'
-
-interface CustomProduct extends Product {
-  pricePerKg?: {
-    value: string
-  }
-}
 
 interface CollectionQuery {
   collection: Collection
@@ -348,7 +342,7 @@ export const Catalogue: React.FC = () => {
           {productNodes?.map((node, i: number) => {
             const id = getSimplifiedProductId(node.id)
             return (
-              <Link to={`/product/${id}`} key={`product-tile-link-${id}`}>
+              <Link to={`/product/${id}`} key={`product-tile-link-${i}`}>
                 <ProductTile key={`title-${i}`} productNode={node} />
               </Link>
             )
