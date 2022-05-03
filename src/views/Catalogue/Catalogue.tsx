@@ -287,7 +287,11 @@ export const Catalogue: React.FC = () => {
   }
 
   const renderDiscoverProducts = () => {
-    if (loading || !filters.every((filter) => filter.filterValues && filter.filterValues?.length > 0)) {
+    if (
+      loading ||
+      !filters.length ||
+      !filters.every((filter) => filter.filterValues && filter.filterValues?.length > 0)
+    ) {
       return (
         <div className="flex h-64 mb-32 justify-center items-center">
           <Loader />
