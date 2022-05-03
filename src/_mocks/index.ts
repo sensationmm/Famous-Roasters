@@ -6,6 +6,7 @@ import {
   CatalogueMocksPaginationWrongBackwards,
   CatalogueMocksPaginationWrongForwards,
 } from './CatalogueMock'
+import { FilterAttributesMock, FilterAttributesMockError } from './FilterAttributesMock'
 import { ProductMock, ProductMockNoImage } from './ProductMock'
 
 export { CatalogueMocks as CatalogueMocks }
@@ -16,3 +17,5 @@ export { CatalogueMockError as CatalogueMockError }
 export { CatalogueMockMissingData as CatalogueMockMissingData }
 export { ProductMock as ProductMock }
 export { ProductMockNoImage as ProductMockNoImage }
+export { FilterAttributesMock as FilterAttributesMock }
+export { FilterAttributesMockError as FilterAttributesMockError }

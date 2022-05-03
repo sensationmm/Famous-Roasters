@@ -4,13 +4,14 @@ import { loader } from 'graphql.macro'
 import { ProductMock } from './ProductMock'
 const GET_PRODUCTS = loader('src/graphql/queries/products.query.graphql')
 
-const ProductEdge = {
-  node: {
-    ...ProductMock,
+const ProductNode = {
+  ...ProductMock,
+  pricePerKg: {
+    value: '10.0',
   },
 }
 
-const ProductEdges = Array.from(Array(12).keys()).map(() => ProductEdge)
+const ProductNodes = Array.from(Array(12).keys()).map(() => ProductNode)
 
 const CatalogueMock1 = {
   request: {
@@ -22,17 +23,20 @@ const CatalogueMock1 = {
       after: null,
       sortKey: undefined,
       reverse: undefined,
+      filters: undefined,
     },
   },
   result: {
     data: {
-      products: {
-        edges: [...ProductEdges],
-        pageInfo: {
-          hasNextPage: true,
-          hasPreviousPage: false,
-          startCursor: '111',
-          endCursor: '777',
+      collection: {
+        products: {
+          nodes: [...ProductNodes],
+          pageInfo: {
+            hasNextPage: true,
+            hasPreviousPage: false,
+            startCursor: '111',
+            endCursor: '777',
+          },
         },
       },
     },
@@ -50,6 +54,7 @@ const CatalogueMock2 = {
       after: null,
       sortKey: 'PRICE',
       reverse: false,
+      filters: undefined,
     },
   },
 }
@@ -65,6 +70,7 @@ const CatalogueMock3 = {
       after: null,
       sortKey: 'PRICE',
       reverse: true,
+      filters: undefined,
     },
   },
 }
@@ -78,8 +84,9 @@ const CatalogueMock4 = {
       last: null,
       before: null,
       after: null,
-      sortKey: 'CREATED_AT',
+      sortKey: 'CREATED',
       reverse: false,
+      filters: undefined,
     },
   },
 }
@@ -95,6 +102,7 @@ const CatalogueMock5 = {
       after: null,
       sortKey: 'BEST_SELLING',
       reverse: false,
+      filters: undefined,
     },
   },
 }
@@ -109,17 +117,20 @@ const CatalogueMock6 = {
       after: null,
       sortKey: undefined,
       reverse: undefined,
+      filters: undefined,
     },
   },
   result: {
     data: {
-      products: {
-        edges: [...ProductEdges],
-        pageInfo: {
-          hasNextPage: true,
-          hasPreviousPage: false,
-          startCursor: '1',
-          endCursor: '2',
+      collection: {
+        products: {
+          nodes: [...ProductNodes],
+          pageInfo: {
+            hasNextPage: true,
+            hasPreviousPage: false,
+            startCursor: '1',
+            endCursor: '2',
+          },
         },
       },
     },
@@ -136,17 +147,20 @@ const CatalogueMock7 = {
       after: '2',
       sortKey: undefined,
       reverse: undefined,
+      filters: undefined,
     },
   },
   result: {
     data: {
-      products: {
-        edges: [...ProductEdges],
-        pageInfo: {
-          hasNextPage: false,
-          hasPreviousPage: true,
-          startCursor: '2',
-          endCursor: '3',
+      collection: {
+        products: {
+          nodes: [...ProductNodes],
+          pageInfo: {
+            hasNextPage: false,
+            hasPreviousPage: true,
+            startCursor: '2',
+            endCursor: '3',
+          },
         },
       },
     },
@@ -163,17 +177,20 @@ const CatalogueMock8 = {
       after: null,
       sortKey: undefined,
       reverse: undefined,
+      filters: undefined,
     },
   },
   result: {
     data: {
-      products: {
-        edges: [...ProductEdges],
-        pageInfo: {
-          hasNextPage: true,
-          hasPreviousPage: false,
-          startCursor: '1',
-          endCursor: '2',
+      collection: {
+        products: {
+          nodes: [...ProductNodes],
+          pageInfo: {
+            hasNextPage: true,
+            hasPreviousPage: false,
+            startCursor: '1',
+            endCursor: '2',
+          },
         },
       },
     },
@@ -185,13 +202,15 @@ const CatalogueMock9 = {
   result: {
     ...CatalogueMock6.result,
     data: {
-      products: {
-        ...CatalogueMock6.result.data.products,
-        pageInfo: {
-          hasNextPage: true,
-          hasPreviousPage: false,
-          startCursor: null,
-          endCursor: null,
+      collection: {
+        products: {
+          ...CatalogueMock6.result.data.collection.products,
+          pageInfo: {
+            hasNextPage: true,
+            hasPreviousPage: false,
+            startCursor: null,
+            endCursor: null,
+          },
         },
       },
     },
@@ -203,13 +222,15 @@ const CatalogueMock10 = {
   result: {
     ...CatalogueMock7.result,
     data: {
-      products: {
-        ...CatalogueMock7.result.data.products,
-        pageInfo: {
-          hasNextPage: false,
-          hasPreviousPage: true,
-          startCursor: null,
-          endCursor: null,
+      collection: {
+        products: {
+          ...CatalogueMock7.result.data.collection.products,
+          pageInfo: {
+            hasNextPage: false,
+            hasPreviousPage: true,
+            startCursor: null,
+            endCursor: null,
+          },
         },
       },
     },
@@ -221,13 +242,15 @@ const CatalogueMock11 = {
   result: {
     ...CatalogueMock8.result,
     data: {
-      products: {
-        ...CatalogueMock8.result.data.products,
-        pageInfo: {
-          hasNextPage: true,
-          hasPreviousPage: false,
-          startCursor: null,
-          endCursor: null,
+      collection: {
+        products: {
+          ...CatalogueMock8.result.data.collection.products,
+          pageInfo: {
+            hasNextPage: true,
+            hasPreviousPage: false,
+            startCursor: null,
+            endCursor: null,
+          },
         },
       },
     },
@@ -258,6 +281,7 @@ export const CatalogueMockError = {
       after: null,
       sortKey: undefined,
       reverse: undefined,
+      filters: undefined,
     },
   },
   result: {
@@ -275,12 +299,15 @@ export const CatalogueMockMissingData = {
       after: null,
       sortKey: undefined,
       reverse: undefined,
+      filters: undefined,
     },
   },
   result: {
     data: {
-      products: {
-        edges: null,
+      collection: {
+        products: {
+          edges: null,
+        },
       },
     },
   },

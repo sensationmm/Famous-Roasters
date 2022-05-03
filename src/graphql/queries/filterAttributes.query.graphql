@@ -1,0 +1,20 @@
+query filterAttributes {
+    products(first: 30) {
+        nodes {
+            vendor
+            bean_type: metafield(namespace: "my_fields", key: "bean_type") {
+                value
+            }
+            origin: metafield(namespace: "my_fields", key: "origin") {
+                value
+            }
+            variants(first: 10) {
+                nodes {
+                    package_size: metafield(namespace: "my_fields", key: "package_size") {
+                        value
+                    }
+                }
+            }
+        }
+    }
+}

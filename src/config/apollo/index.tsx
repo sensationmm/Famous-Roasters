@@ -1,8 +1,14 @@
 import { ApolloClient, ApolloLink, createHttpLink, from, InMemoryCache, NormalizedCacheObject } from '@apollo/client'
 
-export const apolloClient = (): ApolloClient<NormalizedCacheObject> => {
+export const storeFrontClient = (): ApolloClient<NormalizedCacheObject> => {
   return new ApolloClient({
-    cache: new InMemoryCache(),
+    cache: new InMemoryCache({
+      typePolicies: {
+        Collection: {
+          keyFields: ['id'],
+        },
+      },
+    }),
     link: from([
       createHttpLink({
         uri: process.env.REACT_APP_SHOPIFY_STOREFRONT_GRAPHQL_ENDPOINT,

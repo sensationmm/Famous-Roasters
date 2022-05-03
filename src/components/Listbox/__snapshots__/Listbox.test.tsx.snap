@@ -16,7 +16,43 @@ exports[`Listbox component Renders correctly 1`] = `
       <span
         class="block truncate text-sm leading-5"
       >
-        Sortieren nach...
+        pages.catalogue.filters.sort.options.undefined
+      </span>
+      <svg
+        aria-hidden="true"
+        class="-mr-1 ml-2 h-5 w-5"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Listbox component Renders correctly multiple 1`] = `
+<div>
+  <div
+    class="w-full relative"
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
+      data-testid="button-listbox"
+      id="headlessui-listbox-button-5"
+      type="button"
+    >
+      <span
+        class="block truncate text-sm leading-5"
+      >
+        Sortieren nach... (1)
       </span>
       <svg
         aria-hidden="true"
@@ -46,13 +82,85 @@ exports[`Listbox component Renders correctly with initial value 1`] = `
       aria-haspopup="true"
       class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
       data-testid="button-listbox"
-      id="headlessui-listbox-button-2"
+      id="headlessui-listbox-button-4"
       type="button"
     >
       <span
         class="block truncate text-sm leading-5"
       >
         pages.catalogue.filters.sort.options.option2
+      </span>
+      <svg
+        aria-hidden="true"
+        class="-mr-1 ml-2 h-5 w-5"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Listbox component Renders correctly with no translated values 1`] = `
+<div>
+  <div
+    class="w-full relative"
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
+      data-testid="button-listbox"
+      id="headlessui-listbox-button-3"
+      type="button"
+    >
+      <span
+        class="block truncate text-sm leading-5"
+      >
+        option1
+      </span>
+      <svg
+        aria-hidden="true"
+        class="-mr-1 ml-2 h-5 w-5"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Listbox component Renders correctly with none item 1`] = `
+<div>
+  <div
+    class="w-full relative"
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
+      data-testid="button-listbox"
+      id="headlessui-listbox-button-2"
+      type="button"
+    >
+      <span
+        class="block truncate text-sm leading-5"
+      >
+        Sortieren nach...
       </span>
       <svg
         aria-hidden="true"
