@@ -1,0 +1,32 @@
+query product($id: ID) {
+    product(id: $id) {
+        id
+        title
+        vendor
+        bean_type: metafield(namespace: "my_fields", key: "bean_type") {
+            value
+        }
+        origin: metafield(namespace: "my_fields", key: "origin") {
+            value
+        }
+        variants(first: 24) {
+            nodes {
+                package_size: metafield(namespace: "my_fields", key: "package_size") {
+                    value
+                }
+                grind_type: metafield(namespace: "my_fields", key: "grind_type") {
+                    value
+                }
+                price
+            }
+        }
+        featuredImage {
+            url
+        }
+        images(first: 3) {
+            nodes {
+                url
+            }
+        }
+    }
+}
