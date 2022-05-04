@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import React from 'react'
-import { ProductMock } from 'src/_mocks'
+import { ProductMockData } from 'src/_mocks'
 
 import { ProductTile } from './ProductTile'
 
@@ -13,5 +13,5 @@ const Template: ComponentStory<typeof ProductTile> = (args) => <ProductTile {...
 
 export const Default = Template.bind({})
 Default.args = {
-  productNode: { ...ProductMock, pricePerKg: { value: '10.0' } },
+  productNode: { ...ProductMockData, pricePerKg: { value: '10.0' } },
 }

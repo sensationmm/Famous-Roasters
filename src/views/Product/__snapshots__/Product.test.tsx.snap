@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Product view Renders correctly 1`] = `
+exports[`Product view Renders correctly for a successful call 1`] = `
 <div>
   <div
     class="min-h-screen flex flex-col"
@@ -208,30 +208,84 @@ exports[`Product view Renders correctly 1`] = `
       </header>
     </div>
     <main
-      class="flex-grow flex items-center justify-center bg-brand-grey-whisper"
+      class="flex flex-grow w-full items-start justify-center bg-white mt-4 mb-4"
     >
-      <div>
+      <div
+        class="w-full max-w-7xl mx-auto px-6 xl:px-8"
+      >
         <div
-          class="font-syne flex justify-center text-4xl md:text-5xl xl:text-6xl"
+          class="grid gap-6 grid-cols-1 md:grid-cols-2"
         >
-          <h1>
-            <span>
-              Famous
-            </span>
-             
-            <span
-              class="font-bold"
+          <div
+            class="border border-dashed border-brand-grey-bombay"
+          >
+            <img
+              alt="Espresso Raritäten Set"
+              class="w-full"
+              src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+            />
+          </div>
+          <div>
+            <div>
+              <span
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Famous Roasters
+              </span>
+            </div>
+            <div>
+              <span
+                class="text-2xl leading-8 font-semibold"
+              >
+                Espresso Raritäten Set
+              </span>
+            </div>
+            <div
+              class="mt-4 border border-dashed border-brand-grey-bombay"
             >
-              Roasters
-            </span>
-          </h1>
+              <em>
+                Tags placeholder
+              </em>
+            </div>
+            <div
+              class="mt-4 border border-dashed border-brand-grey-bombay"
+            >
+              <em>
+                Taste placeholder
+              </em>
+            </div>
+            <div
+              class="mt-4 border border-dashed border-brand-grey-bombay"
+            >
+              <em>
+                Buy section placeholder
+              </em>
+            </div>
+          </div>
         </div>
         <div
-          class="text-center text-lg leading-7"
+          class="mt-4 border border-dashed border-brand-grey-bombay"
         >
-          Produkt
-           (product id = 
-          )
+          <div>
+            <em>
+              Get to know the coffee placeholder
+            </em>
+          </div>
+          <div>
+            <em>
+              Meet the roaster placeholder
+            </em>
+          </div>
+          <div>
+            <em>
+              Learn to brew the coffee placeholder
+            </em>
+          </div>
+          <div>
+            <em>
+              Find similar placeholder
+            </em>
+          </div>
         </div>
       </div>
     </main>
@@ -482,6 +536,31 @@ exports[`Product view Renders correctly 1`] = `
         </span>
       </div>
     </footer>
+  </div>
+</div>
+`;
+
+exports[`Product view Renders correctly for an error call on product 1`] = `
+<div>
+  <div
+    class="p-4 border border-coreUI-border bg-white"
+  >
+    <div
+      class="text-center text-base leading-6"
+    >
+      Ein Fehler ist aufgetreten
+    </div>
+    <div
+      class="mt-4 flex justify-center"
+    >
+      <button
+        class="inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+        data-testid="button-prompt"
+        role="button"
+      >
+        Erneut versuchen
+      </button>
+    </div>
   </div>
 </div>
 `;

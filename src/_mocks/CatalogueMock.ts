@@ -1,11 +1,11 @@
 import { GraphQLError } from 'graphql'
 import { loader } from 'graphql.macro'
 
-import { ProductMock } from './ProductMock'
+import { ProductMockData } from './ProductMock'
 const GET_PRODUCTS = loader('src/graphql/queries/products.query.graphql')
 
 const ProductNode = {
-  ...ProductMock,
+  ...ProductMockData,
   pricePerKg: {
     value: '10.0',
   },

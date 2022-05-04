@@ -1,6 +1,10 @@
 import { CurrencyCode, Product } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
+import { GraphQLError } from 'graphql'
+import { loader } from 'graphql.macro'
 
-export const ProductMock: Product = {
+const GET_PRODUCT = loader('src/graphql/queries/product.query.graphql')
+
+export const ProductMockData: Product = {
   availableForSale: false,
   collections: {
     edges: [],
@@ -92,7 +96,33 @@ export const ProductMock: Product = {
   },
 }
 
-export const ProductMockNoImage: Product = {
-  ...ProductMock,
+export const ProductMockDataNoImage: Product = {
+  ...ProductMockData,
   featuredImage: null,
+}
+
+export const ProductMock = {
+  request: {
+    query: GET_PRODUCT,
+    variables: {
+      id: 'gid://shopify/Product/123456',
+    },
+  },
+  result: {
+    data: {
+      product: ProductMockData,
+    },
+  },
+}
+
+export const ProductMockError = {
+  request: {
+    query: GET_PRODUCT,
+    variables: {
+      id: 'gid://shopify/Product/123456',
+    },
+  },
+  result: {
+    errors: [new GraphQLError('Error!')],
+  },
 }
