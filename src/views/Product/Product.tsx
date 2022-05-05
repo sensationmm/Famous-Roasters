@@ -4,7 +4,7 @@ import { loader } from 'graphql.macro'
 import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router-dom'
-import { ErrorPrompt, Layout, Loader, Typography, TypographySize, TypographyType } from 'src/components'
+import { Disclosure, ErrorPrompt, Layout, Loader, Typography, TypographySize, TypographyType } from 'src/components'
 
 import { getAPIProductId } from '../../utils'
 
@@ -62,6 +62,7 @@ export const Product: React.FC = () => {
           {/* Vendor and bean_type */}
           <div>
             <Typography
+              as="h2"
               type={TypographyType.Paragraph}
               size={TypographySize.Small}
               className="text-coreUI-text-secondary"
@@ -71,7 +72,7 @@ export const Product: React.FC = () => {
           </div>
           {/* Title */}
           <div>
-            <Typography type={TypographyType.Heading} size={TypographySize.Small}>
+            <Typography as="h1" type={TypographyType.Heading} size={TypographySize.Small}>
               {title}
             </Typography>
           </div>
@@ -93,25 +94,66 @@ export const Product: React.FC = () => {
   }
 
   const renderProductCollapsableBlocks = () => {
+    const placeHolderText = (
+      <>
+        <Typography as="p" className="mb-2">
+          Cup, crema doppio fair trade sweet cinnamon galão acerbic beans irish. Breve, id qui, bar et, eu, viennese as
+          body filter aftertaste cappuccino.
+        </Typography>
+        <Typography as="p" className="mb-2">
+          Irish cup frappuccino saucer dark white body arabica. Plunger pot ristretto trifecta single origin, acerbic
+          barista milk qui et aroma americano.
+        </Typography>
+        <Typography as="p" className="mb-2">
+          Trifecta cortado grinder variety aroma at mazagran, saucer carajillo french press rich extra. As, flavour,
+          foam, extra , frappuccino espresso trifecta macchiato robust flavour a ristretto.
+        </Typography>
+      </>
+    )
+
     return (
-      <div className="mt-4 border border-dashed border-brand-grey-bombay">
+      <>
         {/* Get to know the coffee block */}
-        <div>
-          <em>Get to know the coffee placeholder</em>
-        </div>
+        <Disclosure
+          className="border-t border-coreUI-border mt-6"
+          buttonChildren={
+            <Typography type={TypographyType.Heading} size={TypographySize.Tiny}>
+              {t('pages.product.sections.getToKnow.title')}
+            </Typography>
+          }
+          panelChildren={placeHolderText}
+        />
         {/* Meet the roaster block */}
-        <div>
-          <em>Meet the roaster placeholder</em>
-        </div>
+        <Disclosure
+          className="border-t border-coreUI-border"
+          buttonChildren={
+            <Typography type={TypographyType.Heading} size={TypographySize.Tiny}>
+              {t('pages.product.sections.meetTheRoaster.title')}
+            </Typography>
+          }
+          panelChildren={placeHolderText}
+        />
         {/* Learn to brew the coffee block */}
-        <div>
-          <em>Learn to brew the coffee placeholder</em>
-        </div>
+        <Disclosure
+          className="border-t border-coreUI-border"
+          buttonChildren={
+            <Typography type={TypographyType.Heading} size={TypographySize.Tiny}>
+              {t('pages.product.sections.learnToBrew.title')}
+            </Typography>
+          }
+          panelChildren={placeHolderText}
+        />
         {/* Find similar block */}
-        <div>
-          <em>Find similar placeholder</em>
-        </div>
-      </div>
+        <Disclosure
+          className="border-t border-coreUI-border"
+          buttonChildren={
+            <Typography type={TypographyType.Heading} size={TypographySize.Tiny}>
+              {t('pages.product.sections.findSimilar.title')}
+            </Typography>
+          }
+          panelChildren={placeHolderText}
+        />
+      </>
     )
   }
 

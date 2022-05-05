@@ -227,18 +227,18 @@ exports[`Product view Renders correctly for a successful call 1`] = `
           </div>
           <div>
             <div>
-              <span
+              <h2
                 class="text-coreUI-text-secondary text-sm leading-5"
               >
                 Famous Roasters
-              </span>
+              </h2>
             </div>
             <div>
-              <span
+              <h1
                 class="text-2xl leading-8 font-semibold"
               >
                 Espresso Raritäten Set
-              </span>
+              </h1>
             </div>
             <div
               class="mt-4 border border-dashed border-brand-grey-bombay"
@@ -264,28 +264,132 @@ exports[`Product view Renders correctly for a successful call 1`] = `
           </div>
         </div>
         <div
-          class="mt-4 border border-dashed border-brand-grey-bombay"
+          class="border-t border-coreUI-border mt-6 mx-auto w-full py-4"
         >
-          <div>
-            <em>
-              Get to know the coffee placeholder
-            </em>
-          </div>
-          <div>
-            <em>
-              Meet the roaster placeholder
-            </em>
-          </div>
-          <div>
-            <em>
-              Learn to brew the coffee placeholder
-            </em>
-          </div>
-          <div>
-            <em>
-              Find similar placeholder
-            </em>
-          </div>
+          <button
+            aria-expanded="false"
+            class="flex w-full justify-between py-2 text-left"
+            data-testid="button-disclosure-toggle"
+            id="headlessui-disclosure-button-1"
+            type="button"
+          >
+            <span
+              class="text-xl leading-7 font-semibold"
+            >
+              Lern deinen Kaffee kennen
+            </span>
+            <svg
+              aria-hidden="true"
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 4v16m8-8H4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="border-t border-coreUI-border mx-auto w-full py-4"
+        >
+          <button
+            aria-expanded="false"
+            class="flex w-full justify-between py-2 text-left"
+            data-testid="button-disclosure-toggle"
+            id="headlessui-disclosure-button-3"
+            type="button"
+          >
+            <span
+              class="text-xl leading-7 font-semibold"
+            >
+              Lern deine Rösterei kennen
+            </span>
+            <svg
+              aria-hidden="true"
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 4v16m8-8H4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="border-t border-coreUI-border mx-auto w-full py-4"
+        >
+          <button
+            aria-expanded="false"
+            class="flex w-full justify-between py-2 text-left"
+            data-testid="button-disclosure-toggle"
+            id="headlessui-disclosure-button-5"
+            type="button"
+          >
+            <span
+              class="text-xl leading-7 font-semibold"
+            >
+              Lern unsere Zubereitungsempfehlung kennen
+            </span>
+            <svg
+              aria-hidden="true"
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 4v16m8-8H4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="border-t border-coreUI-border mx-auto w-full py-4"
+        >
+          <button
+            aria-expanded="false"
+            class="flex w-full justify-between py-2 text-left"
+            data-testid="button-disclosure-toggle"
+            id="headlessui-disclosure-button-7"
+            type="button"
+          >
+            <span
+              class="text-xl leading-7 font-semibold"
+            >
+              Finde ähnliche Produkte
+            </span>
+            <svg
+              aria-hidden="true"
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 4v16m8-8H4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </main>

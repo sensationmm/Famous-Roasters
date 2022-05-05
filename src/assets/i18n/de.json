@@ -139,7 +139,21 @@
     },
     "product": {
       "navigation": "Produkt",
-      "title": "Produkt"
+      "title": "Produkt",
+      "sections": {
+        "findSimilar": {
+          "title": "Finde ähnliche Produkte"
+        },
+        "getToKnow": {
+          "title": "Lern deinen Kaffee kennen"
+        },
+        "learnToBrew": {
+          "title": "Lern unsere Zubereitungsempfehlung kennen"
+        },
+        "meetTheRoaster": {
+          "title": "Lern deine Rösterei kennen"
+        }
+      }
     },
     "tasteFinder": {
       "navigation": "Tastefinder",
