@@ -132,6 +132,9 @@ export const FiltersMenuMobile: React.FC<FiltersProps> = ({ onUpdateFilters, ini
                       )}
                       <Typography className="inline-flex">
                         {t(`pages.catalogue.filters.${filter.key}.label`)}
+                        {filter?.filterValuesSelected &&
+                          filter.filterValuesSelected.length > 0 &&
+                          ` (${filter.filterValuesSelected.length})`}
                       </Typography>
                     </div>
                     <ChevronRightIcon className="inline-flex h-6 w-6" aria-hidden="true" />
@@ -163,6 +166,7 @@ export const FiltersMenuMobile: React.FC<FiltersProps> = ({ onUpdateFilters, ini
       >
         <Typography size={TypographySize.Small} className="block truncate">
           {t(`pages.catalogue.filters.common.filtersMenu.filter`)}
+          {filtersApplied > 0 && ` (${filtersApplied})`}
         </Typography>
         <ChevronRightIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
       </button>
