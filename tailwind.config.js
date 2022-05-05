@@ -24,7 +24,7 @@ module.exports = {
                     secondary: '#646575',
                     tertiary: '#BEBFCD',
                 },
-                border: '#F0F1F7',
+                border: '#DADBE3',
             },
             brand: {
                 black: '#212121',
