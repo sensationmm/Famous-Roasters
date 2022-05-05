@@ -279,7 +279,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               <span
                 class="text-xl leading-7 font-semibold"
               >
-                Lern deinen Kaffee kennen
+                Alles zum Kaffee
               </span>
               <svg
                 aria-hidden="true"
@@ -311,7 +311,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               <span
                 class="text-xl leading-7 font-semibold"
               >
-                Lern deine Rösterei kennen
+                Rösterei im Profil
               </span>
               <svg
                 aria-hidden="true"
@@ -343,7 +343,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               <span
                 class="text-xl leading-7 font-semibold"
               >
-                Lern unsere Zubereitungsempfehlung kennen
+                Zubereitungstipps
               </span>
               <svg
                 aria-hidden="true"
@@ -375,7 +375,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               <span
                 class="text-xl leading-7 font-semibold"
               >
-                Finde ähnliche Produkte
+                Ähnliche Produkte
               </span>
               <svg
                 aria-hidden="true"

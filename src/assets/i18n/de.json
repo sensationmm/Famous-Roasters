@@ -142,16 +142,16 @@
       "title": "Produkt",
       "sections": {
         "findSimilar": {
-          "title": "Finde ähnliche Produkte"
+          "title": "Ähnliche Produkte"
         },
         "getToKnow": {
-          "title": "Lern deinen Kaffee kennen"
+          "title": "Alles zum Kaffee"
         },
         "learnToBrew": {
-          "title": "Lern unsere Zubereitungsempfehlung kennen"
+          "title": "Zubereitungstipps"
         },
         "meetTheRoaster": {
-          "title": "Lern deine Rösterei kennen"
+          "title": "Rösterei im Profil"
         }
       }
     },
