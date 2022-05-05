@@ -5,16 +5,18 @@ import React from 'react'
 interface DisclosureProps extends React.HTMLAttributes<HTMLElement> {
   buttonChildren: React.ReactNode
   panelChildren: React.ReactNode
+  defaultOpen?: boolean
 }
 
 export const Disclosure: React.FC<DisclosureProps> = ({
   buttonChildren,
   panelChildren,
+  defaultOpen = false,
   className,
 }: DisclosureProps) => {
   return (
     <div className={className ? `${className} mx-auto w-full py-4` : 'mx-auto w-full py-4'}>
-      <HeadlessUIDisclosure>
+      <HeadlessUIDisclosure defaultOpen={defaultOpen}>
         {({ open }) => (
           <>
             <HeadlessUIDisclosure.Button

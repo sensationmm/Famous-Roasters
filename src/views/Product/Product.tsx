@@ -111,49 +111,23 @@ export const Product: React.FC = () => {
       </>
     )
 
+    const blocksData = [{ key: 'getToKnow' }, { key: 'meetTheRoaster' }, { key: 'learnToBrew' }, { key: 'findSimilar' }]
+
     return (
-      <>
-        {/* Get to know the coffee block */}
-        <Disclosure
-          className="border-t border-coreUI-border mt-6"
-          buttonChildren={
-            <Typography type={TypographyType.Heading} size={TypographySize.Tiny}>
-              {t('pages.product.sections.getToKnow.title')}
-            </Typography>
-          }
-          panelChildren={placeHolderText}
-        />
-        {/* Meet the roaster block */}
-        <Disclosure
-          className="border-t border-coreUI-border"
-          buttonChildren={
-            <Typography type={TypographyType.Heading} size={TypographySize.Tiny}>
-              {t('pages.product.sections.meetTheRoaster.title')}
-            </Typography>
-          }
-          panelChildren={placeHolderText}
-        />
-        {/* Learn to brew the coffee block */}
-        <Disclosure
-          className="border-t border-coreUI-border"
-          buttonChildren={
-            <Typography type={TypographyType.Heading} size={TypographySize.Tiny}>
-              {t('pages.product.sections.learnToBrew.title')}
-            </Typography>
-          }
-          panelChildren={placeHolderText}
-        />
-        {/* Find similar block */}
-        <Disclosure
-          className="border-t border-coreUI-border"
-          buttonChildren={
-            <Typography type={TypographyType.Heading} size={TypographySize.Tiny}>
-              {t('pages.product.sections.findSimilar.title')}
-            </Typography>
-          }
-          panelChildren={placeHolderText}
-        />
-      </>
+      <div className="mt-6">
+        {blocksData.map((blockData, idx) => (
+          <Disclosure
+            key={`pdp-disclosure-${idx}`}
+            className="border-t border-coreUI-border"
+            buttonChildren={
+              <Typography type={TypographyType.Heading} size={TypographySize.Tiny}>
+                {t(`pages.product.sections.${blockData.key}.title`)}
+              </Typography>
+            }
+            panelChildren={placeHolderText}
+          />
+        ))}
+      </div>
     )
   }
 
