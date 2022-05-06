@@ -31,7 +31,7 @@ export const Carousel: React.FC<CarouselProps> = ({ images }: CarouselProps) => 
           clickable: true,
         }}
         slidesPerView={1}
-        onSwiper={(swiper) => setSwiper(swiper)}
+        onSwiper={(swiperElement) => setSwiper(swiperElement)}
         className="w-full"
         style={{
           paddingBottom: 32,
