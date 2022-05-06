@@ -10,6 +10,8 @@ import {
   ErrorPrompt,
   Layout,
   Loader,
+  Tag,
+  TagType,
   Typography,
   TypographySize,
   TypographyType,
@@ -23,6 +25,11 @@ interface ProductMeta {
 
 interface ProductCustom {
   bean_type: ProductMeta
+  aroma: ProductMeta
+  sweetness: ProductMeta
+  body: ProductMeta
+  bitterness: ProductMeta
+  acidity: ProductMeta
 }
 
 interface ProductQuery {
@@ -46,7 +53,7 @@ export const Product: React.FC = () => {
     },
   })
 
-  const { title, vendor, bean_type, images } = data?.product || {}
+  const { title, vendor, bean_type, aroma, images } = data?.product || {}
 
   if (loading) {
     return (
@@ -78,15 +85,17 @@ export const Product: React.FC = () => {
             </Typography>
           </div>
           {/* Title */}
-          <div>
+          <div className="border-b border-brand-grey-whisper pb-4">
             <Typography as="h1" type={TypographyType.Heading} size={TypographySize.Small}>
               {title}
             </Typography>
           </div>
-          {/* Tags */}
-          <div className="mt-4 border border-dashed border-brand-grey-bombay">
-            <em>Tags placeholder</em>
-          </div>
+          {/* Aroma tag */}
+          {aroma && (
+            <div className="mt-4">
+              <Tag type={TagType.Aroma} value={aroma.value} />
+            </div>
+          )}
           {/* Taste */}
           <div className="mt-4 border border-dashed border-brand-grey-bombay">
             <em>Taste placeholder</em>

@@ -40,6 +40,13 @@ module.exports = {
                 },
                 brown: '#8E7C7A',
             },
+            tags: {
+                capeHoney: '#FFE7A9',
+                cottonCandy: '#FFB5DE',
+                melrose: '#CEBDFF',
+                coldTurkey: '#C7B2B2',
+                yourPink: '#FFC5C5',
+            }
         },
         fontFamily: {
             'sans': ['Open Sans', 'sans-serif'],

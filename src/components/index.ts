@@ -13,6 +13,7 @@ import { Loader } from './Loader'
 import { Navigation, NavigationTheme } from './Navigation'
 import { ProductTile } from './ProductTile'
 import { TabsNavigation } from './TabsNavigation'
+import { Tag, TagType } from './Tag'
 import { Typography, TypographySize, TypographyType } from './Typography'
 
 export { Badge as Badge }
@@ -36,6 +37,8 @@ export { Navigation as Navigation }
 export { NavigationTheme as NavigationTheme }
 export { ProductTile as ProductTile }
 export { TabsNavigation as TabsNavigation }
+export { Tag as Tag }
+export { TagType as TagType }
 export { Typography as Typography }
 export { TypographyType as TypographyType }
 export { TypographySize as TypographySize }
