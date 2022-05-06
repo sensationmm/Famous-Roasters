@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TasteProfile component Renders correctly 1`] = `
+<div>
+  <div>
+    Values are: sweetness(
+    2
+    ), body(
+    3
+    ), bitterness(
+    1
+    ), acidity(
+    2
+    ).
+  </div>
+</div>
+`;

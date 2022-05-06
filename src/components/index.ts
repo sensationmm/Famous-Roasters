@@ -14,6 +14,7 @@ import { Navigation, NavigationTheme } from './Navigation'
 import { ProductTile } from './ProductTile'
 import { TabsNavigation } from './TabsNavigation'
 import { Tag, TagType } from './Tag'
+import { TasteProfile } from './TasteProfile'
 import { Typography, TypographySize, TypographyType } from './Typography'
 
 export { Badge as Badge }
@@ -39,6 +40,7 @@ export { ProductTile as ProductTile }
 export { TabsNavigation as TabsNavigation }
 export { Tag as Tag }
 export { TagType as TagType }
+export { TasteProfile as TasteProfile }
 export { Typography as Typography }
 export { TypographyType as TypographyType }
 export { TypographySize as TypographySize }

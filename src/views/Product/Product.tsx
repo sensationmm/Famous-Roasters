@@ -12,6 +12,7 @@ import {
   Loader,
   Tag,
   TagType,
+  TasteProfile,
   Typography,
   TypographySize,
   TypographyType,
@@ -23,13 +24,17 @@ interface ProductMeta {
   value: string
 }
 
+interface ProductMetaInteger {
+  value: number
+}
+
 interface ProductCustom {
   bean_type: ProductMeta
   aroma: ProductMeta
-  sweetness: ProductMeta
-  body: ProductMeta
-  bitterness: ProductMeta
-  acidity: ProductMeta
+  sweetness: ProductMetaInteger
+  body: ProductMetaInteger
+  bitterness: ProductMetaInteger
+  acidity: ProductMetaInteger
 }
 
 interface ProductQuery {
@@ -53,7 +58,7 @@ export const Product: React.FC = () => {
     },
   })
 
-  const { title, vendor, bean_type, aroma, images } = data?.product || {}
+  const { title, vendor, bean_type, aroma, sweetness, body, bitterness, acidity, images } = data?.product || {}
 
   if (loading) {
     return (
@@ -96,10 +101,17 @@ export const Product: React.FC = () => {
               <Tag type={TagType.Aroma} value={aroma.value} />
             </div>
           )}
-          {/* Taste */}
-          <div className="mt-4 border border-dashed border-brand-grey-bombay">
-            <em>Taste placeholder</em>
-          </div>
+          {/* Taste profile */}
+          {sweetness && body && bitterness && acidity && (
+            <div className="mt-4">
+              <TasteProfile
+                sweetness={sweetness.value}
+                body={body.value}
+                bitterness={bitterness.value}
+                acidity={acidity.value}
+              />
+            </div>
+          )}
           {/* Buy section */}
           <div className="mt-4 border border-dashed border-brand-grey-bombay">
             <em>Buy section placeholder</em>
