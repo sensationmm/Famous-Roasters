@@ -1,10 +1,18 @@
-import { CurrencyCode, Product } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
+import { CurrencyCode, Product, Product as ProductType } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { GraphQLError } from 'graphql'
 import { loader } from 'graphql.macro'
 
 const GET_PRODUCT = loader('src/graphql/queries/product.query.graphql')
 
-export const ProductMockData: Product = {
+interface ProductMeta {
+  value: string
+}
+
+interface ProductCustom {
+  bean_type?: ProductMeta
+}
+
+export const ProductMockData: ProductType = {
   availableForSale: false,
   collections: {
     edges: [],
@@ -37,7 +45,20 @@ export const ProductMockData: Product = {
   id: 'gid://shopify/Product/7655228866776',
   images: {
     edges: [],
-    nodes: [],
+    nodes: [
+      {
+        url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153',
+        originalSrc: '',
+        src: '',
+        transformedSrc: '',
+      },
+      {
+        url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153',
+        originalSrc: '',
+        src: '',
+        transformedSrc: '',
+      },
+    ],
     pageInfo: {
       hasNextPage: false,
       hasPreviousPage: false,
@@ -96,6 +117,21 @@ export const ProductMockData: Product = {
   },
 }
 
+export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
+  ...ProductMockData,
+  images: {
+    edges: [],
+    nodes: [],
+    pageInfo: {
+      hasNextPage: false,
+      hasPreviousPage: false,
+    },
+  },
+  bean_type: {
+    value: 'Arabica',
+  },
+}
+
 export const ProductMockDataNoImage: Product = {
   ...ProductMockData,
   featuredImage: null,
@@ -111,6 +147,20 @@ export const ProductMock = {
   result: {
     data: {
       product: ProductMockData,
+    },
+  },
+}
+
+export const ProductMockWithCustomMetadata = {
+  request: {
+    query: GET_PRODUCT,
+    variables: {
+      id: 'gid://shopify/Product/123456',
+    },
+  },
+  result: {
+    data: {
+      product: ProductMockDataWithCustomMetadata,
     },
   },
 }

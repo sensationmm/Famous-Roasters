@@ -20,9 +20,6 @@ query product($id: ID) {
                 price
             }
         }
-        featuredImage {
-            url
-        }
         images(first: 3) {
             nodes {
                 url

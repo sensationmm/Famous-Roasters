@@ -1,5 +1,6 @@
 import { Badge } from './Badge'
 import { Button, ButtonEmphasis, ButtonSize } from './Button'
+import { Carousel } from './Carousel'
 import { Disclosure } from './Disclosure'
 import { ErrorPrompt } from './ErrorPrompt'
 import { FilterData, FilterMobile } from './FilterMobile'
@@ -18,6 +19,7 @@ export { Badge as Badge }
 export { Button as Button }
 export { ButtonEmphasis as ButtonEmphasis }
 export { ButtonSize as ButtonSize }
+export { Carousel as Carousel }
 export { Disclosure as Disclosure }
 export { ErrorPrompt as ErrorPrompt }
 export type { FilterData as FilterData }
