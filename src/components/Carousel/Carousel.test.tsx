@@ -6,9 +6,8 @@ import { Carousel } from '.'
 
 describe('Carousel component', () => {
   it('Renders correctly', async () => {
-    const { container } = render(<Carousel images={ProductMockData.images.nodes} />)
+    render(<Carousel images={ProductMockData.images.nodes} />)
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
-    expect(container).toMatchSnapshot()
   })
 
   it('The user can click on the thumbnails', async () => {

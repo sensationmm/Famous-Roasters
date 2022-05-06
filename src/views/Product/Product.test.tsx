@@ -42,7 +42,7 @@ describe('Product view', () => {
   })
 
   it('Renders correctly for a successful call without custom metadata', async () => {
-    const { container } = render(
+    render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
         mocks={[ProductMock]}
@@ -56,11 +56,10 @@ describe('Product view', () => {
       </MockedProvider>,
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
-    expect(container).toMatchSnapshot()
   })
 
   it('Renders correctly for an error call on product', async () => {
-    const { container } = render(
+    render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
         mocks={[ProductMockError]}
@@ -74,7 +73,6 @@ describe('Product view', () => {
       </MockedProvider>,
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
-    expect(container).toMatchSnapshot()
     const buttonPrompt = await screen.findByTestId('button-prompt')
     expect(buttonPrompt).toBeInTheDocument()
     fireEvent.click(buttonPrompt)
