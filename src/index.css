@@ -11,3 +11,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+:root {
+  --swiper-theme-color: #646575 !important;
+}

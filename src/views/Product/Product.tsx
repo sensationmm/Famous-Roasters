@@ -4,7 +4,16 @@ import { loader } from 'graphql.macro'
 import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router-dom'
-import { Disclosure, ErrorPrompt, Layout, Loader, Typography, TypographySize, TypographyType } from 'src/components'
+import {
+  Carousel,
+  Disclosure,
+  ErrorPrompt,
+  Layout,
+  Loader,
+  Typography,
+  TypographySize,
+  TypographyType,
+} from 'src/components'
 
 import { getAPIProductId } from '../../utils'
 
@@ -37,7 +46,7 @@ export const Product: React.FC = () => {
     },
   })
 
-  const { title, featuredImage, vendor, bean_type } = data?.product || {}
+  const { title, vendor, bean_type, images } = data?.product || {}
 
   if (loading) {
     return (
@@ -47,7 +56,7 @@ export const Product: React.FC = () => {
     )
   }
 
-  if (error || !featuredImage) {
+  if (error || !images || images.nodes.length < 1) {
     return <ErrorPrompt promptAction={() => history.go(0)} />
   }
 
@@ -55,9 +64,7 @@ export const Product: React.FC = () => {
     return (
       <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
         {/* Images */}
-        <div className="border border-dashed border-brand-grey-bombay">
-          <img src={featuredImage.url} alt={title} className="w-full" />
-        </div>
+        <Carousel images={images.nodes} />
         <div>
           {/* Vendor and bean_type */}
           <div>
