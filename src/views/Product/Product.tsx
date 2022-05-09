@@ -10,6 +10,9 @@ import {
   ErrorPrompt,
   Layout,
   Loader,
+  Tag,
+  TagType,
+  TasteProfile,
   Typography,
   TypographySize,
   TypographyType,
@@ -21,8 +24,17 @@ interface ProductMeta {
   value: string
 }
 
+interface ProductMetaInteger {
+  value: number
+}
+
 interface ProductCustom {
   bean_type: ProductMeta
+  aroma: ProductMeta
+  sweetness: ProductMetaInteger
+  body: ProductMetaInteger
+  bitterness: ProductMetaInteger
+  acidity: ProductMetaInteger
 }
 
 interface ProductQuery {
@@ -46,7 +58,7 @@ export const Product: React.FC = () => {
     },
   })
 
-  const { title, vendor, bean_type, images } = data?.product || {}
+  const { title, vendor, bean_type, aroma, sweetness, body, bitterness, acidity, images } = data?.product || {}
 
   if (loading) {
     return (
@@ -56,7 +68,7 @@ export const Product: React.FC = () => {
     )
   }
 
-  if (error || !images || images.nodes.length < 1) {
+  if (error) {
     return <ErrorPrompt promptAction={() => history.go(0)} />
   }
 
@@ -64,7 +76,7 @@ export const Product: React.FC = () => {
     return (
       <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
         {/* Images */}
-        <Carousel images={images.nodes} />
+        {images && images.nodes.length > 0 && <Carousel images={images.nodes} />}
         <div>
           {/* Vendor and bean_type */}
           <div>
@@ -78,19 +90,32 @@ export const Product: React.FC = () => {
             </Typography>
           </div>
           {/* Title */}
-          <div>
+          <div className="border-b border-brand-grey-whisper pb-4">
             <Typography as="h1" type={TypographyType.Heading} size={TypographySize.Small}>
               {title}
             </Typography>
           </div>
-          {/* Tags */}
+          {/* Aroma tag */}
+          {aroma && (
+            <div className="mt-4">
+              <Tag type={TagType.Aroma} value={aroma.value} />
+            </div>
+          )}
+          {/* Flavour notes section */}
           <div className="mt-4 border border-dashed border-brand-grey-bombay">
-            <em>Tags placeholder</em>
+            <em>Flavour notes placeholder</em>
           </div>
-          {/* Taste */}
-          <div className="mt-4 border border-dashed border-brand-grey-bombay">
-            <em>Taste placeholder</em>
-          </div>
+          {/* Taste profile */}
+          {sweetness && body && bitterness && acidity && (
+            <div className="mt-4">
+              <TasteProfile
+                sweetness={sweetness.value}
+                body={body.value}
+                bitterness={bitterness.value}
+                acidity={acidity.value}
+              />
+            </div>
+          )}
           {/* Buy section */}
           <div className="mt-4 border border-dashed border-brand-grey-bombay">
             <em>Buy section placeholder</em>

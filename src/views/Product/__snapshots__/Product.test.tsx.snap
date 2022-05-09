@@ -3,24 +3,1054 @@
 exports[`Product view Renders correctly for a successful call 1`] = `
 <div>
   <div
-    class="p-4 border border-coreUI-border bg-white"
+    class="min-h-screen flex flex-col"
   >
     <div
-      class="text-center text-base leading-6"
+      class="bg-white"
     >
-      Ein Fehler ist aufgetreten
-    </div>
-    <div
-      class="mt-4 flex justify-center"
-    >
-      <button
-        class="inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
-        data-testid="button-prompt"
-        role="button"
+      <header
+        class="relative bg-white"
       >
-        Erneut versuchen
-      </button>
+        <nav
+          aria-label="Top"
+          class="max-w-7xl mx-auto px-4 md:px-6 xl:px-8"
+        >
+          <div
+            class="h-16 mt-0.5 flex items-center justify-between border-b border-brand-grey-whisper"
+          >
+            <div
+              class="flex-1 flex items-center xl:hidden"
+            >
+              <button
+                class="-ml-2 bg-white p-2 rounded-md text-gray-400"
+                data-testid="button-open"
+                type="button"
+              >
+                <span
+                  class="sr-only"
+                >
+                  Open menu
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 6h16M4 12h16M4 18h16"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="hidden xl:flex-1 xl:block xl:self-stretch"
+            >
+              <div
+                class="h-full flex space-x-8"
+              >
+                <a
+                  class="flex items-center text-gray-700 hover:text-gray-800"
+                  href="/taste-finder"
+                >
+                  <span
+                    class="uppercase text-sm leading-5"
+                  >
+                    Tastefinder
+                  </span>
+                </a>
+                <a
+                  class="flex items-center text-gray-700 hover:text-gray-800"
+                  href="/our-roasters"
+                >
+                  <span
+                    class="uppercase text-sm leading-5"
+                  >
+                    Unsere Röster
+                  </span>
+                </a>
+              </div>
+            </div>
+            <a
+              class="flex h-full items-center pl-2 pr-2"
+              href="/"
+            >
+              <span
+                class="sr-only"
+              >
+                Famous Roasters
+              </span>
+              <div
+                class="xl:hidden font-syne text-3xl"
+              >
+                <span>
+                  F
+                </span>
+                <span
+                  class="font-extrabold"
+                >
+                  R
+                </span>
+              </div>
+              <div
+                class="hidden xl:block font-syne text-xl text-center"
+              >
+                <div
+                  class="h-5"
+                >
+                  Famous
+                </div>
+                <div
+                  class="font-extrabold"
+                >
+                  Roasters
+                </div>
+              </div>
+            </a>
+            <div
+              class="flex-1 flow-root flex h-full items-center"
+            >
+              <div
+                class="flex-1 flex h-full items-center justify-end xl:flex-none"
+              >
+                <div
+                  class="hidden h-full xl:flex space-x-8 justify-end"
+                >
+                  <a
+                    class="flex items-center text-gray-700 hover:text-gray-800"
+                    href="/about"
+                  >
+                    <span
+                      class="uppercase text-sm leading-5"
+                    >
+                      Über uns
+                    </span>
+                  </a>
+                  <a
+                    class="flex items-center text-gray-700 hover:text-gray-800"
+                    href="/contact"
+                  >
+                    <span
+                      class="uppercase text-sm leading-5"
+                    >
+                      Kontakt
+                    </span>
+                  </a>
+                </div>
+                <a
+                  class="hidden xl:block p-2 text-gray-400 hover:text-gray-500 xl:ml-6"
+                  href="/account"
+                >
+                  <span
+                    class="sr-only"
+                  >
+                    Konto
+                  </span>
+                  <svg
+                    aria-hidden="true"
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+                <div
+                  class="ml-4 flow-root xl:ml-6"
+                >
+                  <a
+                    class="group -m-2 p-2 flex items-center"
+                    href="/cart"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span
+                      class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800"
+                    >
+                      0
+                    </span>
+                    <span
+                      class="sr-only"
+                    >
+                      items in cart, view bag
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
     </div>
+    <main
+      class="flex flex-grow w-full items-start justify-center bg-white mt-4 mb-4"
+    >
+      <div
+        class="w-full max-w-7xl mx-auto px-6 xl:px-8"
+      >
+        <div
+          class="grid gap-6 grid-cols-1 md:grid-cols-2"
+        >
+          <div>
+            <div>
+              <h2
+                class="text-coreUI-text-secondary text-sm leading-5"
+              >
+                Famous Roasters | Arabica
+              </h2>
+            </div>
+            <div
+              class="border-b border-brand-grey-whisper pb-4"
+            >
+              <h1
+                class="text-2xl leading-8 font-semibold"
+              >
+                Espresso Raritäten Set
+              </h1>
+            </div>
+            <div
+              class="mt-4"
+            >
+              <div
+                class="inline-flex rounded-full px-3 py-1 bg-tags-capeHoney"
+              >
+                <span
+                  class="text-xs leading-4"
+                >
+                  experimentell & komplex
+                </span>
+              </div>
+            </div>
+            <div
+              class="mt-4 border border-dashed border-brand-grey-bombay"
+            >
+              <em>
+                Flavour notes placeholder
+              </em>
+            </div>
+            <div
+              class="mt-4"
+            >
+              <div
+                class="grid gap-4 grid-cols-2 grid-rows-2"
+              >
+                <div>
+                  <div>
+                    <div
+                      class="inline-flex items-center rounded-full px-3 py-1 bg-coreUI-background-images"
+                    >
+                      <svg
+                        height="10"
+                        viewBox="0 0 10 8"
+                        width="10"
+                      >
+                        <path
+                          d="M9.43099 2.83089C9.16185 1.75199 8.44466 1.02499 7.49819 0.676592C6.55171 0.328153 5.37668 0.354323 4.17978 0.765654C2.80827 1.23674 1.75907 1.88475 1.13637 2.64455C1.12738 2.65549 1.11957 2.66642 1.11098 2.67736C0.864095 2.97658 0.691445 3.29298 0.599644 3.62424C0.449254 4.12229 0.465264 4.64803 0.673864 5.18243C1.00667 6.03477 1.58168 6.76603 2.39187 7.18633C3.20242 7.60624 4.24618 7.71249 5.50708 7.32383C6.79418 6.92695 7.88439 6.25823 8.60009 5.46133C9.31579 4.66443 9.65675 3.73558 9.43099 2.83089ZM9.27631 2.48831C8.58919 3.06799 6.6775 4.4086 4.86649 4.3C3.36338 4.22227 2.10868 4.93945 0.907876 5.6059C0.832485 5.46254 0.764906 5.31449 0.705146 5.16176C0.679365 5.09574 0.65788 5.03012 0.637957 4.96449C1.94226 4.24457 3.29657 3.48399 4.90247 3.62149C6.79698 3.69493 7.83218 2.84025 8.99309 1.9192C9.10442 2.09303 9.19975 2.28245 9.27631 2.48831Z"
+                          fill="#212121"
+                          stroke="none"
+                          stroke-width="none"
+                        />
+                      </svg>
+                      <svg
+                        class="ml-0.5"
+                        height="10"
+                        viewBox="0 0 10 8"
+                        width="10"
+                      >
+                        <path
+                          d="M9.18843 2.89141L9.18843 2.8914C9.18764 2.88822 9.18684 2.88504 9.18604 2.88187C8.80763 3.17406 8.25235 3.55289 7.60442 3.87599C6.79638 4.27893 5.82012 4.60734 4.85262 4.54962C3.50616 4.4803 2.36492 5.08407 1.21503 5.72136C1.53211 6.24814 1.96482 6.68312 2.50687 6.96435L9.18843 2.89141ZM9.18843 2.89141C9.38777 3.69024 9.0944 4.5368 8.41409 5.29428C7.73414 6.05138 6.68586 6.69873 5.43341 7.08492M9.18843 2.89141L5.43341 7.08492M5.43341 7.08492C4.2242 7.45766 3.24977 7.34918 2.50699 6.96441L5.43341 7.08492ZM0.77406 4.60386C0.726227 4.29237 0.75066 3.98897 0.838971 3.6965L0.839034 3.69652L0.840564 3.691C0.92158 3.39866 1.07563 3.11303 1.30381 2.83647L1.30387 2.83651L1.30755 2.83182C1.31881 2.8175 1.32147 2.81377 1.32317 2.81139C1.32456 2.80945 1.32531 2.8084 1.32955 2.80323L1.32973 2.80302C1.91221 2.09229 2.91385 1.46482 4.26099 1.00209L4.26103 1.00208C5.41635 0.605041 6.53083 0.586871 7.41182 0.911199L7.41183 0.911202C7.92803 1.10122 8.36812 1.41118 8.69292 1.83824C7.59359 2.70994 6.63254 3.43669 4.91779 3.37189C3.33793 3.23867 1.99537 3.93171 0.77406 4.60386Z"
+                          fill="none"
+                          stroke="#212121"
+                          stroke-width="0.5"
+                        />
+                      </svg>
+                      <svg
+                        class="ml-0.5"
+                        height="10"
+                        viewBox="0 0 10 8"
+                        width="10"
+                      >
+                        <path
+                          d="M9.18843 2.89141L9.18843 2.8914C9.18764 2.88822 9.18684 2.88504 9.18604 2.88187C8.80763 3.17406 8.25235 3.55289 7.60442 3.87599C6.79638 4.27893 5.82012 4.60734 4.85262 4.54962C3.50616 4.4803 2.36492 5.08407 1.21503 5.72136C1.53211 6.24814 1.96482 6.68312 2.50687 6.96435L9.18843 2.89141ZM9.18843 2.89141C9.38777 3.69024 9.0944 4.5368 8.41409 5.29428C7.73414 6.05138 6.68586 6.69873 5.43341 7.08492M9.18843 2.89141L5.43341 7.08492M5.43341 7.08492C4.2242 7.45766 3.24977 7.34918 2.50699 6.96441L5.43341 7.08492ZM0.77406 4.60386C0.726227 4.29237 0.75066 3.98897 0.838971 3.6965L0.839034 3.69652L0.840564 3.691C0.92158 3.39866 1.07563 3.11303 1.30381 2.83647L1.30387 2.83651L1.30755 2.83182C1.31881 2.8175 1.32147 2.81377 1.32317 2.81139C1.32456 2.80945 1.32531 2.8084 1.32955 2.80323L1.32973 2.80302C1.91221 2.09229 2.91385 1.46482 4.26099 1.00209L4.26103 1.00208C5.41635 0.605041 6.53083 0.586871 7.41182 0.911199L7.41183 0.911202C7.92803 1.10122 8.36812 1.41118 8.69292 1.83824C7.59359 2.70994 6.63254 3.43669 4.91779 3.37189C3.33793 3.23867 1.99537 3.93171 0.77406 4.60386Z"
+                          fill="none"
+                          stroke="#212121"
+                          stroke-width="0.5"
+                        />
+                      </svg>
+                      <span
+                        class="ml-2 text-xs leading-4"
+                      >
+                        Leicht
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="inline-flex"
+                  >
+                    <span
+                      class="text-coreUI-text-secondary text-xs leading-4 font-semibold"
+                    >
+                      Lebendigkeit
+                    </span>
+                    <div
+                      class="flex md:hidden"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="h-4 w-4 ml-1 text-coreUI-text-secondary cursor-pointer"
+                        data-testid="drawer-trigger"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="hidden md:flex"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="h-4 w-4 ml-1 text-coreUI-text-secondary cursor-pointer"
+                        data-testid="dialog-trigger"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <div
+                      class="inline-flex items-center rounded-full px-3 py-1 bg-coreUI-background-images"
+                    >
+                      <svg
+                        height="10"
+                        viewBox="0 0 10 8"
+                        width="10"
+                      >
+                        <path
+                          d="M9.43099 2.83089C9.16185 1.75199 8.44466 1.02499 7.49819 0.676592C6.55171 0.328153 5.37668 0.354323 4.17978 0.765654C2.80827 1.23674 1.75907 1.88475 1.13637 2.64455C1.12738 2.65549 1.11957 2.66642 1.11098 2.67736C0.864095 2.97658 0.691445 3.29298 0.599644 3.62424C0.449254 4.12229 0.465264 4.64803 0.673864 5.18243C1.00667 6.03477 1.58168 6.76603 2.39187 7.18633C3.20242 7.60624 4.24618 7.71249 5.50708 7.32383C6.79418 6.92695 7.88439 6.25823 8.60009 5.46133C9.31579 4.66443 9.65675 3.73558 9.43099 2.83089ZM9.27631 2.48831C8.58919 3.06799 6.6775 4.4086 4.86649 4.3C3.36338 4.22227 2.10868 4.93945 0.907876 5.6059C0.832485 5.46254 0.764906 5.31449 0.705146 5.16176C0.679365 5.09574 0.65788 5.03012 0.637957 4.96449C1.94226 4.24457 3.29657 3.48399 4.90247 3.62149C6.79698 3.69493 7.83218 2.84025 8.99309 1.9192C9.10442 2.09303 9.19975 2.28245 9.27631 2.48831Z"
+                          fill="#212121"
+                          stroke="none"
+                          stroke-width="none"
+                        />
+                      </svg>
+                      <svg
+                        class="ml-0.5"
+                        height="10"
+                        viewBox="0 0 10 8"
+                        width="10"
+                      >
+                        <path
+                          d="M9.18843 2.89141L9.18843 2.8914C9.18764 2.88822 9.18684 2.88504 9.18604 2.88187C8.80763 3.17406 8.25235 3.55289 7.60442 3.87599C6.79638 4.27893 5.82012 4.60734 4.85262 4.54962C3.50616 4.4803 2.36492 5.08407 1.21503 5.72136C1.53211 6.24814 1.96482 6.68312 2.50687 6.96435L9.18843 2.89141ZM9.18843 2.89141C9.38777 3.69024 9.0944 4.5368 8.41409 5.29428C7.73414 6.05138 6.68586 6.69873 5.43341 7.08492M9.18843 2.89141L5.43341 7.08492M5.43341 7.08492C4.2242 7.45766 3.24977 7.34918 2.50699 6.96441L5.43341 7.08492ZM0.77406 4.60386C0.726227 4.29237 0.75066 3.98897 0.838971 3.6965L0.839034 3.69652L0.840564 3.691C0.92158 3.39866 1.07563 3.11303 1.30381 2.83647L1.30387 2.83651L1.30755 2.83182C1.31881 2.8175 1.32147 2.81377 1.32317 2.81139C1.32456 2.80945 1.32531 2.8084 1.32955 2.80323L1.32973 2.80302C1.91221 2.09229 2.91385 1.46482 4.26099 1.00209L4.26103 1.00208C5.41635 0.605041 6.53083 0.586871 7.41182 0.911199L7.41183 0.911202C7.92803 1.10122 8.36812 1.41118 8.69292 1.83824C7.59359 2.70994 6.63254 3.43669 4.91779 3.37189C3.33793 3.23867 1.99537 3.93171 0.77406 4.60386Z"
+                          fill="none"
+                          stroke="#212121"
+                          stroke-width="0.5"
+                        />
+                      </svg>
+                      <svg
+                        class="ml-0.5"
+                        height="10"
+                        viewBox="0 0 10 8"
+                        width="10"
+                      >
+                        <path
+                          d="M9.18843 2.89141L9.18843 2.8914C9.18764 2.88822 9.18684 2.88504 9.18604 2.88187C8.80763 3.17406 8.25235 3.55289 7.60442 3.87599C6.79638 4.27893 5.82012 4.60734 4.85262 4.54962C3.50616 4.4803 2.36492 5.08407 1.21503 5.72136C1.53211 6.24814 1.96482 6.68312 2.50687 6.96435L9.18843 2.89141ZM9.18843 2.89141C9.38777 3.69024 9.0944 4.5368 8.41409 5.29428C7.73414 6.05138 6.68586 6.69873 5.43341 7.08492M9.18843 2.89141L5.43341 7.08492M5.43341 7.08492C4.2242 7.45766 3.24977 7.34918 2.50699 6.96441L5.43341 7.08492ZM0.77406 4.60386C0.726227 4.29237 0.75066 3.98897 0.838971 3.6965L0.839034 3.69652L0.840564 3.691C0.92158 3.39866 1.07563 3.11303 1.30381 2.83647L1.30387 2.83651L1.30755 2.83182C1.31881 2.8175 1.32147 2.81377 1.32317 2.81139C1.32456 2.80945 1.32531 2.8084 1.32955 2.80323L1.32973 2.80302C1.91221 2.09229 2.91385 1.46482 4.26099 1.00209L4.26103 1.00208C5.41635 0.605041 6.53083 0.586871 7.41182 0.911199L7.41183 0.911202C7.92803 1.10122 8.36812 1.41118 8.69292 1.83824C7.59359 2.70994 6.63254 3.43669 4.91779 3.37189C3.33793 3.23867 1.99537 3.93171 0.77406 4.60386Z"
+                          fill="none"
+                          stroke="#212121"
+                          stroke-width="0.5"
+                        />
+                      </svg>
+                      <span
+                        class="ml-2 text-xs leading-4"
+                      >
+                        Leicht
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="inline-flex"
+                  >
+                    <span
+                      class="text-coreUI-text-secondary text-xs leading-4 font-semibold"
+                    >
+                      Stärke
+                    </span>
+                    <div
+                      class="flex md:hidden"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="h-4 w-4 ml-1 text-coreUI-text-secondary cursor-pointer"
+                        data-testid="drawer-trigger"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="hidden md:flex"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="h-4 w-4 ml-1 text-coreUI-text-secondary cursor-pointer"
+                        data-testid="dialog-trigger"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <div
+                      class="inline-flex items-center rounded-full px-3 py-1 bg-coreUI-background-images"
+                    >
+                      <svg
+                        height="10"
+                        viewBox="0 0 10 8"
+                        width="10"
+                      >
+                        <path
+                          d="M9.43099 2.83089C9.16185 1.75199 8.44466 1.02499 7.49819 0.676592C6.55171 0.328153 5.37668 0.354323 4.17978 0.765654C2.80827 1.23674 1.75907 1.88475 1.13637 2.64455C1.12738 2.65549 1.11957 2.66642 1.11098 2.67736C0.864095 2.97658 0.691445 3.29298 0.599644 3.62424C0.449254 4.12229 0.465264 4.64803 0.673864 5.18243C1.00667 6.03477 1.58168 6.76603 2.39187 7.18633C3.20242 7.60624 4.24618 7.71249 5.50708 7.32383C6.79418 6.92695 7.88439 6.25823 8.60009 5.46133C9.31579 4.66443 9.65675 3.73558 9.43099 2.83089ZM9.27631 2.48831C8.58919 3.06799 6.6775 4.4086 4.86649 4.3C3.36338 4.22227 2.10868 4.93945 0.907876 5.6059C0.832485 5.46254 0.764906 5.31449 0.705146 5.16176C0.679365 5.09574 0.65788 5.03012 0.637957 4.96449C1.94226 4.24457 3.29657 3.48399 4.90247 3.62149C6.79698 3.69493 7.83218 2.84025 8.99309 1.9192C9.10442 2.09303 9.19975 2.28245 9.27631 2.48831Z"
+                          fill="#212121"
+                          stroke="none"
+                          stroke-width="none"
+                        />
+                      </svg>
+                      <svg
+                        class="ml-0.5"
+                        height="10"
+                        viewBox="0 0 10 8"
+                        width="10"
+                      >
+                        <path
+                          d="M9.18843 2.89141L9.18843 2.8914C9.18764 2.88822 9.18684 2.88504 9.18604 2.88187C8.80763 3.17406 8.25235 3.55289 7.60442 3.87599C6.79638 4.27893 5.82012 4.60734 4.85262 4.54962C3.50616 4.4803 2.36492 5.08407 1.21503 5.72136C1.53211 6.24814 1.96482 6.68312 2.50687 6.96435L9.18843 2.89141ZM9.18843 2.89141C9.38777 3.69024 9.0944 4.5368 8.41409 5.29428C7.73414 6.05138 6.68586 6.69873 5.43341 7.08492M9.18843 2.89141L5.43341 7.08492M5.43341 7.08492C4.2242 7.45766 3.24977 7.34918 2.50699 6.96441L5.43341 7.08492ZM0.77406 4.60386C0.726227 4.29237 0.75066 3.98897 0.838971 3.6965L0.839034 3.69652L0.840564 3.691C0.92158 3.39866 1.07563 3.11303 1.30381 2.83647L1.30387 2.83651L1.30755 2.83182C1.31881 2.8175 1.32147 2.81377 1.32317 2.81139C1.32456 2.80945 1.32531 2.8084 1.32955 2.80323L1.32973 2.80302C1.91221 2.09229 2.91385 1.46482 4.26099 1.00209L4.26103 1.00208C5.41635 0.605041 6.53083 0.586871 7.41182 0.911199L7.41183 0.911202C7.92803 1.10122 8.36812 1.41118 8.69292 1.83824C7.59359 2.70994 6.63254 3.43669 4.91779 3.37189C3.33793 3.23867 1.99537 3.93171 0.77406 4.60386Z"
+                          fill="none"
+                          stroke="#212121"
+                          stroke-width="0.5"
+                        />
+                      </svg>
+                      <svg
+                        class="ml-0.5"
+                        height="10"
+                        viewBox="0 0 10 8"
+                        width="10"
+                      >
+                        <path
+                          d="M9.18843 2.89141L9.18843 2.8914C9.18764 2.88822 9.18684 2.88504 9.18604 2.88187C8.80763 3.17406 8.25235 3.55289 7.60442 3.87599C6.79638 4.27893 5.82012 4.60734 4.85262 4.54962C3.50616 4.4803 2.36492 5.08407 1.21503 5.72136C1.53211 6.24814 1.96482 6.68312 2.50687 6.96435L9.18843 2.89141ZM9.18843 2.89141C9.38777 3.69024 9.0944 4.5368 8.41409 5.29428C7.73414 6.05138 6.68586 6.69873 5.43341 7.08492M9.18843 2.89141L5.43341 7.08492M5.43341 7.08492C4.2242 7.45766 3.24977 7.34918 2.50699 6.96441L5.43341 7.08492ZM0.77406 4.60386C0.726227 4.29237 0.75066 3.98897 0.838971 3.6965L0.839034 3.69652L0.840564 3.691C0.92158 3.39866 1.07563 3.11303 1.30381 2.83647L1.30387 2.83651L1.30755 2.83182C1.31881 2.8175 1.32147 2.81377 1.32317 2.81139C1.32456 2.80945 1.32531 2.8084 1.32955 2.80323L1.32973 2.80302C1.91221 2.09229 2.91385 1.46482 4.26099 1.00209L4.26103 1.00208C5.41635 0.605041 6.53083 0.586871 7.41182 0.911199L7.41183 0.911202C7.92803 1.10122 8.36812 1.41118 8.69292 1.83824C7.59359 2.70994 6.63254 3.43669 4.91779 3.37189C3.33793 3.23867 1.99537 3.93171 0.77406 4.60386Z"
+                          fill="none"
+                          stroke="#212121"
+                          stroke-width="0.5"
+                        />
+                      </svg>
+                      <span
+                        class="ml-2 text-xs leading-4"
+                      >
+                        Leicht
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="inline-flex"
+                  >
+                    <span
+                      class="text-coreUI-text-secondary text-xs leading-4 font-semibold"
+                    >
+                      Körper
+                    </span>
+                    <div
+                      class="flex md:hidden"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="h-4 w-4 ml-1 text-coreUI-text-secondary cursor-pointer"
+                        data-testid="drawer-trigger"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="hidden md:flex"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="h-4 w-4 ml-1 text-coreUI-text-secondary cursor-pointer"
+                        data-testid="dialog-trigger"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <div
+                      class="inline-flex items-center rounded-full px-3 py-1 bg-coreUI-background-images"
+                    >
+                      <svg
+                        height="10"
+                        viewBox="0 0 10 8"
+                        width="10"
+                      >
+                        <path
+                          d="M9.43099 2.83089C9.16185 1.75199 8.44466 1.02499 7.49819 0.676592C6.55171 0.328153 5.37668 0.354323 4.17978 0.765654C2.80827 1.23674 1.75907 1.88475 1.13637 2.64455C1.12738 2.65549 1.11957 2.66642 1.11098 2.67736C0.864095 2.97658 0.691445 3.29298 0.599644 3.62424C0.449254 4.12229 0.465264 4.64803 0.673864 5.18243C1.00667 6.03477 1.58168 6.76603 2.39187 7.18633C3.20242 7.60624 4.24618 7.71249 5.50708 7.32383C6.79418 6.92695 7.88439 6.25823 8.60009 5.46133C9.31579 4.66443 9.65675 3.73558 9.43099 2.83089ZM9.27631 2.48831C8.58919 3.06799 6.6775 4.4086 4.86649 4.3C3.36338 4.22227 2.10868 4.93945 0.907876 5.6059C0.832485 5.46254 0.764906 5.31449 0.705146 5.16176C0.679365 5.09574 0.65788 5.03012 0.637957 4.96449C1.94226 4.24457 3.29657 3.48399 4.90247 3.62149C6.79698 3.69493 7.83218 2.84025 8.99309 1.9192C9.10442 2.09303 9.19975 2.28245 9.27631 2.48831Z"
+                          fill="#212121"
+                          stroke="none"
+                          stroke-width="none"
+                        />
+                      </svg>
+                      <svg
+                        class="ml-0.5"
+                        height="10"
+                        viewBox="0 0 10 8"
+                        width="10"
+                      >
+                        <path
+                          d="M9.18843 2.89141L9.18843 2.8914C9.18764 2.88822 9.18684 2.88504 9.18604 2.88187C8.80763 3.17406 8.25235 3.55289 7.60442 3.87599C6.79638 4.27893 5.82012 4.60734 4.85262 4.54962C3.50616 4.4803 2.36492 5.08407 1.21503 5.72136C1.53211 6.24814 1.96482 6.68312 2.50687 6.96435L9.18843 2.89141ZM9.18843 2.89141C9.38777 3.69024 9.0944 4.5368 8.41409 5.29428C7.73414 6.05138 6.68586 6.69873 5.43341 7.08492M9.18843 2.89141L5.43341 7.08492M5.43341 7.08492C4.2242 7.45766 3.24977 7.34918 2.50699 6.96441L5.43341 7.08492ZM0.77406 4.60386C0.726227 4.29237 0.75066 3.98897 0.838971 3.6965L0.839034 3.69652L0.840564 3.691C0.92158 3.39866 1.07563 3.11303 1.30381 2.83647L1.30387 2.83651L1.30755 2.83182C1.31881 2.8175 1.32147 2.81377 1.32317 2.81139C1.32456 2.80945 1.32531 2.8084 1.32955 2.80323L1.32973 2.80302C1.91221 2.09229 2.91385 1.46482 4.26099 1.00209L4.26103 1.00208C5.41635 0.605041 6.53083 0.586871 7.41182 0.911199L7.41183 0.911202C7.92803 1.10122 8.36812 1.41118 8.69292 1.83824C7.59359 2.70994 6.63254 3.43669 4.91779 3.37189C3.33793 3.23867 1.99537 3.93171 0.77406 4.60386Z"
+                          fill="none"
+                          stroke="#212121"
+                          stroke-width="0.5"
+                        />
+                      </svg>
+                      <svg
+                        class="ml-0.5"
+                        height="10"
+                        viewBox="0 0 10 8"
+                        width="10"
+                      >
+                        <path
+                          d="M9.18843 2.89141L9.18843 2.8914C9.18764 2.88822 9.18684 2.88504 9.18604 2.88187C8.80763 3.17406 8.25235 3.55289 7.60442 3.87599C6.79638 4.27893 5.82012 4.60734 4.85262 4.54962C3.50616 4.4803 2.36492 5.08407 1.21503 5.72136C1.53211 6.24814 1.96482 6.68312 2.50687 6.96435L9.18843 2.89141ZM9.18843 2.89141C9.38777 3.69024 9.0944 4.5368 8.41409 5.29428C7.73414 6.05138 6.68586 6.69873 5.43341 7.08492M9.18843 2.89141L5.43341 7.08492M5.43341 7.08492C4.2242 7.45766 3.24977 7.34918 2.50699 6.96441L5.43341 7.08492ZM0.77406 4.60386C0.726227 4.29237 0.75066 3.98897 0.838971 3.6965L0.839034 3.69652L0.840564 3.691C0.92158 3.39866 1.07563 3.11303 1.30381 2.83647L1.30387 2.83651L1.30755 2.83182C1.31881 2.8175 1.32147 2.81377 1.32317 2.81139C1.32456 2.80945 1.32531 2.8084 1.32955 2.80323L1.32973 2.80302C1.91221 2.09229 2.91385 1.46482 4.26099 1.00209L4.26103 1.00208C5.41635 0.605041 6.53083 0.586871 7.41182 0.911199L7.41183 0.911202C7.92803 1.10122 8.36812 1.41118 8.69292 1.83824C7.59359 2.70994 6.63254 3.43669 4.91779 3.37189C3.33793 3.23867 1.99537 3.93171 0.77406 4.60386Z"
+                          fill="none"
+                          stroke="#212121"
+                          stroke-width="0.5"
+                        />
+                      </svg>
+                      <span
+                        class="ml-2 text-xs leading-4"
+                      >
+                        Leicht
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="inline-flex"
+                  >
+                    <span
+                      class="text-coreUI-text-secondary text-xs leading-4 font-semibold"
+                    >
+                      Süße
+                    </span>
+                    <div
+                      class="flex md:hidden"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="h-4 w-4 ml-1 text-coreUI-text-secondary cursor-pointer"
+                        data-testid="drawer-trigger"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="hidden md:flex"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="h-4 w-4 ml-1 text-coreUI-text-secondary cursor-pointer"
+                        data-testid="dialog-trigger"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="mt-4 border border-dashed border-brand-grey-bombay"
+            >
+              <em>
+                Buy section placeholder
+              </em>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-6"
+        >
+          <div
+            class="border-t border-coreUI-border mx-auto w-full py-4"
+          >
+            <button
+              aria-expanded="false"
+              class="flex w-full justify-between py-2 text-left"
+              data-testid="button-disclosure-toggle"
+              id="headlessui-disclosure-button-1"
+              type="button"
+            >
+              <span
+                class="text-xl leading-7 font-semibold"
+              >
+                Alles zum Kaffee
+              </span>
+              <svg
+                aria-hidden="true"
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 4v16m8-8H4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="border-t border-coreUI-border mx-auto w-full py-4"
+          >
+            <button
+              aria-expanded="false"
+              class="flex w-full justify-between py-2 text-left"
+              data-testid="button-disclosure-toggle"
+              id="headlessui-disclosure-button-3"
+              type="button"
+            >
+              <span
+                class="text-xl leading-7 font-semibold"
+              >
+                Rösterei im Profil
+              </span>
+              <svg
+                aria-hidden="true"
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 4v16m8-8H4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="border-t border-coreUI-border mx-auto w-full py-4"
+          >
+            <button
+              aria-expanded="false"
+              class="flex w-full justify-between py-2 text-left"
+              data-testid="button-disclosure-toggle"
+              id="headlessui-disclosure-button-5"
+              type="button"
+            >
+              <span
+                class="text-xl leading-7 font-semibold"
+              >
+                Zubereitungstipps
+              </span>
+              <svg
+                aria-hidden="true"
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 4v16m8-8H4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="border-t border-coreUI-border mx-auto w-full py-4"
+          >
+            <button
+              aria-expanded="false"
+              class="flex w-full justify-between py-2 text-left"
+              data-testid="button-disclosure-toggle"
+              id="headlessui-disclosure-button-7"
+              type="button"
+            >
+              <span
+                class="text-xl leading-7 font-semibold"
+              >
+                Ähnliche Produkte
+              </span>
+              <svg
+                aria-hidden="true"
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 4v16m8-8H4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer
+      class="bg-brand-black text-base text-white py-10"
+    >
+      <div
+        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
+      >
+        <div
+          class="mb-2 md:mb-0 md:mr-2"
+        >
+          <svg
+            fill="none"
+            height="157"
+            width="157"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="78.301"
+              cy="78.301"
+              fill="#D4FF81"
+              r="63.932"
+              transform="rotate(15 78.3 78.301)"
+            />
+            <path
+              d="m71.539 68.784-.427 1.595-8.082-2.166-1.22 4.552 6.615 1.772-.428 1.595-6.614-1.772-1.63 6.083-1.702-.456 3.705-13.825 9.783 2.622Zm-1.577 14.394 3.885-14.501 17.515 4.693c1.375.368 2.564.857 3.566 1.465 1.022.598 1.753 1.344 2.193 2.24.455.898.515 1.975.179 3.229-.223.83-.558 1.477-1.006 1.94a3.362 3.362 0 0 1-1.586.935c-.61.16-1.272.218-1.989.171a14.185 14.185 0 0 1-2.196-.321l-1.57-.76c1.794.496 3.156.942 4.086 1.337.946.4 1.559.83 1.84 1.294.299.453.36 1.012.182 1.676l-.832 3.105-5.665-1.518.65-2.425c.121-.453.122-.817.001-1.092-.101-.286-.434-.554-1-.802-.549-.245-1.428-.529-2.636-.853l-8.86-2.373-1.093 4.078-5.664-1.518Zm7.771-6.344 11.85 3.175c.454.121.852.147 1.194.077.358-.066.593-.31.707-.734.105-.392.017-.7-.264-.92-.261-.232-.619-.409-1.072-.53l-11.85-3.176-.565 2.108Z"
+              fill="#000"
+            />
+          </svg>
+        </div>
+        <div
+          class="px-4 text-5xl leading-none"
+        >
+          A pleasure for every taste.
+        </div>
+      </div>
+      <div
+        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 mx-auto px-12 xl:px-14"
+      >
+        <div
+          class="order-2 md:order-1"
+        >
+          <ul>
+            <li
+              class="mt-0"
+            >
+              <a
+                href="/catalogue"
+              >
+                Shop
+              </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <a
+                href="/taste-finder"
+              >
+                Tastefinder
+              </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <a
+                href="/our-roasters"
+              >
+                Unsere Röster
+              </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <a
+                href="/about"
+              >
+                Über uns
+              </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <a
+                href="/jobs"
+              >
+                Jobs
+              </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <a
+                href="/privacy"
+              >
+                Datenschutz-Bestimmungen
+              </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <a
+                href="/press"
+              >
+                Presse
+              </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <a
+                href="/imprint"
+              >
+                Impressum
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="order-1 md:order-2"
+        >
+          <div>
+            <div>
+              <span
+                class="font-syne text-3xl leading-8 font-semibold tracking-tight"
+              >
+                Kunden Support
+              </span>
+            </div>
+            <div
+              class="mt-6"
+            >
+              <span
+                class="text-lg leading-7"
+              >
+                Fragen? Kommentare? Bedenken? Oder möchtest du uns einfach ein paar schöne Worte senden?
+              </span>
+            </div>
+            <div
+              class="mt-6"
+            >
+              <button
+                class="inline-flex items-center rounded-full border-2 px-4 py-2 text-md font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
+                role="button"
+                type="button"
+              >
+                Kunden Support
+                 
+                <svg
+                  aria-hidden="true"
+                  class="w-6 h-6 ml-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"
+                  />
+                  <path
+                    d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="mt-12"
+          >
+            <div>
+              <span
+                class="font-syne text-3xl leading-8 font-semibold tracking-tight"
+              >
+                Newsletter
+              </span>
+            </div>
+            <div
+              class="mt-6"
+            >
+              <span
+                class="text-lg leading-7"
+              >
+                Melde dich für den Newsletter an und erhalte, einmalige Angebote, Neuigkeiten, Tipps und Insights zum Thema Specialty Coffee und neuen Röstern. 
+              </span>
+            </div>
+            <form>
+              <div
+                class="mt-6"
+              >
+                <label
+                  class="relative"
+                >
+                  <span
+                    class="absolute -top-6 left-3 px-2 bg-brand-black text-white"
+                  >
+                    <span
+                      class="text-sm leading-5"
+                    >
+                      Deine E-Mail
+                    </span>
+                  </span>
+                  <input
+                    class="w-72 border rounded-full px-4 py-2 bg-brand-black border-white text-white"
+                    data-testid="newsletter-email"
+                    name="email"
+                    placeholder="max.mustermann@email.com"
+                    type="text"
+                  />
+                </label>
+              </div>
+              <div
+                class="mt-6"
+              >
+                <button
+                  class="inline-flex items-center rounded-full border-2 px-4 py-2 text-md font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
+                  data-testid="newsletter-submit"
+                  role="button"
+                  type="submit"
+                >
+                  Anmelden
+                </button>
+              </div>
+            </form>
+            <div
+              class="mt-4"
+            >
+              <span
+                class="text-brand-grey-bombay text-base leading-6"
+              >
+                Hinweis: Sie können sich jederzeit abmelden. Siehe unsere Datenschutzrichtlinie und Bedingungen.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-full max-w-7xl mx-auto text-center mt-10 mx-auto px-12 xl:px-14"
+      >
+        <span
+          class="text-center text-base leading-6"
+        >
+          © 2022 Famous Roasters. Alle Rechte vorbehalten
+        </span>
+        <br />
+        <span
+          class="text-center text-base leading-6"
+        >
+          Geröstet mit ❤️ in Berlin
+        </span>
+      </div>
+    </footer>
   </div>
 </div>
 `;

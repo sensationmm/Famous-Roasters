@@ -3,6 +3,21 @@ query product($id: ID) {
         id
         title
         vendor
+        aroma: metafield(namespace: "my_fields", key: "aroma") {
+            value
+        }
+        sweetness: metafield(namespace: "my_fields", key: "sweetness") {
+            value
+        }
+        body: metafield(namespace: "my_fields", key: "body") {
+            value
+        }
+        bitterness: metafield(namespace: "my_fields", key: "bitterness") {
+            value
+        }
+        acidity: metafield(namespace: "my_fields", key: "acidity_") {
+            value
+        }
         bean_type: metafield(namespace: "my_fields", key: "bean_type") {
             value
         }

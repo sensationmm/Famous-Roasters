@@ -5,11 +5,16 @@ import { loader } from 'graphql.macro'
 const GET_PRODUCT = loader('src/graphql/queries/product.query.graphql')
 
 interface ProductMeta {
-  value: string
+  value: string | number
 }
 
 interface ProductCustom {
   bean_type?: ProductMeta
+  aroma?: ProductMeta
+  sweetness?: ProductMeta
+  body?: ProductMeta
+  bitterness?: ProductMeta
+  acidity?: ProductMeta
 }
 
 export const ProductMockData: ProductType = {
@@ -129,6 +134,21 @@ export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
   },
   bean_type: {
     value: 'Arabica',
+  },
+  aroma: {
+    value: 'experimentell & komplex',
+  },
+  acidity: {
+    value: 3,
+  },
+  bitterness: {
+    value: 3,
+  },
+  body: {
+    value: 3,
+  },
+  sweetness: {
+    value: 2,
   },
 }
 

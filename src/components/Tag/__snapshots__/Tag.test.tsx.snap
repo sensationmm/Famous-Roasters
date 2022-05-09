@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tag component Renders correctly 1`] = `
+<div>
+  <div
+    class="inline-flex rounded-full px-3 py-1 bg-brand-grey-bombay"
+  >
+    <span
+      class="text-xs leading-4"
+    >
+      sweet
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tag component Renders correctly for aroma tag with a different value 1`] = `
+<div>
+  <div
+    class="inline-flex rounded-full px-3 py-1 bg-brand-grey-bombay"
+  >
+    <span
+      class="text-xs leading-4"
+    >
+      something else
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tag component Renders correctly for aroma tag with value experimentell & komplex 1`] = `
+<div>
+  <div
+    class="inline-flex rounded-full px-3 py-1 bg-tags-capeHoney"
+  >
+    <span
+      class="text-xs leading-4"
+    >
+      experimentell & komplex
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tag component Renders correctly for aroma tag with value floral & leicht 1`] = `
+<div>
+  <div
+    class="inline-flex rounded-full px-3 py-1 bg-tags-melrose"
+  >
+    <span
+      class="text-xs leading-4"
+    >
+      floral & leicht
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tag component Renders correctly for aroma tag with value fruchtig & lebhaft 1`] = `
+<div>
+  <div
+    class="inline-flex rounded-full px-3 py-1 bg-tags-cottonCandy"
+  >
+    <span
+      class="text-xs leading-4"
+    >
+      fruchtig & lebhaft
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tag component Renders correctly for aroma tag with value nussig & schokoladig 1`] = `
+<div>
+  <div
+    class="inline-flex rounded-full px-3 py-1 bg-tags-coldTurkey"
+  >
+    <span
+      class="text-xs leading-4"
+    >
+      nussig & schokoladig
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tag component Renders correctly for aroma tag with value würzig & kräftig 1`] = `
+<div>
+  <div
+    class="inline-flex rounded-full px-3 py-1 bg-tags-yourPink"
+  >
+    <span
+      class="text-xs leading-4"
+    >
+      würzig & kräftig
+    </span>
+  </div>
+</div>
+`;
