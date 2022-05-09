@@ -15,11 +15,11 @@ export enum Intensity {
 export const BeanScaleTag: React.FC<BeanScaleTagProps> = ({ value }) => {
   const { t } = useTranslation()
 
-  const scale = (value: number) => {
-    if (value <= 3) {
+  const scale = (attributeValue: number) => {
+    if (attributeValue <= 3) {
       return Intensity.light
     }
-    if (value > 7) {
+    if (attributeValue > 7) {
       return Intensity.strong
     }
     return Intensity.medium
