@@ -124,6 +124,14 @@ export const ProductMockData: ProductType = {
 
 export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
   ...ProductMockData,
+  images: {
+    edges: [],
+    nodes: [],
+    pageInfo: {
+      hasNextPage: false,
+      hasPreviousPage: false,
+    },
+  },
   bean_type: {
     value: 'Arabica',
   },

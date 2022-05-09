@@ -68,7 +68,7 @@ export const Product: React.FC = () => {
     )
   }
 
-  if (error || !images || images.nodes.length < 1) {
+  if (error) {
     return <ErrorPrompt promptAction={() => history.go(0)} />
   }
 
@@ -76,7 +76,7 @@ export const Product: React.FC = () => {
     return (
       <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
         {/* Images */}
-        <Carousel images={images.nodes} />
+        {images && <Carousel images={images.nodes} />}
         <div>
           {/* Vendor and bean_type */}
           <div>
