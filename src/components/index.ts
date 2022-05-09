@@ -1,4 +1,5 @@
 import { Badge } from './Badge'
+import { BeanScaleTag } from './BeanScaleTag'
 import { Button, ButtonEmphasis, ButtonSize } from './Button'
 import { Carousel } from './Carousel'
 import { Disclosure } from './Disclosure'
@@ -6,6 +7,7 @@ import { ErrorPrompt } from './ErrorPrompt'
 import { FilterData, FilterMobile } from './FilterMobile'
 import { FiltersMenuMobile } from './FiltersMenuMobile'
 import { Footer } from './Footer'
+import { Icon, IconName, IconSize } from './Icon'
 import { Input, InputMode } from './Input'
 import { Layout } from './Layout'
 import { Listbox, ListBoxItem } from './Listbox'
@@ -18,6 +20,7 @@ import { TasteProfile } from './TasteProfile'
 import { Typography, TypographySize, TypographyType } from './Typography'
 
 export { Badge as Badge }
+export { BeanScaleTag as BeanScaleTag }
 export { Button as Button }
 export { ButtonEmphasis as ButtonEmphasis }
 export { ButtonSize as ButtonSize }
@@ -28,6 +31,9 @@ export type { FilterData as FilterData }
 export { FilterMobile as FilterMobile }
 export { FiltersMenuMobile as FiltersMenuMobile }
 export { Footer as Footer }
+export { Icon as Icon }
+export { IconName as IconName }
+export { IconSize as IconSize }
 export { Input as Input }
 export { InputMode as InputMode }
 export { Layout as Layout }

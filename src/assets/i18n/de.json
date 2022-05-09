@@ -152,6 +152,19 @@
         },
         "meetTheRoaster": {
           "title": "Rösterei im Profil"
+        },
+        "tasteProfile": {
+          "parameter": {
+            "acidity": "Lebendigkeit",
+            "bitterness": "Stärke",
+            "body": "Körper",
+            "sweetness": "Süße"
+          },
+          "scale": {
+            "light": "Leicht",
+            "medium": "Mittel",
+            "strong": "Stark"
+          }
         }
       }
     },

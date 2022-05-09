@@ -11,7 +11,7 @@ interface TagProps {
 }
 
 const getTagClassNames = (value: string, type?: TagType): string => {
-  const classNames: string[] = ['inline-flex', 'rounded-full', 'px-4', 'py-1']
+  const classNames: string[] = ['inline-flex', 'rounded-full', 'px-3', 'py-1']
 
   if (type && type === TagType.Aroma) {
     switch (value.toLowerCase()) {

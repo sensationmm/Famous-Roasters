@@ -3,7 +3,7 @@
 exports[`Tag component Renders correctly 1`] = `
 <div>
   <div
-    class="inline-flex rounded-full px-4 py-1 bg-brand-grey-bombay"
+    class="inline-flex rounded-full px-3 py-1 bg-brand-grey-bombay"
   >
     <span
       class="text-xs leading-4"
@@ -17,7 +17,7 @@ exports[`Tag component Renders correctly 1`] = `
 exports[`Tag component Renders correctly for aroma tag with a different value 1`] = `
 <div>
   <div
-    class="inline-flex rounded-full px-4 py-1 bg-brand-grey-bombay"
+    class="inline-flex rounded-full px-3 py-1 bg-brand-grey-bombay"
   >
     <span
       class="text-xs leading-4"
@@ -31,7 +31,7 @@ exports[`Tag component Renders correctly for aroma tag with a different value 1`
 exports[`Tag component Renders correctly for aroma tag with value experimentell & komplex 1`] = `
 <div>
   <div
-    class="inline-flex rounded-full px-4 py-1 bg-tags-capeHoney"
+    class="inline-flex rounded-full px-3 py-1 bg-tags-capeHoney"
   >
     <span
       class="text-xs leading-4"
@@ -45,7 +45,7 @@ exports[`Tag component Renders correctly for aroma tag with value experimentell 
 exports[`Tag component Renders correctly for aroma tag with value floral & leicht 1`] = `
 <div>
   <div
-    class="inline-flex rounded-full px-4 py-1 bg-tags-melrose"
+    class="inline-flex rounded-full px-3 py-1 bg-tags-melrose"
   >
     <span
       class="text-xs leading-4"
@@ -59,7 +59,7 @@ exports[`Tag component Renders correctly for aroma tag with value floral & leich
 exports[`Tag component Renders correctly for aroma tag with value fruchtig & lebhaft 1`] = `
 <div>
   <div
-    class="inline-flex rounded-full px-4 py-1 bg-tags-cottonCandy"
+    class="inline-flex rounded-full px-3 py-1 bg-tags-cottonCandy"
   >
     <span
       class="text-xs leading-4"
@@ -73,7 +73,7 @@ exports[`Tag component Renders correctly for aroma tag with value fruchtig & leb
 exports[`Tag component Renders correctly for aroma tag with value nussig & schokoladig 1`] = `
 <div>
   <div
-    class="inline-flex rounded-full px-4 py-1 bg-tags-coldTurkey"
+    class="inline-flex rounded-full px-3 py-1 bg-tags-coldTurkey"
   >
     <span
       class="text-xs leading-4"
@@ -87,7 +87,7 @@ exports[`Tag component Renders correctly for aroma tag with value nussig & schok
 exports[`Tag component Renders correctly for aroma tag with value würzig & kräftig 1`] = `
 <div>
   <div
-    class="inline-flex rounded-full px-4 py-1 bg-tags-yourPink"
+    class="inline-flex rounded-full px-3 py-1 bg-tags-yourPink"
   >
     <span
       class="text-xs leading-4"
