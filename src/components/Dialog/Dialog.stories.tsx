@@ -12,7 +12,7 @@ const Template: ComponentStory<typeof Dialog> = (args) => <Dialog {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-  trigger: <button>CLick me</button>,
+  trigger: <button>Click me</button>,
   title: 'Dialog title',
-  body: <div>My contact</div>,
+  body: <div>Dialog content</div>,
 }

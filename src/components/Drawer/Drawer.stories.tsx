@@ -12,7 +12,7 @@ const Template: ComponentStory<typeof Drawer> = (args) => <Drawer {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-  trigger: <button>CLick me</button>,
+  trigger: <button>Click me</button>,
   title: 'Drawer title',
-  body: <div>My contact</div>,
+  body: <div>Drawer content</div>,
 }
