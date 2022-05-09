@@ -76,7 +76,7 @@ export const Product: React.FC = () => {
     return (
       <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
         {/* Images */}
-        {images && <Carousel images={images.nodes} />}
+        {images && images.nodes.length > 0 && <Carousel images={images.nodes} />}
         <div>
           {/* Vendor and bean_type */}
           <div>
