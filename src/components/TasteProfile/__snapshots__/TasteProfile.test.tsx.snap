@@ -61,23 +61,48 @@ exports[`TasteProfile component Renders correctly 1`] = `
         <span
           class="text-coreUI-text-secondary text-xs leading-4 font-semibold"
         >
-          Stärke
+          Lebendigkeit
         </span>
-        <svg
-          aria-hidden="true"
-          class="h-4 w-4 ml-1 text-coreUI-text-secondary"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          class="flex md:hidden"
         >
-          <path
-            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
+          <svg
+            aria-hidden="true"
+            class="h-4 w-4 ml-1 text-coreUI-text-secondary cursor-pointer"
+            data-testid="drawer-trigger"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div
+          class="hidden md:flex"
+        >
+          <svg
+            aria-hidden="true"
+            class="h-4 w-4 ml-1 text-coreUI-text-secondary cursor-pointer"
+            data-testid="dialog-trigger"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     <div>
@@ -136,23 +161,48 @@ exports[`TasteProfile component Renders correctly 1`] = `
         <span
           class="text-coreUI-text-secondary text-xs leading-4 font-semibold"
         >
-          Lebendigkeit
+          Stärke
         </span>
-        <svg
-          aria-hidden="true"
-          class="h-4 w-4 ml-1 text-coreUI-text-secondary"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          class="flex md:hidden"
         >
-          <path
-            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
+          <svg
+            aria-hidden="true"
+            class="h-4 w-4 ml-1 text-coreUI-text-secondary cursor-pointer"
+            data-testid="drawer-trigger"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div
+          class="hidden md:flex"
+        >
+          <svg
+            aria-hidden="true"
+            class="h-4 w-4 ml-1 text-coreUI-text-secondary cursor-pointer"
+            data-testid="dialog-trigger"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     <div>
@@ -213,21 +263,46 @@ exports[`TasteProfile component Renders correctly 1`] = `
         >
           Körper
         </span>
-        <svg
-          aria-hidden="true"
-          class="h-4 w-4 ml-1 text-coreUI-text-secondary"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          class="flex md:hidden"
         >
-          <path
-            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
+          <svg
+            aria-hidden="true"
+            class="h-4 w-4 ml-1 text-coreUI-text-secondary cursor-pointer"
+            data-testid="drawer-trigger"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div
+          class="hidden md:flex"
+        >
+          <svg
+            aria-hidden="true"
+            class="h-4 w-4 ml-1 text-coreUI-text-secondary cursor-pointer"
+            data-testid="dialog-trigger"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     <div>
@@ -288,21 +363,46 @@ exports[`TasteProfile component Renders correctly 1`] = `
         >
           Süße
         </span>
-        <svg
-          aria-hidden="true"
-          class="h-4 w-4 ml-1 text-coreUI-text-secondary"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          class="flex md:hidden"
         >
-          <path
-            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
+          <svg
+            aria-hidden="true"
+            class="h-4 w-4 ml-1 text-coreUI-text-secondary cursor-pointer"
+            data-testid="drawer-trigger"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div
+          class="hidden md:flex"
+        >
+          <svg
+            aria-hidden="true"
+            class="h-4 w-4 ml-1 text-coreUI-text-secondary cursor-pointer"
+            data-testid="dialog-trigger"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
       </div>
     </div>
   </div>

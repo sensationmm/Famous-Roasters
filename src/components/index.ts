@@ -2,7 +2,9 @@ import { Badge } from './Badge'
 import { BeanScaleTag } from './BeanScaleTag'
 import { Button, ButtonEmphasis, ButtonSize } from './Button'
 import { Carousel } from './Carousel'
+import { Dialog } from './Dialog'
 import { Disclosure } from './Disclosure'
+import { Drawer } from './Drawer'
 import { ErrorPrompt } from './ErrorPrompt'
 import { FilterData, FilterMobile } from './FilterMobile'
 import { FiltersMenuMobile } from './FiltersMenuMobile'
@@ -25,6 +27,8 @@ export { Button as Button }
 export { ButtonEmphasis as ButtonEmphasis }
 export { ButtonSize as ButtonSize }
 export { Carousel as Carousel }
+export { Dialog as Dialog }
+export { Drawer as Drawer }
 export { Disclosure as Disclosure }
 export { ErrorPrompt as ErrorPrompt }
 export type { FilterData as FilterData }

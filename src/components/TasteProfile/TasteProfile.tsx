@@ -1,61 +1,52 @@
 import { InformationCircleIcon } from '@heroicons/react/outline'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { BeanScaleTag, Typography, TypographySize, TypographyType } from 'src/components'
+import { BeanScaleTag, Dialog, Drawer, Typography, TypographySize, TypographyType } from 'src/components'
 
 interface TasteProfileProps {
-  bitterness: number
   acidity: number
+  bitterness: number
   body: number
   sweetness: number
 }
 
 export const TasteProfile: React.FC<TasteProfileProps> = ({
   acidity,
-  body,
   bitterness,
+  body,
   sweetness,
 }: TasteProfileProps) => {
   const { t } = useTranslation()
 
+  const renderProfile = (key: string, parameter: number) => (
+    <div>
+      <BeanScaleTag value={parameter} />
+      <div className="inline-flex">
+        <Typography type={TypographyType.Label} size={TypographySize.Tiny} className="text-coreUI-text-secondary">
+          {t(`pages.product.sections.tasteProfile.parameter.${key}`)}
+        </Typography>
+        <Drawer
+          trigger={<InformationCircleIcon className="h-4 w-4 ml-1 text-coreUI-text-secondary cursor-pointer" />}
+          title={t(`pages.product.sections.tasteProfile.parameter.${key}`)}
+          body={<div className="border border-dashed border-brand-grey-bombay">Placeholder...</div>}
+          className="flex md:hidden"
+        />
+        <Dialog
+          trigger={<InformationCircleIcon className="h-4 w-4 ml-1 text-coreUI-text-secondary cursor-pointer" />}
+          title={t(`pages.product.sections.tasteProfile.parameter.${key}`)}
+          body={<div className="border border-dashed border-brand-grey-bombay">Placeholder...</div>}
+          className="hidden md:flex"
+        />
+      </div>
+    </div>
+  )
+
   return (
     <div className="grid gap-4 grid-cols-2 grid-rows-2">
-      <div>
-        <BeanScaleTag value={bitterness} />
-        <div className="inline-flex">
-          <Typography type={TypographyType.Label} size={TypographySize.Tiny} className="text-coreUI-text-secondary">
-            {t('pages.product.sections.tasteProfile.parameter.bitterness')}
-          </Typography>
-          <InformationCircleIcon className="h-4 w-4 ml-1 text-coreUI-text-secondary" />
-        </div>
-      </div>
-      <div>
-        <BeanScaleTag value={acidity} />
-        <div className="inline-flex">
-          <Typography type={TypographyType.Label} size={TypographySize.Tiny} className="text-coreUI-text-secondary">
-            {t('pages.product.sections.tasteProfile.parameter.acidity')}
-          </Typography>
-          <InformationCircleIcon className="h-4 w-4 ml-1 text-coreUI-text-secondary" />
-        </div>
-      </div>
-      <div>
-        <BeanScaleTag value={body} />
-        <div className="inline-flex">
-          <Typography type={TypographyType.Label} size={TypographySize.Tiny} className="text-coreUI-text-secondary">
-            {t('pages.product.sections.tasteProfile.parameter.body')}
-          </Typography>
-          <InformationCircleIcon className="h-4 w-4 ml-1 text-coreUI-text-secondary" />
-        </div>
-      </div>
-      <div>
-        <BeanScaleTag value={sweetness} />
-        <div className="inline-flex">
-          <Typography type={TypographyType.Label} size={TypographySize.Tiny} className="text-coreUI-text-secondary">
-            {t('pages.product.sections.tasteProfile.parameter.sweetness')}
-          </Typography>
-          <InformationCircleIcon className="h-4 w-4 ml-1 text-coreUI-text-secondary" />
-        </div>
-      </div>
+      {renderProfile('acidity', acidity)}
+      {renderProfile('bitterness', bitterness)}
+      {renderProfile('body', body)}
+      {renderProfile('sweetness', sweetness)}
     </div>
   )
 }

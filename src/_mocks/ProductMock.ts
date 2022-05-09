@@ -138,6 +138,18 @@ export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
   aroma: {
     value: 'experimentell & komplex',
   },
+  acidity: {
+    value: 3,
+  },
+  bitterness: {
+    value: 3,
+  },
+  body: {
+    value: 3,
+  },
+  sweetness: {
+    value: 2,
+  },
 }
 
 export const ProductMockDataNoImage: Product = {

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Drawer component Renders correctly 1`] = `
+<div>
+  <div>
+    <button
+      data-testid="drawer-trigger"
+    >
+      CLick me
+    </button>
+  </div>
+</div>
+`;

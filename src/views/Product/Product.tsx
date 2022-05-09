@@ -101,6 +101,10 @@ export const Product: React.FC = () => {
               <Tag type={TagType.Aroma} value={aroma.value} />
             </div>
           )}
+          {/* Flavour notes section */}
+          <div className="mt-4 border border-dashed border-brand-grey-bombay">
+            <em>Flavour notes placeholder</em>
+          </div>
           {/* Taste profile */}
           {sweetness && body && bitterness && acidity && (
             <div className="mt-4">
