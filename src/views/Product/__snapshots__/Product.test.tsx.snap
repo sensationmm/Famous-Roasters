@@ -247,11 +247,13 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               </div>
             </div>
             <div
-              class="mt-4 border border-dashed border-brand-grey-bombay"
+              class="mt-4"
             >
-              <em>
-                Flavour notes placeholder
-              </em>
+              <span
+                class="text-sm leading-5"
+              >
+                Weiße Schokolade • Melone •  Orangenblüten
+              </span>
             </div>
             <div
               class="mt-4"
@@ -662,11 +664,126 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               </div>
             </div>
             <div
-              class="mt-4 border border-dashed border-brand-grey-bombay"
+              class="mt-4 pt-4 border-t border-brand-grey-whisper"
             >
-              <em>
-                Buy section placeholder
-              </em>
+              <div>
+                <div
+                  class="w-full relative"
+                >
+                  <button
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
+                    data-testid="button-listbox"
+                    id="headlessui-listbox-button-1"
+                    type="button"
+                  >
+                    <span
+                      class="block truncate text-sm leading-5"
+                    >
+                      Ganze Bohne
+                    </span>
+                    <svg
+                      aria-hidden="true"
+                      class="-mr-1 ml-2 h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="grid gap-6 grid-cols-2 mt-4"
+              >
+                <div
+                  class="w-full relative"
+                >
+                  <button
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
+                    data-testid="button-listbox"
+                    id="headlessui-listbox-button-2"
+                    type="button"
+                  >
+                    <span
+                      class="block truncate text-sm leading-5"
+                    >
+                      250g
+                    </span>
+                    <svg
+                      aria-hidden="true"
+                      class="-mr-1 ml-2 h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div
+                  class="border border-dashed border-brand-grey-bombay"
+                >
+                  Quantity placeholder
+                </div>
+              </div>
+              <div
+                class="mt-3"
+              >
+                <span
+                  class="mr-1 text-2xl leading-8 font-semibold"
+                >
+                  9,99 €
+                </span>
+              </div>
+              <div
+                class="mb-3"
+              >
+                <div
+                  class="text-coreUI-text-secondary text-xs leading-4"
+                >
+                  Preise inkl. MwSt. und Versand
+                </div>
+              </div>
+              <button
+                class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+                role="button"
+                type="submit"
+              >
+                In den Warenkorb
+              </button>
+              <div
+                class="mt-2"
+              >
+                <span
+                  class="text-sm leading-5"
+                >
+                  <strong>
+                    Lieferzeit
+                  </strong>
+                  : 
+                  2-3 Tage
+                </span>
+              </div>
+              <div>
+                <span
+                  class="text-coreUI-text-secondary text-xs leading-4"
+                >
+                  Der Röster röstet deinen Kaffee frisch und schick dein Paket so früh wie möglich direkt zu Dir. Wir teilen den geplanten Liefertermin im nächsten Schritt mit.
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -680,7 +797,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               aria-expanded="false"
               class="flex w-full justify-between py-2 text-left"
               data-testid="button-disclosure-toggle"
-              id="headlessui-disclosure-button-1"
+              id="headlessui-disclosure-button-3"
               type="button"
             >
               <span
@@ -712,7 +829,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               aria-expanded="false"
               class="flex w-full justify-between py-2 text-left"
               data-testid="button-disclosure-toggle"
-              id="headlessui-disclosure-button-3"
+              id="headlessui-disclosure-button-5"
               type="button"
             >
               <span
@@ -744,7 +861,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               aria-expanded="false"
               class="flex w-full justify-between py-2 text-left"
               data-testid="button-disclosure-toggle"
-              id="headlessui-disclosure-button-5"
+              id="headlessui-disclosure-button-7"
               type="button"
             >
               <span
@@ -776,7 +893,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               aria-expanded="false"
               class="flex w-full justify-between py-2 text-left"
               data-testid="button-disclosure-toggle"
-              id="headlessui-disclosure-button-7"
+              id="headlessui-disclosure-button-9"
               type="button"
             >
               <span

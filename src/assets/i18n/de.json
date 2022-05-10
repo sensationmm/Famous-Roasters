@@ -166,6 +166,22 @@
             "strong": "Stark"
           }
         }
+      },
+      "transactional": {
+        "cta": "In den Warenkorb",
+        "options": {
+          "packageSize": {
+            "label": "Packungsgröße"
+          }
+        },
+        "price": {
+          "footNote": "Preise inkl. MwSt. und Versand"
+        },
+        "qualityNote": "Der Röster röstet deinen Kaffee frisch und schick dein Paket so früh wie möglich direkt zu Dir. Wir teilen den geplanten Liefertermin im nächsten Schritt mit.",
+        "shipping": {
+          "label": "Lieferzeit",
+          "value": "2-3 Tage"
+        }
       }
     },
     "tasteFinder": {

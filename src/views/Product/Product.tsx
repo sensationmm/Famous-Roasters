@@ -1,14 +1,22 @@
 import { useQuery } from '@apollo/client'
-import { Product as ProductType } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
+import {
+  Product as ProductType,
+  ProductVariant,
+  ProductVariantConnection,
+} from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
 import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router-dom'
 import {
+  Button,
+  ButtonEmphasis,
+  ButtonSize,
   Carousel,
   Disclosure,
   ErrorPrompt,
   Layout,
+  Listbox,
   Loader,
   Tag,
   TagType,
@@ -17,8 +25,7 @@ import {
   TypographySize,
   TypographyType,
 } from 'src/components'
-
-import { getAPIProductId } from '../../utils'
+import { formatPrice, getAPIProductId } from 'src/utils'
 
 interface ProductMeta {
   value: string
@@ -28,17 +35,29 @@ interface ProductMetaInteger {
   value: number
 }
 
-interface ProductCustom {
+interface ProductVariantCustom extends ProductVariant {
+  grind_type: ProductMeta
+  package_size: ProductMeta
+}
+
+interface ProductVariantConnectionCustom extends ProductVariantConnection {
+  nodes: Array<ProductVariantCustom>
+}
+
+interface ProductCustom extends ProductType {
   bean_type: ProductMeta
   aroma: ProductMeta
+  flavourNotes: ProductMeta
   sweetness: ProductMetaInteger
   body: ProductMetaInteger
   bitterness: ProductMetaInteger
   acidity: ProductMetaInteger
+  pricePerKg: ProductMeta
+  variants: ProductVariantConnectionCustom
 }
 
 interface ProductQuery {
-  product: ProductType & ProductCustom
+  product: ProductCustom
 }
 
 export const Product: React.FC = () => {
@@ -58,7 +77,21 @@ export const Product: React.FC = () => {
     },
   })
 
-  const { title, vendor, bean_type, aroma, sweetness, body, bitterness, acidity, images } = data?.product || {}
+  const {
+    title,
+    vendor,
+    bean_type,
+    aroma,
+    flavourNotes,
+    sweetness,
+    body,
+    bitterness,
+    acidity,
+    images,
+    variants,
+    priceRange,
+    pricePerKg,
+  } = data?.product || {}
 
   if (loading) {
     return (
@@ -71,6 +104,14 @@ export const Product: React.FC = () => {
   if (error) {
     return <ErrorPrompt promptAction={() => history.go(0)} />
   }
+
+  const currencyCode = priceRange?.minVariantPrice.currencyCode || 'EUR'
+  const grindTypeValues =
+    Array.from(new Set(variants?.nodes.map((variant) => variant?.grind_type?.value))).map((x) => ({
+      name: x,
+    })) || []
+  const packageSizesValues =
+    Array.from(new Set(variants?.nodes.map((variant) => variant?.package_size?.value))).map((x) => ({ name: x })) || []
 
   const renderProductMainBlock = () => {
     return (
@@ -102,9 +143,13 @@ export const Product: React.FC = () => {
             </div>
           )}
           {/* Flavour notes section */}
-          <div className="mt-4 border border-dashed border-brand-grey-bombay">
-            <em>Flavour notes placeholder</em>
-          </div>
+          {flavourNotes && (
+            <div className="mt-4">
+              <Typography type={TypographyType.Paragraph} size={TypographySize.Small}>
+                {flavourNotes?.value?.replace(', ', ' • ').replace(',', ' • ')}
+              </Typography>
+            </div>
+          )}
           {/* Taste profile */}
           {sweetness && body && bitterness && acidity && (
             <div className="mt-4">
@@ -117,8 +162,78 @@ export const Product: React.FC = () => {
             </div>
           )}
           {/* Buy section */}
-          <div className="mt-4 border border-dashed border-brand-grey-bombay">
-            <em>Buy section placeholder</em>
+          <div className="mt-4 pt-4 border-t border-brand-grey-whisper">
+            <div>
+              <Listbox
+                items={grindTypeValues}
+                hasTranslatedValues={false}
+                translationPrefix="pages.product.transactional.options.grindType"
+                multiple={false}
+                value={[grindTypeValues[0]]}
+                onChange={(v) => console.log('changed', v)}
+              />
+            </div>
+            <div className="grid gap-6 grid-cols-2 mt-4">
+              <Listbox
+                items={packageSizesValues}
+                hasTranslatedValues={false}
+                translationPrefix="pages.product.transactional.options.packageSize"
+                multiple={false}
+                value={[packageSizesValues[0]]}
+                onChange={(v) => console.log('changed', v)}
+              />
+              <div className="border border-dashed border-brand-grey-bombay">Quantity placeholder</div>
+            </div>
+            <div className="mt-3">
+              {variants && (
+                <Typography type={TypographyType.Heading} size={TypographySize.Small} className="mr-1">
+                  {formatPrice(variants?.nodes[0].price, currencyCode)}
+                </Typography>
+              )}
+              {pricePerKg && (
+                <Typography
+                  type={TypographyType.Paragraph}
+                  size={TypographySize.Tiny}
+                  className="text-coreUI-text-secondary"
+                >
+                  ({formatPrice(pricePerKg.value, 'EUR')}/kg)
+                </Typography>
+              )}
+            </div>
+            <div className="mb-3">
+              <Typography
+                as="div"
+                type={TypographyType.Paragraph}
+                size={TypographySize.Tiny}
+                className="text-coreUI-text-secondary"
+              >
+                {t('pages.product.transactional.price.footNote')}
+              </Typography>
+            </div>
+            <Button
+              type="submit"
+              emphasis={ButtonEmphasis.Primary}
+              size={ButtonSize.md}
+              className="flex w-full justify-center"
+            >
+              {t('pages.product.transactional.cta')}
+            </Button>
+            <div className="mt-2">
+              <Typography type={TypographyType.Paragraph} size={TypographySize.Small}>
+                <strong>{t('pages.product.transactional.shipping.label')}</strong>
+                {': '}
+                {t('pages.product.transactional.shipping.value')}
+              </Typography>
+            </div>
+            <div>
+              <Typography
+                type={TypographyType.Paragraph}
+                size={TypographySize.Tiny}
+                className="text-coreUI-text-secondary"
+              >
+                {t('pages.product.transactional.qualityNote')}
+              </Typography>
+            </div>
           </div>
         </div>
       </div>

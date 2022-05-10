@@ -1,4 +1,11 @@
-import { CurrencyCode, Product, Product as ProductType } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
+import {
+  CurrencyCode,
+  Product,
+  Product as ProductType,
+  ProductVariant,
+  ProductVariantConnection,
+  WeightUnit,
+} from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { GraphQLError } from 'graphql'
 import { loader } from 'graphql.macro'
 
@@ -8,16 +15,27 @@ interface ProductMeta {
   value: string | number
 }
 
+interface ProductVariantCustom extends ProductVariant {
+  grind_type: ProductMeta
+  package_size: ProductMeta
+}
+
+interface ProductVariantConnectionCustom extends ProductVariantConnection {
+  nodes: Array<ProductVariantCustom>
+}
+
 interface ProductCustom {
   bean_type?: ProductMeta
   aroma?: ProductMeta
+  flavourNotes?: ProductMeta
   sweetness?: ProductMeta
   body?: ProductMeta
   bitterness?: ProductMeta
   acidity?: ProductMeta
+  variants: ProductVariantConnectionCustom
 }
 
-export const ProductMockData: ProductType = {
+export const ProductMockDataBase: ProductType = {
   availableForSale: false,
   collections: {
     edges: [],
@@ -122,6 +140,67 @@ export const ProductMockData: ProductType = {
   },
 }
 
+export const ProductMockData: ProductType = {
+  ...ProductMockDataBase,
+  variants: {
+    edges: [],
+    nodes: [
+      {
+        availableForSale: true,
+        currentlyNotInStock: false,
+        id: 'gid://shopify/ProductVariant/42737527324888',
+        price: '9.99',
+        priceV2: {
+          amount: '9.99',
+          currencyCode: CurrencyCode.Eur,
+        },
+        metafields: {
+          edges: [],
+          nodes: [],
+          pageInfo: {
+            hasNextPage: false,
+            hasPreviousPage: false,
+          },
+        },
+        product: ProductMockDataBase,
+        requiresShipping: true,
+        selectedOptions: [],
+        sellingPlanAllocations: {
+          edges: [],
+          nodes: [],
+          pageInfo: {
+            hasNextPage: false,
+            hasPreviousPage: false,
+          },
+        },
+        storeAvailability: {
+          edges: [],
+          nodes: [],
+          pageInfo: {
+            hasNextPage: false,
+            hasPreviousPage: false,
+          },
+        },
+        title: 'variant',
+        weightUnit: WeightUnit.Kilograms,
+      },
+    ],
+    pageInfo: {
+      hasNextPage: false,
+      hasPreviousPage: false,
+    },
+  },
+  vendor: 'Famous Roasters',
+  metafields: {
+    edges: [],
+    nodes: [],
+    pageInfo: {
+      hasNextPage: false,
+      hasPreviousPage: false,
+    },
+  },
+}
+
 export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
   ...ProductMockData,
   images: {
@@ -138,6 +217,9 @@ export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
   aroma: {
     value: 'experimentell & komplex',
   },
+  flavourNotes: {
+    value: 'Weiße Schokolade, Melone, Orangenblüten',
+  },
   acidity: {
     value: 3,
   },
@@ -149,6 +231,20 @@ export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
   },
   sweetness: {
     value: 2,
+  },
+  variants: {
+    ...ProductMockData.variants,
+    nodes: [
+      {
+        ...ProductMockData.variants.nodes[0],
+        grind_type: {
+          value: 'Ganze Bohne',
+        },
+        package_size: {
+          value: '250g',
+        },
+      },
+    ],
   },
 }
 

@@ -3,7 +3,20 @@ query product($id: ID) {
         id
         title
         vendor
+        priceRange {
+            minVariantPrice {
+                amount
+                currencyCode
+            }
+            maxVariantPrice {
+                amount
+                currencyCode
+            }
+        }
         aroma: metafield(namespace: "my_fields", key: "aroma") {
+            value
+        }
+        flavourNotes: metafield(namespace: "my_fields", key: "flavournotes") {
             value
         }
         sweetness: metafield(namespace: "my_fields", key: "sweetness") {
@@ -24,8 +37,12 @@ query product($id: ID) {
         origin: metafield(namespace: "my_fields", key: "origin") {
             value
         }
+        pricePerKg: metafield(namespace: "my_fields", key:"price_per_kg"){
+            value
+        }
         variants(first: 24) {
             nodes {
+                id
                 package_size: metafield(namespace: "my_fields", key: "package_size") {
                     value
                 }
