@@ -17,6 +17,7 @@ import {
   ErrorPrompt,
   Layout,
   Listbox,
+  ListBoxItem,
   Loader,
   QuantitySelect,
   Tag,
@@ -66,6 +67,7 @@ export const Product: React.FC = () => {
   const { t } = useTranslation()
   const GET_PRODUCT = loader('src/graphql/queries/product.query.graphql')
   const [quantity, setQuantity] = useState<number>(1)
+  const [variantSelected, setVariantSelected] = useState<ProductVariantCustom>()
 
   useEffect(() => {
     document.title = `${t('brand.name')} | ${t('pages.product.title')}`
@@ -79,23 +81,20 @@ export const Product: React.FC = () => {
     },
   })
 
-  const {
-    title,
-    vendor,
-    bean_type,
-    aroma,
-    flavourNotes,
-    sweetness,
-    body,
-    bitterness,
-    acidity,
-    images,
-    variants,
-    priceRange,
-    pricePerKg,
-  } = data?.product || {}
+  const { title, vendor, bean_type, aroma, flavourNotes, sweetness, body, bitterness, acidity, images, variants } =
+    data?.product || {}
 
-  if (loading) {
+  useEffect(() => {
+    if (variants) {
+      setVariantSelected(variants.nodes[0])
+    }
+  }, [variants])
+
+  if (error) {
+    return <ErrorPrompt promptAction={() => history.go(0)} />
+  }
+
+  if (loading || !variantSelected || !variants) {
     return (
       <div className="flex h-64 mb-32 justify-center items-center">
         <Loader />
@@ -103,17 +102,31 @@ export const Product: React.FC = () => {
     )
   }
 
-  if (error) {
-    return <ErrorPrompt promptAction={() => history.go(0)} />
+  const updateVariantSelectedWithGrind = (v: ListBoxItem[]) => {
+    const updatedSelected =
+      variants &&
+      variants.nodes.find(
+        (x) => x.grind_type.value === v[0].name && x.package_size.value === variantSelected.package_size.value,
+      )
+    updatedSelected && setVariantSelected(updatedSelected)
   }
 
-  const currencyCode = priceRange?.minVariantPrice.currencyCode || 'EUR'
-  const grindTypeValues =
-    Array.from(new Set(variants?.nodes.map((variant) => variant?.grind_type?.value))).map((x) => ({
+  const updateVariantSelectedWithPackage = (v: ListBoxItem[]) => {
+    const updatedSelected =
+      variants &&
+      variants.nodes.find(
+        (x) => x.package_size.value === v[0].name && x.grind_type.value === variantSelected.grind_type.value,
+      )
+    updatedSelected && setVariantSelected(updatedSelected)
+  }
+
+  const currencyCode = 'EUR'
+  const grindTypeValues = () =>
+    Array.from(new Set(variants.nodes.map((variant) => variant.grind_type.value))).map((x) => ({
       name: x,
     })) || []
-  const packageSizesValues =
-    Array.from(new Set(variants?.nodes.map((variant) => variant?.package_size?.value))).map((x) => ({ name: x })) || []
+  const packageSizesValues = () =>
+    Array.from(new Set(variants.nodes.map((variant) => variant.package_size.value))).map((x) => ({ name: x })) || []
 
   const renderProductMainBlock = () => {
     return (
@@ -166,42 +179,54 @@ export const Product: React.FC = () => {
           {/* Buy section */}
           <div className="mt-4 pt-4 border-t border-brand-grey-whisper">
             <div>
-              <Listbox
-                items={grindTypeValues}
-                hasTranslatedValues={false}
-                translationPrefix="pages.product.transactional.options.grindType"
-                multiple={false}
-                value={[grindTypeValues[0]]}
-                onChange={(v) => console.log('changed', v)}
-              />
+              {variants && variants.nodes[0].grind_type && (
+                <Listbox
+                  items={grindTypeValues()}
+                  hasTranslatedValues={false}
+                  translationPrefix="pages.product.transactional.options.grindType"
+                  multiple={false}
+                  value={[{ name: variantSelected?.grind_type?.value }]}
+                  onChange={(v) => v && updateVariantSelectedWithGrind(v)}
+                />
+              )}
             </div>
             <div className="grid gap-6 grid-cols-2 mt-4">
-              <Listbox
-                items={packageSizesValues}
-                hasTranslatedValues={false}
-                translationPrefix="pages.product.transactional.options.packageSize"
-                multiple={false}
-                value={[packageSizesValues[0]]}
-                onChange={(v) => console.log('changed', v)}
-              />
+              {variants && variants.nodes[0].package_size && (
+                <Listbox
+                  items={packageSizesValues()}
+                  hasTranslatedValues={false}
+                  translationPrefix="pages.product.transactional.options.packageSize"
+                  multiple={false}
+                  value={[{ name: variantSelected?.package_size?.value }]}
+                  onChange={(v) => v && updateVariantSelectedWithPackage(v)}
+                />
+              )}
               <div>
                 <QuantitySelect min={1} max={10} value={quantity} onChange={(q: number) => setQuantity(q)} />
               </div>
             </div>
             <div className="mt-3">
               {variants && (
-                <Typography type={TypographyType.Heading} size={TypographySize.Small} className="mr-1">
-                  {formatPrice(variants?.nodes[0].price, currencyCode)}
-                </Typography>
-              )}
-              {pricePerKg && (
-                <Typography
-                  type={TypographyType.Paragraph}
-                  size={TypographySize.Tiny}
-                  className="text-coreUI-text-secondary"
-                >
-                  ({formatPrice(pricePerKg.value, 'EUR')}/kg)
-                </Typography>
+                <>
+                  <Typography type={TypographyType.Heading} size={TypographySize.Small} className="mr-1">
+                    {formatPrice((quantity * parseFloat(variantSelected?.price)).toString(), currencyCode)}
+                  </Typography>
+                  <Typography
+                    type={TypographyType.Paragraph}
+                    size={TypographySize.Tiny}
+                    className="text-coreUI-text-secondary"
+                  >
+                    (
+                    {formatPrice(
+                      (
+                        (parseFloat(variantSelected?.price) * 1000) /
+                        parseFloat(variantSelected?.package_size?.value)
+                      ).toString(),
+                      'EUR',
+                    )}
+                    /kg)
+                  </Typography>
+                </>
               )}
             </div>
             <div className="mb-3">

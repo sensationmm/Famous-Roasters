@@ -790,6 +790,13 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                 >
                   9,99 €
                 </span>
+                <span
+                  class="text-coreUI-text-secondary text-xs leading-4"
+                >
+                  (
+                  39,96 €
+                  /kg)
+                </span>
               </div>
               <div
                 class="mb-3"

@@ -58,6 +58,73 @@ describe('Product view', () => {
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
   })
 
+  it('The user can change the grind type', async () => {
+    render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
+        mocks={[ProductMockWithCustomMetadata]}
+        addTypename={false}
+      >
+        <I18nextProvider i18n={i18n}>
+          <MemoryRouter initialEntries={['/product/123456']}>
+            <Product />
+          </MemoryRouter>
+        </I18nextProvider>
+      </MockedProvider>,
+    )
+    const button = await screen.findAllByTestId('button-listbox')
+    expect(button[0]).toBeInTheDocument()
+    await waitFor(async () => {
+      fireEvent.click(button[0])
+      const option = screen.getByTestId('option-1')
+      expect(option).toBeInTheDocument()
+      fireEvent.click(option)
+    })
+  })
+
+  it('The user can change the package size', async () => {
+    render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
+        mocks={[ProductMockWithCustomMetadata]}
+        addTypename={false}
+      >
+        <I18nextProvider i18n={i18n}>
+          <MemoryRouter initialEntries={['/product/123456']}>
+            <Product />
+          </MemoryRouter>
+        </I18nextProvider>
+      </MockedProvider>,
+    )
+    const button = await screen.findAllByTestId('button-listbox')
+    expect(button[1]).toBeInTheDocument()
+    await waitFor(async () => {
+      fireEvent.click(button[1])
+      const option = screen.getByTestId('option-1')
+      expect(option).toBeInTheDocument()
+      fireEvent.click(option)
+    })
+  })
+
+  it('The user can change the quantity', async () => {
+    render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
+        mocks={[ProductMockWithCustomMetadata]}
+        addTypename={false}
+      >
+        <I18nextProvider i18n={i18n}>
+          <MemoryRouter initialEntries={['/product/123456']}>
+            <Product />
+          </MemoryRouter>
+        </I18nextProvider>
+      </MockedProvider>,
+    )
+    const button = await screen.findByTestId('quantity-plus')
+    expect(button).toBeInTheDocument()
+    fireEvent.click(button)
+  })
+
   it('Renders correctly for an error call on product', async () => {
     render(
       <MockedProvider

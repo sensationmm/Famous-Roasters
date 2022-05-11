@@ -244,6 +244,33 @@ export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
           value: '250g',
         },
       },
+      {
+        ...ProductMockData.variants.nodes[0],
+        grind_type: {
+          value: 'Filter',
+        },
+        package_size: {
+          value: '250g',
+        },
+      },
+      {
+        ...ProductMockData.variants.nodes[0],
+        grind_type: {
+          value: 'Ganze Bohne',
+        },
+        package_size: {
+          value: '1000g',
+        },
+      },
+      {
+        ...ProductMockData.variants.nodes[0],
+        grind_type: {
+          value: 'Filter',
+        },
+        package_size: {
+          value: '1000g',
+        },
+      },
     ],
   },
 }
