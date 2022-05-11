@@ -16,7 +16,7 @@ exports[`Listbox component Renders correctly 1`] = `
       <span
         class="block truncate text-base leading-6"
       >
-        pages.catalogue.filters.sort.options.undefined
+        pages.catalogue.filters.sort.values.undefined
       </span>
       <svg
         aria-hidden="true"
@@ -88,7 +88,7 @@ exports[`Listbox component Renders correctly with initial value 1`] = `
       <span
         class="block truncate text-base leading-6"
       >
-        pages.catalogue.filters.sort.options.option2
+        pages.catalogue.filters.sort.values.option2
       </span>
       <svg
         aria-hidden="true"

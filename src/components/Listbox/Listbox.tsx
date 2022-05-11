@@ -52,7 +52,7 @@ export const Listbox: React.FC<ListboxProps> = ({
       if (hasNoneItem && activeItems[0] && activeItems[0]?.name === noneItem.name) {
         return t(`${translationPrefix}.label`)
       }
-      return hasTranslatedValues ? t(`${translationPrefix}.options.${activeItems[0]?.name}`) : activeItems[0].name
+      return hasTranslatedValues ? t(`${translationPrefix}.values.${activeItems[0]?.name}`) : activeItems[0].name
     }
   }
 
@@ -114,7 +114,7 @@ export const Listbox: React.FC<ListboxProps> = ({
                               : 'font-normal'
                           }`}
                         >
-                          {hasTranslatedValues ? t(`${translationPrefix}.options.${option.name}`) : option.name}
+                          {hasTranslatedValues ? t(`${translationPrefix}.values.${option.name}`) : option.name}
                         </span>
                         {selected || activeItems?.find((activeItem) => activeItem.name === option.name) ? (
                           <span className="absolute inset-y-0 left-0 flex items-center pl-1.5">

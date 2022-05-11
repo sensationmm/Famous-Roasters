@@ -1,26 +1,59 @@
 import { render, waitFor } from '@testing-library/react'
 import React from 'react'
-import { ProductMockData, ProductMockDataNoImage } from 'src/_mocks'
+import { I18nextProvider } from 'react-i18next'
+import { ProductMockData } from 'src/_mocks'
+import { i18n } from 'src/config'
 
 import { ProductTile } from '.'
 
 describe('Product Tile component', () => {
   it('Renders correctly', async () => {
-    const { container } = render(<ProductTile productNode={{ ...ProductMockData, pricePerKg: { value: '10.0' } }} />)
+    const { container } = render(
+      <I18nextProvider i18n={i18n}>
+        <ProductTile
+          productNode={{
+            ...ProductMockData,
+            pricePerKg: { value: '10.0' },
+            bean_type: { value: 'Arabica' },
+            origin: { value: 'CO' },
+          }}
+        />
+      </I18nextProvider>,
+    )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
     expect(container).toMatchSnapshot()
   })
 
   it('Renders as expected for missing images', async () => {
     const { container } = render(
-      <ProductTile productNode={{ ...ProductMockDataNoImage, pricePerKg: { value: '10.0' } }} />,
+      <I18nextProvider i18n={i18n}>
+        <ProductTile
+          productNode={{
+            ...ProductMockData,
+            pricePerKg: { value: '10.0' },
+            bean_type: { value: 'Arabica' },
+            origin: { value: 'CO' },
+            featuredImage: null,
+          }}
+        />
+      </I18nextProvider>,
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
     expect(container).toMatchSnapshot()
   })
 
   it('Renders as expected for missing attributes', async () => {
-    const { container } = render(<ProductTile productNode={{ ...ProductMockData }} />)
+    const { container } = render(
+      <I18nextProvider i18n={i18n}>
+        <ProductTile
+          productNode={{
+            ...ProductMockData,
+            pricePerKg: { value: '10.0' },
+            origin: { value: 'CO' },
+          }}
+        />
+      </I18nextProvider>,
+    )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
     expect(container).toMatchSnapshot()
   })

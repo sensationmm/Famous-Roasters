@@ -1,20 +1,26 @@
-import { Product } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
+import { Product as ProductType } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { Typography, TypographySize, TypographyType } from 'src/components'
 import { formatPrice } from 'src/utils'
 
-interface CustomProduct extends Product {
-  pricePerKg?: {
-    value: string
-  }
+interface ProductMeta {
+  value: string
+}
+
+interface ProductCustom extends ProductType {
+  bean_type?: ProductMeta
+  origin?: ProductMeta
+  pricePerKg?: ProductMeta
 }
 
 interface ProductTileProps {
-  productNode: CustomProduct
+  productNode: ProductCustom
 }
 
 export const ProductTile: React.FC<ProductTileProps> = ({ productNode }: ProductTileProps) => {
-  const { title, vendor, featuredImage, priceRange, pricePerKg } = productNode
+  const { title, vendor, featuredImage, priceRange, pricePerKg, bean_type, origin } = productNode
+  const { t } = useTranslation()
   if (!featuredImage || !priceRange.minVariantPrice.amount) return null
   return (
     <div className="flex p-6">
@@ -33,22 +39,33 @@ export const ProductTile: React.FC<ProductTileProps> = ({ productNode }: Product
         >
           {vendor}
         </Typography>
-        <Typography
-          as="div"
-          type={TypographyType.Paragraph}
-          size={TypographySize.Small}
-          className="text-coreUI-text-secondary"
-        >
-          Kolumbien
-        </Typography>
-        <Typography
-          as="div"
-          type={TypographyType.Paragraph}
-          size={TypographySize.Small}
-          className="text-coreUI-text-secondary"
-        >
-          Filter
-        </Typography>
+        {origin && (
+          <Typography
+            as="div"
+            type={TypographyType.Paragraph}
+            size={TypographySize.Small}
+            className="text-coreUI-text-secondary"
+          >
+            {origin.value
+              .replace(', ', ',')
+              .split(',')
+              .map((x, idx) =>
+                idx === origin.value.split(',').length - 1
+                  ? t(`pages.catalogue.filters.origin.values.${x}`)
+                  : t(`pages.catalogue.filters.origin.values.${x}`) + ', ',
+              )}
+          </Typography>
+        )}
+        {bean_type && (
+          <Typography
+            as="div"
+            type={TypographyType.Paragraph}
+            size={TypographySize.Small}
+            className="text-coreUI-text-secondary"
+          >
+            {bean_type.value}
+          </Typography>
+        )}
         <div>
           <Typography type={TypographyType.Label} size={TypographySize.Base} className="mr-1">
             {formatPrice(priceRange.minVariantPrice.amount, priceRange.minVariantPrice.currencyCode)}

@@ -32,16 +32,18 @@ exports[`Product Tile component Renders as expected for missing attributes 1`] =
       >
         Kolumbien
       </div>
-      <div
-        class="text-coreUI-text-secondary text-sm leading-5"
-      >
-        Filter
-      </div>
       <div>
         <span
           class="mr-1 text-base leading-6 font-semibold"
         >
           19,99 €
+        </span>
+        <span
+          class="text-coreUI-text-secondary text-xs leading-4"
+        >
+          (
+          10,00 €
+          /kg)
         </span>
       </div>
     </div>
@@ -86,7 +88,7 @@ exports[`Product Tile component Renders correctly 1`] = `
       <div
         class="text-coreUI-text-secondary text-sm leading-5"
       >
-        Filter
+        Arabica
       </div>
       <div>
         <span
