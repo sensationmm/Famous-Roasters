@@ -1,6 +1,12 @@
 import { useQuery } from '@apollo/client'
 import { ChevronRightIcon } from '@heroicons/react/solid'
-import { Collection, Maybe, Scalars } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
+import {
+  Collection,
+  Maybe,
+  Product as ProductType,
+  ProductConnection,
+  Scalars,
+} from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -21,8 +27,36 @@ import {
 import { Pagination } from 'src/components/Pagination'
 import { getSimplifiedProductId } from 'src/utils/formatters'
 
+interface ProductMeta {
+  value: string
+}
+
+interface ProductMetaInteger {
+  value: number
+}
+
+interface ProductCustom extends ProductType {
+  bean_type: ProductMeta
+  aroma: ProductMeta
+  flavourNotes: ProductMeta
+  sweetness: ProductMetaInteger
+  body: ProductMetaInteger
+  bitterness: ProductMetaInteger
+  acidity: ProductMetaInteger
+  pricePerKg: ProductMeta
+  origin: ProductMeta
+}
+
+interface ProductConnectionCustom extends ProductConnection {
+  nodes: Array<ProductCustom>
+}
+
+interface CollectionCustom extends Collection {
+  products: ProductConnectionCustom
+}
+
 interface CollectionQuery {
-  collection: Collection
+  collection: CollectionCustom
 }
 
 interface TabsDataItem {
@@ -102,17 +136,14 @@ export const Catalogue: React.FC = () => {
             filterAttributesData?.products.nodes
               // eslint-disable-next-line @typescript-eslint/ban-ts-comment
               // @ts-ignore
-              .map((productNode) => productNode['origin']?.value)
+              .map((productNode) => productNode['origin']?.value.replace(', ', ','))
               .flat()
               .filter((x) => x !== undefined)
               .sort(),
           ),
         )
         setOriginMetaValues(originMapping)
-        return originMapping
-          .map((value) => value.split(','))
-          .flat()
-          .sort()
+        return Array.from(new Set(originMapping.map((value) => value.split(',')).flat())).sort()
       }
       case 'bean_type':
         return Array.from(
@@ -267,10 +298,10 @@ export const Catalogue: React.FC = () => {
     })
   }
 
-  const renderFilterDesktop = (key: string) => (
+  const renderFilterDesktop = (key: string, hasTranslatedValues: boolean) => (
     <Listbox
       items={filters.filter((filter) => filter.key === key)[0].filterValues?.map((x) => ({ name: x })) || []}
-      hasTranslatedValues={false}
+      hasTranslatedValues={hasTranslatedValues}
       translationPrefix={`pages.catalogue.filters.${key}`}
       value={filters.filter((filter) => filter.key === key)[0].filterValuesSelected?.map((fv) => ({ name: fv }))}
       multiple={true}
@@ -305,10 +336,10 @@ export const Catalogue: React.FC = () => {
     return (
       <>
         <div className="hidden md:flex gap-x-4 mt-8">
-          <div className="md:w-1/4">{renderFilterDesktop('beanType')}</div>
-          <div className="md:w-1/4">{renderFilterDesktop('vendor')}</div>
-          <div className="md:w-1/4">{renderFilterDesktop('origin')}</div>
-          <div className="md:w-1/4">{renderFilterDesktop('packageSize')}</div>
+          <div className="md:w-1/4">{renderFilterDesktop('beanType', false)}</div>
+          <div className="md:w-1/4">{renderFilterDesktop('vendor', false)}</div>
+          <div className="md:w-1/4">{renderFilterDesktop('origin', true)}</div>
+          <div className="md:w-1/4">{renderFilterDesktop('packageSize', false)}</div>
         </div>
         <div className="flex gap-x-4 justify-end mt-4">
           <div className="w-1/2 md:hidden">

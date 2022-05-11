@@ -19,6 +19,12 @@ query products($first: Int, $last: Int, $before: String, $after: String, $sortKe
                         currencyCode
                     }
                 }
+                bean_type: metafield(namespace: "my_fields", key: "bean_type") {
+                    value
+                }
+                origin: metafield(namespace: "my_fields", key: "origin") {
+                    value
+                }
                 pricePerKg: metafield(namespace: "my_fields", key:"price_per_kg"){
                     value
                 }

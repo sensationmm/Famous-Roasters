@@ -52,7 +52,7 @@ export const Listbox: React.FC<ListboxProps> = ({
       if (hasNoneItem && activeItems[0] && activeItems[0]?.name === noneItem.name) {
         return t(`${translationPrefix}.label`)
       }
-      return hasTranslatedValues ? t(`${translationPrefix}.options.${activeItems[0]?.name}`) : activeItems[0].name
+      return hasTranslatedValues ? t(`${translationPrefix}.values.${activeItems[0]?.name}`) : activeItems[0].name
     }
   }
 
@@ -78,13 +78,13 @@ export const Listbox: React.FC<ListboxProps> = ({
               className="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
               data-testid="button-listbox"
             >
-              <Typography size={TypographySize.Small} className="block truncate">
+              <Typography size={TypographySize.Base} className="block truncate">
                 {selectedOption()}
               </Typography>
               {open ? (
-                <ChevronUpIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
+                <ChevronUpIcon className="-mr-1 ml-2 h-6 w-6" aria-hidden="true" />
               ) : (
-                <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
+                <ChevronDownIcon className="-mr-1 ml-2 h-6 w-6" aria-hidden="true" />
               )}
             </HUIListbox.Button>
             <Transition
@@ -114,7 +114,7 @@ export const Listbox: React.FC<ListboxProps> = ({
                               : 'font-normal'
                           }`}
                         >
-                          {hasTranslatedValues ? t(`${translationPrefix}.options.${option.name}`) : option.name}
+                          {hasTranslatedValues ? t(`${translationPrefix}.values.${option.name}`) : option.name}
                         </span>
                         {selected || activeItems?.find((activeItem) => activeItem.name === option.name) ? (
                           <span className="absolute inset-y-0 left-0 flex items-center pl-1.5">

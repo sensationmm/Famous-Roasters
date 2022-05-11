@@ -74,7 +74,16 @@
           "label": "Herkunft",
           "values": {
             "BR": "Brasilien",
-            "CO": "Kolumbien"
+            "CN": "China",
+            "CO": "Kolumbien",
+            "CR": "Costa Rica",
+            "ET": "Äthiopien",
+            "IN": "Indien",
+            "ID": "Indonesien",
+            "KE": "Kenia",
+            "MX": "Mexico",
+            "PE": "Peru",
+            "SV": "El Salvador"
           }
         },
         "packageSize": {
@@ -85,7 +94,7 @@
         },
         "sort": {
           "label": "Sortieren nach...",
-          "options": {
+          "values": {
             "priceAsc": "Preis aufsteigend",
             "priceDesc": "Preis absteigend",
             "newDesc": "Neue zuerst",
@@ -165,6 +174,22 @@
             "medium": "Mittel",
             "strong": "Stark"
           }
+        }
+      },
+      "transactional": {
+        "cta": "In den Warenkorb",
+        "options": {
+          "packageSize": {
+            "label": "Packungsgröße"
+          }
+        },
+        "price": {
+          "footNote": "Preise inkl. MwSt. und Versand"
+        },
+        "qualityNote": "Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu Dir. Wir teilen Dir den geplanten Liefertermin im nächsten Schritt mit.",
+        "shipping": {
+          "label": "Lieferzeit",
+          "value": "2-3 Tage"
         }
       }
     },

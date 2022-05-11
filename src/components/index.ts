@@ -16,6 +16,7 @@ import { Listbox, ListBoxItem } from './Listbox'
 import { Loader } from './Loader'
 import { Navigation, NavigationTheme } from './Navigation'
 import { ProductTile } from './ProductTile'
+import { QuantitySelect } from './QuantitySelect'
 import { TabsNavigation } from './TabsNavigation'
 import { Tag, TagType } from './Tag'
 import { TasteProfile } from './TasteProfile'
@@ -47,6 +48,7 @@ export { Loader as Loader }
 export { Navigation as Navigation }
 export { NavigationTheme as NavigationTheme }
 export { ProductTile as ProductTile }
+export { QuantitySelect as QuantitySelect }
 export { TabsNavigation as TabsNavigation }
 export { Tag as Tag }
 export { TagType as TagType }
