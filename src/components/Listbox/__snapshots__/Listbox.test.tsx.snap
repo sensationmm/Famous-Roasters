@@ -14,13 +14,13 @@ exports[`Listbox component Renders correctly 1`] = `
       type="button"
     >
       <span
-        class="block truncate text-sm leading-5"
+        class="block truncate text-base leading-6"
       >
         pages.catalogue.filters.sort.options.undefined
       </span>
       <svg
         aria-hidden="true"
-        class="-mr-1 ml-2 h-5 w-5"
+        class="-mr-1 ml-2 h-6 w-6"
         fill="currentColor"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"
@@ -50,13 +50,13 @@ exports[`Listbox component Renders correctly multiple 1`] = `
       type="button"
     >
       <span
-        class="block truncate text-sm leading-5"
+        class="block truncate text-base leading-6"
       >
         Sortieren nach... (1)
       </span>
       <svg
         aria-hidden="true"
-        class="-mr-1 ml-2 h-5 w-5"
+        class="-mr-1 ml-2 h-6 w-6"
         fill="currentColor"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"
@@ -86,13 +86,13 @@ exports[`Listbox component Renders correctly with initial value 1`] = `
       type="button"
     >
       <span
-        class="block truncate text-sm leading-5"
+        class="block truncate text-base leading-6"
       >
         pages.catalogue.filters.sort.options.option2
       </span>
       <svg
         aria-hidden="true"
-        class="-mr-1 ml-2 h-5 w-5"
+        class="-mr-1 ml-2 h-6 w-6"
         fill="currentColor"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"
@@ -122,13 +122,13 @@ exports[`Listbox component Renders correctly with no translated values 1`] = `
       type="button"
     >
       <span
-        class="block truncate text-sm leading-5"
+        class="block truncate text-base leading-6"
       >
         option1
       </span>
       <svg
         aria-hidden="true"
-        class="-mr-1 ml-2 h-5 w-5"
+        class="-mr-1 ml-2 h-6 w-6"
         fill="currentColor"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"
@@ -158,13 +158,13 @@ exports[`Listbox component Renders correctly with none item 1`] = `
       type="button"
     >
       <span
-        class="block truncate text-sm leading-5"
+        class="block truncate text-base leading-6"
       >
         Sortieren nach...
       </span>
       <svg
         aria-hidden="true"
-        class="-mr-1 ml-2 h-5 w-5"
+        class="-mr-1 ml-2 h-6 w-6"
         fill="currentColor"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"

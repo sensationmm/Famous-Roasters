@@ -262,13 +262,13 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 type="button"
               >
                 <span
-                  class="block truncate text-sm leading-5"
+                  class="block truncate text-base leading-6"
                 >
                   Bohnensorte
                 </span>
                 <svg
                   aria-hidden="true"
-                  class="-mr-1 ml-2 h-5 w-5"
+                  class="-mr-1 ml-2 h-6 w-6"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -297,13 +297,13 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 type="button"
               >
                 <span
-                  class="block truncate text-sm leading-5"
+                  class="block truncate text-base leading-6"
                 >
                   Röster
                 </span>
                 <svg
                   aria-hidden="true"
-                  class="-mr-1 ml-2 h-5 w-5"
+                  class="-mr-1 ml-2 h-6 w-6"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -332,13 +332,13 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 type="button"
               >
                 <span
-                  class="block truncate text-sm leading-5"
+                  class="block truncate text-base leading-6"
                 >
                   Herkunft
                 </span>
                 <svg
                   aria-hidden="true"
-                  class="-mr-1 ml-2 h-5 w-5"
+                  class="-mr-1 ml-2 h-6 w-6"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -367,13 +367,13 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 type="button"
               >
                 <span
-                  class="block truncate text-sm leading-5"
+                  class="block truncate text-base leading-6"
                 >
                   Packungsgröße
                 </span>
                 <svg
                   aria-hidden="true"
-                  class="-mr-1 ml-2 h-5 w-5"
+                  class="-mr-1 ml-2 h-6 w-6"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -442,13 +442,13 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 type="button"
               >
                 <span
-                  class="block truncate text-sm leading-5"
+                  class="block truncate text-base leading-6"
                 >
                   Sortieren nach...
                 </span>
                 <svg
                   aria-hidden="true"
-                  class="-mr-1 ml-2 h-5 w-5"
+                  class="-mr-1 ml-2 h-6 w-6"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"

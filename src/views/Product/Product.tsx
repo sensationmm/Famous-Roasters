@@ -5,7 +5,7 @@ import {
   ProductVariantConnection,
 } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router-dom'
 import {
@@ -18,6 +18,7 @@ import {
   Layout,
   Listbox,
   Loader,
+  QuantitySelect,
   Tag,
   TagType,
   TasteProfile,
@@ -64,6 +65,7 @@ export const Product: React.FC = () => {
   const { id } = useParams()
   const { t } = useTranslation()
   const GET_PRODUCT = loader('src/graphql/queries/product.query.graphql')
+  const [quantity, setQuantity] = useState<number>(1)
 
   useEffect(() => {
     document.title = `${t('brand.name')} | ${t('pages.product.title')}`
@@ -182,7 +184,9 @@ export const Product: React.FC = () => {
                 value={[packageSizesValues[0]]}
                 onChange={(v) => console.log('changed', v)}
               />
-              <div className="border border-dashed border-brand-grey-bombay">Quantity placeholder</div>
+              <div>
+                <QuantitySelect min={1} max={10} value={quantity} onChange={(q: number) => setQuantity(q)} />
+              </div>
             </div>
             <div className="mt-3">
               {variants && (
