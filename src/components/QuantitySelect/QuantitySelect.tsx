@@ -17,12 +17,16 @@ export const QuantitySelect: React.FC<QuantitySelectProps> = ({
   const [actualValue, setActualValue] = useState<number>(value)
 
   const increment = () => {
-    actualValue + 1 <= max && setActualValue(actualValue + 1)
-    onChange && onChange(actualValue + 1)
+    if (actualValue + 1 <= max) {
+      setActualValue(actualValue + 1)
+      onChange && onChange(actualValue + 1)
+    }
   }
   const decrement = () => {
-    actualValue - 1 >= min && setActualValue(actualValue - 1)
-    onChange && onChange(actualValue - 1)
+    if (actualValue - 1 >= min) {
+      setActualValue(actualValue - 1)
+      onChange && onChange(actualValue - 1)
+    }
   }
 
   return (

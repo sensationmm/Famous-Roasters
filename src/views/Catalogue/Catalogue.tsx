@@ -348,7 +348,7 @@ export const Catalogue: React.FC = () => {
                 className="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                 data-testid="button-filters-menu-open-loading"
               >
-                <Typography size={TypographySize.Small} className="block truncate">
+                <Typography size={TypographySize.Base} className="block truncate">
                   {t(`pages.catalogue.filters.common.filtersMenu.filter`)}
                 </Typography>
                 <ChevronRightIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />

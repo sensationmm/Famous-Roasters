@@ -86,7 +86,7 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({ filter, show, back, 
           leaveFrom="translate-x-0"
           leaveTo="-translate-x-full"
         >
-          <div className="relative w-full bg-white shadow-xl pb-12 flex flex-col overflow-y-auto">
+          <div className="relative w-full bg-white shadow-xl flex flex-col overflow-y-auto justify-between">
             <div className="px-5 pt-5 pb-5 flex justify-between">
               <button
                 type="button"
@@ -116,7 +116,7 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({ filter, show, back, 
               </button>
             </div>
 
-            <div className="border-t border-coreUI-text-tertiary">
+            <div className="border-t border-coreUI-text-tertiary overflow-auto grow">
               {filter?.filterType === 'enum' && filter?.filterValues ? (
                 filter?.filterValues.map((filterValue: string, idx) => (
                   <div
@@ -139,7 +139,7 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({ filter, show, back, 
                 <span>Content for the filter key {filter?.key}</span>
               )}
             </div>
-            <div className="absolute inset-x-0 bottom-12 mx-5">
+            <div className="inset-x-0 mx-5 py-6">
               <Button
                 emphasis={ButtonEmphasis.Secondary}
                 size={ButtonSize.lg}
