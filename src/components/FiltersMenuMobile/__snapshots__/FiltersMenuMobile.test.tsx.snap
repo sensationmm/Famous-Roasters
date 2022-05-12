@@ -7,7 +7,7 @@ exports[`Filters Menu Mobile component Renders correctly 1`] = `
     data-testid="button-filters-menu-open"
   >
     <span
-      class="block truncate text-sm leading-5"
+      class="block truncate text-base leading-6"
     >
       Filter
     </span>

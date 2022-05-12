@@ -139,7 +139,7 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({ filter, show, back, 
                 <span>Content for the filter key {filter?.key}</span>
               )}
             </div>
-            <div className="inset-x-0 bottom-12 mx-5 py-6">
+            <div className="inset-x-0 mx-5 py-6">
               <Button
                 emphasis={ButtonEmphasis.Secondary}
                 size={ButtonSize.lg}
