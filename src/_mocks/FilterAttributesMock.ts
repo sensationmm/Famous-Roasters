@@ -12,6 +12,7 @@ export const FilterAttributesMock = {
       products: {
         nodes: [
           {
+            id: '123123',
             bean_type: {
               value: 'Arabica',
             },
@@ -40,6 +41,7 @@ export const FilterAttributesMock = {
             },
           },
           {
+            id: '123124',
             bean_type: {
               value: 'Arabica',
             },

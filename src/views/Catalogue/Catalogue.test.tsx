@@ -36,7 +36,7 @@ describe('Catalogue view', () => {
   it('Renders correctly for a successful call', async () => {
     const { container } = render(
       <MockedProvider
-        defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
+        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
         mocks={[...CatalogueMocks, FilterAttributesMock]}
         addTypename={false}
       >
@@ -47,7 +47,7 @@ describe('Catalogue view', () => {
         </I18nextProvider>
       </MockedProvider>,
     )
-    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    await waitFor(() => new Promise((res) => setTimeout(res, 500)))
     expect(container).toMatchSnapshot()
   })
 
@@ -364,7 +364,7 @@ describe('Catalogue view', () => {
   it('Renders correctly for an error call on catalogue', async () => {
     const { container } = render(
       <MockedProvider
-        defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
+        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
         mocks={[CatalogueMockError, FilterAttributesMock]}
         addTypename={false}
       >
@@ -375,7 +375,7 @@ describe('Catalogue view', () => {
         </I18nextProvider>
       </MockedProvider>,
     )
-    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    await waitFor(() => new Promise((res) => setTimeout(res, 500)))
     expect(container).toMatchSnapshot()
     const buttonPrompt = await screen.findByTestId('button-prompt')
     expect(buttonPrompt).toBeInTheDocument()

@@ -1,4 +1,4 @@
-import { useQuery } from '@apollo/client'
+import { useQuery } from '@apollo/client/react/hooks'
 import {
   Product as ProductType,
   ProductVariant,
@@ -88,7 +88,7 @@ export const Product: React.FC = () => {
     if (variants) {
       setVariantSelected(variants.nodes[0])
     }
-  }, [variants])
+  }, [!!variants])
 
   if (error) {
     return <ErrorPrompt promptAction={() => history.go(0)} />
