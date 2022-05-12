@@ -164,7 +164,7 @@ export const FiltersMenuMobile: React.FC<FiltersProps> = ({ onUpdateFilters, ini
         data-testid="button-filters-menu-open"
         onClick={() => setOpen(true)}
       >
-        <Typography size={TypographySize.Small} className="block truncate">
+        <Typography size={TypographySize.Base} className="block truncate">
           {t(`pages.catalogue.filters.common.filtersMenu.filter`)}
           {filtersApplied > 0 && ` (${filtersApplied})`}
         </Typography>
