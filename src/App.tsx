@@ -1,7 +1,9 @@
 import { ApolloProvider } from '@apollo/client'
+// import { ShopifyProvider } from '@shopify/hydrogen'
 import React from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+// import { CartProvider } from 'src/components'
 import { i18n, storeFrontClient } from 'src/config'
 import {
   About,
@@ -20,6 +22,8 @@ import {
 function App() {
   return (
     <ApolloProvider client={storeFrontClient()}>
+      {/*<ShopifyProvider>
+        <CartProvider>*/}
       <I18nextProvider i18n={i18n}>
         <BrowserRouter>
           <Routes>
@@ -37,6 +41,8 @@ function App() {
           </Routes>
         </BrowserRouter>
       </I18nextProvider>
+      {/*</CartProvider>
+      </ShopifyProvider>*/}
     </ApolloProvider>
   )
 }
