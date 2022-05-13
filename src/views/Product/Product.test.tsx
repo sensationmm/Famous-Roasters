@@ -26,7 +26,7 @@ describe('Product view', () => {
   it('Renders correctly for a successful call', async () => {
     const { container } = render(
       <MockedProvider
-        defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
+        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
         mocks={[ProductMockWithCustomMetadata]}
         addTypename={false}
       >
@@ -37,7 +37,7 @@ describe('Product view', () => {
         </I18nextProvider>
       </MockedProvider>,
     )
-    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    await waitFor(() => new Promise((res) => setTimeout(res, 500)))
     expect(container).toMatchSnapshot()
   })
 

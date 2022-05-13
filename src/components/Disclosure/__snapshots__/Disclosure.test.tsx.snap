@@ -9,7 +9,7 @@ exports[`Disclosure component Renders correctly 1`] = `
       aria-expanded="false"
       class="flex w-full justify-between py-2 text-left"
       data-testid="button-disclosure-toggle"
-      id="headlessui-disclosure-button-1"
+      id="headlessui-disclosure-button-:r0:"
       type="button"
     >
       <span>

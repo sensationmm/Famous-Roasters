@@ -675,7 +675,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                     aria-haspopup="true"
                     class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                     data-testid="button-listbox"
-                    id="headlessui-listbox-button-1"
+                    id="headlessui-listbox-button-:r0:"
                     type="button"
                   >
                     <span
@@ -710,7 +710,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                     aria-haspopup="true"
                     class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                     data-testid="button-listbox"
-                    id="headlessui-listbox-button-2"
+                    id="headlessui-listbox-button-:r1:"
                     type="button"
                   >
                     <span
@@ -847,7 +847,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               aria-expanded="false"
               class="flex w-full justify-between py-2 text-left"
               data-testid="button-disclosure-toggle"
-              id="headlessui-disclosure-button-3"
+              id="headlessui-disclosure-button-:r2:"
               type="button"
             >
               <span
@@ -879,7 +879,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               aria-expanded="false"
               class="flex w-full justify-between py-2 text-left"
               data-testid="button-disclosure-toggle"
-              id="headlessui-disclosure-button-5"
+              id="headlessui-disclosure-button-:r4:"
               type="button"
             >
               <span
@@ -911,7 +911,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               aria-expanded="false"
               class="flex w-full justify-between py-2 text-left"
               data-testid="button-disclosure-toggle"
-              id="headlessui-disclosure-button-7"
+              id="headlessui-disclosure-button-:r6:"
               type="button"
             >
               <span
@@ -943,7 +943,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               aria-expanded="false"
               class="flex w-full justify-between py-2 text-left"
               data-testid="button-disclosure-toggle"
-              id="headlessui-disclosure-button-9"
+              id="headlessui-disclosure-button-:r8:"
               type="button"
             >
               <span

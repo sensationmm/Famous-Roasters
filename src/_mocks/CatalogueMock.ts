@@ -29,6 +29,7 @@ const CatalogueMock1 = {
   result: {
     data: {
       collection: {
+        id: 'abcdef',
         products: {
           nodes: [...ProductNodes],
           pageInfo: {

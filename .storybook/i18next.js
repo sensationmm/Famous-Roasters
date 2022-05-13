@@ -25,7 +25,7 @@ supportedLngs.forEach((lang) => {
         i18n.addResourceBundle(
             lang,
             n,
-            require(`src/assets/i18n/${lang}.json`)
+            require(`../src/assets/i18n/${lang}.json`)
         );
     });
 });
