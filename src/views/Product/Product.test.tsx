@@ -4,6 +4,7 @@ import React from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { MemoryRouter } from 'react-router-dom'
 import { ProductMock, ProductMockError, ProductMockWithCustomMetadata } from 'src/_mocks'
+import { CartProvider } from 'src/components'
 import { i18n } from 'src/config'
 
 import { Product } from '.'
@@ -30,11 +31,13 @@ describe('Product view', () => {
         mocks={[ProductMockWithCustomMetadata]}
         addTypename={false}
       >
-        <I18nextProvider i18n={i18n}>
-          <MemoryRouter initialEntries={['/product/123456']}>
-            <Product />
-          </MemoryRouter>
-        </I18nextProvider>
+        <CartProvider>
+          <I18nextProvider i18n={i18n}>
+            <MemoryRouter initialEntries={['/product/123456']}>
+              <Product />
+            </MemoryRouter>
+          </I18nextProvider>
+        </CartProvider>
       </MockedProvider>,
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 500)))
@@ -48,11 +51,13 @@ describe('Product view', () => {
         mocks={[ProductMock]}
         addTypename={false}
       >
-        <I18nextProvider i18n={i18n}>
-          <MemoryRouter initialEntries={['/product/123456']}>
-            <Product />
-          </MemoryRouter>
-        </I18nextProvider>
+        <CartProvider>
+          <I18nextProvider i18n={i18n}>
+            <MemoryRouter initialEntries={['/product/123456']}>
+              <Product />
+            </MemoryRouter>
+          </I18nextProvider>
+        </CartProvider>
       </MockedProvider>,
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
@@ -65,11 +70,13 @@ describe('Product view', () => {
         mocks={[ProductMockWithCustomMetadata]}
         addTypename={false}
       >
-        <I18nextProvider i18n={i18n}>
-          <MemoryRouter initialEntries={['/product/123456']}>
-            <Product />
-          </MemoryRouter>
-        </I18nextProvider>
+        <CartProvider>
+          <I18nextProvider i18n={i18n}>
+            <MemoryRouter initialEntries={['/product/123456']}>
+              <Product />
+            </MemoryRouter>
+          </I18nextProvider>
+        </CartProvider>
       </MockedProvider>,
     )
     const button = await screen.findAllByTestId('button-listbox')
@@ -89,11 +96,13 @@ describe('Product view', () => {
         mocks={[ProductMockWithCustomMetadata]}
         addTypename={false}
       >
-        <I18nextProvider i18n={i18n}>
-          <MemoryRouter initialEntries={['/product/123456']}>
-            <Product />
-          </MemoryRouter>
-        </I18nextProvider>
+        <CartProvider>
+          <I18nextProvider i18n={i18n}>
+            <MemoryRouter initialEntries={['/product/123456']}>
+              <Product />
+            </MemoryRouter>
+          </I18nextProvider>
+        </CartProvider>
       </MockedProvider>,
     )
     const button = await screen.findAllByTestId('button-listbox')
@@ -113,14 +122,37 @@ describe('Product view', () => {
         mocks={[ProductMockWithCustomMetadata]}
         addTypename={false}
       >
-        <I18nextProvider i18n={i18n}>
-          <MemoryRouter initialEntries={['/product/123456']}>
-            <Product />
-          </MemoryRouter>
-        </I18nextProvider>
+        <CartProvider>
+          <I18nextProvider i18n={i18n}>
+            <MemoryRouter initialEntries={['/product/123456']}>
+              <Product />
+            </MemoryRouter>
+          </I18nextProvider>
+        </CartProvider>
       </MockedProvider>,
     )
     const button = await screen.findByTestId('quantity-plus')
+    expect(button).toBeInTheDocument()
+    fireEvent.click(button)
+  })
+
+  it('The user can add to cart', async () => {
+    render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
+        mocks={[ProductMockWithCustomMetadata]}
+        addTypename={false}
+      >
+        <CartProvider>
+          <I18nextProvider i18n={i18n}>
+            <MemoryRouter initialEntries={['/product/123456']}>
+              <Product />
+            </MemoryRouter>
+          </I18nextProvider>
+        </CartProvider>
+      </MockedProvider>,
+    )
+    const button = await screen.findByTestId('addToCart')
     expect(button).toBeInTheDocument()
     fireEvent.click(button)
   })
@@ -132,11 +164,13 @@ describe('Product view', () => {
         mocks={[ProductMockError]}
         addTypename={false}
       >
-        <I18nextProvider i18n={i18n}>
-          <MemoryRouter initialEntries={['/product/123456']}>
-            <Product />
-          </MemoryRouter>
-        </I18nextProvider>
+        <CartProvider>
+          <I18nextProvider i18n={i18n}>
+            <MemoryRouter initialEntries={['/product/123456']}>
+              <Product />
+            </MemoryRouter>
+          </I18nextProvider>
+        </CartProvider>
       </MockedProvider>,
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))

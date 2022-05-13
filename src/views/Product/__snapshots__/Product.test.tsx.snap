@@ -809,8 +809,9 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               </div>
               <button
                 class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+                data-testid="addToCart"
                 role="button"
-                type="submit"
+                type="button"
               >
                 In den Warenkorb
               </button>

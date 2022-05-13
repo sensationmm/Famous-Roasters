@@ -5,7 +5,7 @@ import {
   ProductVariantConnection,
 } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router-dom'
 import {
@@ -13,6 +13,7 @@ import {
   ButtonEmphasis,
   ButtonSize,
   Carousel,
+  CartContext,
   Disclosure,
   ErrorPrompt,
   Layout,
@@ -68,6 +69,7 @@ export const Product: React.FC = () => {
   const GET_PRODUCT = loader('src/graphql/queries/product.query.graphql')
   const [quantity, setQuantity] = useState<number>(1)
   const [variantSelected, setVariantSelected] = useState<ProductVariantCustom>()
+  const { addToCart } = useContext(CartContext)
 
   useEffect(() => {
     document.title = `${t('brand.name')} | ${t('pages.product.title')}`
@@ -127,6 +129,10 @@ export const Product: React.FC = () => {
     })) || []
   const packageSizesValues = () =>
     Array.from(new Set(variants.nodes.map((variant) => variant.package_size.value))).map((x) => ({ name: x })) || []
+
+  const handleAddToCart = () => {
+    addToCart && addToCart({ quantity, item: variantSelected.id })
+  }
 
   const renderProductMainBlock = () => {
     return (
@@ -240,10 +246,12 @@ export const Product: React.FC = () => {
               </Typography>
             </div>
             <Button
-              type="submit"
+              type="button"
               emphasis={ButtonEmphasis.Primary}
               size={ButtonSize.md}
               className="flex w-full justify-center"
+              onClick={handleAddToCart}
+              data-testid="addToCart"
             >
               {t('pages.product.transactional.cta')}
             </Button>

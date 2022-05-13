@@ -1,32 +1,38 @@
-import { CartProvider as ShopifyCartProvider } from '@shopify/hydrogen/client'
-import React, { useCallback } from 'react'
-import { CartUIProvider, useCartUI } from 'src/components'
+import { Scalars } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
+import React, { createContext, useMemo, useState } from 'react'
 
 interface CartProviderProps {
   children: React.ReactNode
-  numCartLines?: number
 }
 
-export const CartProvider: React.FC<CartProviderProps> = ({ children, numCartLines }: CartProviderProps) => {
-  return (
-    <CartUIProvider>
-      <Provider numCartLines={numCartLines}>{children}</Provider>
-    </CartUIProvider>
-  )
+interface CartItem {
+  quantity: number
+  item: Scalars['ID']
 }
 
-const Provider: React.FC<CartProviderProps> = ({ children, numCartLines }: CartProviderProps) => {
-  const { openCart } = useCartUI()
+interface CartContextProps {
+  cartItems: CartItem[]
+  cartSize: number
+  addToCart?: (item: CartItem) => void
+}
 
-  const open = useCallback(() => {
-    openCart()
-  }, [openCart])
+export const CartContext = createContext<CartContextProps>({
+  cartItems: [],
+  cartSize: 0,
+})
 
-  return (
-    <>
-      <ShopifyCartProvider numCartLines={numCartLines} onLineAdd={open} onCreate={open}>
-        {children}
-      </ShopifyCartProvider>
-    </>
-  )
+export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProviderProps) => {
+  const [cartItems, setCartItems] = useState<CartItem[]>([])
+  const [cartSize, setCartSize] = useState<number>(0)
+
+  const addToCart = (item: CartItem) => {
+    setCartItems((prevState) => [...prevState, item])
+    setCartSize((prevState) => prevState + item.quantity)
+  }
+
+  const cartItemsMemo = useMemo(() => ({ cartItems, addToCart }), [cartItems])
+
+  const cartSizeMemo = useMemo(() => ({ cartSize, addToCart }), [cartSize])
+
+  return <CartContext.Provider value={{ ...cartItemsMemo, ...cartSizeMemo }}>{children}</CartContext.Provider>
 }

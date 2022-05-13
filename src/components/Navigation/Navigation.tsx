@@ -1,9 +1,17 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { MenuIcon, ShoppingBagIcon, UserIcon, XIcon } from '@heroicons/react/outline'
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useContext, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useNavigate } from 'react-router-dom'
-import { Button, ButtonEmphasis, ButtonSize, Typography, TypographySize, TypographyType } from 'src/components'
+import {
+  Button,
+  ButtonEmphasis,
+  ButtonSize,
+  CartContext,
+  Typography,
+  TypographySize,
+  TypographyType,
+} from 'src/components'
 
 export enum NavigationTheme {
   Home = 'home',
@@ -39,6 +47,7 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
   const [open, setOpen] = useState(false)
   const navigate = useNavigate()
   const { t } = useTranslation()
+  const { cartSize } = useContext(CartContext)
 
   const renderMenuItemsMobile = (data: NavigationDataItem[]) =>
     data.map((page) => (
@@ -182,7 +191,9 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
                         className="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
                         aria-hidden="true"
                       />
-                      <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
+                      <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">
+                        {cartSize}
+                      </span>
                       <span className="sr-only">items in cart, view bag</span>
                     </Link>
                   ) : (
