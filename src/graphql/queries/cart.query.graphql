@@ -1,0 +1,34 @@
+query cart($id: ID!) {
+    cart(id: $id) {
+        checkoutUrl
+        id
+        lines(first: 20) {
+            edges {
+                node {
+                    id
+                    merchandise {
+                        ... on ProductVariant {
+                            id
+                            image {
+                                altText
+                                url
+                            }
+                            priceV2 {
+                                amount
+                                currencyCode
+                            }
+                            product {
+                                title
+                            }
+                            selectedOptions {
+                                name
+                                value
+                            }
+                        }
+                    }
+                    quantity
+                }
+            }
+        }
+    }
+}

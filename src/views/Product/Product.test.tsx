@@ -136,7 +136,7 @@ describe('Product view', () => {
     fireEvent.click(button)
   })
 
-  it('The user can add to cart', async () => {
+  it('The user can add to cart a couple of times', async () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
@@ -154,6 +154,7 @@ describe('Product view', () => {
     )
     const button = await screen.findByTestId('addToCart')
     expect(button).toBeInTheDocument()
+    fireEvent.click(button)
     fireEvent.click(button)
   })
 
