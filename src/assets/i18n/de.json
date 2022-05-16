@@ -45,8 +45,10 @@
     "cart": {
       "ctaCheckout": "Zur Kasse gehen",
       "ctaContinue": "Einkauf forsetzen",
+      "displayTitle": "Dein Warenkorb",
       "navigation": "Warenkorb",
       "noItems": "Dein Warenkorb ist leer",
+      "subtotal": "Zwischensumme",
       "title": "Warenkorb"
     },
     "catalogue": {

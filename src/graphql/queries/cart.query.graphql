@@ -25,6 +25,7 @@ query cart($id: ID!) {
                             }
                             product {
                                 title
+                                id
                             }
                             selectedOptions {
                                 name

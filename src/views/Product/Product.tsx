@@ -208,7 +208,13 @@ export const Product: React.FC = () => {
                 />
               )}
               <div>
-                <QuantitySelect min={1} max={10} value={quantity} onChange={(q: number) => setQuantity(q)} />
+                <QuantitySelect
+                  min={1}
+                  max={10}
+                  value={quantity}
+                  onChange={(q: number) => setQuantity(q)}
+                  className="w-full"
+                />
               </div>
             </div>
             <div className="mt-3">

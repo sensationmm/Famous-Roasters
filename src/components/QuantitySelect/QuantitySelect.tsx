@@ -6,6 +6,7 @@ interface QuantitySelectProps {
   max: number
   value?: number
   onChange?: (actualValue: number) => void
+  className?: string | undefined
 }
 
 export const QuantitySelect: React.FC<QuantitySelectProps> = ({
@@ -13,6 +14,7 @@ export const QuantitySelect: React.FC<QuantitySelectProps> = ({
   max,
   value = 1,
   onChange,
+  className,
 }: QuantitySelectProps) => {
   const [actualValue, setActualValue] = useState<number>(value)
 
@@ -31,7 +33,10 @@ export const QuantitySelect: React.FC<QuantitySelectProps> = ({
 
   return (
     <div
-      className="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
+      className={
+        'inline-flex justify-between px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default ' +
+        className
+      }
       data-testid="quantity-select"
     >
       <button type="button" onClick={decrement} data-testid="quantity-minus">
