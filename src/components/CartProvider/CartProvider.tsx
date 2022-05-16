@@ -1,11 +1,13 @@
-import { useMutation } from '@apollo/client/react/hooks'
+import { useLazyQuery, useMutation } from '@apollo/client/react/hooks'
 import { CartCreateMutation } from '@shopify/hydrogen/dist/esnext/components/CartProvider/graphql/CartCreateMutation'
 import { CartLineAddMutation } from '@shopify/hydrogen/dist/esnext/components/CartProvider/graphql/CartLineAddMutation'
 import { CartLineRemoveMutation } from '@shopify/hydrogen/dist/esnext/components/CartProvider/graphql/CartLineRemoveMutation'
 import { CartLineUpdateMutation } from '@shopify/hydrogen/dist/esnext/components/CartProvider/graphql/CartLineUpdateMutation'
+import { CartQueryQuery } from '@shopify/hydrogen/dist/esnext/components/CartProvider/graphql/CartQuery'
 import { Scalars } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
-import React, { createContext, useMemo, useState } from 'react'
+import React, { createContext, useEffect, useMemo, useState } from 'react'
+import { useLocalStorage } from 'src/utils'
 
 interface CartProviderProps {
   children: React.ReactNode
@@ -31,14 +33,36 @@ export const CartContext = createContext<CartContextProps>({
 export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProviderProps) => {
   const [cartSize, setCartSize] = useState<number>(0)
   const [cartId, setCartId] = useState<Scalars['ID']>()
+  const GET_CART = loader('src/graphql/queries/cart.query.graphql')
   const GET_CART_CREATE = loader('src/graphql/queries/cartCreate.mutation.graphql')
   const GET_CART_LINES_ADD = loader('src/graphql/queries/cartLinesAdd.mutation.graphql')
   const GET_CART_LINES_REMOVE = loader('src/graphql/queries/cartLinesRemove.mutation.graphql')
   const GET_CART_LINES_UPDATE = loader('src/graphql/queries/cartLinesUpdate.mutation.graphql')
+  const [cartQuery] = useLazyQuery<CartQueryQuery>(GET_CART)
   const [cartCreate] = useMutation<CartCreateMutation>(GET_CART_CREATE)
   const [cartLinesAdd] = useMutation<CartLineAddMutation>(GET_CART_LINES_ADD)
   const [cartLinesRemove] = useMutation<CartLineRemoveMutation>(GET_CART_LINES_REMOVE)
   const [cartLinesUpdate] = useMutation<CartLineUpdateMutation>(GET_CART_LINES_UPDATE)
+  const [storedCartId, setStoredCartId] = useLocalStorage('cartId', '')
+
+  useEffect(() => {
+    if (storedCartId) {
+      cartQuery({
+        variables: {
+          id: storedCartId,
+        },
+      })
+        .then((r) => {
+          const quantities = r.data?.cart?.lines.edges.map((node) => node.node.quantity)
+          const size = quantities?.reduce((x, y) => x + y)
+          setCartId(storedCartId)
+          size && setCartSize(size)
+        })
+        .catch((err) => {
+          throw new Error('Error fetching cart', err)
+        })
+    }
+  }, [])
 
   const createCart = (firstItem: CartItem) => {
     cartCreate({
@@ -54,7 +78,9 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProv
       },
     })
       .then((r) => {
-        setCartId(r?.data?.cartCreate?.cart?.id)
+        const cartId = r?.data?.cartCreate?.cart?.id
+        cartId && setCartId(cartId)
+        cartId && setStoredCartId(cartId)
         setCartSize(firstItem.quantity)
       })
       .catch((err) => {
@@ -96,6 +122,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProv
     if (actualQty === cartSize) {
       setCartId(undefined)
       setCartSize(0)
+      setStoredCartId('')
     } else {
       cartLinesRemove({
         variables: {
@@ -136,9 +163,10 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProv
       })
   }
 
-  const cartSizeMemo = useMemo(() => ({ cartSize, addToCart, removeFromCart, modifyQuantity }), [cartSize, cartId])
+  const cartMemo = useMemo(
+    () => ({ cartId, storedCartId, cartSize, addToCart, removeFromCart, modifyQuantity }),
+    [cartSize],
+  )
 
-  const cartIdMemo = useMemo(() => ({ cartId, addToCart, removeFromCart, modifyQuantity }), [cartId])
-
-  return <CartContext.Provider value={{ ...cartSizeMemo, ...cartIdMemo }}>{children}</CartContext.Provider>
+  return <CartContext.Provider value={{ ...cartMemo }}>{children}</CartContext.Provider>
 }
