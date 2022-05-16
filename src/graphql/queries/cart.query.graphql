@@ -2,6 +2,12 @@ query cart($id: ID!) {
     cart(id: $id) {
         checkoutUrl
         id
+        estimatedCost {
+            totalAmount {
+                amount
+                currencyCode
+            }
+        }
         lines(first: 20) {
             edges {
                 node {

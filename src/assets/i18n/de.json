@@ -43,7 +43,10 @@
       "title": "Konto"
     },
     "cart": {
+      "ctaCheckout": "Zur Kasse gehen",
+      "ctaContinue": "Einkauf forsetzen",
       "navigation": "Warenkorb",
+      "noItems": "Dein Warenkorb ist leer",
       "title": "Warenkorb"
     },
     "catalogue": {
