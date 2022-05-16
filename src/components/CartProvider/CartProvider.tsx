@@ -1,6 +1,8 @@
 import { useMutation } from '@apollo/client/react/hooks'
 import { CartCreateMutation } from '@shopify/hydrogen/dist/esnext/components/CartProvider/graphql/CartCreateMutation'
 import { CartLineAddMutation } from '@shopify/hydrogen/dist/esnext/components/CartProvider/graphql/CartLineAddMutation'
+import { CartLineRemoveMutation } from '@shopify/hydrogen/dist/esnext/components/CartProvider/graphql/CartLineRemoveMutation'
+import { CartLineUpdateMutation } from '@shopify/hydrogen/dist/esnext/components/CartProvider/graphql/CartLineUpdateMutation'
 import { Scalars } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
 import React, { createContext, useMemo, useState } from 'react'
@@ -15,27 +17,28 @@ interface CartItem {
 }
 
 interface CartContextProps {
-  cartItems: CartItem[]
   cartSize: number
   cartId?: Scalars['ID']
   addToCart?: (item: CartItem) => void
-  removeFromCart?: (item: Scalars['ID']) => void
-  modifyQuantity?: (item: CartItem) => void
+  removeFromCart?: (item: Scalars['ID'], actualQty: number) => void
+  modifyQuantity?: (lineId: Scalars['ID'], quantity: number) => void
 }
 
 export const CartContext = createContext<CartContextProps>({
-  cartItems: [],
   cartSize: 0,
 })
 
 export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProviderProps) => {
-  const [cartItems, setCartItems] = useState<CartItem[]>([])
   const [cartSize, setCartSize] = useState<number>(0)
   const [cartId, setCartId] = useState<Scalars['ID']>()
   const GET_CART_CREATE = loader('src/graphql/queries/cartCreate.mutation.graphql')
   const GET_CART_LINES_ADD = loader('src/graphql/queries/cartLinesAdd.mutation.graphql')
+  const GET_CART_LINES_REMOVE = loader('src/graphql/queries/cartLinesRemove.mutation.graphql')
+  const GET_CART_LINES_UPDATE = loader('src/graphql/queries/cartLinesUpdate.mutation.graphql')
   const [cartCreate] = useMutation<CartCreateMutation>(GET_CART_CREATE)
   const [cartLinesAdd] = useMutation<CartLineAddMutation>(GET_CART_LINES_ADD)
+  const [cartLinesRemove] = useMutation<CartLineRemoveMutation>(GET_CART_LINES_REMOVE)
+  const [cartLinesUpdate] = useMutation<CartLineUpdateMutation>(GET_CART_LINES_UPDATE)
 
   const createCart = (firstItem: CartItem) => {
     cartCreate({
@@ -52,6 +55,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProv
     })
       .then((r) => {
         setCartId(r?.data?.cartCreate?.cart?.id)
+        setCartSize(firstItem.quantity)
       })
       .catch((err) => {
         throw new Error('Error creating cart', err)
@@ -69,15 +73,18 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProv
           },
         ],
       },
-    }).catch((err) => {
-      throw new Error('Error adding to cart', err)
     })
+      .then((res) => {
+        const quantities = res.data?.cartLinesAdd?.cart?.lines.edges.map((node) => node.node.quantity)
+        const size = quantities?.reduce((x, y) => x + y)
+        size && setCartSize(size)
+      })
+      .catch((err) => {
+        throw new Error('Error adding to cart', err)
+      })
   }
 
   const addToCart = (item: CartItem) => {
-    setCartItems((prevState) => [...prevState, item])
-    setCartSize((prevState) => prevState + item.quantity)
-    console.log('addToCart with cartId', cartId)
     if (cartId) {
       addLinesToCart(item)
     } else {
@@ -85,21 +92,53 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProv
     }
   }
 
-  const removeFromCart = (itemId: Scalars['ID']) => {
-    console.log('removeFromCart', itemId)
+  const removeFromCart = (lineId: Scalars['ID'], actualQty: number) => {
+    if (actualQty === cartSize) {
+      setCartId(undefined)
+      setCartSize(0)
+    } else {
+      cartLinesRemove({
+        variables: {
+          cartId,
+          lineIds: [lineId],
+        },
+      })
+        .then((res) => {
+          const quantities = res.data?.cartLinesRemove?.cart?.lines.edges.map((node) => node.node.quantity)
+          const size = quantities?.reduce((x, y) => x + y)
+          size && setCartSize(size)
+        })
+        .catch((err) => {
+          throw new Error('Error removing from cart', err)
+        })
+    }
   }
 
-  const modifyQuantity = (item: CartItem) => {
-    console.log('modifyQuantity', item)
+  const modifyQuantity = (lineId: Scalars['ID'], quantity: number) => {
+    cartLinesUpdate({
+      variables: {
+        cartId,
+        lines: [
+          {
+            id: lineId,
+            quantity,
+          },
+        ],
+      },
+    })
+      .then((res) => {
+        const quantities = res.data?.cartLinesUpdate?.cart?.lines.edges.map((node) => node.node.quantity)
+        const size = quantities?.reduce((x, y) => x + y)
+        size && setCartSize(size)
+      })
+      .catch((err) => {
+        throw new Error('Error modifying quantity on cart', err)
+      })
   }
-
-  const cartItemsMemo = useMemo(() => ({ cartItems, addToCart, removeFromCart, modifyQuantity }), [cartItems, cartId])
 
   const cartSizeMemo = useMemo(() => ({ cartSize, addToCart, removeFromCart, modifyQuantity }), [cartSize, cartId])
 
   const cartIdMemo = useMemo(() => ({ cartId, addToCart, removeFromCart, modifyQuantity }), [cartId])
 
-  return (
-    <CartContext.Provider value={{ ...cartItemsMemo, ...cartSizeMemo, ...cartIdMemo }}>{children}</CartContext.Provider>
-  )
+  return <CartContext.Provider value={{ ...cartSizeMemo, ...cartIdMemo }}>{children}</CartContext.Provider>
 }

@@ -1,5 +1,5 @@
 import { MinusIcon, PlusIcon } from '@heroicons/react/solid'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 interface QuantitySelectProps {
   min: number
@@ -17,6 +17,10 @@ export const QuantitySelect: React.FC<QuantitySelectProps> = ({
   className,
 }: QuantitySelectProps) => {
   const [actualValue, setActualValue] = useState<number>(value)
+
+  useEffect(() => {
+    setActualValue(value)
+  }, [value])
 
   const increment = () => {
     if (actualValue + 1 <= max) {

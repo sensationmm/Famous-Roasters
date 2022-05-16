@@ -77,12 +77,12 @@ export const Cart: React.FC = () => {
     </div>
   )
 
-  const handleRemoveFromCart = (item: Scalars['ID']) => {
-    removeFromCart && removeFromCart(item)
+  const handleRemoveFromCart = (item: Scalars['ID'], actualQty: number) => {
+    removeFromCart && removeFromCart(item, actualQty)
   }
 
-  const handleModifyQuantity = (quantity: number, item: Scalars['ID']) => {
-    modifyQuantity && modifyQuantity({ quantity, item })
+  const handleModifyQuantity = (item: Scalars['ID'], quantity: number) => {
+    modifyQuantity && modifyQuantity(item, quantity)
   }
 
   const renderCartWithItems = () => {
@@ -92,11 +92,12 @@ export const Cart: React.FC = () => {
         <div className="grid gap-2 grid-cols-1">
           {lines &&
             lines.edges.map((cartEdge, idx: number) => {
-              const { id, product, image, selectedOptions, priceV2 } = cartEdge.node.merchandise
+              const { product, image, selectedOptions, priceV2 } = cartEdge.node.merchandise
               // types are pick and doesnt populate id in typescript
               // eslint-disable-next-line @typescript-eslint/ban-ts-comment
               // @ts-ignore
               const productId = product.id
+              const lineId = cartEdge.node.id
               return (
                 <div
                   key={`cart-item-${idx}`}
@@ -163,12 +164,12 @@ export const Cart: React.FC = () => {
                         min={1}
                         max={10}
                         value={cartEdge.node.quantity}
-                        onChange={(q: number) => handleModifyQuantity(q, id)}
+                        onChange={(q: number) => handleModifyQuantity(lineId, q)}
                         className="w-32"
                       />
                       <button
                         type="button"
-                        onClick={() => handleRemoveFromCart(id)}
+                        onClick={() => handleRemoveFromCart(lineId, cartEdge.node.quantity)}
                         data-testid="button-cart-item-remove"
                         className="ml-4 inline-flex items-center px-4 py-2.5 w-fit rounded-full border border-coreUI-text-tertiary"
                       >
@@ -240,7 +241,7 @@ export const Cart: React.FC = () => {
           <Typography as={'h1'} type={TypographyType.Heading} size={TypographySize.Small} className="mb-4">
             {t('pages.cart.displayTitle')}
           </Typography>
-          {data?.cart ? renderCartWithItems() : renderEmptyCart()}
+          {cartId && data?.cart && data.cart.lines.edges.length > 0 ? renderCartWithItems() : renderEmptyCart()}
         </div>
       </main>
     </Layout>
