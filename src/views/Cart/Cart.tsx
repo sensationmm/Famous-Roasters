@@ -92,8 +92,8 @@ export const Cart: React.FC = () => {
                   key={`cart-item-${idx}`}
                   className={
                     idx < lines.edges.length - 1
-                      ? 'flex pb-6 border-b border-coreUI-border mb-4'
-                      : 'flex pb-6 border-b border-coreUI-border'
+                      ? 'flex w-full md:grid-flow-col-dense md:columns-2 pb-6 border-b border-coreUI-border mb-4'
+                      : 'flex w-full md:grid-flow-col-dense md:columns-2 pb-6 border-b border-coreUI-border'
                   }
                 >
                   <div className="shrink-0">
@@ -101,21 +101,28 @@ export const Cart: React.FC = () => {
                       <img src={image?.url} alt={product.title} className="w-32" />
                     </Link>
                   </div>
-                  <div className="flex flex-1 flex-col justify-between justify-items-start">
-                    <Typography as="div" type={TypographyType.Label} size={TypographySize.Small}>
-                      {product.title}
-                    </Typography>
+                  <div className="flex flex-1 flex-col justify-between justify-items-start md:grid-flow-col-dense md:columns-3 md:flex-row md:items-center">
                     <div>
-                      {selectedOptions.map((option, idx: number) => (
-                        <Typography
-                          key={`cart-item-detail-${idx}`}
-                          type={TypographyType.Paragraph}
-                          size={TypographySize.Small}
-                          className="text-coreUI-text-secondary"
-                        >
-                          {idx < selectedOptions?.length - 1 ? `${option.value} | ` : option.value}
-                        </Typography>
-                      ))}
+                      <Typography
+                        as="div"
+                        type={TypographyType.Label}
+                        size={TypographySize.Small}
+                        className="mb-1.5 md:mb-0"
+                      >
+                        {product.title}
+                      </Typography>
+                      <div>
+                        {selectedOptions.map((option, idx: number) => (
+                          <Typography
+                            key={`cart-item-detail-${idx}`}
+                            type={TypographyType.Paragraph}
+                            size={TypographySize.Small}
+                            className="text-coreUI-text-secondary"
+                          >
+                            {idx < selectedOptions?.length - 1 ? `${option.value} | ` : option.value}
+                          </Typography>
+                        ))}
+                      </div>
                     </div>
                     <div>
                       <Typography
@@ -140,8 +147,7 @@ export const Cart: React.FC = () => {
                         </Typography>
                       )}
                     </div>
-                    <span />
-                    <div className="inline-flex">
+                    <div>
                       <QuantitySelect
                         min={1}
                         max={10}
@@ -153,7 +159,7 @@ export const Cart: React.FC = () => {
                         type="button"
                         onClick={() => console.log('remove')}
                         data-testid="button-cart-item-remove"
-                        className="ml-4 inline-flex items-center px-4 py-2 w-fit rounded-full border border-coreUI-text-tertiary cursor-default"
+                        className="ml-4 inline-flex items-center px-4 py-2.5 w-fit rounded-full border border-coreUI-text-tertiary"
                       >
                         <TrashIcon className="h-5 w-5" />
                       </button>
@@ -164,7 +170,7 @@ export const Cart: React.FC = () => {
             })}
         </div>
         {estimatedCost && (
-          <div className="grid justify-items-start md:justify-items-end mt-4">
+          <div className="grid justify-items-start md:justify-items-end mt-6">
             <Typography
               type={TypographyType.Paragraph}
               size={TypographySize.Tiny}
@@ -185,7 +191,7 @@ export const Cart: React.FC = () => {
             </Typography>
           </div>
         )}
-        <div className="grid gap-4 grid-cols-1 md:grid-cols-2 my-4">
+        <div className="grid gap-4 grid-cols-1 md:flex md:justify-end my-6">
           <div className="grid md:order-2 justify-items-end">
             <a href={data?.cart?.checkoutUrl} className="flex w-full md:w-max" data-testid="goToCheckout">
               <Button
