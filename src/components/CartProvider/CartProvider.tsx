@@ -19,6 +19,8 @@ interface CartContextProps {
   cartSize: number
   cartId?: Scalars['ID']
   addToCart?: (item: CartItem) => void
+  removeFromCart?: (item: Scalars['ID']) => void
+  modifyQuantity?: (item: CartItem) => void
 }
 
 export const CartContext = createContext<CartContextProps>({
@@ -83,11 +85,19 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProv
     }
   }
 
-  const cartItemsMemo = useMemo(() => ({ cartItems, addToCart }), [cartItems, cartId])
+  const removeFromCart = (itemId: Scalars['ID']) => {
+    console.log('removeFromCart', itemId)
+  }
 
-  const cartSizeMemo = useMemo(() => ({ cartSize, addToCart }), [cartSize, cartId])
+  const modifyQuantity = (item: CartItem) => {
+    console.log('modifyQuantity', item)
+  }
 
-  const cartIdMemo = useMemo(() => ({ cartId, addToCart }), [cartId])
+  const cartItemsMemo = useMemo(() => ({ cartItems, addToCart, removeFromCart, modifyQuantity }), [cartItems, cartId])
+
+  const cartSizeMemo = useMemo(() => ({ cartSize, addToCart, removeFromCart, modifyQuantity }), [cartSize, cartId])
+
+  const cartIdMemo = useMemo(() => ({ cartId, addToCart, removeFromCart, modifyQuantity }), [cartId])
 
   return (
     <CartContext.Provider value={{ ...cartItemsMemo, ...cartSizeMemo, ...cartIdMemo }}>{children}</CartContext.Provider>

@@ -1,6 +1,7 @@
 import { useLazyQuery } from '@apollo/client/react/hooks'
 import { TrashIcon } from '@heroicons/react/outline'
 import { CartQueryQuery } from '@shopify/hydrogen/dist/esnext/components/CartProvider/graphql/CartQuery'
+import { Scalars } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
 import React, { useContext, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -24,6 +25,7 @@ export const Cart: React.FC = () => {
   const GET_CART = loader('src/graphql/queries/cart.query.graphql')
   const { cartId } = useContext(CartContext)
   const [cartQuery, { loading, data }] = useLazyQuery<CartQueryQuery>(GET_CART)
+  const { modifyQuantity, removeFromCart } = useContext(CartContext)
 
   useEffect(() => {
     document.title = `${t('brand.name')} | ${t('pages.cart.title')}`
@@ -75,6 +77,14 @@ export const Cart: React.FC = () => {
     </div>
   )
 
+  const handleRemoveFromCart = (item: Scalars['ID']) => {
+    removeFromCart && removeFromCart(item)
+  }
+
+  const handleModifyQuantity = (quantity: number, item: Scalars['ID']) => {
+    modifyQuantity && modifyQuantity({ quantity, item })
+  }
+
   const renderCartWithItems = () => {
     const { lines, estimatedCost } = data?.cart || {}
     return (
@@ -82,7 +92,7 @@ export const Cart: React.FC = () => {
         <div className="grid gap-2 grid-cols-1">
           {lines &&
             lines.edges.map((cartEdge, idx: number) => {
-              const { product, image, selectedOptions, priceV2 } = cartEdge.node.merchandise
+              const { id, product, image, selectedOptions, priceV2 } = cartEdge.node.merchandise
               // types are pick and doesnt populate id in typescript
               // eslint-disable-next-line @typescript-eslint/ban-ts-comment
               // @ts-ignore
@@ -147,17 +157,18 @@ export const Cart: React.FC = () => {
                         </Typography>
                       )}
                     </div>
+                    <span className="md:hidden" />
                     <div>
                       <QuantitySelect
                         min={1}
                         max={10}
                         value={cartEdge.node.quantity}
-                        onChange={(q: number) => console.log('change quantity!', q)}
+                        onChange={(q: number) => handleModifyQuantity(q, id)}
                         className="w-32"
                       />
                       <button
                         type="button"
-                        onClick={() => console.log('remove')}
+                        onClick={() => handleRemoveFromCart(id)}
                         data-testid="button-cart-item-remove"
                         className="ml-4 inline-flex items-center px-4 py-2.5 w-fit rounded-full border border-coreUI-text-tertiary"
                       >
