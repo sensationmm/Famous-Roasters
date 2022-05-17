@@ -7,12 +7,6 @@ export const storeFrontClient = (): ApolloClient<NormalizedCacheObject> => {
         Collection: {
           keyFields: ['id'],
         },
-        Product: {
-          keyFields: ['id'],
-        },
-        ProductVariant: {
-          keyFields: ['id'],
-        },
       },
     }),
     link: from([
