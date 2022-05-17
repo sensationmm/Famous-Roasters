@@ -12,6 +12,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body > div > div > main {
+  min-height: 50vh;
+}
+
 :root {
   --swiper-theme-color: #646575 !important;
 }

@@ -192,7 +192,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                     <span
                       class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800"
                     >
-                      0
+                      1
                     </span>
                     <span
                       class="sr-only"
@@ -735,7 +735,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                 </div>
                 <div>
                   <div
-                    class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
+                    class="inline-flex justify-between px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default w-full"
                     data-testid="quantity-select"
                   >
                     <button
@@ -757,6 +757,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                       </svg>
                     </button>
                     <div
+                      class="px-4"
                       data-testid="quantity-value"
                     >
                       1
@@ -809,8 +810,9 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               </div>
               <button
                 class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+                data-testid="addToCart"
                 role="button"
-                type="submit"
+                type="button"
               >
                 In den Warenkorb
               </button>

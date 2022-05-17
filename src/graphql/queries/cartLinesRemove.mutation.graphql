@@ -1,0 +1,40 @@
+mutation cartLinesRemove($cartId: ID!, $lineIds: [ID!]!) {
+    cartLinesRemove(cartId: $cartId, lineIds: $lineIds) {
+        cart {
+            checkoutUrl
+            id
+            lines(first: 20) {
+                edges {
+                    node {
+                        id
+                        merchandise {
+                            ... on ProductVariant {
+                                id
+                                image {
+                                    altText
+                                    url
+                                }
+                                priceV2 {
+                                    amount
+                                    currencyCode
+                                }
+                                product {
+                                    title
+                                }
+                                selectedOptions {
+                                    name
+                                    value
+                                }
+                            }
+                        }
+                        quantity
+                    }
+                }
+            }
+        }
+        userErrors {
+            field
+            message
+        }
+    }
+}

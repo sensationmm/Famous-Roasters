@@ -2,8 +2,7 @@ import { Badge } from './Badge'
 import { BeanScaleTag } from './BeanScaleTag'
 import { Button, ButtonEmphasis, ButtonSize } from './Button'
 import { Carousel } from './Carousel'
-import { CartProvider } from './CartProvider'
-import { CartUIProvider, useCartUI } from './CartUIProvider'
+import { CartContext, CartProvider } from './CartProvider'
 import { Dialog } from './Dialog'
 import { Disclosure } from './Disclosure'
 import { Drawer } from './Drawer'
@@ -30,8 +29,8 @@ export { Button as Button }
 export { ButtonEmphasis as ButtonEmphasis }
 export { ButtonSize as ButtonSize }
 export { Carousel as Carousel }
+export { CartContext as CartContext }
 export { CartProvider as CartProvider }
-export { CartUIProvider as CartUIProvider }
 export { Dialog as Dialog }
 export { Drawer as Drawer }
 export { Disclosure as Disclosure }
@@ -60,4 +59,3 @@ export { TasteProfile as TasteProfile }
 export { Typography as Typography }
 export { TypographyType as TypographyType }
 export { TypographySize as TypographySize }
-export { useCartUI as useCartUI }

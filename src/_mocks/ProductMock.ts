@@ -308,7 +308,7 @@ export const ProductMockWithCustomMetadata = {
   request: {
     query: GET_PRODUCT,
     variables: {
-      id: 'gid://shopify/Product/123456',
+      id: 'gid://shopify/Product/7655228866776',
     },
   },
   result: {

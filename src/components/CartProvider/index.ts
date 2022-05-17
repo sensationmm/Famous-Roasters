@@ -1,3 +1,4 @@
-import { CartProvider } from './CartProvider'
+import { CartContext, CartProvider } from './CartProvider'
 
+export { CartContext as CartContext }
 export { CartProvider as CartProvider }

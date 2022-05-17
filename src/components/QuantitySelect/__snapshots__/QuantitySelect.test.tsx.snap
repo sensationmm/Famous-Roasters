@@ -3,7 +3,7 @@
 exports[`QuantitySelect component Renders correctly 1`] = `
 <div>
   <div
-    class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
+    class="inline-flex justify-between px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
     data-testid="quantity-select"
   >
     <button
@@ -25,6 +25,7 @@ exports[`QuantitySelect component Renders correctly 1`] = `
       </svg>
     </button>
     <div
+      class="px-4"
       data-testid="quantity-value"
     >
       1
