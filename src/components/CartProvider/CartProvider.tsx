@@ -78,9 +78,9 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProv
       },
     })
       .then((r) => {
-        const cartId = r?.data?.cartCreate?.cart?.id
-        cartId && setCartId(cartId)
-        cartId && setStoredCartId(cartId)
+        const cid = r?.data?.cartCreate?.cart?.id
+        cid && setCartId(cid)
+        cid && setStoredCartId(cid)
         setCartSize(firstItem.quantity)
       })
       .catch((err) => {

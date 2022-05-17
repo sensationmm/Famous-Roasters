@@ -355,7 +355,7 @@ exports[`Cart view Renders correctly 1`] = `
               class="shrink-0"
             >
               <a
-                href="/product/3243434"
+                href="/product/7655228866776"
               >
                 <img
                   alt="Cycle Blend"
@@ -390,13 +390,13 @@ exports[`Cart view Renders correctly 1`] = `
                 <span
                   class="text-coreUI-text-secondary text-sm leading-5"
                 >
-                  10,20 €
+                  7,20 €
                 </span>
                 <span
                   class="text-coreUI-text-secondary ml-1 text-sm leading-5"
                 >
                   (
-                  10,20 €
+                  7,20 €
                   /kg)
                 </span>
               </div>

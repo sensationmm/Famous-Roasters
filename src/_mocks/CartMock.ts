@@ -1,9 +1,52 @@
 import { CartQueryQuery } from '@shopify/hydrogen/dist/esnext/components/CartProvider/graphql/CartQuery'
-import { CountryCode, CurrencyCode } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
+import { CartLineEdge, CountryCode, CurrencyCode } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { GraphQLError } from 'graphql'
 import { loader } from 'graphql.macro'
 
 const GET_CART = loader('src/graphql/queries/cart.query.graphql')
+
+const CartLineEdgeMockData: CartLineEdge = {
+  node: {
+    id: 'gid://shopify/CartLine/9876543210',
+    attributes: [],
+    quantity: 1,
+    merchandise: {
+      __typename: 'ProductVariant',
+      id: 'gid://shopify/ProductVariant/456789',
+      title: 'Cycle Blend',
+      availableForSale: true,
+      requiresShipping: true,
+      image: {
+        altText: null,
+        url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153',
+        originalSrc: '',
+        src: '',
+        transformedSrc: '',
+      },
+      priceV2: {
+        amount: '7.2',
+        currencyCode: CurrencyCode.Eur,
+      },
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      product: {
+        title: 'Cycle Blend',
+        handle: '',
+        id: 'gid://shopify/Product/7655228866776',
+      },
+      selectedOptions: [
+        {
+          name: 'Gewicht',
+          value: '250g',
+        },
+        {
+          name: 'Mahlgrad',
+          value: 'Ganze Bohne',
+        },
+      ],
+    },
+  },
+}
 
 export const CartMockData: CartQueryQuery = {
   cart: {
@@ -28,67 +71,14 @@ export const CartMockData: CartQueryQuery = {
     },
     lines: {
       edges: [
+        CartLineEdgeMockData,
         {
           node: {
-            id: 'gid://shopify/CartLine/9876543210',
-            attributes: [],
-            quantity: 1,
-            merchandise: {
-              __typename: 'ProductVariant',
-              id: 'gid://shopify/ProductVariant/456789',
-              title: 'Cycle Blend',
-              availableForSale: true,
-              requiresShipping: true,
-              image: {
-                altText: null,
-                url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153',
-              },
-              priceV2: {
-                amount: '7.2',
-                currencyCode: CurrencyCode.Eur,
-              },
-              product: {
-                title: 'Cycle Blend',
-                handle: '',
-                id: 'gid://shopify/Product/7655228866776',
-              },
-              selectedOptions: [
-                {
-                  name: 'Gewicht',
-                  value: '250g',
-                },
-                {
-                  name: 'Mahlgrad',
-                  value: 'Ganze Bohne',
-                },
-              ],
-            },
-          },
-        },
-        {
-          node: {
+            ...CartLineEdgeMockData.node,
             id: 'gid://shopify/CartLine/898768978',
-            attributes: [],
             quantity: 2,
             merchandise: {
-              __typename: 'ProductVariant',
-              id: 'gid://shopify/ProductVariant/454342',
-              title: 'Cycle Blend',
-              availableForSale: true,
-              requiresShipping: true,
-              image: {
-                altText: null,
-                url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153',
-              },
-              priceV2: {
-                amount: '10.2',
-                currencyCode: CurrencyCode.Eur,
-              },
-              product: {
-                title: 'Cycle Blend',
-                handle: '',
-                id: 'gid://shopify/Product/3243434',
-              },
+              ...CartLineEdgeMockData.node.merchandise,
               selectedOptions: [
                 {
                   name: 'Gewicht',
