@@ -9,6 +9,8 @@ import { i18n } from 'src/config'
 
 import { Cart } from '.'
 
+global.alert = jest.fn()
+
 describe('Cart view', () => {
   it('Renders correctly', async () => {
     const { container } = render(
@@ -32,14 +34,14 @@ describe('Cart view', () => {
     expect(container).toMatchSnapshot()
   })
 
-  it('The user can modify quantity on cart items', async () => {
-    render(
+  it('Renders correctly for no cart id', async () => {
+    const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
         mocks={[CartMock]}
         addTypename={false}
       >
-        <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
+        <CartContext.Provider value={{ cartId: undefined, cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
             <MemoryRouter initialEntries={['/cart']}>
               <Cart />
@@ -48,9 +50,33 @@ describe('Cart view', () => {
         </CartContext.Provider>
       </MockedProvider>,
     )
-    const button = await screen.findByTestId('quantity-plus')
-    expect(button).toBeInTheDocument()
-    fireEvent.click(button)
+    await act(async (): Promise<void> => {
+      await new Promise((resolve) => setTimeout(resolve, 500))
+    })
+    expect(container).toMatchSnapshot()
+  })
+
+  it('The user can modify quantity on cart items', async () => {
+    render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
+        mocks={[CartMock]}
+        addTypename={false}
+      >
+        <CartContext.Provider
+          value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 2, modifyQuantity: () => alert('test') }}
+        >
+          <I18nextProvider i18n={i18n}>
+            <MemoryRouter initialEntries={['/cart']}>
+              <Cart />
+            </MemoryRouter>
+          </I18nextProvider>
+        </CartContext.Provider>
+      </MockedProvider>,
+    )
+    const buttons = await screen.findAllByTestId('quantity-plus')
+    expect(buttons[0]).toBeInTheDocument()
+    fireEvent.click(buttons[0])
   })
 
   it('The user can remove an item', async () => {
@@ -60,7 +86,9 @@ describe('Cart view', () => {
         mocks={[CartMock]}
         addTypename={false}
       >
-        <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
+        <CartContext.Provider
+          value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 2, removeFromCart: () => alert('test') }}
+        >
           <I18nextProvider i18n={i18n}>
             <MemoryRouter initialEntries={['/cart']}>
               <Cart />
@@ -69,8 +97,8 @@ describe('Cart view', () => {
         </CartContext.Provider>
       </MockedProvider>,
     )
-    const button = await screen.findByTestId('button-cart-item-remove')
-    expect(button).toBeInTheDocument()
-    fireEvent.click(button)
+    const buttons = await screen.findAllByTestId('button-cart-item-remove')
+    expect(buttons[0]).toBeInTheDocument()
+    fireEvent.click(buttons[0])
   })
 })

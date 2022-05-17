@@ -65,6 +65,43 @@ export const CartMockData: CartQueryQuery = {
             },
           },
         },
+        {
+          node: {
+            id: 'gid://shopify/CartLine/898768978',
+            attributes: [],
+            quantity: 2,
+            merchandise: {
+              __typename: 'ProductVariant',
+              id: 'gid://shopify/ProductVariant/454342',
+              title: 'Cycle Blend',
+              availableForSale: true,
+              requiresShipping: true,
+              image: {
+                altText: null,
+                url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153',
+              },
+              priceV2: {
+                amount: '10.2',
+                currencyCode: CurrencyCode.Eur,
+              },
+              product: {
+                title: 'Cycle Blend',
+                handle: '',
+                id: 'gid://shopify/Product/3243434',
+              },
+              selectedOptions: [
+                {
+                  name: 'Gewicht',
+                  value: '1000g',
+                },
+                {
+                  name: 'Mahlgrad',
+                  value: 'Ganze Bohne',
+                },
+              ],
+            },
+          },
+        },
       ],
     },
   },

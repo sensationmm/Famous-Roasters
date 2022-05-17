@@ -123,14 +123,14 @@ export const Cart: React.FC = () => {
                         {product.title}
                       </Typography>
                       <div>
-                        {selectedOptions.map((option, idx: number) => (
+                        {selectedOptions.map((option, optionIdx: number) => (
                           <Typography
-                            key={`cart-item-detail-${idx}`}
+                            key={`cart-item-detail-${optionIdx}`}
                             type={TypographyType.Paragraph}
                             size={TypographySize.Small}
                             className="text-coreUI-text-secondary"
                           >
-                            {idx < selectedOptions?.length - 1 ? `${option.value} | ` : option.value}
+                            {optionIdx < selectedOptions?.length - 1 ? `${option.value} | ` : option.value}
                           </Typography>
                         ))}
                       </div>

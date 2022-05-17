@@ -6,7 +6,7 @@ interface QuantitySelectProps {
   max: number
   value?: number
   onChange?: (actualValue: number) => void
-  className?: string | undefined
+  className?: string
 }
 
 export const QuantitySelect: React.FC<QuantitySelectProps> = ({
