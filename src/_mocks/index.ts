@@ -1,4 +1,5 @@
 import {
+  CartAddLinesMock,
   CartCreateMock,
   CartLinesRemoveMock,
   CartLinesRemoveMock2,
@@ -25,6 +26,7 @@ import {
   ProductMockWithCustomMetadata,
 } from './ProductMock'
 
+export { CartAddLinesMock as CartAddLinesMock }
 export { CartCreateMock as CartCreateMock }
 export { CartLinesRemoveMock as CartLinesRemoveMock }
 export { CartLinesRemoveMock2 as CartLinesRemoveMock2 }

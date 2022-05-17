@@ -5,6 +5,7 @@ import { loader } from 'graphql.macro'
 
 const GET_CART = loader('src/graphql/queries/cart.query.graphql')
 const GET_CART_CREATE = loader('src/graphql/queries/cartCreate.mutation.graphql')
+const GET_CART_LINES_ADD = loader('src/graphql/queries/cartLinesAdd.mutation.graphql')
 const GET_CART_LINES_UPDATE = loader('src/graphql/queries/cartLinesUpdate.mutation.graphql')
 const GET_CART_LINES_REMOVE = loader('src/graphql/queries/cartLinesRemove.mutation.graphql')
 
@@ -124,9 +125,10 @@ export const CartMockError = {
   request: {
     query: GET_CART,
     variables: {
-      id: 'gid://shopify/Cart/123456789',
+      wrong: '123123',
     },
   },
+  data: null,
   result: {
     errors: [new GraphQLError('Error!')],
   },
@@ -229,8 +231,14 @@ export const CartCreateMock = {
   request: {
     query: GET_CART_CREATE,
     variables: {
-      quantity: 1,
-      itemId: 'gid://shopify/ProductVariant/456789',
+      input: {
+        lines: [
+          {
+            quantity: 1,
+            merchandiseId: 'gid://shopify/ProductVariant/42737527324888',
+          },
+        ],
+      },
     },
   },
   result: {
@@ -243,6 +251,46 @@ export const CartCreateMock = {
             edges: [
               {
                 ...CartMockData.cart?.lines.edges[0],
+              },
+            ],
+          },
+        },
+        userErrors: null,
+      },
+    },
+  },
+}
+
+export const CartAddLinesMock = {
+  request: {
+    query: GET_CART_LINES_ADD,
+    variables: {
+      cartId: 'gid://shopify/Cart/123456789',
+      lines: [
+        {
+          quantity: 1,
+          merchandiseId: 'gid://shopify/ProductVariant/42737527324888',
+        },
+      ],
+    },
+  },
+  result: {
+    data: {
+      cartLinesAdd: {
+        ...CartMockData,
+        cart: {
+          ...CartMockData.cart,
+          lines: {
+            ...CartMockData.cart?.lines,
+            edges: [
+              {
+                node: {
+                  ...CartMockData.cart?.lines.edges[0].node,
+                  quantity: 2,
+                },
+              },
+              {
+                ...CartMockData.cart?.lines.edges[1],
               },
             ],
           },

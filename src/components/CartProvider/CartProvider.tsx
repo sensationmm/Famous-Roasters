@@ -84,7 +84,6 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProv
         setCartSize(firstItem.quantity)
       })
       .catch((err) => {
-        console.log('here', err)
         throw new Error('Error creating cart', err)
       })
   }
@@ -112,7 +111,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProv
   }
 
   const addToCart = (item: CartItem) => {
-    if (cartId) {
+    if (cartId || cartId !== undefined) {
       addLinesToCart(item)
     } else {
       createCart(item)
