@@ -1,3 +1,4 @@
+import { CartMock, CartMockData } from './CartMock'
 import {
   CatalogueMockError,
   CatalogueMockMissingData,
@@ -16,6 +17,8 @@ import {
   ProductMockWithCustomMetadata,
 } from './ProductMock'
 
+export { CartMock as CartMock }
+export { CartMockData as CartMockData }
 export { CatalogueMocks as CatalogueMocks }
 export { CatalogueMocksPagination as CatalogueMocksPagination }
 export { CatalogueMocksPaginationWrongBackwards as CatalogueMocksPaginationWrongBackwards }

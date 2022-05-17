@@ -35,14 +35,22 @@ export const QuantitySelect: React.FC<QuantitySelectProps> = ({
     }
   }
 
+  const classNames: string[] = [
+    'inline-flex',
+    'justify-between',
+    'px-4',
+    'py-2',
+    'text-left',
+    'bg-white',
+    'rounded-full',
+    'border',
+    'border-coreUI-text-tertiary',
+    'cursor-default',
+  ]
+  className && classNames.push(className)
+
   return (
-    <div
-      className={
-        'inline-flex justify-between px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default ' +
-        className
-      }
-      data-testid="quantity-select"
-    >
+    <div className={classNames.join(' ')} data-testid="quantity-select">
       <button type="button" onClick={decrement} data-testid="quantity-minus">
         <MinusIcon className="w-5 h-5" />
       </button>

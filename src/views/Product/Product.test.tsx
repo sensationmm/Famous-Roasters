@@ -4,7 +4,7 @@ import React from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { MemoryRouter } from 'react-router-dom'
 import { ProductMock, ProductMockError, ProductMockWithCustomMetadata } from 'src/_mocks'
-import { CartProvider } from 'src/components'
+import { CartContext } from 'src/components'
 import { i18n } from 'src/config'
 
 import { Product } from '.'
@@ -31,13 +31,13 @@ describe('Product view', () => {
         mocks={[ProductMockWithCustomMetadata]}
         addTypename={false}
       >
-        <CartProvider>
+        <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
             <MemoryRouter initialEntries={['/product/123456']}>
               <Product />
             </MemoryRouter>
           </I18nextProvider>
-        </CartProvider>
+        </CartContext.Provider>
       </MockedProvider>,
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 500)))
@@ -51,13 +51,13 @@ describe('Product view', () => {
         mocks={[ProductMock]}
         addTypename={false}
       >
-        <CartProvider>
+        <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
             <MemoryRouter initialEntries={['/product/123456']}>
               <Product />
             </MemoryRouter>
           </I18nextProvider>
-        </CartProvider>
+        </CartContext.Provider>
       </MockedProvider>,
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
@@ -70,13 +70,13 @@ describe('Product view', () => {
         mocks={[ProductMockWithCustomMetadata]}
         addTypename={false}
       >
-        <CartProvider>
+        <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
             <MemoryRouter initialEntries={['/product/123456']}>
               <Product />
             </MemoryRouter>
           </I18nextProvider>
-        </CartProvider>
+        </CartContext.Provider>
       </MockedProvider>,
     )
     const button = await screen.findAllByTestId('button-listbox')
@@ -96,13 +96,13 @@ describe('Product view', () => {
         mocks={[ProductMockWithCustomMetadata]}
         addTypename={false}
       >
-        <CartProvider>
+        <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
             <MemoryRouter initialEntries={['/product/123456']}>
               <Product />
             </MemoryRouter>
           </I18nextProvider>
-        </CartProvider>
+        </CartContext.Provider>
       </MockedProvider>,
     )
     const button = await screen.findAllByTestId('button-listbox')
@@ -122,13 +122,13 @@ describe('Product view', () => {
         mocks={[ProductMockWithCustomMetadata]}
         addTypename={false}
       >
-        <CartProvider>
+        <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
             <MemoryRouter initialEntries={['/product/123456']}>
               <Product />
             </MemoryRouter>
           </I18nextProvider>
-        </CartProvider>
+        </CartContext.Provider>
       </MockedProvider>,
     )
     const button = await screen.findByTestId('quantity-plus')
@@ -143,13 +143,13 @@ describe('Product view', () => {
         mocks={[ProductMockWithCustomMetadata]}
         addTypename={false}
       >
-        <CartProvider>
+        <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
             <MemoryRouter initialEntries={['/product/123456']}>
               <Product />
             </MemoryRouter>
           </I18nextProvider>
-        </CartProvider>
+        </CartContext.Provider>
       </MockedProvider>,
     )
     const button = await screen.findByTestId('addToCart')
@@ -165,13 +165,13 @@ describe('Product view', () => {
         mocks={[ProductMockError]}
         addTypename={false}
       >
-        <CartProvider>
+        <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
             <MemoryRouter initialEntries={['/product/123456']}>
               <Product />
             </MemoryRouter>
           </I18nextProvider>
-        </CartProvider>
+        </CartContext.Provider>
       </MockedProvider>,
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))

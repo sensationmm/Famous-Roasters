@@ -192,7 +192,7 @@ exports[`Cart view Renders correctly 1`] = `
                     <span
                       class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800"
                     >
-                      0
+                      1
                     </span>
                     <span
                       class="sr-only"
@@ -208,28 +208,202 @@ exports[`Cart view Renders correctly 1`] = `
       </header>
     </div>
     <main
-      class="flex-grow flex items-center justify-center bg-brand-grey-whisper"
+      class="flex flex-grow w-full items-start justify-center bg-white mt-4 mb-4"
     >
-      <div>
-        <div
-          class="font-syne flex justify-center text-4xl md:text-5xl xl:text-6xl"
+      <div
+        class="w-full max-w-7xl mx-auto px-6 xl:px-8"
+      >
+        <h1
+          class="mb-4 text-2xl leading-8 font-semibold"
         >
-          <h1>
-            <span>
-              Famous
-            </span>
-             
-            <span
-              class="font-bold"
+          Dein Warenkorb
+        </h1>
+        <div
+          class="grid gap-2 grid-cols-1"
+        >
+          <div
+            class="flex w-full md:grid-flow-col-dense md:columns-2 pb-6 border-b border-coreUI-border"
+          >
+            <div
+              class="shrink-0"
             >
-              Roasters
-            </span>
-          </h1>
+              <a
+                href="/product/7655228866776"
+              >
+                <img
+                  alt="Cycle Blend"
+                  class="w-32"
+                  src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+                />
+              </a>
+            </div>
+            <div
+              class="flex flex-1 flex-col justify-between justify-items-start md:grid-flow-col-dense md:columns-3 md:flex-row md:items-center"
+            >
+              <div>
+                <div
+                  class="mb-1.5 md:mb-0 text-sm leading-5 font-semibold"
+                >
+                  Cycle Blend
+                </div>
+                <div>
+                  <span
+                    class="text-coreUI-text-secondary text-sm leading-5"
+                  >
+                    250g | 
+                  </span>
+                  <span
+                    class="text-coreUI-text-secondary text-sm leading-5"
+                  >
+                    Ganze Bohne
+                  </span>
+                </div>
+              </div>
+              <div>
+                <span
+                  class="text-coreUI-text-secondary text-sm leading-5"
+                >
+                  7,20 €
+                </span>
+                <span
+                  class="text-coreUI-text-secondary ml-1 text-sm leading-5"
+                >
+                  (
+                  28,80 €
+                  /kg)
+                </span>
+              </div>
+              <span
+                class="md:hidden"
+              />
+              <div>
+                <div
+                  class="inline-flex justify-between px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default w-32"
+                  data-testid="quantity-select"
+                >
+                  <button
+                    data-testid="quantity-minus"
+                    type="button"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                  <div
+                    data-testid="quantity-value"
+                  >
+                    1
+                  </div>
+                  <button
+                    data-testid="quantity-plus"
+                    type="button"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <button
+                  class="ml-4 inline-flex items-center px-4 py-2.5 w-fit rounded-full border border-coreUI-text-tertiary"
+                  data-testid="button-cart-item-remove"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="h-5 w-5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          class="text-center text-lg leading-7"
+          class="grid justify-items-start md:justify-items-end mt-6"
         >
-          Warenkorb
+          <span
+            class="uppercase text-coreUI-text-secondary text-xs leading-4"
+          >
+            Zwischensumme
+          </span>
+          <span
+            class="mr-1 text-2xl leading-8 font-semibold"
+          >
+            10,00 €
+          </span>
+          <div
+            class="text-coreUI-text-secondary text-xs leading-4"
+          >
+            Preise inkl. MwSt. und Versand
+          </div>
+        </div>
+        <div
+          class="grid gap-4 grid-cols-1 md:flex md:justify-end my-6"
+        >
+          <div
+            class="grid md:order-2 justify-items-end"
+          >
+            <a
+              class="flex w-full md:w-max"
+              data-testid="goToCheckout"
+              href="https://famousroasters.myshopify.com/cart/c/123456789"
+            >
+              <button
+                class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+                role="button"
+                type="button"
+              >
+                Zur Kasse
+              </button>
+            </a>
+          </div>
+          <div
+            class="grid md:order-1 push justify-items-start"
+          >
+            <a
+              class="flex w-full md:w-max"
+              href="/catalogue"
+            >
+              <button
+                class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
+                data-testid="continueShopping"
+                role="button"
+                type="button"
+              >
+                Weiter einkaufen
+              </button>
+            </a>
+          </div>
         </div>
       </div>
     </main>
