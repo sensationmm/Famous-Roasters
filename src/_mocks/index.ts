@@ -1,4 +1,4 @@
-import { CartMock, CartMockData } from './CartMock'
+import { CartMock, CartMockData, CartMockError } from './CartMock'
 import {
   CatalogueMockError,
   CatalogueMockMissingData,
@@ -19,6 +19,7 @@ import {
 
 export { CartMock as CartMock }
 export { CartMockData as CartMockData }
+export { CartMockError as CartMockError }
 export { CatalogueMocks as CatalogueMocks }
 export { CatalogueMocksPagination as CatalogueMocksPagination }
 export { CatalogueMocksPaginationWrongBackwards as CatalogueMocksPaginationWrongBackwards }

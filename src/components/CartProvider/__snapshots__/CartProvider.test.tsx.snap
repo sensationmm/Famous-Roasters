@@ -5,3 +5,9 @@ exports[`Cart provider component Renders correctly 1`] = `
   <span />
 </div>
 `;
+
+exports[`Cart provider component Renders correctly with persistent cartId 1`] = `
+<div>
+  <span />
+</div>
+`;

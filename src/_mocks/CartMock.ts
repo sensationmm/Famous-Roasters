@@ -1,5 +1,6 @@
 import { CartQueryQuery } from '@shopify/hydrogen/dist/esnext/components/CartProvider/graphql/CartQuery'
 import { CountryCode, CurrencyCode } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
+import { GraphQLError } from 'graphql'
 import { loader } from 'graphql.macro'
 
 const GET_CART = loader('src/graphql/queries/cart.query.graphql')
@@ -78,5 +79,17 @@ export const CartMock = {
   },
   result: {
     data: CartMockData,
+  },
+}
+
+export const CartMockError = {
+  request: {
+    query: GET_CART,
+    variables: {
+      id: 'gid://shopify/Cart/123456789',
+    },
+  },
+  result: {
+    errors: [new GraphQLError('Error!')],
   },
 }

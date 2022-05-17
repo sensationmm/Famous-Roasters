@@ -1,7 +1,7 @@
 import { MockedProvider } from '@apollo/client/testing'
-import { render, waitFor } from '@testing-library/react'
+import { act, render } from '@testing-library/react'
 import React from 'react'
-import { ProductMockWithCustomMetadata } from 'src/_mocks'
+import { CartMock } from 'src/_mocks'
 
 import { CartProvider } from '.'
 
@@ -10,7 +10,7 @@ describe('Cart provider component', () => {
     const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
-        mocks={[ProductMockWithCustomMetadata]}
+        mocks={[CartMock]}
         addTypename={false}
       >
         <CartProvider>
@@ -18,7 +18,29 @@ describe('Cart provider component', () => {
         </CartProvider>
       </MockedProvider>,
     )
-    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    await act(async (): Promise<void> => {
+      await new Promise((resolve) => setTimeout(resolve, 500))
+    })
     expect(container).toMatchSnapshot()
+  })
+
+  it('Renders correctly with persistent cartId', async () => {
+    window.localStorage.setItem('cartId', '"gid://shopify/Cart/123456789"')
+    const { container } = render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
+        mocks={[CartMock]}
+        addTypename={false}
+      >
+        <CartProvider>
+          <span />
+        </CartProvider>
+      </MockedProvider>,
+    )
+    await act(async (): Promise<void> => {
+      await new Promise((resolve) => setTimeout(resolve, 500))
+    })
+    expect(container).toMatchSnapshot()
+    window.localStorage.removeItem('cartId')
   })
 })

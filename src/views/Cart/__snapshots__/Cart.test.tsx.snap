@@ -300,6 +300,7 @@ exports[`Cart view Renders correctly 1`] = `
                     </svg>
                   </button>
                   <div
+                    class="px-4"
                     data-testid="quantity-value"
                   >
                     1
