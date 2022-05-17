@@ -355,10 +355,10 @@ exports[`Cart view Renders correctly 1`] = `
               class="shrink-0"
             >
               <a
-                href="/product/7655228866776"
+                href="/product/23232323"
               >
                 <img
-                  alt="Cycle Blend"
+                  alt="Famous Roasters"
                   class="w-32"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
@@ -371,7 +371,7 @@ exports[`Cart view Renders correctly 1`] = `
                 <div
                   class="mb-1.5 md:mb-0 text-sm leading-5 font-semibold"
                 >
-                  Cycle Blend
+                  Famous Roasters
                 </div>
                 <div>
                   <span

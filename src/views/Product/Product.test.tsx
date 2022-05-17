@@ -19,7 +19,7 @@ window.history = { go: jest.fn() }
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'), // use actual for all non-hook parts
   useParams: () => ({
-    id: '123456',
+    id: '7655228866776',
   }),
 }))
 
@@ -33,7 +33,7 @@ describe('Product view', () => {
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/product/123456']}>
+            <MemoryRouter initialEntries={['/product/7655228866776']}>
               <Product />
             </MemoryRouter>
           </I18nextProvider>
@@ -53,7 +53,7 @@ describe('Product view', () => {
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/product/123456']}>
+            <MemoryRouter initialEntries={['/product/7655228866776']}>
               <Product />
             </MemoryRouter>
           </I18nextProvider>
@@ -72,7 +72,7 @@ describe('Product view', () => {
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/product/123456']}>
+            <MemoryRouter initialEntries={['/product/7655228866776']}>
               <Product />
             </MemoryRouter>
           </I18nextProvider>
@@ -98,7 +98,7 @@ describe('Product view', () => {
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/product/123456']}>
+            <MemoryRouter initialEntries={['/product/7655228866776']}>
               <Product />
             </MemoryRouter>
           </I18nextProvider>
@@ -124,7 +124,7 @@ describe('Product view', () => {
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/product/123456']}>
+            <MemoryRouter initialEntries={['/product/7655228866776']}>
               <Product />
             </MemoryRouter>
           </I18nextProvider>
@@ -145,7 +145,7 @@ describe('Product view', () => {
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/product/123456']}>
+            <MemoryRouter initialEntries={['/product/7655228866776']}>
               <Product />
             </MemoryRouter>
           </I18nextProvider>
@@ -167,7 +167,7 @@ describe('Product view', () => {
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/product/123456']}>
+            <MemoryRouter initialEntries={['/product/7655228866776']}>
               <Product />
             </MemoryRouter>
           </I18nextProvider>

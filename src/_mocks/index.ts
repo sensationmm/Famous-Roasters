@@ -1,4 +1,12 @@
-import { CartMock, CartMockData, CartMockError } from './CartMock'
+import {
+  CartCreateMock,
+  CartLinesRemoveMock,
+  CartLinesRemoveMock2,
+  CartLinesUpdateMock,
+  CartMock,
+  CartMockData,
+  CartMockError,
+} from './CartMock'
 import {
   CatalogueMockError,
   CatalogueMockMissingData,
@@ -17,6 +25,10 @@ import {
   ProductMockWithCustomMetadata,
 } from './ProductMock'
 
+export { CartCreateMock as CartCreateMock }
+export { CartLinesRemoveMock as CartLinesRemoveMock }
+export { CartLinesRemoveMock2 as CartLinesRemoveMock2 }
+export { CartLinesUpdateMock as CartLinesUpdateMock }
 export { CartMock as CartMock }
 export { CartMockData as CartMockData }
 export { CartMockError as CartMockError }

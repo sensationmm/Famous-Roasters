@@ -84,6 +84,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProv
         setCartSize(firstItem.quantity)
       })
       .catch((err) => {
+        console.log('here', err)
         throw new Error('Error creating cart', err)
       })
   }
@@ -132,7 +133,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProv
       })
         .then((res) => {
           const quantities = res.data?.cartLinesRemove?.cart?.lines.edges.map((node) => node.node.quantity)
-          const size = quantities?.reduce((x, y) => x + y)
+          const size = quantities?.length ? quantities?.reduce((x, y) => x + y) : 0
           size && setCartSize(size)
         })
         .catch((err) => {

@@ -4,6 +4,9 @@ import { GraphQLError } from 'graphql'
 import { loader } from 'graphql.macro'
 
 const GET_CART = loader('src/graphql/queries/cart.query.graphql')
+const GET_CART_CREATE = loader('src/graphql/queries/cartCreate.mutation.graphql')
+const GET_CART_LINES_UPDATE = loader('src/graphql/queries/cartLinesUpdate.mutation.graphql')
+const GET_CART_LINES_REMOVE = loader('src/graphql/queries/cartLinesRemove.mutation.graphql')
 
 const CartLineEdgeMockData: CartLineEdge = {
   node: {
@@ -79,6 +82,14 @@ export const CartMockData: CartQueryQuery = {
             quantity: 2,
             merchandise: {
               ...CartLineEdgeMockData.node.merchandise,
+              id: 'gid://shopify/ProductVariant/879887',
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-ignore
+              product: {
+                title: 'Famous Roasters',
+                handle: '',
+                id: 'gid://shopify/Product/23232323',
+              },
               selectedOptions: [
                 {
                   name: 'Gewicht',
@@ -118,5 +129,126 @@ export const CartMockError = {
   },
   result: {
     errors: [new GraphQLError('Error!')],
+  },
+}
+
+export const CartLinesUpdateMock = {
+  request: {
+    query: GET_CART_LINES_UPDATE,
+    variables: {
+      cartId: 'gid://shopify/Cart/123456789',
+      lines: [
+        {
+          id: 'gid://shopify/CartLine/9876543210',
+          quantity: 2,
+        },
+      ],
+    },
+  },
+  result: {
+    data: {
+      cartLinesUpdate: {
+        ...CartMockData,
+        cart: {
+          ...CartMockData.cart,
+          lines: {
+            ...CartMockData.cart?.lines,
+            edges: [
+              {
+                node: {
+                  ...CartMockData.cart?.lines.edges[0].node,
+                  quantity: 2,
+                },
+              },
+              {
+                ...CartMockData.cart?.lines.edges[1],
+              },
+            ],
+          },
+        },
+        userErrors: null,
+      },
+    },
+  },
+}
+
+export const CartLinesRemoveMock = {
+  request: {
+    query: GET_CART_LINES_REMOVE,
+    variables: {
+      cartId: 'gid://shopify/Cart/123456789',
+      lineIds: ['gid://shopify/CartLine/9876543210'],
+    },
+  },
+  result: {
+    data: {
+      cartLinesRemove: {
+        ...CartMockData,
+        cart: {
+          ...CartMockData.cart,
+          lines: {
+            ...CartMockData.cart?.lines,
+            edges: [
+              {
+                ...CartMockData.cart?.lines.edges[1],
+              },
+            ],
+          },
+        },
+        userErrors: null,
+      },
+    },
+  },
+}
+
+export const CartLinesRemoveMock2 = {
+  request: {
+    query: GET_CART_LINES_REMOVE,
+    variables: {
+      cartId: 'gid://shopify/Cart/123456789',
+      lineIds: ['gid://shopify/CartLine/898768978'],
+    },
+  },
+  result: {
+    data: {
+      cartLinesRemove: {
+        ...CartMockData,
+        cart: {
+          ...CartMockData.cart,
+          lines: {
+            edges: [],
+          },
+        },
+        userErrors: null,
+      },
+    },
+  },
+}
+
+export const CartCreateMock = {
+  request: {
+    query: GET_CART_CREATE,
+    variables: {
+      quantity: 1,
+      itemId: 'gid://shopify/ProductVariant/456789',
+    },
+  },
+  result: {
+    data: {
+      cartCreate: {
+        cart: {
+          ...CartMockData.cart,
+          lines: {
+            ...CartMockData.cart?.lines,
+            edges: [
+              {
+                ...CartMockData.cart?.lines.edges[0],
+              },
+            ],
+          },
+        },
+        userErrors: null,
+      },
+    },
   },
 }
