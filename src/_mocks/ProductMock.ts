@@ -25,6 +25,7 @@ interface ProductVariantConnectionCustom extends ProductVariantConnection {
 }
 
 interface ProductCustom {
+  coffee_type?: ProductMeta
   bean_type?: ProductMeta
   aroma?: ProductMeta
   flavourNotes?: ProductMeta
@@ -217,6 +218,9 @@ export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
   },
   bean_type: {
     value: 'Arabica',
+  },
+  coffee_type: {
+    value: 'Filter',
   },
   aroma: {
     value: 'experimentell & komplex',

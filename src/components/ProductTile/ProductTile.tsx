@@ -9,6 +9,7 @@ interface ProductMeta {
 }
 
 interface ProductCustom extends ProductType {
+  coffee_type?: ProductMeta
   bean_type?: ProductMeta
   origin?: ProductMeta
   pricePerKg?: ProductMeta
@@ -19,7 +20,7 @@ interface ProductTileProps {
 }
 
 export const ProductTile: React.FC<ProductTileProps> = ({ productNode }: ProductTileProps) => {
-  const { title, vendor, featuredImage, priceRange, pricePerKg, bean_type, origin } = productNode
+  const { title, vendor, featuredImage, priceRange, pricePerKg, coffee_type, origin } = productNode
   const { t } = useTranslation()
   if (!featuredImage || !priceRange.minVariantPrice.amount) return null
   return (
@@ -56,14 +57,14 @@ export const ProductTile: React.FC<ProductTileProps> = ({ productNode }: Product
               )}
           </Typography>
         )}
-        {bean_type && (
+        {coffee_type && (
           <Typography
             as="div"
             type={TypographyType.Paragraph}
             size={TypographySize.Small}
             className="text-coreUI-text-secondary"
           >
-            {bean_type.value}
+            {coffee_type.value}
           </Typography>
         )}
         <div>

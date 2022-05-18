@@ -16,7 +16,7 @@ Default.args = {
   productNode: {
     ...ProductMockData,
     pricePerKg: { value: '10.0' },
-    bean_type: { value: 'Arabica' },
+    coffee_type: { value: 'Filter' },
     origin: { value: 'CO' },
   },
 }

@@ -48,6 +48,7 @@ interface ProductVariantConnectionCustom extends ProductVariantConnection {
 }
 
 interface ProductCustom extends ProductType {
+  coffee_type: ProductMeta
   bean_type: ProductMeta
   aroma: ProductMeta
   flavourNotes: ProductMeta
@@ -83,7 +84,7 @@ export const Product: React.FC = () => {
     },
   })
 
-  const { title, vendor, bean_type, aroma, flavourNotes, sweetness, body, bitterness, acidity, images, variants } =
+  const { title, vendor, coffee_type, aroma, flavourNotes, sweetness, body, bitterness, acidity, images, variants } =
     data?.product || {}
 
   useEffect(() => {
@@ -148,7 +149,7 @@ export const Product: React.FC = () => {
               size={TypographySize.Small}
               className="text-coreUI-text-secondary"
             >
-              {bean_type ? `${vendor} | ${bean_type.value}` : vendor}
+              {coffee_type ? `${vendor} | ${coffee_type.value}` : vendor}
             </Typography>
           </div>
           {/* Title */}

@@ -36,6 +36,7 @@ interface ProductMetaInteger {
 }
 
 interface ProductCustom extends ProductType {
+  coffee_type: ProductMeta
   bean_type: ProductMeta
   aroma: ProductMeta
   flavourNotes: ProductMeta
