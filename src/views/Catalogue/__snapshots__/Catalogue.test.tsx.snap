@@ -502,7 +502,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <div
                   class="text-coreUI-text-secondary text-sm leading-5"
                 >
-                  Arabica
+                  Filter
                 </div>
                 <div>
                   <span
@@ -557,7 +557,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <div
                   class="text-coreUI-text-secondary text-sm leading-5"
                 >
-                  Arabica
+                  Filter
                 </div>
                 <div>
                   <span
@@ -612,7 +612,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <div
                   class="text-coreUI-text-secondary text-sm leading-5"
                 >
-                  Arabica
+                  Filter
                 </div>
                 <div>
                   <span
@@ -667,7 +667,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <div
                   class="text-coreUI-text-secondary text-sm leading-5"
                 >
-                  Arabica
+                  Filter
                 </div>
                 <div>
                   <span
@@ -722,7 +722,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <div
                   class="text-coreUI-text-secondary text-sm leading-5"
                 >
-                  Arabica
+                  Filter
                 </div>
                 <div>
                   <span
@@ -777,7 +777,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <div
                   class="text-coreUI-text-secondary text-sm leading-5"
                 >
-                  Arabica
+                  Filter
                 </div>
                 <div>
                   <span
@@ -832,7 +832,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <div
                   class="text-coreUI-text-secondary text-sm leading-5"
                 >
-                  Arabica
+                  Filter
                 </div>
                 <div>
                   <span
@@ -887,7 +887,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <div
                   class="text-coreUI-text-secondary text-sm leading-5"
                 >
-                  Arabica
+                  Filter
                 </div>
                 <div>
                   <span
@@ -942,7 +942,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <div
                   class="text-coreUI-text-secondary text-sm leading-5"
                 >
-                  Arabica
+                  Filter
                 </div>
                 <div>
                   <span
@@ -997,7 +997,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <div
                   class="text-coreUI-text-secondary text-sm leading-5"
                 >
-                  Arabica
+                  Filter
                 </div>
                 <div>
                   <span
@@ -1052,7 +1052,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <div
                   class="text-coreUI-text-secondary text-sm leading-5"
                 >
-                  Arabica
+                  Filter
                 </div>
                 <div>
                   <span
@@ -1107,7 +1107,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <div
                   class="text-coreUI-text-secondary text-sm leading-5"
                 >
-                  Arabica
+                  Filter
                 </div>
                 <div>
                   <span

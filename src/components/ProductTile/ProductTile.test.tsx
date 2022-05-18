@@ -14,7 +14,7 @@ describe('Product Tile component', () => {
           productNode={{
             ...ProductMockData,
             pricePerKg: { value: '10.0' },
-            bean_type: { value: 'Arabica' },
+            coffee_type: { value: 'Filter' },
             origin: { value: 'CO' },
           }}
         />
@@ -31,7 +31,7 @@ describe('Product Tile component', () => {
           productNode={{
             ...ProductMockData,
             pricePerKg: { value: '10.0' },
-            bean_type: { value: 'Arabica' },
+            coffee_type: { value: 'Filter' },
             origin: { value: 'CO' },
             featuredImage: null,
           }}

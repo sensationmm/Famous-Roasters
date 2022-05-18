@@ -88,7 +88,7 @@ exports[`Product Tile component Renders correctly 1`] = `
       <div
         class="text-coreUI-text-secondary text-sm leading-5"
       >
-        Arabica
+        Filter
       </div>
       <div>
         <span
