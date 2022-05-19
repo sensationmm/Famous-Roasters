@@ -1,6 +1,6 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { MenuIcon, ShoppingBagIcon, UserIcon, XIcon } from '@heroicons/react/outline'
-import React, { Fragment, useContext, useState } from 'react'
+import React, { Fragment, useContext, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useNavigate } from 'react-router-dom'
 import {
@@ -48,6 +48,26 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
   const navigate = useNavigate()
   const { t } = useTranslation()
   const { cartSize } = useContext(CartContext)
+  const [actualCartSize, setActualCartSize] = useState<number>()
+  const [showAddedToCart, setShowAddedToCart] = useState<boolean>(false)
+
+  useEffect(() => {
+    if (cartSize !== undefined) {
+      if (actualCartSize === undefined) {
+        setActualCartSize(cartSize)
+      } else {
+        if (cartSize > 0 && cartSize > actualCartSize) {
+          setActualCartSize(cartSize)
+          setShowAddedToCart(true)
+          setTimeout(() => {
+            setShowAddedToCart(false)
+          }, 3000)
+        } else {
+          setActualCartSize(cartSize)
+        }
+      }
+    }
+  }, [cartSize])
 
   const renderMenuItemsMobile = (data: NavigationDataItem[]) =>
     data.map((page) => (
@@ -192,9 +212,10 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
                         aria-hidden="true"
                       />
                       <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">
-                        {cartSize}
+                        {cartSize ? cartSize : 0}
                       </span>
                       <span className="sr-only">items in cart, view bag</span>
+                      {showAddedToCart && <span>HEY</span>}
                     </Link>
                   ) : (
                     <Button

@@ -19,19 +19,17 @@ interface CartItem {
 }
 
 interface CartContextProps {
-  cartSize: number
+  cartSize?: number
   cartId?: Scalars['ID']
   addToCart?: (item: CartItem) => void
   removeFromCart?: (item: Scalars['ID'], actualQty: number) => void
   modifyQuantity?: (lineId: Scalars['ID'], quantity: number) => void
 }
 
-export const CartContext = createContext<CartContextProps>({
-  cartSize: 0,
-})
+export const CartContext = createContext<CartContextProps>({})
 
 export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProviderProps) => {
-  const [cartSize, setCartSize] = useState<number>(0)
+  const [cartSize, setCartSize] = useState<number>()
   const [cartId, setCartId] = useState<Scalars['ID']>()
   const GET_CART = loader('src/graphql/queries/cart.query.graphql')
   const GET_CART_CREATE = loader('src/graphql/queries/cartCreate.mutation.graphql')
