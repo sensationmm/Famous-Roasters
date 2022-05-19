@@ -90,6 +90,13 @@ const sortByItems: ListBoxItem[] = [{ name: 'priceAsc' }, { name: 'priceDesc' },
 
 const totalItemsPerPage = 6
 
+const paginationParamsInitialValue = {
+  first: totalItemsPerPage,
+  last: null,
+  before: null,
+  after: null,
+}
+
 export const Catalogue: React.FC = () => {
   const { t } = useTranslation()
   const [activeTab, setActiveTab] = useState<string>('discover')
@@ -97,12 +104,7 @@ export const Catalogue: React.FC = () => {
   const [sortParams, setSortParams] = useState<SortParams>()
   const [filters, setFilters] = useState<FilterData[]>([])
   const [queryFilterParams, setQueryFilterParams] = useState<QueryFilterParams>()
-  const [paginationParams, setPaginationParams] = useState<PaginationParams>({
-    first: totalItemsPerPage,
-    last: null,
-    before: null,
-    after: null,
-  })
+  const [paginationParams, setPaginationParams] = useState<PaginationParams>(paginationParamsInitialValue)
   const [originMetaValues, setOriginMetaValues] = useState<string[]>([])
   const GET_PRODUCTS = loader('src/graphql/queries/products.query.graphql')
   const GET_FILTER_ATTRIBUTES = loader('src/graphql/queries/filterAttributes.query.graphql')
@@ -244,6 +246,10 @@ export const Catalogue: React.FC = () => {
     })
     queryFilter.length > 0 ? setQueryFilterParams({ queryFilter }) : setQueryFilterParams({ queryFilter: undefined })
   }, [filters])
+
+  useEffect(() => {
+    setPaginationParams(paginationParamsInitialValue)
+  }, [queryFilterParams])
 
   const { loading, error, data } = useQuery<CollectionQuery>(GET_PRODUCTS, {
     variables: {
