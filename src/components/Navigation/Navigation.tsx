@@ -1,6 +1,6 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { MenuIcon, ShoppingBagIcon, UserIcon, XIcon } from '@heroicons/react/outline'
-import React, { Fragment, useContext, useState } from 'react'
+import React, { Fragment, useContext, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useNavigate } from 'react-router-dom'
 import {
@@ -8,6 +8,7 @@ import {
   ButtonEmphasis,
   ButtonSize,
   CartContext,
+  Notification,
   Typography,
   TypographySize,
   TypographyType,
@@ -48,6 +49,26 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
   const navigate = useNavigate()
   const { t } = useTranslation()
   const { cartSize } = useContext(CartContext)
+  const [actualCartSize, setActualCartSize] = useState<number>()
+  const [showAddedToCart, setShowAddedToCart] = useState<boolean>(false)
+
+  useEffect(() => {
+    if (cartSize !== undefined) {
+      if (actualCartSize === undefined) {
+        setActualCartSize(cartSize)
+      } else {
+        if (cartSize > 0 && cartSize > actualCartSize) {
+          setActualCartSize(cartSize)
+          setShowAddedToCart(true)
+          setTimeout(() => {
+            setShowAddedToCart(false)
+          }, 3000)
+        } else {
+          setActualCartSize(cartSize)
+        }
+      }
+    }
+  }, [cartSize])
 
   const renderMenuItemsMobile = (data: NavigationDataItem[]) =>
     data.map((page) => (
@@ -186,16 +207,24 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
                 {/* Cart */}
                 <div className="ml-4 flow-root xl:ml-6">
                   {theme === NavigationTheme.Shop ? (
-                    <Link to="/cart" className="group -m-2 p-2 flex items-center">
-                      <ShoppingBagIcon
-                        className="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
-                        aria-hidden="true"
-                      />
-                      <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">
-                        {cartSize}
-                      </span>
-                      <span className="sr-only">items in cart, view bag</span>
-                    </Link>
+                    <>
+                      <Link to="/cart" className="group -m-2 p-2 flex items-center">
+                        <ShoppingBagIcon
+                          className="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
+                          aria-hidden="true"
+                        />
+                        <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">
+                          {cartSize ? cartSize : 0}
+                        </span>
+                        <span className="sr-only">items in cart, view bag</span>
+                      </Link>
+                      {showAddedToCart && (
+                        <Notification
+                          heading={t('pages.cart.notification.add.heading')}
+                          body={t('pages.cart.notification.add.body')}
+                        />
+                      )}
+                    </>
                   ) : (
                     <Button
                       emphasis={ButtonEmphasis.Secondary}
