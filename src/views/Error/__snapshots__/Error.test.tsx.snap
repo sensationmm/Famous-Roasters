@@ -422,6 +422,7 @@ exports[`Error view Renders correctly 1`] = `
                 <button
                   class="inline-flex items-center rounded-full border-2 px-4 py-2 text-md font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
                   data-testid="newsletter-submit"
+                  disabled=""
                   role="button"
                   type="submit"
                 >

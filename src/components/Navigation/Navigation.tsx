@@ -8,6 +8,7 @@ import {
   ButtonEmphasis,
   ButtonSize,
   CartContext,
+  Notification,
   Typography,
   TypographySize,
   TypographyType,
@@ -206,17 +207,24 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
                 {/* Cart */}
                 <div className="ml-4 flow-root xl:ml-6">
                   {theme === NavigationTheme.Shop ? (
-                    <Link to="/cart" className="group -m-2 p-2 flex items-center">
-                      <ShoppingBagIcon
-                        className="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
-                        aria-hidden="true"
-                      />
-                      <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">
-                        {cartSize ? cartSize : 0}
-                      </span>
-                      <span className="sr-only">items in cart, view bag</span>
-                      {showAddedToCart && <span>HEY</span>}
-                    </Link>
+                    <>
+                      <Link to="/cart" className="group -m-2 p-2 flex items-center">
+                        <ShoppingBagIcon
+                          className="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
+                          aria-hidden="true"
+                        />
+                        <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">
+                          {cartSize ? cartSize : 0}
+                        </span>
+                        <span className="sr-only">items in cart, view bag</span>
+                      </Link>
+                      {showAddedToCart && (
+                        <Notification
+                          heading={t('pages.cart.notification.add.heading')}
+                          body={t('pages.cart.notification.add.body')}
+                        />
+                      )}
+                    </>
                   ) : (
                     <Button
                       emphasis={ButtonEmphasis.Secondary}

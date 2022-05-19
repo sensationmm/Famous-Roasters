@@ -16,6 +16,7 @@ import { Layout } from './Layout'
 import { Listbox, ListBoxItem } from './Listbox'
 import { Loader } from './Loader'
 import { Navigation, NavigationTheme } from './Navigation'
+import { Notification } from './Notification'
 import { ProductTile } from './ProductTile'
 import { QuantitySelect } from './QuantitySelect'
 import { TabsNavigation } from './TabsNavigation'
@@ -50,6 +51,7 @@ export type { ListBoxItem as ListBoxItem }
 export { Loader as Loader }
 export { Navigation as Navigation }
 export { NavigationTheme as NavigationTheme }
+export { Notification as Notification }
 export { ProductTile as ProductTile }
 export { QuantitySelect as QuantitySelect }
 export { TabsNavigation as TabsNavigation }

@@ -48,6 +48,12 @@
       "displayTitle": "Dein Warenkorb",
       "navigation": "Warenkorb",
       "noItems": "Dein Warenkorb ist leer",
+      "notification": {
+        "add": {
+          "body": "Dein Kaffee wartet darauf, dass du deine Bestellung abschließt",
+          "heading": "In den Warenkorb hinzugefügt!"
+        }
+      },
       "subtotal": "Zwischensumme",
       "title": "Warenkorb"
     },

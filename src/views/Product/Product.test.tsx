@@ -1,12 +1,14 @@
 import { MockedProvider } from '@apollo/client/testing'
-import { fireEvent, render, screen, waitFor } from '@testing-library/react'
+import { act, fireEvent, render, screen, waitFor } from '@testing-library/react'
 import React from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { MemoryRouter } from 'react-router-dom'
-import { ProductMock, ProductMockError, ProductMockWithCustomMetadata } from 'src/_mocks'
+import { CartAddLinesMock, CartMock, ProductMock, ProductMockError, ProductMockWithCustomMetadata } from 'src/_mocks'
 import { CartContext } from 'src/components'
 import { i18n } from 'src/config'
 
+import { CartProvider } from '../../components/CartProvider'
+import { Navigation, NavigationTheme } from '../../components/Navigation'
 import { Product } from '.'
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -178,5 +180,34 @@ describe('Product view', () => {
     const buttonPrompt = await screen.findByTestId('button-prompt')
     expect(buttonPrompt).toBeInTheDocument()
     fireEvent.click(buttonPrompt)
+  })
+
+  it('Add to cart notification works', async () => {
+    window.localStorage.setItem('cartId', '"gid://shopify/Cart/123456789"')
+    render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
+        mocks={[CartMock, ProductMockWithCustomMetadata, CartAddLinesMock]}
+        addTypename={false}
+      >
+        <CartProvider>
+          <I18nextProvider i18n={i18n}>
+            <MemoryRouter initialEntries={['/product/7655228866776']}>
+              <Navigation theme={NavigationTheme.Shop} />
+              <Product />
+            </MemoryRouter>
+          </I18nextProvider>
+        </CartProvider>
+      </MockedProvider>,
+    )
+    await act(async (): Promise<void> => {
+      await new Promise((resolve) => setTimeout(resolve, 500))
+    })
+    const button = await screen.findByTestId('addToCart')
+    expect(button).toBeInTheDocument()
+    fireEvent.click(button)
+    await act(async (): Promise<void> => {
+      await new Promise((resolve) => setTimeout(resolve, 500))
+    })
   })
 })
