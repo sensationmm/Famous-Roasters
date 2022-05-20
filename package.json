@@ -67,7 +67,7 @@
     "@commitlint/config-conventional": "^16.2.1",
     "@headlessui/react": "^1.6.0",
     "@heroicons/react": "^1.0.6",
-    "@shopify/hydrogen": "^0.18.0",
+    "@shopify/hydrogen": "^0.19.0",
     "@storybook/addon-actions": "^6.4.19",
     "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-interactions": "^6.4.19",
@@ -118,6 +118,7 @@
     "glob-parent": "^5.1.2",
     "nth-check": "^2.0.1",
     "trim": "^0.0.3",
+    "trim-newlines": "^3.0.1",
     "webpack": "^5.72.0",
     "workbox-webpack-plugin": "^6.2.0"
   },
