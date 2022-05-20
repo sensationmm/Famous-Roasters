@@ -164,14 +164,6 @@ export const Product: React.FC = () => {
               <Tag type={TagType.Aroma} value={aroma.value} />
             </div>
           )}
-          {/* Flavour notes section */}
-          {flavourNotes && (
-            <div className="mt-4">
-              <Typography type={TypographyType.Paragraph} size={TypographySize.Small}>
-                {flavourNotes?.value?.replace(', ', ' • ').replace(',', ' • ')}
-              </Typography>
-            </div>
-          )}
           {/* Taste profile */}
           {sweetness && body && bitterness && acidity && (
             <div className="mt-4">
@@ -289,6 +281,22 @@ export const Product: React.FC = () => {
     )
   }
 
+  const renderProductBlockContentGetToKnow = () => (
+    <>
+      <Typography as="p" className="mb-2">
+        (content placeholder)
+      </Typography>
+      {/* Flavour notes section */}
+      {flavourNotes && (
+        <div className="mt-4">
+          <Typography type={TypographyType.Paragraph} size={TypographySize.Small}>
+            {flavourNotes?.value?.replace(', ', ' • ').replace(',', ' • ')}
+          </Typography>
+        </div>
+      )}
+    </>
+  )
+
   const renderProductCollapsableBlocks = () => {
     const placeHolderText = (
       <>
@@ -320,7 +328,8 @@ export const Product: React.FC = () => {
                 {t(`pages.product.sections.${blockData.key}.title`)}
               </Typography>
             }
-            panelChildren={placeHolderText}
+            defaultOpen={blockData.key === 'getToKnow'}
+            panelChildren={blockData.key === 'getToKnow' ? renderProductBlockContentGetToKnow() : placeHolderText}
           />
         ))}
       </div>
