@@ -22,12 +22,19 @@ describe('Filter Mobile component', () => {
   it('Renders correctly', async () => {
     const { container } = render(
       <I18nextProvider i18n={i18n}>
-        <FilterMobile
-          filter={{ key: 'filter-key', isOpen: true }}
-          show={true}
-          back={() => alert('back!')}
-          update={() => alert('update!')}
-        />
+        <div className="w-80 h-48">
+          <FilterMobile
+            filter={{
+              key: 'vendor',
+              filterType: 'enum',
+              filterValues: ['Roaster A', 'Roaster B'],
+              isOpen: true,
+            }}
+            show={true}
+            back={() => alert('back!')}
+            update={() => null}
+          />
+        </div>
       </I18nextProvider>,
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))

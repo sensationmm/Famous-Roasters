@@ -1,5 +1,5 @@
 import { MockedProvider } from '@apollo/client/testing'
-import { fireEvent, render, screen, waitFor } from '@testing-library/react'
+import { act, fireEvent, render, screen, waitFor } from '@testing-library/react'
 import React from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { MemoryRouter } from 'react-router-dom'
@@ -88,11 +88,19 @@ describe('Catalogue view', () => {
       </MockedProvider>,
     )
 
+    await act(async (): Promise<void> => {
+      await new Promise((resolve) => setTimeout(resolve, 500))
+    })
+
     await waitFor(async () => {
       const next = await screen.findByTestId('pagination-next')
       expect(next).toBeInTheDocument()
       expect(next).not.toHaveAttribute('disabled')
       fireEvent.click(next)
+    })
+
+    await act(async (): Promise<void> => {
+      await new Promise((resolve) => setTimeout(resolve, 500))
     })
 
     await waitFor(async () => {
@@ -118,11 +126,19 @@ describe('Catalogue view', () => {
       </MockedProvider>,
     )
 
+    await act(async (): Promise<void> => {
+      await new Promise((resolve) => setTimeout(resolve, 500))
+    })
+
     await waitFor(async () => {
       const next = await screen.findByTestId('pagination-next')
       expect(next).toBeInTheDocument()
       expect(next).not.toHaveAttribute('disabled')
       fireEvent.click(next)
+    })
+
+    await act(async (): Promise<void> => {
+      await new Promise((resolve) => setTimeout(resolve, 500))
     })
 
     await waitFor(async () => {
@@ -148,11 +164,19 @@ describe('Catalogue view', () => {
       </MockedProvider>,
     )
 
+    await act(async (): Promise<void> => {
+      await new Promise((resolve) => setTimeout(resolve, 500))
+    })
+
     await waitFor(async () => {
       const next = await screen.findByTestId('pagination-next')
       expect(next).toBeInTheDocument()
       expect(next).not.toHaveAttribute('disabled')
       fireEvent.click(next)
+    })
+
+    await act(async (): Promise<void> => {
+      await new Promise((resolve) => setTimeout(resolve, 500))
     })
 
     await waitFor(async () => {
