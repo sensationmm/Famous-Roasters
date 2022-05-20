@@ -190,8 +190,14 @@
       "transactional": {
         "cta": "In den Warenkorb",
         "options": {
+          "grindType": {
+            "label": "Mahlgrad"
+          },
           "packageSize": {
-            "label": "Packungsgröße"
+            "label": "Größe/Menge"
+          },
+          "quantity": {
+            "label": "Anzahl"
           }
         },
         "price": {

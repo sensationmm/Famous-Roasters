@@ -2,7 +2,7 @@ import { Listbox as HUIListbox, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/solid'
 import React, { Fragment, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Typography, TypographySize } from 'src/components'
+import { Typography, TypographySize, TypographyType } from 'src/components'
 
 export interface ListBoxItem {
   name: string
@@ -16,6 +16,7 @@ interface ListboxProps {
   onChange?: (active?: ListBoxItem[]) => void
   hasNoneItem?: boolean
   hasTranslatedValues?: boolean
+  label?: string
 }
 
 export const Listbox: React.FC<ListboxProps> = ({
@@ -26,6 +27,7 @@ export const Listbox: React.FC<ListboxProps> = ({
   onChange,
   hasNoneItem = false,
   hasTranslatedValues = true,
+  label = undefined,
   ...props
 }: ListboxProps) => {
   const noneItem: ListBoxItem = { name: 'none' }
@@ -74,6 +76,16 @@ export const Listbox: React.FC<ListboxProps> = ({
       <HUIListbox value={activeItems} onChange={onChangeHandler} multiple={multiple}>
         {({ open }) => (
           <>
+            {label && (
+              <Typography
+                as="label"
+                type={TypographyType.Paragraph}
+                size={TypographySize.Tiny}
+                className="flex text-coreUI-text-secondary uppercase mb-1"
+              >
+                {label}
+              </Typography>
+            )}
             <HUIListbox.Button
               className="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
               data-testid="button-listbox"
