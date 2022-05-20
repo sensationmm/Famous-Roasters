@@ -886,11 +886,11 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               class="py-2"
               id="headlessui-disclosure-panel-:r3:"
             >
-              <p
-                class="mb-2 text-base leading-6"
-              >
-                (content placeholder)
-              </p>
+              <div>
+                <p>
+                  Hello world
+                </p>
+              </div>
               <div
                 class="mt-4"
               >

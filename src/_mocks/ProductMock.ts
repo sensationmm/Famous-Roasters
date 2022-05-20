@@ -60,7 +60,7 @@ export const ProductMockDataBase: ProductType = {
   },
   createdAt: '',
   description: '',
-  descriptionHtml: '',
+  descriptionHtml: '<p>Hello world</p>',
   featuredImage: {
     url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153',
     originalSrc: '',

@@ -84,8 +84,20 @@ export const Product: React.FC = () => {
     },
   })
 
-  const { title, vendor, coffee_type, aroma, flavourNotes, sweetness, body, bitterness, acidity, images, variants } =
-    data?.product || {}
+  const {
+    title,
+    vendor,
+    coffee_type,
+    aroma,
+    flavourNotes,
+    sweetness,
+    body,
+    bitterness,
+    acidity,
+    images,
+    variants,
+    descriptionHtml,
+  } = data?.product || {}
 
   useEffect(() => {
     if (variants) {
@@ -283,9 +295,7 @@ export const Product: React.FC = () => {
 
   const renderProductBlockContentGetToKnow = () => (
     <>
-      <Typography as="p" className="mb-2">
-        (content placeholder)
-      </Typography>
+      {descriptionHtml && <div dangerouslySetInnerHTML={{ __html: descriptionHtml }} />}
       {/* Flavour notes section */}
       {flavourNotes && (
         <div className="mt-4">
