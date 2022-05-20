@@ -71,21 +71,24 @@ export const Listbox: React.FC<ListboxProps> = ({
     }
   }
 
+  const renderOptionalLabel = () =>
+    label && (
+      <Typography
+        as="label"
+        type={TypographyType.Paragraph}
+        size={TypographySize.Tiny}
+        className="flex text-coreUI-text-secondary uppercase mb-1"
+      >
+        {label}
+      </Typography>
+    )
+
   return (
     <div className="w-full relative" {...props}>
       <HUIListbox value={activeItems} onChange={onChangeHandler} multiple={multiple}>
         {({ open }) => (
           <>
-            {label && (
-              <Typography
-                as="label"
-                type={TypographyType.Paragraph}
-                size={TypographySize.Tiny}
-                className="flex text-coreUI-text-secondary uppercase mb-1"
-              >
-                {label}
-              </Typography>
-            )}
+            {renderOptionalLabel()}
             <HUIListbox.Button
               className="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
               data-testid="button-listbox"
