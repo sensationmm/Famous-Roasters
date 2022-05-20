@@ -249,15 +249,6 @@ exports[`Product view Renders correctly for a successful call 1`] = `
             <div
               class="mt-4"
             >
-              <span
-                class="text-sm leading-5"
-              >
-                Weiße Schokolade • Melone •  Orangenblüten
-              </span>
-            </div>
-            <div
-              class="mt-4"
-            >
               <div
                 class="grid gap-4 grid-cols-2 grid-rows-2"
               >
@@ -863,7 +854,8 @@ exports[`Product view Renders correctly for a successful call 1`] = `
             class="border-t border-coreUI-border mx-auto w-full py-4"
           >
             <button
-              aria-expanded="false"
+              aria-controls="headlessui-disclosure-panel-:r3:"
+              aria-expanded="true"
               class="flex w-full justify-between py-2 text-left"
               data-testid="button-disclosure-toggle"
               id="headlessui-disclosure-button-:r2:"
@@ -884,12 +876,31 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M12 4v16m8-8H4"
+                  d="M20 12H4"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 />
               </svg>
             </button>
+            <div
+              class="py-2"
+              id="headlessui-disclosure-panel-:r3:"
+            >
+              <div>
+                <p>
+                  Hello world
+                </p>
+              </div>
+              <div
+                class="mt-4"
+              >
+                <span
+                  class="text-sm leading-5"
+                >
+                  Weiße Schokolade • Melone •  Orangenblüten
+                </span>
+              </div>
+            </div>
           </div>
           <div
             class="border-t border-coreUI-border mx-auto w-full py-4"

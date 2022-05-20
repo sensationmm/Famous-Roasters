@@ -84,8 +84,20 @@ export const Product: React.FC = () => {
     },
   })
 
-  const { title, vendor, coffee_type, aroma, flavourNotes, sweetness, body, bitterness, acidity, images, variants } =
-    data?.product || {}
+  const {
+    title,
+    vendor,
+    coffee_type,
+    aroma,
+    flavourNotes,
+    sweetness,
+    body,
+    bitterness,
+    acidity,
+    images,
+    variants,
+    descriptionHtml,
+  } = data?.product || {}
 
   useEffect(() => {
     if (variants) {
@@ -162,14 +174,6 @@ export const Product: React.FC = () => {
           {aroma && (
             <div className="mt-4">
               <Tag type={TagType.Aroma} value={aroma.value} />
-            </div>
-          )}
-          {/* Flavour notes section */}
-          {flavourNotes && (
-            <div className="mt-4">
-              <Typography type={TypographyType.Paragraph} size={TypographySize.Small}>
-                {flavourNotes?.value?.replace(', ', ' • ').replace(',', ' • ')}
-              </Typography>
             </div>
           )}
           {/* Taste profile */}
@@ -289,6 +293,20 @@ export const Product: React.FC = () => {
     )
   }
 
+  const renderProductBlockContentGetToKnow = () => (
+    <>
+      {descriptionHtml && <div dangerouslySetInnerHTML={{ __html: descriptionHtml }} />}
+      {/* Flavour notes section */}
+      {flavourNotes && (
+        <div className="mt-4">
+          <Typography type={TypographyType.Paragraph} size={TypographySize.Small}>
+            {flavourNotes?.value?.replace(', ', ' • ').replace(',', ' • ')}
+          </Typography>
+        </div>
+      )}
+    </>
+  )
+
   const renderProductCollapsableBlocks = () => {
     const placeHolderText = (
       <>
@@ -320,7 +338,8 @@ export const Product: React.FC = () => {
                 {t(`pages.product.sections.${blockData.key}.title`)}
               </Typography>
             }
-            panelChildren={placeHolderText}
+            defaultOpen={blockData.key === 'getToKnow'}
+            panelChildren={blockData.key === 'getToKnow' ? renderProductBlockContentGetToKnow() : placeHolderText}
           />
         ))}
       </div>
