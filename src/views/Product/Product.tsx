@@ -194,6 +194,7 @@ export const Product: React.FC = () => {
                   multiple={false}
                   value={[{ name: variantSelected?.grind_type?.value }]}
                   onChange={(v) => v && updateVariantSelectedWithGrind(v)}
+                  label={t('pages.product.transactional.options.grindType.label')}
                 />
               )}
             </div>
@@ -206,6 +207,7 @@ export const Product: React.FC = () => {
                   multiple={false}
                   value={[{ name: variantSelected?.package_size?.value }]}
                   onChange={(v) => v && updateVariantSelectedWithPackage(v)}
+                  label={t('pages.product.transactional.options.packageSize.label')}
                 />
               )}
               <div>
@@ -214,55 +216,58 @@ export const Product: React.FC = () => {
                   max={10}
                   value={quantity}
                   onChange={(q: number) => setQuantity(q)}
+                  label={t('pages.product.transactional.options.quantity.label')}
                   className="w-full"
                 />
               </div>
             </div>
-            <div className="mt-3">
-              {variants && (
-                <>
-                  <Typography type={TypographyType.Heading} size={TypographySize.Small} className="mr-1">
-                    {formatPrice((quantity * parseFloat(variantSelected?.price)).toString(), currencyCode)}
-                  </Typography>
-                  <Typography
-                    type={TypographyType.Paragraph}
-                    size={TypographySize.Tiny}
-                    className="text-coreUI-text-secondary"
-                  >
-                    (
-                    {formatPrice(
+            <div className="grid gap-4 grid-cols-1 grid-rows-2 mt-4">
+              <div>
+                {variants && (
+                  <>
+                    <Typography type={TypographyType.Heading} size={TypographySize.Small} className="mr-1">
+                      {formatPrice((quantity * parseFloat(variantSelected?.price)).toString(), currencyCode)}
+                    </Typography>
+                    <Typography
+                      type={TypographyType.Paragraph}
+                      size={TypographySize.Tiny}
+                      className="text-coreUI-text-secondary"
+                    >
                       (
-                        (parseFloat(variantSelected?.price) * 1000) /
-                        parseFloat(variantSelected?.package_size?.value)
-                      ).toString(),
-                      'EUR',
-                    )}
-                    /kg)
-                  </Typography>
-                </>
-              )}
+                      {formatPrice(
+                        (
+                          (parseFloat(variantSelected?.price) * 1000) /
+                          parseFloat(variantSelected?.package_size?.value)
+                        ).toString(),
+                        'EUR',
+                      )}
+                      /kg)
+                    </Typography>
+                  </>
+                )}
+                <Typography
+                  as="div"
+                  type={TypographyType.Paragraph}
+                  size={TypographySize.Tiny}
+                  className="text-coreUI-text-secondary"
+                >
+                  {t('pages.product.transactional.price.footNote')}
+                </Typography>
+              </div>
+              <div className="flex align-middle">
+                <Button
+                  type="button"
+                  emphasis={ButtonEmphasis.Primary}
+                  size={ButtonSize.md}
+                  className="flex w-full justify-center"
+                  onClick={handleAddToCart}
+                  data-testid="addToCart"
+                >
+                  {t('pages.product.transactional.cta')}
+                </Button>
+              </div>
             </div>
-            <div className="mb-3">
-              <Typography
-                as="div"
-                type={TypographyType.Paragraph}
-                size={TypographySize.Tiny}
-                className="text-coreUI-text-secondary"
-              >
-                {t('pages.product.transactional.price.footNote')}
-              </Typography>
-            </div>
-            <Button
-              type="button"
-              emphasis={ButtonEmphasis.Primary}
-              size={ButtonSize.md}
-              className="flex w-full justify-center"
-              onClick={handleAddToCart}
-              data-testid="addToCart"
-            >
-              {t('pages.product.transactional.cta')}
-            </Button>
-            <div className="mt-2">
+            <div className="mt-4">
               <Typography type={TypographyType.Paragraph} size={TypographySize.Small}>
                 <strong>{t('pages.product.transactional.shipping.label')}</strong>
                 {': '}
