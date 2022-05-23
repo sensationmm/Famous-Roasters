@@ -1,0 +1,40 @@
+export const isAllowedHtmlElement = (el: Element) => {
+  const allowedNodes = ['P', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'IFRAME', 'IMG', 'DIV', 'SPAN']
+  // prevent script tag
+  return el.innerHTML.indexOf('<script') === -1 && allowedNodes.indexOf(el.nodeName) >= 0
+}
+
+export const formatHtmlElement = (el: Element) => {
+  el.removeAttribute('data-mce-fragment')
+  const elementType = el.nodeName
+  switch (elementType) {
+    case 'H1':
+    case 'H2':
+    case 'H3':
+    case 'H4':
+    case 'H5':
+    case 'H6': {
+      // avoid seo clashes
+      const headlineEl = document.createElement('h4')
+      headlineEl.innerHTML = el.innerHTML
+      headlineEl.setAttribute('class', 'mb-4 font-semibold')
+      return headlineEl
+    }
+    case 'P':
+      el.setAttribute('class', 'mb-4')
+      return el
+    case 'IFRAME':
+      el.setAttribute('class', 'mb-4')
+      return el
+    default:
+      return el
+  }
+}
+
+export const parseHtmlSafely = (html: string) => {
+  const parser = new DOMParser()
+  const children = Array.from(parser.parseFromString(html, 'text/html').body.children)
+  const resultContainer = document.createElement('html')
+  children.map((child) => isAllowedHtmlElement(child) && resultContainer.append(formatHtmlElement(child)))
+  return resultContainer.innerHTML
+}

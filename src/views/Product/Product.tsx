@@ -28,7 +28,7 @@ import {
   TypographySize,
   TypographyType,
 } from 'src/components'
-import { formatPrice, getAPIProductId } from 'src/utils'
+import { formatPrice, getAPIProductId, parseHtmlSafely } from 'src/utils'
 
 interface ProductMeta {
   value: string
@@ -295,7 +295,7 @@ export const Product: React.FC = () => {
 
   const renderProductBlockContentGetToKnow = () => (
     <>
-      {descriptionHtml && <div dangerouslySetInnerHTML={{ __html: descriptionHtml }} />}
+      {descriptionHtml && <div dangerouslySetInnerHTML={{ __html: parseHtmlSafely(descriptionHtml) }} />}
       {/* Flavour notes section */}
       {flavourNotes && (
         <div className="mt-4">

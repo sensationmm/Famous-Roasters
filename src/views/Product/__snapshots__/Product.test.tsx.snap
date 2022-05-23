@@ -887,7 +887,9 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               id="headlessui-disclosure-panel-:r3:"
             >
               <div>
-                <p>
+                <p
+                  class="mb-4"
+                >
                   Hello world
                 </p>
               </div>
