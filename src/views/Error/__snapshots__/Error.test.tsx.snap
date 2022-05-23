@@ -3,7 +3,7 @@
 exports[`Error view Renders correctly 1`] = `
 <div>
   <div
-    class="min-h-screen flex flex-col"
+    class="min-h-screen flex flex-col text-brand-black"
   >
     <div
       class="bg-white"

@@ -20,6 +20,18 @@ query product($id: ID) {
         flavourNotes: metafield(namespace: "my_fields", key: "flavournotes") {
             value
         }
+        producer: metafield(namespace: "my_fields", key: "producer") {
+            value
+        }
+        altitude: metafield(namespace: "my_fields", key: "altitude") {
+            value
+        }
+        variety: metafield(namespace: "my_fields", key: "variety") {
+            value
+        }
+        processing: metafield(namespace: "my_fields", key: "processing") {
+            value
+        }
         sweetness: metafield(namespace: "my_fields", key: "sweetness") {
             value
         }

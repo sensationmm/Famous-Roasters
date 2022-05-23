@@ -3,7 +3,7 @@
 exports[`Catalogue view Renders correctly for a successful call 1`] = `
 <div>
   <div
-    class="min-h-screen flex flex-col"
+    class="min-h-screen flex flex-col text-brand-black"
   >
     <div
       class="bg-white"
@@ -1442,7 +1442,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
 exports[`Catalogue view Renders correctly for an error call on catalogue 1`] = `
 <div>
   <div
-    class="min-h-screen flex flex-col"
+    class="min-h-screen flex flex-col text-brand-black"
   >
     <div
       class="bg-white"

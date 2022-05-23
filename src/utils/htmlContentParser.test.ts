@@ -27,13 +27,17 @@ describe('HTML content parser utils', () => {
   it('formatHtmlElement processes headlines', () => {
     const element = document.createElement('h1')
     element.innerHTML = 'hello world'
-    expect(formatHtmlElement(element).outerHTML).toEqual('<h4 class="mb-4 font-semibold">hello world</h4>')
+    expect(formatHtmlElement(element).outerHTML).toEqual(
+      '<h4 class="mb-4 text-lg leading-7 font-semibold">hello world</h4>',
+    )
   })
 
   it('formatHtmlElement processes iframes', () => {
     const element = document.createElement('iframe')
     element.innerHTML = 'hello world'
-    expect(formatHtmlElement(element).outerHTML).toEqual('<iframe class="mb-4">hello world</iframe>')
+    expect(formatHtmlElement(element).outerHTML).toEqual(
+      '<div class="video-container mb-4"><iframe>hello world</iframe></div>',
+    )
   })
 
   it('formatHtmlElement parses through other whitelisted elements on the first level', () => {
@@ -45,7 +49,7 @@ describe('HTML content parser utils', () => {
   it('parseHtmlSafely works', () => {
     const htmlString = "<h1>Title</h1><script src='verymaliciouscode.js'></script><p>Paragraph</p>"
     expect(parseHtmlSafely(htmlString)).toEqual(
-      '<h4 class="mb-4 font-semibold">Title</h4><p class="mb-4">Paragraph</p>',
+      '<h4 class="mb-4 text-lg leading-7 font-semibold">Title</h4><p class="mb-4">Paragraph</p>',
     )
   })
 })

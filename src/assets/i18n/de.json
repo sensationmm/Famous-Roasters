@@ -159,6 +159,17 @@
     },
     "product": {
       "navigation": "Produkt",
+      "originProcessing": {
+        "characteristics": {
+          "altitude": "Anbauhöhe",
+          "flavourNotes": "Geschmacksnoten",
+          "origin": "Herkunftsland",
+          "processing": "Verarbeitung",
+          "producer": "Produzent",
+          "variety": "Sorte"
+        },
+        "title": "Herkunft und Verarbeitung"
+      },
       "title": "Produkt",
       "sections": {
         "findSimilar": {

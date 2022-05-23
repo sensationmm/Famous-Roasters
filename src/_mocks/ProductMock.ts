@@ -34,6 +34,10 @@ interface ProductCustom {
   bitterness?: ProductMeta
   acidity?: ProductMeta
   origin?: ProductMeta
+  producer?: ProductMeta
+  altitude?: ProductMeta
+  variety?: ProductMeta
+  processing?: ProductMeta
   pricePerKg?: ProductMeta
   variants: ProductVariantConnectionCustom
 }
@@ -242,6 +246,18 @@ export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
   },
   origin: {
     value: 'CO',
+  },
+  producer: {
+    value: 'Famous Roasters',
+  },
+  altitude: {
+    value: '500m',
+  },
+  variety: {
+    value: 'Ethiopian Heirloom',
+  },
+  processing: {
+    value: 'Gewaschen',
   },
   pricePerKg: {
     value: '10.0',

@@ -17,15 +17,18 @@ export const formatHtmlElement = (el: Element) => {
       // avoid seo clashes
       const headlineEl = document.createElement('h4')
       headlineEl.innerHTML = el.innerHTML
-      headlineEl.setAttribute('class', 'mb-4 font-semibold')
+      headlineEl.setAttribute('class', 'mb-4 text-lg leading-7 font-semibold')
       return headlineEl
     }
     case 'P':
       el.setAttribute('class', 'mb-4')
       return el
-    case 'IFRAME':
-      el.setAttribute('class', 'mb-4')
-      return el
+    case 'IFRAME': {
+      const containerEl = document.createElement('div')
+      containerEl.setAttribute('class', 'video-container mb-4')
+      containerEl.append(el)
+      return containerEl
+    }
     default:
       return el
   }

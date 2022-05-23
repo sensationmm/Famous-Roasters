@@ -8,7 +8,7 @@ interface LayoutProps {
 
 export const Layout: React.FC<LayoutProps> = ({ navigationTheme = NavigationTheme.Shop, children }: LayoutProps) => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col text-brand-black">
       <Navigation theme={navigationTheme} />
       {children}
       <Footer />
