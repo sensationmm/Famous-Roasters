@@ -38,6 +38,6 @@ export const parseHtmlSafely = (html: string) => {
   const parser = new DOMParser()
   const children = Array.from(parser.parseFromString(html, 'text/html').body.children)
   const resultContainer = document.createElement('html')
-  children.map((child) => isAllowedHtmlElement(child) && resultContainer.append(formatHtmlElement(child)))
+  children.forEach((child) => isAllowedHtmlElement(child) && resultContainer.append(formatHtmlElement(child)))
   return resultContainer.innerHTML
 }
