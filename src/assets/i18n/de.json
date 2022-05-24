@@ -203,7 +203,16 @@
         "options": {
           "grindType": {
             "label": "Mahlgrad",
-            "moreInfo": "Mehr zu den Mahlgraden"
+            "moreInfo": "Mehr zu den Mahlgraden",
+            "guide": {
+              "title": "Mahlgraden Handbuch",
+              "items": {
+                "whole": {
+                  "text": "Kann als Ganzes oder gemahlen verwendet werden. Je nach dem was du lieber magst.",
+                  "title": "Ganze Bohne"
+                }
+              }
+            }
           },
           "packageSize": {
             "label": "Größe/Menge"

@@ -18,6 +18,9 @@ import {
   Disclosure,
   Drawer,
   ErrorPrompt,
+  Icon,
+  IconName,
+  IconSize,
   Layout,
   Listbox,
   ListBoxItem,
@@ -160,6 +163,7 @@ export const Product: React.FC = () => {
     addToCart && addToCart({ quantity, item: variantSelected.id })
   }
 
+  // TODO this goes to a separate component
   const LearnAboutTheGrinds = () => {
     const Trigger = () => (
       <Typography
@@ -171,6 +175,7 @@ export const Product: React.FC = () => {
         {t('pages.product.transactional.options.grindType.moreInfo')}
       </Typography>
     )
+
     return (
       <>
         <Drawer
@@ -179,8 +184,29 @@ export const Product: React.FC = () => {
               <Trigger />
             </button>
           }
-          title={t(`pages.product.transactional.options.grindType.moreInfo`)}
-          body={<div className="border border-dashed border-brand-grey-bombay">Placeholder...</div>}
+          title={t(`pages.product.transactional.options.grindType.guide.title`)}
+          body={
+            <div>
+              <div className="flex items-start justify-between p-6">
+                <div className="w-12 h-12 rounded-full bg-brand-grey-whisper flex items-center justify-center">
+                  <Icon name={IconName.WholeBean} size={IconSize.md} />
+                </div>
+                <div className="flex flex-1 px-4 flex-col">
+                  <Typography type={TypographyType.Label} size={TypographySize.Small}>
+                    {t('pages.product.transactional.options.grindType.guide.items.whole.title')}
+                  </Typography>
+                  <Typography
+                    type={TypographyType.Paragraph}
+                    size={TypographySize.Tiny}
+                    className="text-coreUI-text-secondary mt-1"
+                  >
+                    {t('pages.product.transactional.options.grindType.guide.items.whole.text')}
+                  </Typography>
+                </div>
+                <div>Image</div>
+              </div>
+            </div>
+          }
           className="flex md:hidden"
         />
         <Dialog
@@ -189,8 +215,29 @@ export const Product: React.FC = () => {
               <Trigger />
             </button>
           }
-          title={t(`pages.product.transactional.options.grindType.moreInfo`)}
-          body={<div className="border border-dashed border-brand-grey-bombay">Placeholder...</div>}
+          title={t(`pages.product.transactional.options.grindType.guide.title`)}
+          body={
+            <div>
+              <div className="flex items-start justify-between p-6">
+                <div className="w-12 h-12 rounded-full bg-brand-grey-whisper flex items-center justify-center">
+                  <Icon name={IconName.WholeBean} size={IconSize.md} />
+                </div>
+                <div className="flex flex-1 px-4 flex-col">
+                  <Typography type={TypographyType.Label} size={TypographySize.Small}>
+                    {t('pages.product.transactional.options.grindType.guide.items.whole.title')}
+                  </Typography>
+                  <Typography
+                    type={TypographyType.Paragraph}
+                    size={TypographySize.Tiny}
+                    className="text-coreUI-text-secondary mt-1"
+                  >
+                    {t('pages.product.transactional.options.grindType.guide.items.whole.text')}
+                  </Typography>
+                </div>
+                <div>Image</div>
+              </div>
+            </div>
+          }
           className="hidden md:flex"
         />
       </>
