@@ -202,7 +202,8 @@
         "cta": "In den Warenkorb",
         "options": {
           "grindType": {
-            "label": "Mahlgrad"
+            "label": "Mahlgrad",
+            "moreInfo": "Mehr zu den Mahlgraden"
           },
           "packageSize": {
             "label": "Größe/Menge"

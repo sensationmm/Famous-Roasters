@@ -251,6 +251,14 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             <div
               class="w-full relative"
             >
+              <div
+                class="grid grid-cols-2 items-end"
+              >
+                <div />
+                <div
+                  class="justify-self-end"
+                />
+              </div>
               <button
                 aria-expanded="false"
                 aria-haspopup="true"
@@ -286,6 +294,14 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             <div
               class="w-full relative"
             >
+              <div
+                class="grid grid-cols-2 items-end"
+              >
+                <div />
+                <div
+                  class="justify-self-end"
+                />
+              </div>
               <button
                 aria-expanded="false"
                 aria-haspopup="true"
@@ -321,6 +337,14 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             <div
               class="w-full relative"
             >
+              <div
+                class="grid grid-cols-2 items-end"
+              >
+                <div />
+                <div
+                  class="justify-self-end"
+                />
+              </div>
               <button
                 aria-expanded="false"
                 aria-haspopup="true"
@@ -356,6 +380,14 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             <div
               class="w-full relative"
             >
+              <div
+                class="grid grid-cols-2 items-end"
+              >
+                <div />
+                <div
+                  class="justify-self-end"
+                />
+              </div>
               <button
                 aria-expanded="false"
                 aria-haspopup="true"
@@ -431,6 +463,14 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             <div
               class="w-full relative"
             >
+              <div
+                class="grid grid-cols-2 items-end"
+              >
+                <div />
+                <div
+                  class="justify-self-end"
+                />
+              </div>
               <button
                 aria-expanded="false"
                 aria-haspopup="true"

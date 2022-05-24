@@ -5,6 +5,14 @@ exports[`Listbox component Renders correctly 1`] = `
   <div
     class="w-full relative"
   >
+    <div
+      class="grid grid-cols-2 items-end"
+    >
+      <div />
+      <div
+        class="justify-self-end"
+      />
+    </div>
     <button
       aria-expanded="false"
       aria-haspopup="true"
@@ -41,6 +49,14 @@ exports[`Listbox component Renders correctly multiple 1`] = `
   <div
     class="w-full relative"
   >
+    <div
+      class="grid grid-cols-2 items-end"
+    >
+      <div />
+      <div
+        class="justify-self-end"
+      />
+    </div>
     <button
       aria-expanded="false"
       aria-haspopup="true"
@@ -77,6 +93,14 @@ exports[`Listbox component Renders correctly with initial value 1`] = `
   <div
     class="w-full relative"
   >
+    <div
+      class="grid grid-cols-2 items-end"
+    >
+      <div />
+      <div
+        class="justify-self-end"
+      />
+    </div>
     <button
       aria-expanded="false"
       aria-haspopup="true"
@@ -113,6 +137,14 @@ exports[`Listbox component Renders correctly with no translated values 1`] = `
   <div
     class="w-full relative"
   >
+    <div
+      class="grid grid-cols-2 items-end"
+    >
+      <div />
+      <div
+        class="justify-self-end"
+      />
+    </div>
     <button
       aria-expanded="false"
       aria-haspopup="true"
@@ -149,6 +181,14 @@ exports[`Listbox component Renders correctly with none item 1`] = `
   <div
     class="w-full relative"
   >
+    <div
+      class="grid grid-cols-2 items-end"
+    >
+      <div />
+      <div
+        class="justify-self-end"
+      />
+    </div>
     <button
       aria-expanded="false"
       aria-haspopup="true"

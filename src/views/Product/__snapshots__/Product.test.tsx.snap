@@ -659,11 +659,47 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                 <div
                   class="w-full relative"
                 >
-                  <label
-                    class="flex text-coreUI-text-secondary uppercase mb-1 text-xs leading-4"
+                  <div
+                    class="grid grid-cols-2 items-end"
                   >
-                    Mahlgrad
-                  </label>
+                    <div>
+                      <label
+                        class="flex text-coreUI-text-secondary uppercase mb-1 text-xs leading-4"
+                      >
+                        Mahlgrad
+                      </label>
+                    </div>
+                    <div
+                      class="justify-self-end"
+                    >
+                      <div
+                        class="flex md:hidden"
+                      >
+                        <button
+                          data-testid="drawer-trigger"
+                        >
+                          <span
+                            class="flex text-coreUI-text-secondary underline mb-1 text-sm leading-5"
+                          >
+                            Mehr zu den Mahlgraden
+                          </span>
+                        </button>
+                      </div>
+                      <div
+                        class="hidden md:flex"
+                      >
+                        <button
+                          data-testid="dialog-trigger"
+                        >
+                          <span
+                            class="flex text-coreUI-text-secondary underline mb-1 text-sm leading-5"
+                          >
+                            Mehr zu den Mahlgraden
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                   <button
                     aria-expanded="false"
                     aria-haspopup="true"
@@ -699,11 +735,20 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                 <div
                   class="w-full relative"
                 >
-                  <label
-                    class="flex text-coreUI-text-secondary uppercase mb-1 text-xs leading-4"
+                  <div
+                    class="grid grid-cols-2 items-end"
                   >
-                    Größe/Menge
-                  </label>
+                    <div>
+                      <label
+                        class="flex text-coreUI-text-secondary uppercase mb-1 text-xs leading-4"
+                      >
+                        Größe/Menge
+                      </label>
+                    </div>
+                    <div
+                      class="justify-self-end"
+                    />
+                  </div>
                   <button
                     aria-expanded="false"
                     aria-haspopup="true"

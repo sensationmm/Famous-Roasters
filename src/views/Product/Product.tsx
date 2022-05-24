@@ -14,7 +14,9 @@ import {
   ButtonSize,
   Carousel,
   CartContext,
+  Dialog,
   Disclosure,
+  Drawer,
   ErrorPrompt,
   Layout,
   Listbox,
@@ -158,6 +160,43 @@ export const Product: React.FC = () => {
     addToCart && addToCart({ quantity, item: variantSelected.id })
   }
 
+  const LearnAboutTheGrinds = () => {
+    const Trigger = () => (
+      <Typography
+        as="span"
+        type={TypographyType.Paragraph}
+        size={TypographySize.Small}
+        className="flex text-coreUI-text-secondary underline mb-1"
+      >
+        {t('pages.product.transactional.options.grindType.moreInfo')}
+      </Typography>
+    )
+    return (
+      <>
+        <Drawer
+          trigger={
+            <button>
+              <Trigger />
+            </button>
+          }
+          title={t(`pages.product.transactional.options.grindType.moreInfo`)}
+          body={<div className="border border-dashed border-brand-grey-bombay">Placeholder...</div>}
+          className="flex md:hidden"
+        />
+        <Dialog
+          trigger={
+            <button>
+              <Trigger />
+            </button>
+          }
+          title={t(`pages.product.transactional.options.grindType.moreInfo`)}
+          body={<div className="border border-dashed border-brand-grey-bombay">Placeholder...</div>}
+          className="hidden md:flex"
+        />
+      </>
+    )
+  }
+
   const renderProductMainBlock = () => {
     return (
       <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
@@ -210,6 +249,7 @@ export const Product: React.FC = () => {
                   value={[{ name: variantSelected?.grind_type?.value }]}
                   onChange={(v) => v && updateVariantSelectedWithGrind(v)}
                   label={t('pages.product.transactional.options.grindType.label')}
+                  addOn={<LearnAboutTheGrinds />}
                 />
               )}
             </div>
