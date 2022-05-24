@@ -17,6 +17,7 @@ import { Listbox, ListBoxItem } from './Listbox'
 import { Loader } from './Loader'
 import { Navigation, NavigationTheme } from './Navigation'
 import { Notification } from './Notification'
+import { OriginProductionSpecs } from './OriginProductionSpecs'
 import { ProductTile } from './ProductTile'
 import { QuantitySelect } from './QuantitySelect'
 import { TabsNavigation } from './TabsNavigation'
@@ -52,6 +53,7 @@ export { Loader as Loader }
 export { Navigation as Navigation }
 export { NavigationTheme as NavigationTheme }
 export { Notification as Notification }
+export { OriginProductionSpecs as OriginProductionSpecs }
 export { ProductTile as ProductTile }
 export { QuantitySelect as QuantitySelect }
 export { TabsNavigation as TabsNavigation }

@@ -239,7 +239,7 @@ exports[`Footer component Renders correctly 1`] = `
       <span
         class="text-center text-base leading-6"
       >
-        © 2022 Famous Roasters. Alle Rechte vorbehalten
+        © 2022 WeBean. Alle Rechte vorbehalten
       </span>
       <br />
       <span

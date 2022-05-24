@@ -87,7 +87,7 @@ export const CartMockData: CartQueryQuery = {
               // eslint-disable-next-line @typescript-eslint/ban-ts-comment
               // @ts-ignore
               product: {
-                title: 'Famous Roasters',
+                title: 'WeBean',
                 handle: '',
                 id: 'gid://shopify/Product/23232323',
               },

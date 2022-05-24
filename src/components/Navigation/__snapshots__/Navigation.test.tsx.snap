@@ -80,7 +80,7 @@ exports[`Navigation component Renders correctly with home theme 1`] = `
             <span
               class="sr-only"
             >
-              Famous Roasters
+              WeBean
             </span>
             <div
               class="xl:hidden font-syne text-3xl"
@@ -100,13 +100,11 @@ exports[`Navigation component Renders correctly with home theme 1`] = `
               <div
                 class="h-5"
               >
-                Famous
+                WeBean
               </div>
               <div
                 class="font-extrabold"
-              >
-                Roasters
-              </div>
+              />
             </div>
           </a>
           <div
@@ -264,7 +262,7 @@ exports[`Navigation component Renders correctly with shop theme 1`] = `
             <span
               class="sr-only"
             >
-              Famous Roasters
+              WeBean
             </span>
             <div
               class="xl:hidden font-syne text-3xl"
@@ -284,13 +282,11 @@ exports[`Navigation component Renders correctly with shop theme 1`] = `
               <div
                 class="h-5"
               >
-                Famous
+                WeBean
               </div>
               <div
                 class="font-extrabold"
-              >
-                Roasters
-              </div>
+              />
             </div>
           </a>
           <div

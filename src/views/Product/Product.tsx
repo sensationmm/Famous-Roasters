@@ -20,6 +20,7 @@ import {
   Listbox,
   ListBoxItem,
   Loader,
+  OriginProductionSpecs,
   QuantitySelect,
   Tag,
   TagType,
@@ -28,7 +29,7 @@ import {
   TypographySize,
   TypographyType,
 } from 'src/components'
-import { formatPrice, getAPIProductId } from 'src/utils'
+import { formatPrice, getAPIProductId, parseHtmlSafely } from 'src/utils'
 
 interface ProductMeta {
   value: string
@@ -52,6 +53,11 @@ interface ProductCustom extends ProductType {
   bean_type: ProductMeta
   aroma: ProductMeta
   flavourNotes: ProductMeta
+  origin: ProductMeta
+  producer: ProductMeta
+  altitude: ProductMeta
+  variety: ProductMeta
+  processing: ProductMeta
   sweetness: ProductMetaInteger
   body: ProductMetaInteger
   bitterness: ProductMetaInteger
@@ -90,6 +96,11 @@ export const Product: React.FC = () => {
     coffee_type,
     aroma,
     flavourNotes,
+    origin,
+    producer,
+    altitude,
+    variety,
+    processing,
     sweetness,
     body,
     bitterness,
@@ -295,15 +306,27 @@ export const Product: React.FC = () => {
 
   const renderProductBlockContentGetToKnow = () => (
     <>
-      {descriptionHtml && <div dangerouslySetInnerHTML={{ __html: descriptionHtml }} />}
-      {/* Flavour notes section */}
-      {flavourNotes && (
-        <div className="mt-4">
-          <Typography type={TypographyType.Paragraph} size={TypographySize.Small}>
-            {flavourNotes?.value?.replace(', ', ' • ').replace(',', ' • ')}
-          </Typography>
-        </div>
-      )}
+      {descriptionHtml && <div dangerouslySetInnerHTML={{ __html: parseHtmlSafely(descriptionHtml) }} />}
+
+      {/* Characteristics section */}
+      <div className="mt-8">
+        <Typography
+          as="div"
+          type={TypographyType.Label}
+          size={TypographySize.Base}
+          className="pb-2 mb-4 border-b border-coreUI-border"
+        >
+          {t('pages.product.originProcessing.title')}
+        </Typography>
+        <OriginProductionSpecs
+          flavourNotes={flavourNotes?.value}
+          origin={origin?.value}
+          producer={producer?.value}
+          altitude={altitude?.value}
+          variety={variety?.value}
+          processing={processing?.value}
+        />
+      </div>
     </>
   )
 

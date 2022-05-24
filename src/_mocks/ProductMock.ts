@@ -34,6 +34,10 @@ interface ProductCustom {
   bitterness?: ProductMeta
   acidity?: ProductMeta
   origin?: ProductMeta
+  producer?: ProductMeta
+  altitude?: ProductMeta
+  variety?: ProductMeta
+  processing?: ProductMeta
   pricePerKg?: ProductMeta
   variants: ProductVariantConnectionCustom
 }
@@ -134,7 +138,7 @@ export const ProductMockDataBase: ProductType = {
       hasPreviousPage: false,
     },
   },
-  vendor: 'Famous Roasters',
+  vendor: 'WeBean',
   metafields: {
     edges: [],
     nodes: [],
@@ -195,7 +199,7 @@ export const ProductMockData: ProductType = {
       hasPreviousPage: false,
     },
   },
-  vendor: 'Famous Roasters',
+  vendor: 'WeBean',
   metafields: {
     edges: [],
     nodes: [],
@@ -242,6 +246,18 @@ export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
   },
   origin: {
     value: 'CO',
+  },
+  producer: {
+    value: 'WeBean',
+  },
+  altitude: {
+    value: '500m',
+  },
+  variety: {
+    value: 'Ethiopian Heirloom',
+  },
+  processing: {
+    value: 'Gewaschen',
   },
   pricePerKg: {
     value: '10.0',
