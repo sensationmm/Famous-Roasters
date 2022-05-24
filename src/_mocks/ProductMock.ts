@@ -138,7 +138,7 @@ export const ProductMockDataBase: ProductType = {
       hasPreviousPage: false,
     },
   },
-  vendor: 'Famous Roasters',
+  vendor: 'WeBean',
   metafields: {
     edges: [],
     nodes: [],
@@ -199,7 +199,7 @@ export const ProductMockData: ProductType = {
       hasPreviousPage: false,
     },
   },
-  vendor: 'Famous Roasters',
+  vendor: 'WeBean',
   metafields: {
     edges: [],
     nodes: [],
@@ -248,7 +248,7 @@ export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
     value: 'CO',
   },
   producer: {
-    value: 'Famous Roasters',
+    value: 'WeBean',
   },
   altitude: {
     value: '500m',

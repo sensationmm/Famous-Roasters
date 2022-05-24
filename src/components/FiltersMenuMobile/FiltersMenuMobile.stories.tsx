@@ -5,7 +5,7 @@ import { FilterData } from '../index'
 import { FiltersMenuMobile } from './FiltersMenuMobile'
 
 const initialFilters: FilterData[] = [
-  { key: 'vendor', isOpen: false, filterType: 'enum', filterValues: ['Rösttatte', 'Famous Roasters'] },
+  { key: 'vendor', isOpen: false, filterType: 'enum', filterValues: ['Rösttatte', 'WeBean'] },
   { key: 'packageSize', isOpen: false, filterType: 'enum', filterValues: ['100g', '250g', '500g', '1kg'] },
 ]
 

@@ -16,6 +16,6 @@ Default.args = {
   flavourNotes: 'Mango, Passionfruit, Honey',
   altitude: '500m',
   processing: 'Gewaschen',
-  producer: 'Famous Roasters',
+  producer: 'WeBean',
   variety: 'Ethiopian Heirloom',
 }

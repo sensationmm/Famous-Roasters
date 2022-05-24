@@ -48,7 +48,7 @@ export const FilterAttributesMock = {
             origin: {
               value: 'BR,CO',
             },
-            vendor: 'Famous Roasters',
+            vendor: 'WeBean',
             variants: {
               nodes: [
                 {

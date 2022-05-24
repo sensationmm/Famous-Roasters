@@ -83,7 +83,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               <span
                 class="sr-only"
               >
-                Famous Roasters
+                WeBean
               </span>
               <div
                 class="xl:hidden font-syne text-3xl"
@@ -103,13 +103,11 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                 <div
                   class="h-5"
                 >
-                  Famous
+                  WeBean
                 </div>
                 <div
                   class="font-extrabold"
-                >
-                  Roasters
-                </div>
+                />
               </div>
             </a>
             <div
@@ -221,7 +219,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               <h2
                 class="text-coreUI-text-secondary text-sm leading-5"
               >
-                Famous Roasters | Filter
+                WeBean | Filter
               </h2>
             </div>
             <div
@@ -1014,7 +1012,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                       <span
                         class="text-base leading-6"
                       >
-                        Famous Roasters
+                        WeBean
                       </span>
                     </div>
                   </div>
@@ -1472,7 +1470,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
         <span
           class="text-center text-base leading-6"
         >
-          © 2022 Famous Roasters. Alle Rechte vorbehalten
+          © 2022 WeBean. Alle Rechte vorbehalten
         </span>
         <br />
         <span
