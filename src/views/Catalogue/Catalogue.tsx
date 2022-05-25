@@ -112,8 +112,6 @@ export const Catalogue: React.FC = () => {
 
   useEffect(() => {
     document.title = `${t('brand.name')} | ${t('pages.catalogue.title')}`
-    const params = Object.fromEntries([...searchParams])
-    console.log('params', params)
   }, [])
 
   const {
@@ -177,12 +175,43 @@ export const Catalogue: React.FC = () => {
     }
   }
 
-  const filtersData = (): FilterData[] => [
-    { key: 'beanType', isOpen: false, filterType: 'enum', filterValues: getFilterValues('bean_type') },
-    { key: 'vendor', isOpen: false, filterType: 'enum', filterValues: getFilterValues('vendor') },
-    { key: 'origin', isOpen: false, filterType: 'enum', filterValues: getFilterValues('origin'), i18nValues: true },
-    { key: 'packageSize', isOpen: false, filterType: 'enum', filterValues: getFilterValues('package_size') },
-  ]
+  const filtersData = (): FilterData[] => {
+    const beanType = searchParams.get('beanType')
+    const vendor = searchParams.get('vendor')
+    const origin = searchParams.get('origin')
+    const packageSize = searchParams.get('packageSize')
+    return [
+      {
+        key: 'beanType',
+        isOpen: false,
+        filterType: 'enum',
+        filterValues: getFilterValues('bean_type'),
+        filterValuesSelected: beanType ? [beanType] : [],
+      },
+      {
+        key: 'vendor',
+        isOpen: false,
+        filterType: 'enum',
+        filterValues: getFilterValues('vendor'),
+        filterValuesSelected: vendor ? [vendor] : [],
+      },
+      {
+        key: 'origin',
+        isOpen: false,
+        filterType: 'enum',
+        filterValues: getFilterValues('origin'),
+        i18nValues: true,
+        filterValuesSelected: origin ? [origin] : [],
+      },
+      {
+        key: 'packageSize',
+        isOpen: false,
+        filterType: 'enum',
+        filterValues: getFilterValues('package_size'),
+        filterValuesSelected: packageSize ? [packageSize] : [],
+      },
+    ]
+  }
 
   useEffect(() => {
     setFilters(filtersData())
