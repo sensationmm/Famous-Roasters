@@ -85,7 +85,7 @@ export const Listbox: React.FC<ListboxProps> = ({
       </Typography>
     )
 
-  const renderOptionalAddOn = () => addOn && addOn
+  const renderOptionalAddOn = () => addOn !== undefined && addOn
 
   return (
     <div className="w-full relative" {...props}>
