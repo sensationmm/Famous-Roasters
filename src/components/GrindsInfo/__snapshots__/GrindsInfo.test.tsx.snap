@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GrindsInfo component Renders correctly 1`] = `
+<div>
+  <div
+    class="flex md:hidden"
+  >
+    <button
+      data-testid="drawer-trigger"
+    >
+      <span
+        class="flex text-coreUI-text-secondary underline mb-1 text-sm leading-5"
+      >
+        Mehr zu den Mahlgraden
+      </span>
+    </button>
+  </div>
+  <div
+    class="hidden md:flex"
+  >
+    <button
+      data-testid="dialog-trigger"
+    >
+      <span
+        class="flex text-coreUI-text-secondary underline mb-1 text-sm leading-5"
+      >
+        Mehr zu den Mahlgraden
+      </span>
+    </button>
+  </div>
+</div>
+`;

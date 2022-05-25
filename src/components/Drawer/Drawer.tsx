@@ -46,7 +46,7 @@ export const Drawer: React.FC<DialogProps> = ({ trigger, title, body, className 
             leaveTo="-translate-x-full"
           >
             <div className="relative w-full bg-white shadow-xl pb-12 flex flex-col overflow-y-auto">
-              <div className="px-5 pt-5 pb-5 flex justify-between">
+              <div className="px-5 mt-0.5 py-4 flex justify-between border-b border-coreUI-background-images">
                 <button
                   type="button"
                   className="-m-2 p-2 rounded-md inline-flex items-center justify-center text-gray-400"
@@ -59,7 +59,7 @@ export const Drawer: React.FC<DialogProps> = ({ trigger, title, body, className 
                 <Typography
                   type={TypographyType.Paragraph}
                   size={TypographySize.Large}
-                  className="text-coreUI-text-secondary"
+                  className="text-coreUI-text-secondary py-0.5"
                 >
                   {title}
                 </Typography>

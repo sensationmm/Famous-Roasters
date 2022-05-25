@@ -207,6 +207,30 @@
             "guide": {
               "title": "Mahlgraden Handbuch",
               "items": {
+                "aeropress": {
+                  "text": "Mittlere Körnung, etwas feiner als Sandkörner.",
+                  "title": "Aeropress"
+                },
+                "chemex": {
+                  "text": "Mittelgrob gemahlen. Ungefähr wie grober Sand.",
+                  "title": "Chemex"
+                },
+                "espresso": {
+                  "text": "Noch feiner gemahlen als Speisesalz.",
+                  "title": "Espresso"
+                },
+                "french": {
+                  "text": "Grob gemahlen, ähnlich wie Meersalz.",
+                  "title": "French Press"
+                },
+                "moka": {
+                  "text": "Mittelfeiner Mahlgrad für Mokkakannen.",
+                  "title": "Moka Pot"
+                },
+                "v60": {
+                  "text": "Mittelgrob gemahlen. Ungefähr wie grober Sand.",
+                  "title": "V60 / Kalita"
+                },
                 "whole": {
                   "text": "Kann als Ganzes oder gemahlen verwendet werden. Je nach dem was du lieber magst.",
                   "title": "Ganze Bohne"

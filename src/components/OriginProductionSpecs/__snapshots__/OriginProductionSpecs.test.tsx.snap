@@ -9,7 +9,7 @@ exports[`OriginProductionSpecs component Renders correctly 1`] = `
       class="flex"
     >
       <div
-        class="flex items-center"
+        class="flex items-start"
       >
         <div
           class="w-12 h-12 rounded-full bg-brand-grey-whisper flex items-center justify-center"
@@ -47,7 +47,7 @@ exports[`OriginProductionSpecs component Renders correctly 1`] = `
       class="flex"
     >
       <div
-        class="flex items-center"
+        class="flex items-start"
       >
         <div
           class="w-12 h-12 rounded-full bg-brand-grey-whisper flex items-center justify-center"
@@ -85,7 +85,7 @@ exports[`OriginProductionSpecs component Renders correctly 1`] = `
       class="flex"
     >
       <div
-        class="flex items-center"
+        class="flex items-start"
       >
         <div
           class="w-12 h-12 rounded-full bg-brand-grey-whisper flex items-center justify-center"
@@ -123,7 +123,7 @@ exports[`OriginProductionSpecs component Renders correctly 1`] = `
       class="flex"
     >
       <div
-        class="flex items-center"
+        class="flex items-start"
       >
         <div
           class="w-12 h-12 rounded-full bg-brand-grey-whisper flex items-center justify-center"
@@ -161,7 +161,7 @@ exports[`OriginProductionSpecs component Renders correctly 1`] = `
       class="flex"
     >
       <div
-        class="flex items-center"
+        class="flex items-start"
       >
         <div
           class="w-12 h-12 rounded-full bg-brand-grey-whisper flex items-center justify-center"
@@ -199,7 +199,7 @@ exports[`OriginProductionSpecs component Renders correctly 1`] = `
       class="flex"
     >
       <div
-        class="flex items-center"
+        class="flex items-start"
       >
         <div
           class="w-12 h-12 rounded-full bg-brand-grey-whisper flex items-center justify-center"
