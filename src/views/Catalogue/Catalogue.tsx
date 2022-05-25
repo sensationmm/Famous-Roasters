@@ -10,7 +10,7 @@ import {
 import { loader } from 'graphql.macro'
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import {
   ErrorPrompt,
   FilterData,
@@ -106,11 +106,14 @@ export const Catalogue: React.FC = () => {
   const [queryFilterParams, setQueryFilterParams] = useState<QueryFilterParams>()
   const [paginationParams, setPaginationParams] = useState<PaginationParams>(paginationParamsInitialValue)
   const [originMetaValues, setOriginMetaValues] = useState<string[]>([])
+  const [searchParams, setSearchParams] = useSearchParams()
   const GET_PRODUCTS = loader('src/graphql/queries/products.query.graphql')
   const GET_FILTER_ATTRIBUTES = loader('src/graphql/queries/filterAttributes.query.graphql')
 
   useEffect(() => {
     document.title = `${t('brand.name')} | ${t('pages.catalogue.title')}`
+    const params = Object.fromEntries([...searchParams])
+    console.log('params', params)
   }, [])
 
   const {
@@ -210,41 +213,58 @@ export const Catalogue: React.FC = () => {
 
   useEffect(() => {
     const queryFilter: object[] = []
+    const vendor: string[] = []
+    const beanType: string[] = []
+    const origin: string[] = []
+    const packageSize: string[] = []
     filters.map((filter) => {
       if (filter.filterValuesSelected) {
         switch (filter.key) {
           case 'vendor':
-            filter.filterValuesSelected.map((filterValue) => queryFilter.push({ productVendor: `${filterValue}` }))
+            filter.filterValuesSelected.map((filterValue) => {
+              vendor.push(filterValue)
+              queryFilter.push({ productVendor: `${filterValue}` })
+            })
             break
           case 'beanType':
-            filter.filterValuesSelected.map((filterValue) =>
+            filter.filterValuesSelected.map((filterValue) => {
+              beanType.push(filterValue)
               queryFilter.push({
                 productMetafield: { namespace: 'my_fields', key: 'bean_type', value: `${filterValue}` },
-              }),
-            )
+              })
+            })
             break
           case 'origin':
             filter.filterValuesSelected.map((filterValue) => {
               originMetaValues
                 .filter((origin) => origin.indexOf(filterValue) !== -1)
-                .map((fv) =>
+                .map((fv) => {
+                  origin.push(fv)
                   queryFilter.push({
                     productMetafield: { namespace: 'my_fields', key: 'origin', value: `${fv}` },
-                  }),
-                )
+                  })
+                })
             })
             break
           case 'packageSize':
-            filter.filterValuesSelected.map((filterValue) =>
+            filter.filterValuesSelected.map((filterValue) => {
+              packageSize.push(filterValue)
               queryFilter.push({
                 variantMetafield: { namespace: 'my_fields', key: 'package_size', value: `${filterValue}` },
-              }),
-            )
+              })
+            })
             break
         }
       }
     })
     queryFilter.length > 0 ? setQueryFilterParams({ queryFilter }) : setQueryFilterParams({ queryFilter: undefined })
+    const searchParams = {
+      ...(vendor.length > 0 && { vendor }),
+      ...(beanType.length > 0 && { beanType }),
+      ...(origin.length > 0 && { origin }),
+      ...(packageSize.length > 0 && { packageSize }),
+    }
+    setSearchParams(searchParams)
   }, [filters])
 
   useEffect(() => {
