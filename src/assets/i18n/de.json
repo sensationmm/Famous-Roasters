@@ -50,8 +50,8 @@
       "noItems": "Dein Warenkorb ist leer",
       "notification": {
         "add": {
-          "body": "Dein Kaffee wartet darauf, dass du deine Bestellung abschließt",
-          "heading": "In den Warenkorb hinzugefügt!"
+          "body": "Dein Kaffee wartet schon auf dich",
+          "heading": "Zum Warenkorb hinzugefügt"
         }
       },
       "subtotal": "Zwischensumme",
