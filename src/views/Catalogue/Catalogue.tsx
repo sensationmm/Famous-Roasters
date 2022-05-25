@@ -249,7 +249,7 @@ export const Catalogue: React.FC = () => {
 
   useEffect(() => {
     setPaginationParams(paginationParamsInitialValue)
-  }, [queryFilterParams])
+  }, [queryFilterParams, sortParams])
 
   const { loading, error, data } = useQuery<CollectionQuery>(GET_PRODUCTS, {
     variables: {
