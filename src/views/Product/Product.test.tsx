@@ -3,12 +3,18 @@ import { act, fireEvent, render, screen, waitFor } from '@testing-library/react'
 import React from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { MemoryRouter } from 'react-router-dom'
-import { CartAddLinesMock, CartMock, ProductMock, ProductMockError, ProductMockWithCustomMetadata } from 'src/_mocks'
+import {
+  CartAddLinesMock,
+  CartMock,
+  CatalogueMockSimilar,
+  ProductMock,
+  ProductMockError,
+  ProductMockWithCustomMetadata,
+} from 'src/_mocks'
 import { CartContext } from 'src/components'
+import { CartProvider, Navigation, NavigationTheme } from 'src/components'
 import { i18n } from 'src/config'
 
-import { CartProvider } from '../../components/CartProvider'
-import { Navigation, NavigationTheme } from '../../components/Navigation'
 import { Product } from '.'
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -30,7 +36,7 @@ describe('Product view', () => {
     const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
-        mocks={[ProductMockWithCustomMetadata]}
+        mocks={[ProductMockWithCustomMetadata, CatalogueMockSimilar]}
         addTypename={false}
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>

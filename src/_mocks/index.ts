@@ -12,6 +12,7 @@ import {
   CatalogueMockError,
   CatalogueMockMissingData,
   CatalogueMocks,
+  CatalogueMockSimilar,
   CatalogueMocksPagination,
   CatalogueMocksPaginationWrongBackwards,
   CatalogueMocksPaginationWrongForwards,
@@ -40,6 +41,7 @@ export { CatalogueMocksPaginationWrongBackwards as CatalogueMocksPaginationWrong
 export { CatalogueMocksPaginationWrongForwards as CatalogueMocksPaginationWrongForwards }
 export { CatalogueMockError as CatalogueMockError }
 export { CatalogueMockMissingData as CatalogueMockMissingData }
+export { CatalogueMockSimilar as CatalogueMockSimilar }
 export { ProductMock as ProductMock }
 export { ProductMockError as ProductMockError }
 export { ProductMockData as ProductMockData }
