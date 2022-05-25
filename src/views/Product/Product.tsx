@@ -16,6 +16,7 @@ import {
   CartContext,
   Disclosure,
   ErrorPrompt,
+  GrindsInfo,
   Layout,
   Listbox,
   ListBoxItem,
@@ -210,6 +211,7 @@ export const Product: React.FC = () => {
                   value={[{ name: variantSelected?.grind_type?.value }]}
                   onChange={(v) => v && updateVariantSelectedWithGrind(v)}
                   label={t('pages.product.transactional.options.grindType.label')}
+                  addOn={<GrindsInfo />}
                 />
               )}
             </div>

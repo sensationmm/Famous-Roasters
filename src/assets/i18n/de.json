@@ -50,8 +50,8 @@
       "noItems": "Dein Warenkorb ist leer",
       "notification": {
         "add": {
-          "body": "Dein Kaffee wartet darauf, dass du deine Bestellung abschließt",
-          "heading": "In den Warenkorb hinzugefügt!"
+          "body": "Dein Kaffee wartet schon auf dich",
+          "heading": "Zum Warenkorb hinzugefügt"
         }
       },
       "subtotal": "Zwischensumme",
@@ -202,7 +202,41 @@
         "cta": "In den Warenkorb",
         "options": {
           "grindType": {
-            "label": "Mahlgrad"
+            "label": "Mahlgrad",
+            "moreInfo": "Mehr zu den Mahlgraden",
+            "guide": {
+              "title": "Mahlgraden Handbuch",
+              "items": {
+                "aeropress": {
+                  "text": "Mittlere Körnung, etwas feiner als Sandkörner.",
+                  "title": "Aeropress"
+                },
+                "chemex": {
+                  "text": "Mittelgrob gemahlen. Ungefähr wie grober Sand.",
+                  "title": "Chemex"
+                },
+                "espresso": {
+                  "text": "Noch feiner gemahlen als Speisesalz.",
+                  "title": "Espresso"
+                },
+                "french": {
+                  "text": "Grob gemahlen, ähnlich wie Meersalz.",
+                  "title": "French Press"
+                },
+                "moka": {
+                  "text": "Mittelfeiner Mahlgrad für Mokkakannen.",
+                  "title": "Moka Pot"
+                },
+                "v60": {
+                  "text": "Mittelgrob gemahlen. Ungefähr wie grober Sand.",
+                  "title": "V60 / Kalita"
+                },
+                "whole": {
+                  "text": "Kann als Ganzes oder gemahlen verwendet werden. Je nach dem was du lieber magst.",
+                  "title": "Ganze Bohne"
+                }
+              }
+            }
           },
           "packageSize": {
             "label": "Größe/Menge"

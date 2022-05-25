@@ -17,6 +17,7 @@ interface ListboxProps {
   hasNoneItem?: boolean
   hasTranslatedValues?: boolean
   label?: string
+  addOn?: React.ReactNode
 }
 
 export const Listbox: React.FC<ListboxProps> = ({
@@ -28,6 +29,7 @@ export const Listbox: React.FC<ListboxProps> = ({
   hasNoneItem = false,
   hasTranslatedValues = true,
   label = undefined,
+  addOn = undefined,
   ...props
 }: ListboxProps) => {
   const noneItem: ListBoxItem = { name: 'none' }
@@ -83,12 +85,17 @@ export const Listbox: React.FC<ListboxProps> = ({
       </Typography>
     )
 
+  const renderOptionalAddOn = () => addOn !== undefined && addOn
+
   return (
     <div className="w-full relative" {...props}>
       <HUIListbox value={activeItems} onChange={onChangeHandler} multiple={multiple}>
         {({ open }) => (
           <>
-            {renderOptionalLabel()}
+            <div className="grid grid-cols-2 items-end">
+              <div>{renderOptionalLabel()}</div>
+              <div className="justify-self-end">{renderOptionalAddOn()}</div>
+            </div>
             <HUIListbox.Button
               className="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
               data-testid="button-listbox"

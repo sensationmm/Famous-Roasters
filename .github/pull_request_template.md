@@ -5,7 +5,7 @@
 
 ## Ticket(s)
 <!--- Link to the ticket(s) -->
-[title](https://famousroasters.atlassian.net/browse/FR-...)
+[title](https://famousroasters.atlassian.net/browse/WB-...)
 
 ## Screenshots
 <!--- Insert screenshots if suitable (i.e. UI changes) -->

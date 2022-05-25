@@ -10,6 +10,7 @@ import { ErrorPrompt } from './ErrorPrompt'
 import { FilterData, FilterMobile } from './FilterMobile'
 import { FiltersMenuMobile } from './FiltersMenuMobile'
 import { Footer } from './Footer'
+import { GrindsInfo } from './GrindsInfo'
 import { Icon, IconName, IconSize } from './Icon'
 import { Input, InputMode } from './Input'
 import { Layout } from './Layout'
@@ -41,6 +42,7 @@ export type { FilterData as FilterData }
 export { FilterMobile as FilterMobile }
 export { FiltersMenuMobile as FiltersMenuMobile }
 export { Footer as Footer }
+export { GrindsInfo as GrindsInfo }
 export { Icon as Icon }
 export { IconName as IconName }
 export { IconSize as IconSize }

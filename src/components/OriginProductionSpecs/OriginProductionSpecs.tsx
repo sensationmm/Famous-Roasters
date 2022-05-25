@@ -33,7 +33,7 @@ export const OriginProductionSpecs: React.FC<OriginProductionSpecsProps> = ({
   const renderOriginProductionSpecs = (key: string, iconName: IconName, value: string) => {
     return (
       <div className="flex">
-        <div className="flex items-center">
+        <div className="flex items-start">
           <div className="w-12 h-12 rounded-full bg-brand-grey-whisper flex items-center justify-center">
             <Icon name={iconName} size={IconSize.md} />
           </div>
