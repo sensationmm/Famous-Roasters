@@ -266,6 +266,38 @@ export const CatalogueMocks = [
   CatalogueMock5,
   CatalogueMock6,
 ]
+
+export const CatalogueMockSimilar = {
+  request: {
+    query: GET_PRODUCTS,
+    variables: {
+      first: 3,
+      last: null,
+      before: null,
+      after: null,
+      sortKey: undefined,
+      reverse: undefined,
+      filters: { productMetafield: { namespace: 'my_fields', key: 'aroma', value: 'experimentell & komplex' } },
+    },
+  },
+  result: {
+    data: {
+      collection: {
+        id: 'abcdef',
+        products: {
+          nodes: [...ProductNodes],
+          pageInfo: {
+            hasNextPage: true,
+            hasPreviousPage: false,
+            startCursor: '1',
+            endCursor: '2',
+          },
+        },
+      },
+    },
+  },
+}
+
 export const CatalogueMocksPagination = [CatalogueMock6, CatalogueMock7, CatalogueMock8]
 
 export const CatalogueMocksPaginationWrongForwards = [CatalogueMock9, CatalogueMock10, CatalogueMock11]

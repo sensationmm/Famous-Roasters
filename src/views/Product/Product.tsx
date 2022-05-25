@@ -32,6 +32,8 @@ import {
 } from 'src/components'
 import { formatPrice, getAPIProductId, parseHtmlSafely } from 'src/utils'
 
+import { FindSimilar } from './FindSimilar'
+
 interface ProductMeta {
   value: string
 }
@@ -333,6 +335,10 @@ export const Product: React.FC = () => {
   )
 
   const renderProductCollapsableBlocks = () => {
+    // all blocks - disabled as no real content yet
+    // const blocksData = [{ key: 'getToKnow' }, { key: 'meetTheRoaster' }, { key: 'learnToBrew' }, { key: 'findSimilar' }]
+    const blocksData = [{ key: 'getToKnow' }, { key: 'findSimilar' }]
+
     const placeHolderText = (
       <>
         <Typography as="p" className="mb-2">
@@ -350,7 +356,16 @@ export const Product: React.FC = () => {
       </>
     )
 
-    const blocksData = [{ key: 'getToKnow' }, { key: 'meetTheRoaster' }, { key: 'learnToBrew' }, { key: 'findSimilar' }]
+    const renderProductBlockContent = (key: string) => {
+      switch (key) {
+        case 'getToKnow':
+          return renderProductBlockContentGetToKnow()
+        case 'findSimilar':
+          return aroma ? <FindSimilar aroma={aroma.value} /> : null
+        default:
+          return placeHolderText
+      }
+    }
 
     return (
       <div className="mt-6">
@@ -363,8 +378,9 @@ export const Product: React.FC = () => {
                 {t(`pages.product.sections.${blockData.key}.title`)}
               </Typography>
             }
-            defaultOpen={blockData.key === 'getToKnow'}
-            panelChildren={blockData.key === 'getToKnow' ? renderProductBlockContentGetToKnow() : placeHolderText}
+            defaultOpen={blockData.key === 'getToKnow' || blockData.key === 'findSimilar'}
+            canToggle={blockData.key !== 'findSimilar'}
+            panelChildren={renderProductBlockContent(blockData.key)}
           />
         ))}
       </div>
