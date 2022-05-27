@@ -176,24 +176,24 @@ export const Catalogue: React.FC = () => {
   }
 
   const filtersData = (): FilterData[] => {
-    const beanType = searchParams.get('beanType')
-    const vendor = searchParams.get('vendor')
-    const origin = searchParams.get('origin')
-    const packageSize = searchParams.get('packageSize')
+    const beanType = searchParams.get('beanType')?.split('|')
+    const vendor = searchParams.get('vendor')?.split('|')
+    const origin = searchParams.get('origin')?.split('|')
+    const packageSize = searchParams.get('packageSize')?.split('|')
     return [
       {
         key: 'beanType',
         isOpen: false,
         filterType: 'enum',
         filterValues: getFilterValues('bean_type'),
-        filterValuesSelected: beanType ? [beanType] : [],
+        filterValuesSelected: beanType ? beanType : [],
       },
       {
         key: 'vendor',
         isOpen: false,
         filterType: 'enum',
         filterValues: getFilterValues('vendor'),
-        filterValuesSelected: vendor ? [vendor] : [],
+        filterValuesSelected: vendor ? vendor : [],
       },
       {
         key: 'origin',
@@ -201,14 +201,14 @@ export const Catalogue: React.FC = () => {
         filterType: 'enum',
         filterValues: getFilterValues('origin'),
         i18nValues: true,
-        filterValuesSelected: origin ? [origin] : [],
+        filterValuesSelected: origin ? origin : [],
       },
       {
         key: 'packageSize',
         isOpen: false,
         filterType: 'enum',
         filterValues: getFilterValues('package_size'),
-        filterValuesSelected: packageSize ? [packageSize] : [],
+        filterValuesSelected: packageSize ? packageSize : [],
       },
     ]
   }
@@ -265,10 +265,10 @@ export const Catalogue: React.FC = () => {
             break
           case 'origin':
             filter.filterValuesSelected.map((filterValue) => {
+              origin.push(filterValue)
               originMetaValues
                 .filter((origin) => origin.indexOf(filterValue) !== -1)
                 .map((fv) => {
-                  origin.push(fv)
                   queryFilter.push({
                     productMetafield: { namespace: 'my_fields', key: 'origin', value: `${fv}` },
                   })
@@ -287,11 +287,12 @@ export const Catalogue: React.FC = () => {
       }
     })
     queryFilter.length > 0 ? setQueryFilterParams({ queryFilter }) : setQueryFilterParams({ queryFilter: undefined })
+
     const searchParams = {
-      ...(vendor.length > 0 && { vendor }),
-      ...(beanType.length > 0 && { beanType }),
-      ...(origin.length > 0 && { origin }),
-      ...(packageSize.length > 0 && { packageSize }),
+      ...(vendor.length > 0 && { vendor: vendor.join('|') }),
+      ...(beanType.length > 0 && { beanType: beanType.join('|') }),
+      ...(origin.length > 0 && { origin: origin.join('|') }),
+      ...(packageSize.length > 0 && { packageSize: packageSize.join('|') }),
     }
     setSearchParams(searchParams)
   }, [filters])
