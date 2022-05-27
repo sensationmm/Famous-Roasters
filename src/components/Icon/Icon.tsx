@@ -81,7 +81,7 @@ const iconsFillMap: { [name: string]: string } = {
   Aeropress: '#212121',
   Altitude: '#212121',
   BeanFill: '#212121',
-  BeanOutline: '#212121',
+  BeanOutline: 'none',
   Chemex: '#212121',
   Espresso: '#212121',
   FrenchPress: '#212121',

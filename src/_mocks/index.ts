@@ -12,10 +12,9 @@ import {
   CatalogueMockError,
   CatalogueMockMissingData,
   CatalogueMocks,
+  CatalogueMocksFilters,
   CatalogueMockSimilar,
   CatalogueMocksPagination,
-  CatalogueMocksPaginationWrongBackwards,
-  CatalogueMocksPaginationWrongForwards,
 } from './CatalogueMock'
 import { FilterAttributesMock, FilterAttributesMockError } from './FilterAttributesMock'
 import {
@@ -36,9 +35,8 @@ export { CartMock as CartMock }
 export { CartMockData as CartMockData }
 export { CartMockError as CartMockError }
 export { CatalogueMocks as CatalogueMocks }
+export { CatalogueMocksFilters as CatalogueMocksFilters }
 export { CatalogueMocksPagination as CatalogueMocksPagination }
-export { CatalogueMocksPaginationWrongBackwards as CatalogueMocksPaginationWrongBackwards }
-export { CatalogueMocksPaginationWrongForwards as CatalogueMocksPaginationWrongForwards }
 export { CatalogueMockError as CatalogueMockError }
 export { CatalogueMockMissingData as CatalogueMockMissingData }
 export { CatalogueMockSimilar as CatalogueMockSimilar }

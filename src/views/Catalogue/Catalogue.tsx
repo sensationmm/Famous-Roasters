@@ -313,10 +313,6 @@ export const Catalogue: React.FC = () => {
       })
   }, [])
 
-  if (filterAttributesError) {
-    return <ErrorPrompt promptAction={() => history.go(0)} />
-  }
-
   useEffect(() => {
     if (sortValue && sortValue[0]?.name) {
       switch (sortValue[0].name) {
@@ -390,8 +386,8 @@ export const Catalogue: React.FC = () => {
           last: paginationParams?.last,
           before: paginationParams?.before,
           after: paginationParams?.after,
-          ...(sortKey && { sortKey }),
-          ...(reverseParam && reverseParam == '1' ? { reverse: true } : { reverse: false }),
+          sortKey: sortKey ? sortKey : undefined,
+          reverse: reverseParam && reverseParam == '1' ? true : undefined,
           filters: queryFilterParams?.queryFilter,
         },
       }).catch((err) => {
@@ -399,6 +395,10 @@ export const Catalogue: React.FC = () => {
       })
     }
   }, [searchParams, queryFilterParams, paginationParams])
+
+  if (filterAttributesError) {
+    return <ErrorPrompt promptAction={() => history.go(0)} />
+  }
 
   const productNodes = data?.collection?.products.nodes
   const pageInfo = data?.collection?.products.pageInfo || {

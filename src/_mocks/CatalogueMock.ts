@@ -54,7 +54,7 @@ const CatalogueMock2 = {
       before: null,
       after: null,
       sortKey: 'PRICE',
-      reverse: false,
+      reverse: undefined,
       filters: undefined,
     },
   },
@@ -86,7 +86,7 @@ const CatalogueMock4 = {
       before: null,
       after: null,
       sortKey: 'CREATED',
-      reverse: false,
+      reverse: undefined,
       filters: undefined,
     },
   },
@@ -102,7 +102,7 @@ const CatalogueMock5 = {
       before: null,
       after: null,
       sortKey: 'BEST_SELLING',
-      reverse: false,
+      reverse: undefined,
       filters: undefined,
     },
   },
@@ -124,6 +124,7 @@ const CatalogueMock6 = {
   result: {
     data: {
       collection: {
+        id: 'abcdef',
         products: {
           nodes: [...ProductNodes],
           pageInfo: {
@@ -154,6 +155,7 @@ const CatalogueMock7 = {
   result: {
     data: {
       collection: {
+        id: 'abcdef',
         products: {
           nodes: [...ProductNodes],
           pageInfo: {
@@ -184,6 +186,7 @@ const CatalogueMock8 = {
   result: {
     data: {
       collection: {
+        id: 'abcdef',
         products: {
           nodes: [...ProductNodes],
           pageInfo: {
@@ -191,66 +194,6 @@ const CatalogueMock8 = {
             hasPreviousPage: false,
             startCursor: '1',
             endCursor: '2',
-          },
-        },
-      },
-    },
-  },
-}
-
-const CatalogueMock9 = {
-  ...CatalogueMock6,
-  result: {
-    ...CatalogueMock6.result,
-    data: {
-      collection: {
-        products: {
-          ...CatalogueMock6.result.data.collection.products,
-          pageInfo: {
-            hasNextPage: true,
-            hasPreviousPage: false,
-            startCursor: null,
-            endCursor: null,
-          },
-        },
-      },
-    },
-  },
-}
-
-const CatalogueMock10 = {
-  ...CatalogueMock7,
-  result: {
-    ...CatalogueMock7.result,
-    data: {
-      collection: {
-        products: {
-          ...CatalogueMock7.result.data.collection.products,
-          pageInfo: {
-            hasNextPage: false,
-            hasPreviousPage: true,
-            startCursor: null,
-            endCursor: null,
-          },
-        },
-      },
-    },
-  },
-}
-
-const CatalogueMock11 = {
-  ...CatalogueMock8,
-  result: {
-    ...CatalogueMock8.result,
-    data: {
-      collection: {
-        products: {
-          ...CatalogueMock8.result.data.collection.products,
-          pageInfo: {
-            hasNextPage: true,
-            hasPreviousPage: false,
-            startCursor: null,
-            endCursor: null,
           },
         },
       },
@@ -298,11 +241,170 @@ export const CatalogueMockSimilar = {
   },
 }
 
+export const CatalogueMockFilter1 = {
+  request: {
+    query: GET_PRODUCTS,
+    variables: {
+      first: 6,
+      last: null,
+      before: null,
+      after: null,
+      sortKey: undefined,
+      reverse: undefined,
+      filters: [{ productMetafield: { namespace: 'my_fields', key: 'bean_type', value: 'Arabica' } }],
+    },
+  },
+  result: {
+    data: {
+      collection: {
+        id: 'abcdef',
+        products: {
+          nodes: [...ProductNodes],
+          pageInfo: {
+            hasNextPage: true,
+            hasPreviousPage: false,
+            startCursor: '1',
+            endCursor: '2',
+          },
+        },
+      },
+    },
+  },
+}
+
+export const CatalogueMockFilter2 = {
+  request: {
+    query: GET_PRODUCTS,
+    variables: {
+      first: 6,
+      last: null,
+      before: null,
+      after: null,
+      sortKey: undefined,
+      reverse: undefined,
+      filters: [{ productVendor: 'Cycle Roasters' }, { productVendor: 'WeBean' }],
+    },
+  },
+  result: {
+    data: {
+      collection: {
+        id: 'abcdef',
+        products: {
+          nodes: [...ProductNodes],
+          pageInfo: {
+            hasNextPage: true,
+            hasPreviousPage: false,
+            startCursor: '1',
+            endCursor: '2',
+          },
+        },
+      },
+    },
+  },
+}
+
+export const CatalogueMockFilter3 = {
+  request: {
+    query: GET_PRODUCTS,
+    variables: {
+      first: 6,
+      last: null,
+      before: null,
+      after: null,
+      sortKey: undefined,
+      reverse: undefined,
+      filters: [{ productMetafield: { namespace: 'my_fields', key: 'origin', value: 'BR,CO' } }],
+    },
+  },
+  result: {
+    data: {
+      collection: {
+        id: 'abcdef',
+        products: {
+          nodes: [...ProductNodes],
+          pageInfo: {
+            hasNextPage: true,
+            hasPreviousPage: false,
+            startCursor: '1',
+            endCursor: '2',
+          },
+        },
+      },
+    },
+  },
+}
+
+export const CatalogueMockFilter4 = {
+  request: {
+    query: GET_PRODUCTS,
+    variables: {
+      first: 6,
+      last: null,
+      before: null,
+      after: null,
+      sortKey: undefined,
+      reverse: undefined,
+      filters: [{ variantMetafield: { namespace: 'my_fields', key: 'package_size', value: '250g' } }],
+    },
+  },
+  result: {
+    data: {
+      collection: {
+        id: 'abcdef',
+        products: {
+          nodes: [...ProductNodes],
+          pageInfo: {
+            hasNextPage: true,
+            hasPreviousPage: false,
+            startCursor: '1',
+            endCursor: '2',
+          },
+        },
+      },
+    },
+  },
+}
+
+export const CatalogueMockFilter5 = {
+  request: {
+    query: GET_PRODUCTS,
+    variables: {
+      first: 6,
+      last: null,
+      before: null,
+      after: null,
+      sortKey: undefined,
+      reverse: undefined,
+      filters: [{ productVendor: 'Cycle Roasters' }],
+    },
+  },
+  result: {
+    data: {
+      collection: {
+        id: 'abcdef',
+        products: {
+          nodes: [...ProductNodes],
+          pageInfo: {
+            hasNextPage: true,
+            hasPreviousPage: false,
+            startCursor: '1',
+            endCursor: '2',
+          },
+        },
+      },
+    },
+  },
+}
+
+export const CatalogueMocksFilters = [
+  CatalogueMockFilter1,
+  CatalogueMockFilter2,
+  CatalogueMockFilter3,
+  CatalogueMockFilter4,
+  CatalogueMockFilter5,
+]
+
 export const CatalogueMocksPagination = [CatalogueMock6, CatalogueMock7, CatalogueMock8]
-
-export const CatalogueMocksPaginationWrongForwards = [CatalogueMock9, CatalogueMock10, CatalogueMock11]
-
-export const CatalogueMocksPaginationWrongBackwards = [CatalogueMock6, CatalogueMock10, CatalogueMock11]
 
 export const CatalogueMockError = {
   request: {
