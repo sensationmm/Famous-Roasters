@@ -214,7 +214,7 @@ export const CatalogueMockSimilar = {
   request: {
     query: GET_PRODUCTS,
     variables: {
-      first: 3,
+      first: 4,
       last: null,
       before: null,
       after: null,
@@ -242,8 +242,9 @@ export const CatalogueMockSimilar = {
 }
 
 export const CatalogueMockFilter1 = {
+  ...CatalogueMock1,
   request: {
-    query: GET_PRODUCTS,
+    ...CatalogueMock1.request,
     variables: {
       first: 6,
       last: null,
@@ -254,27 +255,12 @@ export const CatalogueMockFilter1 = {
       filters: [{ productMetafield: { namespace: 'my_fields', key: 'bean_type', value: 'Arabica' } }],
     },
   },
-  result: {
-    data: {
-      collection: {
-        id: 'abcdef',
-        products: {
-          nodes: [...ProductNodes],
-          pageInfo: {
-            hasNextPage: true,
-            hasPreviousPage: false,
-            startCursor: '1',
-            endCursor: '2',
-          },
-        },
-      },
-    },
-  },
 }
 
 export const CatalogueMockFilter2 = {
+  ...CatalogueMock1,
   request: {
-    query: GET_PRODUCTS,
+    ...CatalogueMock1.request,
     variables: {
       first: 6,
       last: null,
@@ -285,27 +271,12 @@ export const CatalogueMockFilter2 = {
       filters: [{ productVendor: 'Cycle Roasters' }, { productVendor: 'WeBean' }],
     },
   },
-  result: {
-    data: {
-      collection: {
-        id: 'abcdef',
-        products: {
-          nodes: [...ProductNodes],
-          pageInfo: {
-            hasNextPage: true,
-            hasPreviousPage: false,
-            startCursor: '1',
-            endCursor: '2',
-          },
-        },
-      },
-    },
-  },
 }
 
 export const CatalogueMockFilter3 = {
+  ...CatalogueMock1,
   request: {
-    query: GET_PRODUCTS,
+    ...CatalogueMock1.request,
     variables: {
       first: 6,
       last: null,
@@ -316,27 +287,12 @@ export const CatalogueMockFilter3 = {
       filters: [{ productMetafield: { namespace: 'my_fields', key: 'origin', value: 'BR,CO' } }],
     },
   },
-  result: {
-    data: {
-      collection: {
-        id: 'abcdef',
-        products: {
-          nodes: [...ProductNodes],
-          pageInfo: {
-            hasNextPage: true,
-            hasPreviousPage: false,
-            startCursor: '1',
-            endCursor: '2',
-          },
-        },
-      },
-    },
-  },
 }
 
 export const CatalogueMockFilter4 = {
+  ...CatalogueMock1,
   request: {
-    query: GET_PRODUCTS,
+    ...CatalogueMock1.request,
     variables: {
       first: 6,
       last: null,
@@ -347,27 +303,12 @@ export const CatalogueMockFilter4 = {
       filters: [{ variantMetafield: { namespace: 'my_fields', key: 'package_size', value: '250g' } }],
     },
   },
-  result: {
-    data: {
-      collection: {
-        id: 'abcdef',
-        products: {
-          nodes: [...ProductNodes],
-          pageInfo: {
-            hasNextPage: true,
-            hasPreviousPage: false,
-            startCursor: '1',
-            endCursor: '2',
-          },
-        },
-      },
-    },
-  },
 }
 
 export const CatalogueMockFilter5 = {
+  ...CatalogueMock1,
   request: {
-    query: GET_PRODUCTS,
+    ...CatalogueMock1.request,
     variables: {
       first: 6,
       last: null,
@@ -376,22 +317,6 @@ export const CatalogueMockFilter5 = {
       sortKey: undefined,
       reverse: undefined,
       filters: [{ productVendor: 'Cycle Roasters' }],
-    },
-  },
-  result: {
-    data: {
-      collection: {
-        id: 'abcdef',
-        products: {
-          nodes: [...ProductNodes],
-          pageInfo: {
-            hasNextPage: true,
-            hasPreviousPage: false,
-            startCursor: '1',
-            endCursor: '2',
-          },
-        },
-      },
     },
   },
 }

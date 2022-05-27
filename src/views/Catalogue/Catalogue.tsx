@@ -115,12 +115,12 @@ export const Catalogue: React.FC = () => {
     { loading: filterAttributesLoading, error: filterAttributesError, data: filterAttributesData },
   ] = useLazyQuery<Collection>(GET_FILTER_ATTRIBUTES)
 
-  const getFilterValues = (filtersData: Collection, key: string) => {
+  const getFilterValues = (fData: Collection, key: string) => {
     switch (key) {
       case 'vendor':
         return Array.from(
           new Set(
-            filtersData?.products.nodes
+            fData.products.nodes
               // eslint-disable-next-line @typescript-eslint/ban-ts-comment
               // @ts-ignore
               .map((productNode) => productNode.vendor)
@@ -132,7 +132,7 @@ export const Catalogue: React.FC = () => {
       case 'origin': {
         const originMapping = Array.from(
           new Set(
-            filtersData?.products.nodes
+            fData.products.nodes
               // eslint-disable-next-line @typescript-eslint/ban-ts-comment
               // @ts-ignore
               .map((productNode) => productNode['origin']?.value.replace(', ', ','))
@@ -147,7 +147,7 @@ export const Catalogue: React.FC = () => {
       case 'bean_type':
         return Array.from(
           new Set(
-            filtersData?.products.nodes
+            fData.products.nodes
               // eslint-disable-next-line @typescript-eslint/ban-ts-comment
               // @ts-ignore
               .map((productNode) => productNode['bean_type']?.value)
@@ -159,7 +159,7 @@ export const Catalogue: React.FC = () => {
       case 'package_size':
         return Array.from(
           new Set(
-            filtersData?.products.nodes
+            fData.products.nodes
               // eslint-disable-next-line @typescript-eslint/ban-ts-comment
               // @ts-ignore
               .map((productNode) => productNode.variants.nodes.map((variantNode) => variantNode['package_size'].value))
@@ -315,57 +315,46 @@ export const Catalogue: React.FC = () => {
 
   useEffect(() => {
     if (sortValue && sortValue[0]?.name) {
+      const currentSearchParams = Object.fromEntries(searchParams)
+      let updatedSearchParams: URLSearchParamsInit = {}
       switch (sortValue[0].name) {
         case 'priceAsc': {
           setSortParams({ sortKey: 'PRICE', reverse: false })
-          const updatedSearchParams: URLSearchParamsInit = {
+          updatedSearchParams = {
             ...Object.fromEntries([...searchParams]),
             sortKey: 'PRICE',
           }
           delete updatedSearchParams.reverse
-          const currentSearchParams = Object.fromEntries(searchParams)
-          if (JSON.stringify(updatedSearchParams) !== JSON.stringify(currentSearchParams)) {
-            setSearchParams(updatedSearchParams)
-          }
           break
         }
         case 'priceDesc': {
           setSortParams({ sortKey: 'PRICE', reverse: true })
-          const updatedSearchParams: URLSearchParamsInit = {
+          updatedSearchParams = {
             ...Object.fromEntries([...searchParams]),
             sortKey: 'PRICE',
             reverse: '1',
-          }
-          const currentSearchParams = Object.fromEntries(searchParams)
-          if (JSON.stringify(updatedSearchParams) !== JSON.stringify(currentSearchParams)) {
-            setSearchParams(updatedSearchParams)
           }
           break
         }
         case 'newDesc': {
           setSortParams({ sortKey: 'CREATED', reverse: false })
-          const updatedSearchParams: URLSearchParamsInit = {
+          updatedSearchParams = {
             ...Object.fromEntries([...searchParams]),
             sortKey: 'CREATED',
           }
           delete updatedSearchParams.reverse
-          const currentSearchParams = Object.fromEntries(searchParams)
-          if (JSON.stringify(updatedSearchParams) !== JSON.stringify(currentSearchParams)) {
-            setSearchParams(updatedSearchParams)
-          }
           break
         }
         default: {
           setSortParams({ sortKey: 'BEST_SELLING', reverse: false })
-          const updatedSearchParams: URLSearchParamsInit = { ...Object.fromEntries([...searchParams]) }
+          updatedSearchParams = { ...Object.fromEntries([...searchParams]) }
           delete updatedSearchParams.sortKey
           delete updatedSearchParams.reverse
-          const currentSearchParams = Object.fromEntries(searchParams)
-          if (JSON.stringify(updatedSearchParams) !== JSON.stringify(currentSearchParams)) {
-            setSearchParams(updatedSearchParams)
-          }
           break
         }
+      }
+      if (JSON.stringify(updatedSearchParams) !== JSON.stringify(currentSearchParams)) {
+        setSearchParams(updatedSearchParams)
       }
     }
   }, [sortValue])

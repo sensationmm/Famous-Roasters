@@ -32,7 +32,25 @@ describe('Find similar partial view', () => {
       >
         <I18nextProvider i18n={i18n}>
           <MemoryRouter initialEntries={['/product/7655228866776']}>
-            <FindSimilar aroma="experimentell & komplex" />
+            <FindSimilar aroma="experimentell & komplex" productId="7655228866776" />
+          </MemoryRouter>
+        </I18nextProvider>
+      </MockedProvider>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 500)))
+    expect(container).toMatchSnapshot()
+  })
+
+  it('Renders correctly for a successful call not excluding', async () => {
+    const { container } = render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
+        mocks={[CatalogueMockSimilar]}
+        addTypename={false}
+      >
+        <I18nextProvider i18n={i18n}>
+          <MemoryRouter initialEntries={['/product/7655228866776']}>
+            <FindSimilar aroma="experimentell & komplex" productId="12345678" />
           </MemoryRouter>
         </I18nextProvider>
       </MockedProvider>,

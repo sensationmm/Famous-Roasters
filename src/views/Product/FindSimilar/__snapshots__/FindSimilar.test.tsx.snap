@@ -4,6 +4,14 @@ exports[`Find similar partial view Renders correctly for a successful call 1`] =
 <div>
   <div
     class="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
+  />
+</div>
+`;
+
+exports[`Find similar partial view Renders correctly for a successful call not excluding 1`] = `
+<div>
+  <div
+    class="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
   >
     <a
       href="/product/7655228866776"
