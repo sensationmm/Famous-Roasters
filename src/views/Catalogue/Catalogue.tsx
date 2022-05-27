@@ -115,12 +115,12 @@ export const Catalogue: React.FC = () => {
     { loading: filterAttributesLoading, error: filterAttributesError, data: filterAttributesData },
   ] = useLazyQuery<Collection>(GET_FILTER_ATTRIBUTES)
 
-  const getFilterValues = (filterAttributesData: Collection, key: string) => {
+  const getFilterValues = (filtersData: Collection, key: string) => {
     switch (key) {
       case 'vendor':
         return Array.from(
           new Set(
-            filterAttributesData?.products.nodes
+            filtersData?.products.nodes
               // eslint-disable-next-line @typescript-eslint/ban-ts-comment
               // @ts-ignore
               .map((productNode) => productNode.vendor)
@@ -132,7 +132,7 @@ export const Catalogue: React.FC = () => {
       case 'origin': {
         const originMapping = Array.from(
           new Set(
-            filterAttributesData?.products.nodes
+            filtersData?.products.nodes
               // eslint-disable-next-line @typescript-eslint/ban-ts-comment
               // @ts-ignore
               .map((productNode) => productNode['origin']?.value.replace(', ', ','))
@@ -147,7 +147,7 @@ export const Catalogue: React.FC = () => {
       case 'bean_type':
         return Array.from(
           new Set(
-            filterAttributesData?.products.nodes
+            filtersData?.products.nodes
               // eslint-disable-next-line @typescript-eslint/ban-ts-comment
               // @ts-ignore
               .map((productNode) => productNode['bean_type']?.value)
@@ -159,7 +159,7 @@ export const Catalogue: React.FC = () => {
       case 'package_size':
         return Array.from(
           new Set(
-            filterAttributesData?.products.nodes
+            filtersData?.products.nodes
               // eslint-disable-next-line @typescript-eslint/ban-ts-comment
               // @ts-ignore
               .map((productNode) => productNode.variants.nodes.map((variantNode) => variantNode['package_size'].value))
@@ -170,7 +170,7 @@ export const Catalogue: React.FC = () => {
     }
   }
 
-  const filtersData = (data: Collection): FilterData[] => {
+  const filtersData = (filterInput: Collection): FilterData[] => {
     const beanType = searchParams.get('beanType')?.split('|')
     const vendor = searchParams.get('vendor')?.split('|')
     const origin = searchParams.get('origin')?.split('|')
@@ -180,21 +180,21 @@ export const Catalogue: React.FC = () => {
         key: 'beanType',
         isOpen: false,
         filterType: 'enum',
-        filterValues: getFilterValues(data, 'bean_type'),
+        filterValues: getFilterValues(filterInput, 'bean_type'),
         filterValuesSelected: beanType ? beanType : [],
       },
       {
         key: 'vendor',
         isOpen: false,
         filterType: 'enum',
-        filterValues: getFilterValues(data, 'vendor'),
+        filterValues: getFilterValues(filterInput, 'vendor'),
         filterValuesSelected: vendor ? vendor : [],
       },
       {
         key: 'origin',
         isOpen: false,
         filterType: 'enum',
-        filterValues: getFilterValues(data, 'origin'),
+        filterValues: getFilterValues(filterInput, 'origin'),
         i18nValues: true,
         filterValuesSelected: origin ? origin : [],
       },
@@ -202,18 +202,18 @@ export const Catalogue: React.FC = () => {
         key: 'packageSize',
         isOpen: false,
         filterType: 'enum',
-        filterValues: getFilterValues(data, 'package_size'),
+        filterValues: getFilterValues(filterInput, 'package_size'),
         filterValuesSelected: packageSize ? packageSize : [],
       },
     ]
   }
 
-  const sortParamsToListBoxItem = (sortParams: SortParams): ListBoxItem[] | undefined => {
-    switch (sortParams.sortKey) {
+  const sortParamsToListBoxItem = (sortParamsValue: SortParams): ListBoxItem[] | undefined => {
+    switch (sortParamsValue.sortKey) {
       case 'PRICE':
         return [
           {
-            name: sortParams.reverse ? 'priceDesc' : 'priceAsc',
+            name: sortParamsValue.reverse ? 'priceDesc' : 'priceAsc',
           },
         ]
       case 'CREATED':
@@ -233,17 +233,17 @@ export const Catalogue: React.FC = () => {
     const beanType: string[] = []
     const origin: string[] = []
     const packageSize: string[] = []
-    f.map((filter) => {
+    f.forEach((filter) => {
       if (filter.filterValuesSelected) {
         switch (filter.key) {
           case 'vendor':
-            filter.filterValuesSelected.map((filterValue) => {
+            filter.filterValuesSelected.forEach((filterValue) => {
               vendor.push(filterValue)
               queryFilter.push({ productVendor: `${filterValue}` })
             })
             break
           case 'beanType':
-            filter.filterValuesSelected.map((filterValue) => {
+            filter.filterValuesSelected.forEach((filterValue) => {
               beanType.push(filterValue)
               queryFilter.push({
                 productMetafield: { namespace: 'my_fields', key: 'bean_type', value: `${filterValue}` },
@@ -251,10 +251,10 @@ export const Catalogue: React.FC = () => {
             })
             break
           case 'origin':
-            filter.filterValuesSelected.map((filterValue) => {
+            filter.filterValuesSelected.forEach((filterValue) => {
               origin.push(filterValue)
               originMetaValues
-                .filter((origin) => origin.indexOf(filterValue) !== -1)
+                .filter((x) => x.indexOf(filterValue) !== -1)
                 .map((fv) => {
                   queryFilter.push({
                     productMetafield: { namespace: 'my_fields', key: 'origin', value: `${fv}` },
@@ -263,7 +263,7 @@ export const Catalogue: React.FC = () => {
             })
             break
           case 'packageSize':
-            filter.filterValuesSelected.map((filterValue) => {
+            filter.filterValuesSelected.forEach((filterValue) => {
               packageSize.push(filterValue)
               queryFilter.push({
                 variantMetafield: { namespace: 'my_fields', key: 'package_size', value: `${filterValue}` },
