@@ -2,7 +2,7 @@ import { MockedProvider } from '@apollo/client/testing'
 import { act, fireEvent, render, screen, waitFor } from '@testing-library/react'
 import React from 'react'
 import { I18nextProvider } from 'react-i18next'
-import { MemoryRouter, useSearchParams } from 'react-router-dom'
+import { MemoryRouter } from 'react-router-dom'
 import {
   CatalogueMockError,
   CatalogueMocks,

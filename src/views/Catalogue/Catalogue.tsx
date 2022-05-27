@@ -8,7 +8,7 @@ import {
   Scalars,
 } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, URLSearchParamsInit, useSearchParams } from 'react-router-dom'
 import {
@@ -81,6 +81,16 @@ interface QueryFilterParams {
   queryFilter: object[] | undefined
 }
 
+interface QueryProductsVariables {
+  first: Maybe<number>
+  last: Maybe<number>
+  before: Maybe<string>
+  after: Maybe<string>
+  sortKey: string | undefined
+  reverse: true | undefined
+  filters: object[] | undefined
+}
+
 const tabsData: TabsDataItem[] = [
   { key: 'forYou', translationKey: 'pages.catalogue.tabs.forYou' },
   { key: 'discover', translationKey: 'pages.catalogue.tabs.discover' },
@@ -106,6 +116,7 @@ export const Catalogue: React.FC = () => {
   const [queryFilterParams, setQueryFilterParams] = useState<QueryFilterParams>()
   const [paginationParams, setPaginationParams] = useState<PaginationParams>(paginationParamsInitialValue)
   const [originMetaValues, setOriginMetaValues] = useState<string[]>([])
+  const [queryProductsVariables, setQueryProductsVariables] = useState<QueryProductsVariables>()
   const [searchParams, setSearchParams] = useSearchParams()
   const GET_PRODUCTS = loader('src/graphql/queries/products.query.graphql')
   const GET_FILTER_ATTRIBUTES = loader('src/graphql/queries/filterAttributes.query.graphql')
@@ -365,23 +376,34 @@ export const Catalogue: React.FC = () => {
 
   const [getProducts, { loading, error, data }] = useLazyQuery<CollectionQuery>(GET_PRODUCTS)
 
+  const fetchProducts = useCallback(
+    (queryVars: QueryProductsVariables) => {
+      getProducts({
+        variables: queryVars,
+      }).catch((err) => {
+        throw new Error('Error fetching catalogue', err)
+      })
+    },
+    [queryProductsVariables],
+  )
+
   useEffect(() => {
     if (queryFilterParams !== undefined) {
       const sortKey = searchParams.get('sortKey')
       const reverseParam = searchParams.get('reverse')
-      getProducts({
-        variables: {
-          first: paginationParams?.first,
-          last: paginationParams?.last,
-          before: paginationParams?.before,
-          after: paginationParams?.after,
-          sortKey: sortKey ? sortKey : undefined,
-          reverse: reverseParam && reverseParam == '1' ? true : undefined,
-          filters: queryFilterParams?.queryFilter,
-        },
-      }).catch((err) => {
-        throw new Error('Error fetching catalogue', err)
-      })
+      const queryVars: QueryProductsVariables = {
+        first: paginationParams?.first,
+        last: paginationParams?.last,
+        before: paginationParams?.before,
+        after: paginationParams?.after,
+        sortKey: sortKey ? sortKey : undefined,
+        reverse: reverseParam && reverseParam == '1' ? true : undefined,
+        filters: queryFilterParams?.queryFilter,
+      }
+      setQueryProductsVariables(queryVars)
+      if (queryProductsVariables != queryVars) {
+        fetchProducts(queryVars)
+      }
     }
   }, [searchParams, queryFilterParams, paginationParams])
 
