@@ -10,6 +10,7 @@ import {
   ProductMock,
   ProductMockError,
   ProductMockWithCustomMetadata,
+  ProductMockWithCustomMetadataNoAroma,
 } from 'src/_mocks'
 import { CartContext } from 'src/components'
 import { CartProvider, Navigation, NavigationTheme } from 'src/components'
@@ -37,6 +38,26 @@ describe('Product view', () => {
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
         mocks={[ProductMockWithCustomMetadata, CatalogueMockSimilar]}
+        addTypename={false}
+      >
+        <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
+          <I18nextProvider i18n={i18n}>
+            <MemoryRouter initialEntries={['/product/7655228866776']}>
+              <Product />
+            </MemoryRouter>
+          </I18nextProvider>
+        </CartContext.Provider>
+      </MockedProvider>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 500)))
+    expect(container).toMatchSnapshot()
+  })
+
+  it('Renders correctly for a successful call without aroma', async () => {
+    const { container } = render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
+        mocks={[ProductMockWithCustomMetadataNoAroma, CatalogueMockSimilar]}
         addTypename={false}
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>

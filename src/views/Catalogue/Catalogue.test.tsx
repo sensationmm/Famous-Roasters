@@ -2,7 +2,7 @@ import { MockedProvider } from '@apollo/client/testing'
 import { act, fireEvent, render, screen, waitFor } from '@testing-library/react'
 import React from 'react'
 import { I18nextProvider } from 'react-i18next'
-import { MemoryRouter } from 'react-router-dom'
+import { MemoryRouter, useSearchParams } from 'react-router-dom'
 import {
   CatalogueMockError,
   CatalogueMocks,
@@ -33,6 +33,34 @@ window.IntersectionObserver = intersectionObserverMock
 
 describe('Catalogue view', () => {
   it('Renders correctly for a successful call', async () => {
+    const { container } = render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
+        mocks={[FilterAttributesMock, FilterAttributesMock, ...CatalogueMocks]}
+        addTypename={false}
+      >
+        <I18nextProvider i18n={i18n}>
+          <MemoryRouter initialEntries={['/catalogue']}>
+            <Catalogue />
+          </MemoryRouter>
+        </I18nextProvider>
+      </MockedProvider>,
+    )
+    await act(async (): Promise<void> => {
+      await new Promise((resolve) => setTimeout(resolve, 500))
+    })
+    expect(container).toMatchSnapshot()
+  })
+
+  it('Renders correctly for a successful call with params in the url', async () => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    delete window.location
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    window.location = new URL(
+      'https://www.test.com/catalogue?beanType=Arabica&vendor=Cycle+Roasters&origin=BR&packageSize=250g&sortKey=PRICE&reverse=1',
+    )
     const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}

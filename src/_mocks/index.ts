@@ -24,6 +24,7 @@ import {
   ProductMockDataWithCustomMetadata,
   ProductMockError,
   ProductMockWithCustomMetadata,
+  ProductMockWithCustomMetadataNoAroma,
 } from './ProductMock'
 
 export { CartAddLinesMock as CartAddLinesMock }
@@ -46,5 +47,6 @@ export { ProductMockData as ProductMockData }
 export { ProductMockDataNoImage as ProductMockDataNoImage }
 export { ProductMockDataWithCustomMetadata as ProductMockDataWithCustomMetadata }
 export { ProductMockWithCustomMetadata as ProductMockWithCustomMetadata }
+export { ProductMockWithCustomMetadataNoAroma as ProductMockWithCustomMetadataNoAroma }
 export { FilterAttributesMock as FilterAttributesMock }
 export { FilterAttributesMockError as FilterAttributesMockError }
