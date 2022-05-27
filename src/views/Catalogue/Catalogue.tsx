@@ -1,4 +1,4 @@
-import { useQuery } from '@apollo/client/react/hooks'
+import { useLazyQuery } from '@apollo/client/react/hooks'
 import { ChevronRightIcon } from '@heroicons/react/solid'
 import {
   Collection,
@@ -10,7 +10,7 @@ import {
 import { loader } from 'graphql.macro'
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link, useSearchParams } from 'react-router-dom'
+import { Link, URLSearchParamsInit, useSearchParams } from 'react-router-dom'
 import {
   ErrorPrompt,
   FilterData,
@@ -66,8 +66,8 @@ interface TabsDataItem {
 }
 
 interface SortParams {
-  sortKey: string
-  reverse: boolean
+  sortKey?: string
+  reverse?: boolean
 }
 
 interface PaginationParams {
@@ -110,17 +110,12 @@ export const Catalogue: React.FC = () => {
   const GET_PRODUCTS = loader('src/graphql/queries/products.query.graphql')
   const GET_FILTER_ATTRIBUTES = loader('src/graphql/queries/filterAttributes.query.graphql')
 
-  useEffect(() => {
-    document.title = `${t('brand.name')} | ${t('pages.catalogue.title')}`
-  }, [])
+  const [
+    getFilterAttributes,
+    { loading: filterAttributesLoading, error: filterAttributesError, data: filterAttributesData },
+  ] = useLazyQuery<Collection>(GET_FILTER_ATTRIBUTES)
 
-  const {
-    loading: filterAttributesLoading,
-    error: filterAttributesError,
-    data: filterAttributesData,
-  } = useQuery<Collection>(GET_FILTER_ATTRIBUTES)
-
-  const getFilterValues = (key: string) => {
+  const getFilterValues = (filterAttributesData: Collection, key: string) => {
     switch (key) {
       case 'vendor':
         return Array.from(
@@ -175,7 +170,7 @@ export const Catalogue: React.FC = () => {
     }
   }
 
-  const filtersData = (): FilterData[] => {
+  const filtersData = (data: Collection): FilterData[] => {
     const beanType = searchParams.get('beanType')?.split('|')
     const vendor = searchParams.get('vendor')?.split('|')
     const origin = searchParams.get('origin')?.split('|')
@@ -185,21 +180,21 @@ export const Catalogue: React.FC = () => {
         key: 'beanType',
         isOpen: false,
         filterType: 'enum',
-        filterValues: getFilterValues('bean_type'),
+        filterValues: getFilterValues(data, 'bean_type'),
         filterValuesSelected: beanType ? beanType : [],
       },
       {
         key: 'vendor',
         isOpen: false,
         filterType: 'enum',
-        filterValues: getFilterValues('vendor'),
+        filterValues: getFilterValues(data, 'vendor'),
         filterValuesSelected: vendor ? vendor : [],
       },
       {
         key: 'origin',
         isOpen: false,
         filterType: 'enum',
-        filterValues: getFilterValues('origin'),
+        filterValues: getFilterValues(data, 'origin'),
         i18nValues: true,
         filterValuesSelected: origin ? origin : [],
       },
@@ -207,46 +202,38 @@ export const Catalogue: React.FC = () => {
         key: 'packageSize',
         isOpen: false,
         filterType: 'enum',
-        filterValues: getFilterValues('package_size'),
+        filterValues: getFilterValues(data, 'package_size'),
         filterValuesSelected: packageSize ? packageSize : [],
       },
     ]
   }
 
-  useEffect(() => {
-    setFilters(filtersData())
-  }, [!filterAttributesLoading])
-
-  if (filterAttributesError) {
-    return <ErrorPrompt promptAction={() => history.go(0)} />
+  const sortParamsToListBoxItem = (sortParams: SortParams): ListBoxItem[] | undefined => {
+    switch (sortParams.sortKey) {
+      case 'PRICE':
+        return [
+          {
+            name: sortParams.reverse ? 'priceDesc' : 'priceAsc',
+          },
+        ]
+      case 'CREATED':
+        return [
+          {
+            name: 'newDesc',
+          },
+        ]
+      default:
+        return undefined
+    }
   }
 
-  useEffect(() => {
-    if (sortValue && sortValue[0]?.name) {
-      switch (sortValue[0].name) {
-        case 'priceAsc':
-          setSortParams({ sortKey: 'PRICE', reverse: false })
-          break
-        case 'priceDesc':
-          setSortParams({ sortKey: 'PRICE', reverse: true })
-          break
-        case 'newDesc':
-          setSortParams({ sortKey: 'CREATED', reverse: false })
-          break
-        default:
-          setSortParams({ sortKey: 'BEST_SELLING', reverse: false })
-          break
-      }
-    }
-  }, [sortValue])
-
-  useEffect(() => {
+  const processFilters = (f: FilterData[]) => {
     const queryFilter: object[] = []
     const vendor: string[] = []
     const beanType: string[] = []
     const origin: string[] = []
     const packageSize: string[] = []
-    filters.map((filter) => {
+    f.map((filter) => {
       if (filter.filterValuesSelected) {
         switch (filter.key) {
           case 'vendor':
@@ -286,32 +273,132 @@ export const Catalogue: React.FC = () => {
         }
       }
     })
+    setFilters(f)
     queryFilter.length > 0 ? setQueryFilterParams({ queryFilter }) : setQueryFilterParams({ queryFilter: undefined })
 
-    const searchParams = {
+    const updatedSearchParams = {
+      ...Object.fromEntries(searchParams),
       ...(vendor.length > 0 && { vendor: vendor.join('|') }),
       ...(beanType.length > 0 && { beanType: beanType.join('|') }),
       ...(origin.length > 0 && { origin: origin.join('|') }),
       ...(packageSize.length > 0 && { packageSize: packageSize.join('|') }),
     }
-    setSearchParams(searchParams)
-  }, [filters])
+    if (!vendor.length) delete updatedSearchParams.vendor
+    if (!beanType.length) delete updatedSearchParams.beanType
+    if (!origin.length) delete updatedSearchParams.origin
+    if (!packageSize.length) delete updatedSearchParams.packageSize
+
+    const currentSearchParams = Object.fromEntries(searchParams)
+    if (JSON.stringify(updatedSearchParams) !== JSON.stringify(currentSearchParams)) {
+      setSearchParams(updatedSearchParams)
+    }
+  }
+
+  useEffect(() => {
+    document.title = `${t('brand.name')} | ${t('pages.catalogue.title')}`
+    const sortKeyParam = searchParams.get('sortKey')
+    const reverseParam = searchParams.get('reverse')
+    const updatedSortParams = {
+      ...(sortKeyParam ? { sortKey: sortKeyParam } : { sortKey: 'BEST_SELLING' }),
+      ...(reverseParam && reverseParam == '1' ? { reverse: true } : { reverse: false }),
+    }
+    setSortParams(updatedSortParams)
+    setSortValue(sortParamsToListBoxItem(updatedSortParams))
+    getFilterAttributes()
+      .then((res) => {
+        res.data && processFilters(filtersData(res.data))
+      })
+      .catch((err) => {
+        throw new Error('Error fetching filter attributes', err)
+      })
+  }, [])
+
+  if (filterAttributesError) {
+    return <ErrorPrompt promptAction={() => history.go(0)} />
+  }
+
+  useEffect(() => {
+    if (sortValue && sortValue[0]?.name) {
+      switch (sortValue[0].name) {
+        case 'priceAsc': {
+          setSortParams({ sortKey: 'PRICE', reverse: false })
+          const updatedSearchParams: URLSearchParamsInit = {
+            ...Object.fromEntries([...searchParams]),
+            sortKey: 'PRICE',
+          }
+          delete updatedSearchParams.reverse
+          const currentSearchParams = Object.fromEntries(searchParams)
+          if (JSON.stringify(updatedSearchParams) !== JSON.stringify(currentSearchParams)) {
+            setSearchParams(updatedSearchParams)
+          }
+          break
+        }
+        case 'priceDesc': {
+          setSortParams({ sortKey: 'PRICE', reverse: true })
+          const updatedSearchParams: URLSearchParamsInit = {
+            ...Object.fromEntries([...searchParams]),
+            sortKey: 'PRICE',
+            reverse: '1',
+          }
+          const currentSearchParams = Object.fromEntries(searchParams)
+          if (JSON.stringify(updatedSearchParams) !== JSON.stringify(currentSearchParams)) {
+            setSearchParams(updatedSearchParams)
+          }
+          break
+        }
+        case 'newDesc': {
+          setSortParams({ sortKey: 'CREATED', reverse: false })
+          const updatedSearchParams: URLSearchParamsInit = {
+            ...Object.fromEntries([...searchParams]),
+            sortKey: 'CREATED',
+          }
+          delete updatedSearchParams.reverse
+          const currentSearchParams = Object.fromEntries(searchParams)
+          if (JSON.stringify(updatedSearchParams) !== JSON.stringify(currentSearchParams)) {
+            setSearchParams(updatedSearchParams)
+          }
+          break
+        }
+        default: {
+          setSortParams({ sortKey: 'BEST_SELLING', reverse: false })
+          const updatedSearchParams: URLSearchParamsInit = { ...Object.fromEntries([...searchParams]) }
+          delete updatedSearchParams.sortKey
+          delete updatedSearchParams.reverse
+          const currentSearchParams = Object.fromEntries(searchParams)
+          if (JSON.stringify(updatedSearchParams) !== JSON.stringify(currentSearchParams)) {
+            setSearchParams(updatedSearchParams)
+          }
+          break
+        }
+      }
+    }
+  }, [sortValue])
 
   useEffect(() => {
     setPaginationParams(paginationParamsInitialValue)
   }, [queryFilterParams, sortParams])
 
-  const { loading, error, data } = useQuery<CollectionQuery>(GET_PRODUCTS, {
-    variables: {
-      first: paginationParams?.first,
-      last: paginationParams?.last,
-      before: paginationParams?.before,
-      after: paginationParams?.after,
-      sortKey: sortParams?.sortKey,
-      reverse: sortParams?.reverse,
-      filters: queryFilterParams?.queryFilter,
-    },
-  })
+  const [getProducts, { loading, error, data }] = useLazyQuery<CollectionQuery>(GET_PRODUCTS)
+
+  useEffect(() => {
+    if (queryFilterParams !== undefined) {
+      const sortKey = searchParams.get('sortKey')
+      const reverseParam = searchParams.get('reverse')
+      getProducts({
+        variables: {
+          first: paginationParams?.first,
+          last: paginationParams?.last,
+          before: paginationParams?.before,
+          after: paginationParams?.after,
+          ...(sortKey && { sortKey }),
+          ...(reverseParam && reverseParam == '1' ? { reverse: true } : { reverse: false }),
+          filters: queryFilterParams?.queryFilter,
+        },
+      }).catch((err) => {
+        throw new Error('Error fetching catalogue', err)
+      })
+    }
+  }, [searchParams, queryFilterParams, paginationParams])
 
   const productNodes = data?.collection?.products.nodes
   const pageInfo = data?.collection?.products.pageInfo || {
@@ -340,19 +427,23 @@ export const Catalogue: React.FC = () => {
   }
 
   const onUpdateFiltersMobile = (f: FilterData[]) => {
-    setFilters(f)
+    processFilters(f)
   }
 
   const onUpdateFiltersDesktop = (items: ListBoxItem[] | undefined, key: string) => {
-    setFilters((prev) => {
-      const rest = prev.filter((filter) => filter.key !== key)
-      const original = filtersData().filter((filter) => filter.key === key)[0]
+    const updatedFilters = (): FilterData[] => {
+      const rest = filters.filter((filter) => filter.key !== key)
+      const original =
+        filterAttributesData && filtersData(filterAttributesData).filter((filter) => filter.key === key)[0]
       const actual: FilterData = {
         ...original,
+        key: original?.key || '',
+        isOpen: original?.isOpen || false,
         filterValuesSelected: items?.map((x: { name: string }) => x.name) || [],
       }
       return [...rest, actual]
-    })
+    }
+    filterAttributesData && processFilters(updatedFilters())
   }
 
   const renderFilterDesktop = (key: string, hasTranslatedValues: boolean) => (
@@ -375,17 +466,14 @@ export const Catalogue: React.FC = () => {
   }
 
   const renderDiscoverProducts = () => {
-    if (
-      loading ||
-      !filters.length ||
-      !filters.every((filter) => filter.filterValues && filter.filterValues?.length > 0)
-    ) {
+    if (loading || filterAttributesLoading || !filters.length || queryFilterParams === undefined) {
       return (
         <div className="flex h-64 mb-32 justify-center items-center">
           <Loader />
         </div>
       )
     }
+
     if (error || !pageInfo) {
       return <ErrorPrompt promptAction={() => history.go(0)} />
     }
