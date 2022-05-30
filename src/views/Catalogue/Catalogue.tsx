@@ -27,6 +27,8 @@ import {
 import { Pagination } from 'src/components/Pagination'
 import { getSimplifiedProductId } from 'src/utils/formatters'
 
+import { getFilterValues, getQueryFilter } from './index'
+
 interface ProductMeta {
   value: string
 }
@@ -125,60 +127,6 @@ export const Catalogue: React.FC = () => {
     { loading: filterAttributesLoading, error: filterAttributesError, data: filterAttributesData },
   ] = useLazyQuery<Collection>(GET_FILTER_ATTRIBUTES)
 
-  const getFilterValues = (fData: Collection, key: string) => {
-    switch (key) {
-      case 'vendor':
-        return Array.from(
-          new Set(
-            fData.products.nodes
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-ignore
-              .map((productNode) => productNode.vendor)
-              .flat()
-              .filter((x) => x !== undefined)
-              .sort(),
-          ),
-        )
-      case 'origin': {
-        const originMapping = Array.from(
-          new Set(
-            fData.products.nodes
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-ignore
-              .map((productNode) => productNode['origin']?.value.replace(', ', ','))
-              .flat()
-              .filter((x) => x !== undefined)
-              .sort(),
-          ),
-        )
-        return Array.from(new Set(originMapping.map((value) => value.split(',')).flat())).sort()
-      }
-      case 'bean_type':
-        return Array.from(
-          new Set(
-            fData.products.nodes
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-ignore
-              .map((productNode) => productNode['bean_type']?.value)
-              .flat()
-              .filter((x) => x !== undefined)
-              .sort(),
-          ),
-        )
-      case 'package_size':
-        return Array.from(
-          new Set(
-            fData.products.nodes
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-ignore
-              .map((productNode) => productNode.variants.nodes.map((variantNode) => variantNode['package_size'].value))
-              .flat()
-              .sort((a, b) => (parseFloat(a) > parseFloat(b) ? 1 : -1)),
-          ),
-        )
-    }
-  }
-
   const filtersData = (filterInput: Collection): FilterData[] => {
     const beanType = searchParams.get('beanType')?.split('|')
     const vendor = searchParams.get('vendor')?.split('|')
@@ -236,65 +184,9 @@ export const Catalogue: React.FC = () => {
     }
   }
 
-  const processFilters = (fData: Collection, f: FilterData[]) => {
-    const queryFilter: object[] = []
-    const vendor: string[] = []
-    const beanType: string[] = []
-    const origin: string[] = []
-    const packageSize: string[] = []
-    f.forEach((filter) => {
-      if (filter.filterValuesSelected) {
-        switch (filter.key) {
-          case 'vendor':
-            filter.filterValuesSelected.forEach((filterValue) => {
-              vendor.push(filterValue)
-              queryFilter.push({ productVendor: `${filterValue}` })
-            })
-            break
-          case 'beanType':
-            filter.filterValuesSelected.forEach((filterValue) => {
-              beanType.push(filterValue)
-              queryFilter.push({
-                productMetafield: { namespace: 'my_fields', key: 'bean_type', value: `${filterValue}` },
-              })
-            })
-            break
-          case 'origin': {
-            const test = Array.from(
-              new Set(
-                fData.products.nodes
-                  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                  // @ts-ignore
-                  .map((productNode) => productNode['origin']?.value.replace(', ', ','))
-                  .flat()
-                  .filter((x) => x !== undefined)
-                  .sort(),
-              ),
-            )
-            filter.filterValuesSelected.forEach((filterValue) => {
-              origin.push(filterValue)
-              test
-                .filter((x) => x.indexOf(filterValue) !== -1)
-                .map((fv) => {
-                  queryFilter.push({
-                    productMetafield: { namespace: 'my_fields', key: 'origin', value: `${fv}` },
-                  })
-                })
-            })
-            break
-          }
-          case 'packageSize':
-            filter.filterValuesSelected.forEach((filterValue) => {
-              packageSize.push(filterValue)
-              queryFilter.push({
-                variantMetafield: { namespace: 'my_fields', key: 'package_size', value: `${filterValue}` },
-              })
-            })
-            break
-        }
-      }
-    })
+  const processFilterValues = (fData: Collection, f: FilterData[]) => {
     setFilters(f)
+    const { queryFilter, vendor, beanType, origin, packageSize } = getQueryFilter(fData, f)
     queryFilter.length > 0 ? setQueryFilterParams({ queryFilter }) : setQueryFilterParams({ queryFilter: undefined })
 
     const updatedSearchParams = {
@@ -327,7 +219,7 @@ export const Catalogue: React.FC = () => {
     setSortValue(sortParamsToListBoxItem(updatedSortParams))
     getFilterAttributes()
       .then((res) => {
-        res.data && processFilters(res.data, filtersData(res.data))
+        res.data && processFilterValues(res.data, filtersData(res.data))
       })
       .catch((err) => {
         throw new Error('Error fetching filter attributes', err)
@@ -448,7 +340,7 @@ export const Catalogue: React.FC = () => {
   }
 
   const onUpdateFiltersMobile = (f: FilterData[]) => {
-    filterAttributesData && processFilters(filterAttributesData, f)
+    filterAttributesData && processFilterValues(filterAttributesData, f)
   }
 
   const onUpdateFiltersDesktop = (items: ListBoxItem[] | undefined, key: string) => {
@@ -464,7 +356,7 @@ export const Catalogue: React.FC = () => {
       }
       return [...rest, actual]
     }
-    filterAttributesData && processFilters(filterAttributesData, updatedFilters())
+    filterAttributesData && processFilterValues(filterAttributesData, updatedFilters())
   }
 
   const renderFilterDesktop = (key: string, hasTranslatedValues: boolean) => (
