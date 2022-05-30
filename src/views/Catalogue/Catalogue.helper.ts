@@ -48,7 +48,7 @@ export const getQueryFilter = (fData: Collection, f: FilterData[]): QueryFilterR
             origin.push(filterValue)
             originValues
               .filter((x) => x.indexOf(filterValue) !== -1)
-              .map((fv) => {
+              .forEach((fv) => {
                 queryFilter.push({
                   productMetafield: { namespace: 'my_fields', key: 'origin', value: `${fv}` },
                 })
