@@ -1,5 +1,5 @@
 import { Collection } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
-import { FilterData } from 'src/components'
+import { FilterData, ListBoxItem } from 'src/components'
 
 interface QueryFilterResult {
   queryFilter: object[]
@@ -7,6 +7,11 @@ interface QueryFilterResult {
   beanType: string[]
   origin: string[]
   packageSize: string[]
+}
+
+interface SortParams {
+  sortKey?: string
+  reverse?: boolean
 }
 
 export const getQueryFilter = (fData: Collection, f: FilterData[]): QueryFilterResult => {
@@ -122,5 +127,64 @@ export const getFilterValues = (fData: Collection, key: string) => {
             .sort((a, b) => (parseFloat(a) > parseFloat(b) ? 1 : -1)),
         ),
       )
+  }
+}
+
+export const getFilterData = (
+  filterInput: Collection,
+  beanType?: string[],
+  vendor?: string[],
+  origin?: string[],
+  packageSize?: string[],
+): FilterData[] => {
+  return [
+    {
+      key: 'beanType',
+      isOpen: false,
+      filterType: 'enum',
+      filterValues: getFilterValues(filterInput, 'bean_type'),
+      filterValuesSelected: beanType ? beanType : [],
+    },
+    {
+      key: 'vendor',
+      isOpen: false,
+      filterType: 'enum',
+      filterValues: getFilterValues(filterInput, 'vendor'),
+      filterValuesSelected: vendor ? vendor : [],
+    },
+    {
+      key: 'origin',
+      isOpen: false,
+      filterType: 'enum',
+      filterValues: getFilterValues(filterInput, 'origin'),
+      i18nValues: true,
+      filterValuesSelected: origin ? origin : [],
+    },
+    {
+      key: 'packageSize',
+      isOpen: false,
+      filterType: 'enum',
+      filterValues: getFilterValues(filterInput, 'package_size'),
+      filterValuesSelected: packageSize ? packageSize : [],
+    },
+  ]
+}
+
+export const sortParamsToListBoxItem = (sortParamsValue: SortParams): ListBoxItem[] | undefined => {
+  switch (sortParamsValue.sortKey) {
+    case 'PRICE':
+      return [
+        {
+          name: sortParamsValue.reverse ? 'priceDesc' : 'priceAsc',
+        },
+      ]
+    case 'CREATED':
+      return [
+        {
+          name: 'newDesc',
+        },
+      ]
+    default:
+      return undefined
   }
 }

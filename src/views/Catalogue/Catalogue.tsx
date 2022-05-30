@@ -27,7 +27,7 @@ import {
 import { Pagination } from 'src/components/Pagination'
 import { getSimplifiedProductId } from 'src/utils/formatters'
 
-import { getFilterValues, getQueryFilter } from './index'
+import { getFilterData, getQueryFilter, sortParamsToListBoxItem } from '.'
 
 interface ProductMeta {
   value: string
@@ -132,56 +132,7 @@ export const Catalogue: React.FC = () => {
     const vendor = searchParams.get('vendor')?.split('|')
     const origin = searchParams.get('origin')?.split('|')
     const packageSize = searchParams.get('packageSize')?.split('|')
-    return [
-      {
-        key: 'beanType',
-        isOpen: false,
-        filterType: 'enum',
-        filterValues: getFilterValues(filterInput, 'bean_type'),
-        filterValuesSelected: beanType ? beanType : [],
-      },
-      {
-        key: 'vendor',
-        isOpen: false,
-        filterType: 'enum',
-        filterValues: getFilterValues(filterInput, 'vendor'),
-        filterValuesSelected: vendor ? vendor : [],
-      },
-      {
-        key: 'origin',
-        isOpen: false,
-        filterType: 'enum',
-        filterValues: getFilterValues(filterInput, 'origin'),
-        i18nValues: true,
-        filterValuesSelected: origin ? origin : [],
-      },
-      {
-        key: 'packageSize',
-        isOpen: false,
-        filterType: 'enum',
-        filterValues: getFilterValues(filterInput, 'package_size'),
-        filterValuesSelected: packageSize ? packageSize : [],
-      },
-    ]
-  }
-
-  const sortParamsToListBoxItem = (sortParamsValue: SortParams): ListBoxItem[] | undefined => {
-    switch (sortParamsValue.sortKey) {
-      case 'PRICE':
-        return [
-          {
-            name: sortParamsValue.reverse ? 'priceDesc' : 'priceAsc',
-          },
-        ]
-      case 'CREATED':
-        return [
-          {
-            name: 'newDesc',
-          },
-        ]
-      default:
-        return undefined
-    }
+    return getFilterData(filterInput, beanType, vendor, origin, packageSize)
   }
 
   const processFilterValues = (fData: Collection, f: FilterData[]) => {
