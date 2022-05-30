@@ -16,7 +16,7 @@ export const getQueryFilter = (fData: Collection, f: FilterData[]): QueryFilterR
   const origin: string[] = []
   const packageSize: string[] = []
   f.forEach((filter) => {
-    if (filter.filterValuesSelected) {
+    if (filter.filterValuesSelected && filter.filterValuesSelected?.length > 0) {
       switch (filter.key) {
         case 'vendor':
           filter.filterValuesSelected.forEach((filterValue) => {
