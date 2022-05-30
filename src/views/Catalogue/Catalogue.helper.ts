@@ -33,7 +33,7 @@ export const getQueryFilter = (fData: Collection, f: FilterData[]): QueryFilterR
           })
           break
         case 'origin': {
-          const test = Array.from(
+          const originValues = Array.from(
             new Set(
               fData.products.nodes
                 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -46,7 +46,7 @@ export const getQueryFilter = (fData: Collection, f: FilterData[]): QueryFilterR
           )
           filter.filterValuesSelected.forEach((filterValue) => {
             origin.push(filterValue)
-            test
+            originValues
               .filter((x) => x.indexOf(filterValue) !== -1)
               .map((fv) => {
                 queryFilter.push({
