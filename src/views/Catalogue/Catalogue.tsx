@@ -115,7 +115,6 @@ export const Catalogue: React.FC = () => {
   const [filters, setFilters] = useState<FilterData[]>([])
   const [queryFilterParams, setQueryFilterParams] = useState<QueryFilterParams>()
   const [paginationParams, setPaginationParams] = useState<PaginationParams>(paginationParamsInitialValue)
-  const [originMetaValues, setOriginMetaValues] = useState<string[]>([])
   const [queryProductsVariables, setQueryProductsVariables] = useState<QueryProductsVariables>()
   const [searchParams, setSearchParams] = useSearchParams()
   const GET_PRODUCTS = loader('src/graphql/queries/products.query.graphql')
@@ -152,7 +151,6 @@ export const Catalogue: React.FC = () => {
               .sort(),
           ),
         )
-        setOriginMetaValues(originMapping)
         return Array.from(new Set(originMapping.map((value) => value.split(',')).flat())).sort()
       }
       case 'bean_type':
@@ -238,7 +236,7 @@ export const Catalogue: React.FC = () => {
     }
   }
 
-  const processFilters = (f: FilterData[]) => {
+  const processFilters = (fData: Collection, f: FilterData[]) => {
     const queryFilter: object[] = []
     const vendor: string[] = []
     const beanType: string[] = []
@@ -261,10 +259,21 @@ export const Catalogue: React.FC = () => {
               })
             })
             break
-          case 'origin':
+          case 'origin': {
+            const test = Array.from(
+              new Set(
+                fData.products.nodes
+                  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                  // @ts-ignore
+                  .map((productNode) => productNode['origin']?.value.replace(', ', ','))
+                  .flat()
+                  .filter((x) => x !== undefined)
+                  .sort(),
+              ),
+            )
             filter.filterValuesSelected.forEach((filterValue) => {
               origin.push(filterValue)
-              originMetaValues
+              test
                 .filter((x) => x.indexOf(filterValue) !== -1)
                 .map((fv) => {
                   queryFilter.push({
@@ -273,6 +282,7 @@ export const Catalogue: React.FC = () => {
                 })
             })
             break
+          }
           case 'packageSize':
             filter.filterValuesSelected.forEach((filterValue) => {
               packageSize.push(filterValue)
@@ -317,7 +327,7 @@ export const Catalogue: React.FC = () => {
     setSortValue(sortParamsToListBoxItem(updatedSortParams))
     getFilterAttributes()
       .then((res) => {
-        res.data && processFilters(filtersData(res.data))
+        res.data && processFilters(res.data, filtersData(res.data))
       })
       .catch((err) => {
         throw new Error('Error fetching filter attributes', err)
@@ -327,7 +337,7 @@ export const Catalogue: React.FC = () => {
   useEffect(() => {
     if (sortValue && sortValue[0]?.name) {
       const currentSearchParams = Object.fromEntries(searchParams)
-      let updatedSearchParams: URLSearchParamsInit = {}
+      let updatedSearchParams: URLSearchParamsInit
       switch (sortValue[0].name) {
         case 'priceAsc': {
           setSortParams({ sortKey: 'PRICE', reverse: false })
@@ -438,7 +448,7 @@ export const Catalogue: React.FC = () => {
   }
 
   const onUpdateFiltersMobile = (f: FilterData[]) => {
-    processFilters(f)
+    filterAttributesData && processFilters(filterAttributesData, f)
   }
 
   const onUpdateFiltersDesktop = (items: ListBoxItem[] | undefined, key: string) => {
@@ -454,7 +464,7 @@ export const Catalogue: React.FC = () => {
       }
       return [...rest, actual]
     }
-    filterAttributesData && processFilters(updatedFilters())
+    filterAttributesData && processFilters(filterAttributesData, updatedFilters())
   }
 
   const renderFilterDesktop = (key: string, hasTranslatedValues: boolean) => (
