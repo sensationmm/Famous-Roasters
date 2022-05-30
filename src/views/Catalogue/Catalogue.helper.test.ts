@@ -71,9 +71,9 @@ describe('Catalogue helper', () => {
     })
 
     it('Works with values', () => {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
       expect(
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         getFilterData(FilterAttributesMock.result.data, ['Arabica'], ['Cycle Roasters'], ['BR'], ['500g']),
       ).toEqual([
         {
