@@ -361,7 +361,7 @@ export const Product: React.FC = () => {
         case 'getToKnow':
           return renderProductBlockContentGetToKnow()
         case 'findSimilar':
-          return aroma ? <FindSimilar aroma={aroma.value} /> : null
+          return aroma ? <FindSimilar aroma={aroma.value} productId={id} /> : null
         default:
           return placeHolderText
       }

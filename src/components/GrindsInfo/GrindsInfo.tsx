@@ -86,7 +86,7 @@ export const GrindsInfo: React.FC = () => {
             </Typography>
             <Typography
               type={TypographyType.Paragraph}
-              size={TypographySize.Tiny}
+              size={TypographySize.Small}
               className="text-coreUI-text-secondary mt-1"
             >
               {t(`pages.product.transactional.options.grindType.guide.items.${item.key}.text`)}

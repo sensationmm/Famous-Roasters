@@ -338,6 +338,23 @@ export const ProductMockWithCustomMetadata = {
   },
 }
 
+export const ProductMockWithCustomMetadataNoAroma = {
+  request: {
+    query: GET_PRODUCT,
+    variables: {
+      id: 'gid://shopify/Product/7655228866776',
+    },
+  },
+  result: {
+    data: {
+      product: {
+        ...ProductMockDataWithCustomMetadata,
+        aroma: null,
+      },
+    },
+  },
+}
+
 export const ProductMockError = {
   request: {
     query: GET_PRODUCT,

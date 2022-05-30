@@ -43,13 +43,14 @@ interface CollectionQuery {
   collection: CollectionCustom
 }
 
-const totalItemsPerPage = 3
+const totalItemsPerPage = 4
 
 interface FindSimilarProps {
   aroma: string
+  productId: string
 }
 
-export const FindSimilar: React.FC<FindSimilarProps> = ({ aroma }: FindSimilarProps) => {
+export const FindSimilar: React.FC<FindSimilarProps> = ({ aroma, productId }: FindSimilarProps) => {
   const GET_PRODUCTS = loader('src/graphql/queries/products.query.graphql')
 
   const { loading, error, data } = useQuery<CollectionQuery>(GET_PRODUCTS, {
@@ -64,7 +65,7 @@ export const FindSimilar: React.FC<FindSimilarProps> = ({ aroma }: FindSimilarPr
     },
   })
 
-  const productNodes = data?.collection?.products.nodes
+  const productNodes = data?.collection?.products.nodes.filter((node) => getSimplifiedProductId(node.id) !== productId)
 
   const pageInfo = data?.collection?.products.pageInfo || {
     hasNextPage: false,

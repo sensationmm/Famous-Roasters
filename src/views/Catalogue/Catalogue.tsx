@@ -1,4 +1,4 @@
-import { useQuery } from '@apollo/client/react/hooks'
+import { useLazyQuery } from '@apollo/client/react/hooks'
 import { ChevronRightIcon } from '@heroicons/react/solid'
 import {
   Collection,
@@ -8,9 +8,9 @@ import {
   Scalars,
 } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
+import { Link, URLSearchParamsInit, useSearchParams } from 'react-router-dom'
 import {
   ErrorPrompt,
   FilterData,
@@ -26,6 +26,8 @@ import {
 } from 'src/components'
 import { Pagination } from 'src/components/Pagination'
 import { getSimplifiedProductId } from 'src/utils/formatters'
+
+import { getFilterData, getQueryFilter, sortParamsToListBoxItem } from '.'
 
 interface ProductMeta {
   value: string
@@ -66,8 +68,8 @@ interface TabsDataItem {
 }
 
 interface SortParams {
-  sortKey: string
-  reverse: boolean
+  sortKey?: string
+  reverse?: boolean
 }
 
 interface PaginationParams {
@@ -79,6 +81,16 @@ interface PaginationParams {
 
 interface QueryFilterParams {
   queryFilter: object[] | undefined
+}
+
+interface QueryProductsVariables {
+  first: Maybe<number>
+  last: Maybe<number>
+  before: Maybe<string>
+  after: Maybe<string>
+  sortKey: string | undefined
+  reverse: true | undefined
+  filters: object[] | undefined
 }
 
 const tabsData: TabsDataItem[] = [
@@ -105,163 +117,152 @@ export const Catalogue: React.FC = () => {
   const [filters, setFilters] = useState<FilterData[]>([])
   const [queryFilterParams, setQueryFilterParams] = useState<QueryFilterParams>()
   const [paginationParams, setPaginationParams] = useState<PaginationParams>(paginationParamsInitialValue)
-  const [originMetaValues, setOriginMetaValues] = useState<string[]>([])
+  const [queryProductsVariables, setQueryProductsVariables] = useState<QueryProductsVariables>()
+  const [searchParams, setSearchParams] = useSearchParams()
   const GET_PRODUCTS = loader('src/graphql/queries/products.query.graphql')
   const GET_FILTER_ATTRIBUTES = loader('src/graphql/queries/filterAttributes.query.graphql')
 
-  useEffect(() => {
-    document.title = `${t('brand.name')} | ${t('pages.catalogue.title')}`
-  }, [])
+  const [
+    getFilterAttributes,
+    { loading: filterAttributesLoading, error: filterAttributesError, data: filterAttributesData },
+  ] = useLazyQuery<Collection>(GET_FILTER_ATTRIBUTES)
 
-  const {
-    loading: filterAttributesLoading,
-    error: filterAttributesError,
-    data: filterAttributesData,
-  } = useQuery<Collection>(GET_FILTER_ATTRIBUTES)
+  const filtersData = (filterInput: Collection): FilterData[] => {
+    const beanType = searchParams.get('beanType')?.split('|')
+    const vendor = searchParams.get('vendor')?.split('|')
+    const origin = searchParams.get('origin')?.split('|')
+    const packageSize = searchParams.get('packageSize')?.split('|')
+    return getFilterData(filterInput, beanType, vendor, origin, packageSize)
+  }
 
-  const getFilterValues = (key: string) => {
-    switch (key) {
-      case 'vendor':
-        return Array.from(
-          new Set(
-            filterAttributesData?.products.nodes
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-ignore
-              .map((productNode) => productNode.vendor)
-              .flat()
-              .filter((x) => x !== undefined)
-              .sort(),
-          ),
-        )
-      case 'origin': {
-        const originMapping = Array.from(
-          new Set(
-            filterAttributesData?.products.nodes
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-ignore
-              .map((productNode) => productNode['origin']?.value.replace(', ', ','))
-              .flat()
-              .filter((x) => x !== undefined)
-              .sort(),
-          ),
-        )
-        setOriginMetaValues(originMapping)
-        return Array.from(new Set(originMapping.map((value) => value.split(',')).flat())).sort()
-      }
-      case 'bean_type':
-        return Array.from(
-          new Set(
-            filterAttributesData?.products.nodes
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-ignore
-              .map((productNode) => productNode['bean_type']?.value)
-              .flat()
-              .filter((x) => x !== undefined)
-              .sort(),
-          ),
-        )
-      case 'package_size':
-        return Array.from(
-          new Set(
-            filterAttributesData?.products.nodes
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-ignore
-              .map((productNode) => productNode.variants.nodes.map((variantNode) => variantNode['package_size'].value))
-              .flat()
-              .sort((a, b) => (parseFloat(a) > parseFloat(b) ? 1 : -1)),
-          ),
-        )
+  const processFilterValues = (fData: Collection, f: FilterData[]) => {
+    setFilters(f)
+    const { queryFilter, vendor, beanType, origin, packageSize } = getQueryFilter(fData, f)
+    queryFilter.length > 0 ? setQueryFilterParams({ queryFilter }) : setQueryFilterParams({ queryFilter: undefined })
+
+    const updatedSearchParams = {
+      ...Object.fromEntries(searchParams),
+      ...(vendor.length > 0 && { vendor: vendor.join('|') }),
+      ...(beanType.length > 0 && { beanType: beanType.join('|') }),
+      ...(origin.length > 0 && { origin: origin.join('|') }),
+      ...(packageSize.length > 0 && { packageSize: packageSize.join('|') }),
+    }
+    if (!vendor.length) delete updatedSearchParams.vendor
+    if (!beanType.length) delete updatedSearchParams.beanType
+    if (!origin.length) delete updatedSearchParams.origin
+    if (!packageSize.length) delete updatedSearchParams.packageSize
+
+    const currentSearchParams = Object.fromEntries(searchParams)
+    if (JSON.stringify(updatedSearchParams) !== JSON.stringify(currentSearchParams)) {
+      setSearchParams(updatedSearchParams)
     }
   }
 
-  const filtersData = (): FilterData[] => [
-    { key: 'beanType', isOpen: false, filterType: 'enum', filterValues: getFilterValues('bean_type') },
-    { key: 'vendor', isOpen: false, filterType: 'enum', filterValues: getFilterValues('vendor') },
-    { key: 'origin', isOpen: false, filterType: 'enum', filterValues: getFilterValues('origin'), i18nValues: true },
-    { key: 'packageSize', isOpen: false, filterType: 'enum', filterValues: getFilterValues('package_size') },
-  ]
-
   useEffect(() => {
-    setFilters(filtersData())
-  }, [!filterAttributesLoading])
-
-  if (filterAttributesError) {
-    return <ErrorPrompt promptAction={() => history.go(0)} />
-  }
+    document.title = `${t('brand.name')} | ${t('pages.catalogue.title')}`
+    const sortKeyParam = searchParams.get('sortKey')
+    const reverseParam = searchParams.get('reverse')
+    const updatedSortParams = {
+      ...(sortKeyParam ? { sortKey: sortKeyParam } : { sortKey: 'BEST_SELLING' }),
+      ...(reverseParam && reverseParam == '1' ? { reverse: true } : { reverse: false }),
+    }
+    setSortParams(updatedSortParams)
+    setSortValue(sortParamsToListBoxItem(updatedSortParams))
+    getFilterAttributes()
+      .then((res) => {
+        res.data && processFilterValues(res.data, filtersData(res.data))
+      })
+      .catch((err) => {
+        throw new Error('Error fetching filter attributes', err)
+      })
+  }, [])
 
   useEffect(() => {
     if (sortValue && sortValue[0]?.name) {
+      const currentSearchParams = Object.fromEntries(searchParams)
+      let updatedSearchParams: URLSearchParamsInit
       switch (sortValue[0].name) {
-        case 'priceAsc':
+        case 'priceAsc': {
           setSortParams({ sortKey: 'PRICE', reverse: false })
+          updatedSearchParams = {
+            ...Object.fromEntries([...searchParams]),
+            sortKey: 'PRICE',
+          }
+          delete updatedSearchParams.reverse
           break
-        case 'priceDesc':
+        }
+        case 'priceDesc': {
           setSortParams({ sortKey: 'PRICE', reverse: true })
+          updatedSearchParams = {
+            ...Object.fromEntries([...searchParams]),
+            sortKey: 'PRICE',
+            reverse: '1',
+          }
           break
-        case 'newDesc':
+        }
+        case 'newDesc': {
           setSortParams({ sortKey: 'CREATED', reverse: false })
+          updatedSearchParams = {
+            ...Object.fromEntries([...searchParams]),
+            sortKey: 'CREATED',
+          }
+          delete updatedSearchParams.reverse
           break
-        default:
+        }
+        default: {
           setSortParams({ sortKey: 'BEST_SELLING', reverse: false })
+          updatedSearchParams = { ...Object.fromEntries([...searchParams]) }
+          delete updatedSearchParams.sortKey
+          delete updatedSearchParams.reverse
           break
+        }
+      }
+      if (JSON.stringify(updatedSearchParams) !== JSON.stringify(currentSearchParams)) {
+        setSearchParams(updatedSearchParams)
       }
     }
   }, [sortValue])
 
   useEffect(() => {
-    const queryFilter: object[] = []
-    filters.map((filter) => {
-      if (filter.filterValuesSelected) {
-        switch (filter.key) {
-          case 'vendor':
-            filter.filterValuesSelected.map((filterValue) => queryFilter.push({ productVendor: `${filterValue}` }))
-            break
-          case 'beanType':
-            filter.filterValuesSelected.map((filterValue) =>
-              queryFilter.push({
-                productMetafield: { namespace: 'my_fields', key: 'bean_type', value: `${filterValue}` },
-              }),
-            )
-            break
-          case 'origin':
-            filter.filterValuesSelected.map((filterValue) => {
-              originMetaValues
-                .filter((origin) => origin.indexOf(filterValue) !== -1)
-                .map((fv) =>
-                  queryFilter.push({
-                    productMetafield: { namespace: 'my_fields', key: 'origin', value: `${fv}` },
-                  }),
-                )
-            })
-            break
-          case 'packageSize':
-            filter.filterValuesSelected.map((filterValue) =>
-              queryFilter.push({
-                variantMetafield: { namespace: 'my_fields', key: 'package_size', value: `${filterValue}` },
-              }),
-            )
-            break
-        }
-      }
-    })
-    queryFilter.length > 0 ? setQueryFilterParams({ queryFilter }) : setQueryFilterParams({ queryFilter: undefined })
-  }, [filters])
-
-  useEffect(() => {
     setPaginationParams(paginationParamsInitialValue)
   }, [queryFilterParams, sortParams])
 
-  const { loading, error, data } = useQuery<CollectionQuery>(GET_PRODUCTS, {
-    variables: {
-      first: paginationParams?.first,
-      last: paginationParams?.last,
-      before: paginationParams?.before,
-      after: paginationParams?.after,
-      sortKey: sortParams?.sortKey,
-      reverse: sortParams?.reverse,
-      filters: queryFilterParams?.queryFilter,
+  const [getProducts, { loading, error, data }] = useLazyQuery<CollectionQuery>(GET_PRODUCTS)
+
+  const fetchProducts = useCallback(
+    (queryVars: QueryProductsVariables) => {
+      getProducts({
+        variables: queryVars,
+      }).catch((err) => {
+        throw new Error('Error fetching catalogue', err)
+      })
     },
-  })
+    [queryProductsVariables],
+  )
+
+  useEffect(() => {
+    if (queryFilterParams !== undefined) {
+      const sortKey = searchParams.get('sortKey')
+      const reverseParam = searchParams.get('reverse')
+      const queryVars: QueryProductsVariables = {
+        first: paginationParams?.first,
+        last: paginationParams?.last,
+        before: paginationParams?.before,
+        after: paginationParams?.after,
+        sortKey: sortKey ? sortKey : undefined,
+        reverse: reverseParam && reverseParam == '1' ? true : undefined,
+        filters: queryFilterParams?.queryFilter,
+      }
+      setQueryProductsVariables(queryVars)
+      if (queryProductsVariables != queryVars) {
+        fetchProducts(queryVars)
+      }
+    }
+  }, [searchParams, queryFilterParams, paginationParams])
+
+  if (filterAttributesError) {
+    return <ErrorPrompt promptAction={() => history.go(0)} />
+  }
 
   const productNodes = data?.collection?.products.nodes
   const pageInfo = data?.collection?.products.pageInfo || {
@@ -290,19 +291,23 @@ export const Catalogue: React.FC = () => {
   }
 
   const onUpdateFiltersMobile = (f: FilterData[]) => {
-    setFilters(f)
+    filterAttributesData && processFilterValues(filterAttributesData, f)
   }
 
   const onUpdateFiltersDesktop = (items: ListBoxItem[] | undefined, key: string) => {
-    setFilters((prev) => {
-      const rest = prev.filter((filter) => filter.key !== key)
-      const original = filtersData().filter((filter) => filter.key === key)[0]
+    const updatedFilters = (): FilterData[] => {
+      const rest = filters.filter((filter) => filter.key !== key)
+      const original =
+        filterAttributesData && filtersData(filterAttributesData).filter((filter) => filter.key === key)[0]
       const actual: FilterData = {
         ...original,
+        key: original?.key || '',
+        isOpen: original?.isOpen || false,
         filterValuesSelected: items?.map((x: { name: string }) => x.name) || [],
       }
       return [...rest, actual]
-    })
+    }
+    filterAttributesData && processFilterValues(filterAttributesData, updatedFilters())
   }
 
   const renderFilterDesktop = (key: string, hasTranslatedValues: boolean) => (
@@ -325,17 +330,14 @@ export const Catalogue: React.FC = () => {
   }
 
   const renderDiscoverProducts = () => {
-    if (
-      loading ||
-      !filters.length ||
-      !filters.every((filter) => filter.filterValues && filter.filterValues?.length > 0)
-    ) {
+    if (loading || filterAttributesLoading || !filters.length || queryFilterParams === undefined) {
       return (
         <div className="flex h-64 mb-32 justify-center items-center">
           <Loader />
         </div>
       )
     }
+
     if (error || !pageInfo) {
       return <ErrorPrompt promptAction={() => history.go(0)} />
     }
