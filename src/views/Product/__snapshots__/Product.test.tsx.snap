@@ -89,19 +89,19 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                 class="xl:hidden font-syne text-3xl"
               >
                 <span>
-                  F
+                  W
                 </span>
                 <span
                   class="font-extrabold"
                 >
-                  R
+                  B
                 </span>
               </div>
               <div
                 class="hidden xl:block font-syne text-xl text-center"
               >
                 <div
-                  class="h-5"
+                  class="h-7"
                 >
                   WeBean
                 </div>
@@ -1329,7 +1329,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
           <div>
             <div>
               <span
-                class="font-syne text-3xl leading-8 font-semibold tracking-tight"
+                class="font-syne text-3xl leading-10 font-semibold tracking-tight"
               >
                 Kunden Support
               </span>
@@ -1375,7 +1375,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
           >
             <div>
               <span
-                class="font-syne text-3xl leading-8 font-semibold tracking-tight"
+                class="font-syne text-3xl leading-10 font-semibold tracking-tight"
               >
                 Newsletter
               </span>
@@ -1548,19 +1548,19 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                 class="xl:hidden font-syne text-3xl"
               >
                 <span>
-                  F
+                  W
                 </span>
                 <span
                   class="font-extrabold"
                 >
-                  R
+                  B
                 </span>
               </div>
               <div
                 class="hidden xl:block font-syne text-xl text-center"
               >
                 <div
-                  class="h-5"
+                  class="h-7"
                 >
                   WeBean
                 </div>
@@ -2771,7 +2771,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
           <div>
             <div>
               <span
-                class="font-syne text-3xl leading-8 font-semibold tracking-tight"
+                class="font-syne text-3xl leading-10 font-semibold tracking-tight"
               >
                 Kunden Support
               </span>
@@ -2817,7 +2817,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
           >
             <div>
               <span
-                class="font-syne text-3xl leading-8 font-semibold tracking-tight"
+                class="font-syne text-3xl leading-10 font-semibold tracking-tight"
               >
                 Newsletter
               </span>

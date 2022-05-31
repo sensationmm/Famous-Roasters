@@ -1,27 +1,52 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Layout, NavigationTheme, Typography, TypographySize, TypographyType } from 'src/components'
+import { useSearchParams } from 'react-router-dom'
+import { Layout, NavigationTheme } from 'src/components'
+
+import { Name } from './Steps/Name'
+import { Welcome } from './Steps/Welcome'
 
 export const TasteFinder: React.FC = () => {
   const { t } = useTranslation()
+  const [searchParams, setSearchParams] = useSearchParams()
+  const [actualStep, setActualStep] = useState<string>()
+
+  const toggleItem = (index: number) => {
+    switch (index) {
+      case 1:
+        setActualStep('your-name')
+        setSearchParams({ step: 'your-name' })
+        break
+      default:
+        setActualStep('welcome')
+        setSearchParams({ step: 'welcome' })
+        break
+    }
+  }
+
   useEffect(() => {
     document.title = `${t('brand.name')} | ${t('pages.tasteFinder.title')}`
   }, [])
 
-  return (
-    <Layout navigationTheme={NavigationTheme.Home}>
-      <main className="flex-grow flex items-center justify-center bg-brand-grey-whisper">
-        <div>
-          <div className="font-syne flex justify-center text-4xl md:text-5xl xl:text-6xl">
-            <h1>
-              <span>Famous</span> <span className="font-bold">Roasters</span>
-            </h1>
-          </div>
-          <Typography as="div" type={TypographyType.Paragraph} size={TypographySize.Large} className="text-center">
-            {t('pages.tasteFinder.title')}
-          </Typography>
-        </div>
-      </main>
-    </Layout>
-  )
+  useEffect(() => {
+    const step = searchParams.get('step')
+    if (step) {
+      setActualStep(step)
+    } else {
+      toggleItem(0)
+    }
+  }, [searchParams])
+
+  const renderStep = (key: string) => {
+    switch (key) {
+      case 'welcome':
+        return <Welcome next={() => toggleItem(1)} />
+      case 'your-name':
+        return <Name />
+      default:
+        return <span>Wrong</span>
+    }
+  }
+
+  return <Layout navigationTheme={NavigationTheme.Home}>{actualStep !== undefined && renderStep(actualStep)}</Layout>
 }

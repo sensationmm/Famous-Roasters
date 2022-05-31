@@ -263,7 +263,14 @@
     },
     "tasteFinder": {
       "navigation": "Tastefinder",
-      "title": "Tastefinder"
+      "title": "Tastefinder",
+      "steps": {
+        "welcome": {
+          "cta": "Tastefinder starten",
+          "text": "Finde deinen persönlichen Kaffeetyp und erhalte Empfehlungen, die zu deinem Geschmack passen.",
+          "title": "Finde jetzt deinen Specialty Coffee mit dem Tastefinder."
+        }
+      }
     }
   }
 }

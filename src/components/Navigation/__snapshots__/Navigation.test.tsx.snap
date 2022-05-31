@@ -86,19 +86,19 @@ exports[`Navigation component Renders correctly with home theme 1`] = `
               class="xl:hidden font-syne text-3xl"
             >
               <span>
-                F
+                W
               </span>
               <span
                 class="font-extrabold"
               >
-                R
+                B
               </span>
             </div>
             <div
               class="hidden xl:block font-syne text-xl text-center"
             >
               <div
-                class="h-5"
+                class="h-7"
               >
                 WeBean
               </div>
@@ -268,19 +268,19 @@ exports[`Navigation component Renders correctly with shop theme 1`] = `
               class="xl:hidden font-syne text-3xl"
             >
               <span>
-                F
+                W
               </span>
               <span
                 class="font-extrabold"
               >
-                R
+                B
               </span>
             </div>
             <div
               class="hidden xl:block font-syne text-xl text-center"
             >
               <div
-                class="h-5"
+                class="h-7"
               >
                 WeBean
               </div>

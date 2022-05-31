@@ -89,19 +89,19 @@ exports[`Taste Finder view Renders correctly 1`] = `
                 class="xl:hidden font-syne text-3xl"
               >
                 <span>
-                  F
+                  W
                 </span>
                 <span
                   class="font-extrabold"
                 >
-                  R
+                  B
                 </span>
               </div>
               <div
                 class="hidden xl:block font-syne text-xl text-center"
               >
                 <div
-                  class="h-5"
+                  class="h-7"
                 >
                   WeBean
                 </div>
@@ -183,28 +183,61 @@ exports[`Taste Finder view Renders correctly 1`] = `
       </header>
     </div>
     <main
-      class="flex-grow flex items-center justify-center bg-brand-grey-whisper"
+      class="block md:grid md:grid-cols-3 md:grid-rows-1"
     >
-      <div>
+      <div
+        class="flex items-center justify-center md:justify-start py-32 md:order-2 relative"
+      >
+        <img
+          alt="Tastefinder"
+          class="absolute top-32 md:top-auto md:-ml-16"
+          src="welcome.webp"
+        />
+      </div>
+      <div
+        class="flex col-span-2 items-center justify-center py-16 md:order-1 bg-brand-black text-white"
+      >
         <div
-          class="font-syne flex justify-center text-4xl md:text-5xl xl:text-6xl"
+          class="flex flex-col items-center md:order-1"
         >
-          <h1>
-            <span>
-              Famous
-            </span>
-             
-            <span
-              class="font-bold"
-            >
-              Roasters
-            </span>
+          <h1
+            class="flex w-80 mt-8 font-syne md:mt-0 text-3xl leading-10 font-semibold tracking-tight"
+          >
+            Finde jetzt deinen Specialty Coffee mit dem Tastefinder.
           </h1>
-        </div>
-        <div
-          class="text-center text-lg leading-7"
-        >
-          Tastefinder
+          <div
+            class="flex w-80 mt-4"
+          >
+            <svg
+              aria-hidden="true"
+              class="w-12 h-6 mr-4"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                fill-rule="evenodd"
+              />
+            </svg>
+            <p
+              class="text-base leading-6"
+            >
+              Finde deinen persönlichen Kaffeetyp und erhalte Empfehlungen, die zu deinem Geschmack passen.
+            </p>
+          </div>
+          <div
+            class="flex w-80 mt-20"
+          >
+            <button
+              class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+              role="button"
+              type="button"
+            >
+              Tastefinder starten
+            </button>
+          </div>
         </div>
       </div>
     </main>
@@ -329,7 +362,7 @@ exports[`Taste Finder view Renders correctly 1`] = `
           <div>
             <div>
               <span
-                class="font-syne text-3xl leading-8 font-semibold tracking-tight"
+                class="font-syne text-3xl leading-10 font-semibold tracking-tight"
               >
                 Kunden Support
               </span>
@@ -375,7 +408,7 @@ exports[`Taste Finder view Renders correctly 1`] = `
           >
             <div>
               <span
-                class="font-syne text-3xl leading-8 font-semibold tracking-tight"
+                class="font-syne text-3xl leading-10 font-semibold tracking-tight"
               >
                 Newsletter
               </span>

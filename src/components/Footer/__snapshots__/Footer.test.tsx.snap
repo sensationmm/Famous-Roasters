@@ -123,7 +123,7 @@ exports[`Footer component Renders correctly 1`] = `
         <div>
           <div>
             <span
-              class="font-syne text-3xl leading-8 font-semibold tracking-tight"
+              class="font-syne text-3xl leading-10 font-semibold tracking-tight"
             >
               Kunden Support
             </span>
@@ -169,7 +169,7 @@ exports[`Footer component Renders correctly 1`] = `
         >
           <div>
             <span
-              class="font-syne text-3xl leading-8 font-semibold tracking-tight"
+              class="font-syne text-3xl leading-10 font-semibold tracking-tight"
             >
               Newsletter
             </span>

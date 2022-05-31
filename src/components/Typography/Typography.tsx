@@ -35,7 +35,7 @@ const getTypographyClassNames = (type: Type, size: Size): string => {
           break
         case Size.Base:
         default:
-          classNames.push('text-3xl', 'leading-8', 'font-semibold', 'tracking-tight')
+          classNames.push('text-3xl', 'leading-10', 'font-semibold', 'tracking-tight')
           break
       }
       break
