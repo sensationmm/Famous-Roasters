@@ -321,12 +321,46 @@ export const CatalogueMockFilter5 = {
   },
 }
 
+export const CatalogueMockFilter6 = {
+  ...CatalogueMock1,
+  request: {
+    ...CatalogueMock1.request,
+    variables: {
+      first: 6,
+      last: null,
+      before: null,
+      after: null,
+      sortKey: undefined,
+      reverse: undefined,
+      filters: [{ productMetafield: { namespace: 'my_fields', key: 'coffee_type', value: 'Espresso' } }],
+    },
+  },
+}
+
+export const CatalogueMockFilter7 = {
+  ...CatalogueMock1,
+  request: {
+    ...CatalogueMock1.request,
+    variables: {
+      first: 6,
+      last: null,
+      before: null,
+      after: null,
+      sortKey: undefined,
+      reverse: undefined,
+      filters: [{ productVendor: 'Cycle Roasters' }, { productVendor: 'WeBean' }],
+    },
+  },
+}
+
 export const CatalogueMocksFilters = [
   CatalogueMockFilter1,
   CatalogueMockFilter2,
   CatalogueMockFilter3,
   CatalogueMockFilter4,
   CatalogueMockFilter5,
+  CatalogueMockFilter6,
+  CatalogueMockFilter7,
 ]
 
 export const CatalogueMocksPagination = [CatalogueMock6, CatalogueMock7, CatalogueMock8]

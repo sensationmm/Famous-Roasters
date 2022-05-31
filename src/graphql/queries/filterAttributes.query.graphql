@@ -2,6 +2,9 @@ query filterAttributes {
     products(first: 30) {
         nodes {
             vendor
+            coffee_type: metafield(namespace: "my_fields", key: "coffee_type") {
+                value
+            }
             bean_type: metafield(namespace: "my_fields", key: "bean_type") {
                 value
             }

@@ -128,26 +128,29 @@ export const Catalogue: React.FC = () => {
   ] = useLazyQuery<Collection>(GET_FILTER_ATTRIBUTES)
 
   const filtersData = (filterInput: Collection): FilterData[] => {
+    const coffeeType = searchParams.get('coffeeType')?.split('|')
     const beanType = searchParams.get('beanType')?.split('|')
     const vendor = searchParams.get('vendor')?.split('|')
     const origin = searchParams.get('origin')?.split('|')
     const packageSize = searchParams.get('packageSize')?.split('|')
-    return getFilterData(filterInput, beanType, vendor, origin, packageSize)
+    return getFilterData(filterInput, coffeeType, beanType, vendor, origin, packageSize)
   }
 
   const processFilterValues = (fData: Collection, f: FilterData[]) => {
     setFilters(f)
-    const { queryFilter, vendor, beanType, origin, packageSize } = getQueryFilter(fData, f)
+    const { queryFilter, vendor, coffeeType, beanType, origin, packageSize } = getQueryFilter(fData, f)
     queryFilter.length > 0 ? setQueryFilterParams({ queryFilter }) : setQueryFilterParams({ queryFilter: undefined })
 
     const updatedSearchParams = {
       ...Object.fromEntries(searchParams),
       ...(vendor.length > 0 && { vendor: vendor.join('|') }),
+      ...(coffeeType.length > 0 && { coffeeType: coffeeType.join('|') }),
       ...(beanType.length > 0 && { beanType: beanType.join('|') }),
       ...(origin.length > 0 && { origin: origin.join('|') }),
       ...(packageSize.length > 0 && { packageSize: packageSize.join('|') }),
     }
     if (!vendor.length) delete updatedSearchParams.vendor
+    if (!coffeeType.length) delete updatedSearchParams.coffeeType
     if (!beanType.length) delete updatedSearchParams.beanType
     if (!origin.length) delete updatedSearchParams.origin
     if (!packageSize.length) delete updatedSearchParams.packageSize
@@ -291,7 +294,8 @@ export const Catalogue: React.FC = () => {
   }
 
   const onUpdateFiltersMobile = (f: FilterData[]) => {
-    filterAttributesData && processFilterValues(filterAttributesData, f)
+    const allFilters = [filters.filter((f) => f.key === 'coffeeType')[0], ...f]
+    filterAttributesData && processFilterValues(filterAttributesData, allFilters)
   }
 
   const onUpdateFiltersDesktop = (items: ListBoxItem[] | undefined, key: string) => {
@@ -310,14 +314,17 @@ export const Catalogue: React.FC = () => {
     filterAttributesData && processFilterValues(filterAttributesData, updatedFilters())
   }
 
-  const renderFilterDesktop = (key: string, hasTranslatedValues: boolean) => (
+  const renderFilter = (key: string, hasTranslatedValues: boolean) => (
     <Listbox
       items={filters.filter((filter) => filter.key === key)[0].filterValues?.map((x) => ({ name: x })) || []}
       hasTranslatedValues={hasTranslatedValues}
       translationPrefix={`pages.catalogue.filters.${key}`}
       value={filters.filter((filter) => filter.key === key)[0].filterValuesSelected?.map((fv) => ({ name: fv }))}
-      multiple={true}
+      multiple={key !== 'coffeeType'}
+      hasNoneItem={key === 'coffeeType'}
+      resetOnNoneClick={key === 'coffeeType'}
       onChange={(v) => onUpdateFiltersDesktop(v, key)}
+      big={key === 'coffeeType'}
     />
   )
 
@@ -344,11 +351,12 @@ export const Catalogue: React.FC = () => {
 
     return (
       <>
-        <div className="hidden md:flex gap-x-4 mt-8">
-          <div className="md:w-1/4">{renderFilterDesktop('beanType', false)}</div>
-          <div className="md:w-1/4">{renderFilterDesktop('vendor', false)}</div>
-          <div className="md:w-1/4">{renderFilterDesktop('origin', true)}</div>
-          <div className="md:w-1/4">{renderFilterDesktop('packageSize', false)}</div>
+        <div className="mt-4">{renderFilter('coffeeType', false)}</div>
+        <div className="hidden md:flex gap-x-4 mt-4">
+          <div className="md:w-1/4">{renderFilter('beanType', false)}</div>
+          <div className="md:w-1/4">{renderFilter('vendor', false)}</div>
+          <div className="md:w-1/4">{renderFilter('origin', true)}</div>
+          <div className="md:w-1/4">{renderFilter('packageSize', false)}</div>
         </div>
         <div className="flex gap-x-4 justify-end mt-4">
           <div className="w-1/2 md:hidden">
@@ -364,7 +372,7 @@ export const Catalogue: React.FC = () => {
               </div>
             ) : (
               <FiltersMenuMobile
-                initialFilters={filters}
+                initialFilters={filters.filter((f) => f.key !== 'coffeeType')}
                 onUpdateFilters={(f: FilterData[]) => onUpdateFiltersMobile(f)}
               />
             )}

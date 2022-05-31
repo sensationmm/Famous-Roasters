@@ -68,6 +68,12 @@
         "beanType": {
           "label": "Bohnensorte"
         },
+        "coffeeType": {
+          "label": "Alle Zubereitungsmethoden",
+          "values": {
+            "none": "Alle Zubereitungsmethoden"
+          }
+        },
         "common": {
           "filtersMenu": {
             "close": "Schließen",

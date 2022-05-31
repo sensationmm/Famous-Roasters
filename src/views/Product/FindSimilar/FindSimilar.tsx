@@ -65,7 +65,9 @@ export const FindSimilar: React.FC<FindSimilarProps> = ({ aroma, productId }: Fi
     },
   })
 
-  const productNodes = data?.collection?.products.nodes.filter((node) => getSimplifiedProductId(node.id) !== productId)
+  const productNodes = data?.collection?.products.nodes
+    .filter((node) => getSimplifiedProductId(node.id) !== productId)
+    .slice(0, 3)
 
   const pageInfo = data?.collection?.products.pageInfo || {
     hasNextPage: false,
