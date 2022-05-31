@@ -24,7 +24,7 @@ exports[`Listbox component Renders correctly 1`] = `
       <span
         class="block truncate text-base leading-6"
       >
-        pages.catalogue.filters.sort.values.undefined
+        Sortieren nach...
       </span>
       <svg
         aria-hidden="true"
