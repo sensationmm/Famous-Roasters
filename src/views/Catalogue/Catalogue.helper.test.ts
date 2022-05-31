@@ -35,9 +35,9 @@ describe('Catalogue helper', () => {
 
   describe('Filter data helper', () => {
     it('Works without values', () => {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
       expect(
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         getFilterData(FilterAttributesMock.result.data, undefined, undefined, undefined, undefined, undefined),
       ).toEqual([
         {
