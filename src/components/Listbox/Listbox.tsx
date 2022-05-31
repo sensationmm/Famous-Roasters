@@ -97,7 +97,7 @@ export const Listbox: React.FC<ListboxProps> = ({
   const renderOptionalAddOn = () => addOn !== undefined && addOn
 
   const renderButton = (open: boolean) => {
-    const renderIcon = (big: boolean, open: boolean) => {
+    const renderIcon = () => {
       if (big) {
         if (open) {
           return <ChevronUpIcon className="-mr-1 ml-2 h-6 w-6 self-center" aria-hidden="true" />
@@ -119,7 +119,7 @@ export const Listbox: React.FC<ListboxProps> = ({
         <Typography type={TypographyType.Heading} size={TypographySize.Tiny} className="block truncate">
           {selectedOption()}
         </Typography>
-        {renderIcon(true, open)}
+        {renderIcon()}
       </HUIListbox.Button>
     ) : (
       <HUIListbox.Button
@@ -129,7 +129,7 @@ export const Listbox: React.FC<ListboxProps> = ({
         <Typography size={TypographySize.Base} className="block truncate">
           {selectedOption()}
         </Typography>
-        {renderIcon(false, open)}
+        {renderIcon()}
       </HUIListbox.Button>
     )
   }
