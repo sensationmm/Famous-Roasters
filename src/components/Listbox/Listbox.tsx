@@ -97,6 +97,20 @@ export const Listbox: React.FC<ListboxProps> = ({
   const renderOptionalAddOn = () => addOn !== undefined && addOn
 
   const renderButton = (open: boolean) => {
+    const renderIcon = (big: boolean, open: boolean) => {
+      if (big) {
+        if (open) {
+          return <ChevronUpIcon className="-mr-1 ml-2 h-6 w-6 self-center" aria-hidden="true" />
+        }
+        return <ChevronDownIcon className="-mr-1 ml-2 h-6 w-6 self-center" aria-hidden="true" />
+      } else {
+        if (open) {
+          return <ChevronUpIcon className="-mr-1 ml-2 h-6 w-6" aria-hidden="true" />
+        }
+        return <ChevronDownIcon className="-mr-1 ml-2 h-6 w-6" aria-hidden="true" />
+      }
+    }
+
     return big ? (
       <HUIListbox.Button
         className="inline-flex justify-between py-2 pr-1 border-b-2 border-brand-black text-left bg-white cursor-default"
@@ -105,11 +119,7 @@ export const Listbox: React.FC<ListboxProps> = ({
         <Typography type={TypographyType.Heading} size={TypographySize.Tiny} className="block truncate">
           {selectedOption()}
         </Typography>
-        {open ? (
-          <ChevronUpIcon className="-mr-1 ml-2 h-6 w-6 self-center" aria-hidden="true" />
-        ) : (
-          <ChevronDownIcon className="-mr-1 ml-2 h-6 w-6 self-center" aria-hidden="true" />
-        )}
+        {renderIcon(true, open)}
       </HUIListbox.Button>
     ) : (
       <HUIListbox.Button
@@ -119,13 +129,16 @@ export const Listbox: React.FC<ListboxProps> = ({
         <Typography size={TypographySize.Base} className="block truncate">
           {selectedOption()}
         </Typography>
-        {open ? (
-          <ChevronUpIcon className="-mr-1 ml-2 h-6 w-6" aria-hidden="true" />
-        ) : (
-          <ChevronDownIcon className="-mr-1 ml-2 h-6 w-6" aria-hidden="true" />
-        )}
+        {renderIcon(false, open)}
       </HUIListbox.Button>
     )
+  }
+
+  const renderOptionText = (option: ListBoxItem) => {
+    if (hasTranslatedValues || (resetOnNoneClick && option === noneItem)) {
+      return t(`${translationPrefix}.values.${option.name}`)
+    }
+    return option.name
   }
 
   return (
@@ -165,9 +178,7 @@ export const Listbox: React.FC<ListboxProps> = ({
                               : 'font-normal'
                           }`}
                         >
-                          {hasTranslatedValues || (resetOnNoneClick && option === noneItem)
-                            ? t(`${translationPrefix}.values.${option.name}`)
-                            : option.name}
+                          {renderOptionText(option)}
                         </span>
                         {selected || activeItems?.find((activeItem) => activeItem.name === option.name) ? (
                           <span className="absolute inset-y-0 left-0 flex items-center pl-1.5">

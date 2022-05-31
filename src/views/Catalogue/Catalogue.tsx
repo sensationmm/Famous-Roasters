@@ -294,7 +294,7 @@ export const Catalogue: React.FC = () => {
   }
 
   const onUpdateFiltersMobile = (f: FilterData[]) => {
-    const allFilters = [filters.filter((f) => f.key === 'coffeeType')[0], ...f]
+    const allFilters = [filters.filter((fil) => fil.key === 'coffeeType')[0], ...f]
     filterAttributesData && processFilterValues(filterAttributesData, allFilters)
   }
 
