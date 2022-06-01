@@ -82,7 +82,7 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
   const itemsInCart = () => (cartSize ? cartSize : 0)
 
   return (
-    <div className="bg-white">
+    <div className="bg-white z-10">
       {/* Mobile menu */}
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="fixed inset-0 flex z-40 xl:hidden" onClose={setOpen}>

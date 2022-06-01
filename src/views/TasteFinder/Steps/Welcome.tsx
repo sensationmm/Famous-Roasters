@@ -16,17 +16,17 @@ export const Welcome: React.FC<WelcomeProps> = ({ next }: WelcomeProps) => {
   }
 
   return (
-    <main className="block md:grid md:grid-cols-3 md:grid-rows-1">
-      <div className="flex items-center justify-center md:justify-start py-32 md:order-2 relative">
-        <img src={welcome} alt={t('pages.tasteFinder.title')} className="absolute top-32 md:top-auto md:-ml-16" />
+    <div className="block min-h-screen md:grid md:grid-cols-3 md:grid-rows-1">
+      <div className="flex items-center justify-center py-24 mt-6 relative md:justify-start md:order-2 md:py-8 md:mt-0">
+        <img src={welcome} alt={t('pages.tasteFinder.title')} className="absolute top-16 md:top-auto md:-ml-16" />
       </div>
-      <div className="flex col-span-2 items-center justify-center py-16 md:order-1 bg-brand-black text-white">
+      <div className="flex col-span-2 items-center justify-center pt-12 pb-72 bg-brand-black text-white md:order-1 md:py-8">
         <div className="flex flex-col items-center md:order-1">
           <Typography
             as="h1"
             type={TypographyType.Heading}
             size={TypographySize.Base}
-            className="flex w-80 mt-8 font-syne md:mt-0"
+            className="flex w-80 mt-24 font-syne md:mt-0"
           >
             {t('pages.tasteFinder.steps.welcome.title')}
           </Typography>
@@ -34,7 +34,7 @@ export const Welcome: React.FC<WelcomeProps> = ({ next }: WelcomeProps) => {
             <ArrowNarrowRightIcon className="w-12 h-6 mr-4" aria-hidden="true" />
             <Typography as="p">{t('pages.tasteFinder.steps.welcome.text')}</Typography>
           </div>
-          <div className="flex w-80 mt-20">
+          <div className="flex w-80 mt-8">
             <Button
               type="button"
               emphasis={ButtonEmphasis.Primary}
@@ -47,6 +47,6 @@ export const Welcome: React.FC<WelcomeProps> = ({ next }: WelcomeProps) => {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   )
 }

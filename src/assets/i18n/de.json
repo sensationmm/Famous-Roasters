@@ -4,6 +4,10 @@
     "name": "WeBean",
     "withLove": "Geröstet mit ❤️ in Berlin"
   },
+  "cta": {
+    "next": "Weiter",
+    "prev": "Zurück"
+  },
   "error": {
     "generic": {
       "actions": {
@@ -265,10 +269,30 @@
       "navigation": "Tastefinder",
       "title": "Tastefinder",
       "steps": {
+        "chocolate": {
+          "options": {
+            "option1": {
+              "text": "Hellere und weniger bittere Milchschokolade"
+            },
+            "option2": {
+              "text": "Dunklere und ausgewogen bittere Schokolade"
+            },
+            "option3": {
+              "text": "Sehr dunkle Zartbitter-schokolade (70% +)"
+            }
+          },
+          "text": "Stell dir vor, dass verschiedene Sorten Schokolade vor dir auf dem Tisch liegen. Für welche würdest du dich entscheiden?"
+        },
         "welcome": {
           "cta": "Tastefinder starten",
           "text": "Finde deinen persönlichen Kaffeetyp und erhalte Empfehlungen, die zu deinem Geschmack passen.",
           "title": "Finde jetzt deinen Specialty Coffee mit dem Tastefinder."
+        },
+        "yourName": {
+          "input": {
+            "label": "Gib deinen Namen Ein"
+          },
+          "title": "Wie sollen wir dich nennen?"
         }
       }
     }
