@@ -6,7 +6,7 @@ exports[`Checkout view Renders correctly 1`] = `
     class="min-h-screen flex flex-col text-brand-black"
   >
     <div
-      class="bg-white"
+      class="bg-white z-10"
     >
       <header
         class="relative bg-white"

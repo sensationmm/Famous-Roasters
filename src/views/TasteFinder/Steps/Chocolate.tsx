@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import image1 from 'src/assets/images/tasteFinder/01-chocolate-leicht.webp'
 import image2 from 'src/assets/images/tasteFinder/02-chocolate-mittel.webp'
 import image3 from 'src/assets/images/tasteFinder/03-chocolate-hoch.webp'
-import { Typography, TypographySize, TypographyType } from 'src/components'
+import { ImageCheckbox, Typography, TypographySize, TypographyType } from 'src/components'
 
 import { TasteFinderFieldHandlerProps } from '..'
 
@@ -13,14 +13,36 @@ export const Chocolate: React.FC<TasteFinderFieldHandlerProps> = ({
 }: TasteFinderFieldHandlerProps) => {
   const { t } = useTranslation()
 
-  const handleDataChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    updateData({ name: e.target.name, value: e.target.value })
+  const ChocolateData = [
+    {
+      name: '1',
+      image: image1,
+      text: t('pages.tasteFinder.steps.chocolate.options.option1.text'),
+    },
+    {
+      name: '2',
+      image: image2,
+      text: t('pages.tasteFinder.steps.chocolate.options.option2.text'),
+    },
+    {
+      name: '3',
+      image: image3,
+      text: t('pages.tasteFinder.steps.chocolate.options.option3.text'),
+    },
+  ]
+
+  const handleDataChange = (selected: boolean, name: string) => {
+    if (!selected) {
+      updateData({ name: 'chocolate', value: undefined })
+    } else {
+      updateData({ name: 'chocolate', value: name })
+    }
   }
 
-  const getCurrentFieldData = (fieldName: string) => currentData.find((e) => e.name === fieldName)?.value || ''
+  const getCurrentFieldData = () => currentData.find((e) => e.name === 'chocolate')?.value || undefined
 
   return (
-    <div className="flex-grow flex items-center justify-center bg-white">
+    <div className="flex-grow flex flex-col items-center justify-center bg-white">
       <div className="p-6 md:w-5/6">
         <Typography
           as="h1"
@@ -30,44 +52,21 @@ export const Chocolate: React.FC<TasteFinderFieldHandlerProps> = ({
         >
           {t('pages.tasteFinder.steps.chocolate.text')}
         </Typography>
-        <div className="mt-20 snap-x flex flex-row">
-          <div className="w-72 h-80 relative scroll-auto">
-            <div className="w-72 h-72 absolute rounded-full bg-brand-grey-whisper" />
-            <img src={image1} alt="" className="absolute -top-8" />
-            <Typography
-              as="div"
-              type={TypographyType.Heading}
-              size={TypographySize.Small}
-              className="absolute font-syne font-normal text-center bottom-4"
-            >
-              {t('pages.tasteFinder.steps.chocolate.options.option1.text')}
-            </Typography>
-          </div>
-          <div className="w-72 h-80 relative scroll-auto">
-            <div className="w-72 h-72 absolute rounded-full bg-brand-grey-whisper" />
-            <img src={image2} alt="" className="absolute -top-8" />
-            <Typography
-              as="div"
-              type={TypographyType.Heading}
-              size={TypographySize.Small}
-              className="absolute font-syne font-normal text-center bottom-4"
-            >
-              {t('pages.tasteFinder.steps.chocolate.options.option2.text')}
-            </Typography>
-          </div>
-          <div className="w-72 h-80 relative scroll-auto">
-            <div className="w-72 h-72 absolute rounded-full bg-brand-grey-whisper" />
-            <img src={image3} alt="" className="absolute -top-8" />
-            <Typography
-              as="div"
-              type={TypographyType.Heading}
-              size={TypographySize.Small}
-              className="absolute font-syne font-normal text-center bottom-4"
-            >
-              {t('pages.tasteFinder.steps.chocolate.options.option3.text')}
-            </Typography>
-          </div>
-        </div>
+      </div>
+      <div className="relative flex w-full overflow-x-auto gap-x-10 snap-x xl:justify-center">
+        <div className="w-1/12 pr-12 -mx-2.5 h-80 relative shrink-0 snap-start scroll-auto" />
+        {ChocolateData.map((item, idx) => (
+          <ImageCheckbox
+            key={`imagecheckbox-${idx}`}
+            name={item.name}
+            imageSrc={item.image}
+            text={item.text}
+            selected={getCurrentFieldData() === item.name}
+            toggleSelected={(selected) => handleDataChange(selected, item.name)}
+            className="shrink-0 snap-center scroll-auto"
+          />
+        ))}
+        <div className="w-1/12 pl-12 -mx-2.5 h-80 relative shrink-0 snap-start scroll-auto" />
       </div>
     </div>
   )

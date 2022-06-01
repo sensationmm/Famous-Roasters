@@ -61,7 +61,7 @@ const TasteFinderSteps = [
 
 export interface TasteFinderField {
   name: string
-  value: string
+  value: string | undefined
 }
 
 export interface TasteFinderFieldHandlerProps {
@@ -97,7 +97,7 @@ export const TasteFinder: React.FC = () => {
       case TasteFinderStepsNames.YourName:
         return <YourName currentData={getCurrentData(['name'])} updateData={handleData} />
       case TasteFinderStepsNames.Chocolate:
-        return <Chocolate currentData={getCurrentData(['name'])} updateData={handleData} />
+        return <Chocolate currentData={getCurrentData(['chocolate'])} updateData={handleData} />
       case TasteFinderStepsNames.Welcome:
       default:
         return <Welcome next={() => navigateTo(1)} />
@@ -148,9 +148,13 @@ export const TasteFinder: React.FC = () => {
   const isNextDisabledInStep = (key: string) => {
     switch (key) {
       case TasteFinderStepsNames.YourName: {
-        const nameField = getCurrentData(['name'])[0]
-        const isNameEmpty = nameField === undefined || nameField.value.length == 0
+        const field = getCurrentData(['name'])[0]
+        const isNameEmpty = field === undefined || field.value?.length == 0
         return isNameEmpty
+      }
+      case TasteFinderStepsNames.Chocolate: {
+        const field = getCurrentData(['chocolate'])[0]
+        return field === undefined || field.value === undefined
       }
       default:
         return true

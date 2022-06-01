@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageCheckbox component Renders correctly 1`] = `
+<div>
+  <button
+    class="w-64 h-80 mt-8 relative cursor-pointer undefined"
+  >
+    <div
+      class="w-64 h-64 top-0 absolute rounded-full bg-brand-grey-whisper"
+    />
+    <img
+      alt=""
+      class="absolute -top-8"
+      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/19grams_Wild_At_Heart_copy.webp?v=1652256584"
+    />
+    <div
+      class="absolute h-24 font-syne font-normal text-center bottom-4 text-2xl leading-8 font-semibold"
+    >
+      Dieser Kaffee ist lekka
+    </div>
+  </button>
+</div>
+`;

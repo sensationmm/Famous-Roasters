@@ -6,7 +6,7 @@ exports[`Taste Finder view Renders correctly 1`] = `
     class="min-h-screen flex flex-col text-brand-black"
   >
     <div
-      class="bg-white"
+      class="bg-white z-10"
     >
       <header
         class="relative bg-white"
@@ -183,60 +183,64 @@ exports[`Taste Finder view Renders correctly 1`] = `
       </header>
     </div>
     <main
-      class="block md:grid md:grid-cols-3 md:grid-rows-1"
+      class="flex flex-col -mt-16 min-h-screen"
     >
       <div
-        class="flex items-center justify-center md:justify-start py-32 md:order-2 relative"
-      >
-        <img
-          alt="Tastefinder"
-          class="absolute top-32 md:top-auto md:-ml-16"
-          src="welcome.webp"
-        />
-      </div>
-      <div
-        class="flex col-span-2 items-center justify-center py-16 md:order-1 bg-brand-black text-white"
+        class="block min-h-screen md:grid md:grid-cols-3 md:grid-rows-1"
       >
         <div
-          class="flex flex-col items-center md:order-1"
+          class="flex items-center justify-center py-24 mt-6 relative md:justify-start md:order-2 md:py-8 md:mt-0"
         >
-          <h1
-            class="flex w-80 mt-8 font-syne md:mt-0 text-3xl leading-10 font-semibold tracking-tight"
-          >
-            Finde jetzt deinen Specialty Coffee mit dem Tastefinder.
-          </h1>
+          <img
+            alt="Tastefinder"
+            class="absolute top-16 md:top-auto md:-ml-16"
+            src="welcome.webp"
+          />
+        </div>
+        <div
+          class="flex col-span-2 items-center justify-center pt-12 pb-72 bg-brand-black text-white md:order-1 md:py-8"
+        >
           <div
-            class="flex w-80 mt-4"
+            class="flex flex-col items-center md:order-1"
           >
-            <svg
-              aria-hidden="true"
-              class="w-12 h-6 mr-4"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
+            <h1
+              class="flex w-80 mt-24 font-syne md:mt-0 text-3xl leading-10 font-semibold tracking-tight"
             >
-              <path
-                clip-rule="evenodd"
-                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                fill-rule="evenodd"
-              />
-            </svg>
-            <p
-              class="text-base leading-6"
+              Finde jetzt deinen Specialty Coffee mit dem Tastefinder.
+            </h1>
+            <div
+              class="flex w-80 mt-4"
             >
-              Finde deinen persönlichen Kaffeetyp und erhalte Empfehlungen, die zu deinem Geschmack passen.
-            </p>
-          </div>
-          <div
-            class="flex w-80 mt-20"
-          >
-            <button
-              class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
-              role="button"
-              type="button"
+              <svg
+                aria-hidden="true"
+                class="w-12 h-6 mr-4"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+              <p
+                class="text-base leading-6"
+              >
+                Finde deinen persönlichen Kaffeetyp und erhalte Empfehlungen, die zu deinem Geschmack passen.
+              </p>
+            </div>
+            <div
+              class="flex w-80 mt-8"
             >
-              Tastefinder starten
-            </button>
+              <button
+                class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+                role="button"
+                type="button"
+              >
+                Tastefinder starten
+              </button>
+            </div>
           </div>
         </div>
       </div>

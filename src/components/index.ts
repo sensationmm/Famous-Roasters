@@ -12,6 +12,7 @@ import { FiltersMenuMobile } from './FiltersMenuMobile'
 import { Footer } from './Footer'
 import { GrindsInfo } from './GrindsInfo'
 import { Icon, IconName, IconSize } from './Icon'
+import { ImageCheckbox } from './ImageCheckbox'
 import { Input, InputMode } from './Input'
 import { Layout } from './Layout'
 import { Listbox, ListBoxItem } from './Listbox'
@@ -47,6 +48,7 @@ export { GrindsInfo as GrindsInfo }
 export { Icon as Icon }
 export { IconName as IconName }
 export { IconSize as IconSize }
+export { ImageCheckbox as ImageCheckbox }
 export { Input as Input }
 export { InputMode as InputMode }
 export { Layout as Layout }

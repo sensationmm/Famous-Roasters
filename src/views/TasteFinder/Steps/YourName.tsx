@@ -19,7 +19,12 @@ export const YourName: React.FC<TasteFinderFieldHandlerProps> = ({
   return (
     <div className="flex-grow flex items-center justify-center bg-white">
       <div className="p-6">
-        <Typography as="h1" type={TypographyType.Heading} size={TypographySize.Base} className="flex font-syne">
+        <Typography
+          as="h1"
+          type={TypographyType.Heading}
+          size={TypographySize.Tiny}
+          className="flex md:text-2xl md:leading-8 xl:text-3xl xl:leading-10"
+        >
           {t('pages.tasteFinder.steps.yourName.title')}
         </Typography>
         <Input

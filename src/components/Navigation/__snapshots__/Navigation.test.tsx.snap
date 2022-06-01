@@ -3,7 +3,7 @@
 exports[`Navigation component Renders correctly with home theme 1`] = `
 <div>
   <div
-    class="bg-white"
+    class="bg-white z-10"
   >
     <header
       class="relative bg-white"
@@ -185,7 +185,7 @@ exports[`Navigation component Renders correctly with home theme 1`] = `
 exports[`Navigation component Renders correctly with shop theme 1`] = `
 <div>
   <div
-    class="bg-white"
+    class="bg-white z-10"
   >
     <header
       class="relative bg-white"
