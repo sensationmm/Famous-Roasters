@@ -3,7 +3,14 @@ import { useTranslation } from 'react-i18next'
 import { useSearchParams } from 'react-router-dom'
 import { Layout, NavigationTheme, StickyBottomNavigation } from 'src/components'
 
-import { Acidity, Bitterness, Body, Sweetness, Welcome, YourName } from './Steps'
+import {
+  Acidity as AcidityPartial,
+  Bitterness as BitternessPartial,
+  Body as BodyPartial,
+  Sweetness as SweetnessPartial,
+  Welcome as WelcomePartial,
+  YourName as YourNamePartial,
+} from './Steps'
 
 enum TasteFinderStepsNames {
   Welcome = 'willkommen',
@@ -107,18 +114,18 @@ export const TasteFinder: React.FC = () => {
   const renderStep = (key: string) => {
     switch (key) {
       case TasteFinderStepsNames.YourName:
-        return <YourName currentData={getCurrentData(['name'])} updateData={handleData} />
+        return <YourNamePartial currentData={getCurrentData(['name'])} updateData={handleData} />
       case TasteFinderStepsNames.Bitterness:
-        return <Bitterness currentData={getCurrentData(['bitterness'])} updateData={handleData} />
+        return <BitternessPartial currentData={getCurrentData(['bitterness'])} updateData={handleData} />
       case TasteFinderStepsNames.Sweetness:
-        return <Sweetness currentData={getCurrentData(['sweetness'])} updateData={handleData} />
+        return <SweetnessPartial currentData={getCurrentData(['sweetness'])} updateData={handleData} />
       case TasteFinderStepsNames.Acidity:
-        return <Acidity currentData={getCurrentData(['acidity'])} updateData={handleData} />
+        return <AcidityPartial currentData={getCurrentData(['acidity'])} updateData={handleData} />
       case TasteFinderStepsNames.Body:
-        return <Body currentData={getCurrentData(['body'])} updateData={handleData} />
+        return <BodyPartial currentData={getCurrentData(['body'])} updateData={handleData} />
       case TasteFinderStepsNames.Welcome:
       default:
-        return <Welcome next={() => navigateTo(1)} />
+        return <WelcomePartial next={() => navigateTo(1)} />
     }
   }
 

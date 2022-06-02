@@ -10,7 +10,7 @@ interface GuideEntry {
 interface GuideInfoProps extends React.HTMLAttributes<HTMLElement> {
   screenKey: string
   images: string[]
-  className?: string | undefined
+  className?: string
 }
 
 export const Guide: React.FC<GuideInfoProps> = ({ screenKey, images, className }: GuideInfoProps) => {
@@ -61,12 +61,12 @@ export const Guide: React.FC<GuideInfoProps> = ({ screenKey, images, className }
           {t(`guides.${screenKey}.text`)}
         </Typography>
         {infoData.map((item, idx) => {
-          const className =
+          const containerClassName =
             idx === infoData.length - 1
               ? 'flex items-start justify-between p-5'
               : 'flex items-start justify-between p-5 border-b border-coreUI-background-images'
           return (
-            <div key={`grinds-info-item-${item.key}`} className={className}>
+            <div key={`grinds-info-item-${item.key}`} className={containerClassName}>
               <div className="relative w-20 h-20 rounded-full flex items-center justify-center overflow-clip">
                 <div className="w-20 h-20 top-0 absolute rounded-full bg-brand-grey-whisper" />
                 <img src={item.image} alt={`image-${item.key}`} className="absolute" />
