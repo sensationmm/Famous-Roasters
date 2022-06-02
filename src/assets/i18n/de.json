@@ -37,6 +37,28 @@
       "text": "A pleasure for every taste."
     }
   },
+  "guides": {
+    "chocolate":{
+      "items": {
+        "intense": {
+          "text": "Du magst Kaffees mit einer starken Bitternote.",
+          "title": "Dunkle Schokolade"
+        },
+        "medium": {
+          "text": "Du magst Kaffees mit einer ausgeglichenen Bitternote.",
+          "title": "Schokolade mit hohem Kakaoanteil (<70%)"
+        },
+        "soft": {
+          "text": "Du magst Kaffee mit einer leichten Bitternote.",
+          "title": "Milchschokolade"
+        }
+      },
+      "overline": "Erklärung",
+      "text": "Unsere Kaffeeexperten nutzen den Vergleich mit Schokolade, um herauszufinden, wie bitter dein Kaffee sein darf.",
+      "title": "Was hat das mit Kaffee zu tun?",
+      "trigger": "Was hat das mit Kaffee zu tun?"
+    }
+  },
   "pages": {
     "about": {
       "navigation": "Über uns",
@@ -272,12 +294,15 @@
         "chocolate": {
           "options": {
             "option1": {
+              "selectedText": "Leicht Stärke",
               "text": "Hellere und weniger bittere Milchschokolade"
             },
             "option2": {
+              "selectedText": "Mittel Stärke",
               "text": "Dunklere und ausgewogen bittere Schokolade"
             },
             "option3": {
+              "selectedText": "Hoch Stärke",
               "text": "Sehr dunkle Zartbitter-schokolade (70% +)"
             }
           },

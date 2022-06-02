@@ -11,6 +11,7 @@ import { FilterData, FilterMobile } from './FilterMobile'
 import { FiltersMenuMobile } from './FiltersMenuMobile'
 import { Footer } from './Footer'
 import { GrindsInfo } from './GrindsInfo'
+import { Guide } from './Guide'
 import { Icon, IconName, IconSize } from './Icon'
 import { ImageCheckbox } from './ImageCheckbox'
 import { Input, InputMode } from './Input'
@@ -45,6 +46,7 @@ export { FilterMobile as FilterMobile }
 export { FiltersMenuMobile as FiltersMenuMobile }
 export { Footer as Footer }
 export { GrindsInfo as GrindsInfo }
+export { Guide as Guide }
 export { Icon as Icon }
 export { IconName as IconName }
 export { IconSize as IconSize }

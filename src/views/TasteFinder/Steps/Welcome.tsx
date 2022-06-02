@@ -41,6 +41,7 @@ export const Welcome: React.FC<WelcomeProps> = ({ next }: WelcomeProps) => {
               size={ButtonSize.md}
               className="flex w-full justify-center"
               onClick={handleNext}
+              data-testid="button-start"
             >
               {t('pages.tasteFinder.steps.welcome.cta')}
             </Button>

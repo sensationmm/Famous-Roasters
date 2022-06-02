@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YourName step partial view Renders correctly 1`] = `
+<div>
+  <div
+    class="flex-grow flex items-center justify-center bg-white"
+  >
+    <div
+      class="p-6"
+    >
+      <h1
+        class="flex md:text-2xl md:leading-8 xl:text-3xl xl:leading-10 text-xl leading-7 font-semibold"
+      >
+        Wie sollen wir dich nennen?
+      </h1>
+      <label
+        class="relative"
+      >
+        <span
+          class="absolute -top-6 left-3 px-2 bg-white"
+        >
+          <span
+            class="text-sm leading-5"
+          >
+            Gib deinen Namen Ein
+          </span>
+        </span>
+        <input
+          class="mt-12 w-full border rounded-full px-4 py-2"
+          data-testid="your-name-input"
+          name="name"
+          value=""
+        />
+      </label>
+    </div>
+  </div>
+</div>
+`;

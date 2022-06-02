@@ -31,6 +31,7 @@ export const YourName: React.FC<TasteFinderFieldHandlerProps> = ({
           name="name"
           labelText={t('pages.tasteFinder.steps.yourName.input.label')}
           className="mt-12 w-full"
+          data-testid="your-name-input"
           value={getCurrentFieldData('name')}
           onChange={(e) => handleDataChange(e)}
         />

@@ -84,6 +84,7 @@ export const Typography: React.FC<TypographyProps> = ({
   size = Size.Base,
   className,
   children,
+  style,
 }: TypographyProps) => {
   const Element = ({ ...props }) => React.createElement(as, props, children)
   return (
@@ -91,6 +92,7 @@ export const Typography: React.FC<TypographyProps> = ({
       className={
         className ? `${className} ${getTypographyClassNames(type, size)}` : getTypographyClassNames(type, size)
       }
+      style={style}
     >
       {children}
     </Element>
