@@ -8,7 +8,7 @@ import { i18n } from 'src/config'
 
 import { TasteScreen } from '.'
 
-const ChocolateData = [
+const BitternessData = [
   {
     name: '1',
     image: image1,
@@ -35,7 +35,7 @@ describe('Taste screen dynamic partial view', () => {
   it('Renders correctly', async () => {
     const { container } = render(
       <I18nextProvider i18n={i18n}>
-        <TasteScreen screenKey="chocolate" screenData={ChocolateData} currentData={[]} updateData={() => null} />
+        <TasteScreen screenKey="bitterness" screenData={BitternessData} currentData={[]} updateData={() => null} />
       </I18nextProvider>,
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))

@@ -3,15 +3,15 @@ import React from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { i18n } from 'src/config'
 
-import { Chocolate } from '.'
+import { Acidity } from '.'
 
 global.alert = jest.fn()
 
-describe('Chocolate partial view', () => {
+describe('Acidity partial view', () => {
   it('Renders correctly', async () => {
     const { container } = render(
       <I18nextProvider i18n={i18n}>
-        <Chocolate currentData={[]} updateData={() => null} />
+        <Acidity currentData={[]} updateData={() => null} />
       </I18nextProvider>,
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
@@ -21,7 +21,7 @@ describe('Chocolate partial view', () => {
   it('The user can change the state by clicking an image checkbox', async () => {
     render(
       <I18nextProvider i18n={i18n}>
-        <Chocolate currentData={[]} updateData={() => null} />
+        <Acidity currentData={[]} updateData={() => null} />
       </I18nextProvider>,
     )
     const imageCheckboxes = await screen.findAllByTestId('image-checkbox')

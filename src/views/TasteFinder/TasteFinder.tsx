@@ -3,17 +3,17 @@ import { useTranslation } from 'react-i18next'
 import { useSearchParams } from 'react-router-dom'
 import { Layout, NavigationTheme, StickyBottomNavigation } from 'src/components'
 
-import { Chocolate, Welcome, YourName } from './Steps'
+import { Acidity, Bitterness, Body, Sweetness, Welcome, YourName } from './Steps'
 
 enum TasteFinderStepsNames {
-  Welcome = 'welcome',
-  YourName = 'your-name',
-  Chocolate = 'chocolate',
-  Sweet = 'sweet',
-  Fruit = 'fruit',
-  Body = 'body',
-  Brewing = 'brewing',
-  Purchase = 'purchase',
+  Welcome = 'willkommen',
+  YourName = 'deiner-name',
+  Bitterness = 'stärke',
+  Sweetness = 'süße',
+  Acidity = 'lebendigkeit',
+  Body = 'körper',
+  Brewing = 'zubereitung',
+  Adventurous = 'gewagt',
 }
 
 const TasteFinderSteps = [
@@ -29,17 +29,17 @@ const TasteFinderSteps = [
   },
   {
     index: 2,
-    step: TasteFinderStepsNames.Chocolate,
+    step: TasteFinderStepsNames.Bitterness,
     value: 28.6,
   },
   {
     index: 3,
-    step: TasteFinderStepsNames.Sweet,
+    step: TasteFinderStepsNames.Sweetness,
     value: 42.9,
   },
   {
     index: 4,
-    step: TasteFinderStepsNames.Fruit,
+    step: TasteFinderStepsNames.Acidity,
     value: 57.2,
   },
   {
@@ -54,7 +54,7 @@ const TasteFinderSteps = [
   },
   {
     index: 7,
-    step: TasteFinderStepsNames.Purchase,
+    step: TasteFinderStepsNames.Adventurous,
     value: 100,
   },
 ]
@@ -82,8 +82,20 @@ export const TasteFinder: React.FC = () => {
         setSearchParams({ step: TasteFinderStepsNames.YourName })
         break
       case 2:
-        setActualStep(TasteFinderStepsNames.Chocolate)
-        setSearchParams({ step: TasteFinderStepsNames.Chocolate })
+        setActualStep(TasteFinderStepsNames.Bitterness)
+        setSearchParams({ step: TasteFinderStepsNames.Bitterness })
+        break
+      case 3:
+        setActualStep(TasteFinderStepsNames.Sweetness)
+        setSearchParams({ step: TasteFinderStepsNames.Sweetness })
+        break
+      case 4:
+        setActualStep(TasteFinderStepsNames.Acidity)
+        setSearchParams({ step: TasteFinderStepsNames.Acidity })
+        break
+      case 5:
+        setActualStep(TasteFinderStepsNames.Body)
+        setSearchParams({ step: TasteFinderStepsNames.Body })
         break
       default:
         setActualStep(TasteFinderStepsNames.Welcome)
@@ -96,8 +108,14 @@ export const TasteFinder: React.FC = () => {
     switch (key) {
       case TasteFinderStepsNames.YourName:
         return <YourName currentData={getCurrentData(['name'])} updateData={handleData} />
-      case TasteFinderStepsNames.Chocolate:
-        return <Chocolate currentData={getCurrentData(['chocolate'])} updateData={handleData} />
+      case TasteFinderStepsNames.Bitterness:
+        return <Bitterness currentData={getCurrentData(['bitterness'])} updateData={handleData} />
+      case TasteFinderStepsNames.Sweetness:
+        return <Sweetness currentData={getCurrentData(['sweetness'])} updateData={handleData} />
+      case TasteFinderStepsNames.Acidity:
+        return <Acidity currentData={getCurrentData(['acidity'])} updateData={handleData} />
+      case TasteFinderStepsNames.Body:
+        return <Body currentData={getCurrentData(['body'])} updateData={handleData} />
       case TasteFinderStepsNames.Welcome:
       default:
         return <Welcome next={() => navigateTo(1)} />
@@ -149,11 +167,22 @@ export const TasteFinder: React.FC = () => {
     switch (key) {
       case TasteFinderStepsNames.YourName: {
         const field = getCurrentData(['name'])[0]
-        const isNameEmpty = field === undefined || field.value?.length == 0
-        return isNameEmpty
+        return field === undefined || field.value?.length == 0
       }
-      case TasteFinderStepsNames.Chocolate: {
-        const field = getCurrentData(['chocolate'])[0]
+      case TasteFinderStepsNames.Bitterness: {
+        const field = getCurrentData(['bitterness'])[0]
+        return field === undefined || field.value === undefined
+      }
+      case TasteFinderStepsNames.Sweetness: {
+        const field = getCurrentData(['sweetness'])[0]
+        return field === undefined || field.value === undefined
+      }
+      case TasteFinderStepsNames.Acidity: {
+        const field = getCurrentData(['acidity'])[0]
+        return field === undefined || field.value === undefined
+      }
+      case TasteFinderStepsNames.Body: {
+        const field = getCurrentData(['body'])[0]
         return field === undefined || field.value === undefined
       }
       default:

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Chocolate partial view Renders correctly 1`] = `
+exports[`Bitterness partial view Renders correctly 1`] = `
 <div>
   <div
     class="flex-grow flex flex-col items-center justify-center bg-white"

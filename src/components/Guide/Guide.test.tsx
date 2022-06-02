@@ -12,7 +12,7 @@ describe('ChocolateInfo component', () => {
   it('Renders correctly', async () => {
     const { container } = render(
       <I18nextProvider i18n={i18n}>
-        <Guide screenKey="chocolate" images={[image1, image2, image3]} />
+        <Guide screenKey="bitterness" images={[image1, image2, image3]} />
       </I18nextProvider>,
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))

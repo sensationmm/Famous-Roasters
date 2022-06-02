@@ -15,6 +15,6 @@ const Template: ComponentStory<typeof Guide> = (args) => <Guide {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-  screenKey: 'chocolate',
+  screenKey: 'bitterness',
   images: [image1, image2, image3],
 }

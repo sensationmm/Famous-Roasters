@@ -5,7 +5,6 @@ import { MemoryRouter } from 'react-router-dom'
 import { i18n } from 'src/config'
 
 import { TasteFinder } from '.'
-import { Chocolate } from './Steps'
 
 describe('Taste Finder view', () => {
   it('Renders correctly', async () => {
@@ -45,11 +44,21 @@ describe('Taste Finder view', () => {
     fireEvent.change(input, { target: { value: 'Flávio' } })
     expect(nextButton).toBeInTheDocument()
     fireEvent.click(nextButton)
+    const imageCheckboxesBitterness = await screen.findAllByTestId('image-checkbox')
+    expect(imageCheckboxesBitterness[0]).toBeInTheDocument()
+    fireEvent.click(imageCheckboxesBitterness[0])
     fireEvent.click(nextButton)
-    const imageCheckboxes = await screen.findAllByTestId('image-checkbox')
-    expect(imageCheckboxes[0]).toBeInTheDocument()
-    fireEvent.click(imageCheckboxes[0])
+    const imageCheckboxesSweetness = await screen.findAllByTestId('image-checkbox')
+    expect(imageCheckboxesSweetness[0]).toBeInTheDocument()
+    fireEvent.click(imageCheckboxesSweetness[0])
     fireEvent.click(nextButton)
+    const imageCheckboxesAcidity = await screen.findAllByTestId('image-checkbox')
+    expect(imageCheckboxesAcidity[0]).toBeInTheDocument()
+    fireEvent.click(imageCheckboxesAcidity[0])
+    fireEvent.click(nextButton)
+    const imageCheckboxesBody = await screen.findAllByTestId('image-checkbox')
+    expect(imageCheckboxesBody[0]).toBeInTheDocument()
+    fireEvent.click(imageCheckboxesBody[0])
     fireEvent.click(nextButton)
   })
 })
