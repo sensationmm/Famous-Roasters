@@ -183,7 +183,8 @@ exports[`Taste Finder view Renders correctly 1`] = `
       </header>
     </div>
     <main
-      class="flex flex-col -mt-16 min-h-screen"
+      class="flex flex-col"
+      style="min-height: calc(100vh - 66px);"
     >
       <div
         class="block min-h-screen md:grid md:grid-cols-3 md:grid-rows-1"

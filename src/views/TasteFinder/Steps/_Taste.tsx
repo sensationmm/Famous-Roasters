@@ -107,7 +107,7 @@ export const _Taste: React.FC<TastePartialScreenProps> = ({
           <div className="w-1/12 pl-12 -mx-2.5 h-80 relative shrink-0 snap-start scroll-auto" />
         </div>
       ) : (
-        <div className="grid gap-x-4 w-full max-h-96 overflow-y-auto md:w-5/6 md:grid-rows-3 md:grid-cols-2 md:grid-flow-col">
+        <div className="grid gap-x-4 w-full md:w-5/6 md:grid-rows-3 md:grid-cols-2 md:grid-flow-col">
           {screenData.map((item, idx) => {
             if (imageType === 'icon') {
               return (

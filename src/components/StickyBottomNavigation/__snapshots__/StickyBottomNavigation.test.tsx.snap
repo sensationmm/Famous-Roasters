@@ -3,7 +3,7 @@
 exports[`StickyBottomNavigation component Renders correctly 1`] = `
 <div>
   <div
-    class="sticky bottom-0"
+    class="sticky bottom-0 bg-white"
   >
     <div
       class="h-0.5 border-b border-brand-grey-whisper"
@@ -35,7 +35,7 @@ exports[`StickyBottomNavigation component Renders correctly 1`] = `
 exports[`StickyBottomNavigation component Renders correctly with optional props 1`] = `
 <div>
   <div
-    class="sticky bottom-0"
+    class="sticky bottom-0 bg-white"
   >
     <div
       class="h-1 bg-coreUI-border"

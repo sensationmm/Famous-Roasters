@@ -18,7 +18,7 @@ export const StickyBottomNavigation: React.FC<StickyBottomNavigationProps> = ({
   const { t } = useTranslation()
 
   return (
-    <div className="sticky bottom-0">
+    <div className="sticky bottom-0 bg-white">
       {percentage ? (
         <div className="h-1 bg-coreUI-border">
           <div className={`h-1 bg-brand-black transition-all`} style={{ width: `${percentage}%` }} />
