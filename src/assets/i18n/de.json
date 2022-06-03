@@ -396,15 +396,15 @@
           "options": {
             "option1": {
               "selectedText": "Leicht Körper",
-              "text": "Leichten Körper und flüssigen Mundgefühl Americano"
+              "text": "Americano - leichter Körper, flüssiges Mundgefühl"
             },
             "option2": {
               "selectedText": "Mittel Körper",
-              "text": "Ausgewogenen Körper und einem milchigen Mundgefühl Milchkaffee "
+              "text": "Milchkaffee - ausgewogener Körper, milchiges Mundgefühl "
             },
             "option3": {
               "selectedText": "Hoch Körper",
-              "text": "Vollen Körper und einem cremigen Mundgefühl Macchiato"
+              "text": "Macchiato - voller Körper, cremiges Mundgefühl"
             }
           },
           "text": "Keine Termine und viel Zeit für eine gute Tasse Kaffee. Wie würdest du deinen Kaffee bestellen?"

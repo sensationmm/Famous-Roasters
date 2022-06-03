@@ -104,7 +104,7 @@ exports[`Body partial view Renders correctly 1`] = `
           <div
             class="font-syne font-normal text-2xl leading-8 font-semibold"
           >
-            Leichten Körper und flüssigen Mundgefühl Americano
+            Americano - leichter Körper, flüssiges Mundgefühl
           </div>
         </div>
       </button>
@@ -126,7 +126,7 @@ exports[`Body partial view Renders correctly 1`] = `
           <div
             class="font-syne font-normal text-2xl leading-8 font-semibold"
           >
-            Ausgewogenen Körper und einem milchigen Mundgefühl Milchkaffee 
+            Milchkaffee - ausgewogener Körper, milchiges Mundgefühl 
           </div>
         </div>
       </button>
@@ -148,7 +148,7 @@ exports[`Body partial view Renders correctly 1`] = `
           <div
             class="font-syne font-normal text-2xl leading-8 font-semibold"
           >
-            Vollen Körper und einem cremigen Mundgefühl Macchiato
+            Macchiato - voller Körper, cremiges Mundgefühl
           </div>
         </div>
       </button>
