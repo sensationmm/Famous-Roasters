@@ -16,6 +16,7 @@ interface GuideInfoProps extends React.HTMLAttributes<HTMLElement> {
   screenKey: string
   images?: (string | undefined)[]
   guideType?: GuideType
+  listGuideItems?: number
   className?: string
 }
 
@@ -23,6 +24,7 @@ export const Guide: React.FC<GuideInfoProps> = ({
   screenKey,
   images,
   guideType = GuideType.List,
+  listGuideItems = 3,
   className,
 }: GuideInfoProps) => {
   const { t } = useTranslation()
@@ -45,20 +47,23 @@ export const Guide: React.FC<GuideInfoProps> = ({
   const headline = t(`guides.${screenKey}.title`)
   const overline = t(`guides.${screenKey}.overline`)
 
-  const infoData: GuideEntry[] = [
-    {
-      key: 'soft',
-      image: images && images[0],
-    },
-    {
-      key: 'medium',
-      image: images && images[1],
-    },
-    {
-      key: 'intense',
-      image: images && images[2],
-    },
-  ]
+  const infoData: GuideEntry[] = []
+
+  if (listGuideItems) {
+    Array.from(Array(listGuideItems).keys()).forEach((index) => {
+      infoData.push({
+        key: index.toString(),
+        image: images && images[index],
+      })
+    })
+  } else {
+    Array.from(Array(3).keys()).forEach((index) => {
+      infoData.push({
+        key: index.toString(),
+        image: images && images[index],
+      })
+    })
+  }
 
   const renderMainContent = () => {
     return (

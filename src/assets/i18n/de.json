@@ -40,15 +40,15 @@
   "guides": {
     "acidity":{
       "items": {
-        "intense": {
+        "0": {
           "text": "Du magst Kaffees mit  deutlichen Säure.",
           "title": "Orangen"
         },
-        "medium": {
+        "1": {
           "text": "Du magst Kaffees mit erkennbarer Säure.",
           "title": "Himbeeren"
         },
-        "soft": {
+        "2": {
           "text": "Du magst Kaffees mit leichter Säure.",
           "title": "Birnen"
         }
@@ -58,17 +58,33 @@
       "title": "Was hat das mit Kaffee zu tun?",
       "trigger": "Was hat das mit Kaffee zu tun?"
     },
+    "adventurous":{
+      "items": {
+        "0": {
+          "text": "Du magst Kaffees mit einem leichten Körper und einem flüssigen Mundgefühl.",
+          "title": "Ich bleibe bei dem, was ich kenne"
+        },
+        "1": {
+          "text": "Du bist offen dafür Kaffeesorten zu probieren von denen du vorher noch nicht gehört hast.",
+          "title": "Ich probiere etwas Neues aus"
+        }
+      },
+      "overline": "Erklärung",
+      "text": "Unsere Kaffeeexperten nutzen diese Frage, um heraus-zufinden, wie offen für Neues du bist. Dadurch können wir sehen, ob wir dir auch Kaffees mit geringer Überein-stimmung empfehlen dürfen.",
+      "title": "Was hat das mit Kaffee zu tun?",
+      "trigger": "Was hat das mit Kaffee zu tun?"
+    },
     "bitterness":{
       "items": {
-        "intense": {
+        "0": {
           "text": "Du magst Kaffees mit einer starken Bitternote.",
           "title": "Dunkle Schokolade"
         },
-        "medium": {
+        "1": {
           "text": "Du magst Kaffees mit einer ausgeglichenen Bitternote.",
           "title": "Schokolade mit hohem Kakaoanteil (<70%)"
         },
-        "soft": {
+        "2": {
           "text": "Du magst Kaffee mit einer leichten Bitternote.",
           "title": "Milchschokolade"
         }
@@ -80,15 +96,15 @@
     },
     "body":{
       "items": {
-        "intense": {
+        "0": {
           "text": "Du magst Kaffees mit einem vollen Körper und einem cremigen Mundgefühl.",
           "title": "Ausgewogenen Körper und einem milchigen Mundgefühl Milchkaffee "
         },
-        "medium": {
+        "1": {
           "text": "Du magst Kaffees mit einem leichten Körper und einem flüssigen Mundgefühl.",
           "title": "Ausgewogenen Körper und einem milchigen Mundgefühl Milchkaffee"
         },
-        "soft": {
+        "2": {
           "text": "Du magst Kaffees mit einem leichten Körper und einem flüssigen Mundgefühl.",
           "title": "Leichten Körper und flüssigen Mundgefühl Americano"
         }
@@ -107,15 +123,15 @@
     },
     "sweetness":{
       "items": {
-        "intense": {
+        "0": {
           "text": "Du magst Kaffees mit einer sehr starken Süße.",
           "title": "Baklava"
         },
-        "medium": {
+        "1": {
           "text": "Du magst Kaffees mit einer erkennbaren Süße.",
           "title": "Panna Cotta"
         },
-        "soft": {
+        "2": {
           "text": "Du magst Kaffees mit einer sehr geringen Süße.",
           "title": "Käse"
         }
@@ -374,6 +390,17 @@
             }
           },
           "text": "Sonntagmorgen. Die Vögel zwitschern und die Sonne scheint. Du bereitest dir einen Obstsalat zu, aber ein Obst fehlt noch. Welches Obst darf in deinem Salat nicht fehlen?"
+        },
+        "adventurous": {
+          "options": {
+            "option1": {
+              "text": "Ich bleibe bei dem, was ich kenne"
+            },
+            "option2": {
+              "text": "Ich probiere etwas Neues aus"
+            }
+          },
+          "text": "Oh nein. Alles ausgetrunken. Du hast keinen Kaffee mehr. Was würdest du jetzt normalerweise tun?"
         },
         "bitterness": {
           "options": {

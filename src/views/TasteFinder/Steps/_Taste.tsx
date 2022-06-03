@@ -35,6 +35,7 @@ interface TastePartialScreenProps extends TasteFinderFieldHandlerProps {
   screenData: TastePartialScreenDataImageItem[] | TastePartialScreenDataIconItem[]
   imageType?: TasteScreenImageType
   guideType?: GuideType
+  listGuideItems?: number
   scrollable?: boolean
 }
 
@@ -43,6 +44,7 @@ export const _Taste: React.FC<TastePartialScreenProps> = ({
   screenData,
   imageType = TasteScreenImageType.Image,
   guideType = GuideType.List,
+  listGuideItems,
   scrollable = true,
   currentData,
   updateData,
@@ -83,7 +85,13 @@ export const _Taste: React.FC<TastePartialScreenProps> = ({
         >
           {t(`pages.tasteFinder.steps.${screenKey}.text`)}
         </Typography>
-        <Guide screenKey={screenKey} images={guideImages} guideType={guideType} className="mt-4" />
+        <Guide
+          screenKey={screenKey}
+          images={guideImages}
+          guideType={guideType}
+          listGuideItems={listGuideItems}
+          className="mt-4"
+        />
       </div>
       {scrollable ? (
         <div className="relative flex w-full overflow-x-auto gap-x-10 snap-x xl:justify-center">
