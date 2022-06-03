@@ -3,9 +3,9 @@ import { useTranslation } from 'react-i18next'
 import image1 from 'src/assets/images/tasteFinder/01-sweet-leicht.webp'
 import image2 from 'src/assets/images/tasteFinder/02-sweet-mittel.webp'
 import image3 from 'src/assets/images/tasteFinder/03-sweet-hoch.webp'
+import { TasteFinderFieldHandlerProps } from 'src/views/TasteFinder'
 
-import { TasteFinderFieldHandlerProps } from '..'
-import { TasteScreen } from '.'
+import { TasteScreen, TasteScreenImageType } from '.'
 
 export const Sweetness: React.FC<TasteFinderFieldHandlerProps> = ({
   currentData,
@@ -35,6 +35,12 @@ export const Sweetness: React.FC<TasteFinderFieldHandlerProps> = ({
   ]
 
   return (
-    <TasteScreen screenKey="sweetness" screenData={SweetnessData} currentData={currentData} updateData={updateData} />
+    <TasteScreen
+      screenKey="sweetness"
+      screenData={SweetnessData}
+      imageType={TasteScreenImageType.Image}
+      currentData={currentData}
+      updateData={updateData}
+    />
   )
 }

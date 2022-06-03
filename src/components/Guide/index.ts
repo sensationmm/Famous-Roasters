@@ -1,3 +1,4 @@
-import { Guide } from './Guide'
+import { Guide, GuideType } from './Guide'
 
 export { Guide as Guide }
+export { GuideType as GuideType }

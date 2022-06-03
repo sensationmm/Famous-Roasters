@@ -3,7 +3,7 @@ import { Icon, IconName, IconSize, Typography, TypographySize, TypographyType } 
 
 interface ImageCheckboxProps extends React.HTMLAttributes<HTMLElement> {
   name: string
-  imageSrc: string
+  imageSrc: string | null
   text?: string
   selectedText?: string
   selected?: boolean
@@ -37,7 +37,7 @@ export const ImageCheckbox: React.FC<ImageCheckboxProps> = ({
       onClick={(ev) => handleClick(ev)}
     >
       <div className="w-64 h-64 top-0 absolute rounded-full bg-brand-grey-whisper" />
-      <img src={imageSrc} alt="" className="absolute -top-8" />
+      {imageSrc && <img src={imageSrc} alt="" className="absolute -top-8" />}
       {isSelected && <Icon name={IconName.Selected} size={IconSize.lg} className="absolute right-0 bottom-32" />}
       <div className="absolute h-32 text-center -bottom-4">
         {text && (
@@ -45,7 +45,7 @@ export const ImageCheckbox: React.FC<ImageCheckboxProps> = ({
             as="div"
             type={TypographyType.Heading}
             size={TypographySize.Small}
-            className=" font-syne font-normal"
+            className="font-syne font-normal"
           >
             {text}
           </Typography>

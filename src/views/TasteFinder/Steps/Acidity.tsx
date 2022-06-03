@@ -3,9 +3,9 @@ import { useTranslation } from 'react-i18next'
 import image1 from 'src/assets/images/tasteFinder/01-fruit-leicht.webp'
 import image2 from 'src/assets/images/tasteFinder/02-fruit-mittel.webp'
 import image3 from 'src/assets/images/tasteFinder/03-fruit-hoch.webp'
+import { TasteFinderFieldHandlerProps } from 'src/views/TasteFinder'
 
-import { TasteFinderFieldHandlerProps } from '..'
-import { TasteScreen } from '.'
+import { TasteScreen, TasteScreenImageType } from '.'
 
 export const Acidity: React.FC<TasteFinderFieldHandlerProps> = ({
   currentData,
@@ -34,5 +34,13 @@ export const Acidity: React.FC<TasteFinderFieldHandlerProps> = ({
     },
   ]
 
-  return <TasteScreen screenKey="acidity" screenData={AcidityData} currentData={currentData} updateData={updateData} />
+  return (
+    <TasteScreen
+      screenKey="acidity"
+      screenData={AcidityData}
+      imageType={TasteScreenImageType.Image}
+      currentData={currentData}
+      updateData={updateData}
+    />
+  )
 }

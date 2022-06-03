@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next'
 import image1 from 'src/assets/images/tasteFinder/01-coffee-leicht.webp'
 import image2 from 'src/assets/images/tasteFinder/02-coffee-mittel.webp'
 import image3 from 'src/assets/images/tasteFinder/03-coffee-hoch.webp'
+import { TasteFinderFieldHandlerProps } from 'src/views/TasteFinder'
 
-import { TasteFinderFieldHandlerProps } from '..'
 import { TasteScreen } from '.'
 
 export const Body: React.FC<TasteFinderFieldHandlerProps> = ({

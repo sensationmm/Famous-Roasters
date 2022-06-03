@@ -11,8 +11,9 @@ import { FilterData, FilterMobile } from './FilterMobile'
 import { FiltersMenuMobile } from './FiltersMenuMobile'
 import { Footer } from './Footer'
 import { GrindsInfo } from './GrindsInfo'
-import { Guide } from './Guide'
+import { Guide, GuideType } from './Guide'
 import { Icon, IconName, IconSize } from './Icon'
+import { IconCheckbox } from './IconCheckbox'
 import { ImageCheckbox } from './ImageCheckbox'
 import { Input, InputMode } from './Input'
 import { Layout } from './Layout'
@@ -47,9 +48,11 @@ export { FiltersMenuMobile as FiltersMenuMobile }
 export { Footer as Footer }
 export { GrindsInfo as GrindsInfo }
 export { Guide as Guide }
+export { GuideType as GuideType }
 export { Icon as Icon }
 export { IconName as IconName }
 export { IconSize as IconSize }
+export { IconCheckbox as IconCheckbox }
 export { ImageCheckbox as ImageCheckbox }
 export { Input as Input }
 export { InputMode as InputMode }

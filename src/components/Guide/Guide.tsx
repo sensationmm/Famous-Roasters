@@ -4,16 +4,27 @@ import { Dialog, Drawer, Icon, IconName, IconSize, Typography, TypographySize, T
 
 interface GuideEntry {
   key: string
-  image: string
+  image?: string
+}
+
+export enum GuideType {
+  List = 'list',
+  Text = 'text',
 }
 
 interface GuideInfoProps extends React.HTMLAttributes<HTMLElement> {
   screenKey: string
-  images: string[]
+  images?: (string | undefined)[]
+  guideType?: GuideType
   className?: string
 }
 
-export const Guide: React.FC<GuideInfoProps> = ({ screenKey, images, className }: GuideInfoProps) => {
+export const Guide: React.FC<GuideInfoProps> = ({
+  screenKey,
+  images,
+  guideType = GuideType.List,
+  className,
+}: GuideInfoProps) => {
   const { t } = useTranslation()
 
   const Trigger = () => (
@@ -37,15 +48,15 @@ export const Guide: React.FC<GuideInfoProps> = ({ screenKey, images, className }
   const infoData: GuideEntry[] = [
     {
       key: 'soft',
-      image: images[0],
+      image: images && images[0],
     },
     {
       key: 'medium',
-      image: images[1],
+      image: images && images[1],
     },
     {
       key: 'intense',
-      image: images[2],
+      image: images && images[2],
     },
   ]
 
@@ -60,32 +71,43 @@ export const Guide: React.FC<GuideInfoProps> = ({ screenKey, images, className }
         >
           {t(`guides.${screenKey}.text`)}
         </Typography>
-        {infoData.map((item, idx) => {
-          const containerClassName =
-            idx === infoData.length - 1
-              ? 'flex items-start justify-between p-5'
-              : 'flex items-start justify-between p-5 border-b border-coreUI-background-images'
-          return (
-            <div key={`grinds-info-item-${item.key}`} className={containerClassName}>
-              <div className="relative w-20 h-20 rounded-full flex items-center justify-center overflow-clip">
-                <div className="w-20 h-20 top-0 absolute rounded-full bg-brand-grey-whisper" />
-                <img src={item.image} alt={`image-${item.key}`} className="absolute" />
+        {guideType === GuideType.List ? (
+          infoData.map((item, idx) => {
+            const containerClassName =
+              idx === infoData.length - 1
+                ? 'flex items-start justify-between p-5'
+                : 'flex items-start justify-between p-5 border-b border-coreUI-background-images'
+            return (
+              <div key={`grinds-info-item-${item.key}`} className={containerClassName}>
+                <div className="relative w-20 h-20 rounded-full flex items-center justify-center overflow-clip">
+                  <div className="w-20 h-20 top-0 absolute rounded-full bg-brand-grey-whisper" />
+                  <img src={item.image} alt={`image-${item.key}`} className="absolute" />
+                </div>
+                <div className="flex flex-1 pl-4 flex-col">
+                  <Typography type={TypographyType.Label} size={TypographySize.Large}>
+                    {t(`guides.${screenKey}.items.${item.key}.title`)}
+                  </Typography>
+                  <Typography
+                    type={TypographyType.Paragraph}
+                    size={TypographySize.Base}
+                    className="text-coreUI-text-secondary mt-1"
+                  >
+                    {t(`guides.${screenKey}.items.${item.key}.text`)}
+                  </Typography>
+                </div>
               </div>
-              <div className="flex flex-1 pl-4 flex-col">
-                <Typography type={TypographyType.Label} size={TypographySize.Large}>
-                  {t(`guides.${screenKey}.items.${item.key}.title`)}
-                </Typography>
-                <Typography
-                  type={TypographyType.Paragraph}
-                  size={TypographySize.Base}
-                  className="text-coreUI-text-secondary mt-1"
-                >
-                  {t(`guides.${screenKey}.items.${item.key}.text`)}
-                </Typography>
-              </div>
-            </div>
-          )
-        })}
+            )
+          })
+        ) : (
+          <Typography
+            as="h4"
+            type={TypographyType.Paragraph}
+            size={TypographySize.Large}
+            className="text-coreUI-text-secondary font-semibold p-5 pt-0"
+          >
+            {t(`guides.${screenKey}.textBold`)}
+          </Typography>
+        )}
       </>
     )
   }

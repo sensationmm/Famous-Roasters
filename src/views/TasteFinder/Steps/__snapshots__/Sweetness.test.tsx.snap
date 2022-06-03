@@ -102,7 +102,7 @@ exports[`Sweetness partial view Renders correctly 1`] = `
           class="absolute h-32 text-center -bottom-4"
         >
           <div
-            class=" font-syne font-normal text-2xl leading-8 font-semibold"
+            class="font-syne font-normal text-2xl leading-8 font-semibold"
           >
             Eine leicht süße Käse
           </div>
@@ -124,7 +124,7 @@ exports[`Sweetness partial view Renders correctly 1`] = `
           class="absolute h-32 text-center -bottom-4"
         >
           <div
-            class=" font-syne font-normal text-2xl leading-8 font-semibold"
+            class="font-syne font-normal text-2xl leading-8 font-semibold"
           >
             Eine ausgewogen süße Panna Cotta
           </div>
@@ -146,7 +146,7 @@ exports[`Sweetness partial view Renders correctly 1`] = `
           class="absolute h-32 text-center -bottom-4"
         >
           <div
-            class=" font-syne font-normal text-2xl leading-8 font-semibold"
+            class="font-syne font-normal text-2xl leading-8 font-semibold"
           >
             Ein intensiv süßes Stück Baklava
           </div>

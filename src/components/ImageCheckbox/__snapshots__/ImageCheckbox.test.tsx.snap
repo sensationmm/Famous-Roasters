@@ -18,7 +18,7 @@ exports[`ImageCheckbox component Renders correctly 1`] = `
       class="absolute h-32 text-center -bottom-4"
     >
       <div
-        class=" font-syne font-normal text-2xl leading-8 font-semibold"
+        class="font-syne font-normal text-2xl leading-8 font-semibold"
       >
         Dieser Kaffee ist lekka
       </div>

@@ -1,27 +1,52 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { Guide, ImageCheckbox, Typography, TypographySize, TypographyType } from 'src/components'
+import {
+  Guide,
+  GuideType,
+  IconCheckbox,
+  IconName,
+  ImageCheckbox,
+  Typography,
+  TypographySize,
+  TypographyType,
+} from 'src/components'
+import { TasteFinderFieldHandlerProps } from 'src/views/TasteFinder'
 
-import { TasteFinderFieldHandlerProps } from '..'
-
-interface TestPartialScreenDataItem {
+interface TastePartialScreenDataImageItem {
   name: string
-  image: string
   text: string
-  selectedText: string
+  image: string
+  selectedText?: string
 }
 
-interface TestPartialScreenProps extends TasteFinderFieldHandlerProps {
+interface TastePartialScreenDataIconItem {
+  name: string
+  text: string
+  iconName: IconName
+}
+
+export enum TasteScreenImageType {
+  Image = 'image',
+  Icon = 'icon',
+}
+
+interface TastePartialScreenProps extends TasteFinderFieldHandlerProps {
   screenKey: string
-  screenData: TestPartialScreenDataItem[]
+  screenData: TastePartialScreenDataImageItem[] | TastePartialScreenDataIconItem[]
+  imageType?: TasteScreenImageType
+  guideType?: GuideType
+  scrollable?: boolean
 }
 
-export const _Taste: React.FC<TestPartialScreenProps> = ({
+export const _Taste: React.FC<TastePartialScreenProps> = ({
   screenKey,
   screenData,
+  imageType = TasteScreenImageType.Image,
+  guideType = GuideType.List,
+  scrollable = true,
   currentData,
   updateData,
-}: TestPartialScreenProps) => {
+}: TastePartialScreenProps) => {
   const { t } = useTranslation()
 
   const handleDataChange = (selected: boolean, name: string) => {
@@ -34,7 +59,18 @@ export const _Taste: React.FC<TestPartialScreenProps> = ({
 
   const getCurrentFieldData = () => currentData.find((e) => e.name === screenKey)?.value || undefined
 
-  const guideImages = screenData.map((x) => x.image)
+  const guideImages = screenData.map((x) => ('image' in x ? x.image : undefined))
+
+  const getIconCheckboxContainerClass = (i: number) => {
+    switch (i) {
+      case 2:
+        return 'scroll-auto border-b border-brand-grey-whisper md:border-0 scroll-auto'
+      case 5:
+        return 'scroll-auto'
+      default:
+        return 'scroll-auto border-b border-brand-grey-whisper'
+    }
+  }
 
   return (
     <div className="flex-grow flex flex-col items-center justify-center bg-white">
@@ -47,24 +83,48 @@ export const _Taste: React.FC<TestPartialScreenProps> = ({
         >
           {t(`pages.tasteFinder.steps.${screenKey}.text`)}
         </Typography>
-        <Guide screenKey={screenKey} images={guideImages} className="mt-4" />
+        <Guide screenKey={screenKey} images={guideImages} guideType={guideType} className="mt-4" />
       </div>
-      <div className="relative flex w-full overflow-x-auto gap-x-10 snap-x xl:justify-center">
-        <div className="w-1/12 pr-12 -mx-2.5 h-80 relative shrink-0 snap-start scroll-auto" />
-        {screenData.map((item, idx) => (
-          <ImageCheckbox
-            key={`imagecheckbox-${idx}`}
-            name={item.name}
-            imageSrc={item.image}
-            text={item.text}
-            selectedText={item.selectedText}
-            selected={getCurrentFieldData() === item.name}
-            toggleSelected={(selected) => handleDataChange(selected, item.name)}
-            className="shrink-0 snap-center scroll-auto"
-          />
-        ))}
-        <div className="w-1/12 pl-12 -mx-2.5 h-80 relative shrink-0 snap-start scroll-auto" />
-      </div>
+      {scrollable ? (
+        <div className="relative flex w-full overflow-x-auto gap-x-10 snap-x xl:justify-center">
+          <div className="w-1/12 pr-12 -mx-2.5 h-80 relative shrink-0 snap-start scroll-auto" />
+          {screenData.map((item, idx) => {
+            if (imageType === 'image') {
+              return (
+                <ImageCheckbox
+                  key={`imagecheckbox-${idx}`}
+                  name={item.name}
+                  imageSrc={'image' in item ? item.image : null}
+                  text={item.text}
+                  selectedText={'selectedText' in item ? item.selectedText : undefined}
+                  selected={getCurrentFieldData() === item.name}
+                  toggleSelected={(selected: boolean) => handleDataChange(selected, item.name)}
+                  className={scrollable ? 'shrink-0 snap-center scroll-auto' : ''}
+                />
+              )
+            }
+          })}
+          <div className="w-1/12 pl-12 -mx-2.5 h-80 relative shrink-0 snap-start scroll-auto" />
+        </div>
+      ) : (
+        <div className="grid gap-x-4 w-full max-h-96 overflow-y-auto md:w-5/6 md:grid-rows-3 md:grid-cols-2 md:grid-flow-col">
+          {screenData.map((item, idx) => {
+            if (imageType === 'icon') {
+              return (
+                <div key={`iconcheckboxcontainer-${idx}`} className={getIconCheckboxContainerClass(idx)}>
+                  <IconCheckbox
+                    name={item.name}
+                    iconName={'iconName' in item ? item.iconName : null}
+                    text={item.text}
+                    selected={getCurrentFieldData() === item.name}
+                    toggleSelected={(selected: boolean) => handleDataChange(selected, item.name)}
+                  />
+                </div>
+              )
+            }
+          })}
+        </div>
+      )}
     </div>
   )
 }

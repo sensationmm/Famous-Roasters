@@ -7,6 +7,7 @@ import {
   Acidity as AcidityPartial,
   Bitterness as BitternessPartial,
   Body as BodyPartial,
+  Brewing as BrewingPartial,
   Sweetness as SweetnessPartial,
   Welcome as WelcomePartial,
   YourName as YourNamePartial,
@@ -104,6 +105,10 @@ export const TasteFinder: React.FC = () => {
         setActualStep(TasteFinderStepsNames.Body)
         setSearchParams({ step: TasteFinderStepsNames.Body })
         break
+      case 6:
+        setActualStep(TasteFinderStepsNames.Brewing)
+        setSearchParams({ step: TasteFinderStepsNames.Brewing })
+        break
       default:
         setActualStep(TasteFinderStepsNames.Welcome)
         setSearchParams({ step: TasteFinderStepsNames.Welcome })
@@ -123,6 +128,8 @@ export const TasteFinder: React.FC = () => {
         return <AcidityPartial currentData={getCurrentData(['acidity'])} updateData={handleData} />
       case TasteFinderStepsNames.Body:
         return <BodyPartial currentData={getCurrentData(['body'])} updateData={handleData} />
+      case TasteFinderStepsNames.Brewing:
+        return <BrewingPartial currentData={getCurrentData(['brewing'])} updateData={handleData} />
       case TasteFinderStepsNames.Welcome:
       default:
         return <WelcomePartial next={() => navigateTo(1)} />
@@ -190,6 +197,10 @@ export const TasteFinder: React.FC = () => {
       }
       case TasteFinderStepsNames.Body: {
         const field = getCurrentData(['body'])[0]
+        return field === undefined || field.value === undefined
+      }
+      case TasteFinderStepsNames.Brewing: {
+        const field = getCurrentData(['brewing'])[0]
         return field === undefined || field.value === undefined
       }
       default:
