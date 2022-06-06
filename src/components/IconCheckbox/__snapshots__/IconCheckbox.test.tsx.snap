@@ -23,7 +23,7 @@ exports[`ImageCheckbox component Renders correctly 1`] = `
       </svg>
     </div>
     <div
-      class="flex w-16 h-16 ml-4 mr-4 rounded-full bg-brand-grey-whisper items-center justify-center"
+      class="flex w-16 h-16 ml-4 mr-4 rounded-full bg-brand-grey-whisper items-center justify-center shrink-0"
     >
       <svg
         height="32"
@@ -41,7 +41,7 @@ exports[`ImageCheckbox component Renders correctly 1`] = `
       </svg>
     </div>
     <div
-      class="flex grow text-base leading-6 font-semibold"
+      class="flex grow text-left text-base leading-6 font-semibold"
     >
       Dieser Kaffee ist lekka
     </div>
@@ -72,7 +72,7 @@ exports[`ImageCheckbox component Renders correctly for selected 1`] = `
       </svg>
     </div>
     <div
-      class="flex w-16 h-16 ml-4 mr-4 rounded-full bg-brand-grey-whisper items-center justify-center"
+      class="flex w-16 h-16 ml-4 mr-4 rounded-full bg-brand-grey-whisper items-center justify-center shrink-0"
     >
       <svg
         height="32"
@@ -90,7 +90,7 @@ exports[`ImageCheckbox component Renders correctly for selected 1`] = `
       </svg>
     </div>
     <div
-      class="flex grow text-base leading-6 font-semibold"
+      class="flex grow text-left text-base leading-6 font-semibold"
     >
       Dieser Kaffee ist lekka
     </div>

@@ -11,4 +11,6 @@ export default {
 const Template: ComponentStory<typeof StickyBottomNavigation> = (args) => <StickyBottomNavigation {...args} />
 
 export const Default = Template.bind({})
-Default.args = {}
+Default.args = {
+  percentage: 30,
+}

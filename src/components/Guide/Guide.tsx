@@ -5,6 +5,7 @@ import { Dialog, Drawer, Icon, IconName, IconSize, Typography, TypographySize, T
 interface GuideEntry {
   key: string
   image?: string
+  icon?: string
 }
 
 export enum GuideType {
@@ -15,6 +16,7 @@ export enum GuideType {
 interface GuideInfoProps extends React.HTMLAttributes<HTMLElement> {
   screenKey: string
   images?: (string | undefined)[]
+  icons?: (string | undefined)[]
   guideType?: GuideType
   listGuideItems?: number
   className?: string
@@ -23,6 +25,7 @@ interface GuideInfoProps extends React.HTMLAttributes<HTMLElement> {
 export const Guide: React.FC<GuideInfoProps> = ({
   screenKey,
   images,
+  icons,
   guideType = GuideType.List,
   listGuideItems = 3,
   className,
@@ -54,6 +57,7 @@ export const Guide: React.FC<GuideInfoProps> = ({
       infoData.push({
         key: index.toString(),
         image: images && images[index],
+        icon: icons && icons[index],
       })
     })
   } else {
@@ -61,6 +65,7 @@ export const Guide: React.FC<GuideInfoProps> = ({
       infoData.push({
         key: index.toString(),
         image: images && images[index],
+        icon: icons && icons[index],
       })
     })
   }
@@ -86,7 +91,8 @@ export const Guide: React.FC<GuideInfoProps> = ({
               <div key={`grinds-info-item-${item.key}`} className={containerClassName}>
                 <div className="relative w-20 h-20 rounded-full flex items-center justify-center overflow-clip">
                   <div className="w-20 h-20 top-0 absolute rounded-full bg-brand-grey-whisper" />
-                  <img src={item.image} alt={`image-${item.key}`} className="absolute" />
+                  {item.image && <img src={item.image} alt={`image-${item.key}`} className="absolute" />}
+                  {item.icon && <Icon name={item.icon} size={IconSize.lg} className="absolute" />}
                 </div>
                 <div className="flex flex-1 pl-4 flex-col">
                   <Typography type={TypographyType.Label} size={TypographySize.Large}>

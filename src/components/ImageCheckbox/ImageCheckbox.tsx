@@ -39,7 +39,7 @@ export const ImageCheckbox: React.FC<ImageCheckboxProps> = ({
       <div className="w-64 h-64 top-0 absolute rounded-full bg-brand-grey-whisper" />
       {imageSrc && <img src={imageSrc} alt="" className="absolute -top-8" />}
       {isSelected && <Icon name={IconName.Selected} size={IconSize.lg} className="absolute right-0 bottom-32" />}
-      <div className="absolute h-32 text-center -bottom-4">
+      <div className="absolute w-full h-32 text-center -bottom-4">
         {text && (
           <Typography
             as="div"

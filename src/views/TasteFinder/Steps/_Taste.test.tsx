@@ -63,6 +63,48 @@ const BrewingData = [
   },
 ]
 
+const ImagesWithoutImagesData = [
+  {
+    name: '1',
+    iconName: IconName.Chemex,
+    text: 'option 1',
+    selectedText: 'is selected!',
+  },
+  {
+    name: '2',
+    iconName: IconName.Chemex,
+    text: 'option 2',
+    selectedText: 'is selected!',
+  },
+  {
+    name: '3',
+    iconName: IconName.Chemex,
+    text: 'option 3',
+    selectedText: 'is selected!',
+  },
+]
+
+const IconsWithoutIconsData = [
+  {
+    name: '1',
+    image: image1,
+    text: 'option 1',
+    selectedText: 'is selected!',
+  },
+  {
+    name: '2',
+    image: image1,
+    text: 'option 2',
+    selectedText: 'is selected!',
+  },
+  {
+    name: '3',
+    image: image1,
+    text: 'option 3',
+    selectedText: 'is selected!',
+  },
+]
+
 global.alert = jest.fn()
 
 describe('Taste screen dynamic partial view', () => {
@@ -89,6 +131,40 @@ describe('Taste screen dynamic partial view', () => {
           screenKey="brewing"
           screenData={BrewingData}
           imageType={TasteScreenImageType.Icon}
+          currentData={[]}
+          updateData={() => null}
+        />
+      </I18nextProvider>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
+
+  it('Handles correctly image type without images', async () => {
+    const { container } = render(
+      <I18nextProvider i18n={i18n}>
+        <TasteScreen
+          screenKey="bitterness"
+          screenData={ImagesWithoutImagesData}
+          imageType={TasteScreenImageType.Image}
+          scrollableImages={false}
+          currentData={[]}
+          updateData={() => null}
+        />
+      </I18nextProvider>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
+
+  it('Handles correctly icon type without icons', async () => {
+    const { container } = render(
+      <I18nextProvider i18n={i18n}>
+        <TasteScreen
+          screenKey="bitterness"
+          screenData={IconsWithoutIconsData}
+          imageType={TasteScreenImageType.Icon}
+          scrollableImages={false}
           currentData={[]}
           updateData={() => null}
         />

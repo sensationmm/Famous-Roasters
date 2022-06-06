@@ -1,4 +1,4 @@
-import { _Taste, TasteScreenImageType } from './_Taste'
+import { _Taste, TasteScreenImageType, TasteScreenItemSize } from './_Taste'
 import { Acidity } from './Acidity'
 import { Adventurous } from './Adventurous'
 import { Bitterness } from './Bitterness'
@@ -16,5 +16,6 @@ export { Body as Body }
 export { Brewing as Brewing }
 export { Sweetness as Sweetness }
 export { TasteScreenImageType as TasteScreenImageType }
+export { TasteScreenItemSize as TasteScreenItemSize }
 export { Welcome as Welcome }
 export { YourName as YourName }

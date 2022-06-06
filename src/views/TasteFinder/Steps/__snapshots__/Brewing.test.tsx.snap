@@ -3,7 +3,7 @@
 exports[`Bitterness partial view Renders correctly 1`] = `
 <div>
   <div
-    class="flex-grow flex flex-col items-center justify-center bg-white"
+    class="flex-grow flex flex-col items-center bg-white md:justify-center"
   >
     <div
       class="p-6 md:w-5/6"
@@ -107,7 +107,7 @@ exports[`Bitterness partial view Renders correctly 1`] = `
             </svg>
           </div>
           <div
-            class="flex w-16 h-16 ml-4 mr-4 rounded-full bg-brand-grey-whisper items-center justify-center"
+            class="flex w-16 h-16 ml-4 mr-4 rounded-full bg-brand-grey-whisper items-center justify-center shrink-0"
           >
             <svg
               height="32"
@@ -125,7 +125,7 @@ exports[`Bitterness partial view Renders correctly 1`] = `
             </svg>
           </div>
           <div
-            class="flex grow text-base leading-6 font-semibold"
+            class="flex grow text-left text-base leading-6 font-semibold"
           >
             French Press
           </div>
@@ -155,7 +155,7 @@ exports[`Bitterness partial view Renders correctly 1`] = `
             </svg>
           </div>
           <div
-            class="flex w-16 h-16 ml-4 mr-4 rounded-full bg-brand-grey-whisper items-center justify-center"
+            class="flex w-16 h-16 ml-4 mr-4 rounded-full bg-brand-grey-whisper items-center justify-center shrink-0"
           >
             <svg
               height="32"
@@ -173,7 +173,7 @@ exports[`Bitterness partial view Renders correctly 1`] = `
             </svg>
           </div>
           <div
-            class="flex grow text-base leading-6 font-semibold"
+            class="flex grow text-left text-base leading-6 font-semibold"
           >
             Aeropress
           </div>
@@ -203,7 +203,7 @@ exports[`Bitterness partial view Renders correctly 1`] = `
             </svg>
           </div>
           <div
-            class="flex w-16 h-16 ml-4 mr-4 rounded-full bg-brand-grey-whisper items-center justify-center"
+            class="flex w-16 h-16 ml-4 mr-4 rounded-full bg-brand-grey-whisper items-center justify-center shrink-0"
           >
             <svg
               height="32"
@@ -221,7 +221,7 @@ exports[`Bitterness partial view Renders correctly 1`] = `
             </svg>
           </div>
           <div
-            class="flex grow text-base leading-6 font-semibold"
+            class="flex grow text-left text-base leading-6 font-semibold"
           >
             V60/Kalita
           </div>
@@ -251,7 +251,7 @@ exports[`Bitterness partial view Renders correctly 1`] = `
             </svg>
           </div>
           <div
-            class="flex w-16 h-16 ml-4 mr-4 rounded-full bg-brand-grey-whisper items-center justify-center"
+            class="flex w-16 h-16 ml-4 mr-4 rounded-full bg-brand-grey-whisper items-center justify-center shrink-0"
           >
             <svg
               height="32"
@@ -269,7 +269,7 @@ exports[`Bitterness partial view Renders correctly 1`] = `
             </svg>
           </div>
           <div
-            class="flex grow text-base leading-6 font-semibold"
+            class="flex grow text-left text-base leading-6 font-semibold"
           >
             Moka Pot
           </div>
@@ -299,7 +299,7 @@ exports[`Bitterness partial view Renders correctly 1`] = `
             </svg>
           </div>
           <div
-            class="flex w-16 h-16 ml-4 mr-4 rounded-full bg-brand-grey-whisper items-center justify-center"
+            class="flex w-16 h-16 ml-4 mr-4 rounded-full bg-brand-grey-whisper items-center justify-center shrink-0"
           >
             <svg
               height="32"
@@ -317,7 +317,7 @@ exports[`Bitterness partial view Renders correctly 1`] = `
             </svg>
           </div>
           <div
-            class="flex grow text-base leading-6 font-semibold"
+            class="flex grow text-left text-base leading-6 font-semibold"
           >
             Chemex
           </div>
@@ -347,7 +347,7 @@ exports[`Bitterness partial view Renders correctly 1`] = `
             </svg>
           </div>
           <div
-            class="flex w-16 h-16 ml-4 mr-4 rounded-full bg-brand-grey-whisper items-center justify-center"
+            class="flex w-16 h-16 ml-4 mr-4 rounded-full bg-brand-grey-whisper items-center justify-center shrink-0"
           >
             <svg
               height="32"
@@ -365,7 +365,7 @@ exports[`Bitterness partial view Renders correctly 1`] = `
             </svg>
           </div>
           <div
-            class="flex grow text-base leading-6 font-semibold"
+            class="flex grow text-left text-base leading-6 font-semibold"
           >
             Espresso Maschine
           </div>

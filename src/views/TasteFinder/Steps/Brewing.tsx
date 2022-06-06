@@ -50,7 +50,7 @@ export const Brewing: React.FC<TasteFinderFieldHandlerProps> = ({
       screenData={BrewingData}
       imageType={TasteScreenImageType.Icon}
       guideType={GuideType.Text}
-      scrollable={false}
+      scrollableImages={false}
       currentData={currentData}
       updateData={updateData}
     />

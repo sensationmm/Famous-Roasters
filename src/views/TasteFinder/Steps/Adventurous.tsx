@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { GuideType, IconName } from 'src/components'
 import { TasteFinderFieldHandlerProps } from 'src/views/TasteFinder'
 
-import { TasteScreen, TasteScreenImageType } from '.'
+import { TasteScreen, TasteScreenImageType, TasteScreenItemSize } from '.'
 
 export const Adventurous: React.FC<TasteFinderFieldHandlerProps> = ({
   currentData,
@@ -13,13 +13,13 @@ export const Adventurous: React.FC<TasteFinderFieldHandlerProps> = ({
 
   const AdventurousData = [
     {
-      name: 'french',
-      iconName: IconName.FrenchPress,
+      name: 'conservative',
+      iconName: IconName.Sofa,
       text: t('pages.tasteFinder.steps.adventurous.options.option1.text'),
     },
     {
-      name: 'aeropress',
-      iconName: IconName.Aeropress,
+      name: 'adventurous',
+      iconName: IconName.Explore,
       text: t('pages.tasteFinder.steps.adventurous.options.option2.text'),
     },
   ]
@@ -29,9 +29,10 @@ export const Adventurous: React.FC<TasteFinderFieldHandlerProps> = ({
       screenKey="adventurous"
       screenData={AdventurousData}
       imageType={TasteScreenImageType.Icon}
+      itemSize={TasteScreenItemSize.Large}
       guideType={GuideType.List}
       listGuideItems={2}
-      scrollable={false}
+      scrollableImages={false}
       currentData={currentData}
       updateData={updateData}
     />

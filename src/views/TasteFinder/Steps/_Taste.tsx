@@ -30,22 +30,29 @@ export enum TasteScreenImageType {
   Icon = 'icon',
 }
 
+export enum TasteScreenItemSize {
+  Normal = 'normal',
+  Large = 'large',
+}
+
 interface TastePartialScreenProps extends TasteFinderFieldHandlerProps {
   screenKey: string
   screenData: TastePartialScreenDataImageItem[] | TastePartialScreenDataIconItem[]
   imageType?: TasteScreenImageType
+  itemSize?: TasteScreenItemSize
   guideType?: GuideType
   listGuideItems?: number
-  scrollable?: boolean
+  scrollableImages?: boolean
 }
 
 export const _Taste: React.FC<TastePartialScreenProps> = ({
   screenKey,
   screenData,
   imageType = TasteScreenImageType.Image,
+  itemSize = TasteScreenItemSize.Normal,
   guideType = GuideType.List,
   listGuideItems,
-  scrollable = true,
+  scrollableImages = true,
   currentData,
   updateData,
 }: TastePartialScreenProps) => {
@@ -62,6 +69,7 @@ export const _Taste: React.FC<TastePartialScreenProps> = ({
   const getCurrentFieldData = () => currentData.find((e) => e.name === screenKey)?.value || undefined
 
   const guideImages = screenData.map((x) => ('image' in x ? x.image : undefined))
+  const guideIcons = screenData.map((x) => ('iconName' in x ? x.iconName : undefined))
 
   const getIconCheckboxContainerClass = (i: number) => {
     switch (i) {
@@ -70,12 +78,24 @@ export const _Taste: React.FC<TastePartialScreenProps> = ({
       case 5:
         return 'scroll-auto'
       default:
-        return 'scroll-auto border-b border-brand-grey-whisper'
+        return listGuideItems && listGuideItems - 1 === i
+          ? 'scroll-auto'
+          : 'scroll-auto border-b border-brand-grey-whisper'
     }
   }
 
+  const getIconCheckboxGridContainer = () => {
+    const classNames = ['grid', 'gap-x-4', 'w-full']
+    if (listGuideItems === undefined || listGuideItems > 3) {
+      classNames.push('md:w-5/6', 'md:grid-rows-3', 'md:grid-cols-2', 'md:grid-flow-col')
+    } else {
+      classNames.push('md:w-3/6', 'md:grid-cols-1')
+    }
+    return classNames.join(' ')
+  }
+
   return (
-    <div className="flex-grow flex flex-col items-center justify-center bg-white">
+    <div className="flex-grow flex flex-col items-center bg-white md:justify-center">
       <div className="p-6 md:w-5/6">
         <Typography
           as="h1"
@@ -88,12 +108,13 @@ export const _Taste: React.FC<TastePartialScreenProps> = ({
         <Guide
           screenKey={screenKey}
           images={guideImages}
+          icons={guideIcons}
           guideType={guideType}
           listGuideItems={listGuideItems}
           className="mt-4"
         />
       </div>
-      {scrollable ? (
+      {scrollableImages ? (
         <div className="relative flex w-full overflow-x-auto gap-x-10 snap-x xl:justify-center">
           <div className="w-1/12 pr-12 -mx-2.5 h-80 relative shrink-0 snap-start scroll-auto" />
           {screenData.map((item, idx) => {
@@ -107,7 +128,7 @@ export const _Taste: React.FC<TastePartialScreenProps> = ({
                   selectedText={'selectedText' in item ? item.selectedText : undefined}
                   selected={getCurrentFieldData() === item.name}
                   toggleSelected={(selected: boolean) => handleDataChange(selected, item.name)}
-                  className={scrollable ? 'shrink-0 snap-center scroll-auto' : ''}
+                  className={scrollableImages ? 'shrink-0 snap-center scroll-auto' : ''}
                 />
               )
             }
@@ -115,7 +136,7 @@ export const _Taste: React.FC<TastePartialScreenProps> = ({
           <div className="w-1/12 pl-12 -mx-2.5 h-80 relative shrink-0 snap-start scroll-auto" />
         </div>
       ) : (
-        <div className="grid gap-x-4 w-full md:w-5/6 md:grid-rows-3 md:grid-cols-2 md:grid-flow-col">
+        <div className={getIconCheckboxGridContainer()}>
           {screenData.map((item, idx) => {
             if (imageType === 'icon') {
               return (
@@ -123,6 +144,7 @@ export const _Taste: React.FC<TastePartialScreenProps> = ({
                   <IconCheckbox
                     name={item.name}
                     iconName={'iconName' in item ? item.iconName : null}
+                    itemSize={itemSize}
                     text={item.text}
                     selected={getCurrentFieldData() === item.name}
                     toggleSelected={(selected: boolean) => handleDataChange(selected, item.name)}
