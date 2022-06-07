@@ -41,16 +41,16 @@
     "acidity":{
       "items": {
         "0": {
-          "text": "Du magst Kaffees mit deutlichen Säure.",
-          "title": "Orangen"
+          "text": "Du magst Kaffees mit leichter Säure.",
+          "title": "Birnen"
         },
         "1": {
           "text": "Du magst Kaffees mit erkennbarer Säure.",
           "title": "Himbeeren"
         },
         "2": {
-          "text": "Du magst Kaffees mit leichter Säure.",
-          "title": "Birnen"
+          "text": "Du magst Kaffees mit deutlichen Säure.",
+          "title": "Orangen"
         }
       },
       "overline": "Erklärung",
@@ -77,16 +77,16 @@
     "bitterness":{
       "items": {
         "0": {
-          "text": "Du magst Kaffees mit einer starken Bitternote.",
-          "title": "Dunkle Schokolade"
+          "text": "Du magst Kaffee mit einer leichten Bitternote.",
+          "title": "Milchschokolade"
         },
         "1": {
           "text": "Du magst Kaffees mit einer ausgeglichenen Bitternote.",
           "title": "Schokolade mit hohem Kakaoanteil (<70%)"
         },
         "2": {
-          "text": "Du magst Kaffee mit einer leichten Bitternote.",
-          "title": "Milchschokolade"
+          "text": "Du magst Kaffees mit einer starken Bitternote.",
+          "title": "Dunkle Schokolade"
         }
       },
       "overline": "Erklärung",
@@ -97,16 +97,16 @@
     "body":{
       "items": {
         "0": {
-          "text": "Du magst Kaffees mit einem vollen Körper und einem cremigen Mundgefühl.",
-          "title": "Ausgewogenen Körper und einem milchigen Mundgefühl Milchkaffee "
+          "text": "Du magst Kaffees mit einem leichten Körper und einem flüssigen Mundgefühl.",
+          "title": "Leichten Körper und flüssigen Mundgefühl Americano"
         },
         "1": {
           "text": "Du magst Kaffees mit einem leichten Körper und einem flüssigen Mundgefühl.",
           "title": "Ausgewogenen Körper und einem milchigen Mundgefühl Milchkaffee"
         },
         "2": {
-          "text": "Du magst Kaffees mit einem leichten Körper und einem flüssigen Mundgefühl.",
-          "title": "Leichten Körper und flüssigen Mundgefühl Americano"
+          "text": "Du magst Kaffees mit einem vollen Körper und einem cremigen Mundgefühl.",
+          "title": "Ausgewogenen Körper und einem milchigen Mundgefühl Milchkaffee "
         }
       },
       "overline": "Erklärung",
@@ -124,16 +124,16 @@
     "sweetness":{
       "items": {
         "0": {
-          "text": "Du magst Kaffees mit einer sehr starken Süße.",
-          "title": "Baklava"
+          "text": "Du magst Kaffees mit einer sehr geringen Süße.",
+          "title": "Käse"
         },
         "1": {
           "text": "Du magst Kaffees mit einer erkennbaren Süße.",
           "title": "Panna Cotta"
         },
         "2": {
-          "text": "Du magst Kaffees mit einer sehr geringen Süße.",
-          "title": "Käse"
+          "text": "Du magst Kaffees mit einer sehr starken Süße.",
+          "title": "Baklava"
         }
       },
       "overline": "Erklärung",

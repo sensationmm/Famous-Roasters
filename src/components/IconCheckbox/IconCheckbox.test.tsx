@@ -1,6 +1,7 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import React from 'react'
 import { IconName } from 'src/components/Icon'
+import { TasteScreenItemSize } from 'src/views/TasteFinder/Steps'
 
 import { IconCheckbox } from '.'
 
@@ -28,6 +29,22 @@ describe('ImageCheckbox component', () => {
       <IconCheckbox
         name="test"
         iconName={IconName.Espresso}
+        text="Dieser Kaffee ist lekka"
+        toggleSelected={() => alert('works')}
+      />,
+    )
+    const iconCheckbox = await screen.findByTestId('icon-checkbox')
+    expect(iconCheckbox).toBeInTheDocument()
+    fireEvent.click(iconCheckbox)
+    fireEvent.click(iconCheckbox)
+  })
+
+  it('The user can toggle the state by clicking with large itemsize', async () => {
+    render(
+      <IconCheckbox
+        name="test"
+        iconName={IconName.Espresso}
+        itemSize={TasteScreenItemSize.Large}
         text="Dieser Kaffee ist lekka"
         toggleSelected={() => alert('works')}
       />,
