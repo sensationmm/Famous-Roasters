@@ -11,7 +11,7 @@ exports[`Sweetness partial view Renders correctly 1`] = `
       <h1
         class="flex md:text-2xl md:leading-8 xl:text-3xl xl:leading-10 text-xl leading-7 font-semibold"
       >
-        Der Tag neigt sich dem Ende zu und du hast noch etwas Appetit. Für welche Snack entscheidest du dich?
+        Der Tag neigt sich dem Ende zu und du hast noch etwas Appetit. Für welchen Snack entscheidest du dich?
       </h1>
       <div
         class="flex md:hidden"
@@ -104,7 +104,7 @@ exports[`Sweetness partial view Renders correctly 1`] = `
           <div
             class="font-syne font-normal text-2xl leading-8 font-semibold"
           >
-            Eine leicht süße Käse
+            Eine leicht süßes Stück Käse
           </div>
         </div>
       </button>

@@ -49,7 +49,7 @@
           "title": "Himbeeren"
         },
         "2": {
-          "text": "Du magst Kaffees mit deutlichen Säure.",
+          "text": "Du magst Kaffees mit deutlicher Säure.",
           "title": "Orangen"
         }
       },
@@ -70,7 +70,7 @@
         }
       },
       "overline": "Erklärung",
-      "text": "Unsere Kaffeeexperten nutzen diese Frage, um heraus-zufinden, wie offen für Neues du bist. Dadurch können wir sehen, ob wir dir auch Kaffees mit geringer Überein-stimmung empfehlen dürfen.",
+      "text": "Unsere Kaffeeexperten nutzen diese Frage, um herauszufinden, wie offen für Neues du bist.",
       "title": "Was hat das mit Kaffee zu tun?",
       "trigger": "Was hat das mit Kaffee zu tun?"
     },
@@ -98,15 +98,15 @@
       "items": {
         "0": {
           "text": "Du magst Kaffees mit einem leichten Körper und einem flüssigen Mundgefühl.",
-          "title": "Leichten Körper und flüssigen Mundgefühl Americano"
+          "title": "Leichter Körper und flüssiges Mundgefühl - Americano"
         },
         "1": {
           "text": "Du magst Kaffees mit einem leichten Körper und einem flüssigen Mundgefühl.",
-          "title": "Ausgewogenen Körper und einem milchigen Mundgefühl Milchkaffee"
+          "title": "Ausgewogener Körper mit einem milchigen Mundgefühl - Milchkaffee"
         },
         "2": {
           "text": "Du magst Kaffees mit einem vollen Körper und einem cremigen Mundgefühl.",
-          "title": "Ausgewogenen Körper und einem milchigen Mundgefühl Milchkaffee "
+          "title": "Ausgewogener Körper mit einem cremigen Mundgefühl - Macchiato "
         }
       },
       "overline": "Erklärung",
@@ -248,6 +248,16 @@
       "navigation": "Fehler",
       "title": "Fehler"
     },
+    "featuredProduct": {
+      "items": {
+        "nutsChocolate": {
+          "headline": "Dein Kaffee ist säurearm, hat einen nussig-süßen Geschmack und ist oft bittersüß mit einem schokoladigen Röstgeschmack."
+        }
+      },
+      "navigation": "Aroma",
+      "preHeadline": "Dein Kaffeetyp",
+      "title": "Aroma"
+    },
     "home": {
       "navigation": "Home",
       "title": "Home"
@@ -377,15 +387,15 @@
         "acidity": {
           "options": {
             "option1": {
-              "selectedText": "Leicht Lebendigkeit",
+              "selectedText": "Leichte Säure",
               "text": "Weniger saure Birnen"
             },
             "option2": {
-              "selectedText": "Mittel Lebendigkeit",
+              "selectedText": "Mittlere Säure",
               "text": "Ausgewogen saure Himbeeren"
             },
             "option3": {
-              "selectedText": "Hoch Lebendigkeit",
+              "selectedText": "Intensive Säure",
               "text": "Sehr saure Orangen"
             }
           },
@@ -405,15 +415,15 @@
         "bitterness": {
           "options": {
             "option1": {
-              "selectedText": "Leicht Stärke",
+              "selectedText": "Leichte Bitternote",
               "text": "Hellere und weniger bittere Milchschokolade"
             },
             "option2": {
-              "selectedText": "Mittel Stärke",
+              "selectedText": "Ausgeglichene Bitternote",
               "text": "Dunklere und ausgewogen bittere Schokolade"
             },
             "option3": {
-              "selectedText": "Hoch Stärke",
+              "selectedText": "Intensive Bitternote",
               "text": "Sehr dunkle Zartbitter-schokolade (70% +)"
             }
           },
@@ -422,15 +432,15 @@
         "body": {
           "options": {
             "option1": {
-              "selectedText": "Leicht Körper",
+              "selectedText": "Leichter Körper",
               "text": "Americano - leichter Körper, flüssiges Mundgefühl"
             },
             "option2": {
-              "selectedText": "Mittel Körper",
+              "selectedText": "Ausgewogener Körper",
               "text": "Milchkaffee - ausgewogener Körper, milchiges Mundgefühl "
             },
             "option3": {
-              "selectedText": "Hoch Körper",
+              "selectedText": "Voller Körper",
               "text": "Macchiato - voller Körper, cremiges Mundgefühl"
             }
           },
@@ -457,24 +467,24 @@
               "text": "Espresso Maschine"
             }
           },
-          "text": "Jeder weiß: der Tag beginnt nach der ersten Tasse Kaffee. Auf welche Art würdest du deinen Kaffee brühen?"
+          "text": "Jeder weiß: der Tag beginnt nach der ersten Tasse Kaffee. Auf welche Art brühst du deinen Kaffee?"
         },
         "sweetness": {
           "options": {
             "option1": {
-              "selectedText": "Leicht Süße",
-              "text": "Eine leicht süße Käse"
+              "selectedText": "Leichte Süße",
+              "text": "Eine leicht süßes Stück Käse"
             },
             "option2": {
-              "selectedText": "Mittel Süße",
+              "selectedText": "Mittlere Süße",
               "text": "Eine ausgewogen süße Panna Cotta"
             },
             "option3": {
-              "selectedText": "Hoch Süße",
+              "selectedText": "Intensive Süße",
               "text": "Ein intensiv süßes Stück Baklava"
             }
           },
-          "text": "Der Tag neigt sich dem Ende zu und du hast noch etwas Appetit. Für welche Snack entscheidest du dich?"
+          "text": "Der Tag neigt sich dem Ende zu und du hast noch etwas Appetit. Für welchen Snack entscheidest du dich?"
         },
         "welcome": {
           "cta": "Tastefinder starten",
