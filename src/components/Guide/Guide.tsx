@@ -52,23 +52,13 @@ export const Guide: React.FC<GuideInfoProps> = ({
 
   const infoData: GuideEntry[] = []
 
-  if (listGuideItems) {
-    Array.from(Array(listGuideItems).keys()).forEach((index) => {
-      infoData.push({
-        key: index.toString(),
-        image: images && images[index],
-        icon: icons && icons[index],
-      })
+  Array.from(Array(listGuideItems || 3).keys()).forEach((index) => {
+    infoData.push({
+      key: index.toString(),
+      image: images && images[index],
+      icon: icons && icons[index],
     })
-  } else {
-    Array.from(Array(3).keys()).forEach((index) => {
-      infoData.push({
-        key: index.toString(),
-        image: images && images[index],
-        icon: icons && icons[index],
-      })
-    })
-  }
+  })
 
   const renderMainContent = () => {
     return (
