@@ -52,7 +52,7 @@ export const Guide: React.FC<GuideInfoProps> = ({
 
   const infoData: GuideEntry[] = []
 
-  Array.from(Array(listGuideItems || 3).keys()).forEach((index) => {
+  Array.from(Array(listGuideItems).keys()).forEach((index) => {
     infoData.push({
       key: index.toString(),
       image: images && images[index],
