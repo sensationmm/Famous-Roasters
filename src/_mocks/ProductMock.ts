@@ -214,7 +214,15 @@ export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
   ...ProductMockData,
   images: {
     edges: [],
-    nodes: [],
+    nodes: [
+      {
+        id: '123123',
+        url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153',
+        originalSrc: '',
+        src: '',
+        transformedSrc: '',
+      },
+    ],
     pageInfo: {
       hasNextPage: false,
       hasPreviousPage: false,

@@ -5,7 +5,7 @@ import {
   ProductVariantConnection,
 } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router-dom'
 import Artwork from 'src/assets/images/artwork/01.svg'
@@ -17,6 +17,9 @@ import {
   GuideType,
   Layout,
   Loader,
+  ProductTile,
+  Tag,
+  TagType,
   Typography,
   TypographySize,
   TypographyType,
@@ -66,7 +69,6 @@ export const FeaturedProduct: React.FC = () => {
   const { id } = useParams()
   const { t } = useTranslation()
   const GET_PRODUCT = loader('src/graphql/queries/product.query.graphql')
-  const [variantSelected, setVariantSelected] = useState<ProductVariantCustom>()
 
   useEffect(() => {
     document.title = `${t('brand.name')} | ${t('pages.product.title')}`
@@ -80,19 +82,13 @@ export const FeaturedProduct: React.FC = () => {
     },
   })
 
-  const { aroma, variants } = data?.product || {}
-
-  useEffect(() => {
-    if (variants) {
-      setVariantSelected(variants.nodes[0])
-    }
-  }, [!!variants])
+  const { aroma, images, title } = data?.product || {}
 
   if (error) {
     return <ErrorPrompt promptAction={() => history.go(0)} />
   }
 
-  if (loading || !variantSelected || !variants) {
+  if (loading || !images) {
     return (
       <div className="flex h-64 mb-32 justify-center items-center">
         <Loader />
@@ -100,7 +96,7 @@ export const FeaturedProduct: React.FC = () => {
     )
   }
 
-  const renderAromaBlock = (aroma: string) => {
+  const renderYourCoffeeTypeBlock = (aroma: string) => {
     return (
       <div className="grid grid-cols-1 md:grid-cols-2 items-end">
         <div className="relative w-52 h-40 mx-auto md:order-2 md:w-64 md:h-52 xl:w-80 xl:h-64">
@@ -120,7 +116,9 @@ export const FeaturedProduct: React.FC = () => {
             </Typography>
           </div>
           <div className="flex items-center justify-center mt-2 md:justify-start">
-            <Typography className="text-coreUI-text-secondary">{t('pages.featuredProduct.preHeadline')}</Typography>
+            <Typography className="text-coreUI-text-secondary">
+              {t('pages.featuredProduct.yourCoffeeType.title')}
+            </Typography>
           </div>
           <div className="flex items-center justify-center mt-2 md:justify-start">
             <Typography>{t('pages.featuredProduct.items.nutsChocolate.headline')}</Typography>
@@ -131,10 +129,40 @@ export const FeaturedProduct: React.FC = () => {
     )
   }
 
+  const renderRecommendationBlock = () => {
+    return (
+      <div>
+        <Typography
+          as="h2"
+          type={TypographyType.Heading}
+          size={TypographySize.Tiny}
+          className="md:text-2xl xl:text-3xl"
+        >
+          {t('pages.featuredProduct.recommendation.title')}
+        </Typography>
+        <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
+          <div className="flex aspect-1 justify-center items-center">
+            <img src={images.nodes[0].url} alt={title} className="w-full w-3/4 h-fit shrink-0 grow-0" />
+          </div>
+          <div>
+            {data?.product && (
+              <ProductTile productNode={data?.product} showImage={false} showFrom={true} className="p-0" />
+            )}
+            <div>
+              <Tag type={TagType.TasteFinder} value="98% Übereinstimmung" />
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <Layout>
-      <main className="flex flex-grow w-full items-start justify-center bg-white mt-4 mb-4">
-        <div className="w-full max-w-7xl mx-auto px-6 xl:px-8">{aroma && renderAromaBlock(aroma.value)}</div>
+      <main className="flex flex-col w-full bg-white mt-8 mb-8">
+        <div className="w-full max-w-7xl mx-auto px-6 xl:px-8">{aroma && renderYourCoffeeTypeBlock(aroma.value)}</div>
+        <div className="border-t border-brand-grey-whisper mt-8" />
+        <div className="w-full max-w-7xl mx-auto mt-8 px-6 xl:px-8">{renderRecommendationBlock()}</div>
       </main>
     </Layout>
   )

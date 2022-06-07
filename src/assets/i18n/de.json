@@ -167,12 +167,6 @@
       "title": "Warenkorb"
     },
     "catalogue": {
-      "navigation": "Shop",
-      "title": "Katalog",
-      "tabs": {
-        "discover": "Entdecken",
-        "forYou": "Für Dich"
-      },
       "filters": {
         "beanType": {
           "label": "Bohnensorte"
@@ -231,10 +225,19 @@
           "label": "Röster"
         }
       },
+      "navigation": "Shop",
       "pagination": {
         "next": "Weiter",
         "previous": "Zurück"
-      }
+      },
+      "tabs": {
+        "discover": "Entdecken",
+        "forYou": "Für Dich"
+      },
+      "tile": {
+        "from": "ab"
+      },
+      "title": "Katalog"
     },
     "checkout": {
       "navigation": "Checkout",
@@ -255,8 +258,13 @@
         }
       },
       "navigation": "Aroma",
-      "preHeadline": "Dein Kaffeetyp",
-      "title": "Aroma"
+      "recommendation": {
+        "title": "Was wir dir empfehlen"
+      },
+      "title": "Aroma",
+      "yourCoffeeType": {
+        "title": "Dein Kaffeetyp"
+      }
     },
     "home": {
       "navigation": "Home",

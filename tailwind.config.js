@@ -39,6 +39,7 @@ module.exports = {
                     starship: '#BCF253',
                 },
                 brown: '#8E7C7A',
+                blue: '#EFF6FF',
             },
             tags: {
                 capeHoney: '#FFE7A9',
