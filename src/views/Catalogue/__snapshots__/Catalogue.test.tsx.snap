@@ -6,7 +6,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
     class="min-h-screen flex flex-col text-brand-black"
   >
     <div
-      class="bg-white"
+      class="bg-white z-10"
     >
       <header
         class="relative bg-white"
@@ -89,19 +89,19 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 class="xl:hidden font-syne text-3xl"
               >
                 <span>
-                  F
+                  W
                 </span>
                 <span
                   class="font-extrabold"
                 >
-                  R
+                  B
                 </span>
               </div>
               <div
                 class="hidden xl:block font-syne text-xl text-center"
               >
                 <div
-                  class="h-5"
+                  class="h-7"
                 >
                   WeBean
                 </div>
@@ -1390,7 +1390,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
           <div>
             <div>
               <span
-                class="font-syne text-3xl leading-8 font-semibold tracking-tight"
+                class="font-syne text-3xl leading-10 font-semibold tracking-tight"
               >
                 Kunden Support
               </span>
@@ -1436,7 +1436,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
           >
             <div>
               <span
-                class="font-syne text-3xl leading-8 font-semibold tracking-tight"
+                class="font-syne text-3xl leading-10 font-semibold tracking-tight"
               >
                 Newsletter
               </span>
@@ -1526,7 +1526,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
     class="min-h-screen flex flex-col text-brand-black"
   >
     <div
-      class="bg-white"
+      class="bg-white z-10"
     >
       <header
         class="relative bg-white"
@@ -1609,19 +1609,19 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 class="xl:hidden font-syne text-3xl"
               >
                 <span>
-                  F
+                  W
                 </span>
                 <span
                   class="font-extrabold"
                 >
-                  R
+                  B
                 </span>
               </div>
               <div
                 class="hidden xl:block font-syne text-xl text-center"
               >
                 <div
-                  class="h-5"
+                  class="h-7"
                 >
                   WeBean
                 </div>
@@ -2910,7 +2910,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
           <div>
             <div>
               <span
-                class="font-syne text-3xl leading-8 font-semibold tracking-tight"
+                class="font-syne text-3xl leading-10 font-semibold tracking-tight"
               >
                 Kunden Support
               </span>
@@ -2956,7 +2956,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
           >
             <div>
               <span
-                class="font-syne text-3xl leading-8 font-semibold tracking-tight"
+                class="font-syne text-3xl leading-10 font-semibold tracking-tight"
               >
                 Newsletter
               </span>
@@ -3054,7 +3054,7 @@ exports[`Catalogue view Renders correctly for an error call on catalogue 1`] = `
       class="mt-4 flex justify-center"
     >
       <button
-        class="inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+        class="inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
         data-testid="button-prompt"
         role="button"
       >

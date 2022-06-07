@@ -4,6 +4,10 @@
     "name": "WeBean",
     "withLove": "Geröstet mit ❤️ in Berlin"
   },
+  "cta": {
+    "next": "Weiter",
+    "prev": "Zurück"
+  },
   "error": {
     "generic": {
       "actions": {
@@ -31,6 +35,111 @@
     },
     "slogan": {
       "text": "A pleasure for every taste."
+    }
+  },
+  "guides": {
+    "acidity":{
+      "items": {
+        "0": {
+          "text": "Du magst Kaffees mit deutlichen Säure.",
+          "title": "Orangen"
+        },
+        "1": {
+          "text": "Du magst Kaffees mit erkennbarer Säure.",
+          "title": "Himbeeren"
+        },
+        "2": {
+          "text": "Du magst Kaffees mit leichter Säure.",
+          "title": "Birnen"
+        }
+      },
+      "overline": "Erklärung",
+      "text": "Unsere Kaffeeexperten nutzen den Vergleich mit Obst und Früchten, um herauszufinden, wie sauer dein Kaffee sein darf.",
+      "title": "Was hat das mit Kaffee zu tun?",
+      "trigger": "Was hat das mit Kaffee zu tun?"
+    },
+    "adventurous":{
+      "items": {
+        "0": {
+          "text": "Du magst Kaffees mit einem leichten Körper und einem flüssigen Mundgefühl.",
+          "title": "Ich bleibe bei dem, was ich kenne"
+        },
+        "1": {
+          "text": "Du bist offen dafür Kaffeesorten zu probieren von denen du vorher noch nicht gehört hast.",
+          "title": "Ich probiere etwas Neues aus"
+        }
+      },
+      "overline": "Erklärung",
+      "text": "Unsere Kaffeeexperten nutzen diese Frage, um heraus-zufinden, wie offen für Neues du bist. Dadurch können wir sehen, ob wir dir auch Kaffees mit geringer Überein-stimmung empfehlen dürfen.",
+      "title": "Was hat das mit Kaffee zu tun?",
+      "trigger": "Was hat das mit Kaffee zu tun?"
+    },
+    "bitterness":{
+      "items": {
+        "0": {
+          "text": "Du magst Kaffees mit einer starken Bitternote.",
+          "title": "Dunkle Schokolade"
+        },
+        "1": {
+          "text": "Du magst Kaffees mit einer ausgeglichenen Bitternote.",
+          "title": "Schokolade mit hohem Kakaoanteil (<70%)"
+        },
+        "2": {
+          "text": "Du magst Kaffee mit einer leichten Bitternote.",
+          "title": "Milchschokolade"
+        }
+      },
+      "overline": "Erklärung",
+      "text": "Unsere Kaffeeexperten nutzen den Vergleich mit Schokolade, um herauszufinden, wie bitter dein Kaffee sein darf.",
+      "title": "Was hat das mit Kaffee zu tun?",
+      "trigger": "Was hat das mit Kaffee zu tun?"
+    },
+    "body":{
+      "items": {
+        "0": {
+          "text": "Du magst Kaffees mit einem vollen Körper und einem cremigen Mundgefühl.",
+          "title": "Ausgewogenen Körper und einem milchigen Mundgefühl Milchkaffee "
+        },
+        "1": {
+          "text": "Du magst Kaffees mit einem leichten Körper und einem flüssigen Mundgefühl.",
+          "title": "Ausgewogenen Körper und einem milchigen Mundgefühl Milchkaffee"
+        },
+        "2": {
+          "text": "Du magst Kaffees mit einem leichten Körper und einem flüssigen Mundgefühl.",
+          "title": "Leichten Körper und flüssigen Mundgefühl Americano"
+        }
+      },
+      "overline": "Erklärung",
+      "text": "Unsere Kaffeeexperten nutzen deine Zubereitungspräferenz, um herauszufinden, wie der Körper bzw. das Mundgefühl deines Kaffees sein soll.",
+      "title": "Was hat das mit Kaffee zu tun?",
+      "trigger": "Was hat das mit Kaffee zu tun?"
+    },
+    "brewing":{
+      "overline": "Erklärung",
+      "text": "Da wir dir am Ende nicht nur neue, sondern auch möglichst passende Kaffeesorten vorschlagen möchten, müssen wir wissen, wie du deinen Kaffee am liebsten zubereitest.",
+      "textBold": "Das heißt: wir empfehlen dir keinen Filterkaffee, wenn du einen Porta-Filter benutzt.",
+      "title": "Was hat das mit Kaffee zu tun?",
+      "trigger": "Was hat das mit Kaffee zu tun?"
+    },
+    "sweetness":{
+      "items": {
+        "0": {
+          "text": "Du magst Kaffees mit einer sehr starken Süße.",
+          "title": "Baklava"
+        },
+        "1": {
+          "text": "Du magst Kaffees mit einer erkennbaren Süße.",
+          "title": "Panna Cotta"
+        },
+        "2": {
+          "text": "Du magst Kaffees mit einer sehr geringen Süße.",
+          "title": "Käse"
+        }
+      },
+      "overline": "Erklärung",
+      "text": "Unsere Kaffeeexperten nutzen den Vergleich mit Süßspeisen, um herauszufinden, wie süß dein Kaffee sein darf.",
+      "title": "Was hat das mit Kaffee zu tun?",
+      "trigger": "Was hat das mit Kaffee zu tun?"
     }
   },
   "pages": {
@@ -263,7 +372,122 @@
     },
     "tasteFinder": {
       "navigation": "Tastefinder",
-      "title": "Tastefinder"
+      "title": "Tastefinder",
+      "steps": {
+        "acidity": {
+          "options": {
+            "option1": {
+              "selectedText": "Leicht Lebendigkeit",
+              "text": "Weniger saure Birnen"
+            },
+            "option2": {
+              "selectedText": "Mittel Lebendigkeit",
+              "text": "Ausgewogen saure Himbeeren"
+            },
+            "option3": {
+              "selectedText": "Hoch Lebendigkeit",
+              "text": "Sehr saure Orangen"
+            }
+          },
+          "text": "Sonntagmorgen. Die Vögel zwitschern und die Sonne scheint. Du bereitest dir einen Obstsalat zu, aber ein Obst fehlt noch. Welches Obst darf in deinem Salat nicht fehlen?"
+        },
+        "adventurous": {
+          "options": {
+            "option1": {
+              "text": "Ich bleibe bei dem, was ich kenne"
+            },
+            "option2": {
+              "text": "Ich probiere etwas Neues aus"
+            }
+          },
+          "text": "Oh nein. Alles ausgetrunken. Du hast keinen Kaffee mehr. Was würdest du jetzt normalerweise tun?"
+        },
+        "bitterness": {
+          "options": {
+            "option1": {
+              "selectedText": "Leicht Stärke",
+              "text": "Hellere und weniger bittere Milchschokolade"
+            },
+            "option2": {
+              "selectedText": "Mittel Stärke",
+              "text": "Dunklere und ausgewogen bittere Schokolade"
+            },
+            "option3": {
+              "selectedText": "Hoch Stärke",
+              "text": "Sehr dunkle Zartbitter-schokolade (70% +)"
+            }
+          },
+          "text": "Stell dir vor, dass verschiedene Sorten Schokolade vor dir auf dem Tisch liegen. Für welche würdest du dich entscheiden?"
+        },
+        "body": {
+          "options": {
+            "option1": {
+              "selectedText": "Leicht Körper",
+              "text": "Americano - leichter Körper, flüssiges Mundgefühl"
+            },
+            "option2": {
+              "selectedText": "Mittel Körper",
+              "text": "Milchkaffee - ausgewogener Körper, milchiges Mundgefühl "
+            },
+            "option3": {
+              "selectedText": "Hoch Körper",
+              "text": "Macchiato - voller Körper, cremiges Mundgefühl"
+            }
+          },
+          "text": "Keine Termine und viel Zeit für eine gute Tasse Kaffee. Wie würdest du deinen Kaffee bestellen?"
+        },
+        "brewing": {
+          "options": {
+            "option1": {
+              "text": "French Press"
+            },
+            "option2": {
+              "text": "Aeropress"
+            },
+            "option3": {
+              "text": "V60/Kalita"
+            },
+            "option4": {
+              "text": "Moka Pot"
+            },
+            "option5": {
+              "text": "Chemex"
+            },
+            "option6": {
+              "text": "Espresso Maschine"
+            }
+          },
+          "text": "Jeder weiß: der Tag beginnt nach der ersten Tasse Kaffee. Auf welche Art würdest du deinen Kaffee brühen?"
+        },
+        "sweetness": {
+          "options": {
+            "option1": {
+              "selectedText": "Leicht Süße",
+              "text": "Eine leicht süße Käse"
+            },
+            "option2": {
+              "selectedText": "Mittel Süße",
+              "text": "Eine ausgewogen süße Panna Cotta"
+            },
+            "option3": {
+              "selectedText": "Hoch Süße",
+              "text": "Ein intensiv süßes Stück Baklava"
+            }
+          },
+          "text": "Der Tag neigt sich dem Ende zu und du hast noch etwas Appetit. Für welche Snack entscheidest du dich?"
+        },
+        "welcome": {
+          "cta": "Tastefinder starten",
+          "text": "Finde deinen persönlichen Kaffeetyp und erhalte Empfehlungen, die zu deinem Geschmack passen.",
+          "title": "Finde jetzt deinen Specialty Coffee mit dem Tastefinder."
+        },
+        "yourName": {
+          "input": {
+            "label": "Gib deinen Namen Ein"
+          },
+          "title": "Wie sollen wir dich nennen?"
+        }
+      }
     }
   }
 }

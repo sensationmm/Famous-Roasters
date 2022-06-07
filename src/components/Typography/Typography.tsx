@@ -35,7 +35,7 @@ const getTypographyClassNames = (type: Type, size: Size): string => {
           break
         case Size.Base:
         default:
-          classNames.push('text-3xl', 'leading-8', 'font-semibold', 'tracking-tight')
+          classNames.push('text-3xl', 'leading-10', 'font-semibold', 'tracking-tight')
           break
       }
       break
@@ -84,6 +84,7 @@ export const Typography: React.FC<TypographyProps> = ({
   size = Size.Base,
   className,
   children,
+  style,
 }: TypographyProps) => {
   const Element = ({ ...props }) => React.createElement(as, props, children)
   return (
@@ -91,6 +92,7 @@ export const Typography: React.FC<TypographyProps> = ({
       className={
         className ? `${className} ${getTypographyClassNames(type, size)}` : getTypographyClassNames(type, size)
       }
+      style={style}
     >
       {children}
     </Element>

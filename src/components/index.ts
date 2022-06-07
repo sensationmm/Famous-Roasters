@@ -11,7 +11,10 @@ import { FilterData, FilterMobile } from './FilterMobile'
 import { FiltersMenuMobile } from './FiltersMenuMobile'
 import { Footer } from './Footer'
 import { GrindsInfo } from './GrindsInfo'
+import { Guide, GuideType } from './Guide'
 import { Icon, IconName, IconSize } from './Icon'
+import { IconCheckbox } from './IconCheckbox'
+import { ImageCheckbox } from './ImageCheckbox'
 import { Input, InputMode } from './Input'
 import { Layout } from './Layout'
 import { Listbox, ListBoxItem } from './Listbox'
@@ -21,6 +24,7 @@ import { Notification } from './Notification'
 import { OriginProductionSpecs } from './OriginProductionSpecs'
 import { ProductTile } from './ProductTile'
 import { QuantitySelect } from './QuantitySelect'
+import { StickyBottomNavigation } from './StickyBottomNavigation'
 import { TabsNavigation } from './TabsNavigation'
 import { Tag, TagType } from './Tag'
 import { TasteProfile } from './TasteProfile'
@@ -43,9 +47,13 @@ export { FilterMobile as FilterMobile }
 export { FiltersMenuMobile as FiltersMenuMobile }
 export { Footer as Footer }
 export { GrindsInfo as GrindsInfo }
+export { Guide as Guide }
+export { GuideType as GuideType }
 export { Icon as Icon }
 export { IconName as IconName }
 export { IconSize as IconSize }
+export { IconCheckbox as IconCheckbox }
+export { ImageCheckbox as ImageCheckbox }
 export { Input as Input }
 export { InputMode as InputMode }
 export { Layout as Layout }
@@ -57,6 +65,7 @@ export { NavigationTheme as NavigationTheme }
 export { Notification as Notification }
 export { OriginProductionSpecs as OriginProductionSpecs }
 export { ProductTile as ProductTile }
+export { StickyBottomNavigation as StickyBottomNavigation }
 export { QuantitySelect as QuantitySelect }
 export { TabsNavigation as TabsNavigation }
 export { Tag as Tag }

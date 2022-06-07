@@ -45,6 +45,9 @@ const getButtonClassNames = (emphasis: Emphasis, size: Size): string => {
   switch (emphasis) {
     case Emphasis.Primary:
       classNames.push(
+        'disabled:bg-brand-grey-whisper',
+        'disabled:text-coreUI-text-secondary',
+        'disabled:cursor-not-allowed',
         'text-brand-black',
         'bg-primary',
         'border-transparent',

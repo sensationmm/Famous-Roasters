@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StickyBottomNavigation component Renders correctly 1`] = `
+<div>
+  <div
+    class="sticky bottom-0 bg-white"
+  >
+    <div
+      class="h-0.5 border-b border-brand-grey-whisper"
+    />
+    <div
+      class="flex space-x-2 py-4 items-center justify-center"
+    >
+      <button
+        class="flex justify-center min-w-[10rem] inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
+        data-testid="prevButton"
+        role="button"
+        type="button"
+      >
+        Zurück
+      </button>
+      <button
+        class="flex justify-center min-w-[10rem] inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+        data-testid="nextButton"
+        role="button"
+        type="button"
+      >
+        Weiter
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`StickyBottomNavigation component Renders correctly with optional props 1`] = `
+<div>
+  <div
+    class="sticky bottom-0 bg-white"
+  >
+    <div
+      class="h-1 bg-coreUI-border"
+    >
+      <div
+        class="h-1 bg-brand-black transition-all"
+        style="width: 50%;"
+      />
+    </div>
+    <div
+      class="flex space-x-2 py-4 items-center justify-center"
+    >
+      <button
+        class="flex justify-center min-w-[10rem] inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
+        data-testid="prevButton"
+        role="button"
+        type="button"
+      >
+        Zurück
+      </button>
+      <button
+        class="flex justify-center min-w-[10rem] inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+        data-testid="nextButton"
+        disabled=""
+        role="button"
+        type="button"
+      >
+        Weiter
+      </button>
+    </div>
+  </div>
+</div>
+`;

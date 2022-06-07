@@ -15,4 +15,22 @@ describe('Icon component', () => {
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
     expect(container).toMatchSnapshot()
   })
+
+  it('Renders correctly base icon', async () => {
+    const { container } = render(<Icon name={IconName.BeanFill} size={IconSize.pb} />)
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
+
+  it('Renders correctly medium icon', async () => {
+    const { container } = render(<Icon name={IconName.BeanFill} size={IconSize.md} />)
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
+
+  it('Renders correctly large icon', async () => {
+    const { container } = render(<Icon name={IconName.BeanFill} size={IconSize.lg} />)
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
 })

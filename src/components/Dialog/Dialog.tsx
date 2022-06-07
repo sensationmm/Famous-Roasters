@@ -6,10 +6,11 @@ import { Typography, TypographySize, TypographyType } from 'src/components'
 interface DialogProps extends React.HTMLAttributes<HTMLElement> {
   trigger: React.ReactElement
   title: string
+  overline?: string
   body: ReactNode
 }
 
-export const Dialog: React.FC<DialogProps> = ({ trigger, title, body, className }) => {
+export const Dialog: React.FC<DialogProps> = ({ trigger, title, overline, body, className }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const closeDialog = () => setIsOpen(false)
@@ -47,13 +48,25 @@ export const Dialog: React.FC<DialogProps> = ({ trigger, title, body, className 
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <HeadlessUIDialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                  <div className="flex justify-end">
+                <HeadlessUIDialog.Panel className="w-full max-w-lg transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                  <div className="flex justify-between justify-end">
+                    <span />
+                    {overline ? (
+                      <Typography
+                        type={TypographyType.Paragraph}
+                        size={TypographySize.Large}
+                        className="text-coreUI-text-secondary"
+                      >
+                        {overline}
+                      </Typography>
+                    ) : (
+                      <span />
+                    )}
                     <button onClick={closeDialog} data-testid="dialog-dismiss">
                       <XIcon className="w-6 h-6" />
                     </button>
                   </div>
-                  <div className="flex justify-center mt-2">
+                  <div className="flex justify-center mt-6">
                     <Typography as="h3" type={TypographyType.Label} size={TypographySize.Large}>
                       {title}
                     </Typography>

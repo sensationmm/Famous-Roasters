@@ -82,7 +82,7 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
   const itemsInCart = () => (cartSize ? cartSize : 0)
 
   return (
-    <div className="bg-white">
+    <div className="bg-white z-10">
       {/* Mobile menu */}
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="fixed inset-0 flex z-40 xl:hidden" onClose={setOpen}>
@@ -173,11 +173,11 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
             <Link to="/" className="flex h-full items-center pl-2 pr-2">
               <span className="sr-only">{t('brand.name')}</span>
               <div className="xl:hidden font-syne text-3xl">
-                <span>F</span>
-                <span className="font-extrabold">R</span>
+                <span>W</span>
+                <span className="font-extrabold">B</span>
               </div>
               <div className="hidden xl:block font-syne text-xl text-center">
-                <div className="h-5">{t('brand.name').split(' ')[0]}</div>
+                <div className="h-7">{t('brand.name').split(' ')[0]}</div>
                 <div className="font-extrabold">{t('brand.name').split(' ')[1]}</div>
               </div>
             </Link>
