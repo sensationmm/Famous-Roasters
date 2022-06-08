@@ -3,12 +3,7 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import React from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { MemoryRouter } from 'react-router-dom'
-import {
-  ProductMock,
-  ProductMockError,
-  ProductMockWithCustomMetadata,
-  ProductMockWithCustomMetadataNoAroma,
-} from 'src/_mocks'
+import { ProductMock, ProductMockError, ProductMockWithCustomMetadata } from 'src/_mocks'
 import { CartContext } from 'src/components'
 import { i18n } from 'src/config'
 
@@ -30,10 +25,34 @@ jest.mock('react-router-dom', () => ({
 
 describe('Featured product view', () => {
   it('Renders correctly for a successful call with aroma experimental', async () => {
+    const ProductMockWithCustomMetadataOtherAroma = {
+      ...ProductMockWithCustomMetadata,
+      result: {
+        data: {
+          product: {
+            ...ProductMockWithCustomMetadata.result.data.product,
+            images: {
+              nodes: [
+                {
+                  id: '123123',
+                  url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153',
+                  originalSrc: '',
+                  src: '',
+                  transformedSrc: '',
+                },
+              ],
+            },
+            aroma: {
+              value: 'experimentell & komplex',
+            },
+          },
+        },
+      },
+    }
     const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
-        mocks={[ProductMockWithCustomMetadata]}
+        mocks={[ProductMockWithCustomMetadataOtherAroma]}
         addTypename={false}
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
@@ -56,6 +75,17 @@ describe('Featured product view', () => {
         data: {
           product: {
             ...ProductMockWithCustomMetadata.result.data.product,
+            images: {
+              nodes: [
+                {
+                  id: '123123',
+                  url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153',
+                  originalSrc: '',
+                  src: '',
+                  transformedSrc: '',
+                },
+              ],
+            },
             aroma: {
               value: 'Floral & leicht',
             },
@@ -89,6 +119,17 @@ describe('Featured product view', () => {
         data: {
           product: {
             ...ProductMockWithCustomMetadata.result.data.product,
+            images: {
+              nodes: [
+                {
+                  id: '123123',
+                  url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153',
+                  originalSrc: '',
+                  src: '',
+                  transformedSrc: '',
+                },
+              ],
+            },
             aroma: {
               value: 'Fruchtig & lebhaft',
             },
@@ -122,6 +163,17 @@ describe('Featured product view', () => {
         data: {
           product: {
             ...ProductMockWithCustomMetadata.result.data.product,
+            images: {
+              nodes: [
+                {
+                  id: '123123',
+                  url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153',
+                  originalSrc: '',
+                  src: '',
+                  transformedSrc: '',
+                },
+              ],
+            },
             aroma: {
               value: 'Nussig & schokoladig',
             },
@@ -155,6 +207,17 @@ describe('Featured product view', () => {
         data: {
           product: {
             ...ProductMockWithCustomMetadata.result.data.product,
+            images: {
+              nodes: [
+                {
+                  id: '123123',
+                  url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153',
+                  originalSrc: '',
+                  src: '',
+                  transformedSrc: '',
+                },
+              ],
+            },
             aroma: {
               value: 'Würzig & kräftig',
             },
@@ -182,10 +245,32 @@ describe('Featured product view', () => {
   })
 
   it('Renders correctly for a successful call without aroma', async () => {
+    const ProductMockWithCustomMetadataWithoutAroma = {
+      ...ProductMockWithCustomMetadata,
+      result: {
+        data: {
+          product: {
+            ...ProductMockWithCustomMetadata.result.data.product,
+            images: {
+              nodes: [
+                {
+                  id: '123123',
+                  url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153',
+                  originalSrc: '',
+                  src: '',
+                  transformedSrc: '',
+                },
+              ],
+            },
+            aroma: null,
+          },
+        },
+      },
+    }
     const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
-        mocks={[ProductMockWithCustomMetadataNoAroma]}
+        mocks={[ProductMockWithCustomMetadataWithoutAroma]}
         addTypename={false}
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
