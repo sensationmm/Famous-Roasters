@@ -214,6 +214,47 @@ exports[`Product view Renders correctly for a successful call 1`] = `
         <div
           class="grid gap-6 grid-cols-1 md:grid-cols-2"
         >
+          <div
+            class="grid"
+          >
+            <div
+              class="swiper swiper-initialized swiper-horizontal swiper-pointer-events w-full"
+              style="padding-bottom: 32px;"
+            >
+              <div
+                aria-live="polite"
+                class="swiper-wrapper"
+                id="swiper-wrapper-f53d5a7413b873ef"
+                style="transition-duration: 0ms; transform: translate3d(NaNpx, 0px, 0px);"
+              >
+                <div
+                  class="swiper-slide flex justify-center bg-brand-grey-whisper"
+                >
+                  <img
+                    alt="carousel-image-0"
+                    src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+                  />
+                </div>
+              </div>
+              <div
+                class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"
+              />
+              <span
+                aria-atomic="true"
+                aria-live="assertive"
+                class="swiper-notification"
+              />
+            </div>
+            <div
+              class="hidden md:grid grid-flow-col auto-cols-max gap-2"
+            >
+              <div
+                class="w-full bg-brand-grey-whisper bg-center bg-cover cursor-pointer w-20 h-20"
+                data-testid="carousel-image-tn-0"
+                style="background-image: url(https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153);"
+              />
+            </div>
+          </div>
           <div>
             <div>
               <h2
@@ -1709,6 +1750,47 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
         <div
           class="grid gap-6 grid-cols-1 md:grid-cols-2"
         >
+          <div
+            class="grid"
+          >
+            <div
+              class="swiper swiper-initialized swiper-horizontal swiper-pointer-events w-full"
+              style="padding-bottom: 32px;"
+            >
+              <div
+                aria-live="polite"
+                class="swiper-wrapper"
+                id="swiper-wrapper-5a8aa63226210f64b"
+                style="transition-duration: 0ms; transform: translate3d(NaNpx, 0px, 0px);"
+              >
+                <div
+                  class="swiper-slide flex justify-center bg-brand-grey-whisper"
+                >
+                  <img
+                    alt="carousel-image-0"
+                    src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+                  />
+                </div>
+              </div>
+              <div
+                class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"
+              />
+              <span
+                aria-atomic="true"
+                aria-live="assertive"
+                class="swiper-notification"
+              />
+            </div>
+            <div
+              class="hidden md:grid grid-flow-col auto-cols-max gap-2"
+            >
+              <div
+                class="w-full bg-brand-grey-whisper bg-center bg-cover cursor-pointer w-20 h-20"
+                data-testid="carousel-image-tn-0"
+                style="background-image: url(https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153);"
+              />
+            </div>
+          </div>
           <div>
             <div>
               <h2
