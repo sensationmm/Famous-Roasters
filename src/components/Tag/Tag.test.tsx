@@ -45,4 +45,10 @@ describe('Tag component', () => {
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
     expect(container).toMatchSnapshot()
   })
+
+  it('Renders correctly for type taste finder', async () => {
+    const { container } = render(<Tag type={TagType.TasteFinder} value="100% matching" />)
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
 })

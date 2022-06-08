@@ -15,7 +15,7 @@ describe('Product Tile component', () => {
             ...ProductMockData,
             pricePerKg: { value: '10.0' },
             coffee_type: { value: 'Filter' },
-            origin: { value: 'CO' },
+            origin: { value: 'CO,BR' },
           }}
         />
       </I18nextProvider>,
@@ -34,6 +34,14 @@ describe('Product Tile component', () => {
             coffee_type: { value: 'Filter' },
             origin: { value: 'CO' },
             featuredImage: null,
+            images: {
+              edges: [],
+              nodes: [],
+              pageInfo: {
+                hasNextPage: false,
+                hasPreviousPage: false,
+              },
+            },
           }}
         />
       </I18nextProvider>,

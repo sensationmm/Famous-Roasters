@@ -43,8 +43,6 @@ const getTagClassNames = (value: string, type?: TagType): string => {
       case TagType.TasteFinder:
         classNames.push('bg-brand-blue')
         break
-      default:
-        classNames.push('bg-brand-grey-bombay')
     }
   } else {
     classNames.push('bg-brand-grey-bombay')

@@ -14,18 +14,6 @@ import Experimental from 'src/assets/images/coffeeProfile/Experimental.webp'
 import Floral from 'src/assets/images/coffeeProfile/Floral.webp'
 import Fruits from 'src/assets/images/coffeeProfile/Fruits.webp'
 import Spicy from 'src/assets/images/coffeeProfile/Spicy.webp'
-import bitternessLo from 'src/assets/images/tasteFinder/01-chocolate-leicht.webp'
-import bodyLo from 'src/assets/images/tasteFinder/01-coffee-leicht.webp'
-import acidityLo from 'src/assets/images/tasteFinder/01-fruit-leicht.webp'
-import sweetnessLo from 'src/assets/images/tasteFinder/01-sweet-leicht.webp'
-import bitternessMed from 'src/assets/images/tasteFinder/02-chocolate-mittel.webp'
-import bodyMed from 'src/assets/images/tasteFinder/02-coffee-mittel.webp'
-import acidityMed from 'src/assets/images/tasteFinder/02-fruit-mittel.webp'
-import sweetnessMed from 'src/assets/images/tasteFinder/02-sweet-mittel.webp'
-import bitternessHi from 'src/assets/images/tasteFinder/03-chocolate-hoch.webp'
-import bodyHi from 'src/assets/images/tasteFinder/03-coffee-hoch.webp'
-import acidityHigh from 'src/assets/images/tasteFinder/03-fruit-hoch.webp'
-import sweetnessHi from 'src/assets/images/tasteFinder/03-sweet-hoch.webp'
 import {
   Button,
   ButtonEmphasis,
@@ -40,12 +28,13 @@ import {
   ProductTile,
   Tag,
   TagType,
-  TasteInfoEntry,
   Typography,
   TypographySize,
   TypographyType,
 } from 'src/components'
 import { getAPIProductId, getAromaKey } from 'src/utils'
+
+import { getGuideImages, getTasteResults, TasteProfile } from '.'
 
 interface ProductMeta {
   value: string
@@ -87,13 +76,6 @@ interface ProductQuery {
   product: ProductCustom
 }
 
-interface TasteProfile {
-  acidity: number
-  bitterness: number
-  body: number
-  sweetness: number
-}
-
 export const FeaturedProduct: React.FC = () => {
   const { id } = useParams()
   const { t } = useTranslation()
@@ -114,7 +96,7 @@ export const FeaturedProduct: React.FC = () => {
   const { aroma, images, title, whyThisCoffee } = data?.product || {}
 
   // TODO - this is hardcoded for now, as next: grab the stored taste profile data
-  const testResults: TasteProfile = {
+  const tasteProfileResults: TasteProfile = {
     acidity: 1,
     bitterness: 5,
     sweetness: 8,
@@ -151,68 +133,6 @@ export const FeaturedProduct: React.FC = () => {
       }
     }
 
-    const getGuideImages = () => {
-      const guideImages = []
-      if (testResults.acidity <= 3) {
-        guideImages.push(acidityLo)
-      } else {
-        if (testResults.acidity > 7) {
-          guideImages.push(acidityHigh)
-        } else {
-          guideImages.push(acidityMed)
-        }
-      }
-      if (testResults.bitterness <= 3) {
-        guideImages.push(bitternessLo)
-      } else {
-        if (testResults.bitterness > 7) {
-          guideImages.push(bitternessHi)
-        } else {
-          guideImages.push(bitternessMed)
-        }
-      }
-      if (testResults.sweetness <= 3) {
-        guideImages.push(sweetnessLo)
-      } else {
-        if (testResults.sweetness > 7) {
-          guideImages.push(sweetnessHi)
-        } else {
-          guideImages.push(sweetnessMed)
-        }
-      }
-      if (testResults.body <= 3) {
-        guideImages.push(bodyLo)
-      } else {
-        if (testResults.body > 7) {
-          guideImages.push(bodyHi)
-        } else {
-          guideImages.push(bodyMed)
-        }
-      }
-      return guideImages
-    }
-
-    const getTasteResults = (): TasteInfoEntry[] => {
-      return [
-        {
-          key: 'acidity',
-          value: testResults.acidity,
-        },
-        {
-          key: 'bitterness',
-          value: testResults.bitterness,
-        },
-        {
-          key: 'sweetness',
-          value: testResults.sweetness,
-        },
-        {
-          key: 'body',
-          value: testResults.body,
-        },
-      ]
-    }
-
     return (
       <div className="grid grid-cols-1 md:grid-cols-2 items-end">
         <div className="relative w-52 h-40 mx-auto md:order-2 md:w-64 md:h-52 xl:w-80 xl:h-64">
@@ -245,8 +165,8 @@ export const FeaturedProduct: React.FC = () => {
             screenKey="tasteResults"
             listGuideItems={4}
             guideType={GuideType.TasteResults}
-            images={getGuideImages()}
-            tasteResults={getTasteResults()}
+            images={getGuideImages(tasteProfileResults)}
+            tasteResults={getTasteResults(tasteProfileResults)}
             className="mt-6"
           />
         </div>
