@@ -252,14 +252,31 @@
       "title": "Fehler"
     },
     "featuredProduct": {
+      "cta": {
+        "discoverMore": "Mehr Kaffeesorten entdecken",
+        "goToProduct": "Zum Produkt"
+      },
       "items": {
-        "nutsChocolate": {
-          "headline": "Dein Kaffee ist säurearm, hat einen nussig-süßen Geschmack und ist oft bittersüß mit einem schokoladigen Röstgeschmack."
+        "chocolate": {
+          "description": "Dein Kaffee ist säurearm, hat einen nussig-süßen Geschmack und ist oft bittersüß mit einem schokoladigen Röstgeschmack."
+        },
+        "experimental": {
+          "description": "Dein Kaffee ist komplex, er zeigt einen mittleren Körper mit zitronigen Säurenoten. Die Frische und Lebendigkeit machen jede Tasse einzigartig."
+        },
+        "floral": {
+          "description": "Dein Kaffee ist süß, leicht und trägt einen subtilen Duft, ähnlich wie Blumen. Er bringt fruchtige Töne, helle Säure und einen mittleren bis schweren Körper zusammen."
+        },
+        "fruits": {
+          "description": "Weder subtil oder zart, Dein Kaffee ist frisch und lebendig. Du magst das Mundgefühl mit Schärfe, einem kräftigen Körper und fruchtigen Geschmacksnoten."
+        },
+        "spicy": {
+          "description": "Du liebst die rustikale Note und eine Vollkornbrotsüße. Er zeigt eine ausgewogene Säure mit einem kräftigen Körper und intensiven Aromen."
         }
       },
       "navigation": "Aroma",
       "recommendation": {
-        "title": "Was wir dir empfehlen"
+        "title": "Was wir dir empfehlen",
+        "facts": "Warum du ihn lieben wirst"
       },
       "title": "Aroma",
       "yourCoffeeType": {

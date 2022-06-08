@@ -9,7 +9,7 @@ exports[`Pagination component Renders correctly 1`] = `
       class="flex-1 flex justify-end -mt-0.5 mr-2"
     >
       <button
-        class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center text-sm font-bold text-coreUI-text-tertiary"
+        class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center font-bold text-coreUI-text-tertiary"
         data-testid="pagination-previous"
         disabled=""
       >
@@ -35,7 +35,7 @@ exports[`Pagination component Renders correctly 1`] = `
       class="flex-1 flex justify-start -mt-0.5 ml-2"
     >
       <button
-        class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center text-sm font-bold text-coreUI-text-secondary hover:text-coreUI-text-primary"
+        class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center font-bold text-coreUI-text-secondary hover:text-coreUI-text-primary"
         data-testid="pagination-next"
       >
         <span>

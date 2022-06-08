@@ -554,7 +554,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0"
+                class="shrink-0 self-center"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -566,22 +566,22 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 class="flex flex-col justify-between p-2"
               >
                 <div
-                  class="text-sm leading-5 font-semibold"
+                  class="text-base leading-6 font-semibold"
                 >
                   Espresso Raritäten Set
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   WeBean
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Kolumbien
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Filter
                 </div>
@@ -609,7 +609,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0"
+                class="shrink-0 self-center"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -621,22 +621,22 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 class="flex flex-col justify-between p-2"
               >
                 <div
-                  class="text-sm leading-5 font-semibold"
+                  class="text-base leading-6 font-semibold"
                 >
                   Espresso Raritäten Set
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   WeBean
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Kolumbien
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Filter
                 </div>
@@ -664,7 +664,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0"
+                class="shrink-0 self-center"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -676,22 +676,22 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 class="flex flex-col justify-between p-2"
               >
                 <div
-                  class="text-sm leading-5 font-semibold"
+                  class="text-base leading-6 font-semibold"
                 >
                   Espresso Raritäten Set
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   WeBean
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Kolumbien
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Filter
                 </div>
@@ -719,7 +719,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0"
+                class="shrink-0 self-center"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -731,22 +731,22 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 class="flex flex-col justify-between p-2"
               >
                 <div
-                  class="text-sm leading-5 font-semibold"
+                  class="text-base leading-6 font-semibold"
                 >
                   Espresso Raritäten Set
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   WeBean
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Kolumbien
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Filter
                 </div>
@@ -774,7 +774,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0"
+                class="shrink-0 self-center"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -786,22 +786,22 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 class="flex flex-col justify-between p-2"
               >
                 <div
-                  class="text-sm leading-5 font-semibold"
+                  class="text-base leading-6 font-semibold"
                 >
                   Espresso Raritäten Set
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   WeBean
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Kolumbien
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Filter
                 </div>
@@ -829,7 +829,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0"
+                class="shrink-0 self-center"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -841,22 +841,22 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 class="flex flex-col justify-between p-2"
               >
                 <div
-                  class="text-sm leading-5 font-semibold"
+                  class="text-base leading-6 font-semibold"
                 >
                   Espresso Raritäten Set
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   WeBean
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Kolumbien
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Filter
                 </div>
@@ -884,7 +884,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0"
+                class="shrink-0 self-center"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -896,22 +896,22 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 class="flex flex-col justify-between p-2"
               >
                 <div
-                  class="text-sm leading-5 font-semibold"
+                  class="text-base leading-6 font-semibold"
                 >
                   Espresso Raritäten Set
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   WeBean
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Kolumbien
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Filter
                 </div>
@@ -939,7 +939,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0"
+                class="shrink-0 self-center"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -951,22 +951,22 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 class="flex flex-col justify-between p-2"
               >
                 <div
-                  class="text-sm leading-5 font-semibold"
+                  class="text-base leading-6 font-semibold"
                 >
                   Espresso Raritäten Set
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   WeBean
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Kolumbien
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Filter
                 </div>
@@ -994,7 +994,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0"
+                class="shrink-0 self-center"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -1006,22 +1006,22 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 class="flex flex-col justify-between p-2"
               >
                 <div
-                  class="text-sm leading-5 font-semibold"
+                  class="text-base leading-6 font-semibold"
                 >
                   Espresso Raritäten Set
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   WeBean
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Kolumbien
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Filter
                 </div>
@@ -1049,7 +1049,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0"
+                class="shrink-0 self-center"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -1061,22 +1061,22 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 class="flex flex-col justify-between p-2"
               >
                 <div
-                  class="text-sm leading-5 font-semibold"
+                  class="text-base leading-6 font-semibold"
                 >
                   Espresso Raritäten Set
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   WeBean
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Kolumbien
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Filter
                 </div>
@@ -1104,7 +1104,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0"
+                class="shrink-0 self-center"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -1116,22 +1116,22 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 class="flex flex-col justify-between p-2"
               >
                 <div
-                  class="text-sm leading-5 font-semibold"
+                  class="text-base leading-6 font-semibold"
                 >
                   Espresso Raritäten Set
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   WeBean
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Kolumbien
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Filter
                 </div>
@@ -1159,7 +1159,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0"
+                class="shrink-0 self-center"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -1171,22 +1171,22 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 class="flex flex-col justify-between p-2"
               >
                 <div
-                  class="text-sm leading-5 font-semibold"
+                  class="text-base leading-6 font-semibold"
                 >
                   Espresso Raritäten Set
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   WeBean
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Kolumbien
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Filter
                 </div>
@@ -1218,7 +1218,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex-1 flex justify-end -mt-0.5 mr-2"
             >
               <button
-                class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center text-sm font-bold text-coreUI-text-tertiary"
+                class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center font-bold text-coreUI-text-tertiary"
                 data-testid="pagination-previous"
                 disabled=""
               >
@@ -1244,7 +1244,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex-1 flex justify-start -mt-0.5 ml-2"
             >
               <button
-                class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center text-sm font-bold text-coreUI-text-secondary hover:text-coreUI-text-primary"
+                class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center font-bold text-coreUI-text-secondary hover:text-coreUI-text-primary"
                 data-testid="pagination-next"
               >
                 <span>
@@ -2074,7 +2074,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0"
+                class="shrink-0 self-center"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -2086,22 +2086,22 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 class="flex flex-col justify-between p-2"
               >
                 <div
-                  class="text-sm leading-5 font-semibold"
+                  class="text-base leading-6 font-semibold"
                 >
                   Espresso Raritäten Set
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   WeBean
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Kolumbien
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Filter
                 </div>
@@ -2129,7 +2129,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0"
+                class="shrink-0 self-center"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -2141,22 +2141,22 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 class="flex flex-col justify-between p-2"
               >
                 <div
-                  class="text-sm leading-5 font-semibold"
+                  class="text-base leading-6 font-semibold"
                 >
                   Espresso Raritäten Set
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   WeBean
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Kolumbien
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Filter
                 </div>
@@ -2184,7 +2184,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0"
+                class="shrink-0 self-center"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -2196,22 +2196,22 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 class="flex flex-col justify-between p-2"
               >
                 <div
-                  class="text-sm leading-5 font-semibold"
+                  class="text-base leading-6 font-semibold"
                 >
                   Espresso Raritäten Set
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   WeBean
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Kolumbien
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Filter
                 </div>
@@ -2239,7 +2239,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0"
+                class="shrink-0 self-center"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -2251,22 +2251,22 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 class="flex flex-col justify-between p-2"
               >
                 <div
-                  class="text-sm leading-5 font-semibold"
+                  class="text-base leading-6 font-semibold"
                 >
                   Espresso Raritäten Set
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   WeBean
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Kolumbien
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Filter
                 </div>
@@ -2294,7 +2294,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0"
+                class="shrink-0 self-center"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -2306,22 +2306,22 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 class="flex flex-col justify-between p-2"
               >
                 <div
-                  class="text-sm leading-5 font-semibold"
+                  class="text-base leading-6 font-semibold"
                 >
                   Espresso Raritäten Set
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   WeBean
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Kolumbien
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Filter
                 </div>
@@ -2349,7 +2349,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0"
+                class="shrink-0 self-center"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -2361,22 +2361,22 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 class="flex flex-col justify-between p-2"
               >
                 <div
-                  class="text-sm leading-5 font-semibold"
+                  class="text-base leading-6 font-semibold"
                 >
                   Espresso Raritäten Set
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   WeBean
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Kolumbien
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Filter
                 </div>
@@ -2404,7 +2404,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0"
+                class="shrink-0 self-center"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -2416,22 +2416,22 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 class="flex flex-col justify-between p-2"
               >
                 <div
-                  class="text-sm leading-5 font-semibold"
+                  class="text-base leading-6 font-semibold"
                 >
                   Espresso Raritäten Set
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   WeBean
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Kolumbien
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Filter
                 </div>
@@ -2459,7 +2459,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0"
+                class="shrink-0 self-center"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -2471,22 +2471,22 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 class="flex flex-col justify-between p-2"
               >
                 <div
-                  class="text-sm leading-5 font-semibold"
+                  class="text-base leading-6 font-semibold"
                 >
                   Espresso Raritäten Set
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   WeBean
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Kolumbien
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Filter
                 </div>
@@ -2514,7 +2514,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0"
+                class="shrink-0 self-center"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -2526,22 +2526,22 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 class="flex flex-col justify-between p-2"
               >
                 <div
-                  class="text-sm leading-5 font-semibold"
+                  class="text-base leading-6 font-semibold"
                 >
                   Espresso Raritäten Set
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   WeBean
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Kolumbien
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Filter
                 </div>
@@ -2569,7 +2569,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0"
+                class="shrink-0 self-center"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -2581,22 +2581,22 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 class="flex flex-col justify-between p-2"
               >
                 <div
-                  class="text-sm leading-5 font-semibold"
+                  class="text-base leading-6 font-semibold"
                 >
                   Espresso Raritäten Set
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   WeBean
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Kolumbien
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Filter
                 </div>
@@ -2624,7 +2624,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0"
+                class="shrink-0 self-center"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -2636,22 +2636,22 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 class="flex flex-col justify-between p-2"
               >
                 <div
-                  class="text-sm leading-5 font-semibold"
+                  class="text-base leading-6 font-semibold"
                 >
                   Espresso Raritäten Set
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   WeBean
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Kolumbien
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Filter
                 </div>
@@ -2679,7 +2679,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0"
+                class="shrink-0 self-center"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -2691,22 +2691,22 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 class="flex flex-col justify-between p-2"
               >
                 <div
-                  class="text-sm leading-5 font-semibold"
+                  class="text-base leading-6 font-semibold"
                 >
                   Espresso Raritäten Set
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   WeBean
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Kolumbien
                 </div>
                 <div
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   Filter
                 </div>
@@ -2738,7 +2738,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex-1 flex justify-end -mt-0.5 mr-2"
             >
               <button
-                class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center text-sm font-bold text-coreUI-text-tertiary"
+                class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center font-bold text-coreUI-text-tertiary"
                 data-testid="pagination-previous"
                 disabled=""
               >
@@ -2764,7 +2764,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex-1 flex justify-start -mt-0.5 ml-2"
             >
               <button
-                class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center text-sm font-bold text-coreUI-text-secondary hover:text-coreUI-text-primary"
+                class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center font-bold text-coreUI-text-secondary hover:text-coreUI-text-primary"
                 data-testid="pagination-next"
               >
                 <span>

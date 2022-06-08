@@ -117,7 +117,7 @@ export const Cart: React.FC = () => {
                       <Typography
                         as="div"
                         type={TypographyType.Label}
-                        size={TypographySize.Small}
+                        size={TypographySize.Base}
                         className="mb-1.5 md:mb-0"
                       >
                         {product.title}
@@ -127,7 +127,7 @@ export const Cart: React.FC = () => {
                           <Typography
                             key={`cart-item-detail-${optionIdx}`}
                             type={TypographyType.Paragraph}
-                            size={TypographySize.Small}
+                            size={TypographySize.Base}
                             className="text-coreUI-text-secondary"
                           >
                             {optionIdx < selectedOptions?.length - 1 ? `${option.value} | ` : option.value}
@@ -138,7 +138,7 @@ export const Cart: React.FC = () => {
                     <div>
                       <Typography
                         type={TypographyType.Paragraph}
-                        size={TypographySize.Small}
+                        size={TypographySize.Base}
                         className="text-coreUI-text-secondary"
                       >
                         {formatPrice(priceV2.amount, priceV2.currencyCode)}
@@ -146,7 +146,7 @@ export const Cart: React.FC = () => {
                       {selectedOptions[0] && (
                         <Typography
                           type={TypographyType.Paragraph}
-                          size={TypographySize.Small}
+                          size={TypographySize.Base}
                           className="text-coreUI-text-secondary ml-1"
                         >
                           (

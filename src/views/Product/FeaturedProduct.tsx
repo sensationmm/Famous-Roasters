@@ -1,4 +1,5 @@
 import { useQuery } from '@apollo/client/react/hooks'
+import { CheckCircleIcon } from '@heroicons/react/outline'
 import {
   Product as ProductType,
   ProductVariant,
@@ -7,9 +8,16 @@ import {
 import { loader } from 'graphql.macro'
 import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useParams } from 'react-router-dom'
-import Artwork from 'src/assets/images/artwork/01.svg'
+import { Link, useParams } from 'react-router-dom'
+import Chocolate from 'src/assets/images/coffeeProfile/Chocolate.webp'
+import Experimental from 'src/assets/images/coffeeProfile/Experimental.webp'
+import Floral from 'src/assets/images/coffeeProfile/Floral.webp'
+import Fruits from 'src/assets/images/coffeeProfile/Fruits.webp'
+import Spicy from 'src/assets/images/coffeeProfile/Spicy.webp'
 import {
+  Button,
+  ButtonEmphasis,
+  ButtonSize,
   Circle,
   CircleType,
   ErrorPrompt,
@@ -53,6 +61,7 @@ interface ProductCustom extends ProductType {
   altitude: ProductMeta
   variety: ProductMeta
   processing: ProductMeta
+  whyThisCoffee: ProductMeta
   sweetness: ProductMetaInteger
   body: ProductMetaInteger
   bitterness: ProductMetaInteger
@@ -82,7 +91,7 @@ export const FeaturedProduct: React.FC = () => {
     },
   })
 
-  const { aroma, images, title } = data?.product || {}
+  const { aroma, images, title, whyThisCoffee } = data?.product || {}
 
   if (error) {
     return <ErrorPrompt promptAction={() => history.go(0)} />
@@ -97,11 +106,41 @@ export const FeaturedProduct: React.FC = () => {
   }
 
   const renderYourCoffeeTypeBlock = (aroma: string) => {
+    const getArtworkSrc = (aroma: string) => {
+      switch (aroma) {
+        case 'Floral & leicht':
+          return Floral
+        case 'Fruchtig & lebhaft':
+          return Fruits
+        case 'Nussig & schokoladig':
+          return Chocolate
+        case 'Würzig & kräftig':
+          return Spicy
+        default:
+          return Experimental
+      }
+    }
+
+    const getAromaKey = (aroma: string) => {
+      switch (aroma) {
+        case 'Floral & leicht':
+          return 'floral'
+        case 'Fruchtig & lebhaft':
+          return 'fruits'
+        case 'Nussig & schokoladig':
+          return 'chocolate'
+        case 'Würzig & kräftig':
+          return 'spicy'
+        default:
+          return 'experimental'
+      }
+    }
+
     return (
       <div className="grid grid-cols-1 md:grid-cols-2 items-end">
         <div className="relative w-52 h-40 mx-auto md:order-2 md:w-64 md:h-52 xl:w-80 xl:h-64">
           <div className="w-40 h-40 top-0 left-6 absolute rounded-full bg-brand-grey-whisper md:w-52 md:h-52 xl:w-64 xl:h-64" />
-          <img src={Artwork} alt={aroma} className="absolute w-52 top-5 md:w-64 xl:w-80" />
+          <img src={getArtworkSrc(aroma)} alt={aroma} className="absolute w-52 top-5 md:w-64 xl:w-80" />
         </div>
         <div className="md:order-1">
           <div className="flex items-center justify-center md:flex-col md:justify-start md:items-start">
@@ -121,7 +160,9 @@ export const FeaturedProduct: React.FC = () => {
             </Typography>
           </div>
           <div className="flex items-center justify-center mt-2 md:justify-start">
-            <Typography>{t('pages.featuredProduct.items.nutsChocolate.headline')}</Typography>
+            <Typography className="text-center md:text-left">
+              {t(`pages.featuredProduct.items.${getAromaKey(aroma)}.description`)}
+            </Typography>
           </div>
           <Guide screenKey="brewing" guideType={GuideType.Text} className="mt-6" />
         </div>
@@ -130,6 +171,33 @@ export const FeaturedProduct: React.FC = () => {
   }
 
   const renderRecommendationBlock = () => {
+    const parseWhyThisCoffee = (value: string) => {
+      const lines = value
+        .split('.')
+        .map((line) => line.trim())
+        .filter((line) => line.length > 0)
+      return (
+        <div>
+          <Typography
+            as="h3"
+            type={TypographyType.Heading}
+            size={TypographySize.Tiny}
+            className="border-b border-brand-grey-whisper mt-8"
+          >
+            {t('pages.featuredProduct.recommendation.facts')}
+          </Typography>
+          <ul>
+            {lines.map((line, idx) => (
+              <li key={`whythiscoffee-${idx}`} className="flex mt-4">
+                <CheckCircleIcon className="flex w-6 h-6 mr-2 text-coreUI-text-tertiary flex-shrink-0" />
+                <Typography className="flex text-coreUI-text-secondary">{line}</Typography>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )
+    }
+
     return (
       <div>
         <Typography
@@ -141,15 +209,46 @@ export const FeaturedProduct: React.FC = () => {
           {t('pages.featuredProduct.recommendation.title')}
         </Typography>
         <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
-          <div className="flex aspect-1 justify-center items-center">
+          <Link to={`/product/${id}`} className="flex aspect-1 justify-center items-center">
             <img src={images.nodes[0].url} alt={title} className="w-full w-3/4 h-fit shrink-0 grow-0" />
-          </div>
+          </Link>
           <div>
             {data?.product && (
-              <ProductTile productNode={data?.product} showImage={false} showFrom={true} className="p-0" />
+              <div>
+                <Link to={`/product/${id}`} className="flex flex-col w-fit">
+                  <ProductTile productNode={data?.product} showImage={false} showFrom={true} className="p-0" />
+                  <div>
+                    <Tag type={TagType.TasteFinder} value="98% Übereinstimmung" />
+                  </div>
+                </Link>
+              </div>
             )}
-            <div>
-              <Tag type={TagType.TasteFinder} value="98% Übereinstimmung" />
+            {whyThisCoffee && parseWhyThisCoffee(whyThisCoffee.value)}
+            <div className="mt-8">
+              <Link to={`/product/${id}`}>
+                <Button
+                  type="button"
+                  emphasis={ButtonEmphasis.Primary}
+                  size={ButtonSize.md}
+                  className="flex w-full justify-center"
+                  data-testid="goToProduct"
+                >
+                  {t('pages.featuredProduct.cta.goToProduct')}
+                </Button>
+              </Link>
+            </div>
+            <div className="mt-4">
+              <Link to="/catalogue">
+                <Button
+                  type="button"
+                  emphasis={ButtonEmphasis.Secondary}
+                  size={ButtonSize.md}
+                  className="flex w-full justify-center"
+                  data-testid="discoverMore"
+                >
+                  {t('pages.featuredProduct.cta.discoverMore')}
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

@@ -4,7 +4,6 @@ import React from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { MemoryRouter } from 'react-router-dom'
 import {
-  CatalogueMockSimilar,
   ProductMock,
   ProductMockError,
   ProductMockWithCustomMetadata,
