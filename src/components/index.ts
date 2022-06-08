@@ -12,7 +12,7 @@ import { FilterData, FilterMobile } from './FilterMobile'
 import { FiltersMenuMobile } from './FiltersMenuMobile'
 import { Footer } from './Footer'
 import { GrindsInfo } from './GrindsInfo'
-import { Guide, GuideType } from './Guide'
+import { Guide, GuideType, TasteInfoEntry } from './Guide'
 import { Icon, IconName, IconSize } from './Icon'
 import { IconCheckbox } from './IconCheckbox'
 import { ImageCheckbox } from './ImageCheckbox'
@@ -73,6 +73,7 @@ export { QuantitySelect as QuantitySelect }
 export { TabsNavigation as TabsNavigation }
 export { Tag as Tag }
 export { TagType as TagType }
+export type { TasteInfoEntry as TasteInfoEntry }
 export { TasteProfile as TasteProfile }
 export { Typography as Typography }
 export { TypographyType as TypographyType }

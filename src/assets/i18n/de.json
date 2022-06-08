@@ -101,7 +101,7 @@
           "title": "Leichter Körper und flüssiges Mundgefühl - Americano"
         },
         "1": {
-          "text": "Du magst Kaffees mit einem leichten Körper und einem flüssigen Mundgefühl.",
+          "text": "Du magst Kaffees mit einem leichten Körper und einem milchigen Mundgefühl.",
           "title": "Ausgewogener Körper mit einem milchigen Mundgefühl - Milchkaffee"
         },
         "2": {
@@ -140,6 +140,46 @@
       "text": "Unsere Kaffeeexperten nutzen den Vergleich mit Süßspeisen, um herauszufinden, wie süß dein Kaffee sein darf.",
       "title": "Was hat das mit Kaffee zu tun?",
       "trigger": "Was hat das mit Kaffee zu tun?"
+    },
+    "tasteResults": {
+      "items": {
+        "acidity": {
+          "title": "Lebendigkeit",
+          "text": {
+            "hi": "Du magst Kaffees mit deutlicher Säure.",
+            "lo": "Du magst Kaffees mit leichter Säure.",
+            "mid": "Du magst Kaffees mit erkennbarer Säure."
+          }
+        },
+        "bitterness": {
+          "title": "Stärke",
+          "text": {
+            "hi": "Du magst Kaffees mit einer starken Bitternote",
+            "lo": "Du magst Kaffee mit einer leichten Bitternote.",
+            "mid": "Du magst Kaffees mit einer ausgeglichenen Bitternote."
+          }
+        },
+        "body": {
+          "title": "Körper",
+          "text": {
+            "hi": "Du magst Kaffees mit einem vollen Körper und einem cremigen Mundgefühl.",
+            "lo": "Du magst Kaffees mit einem leichten Körper und einem flüssigen Mundgefühl.",
+            "mid": "Du magst Kaffees mit einem leichten Körper und einem milchigen Mundgefühl."
+          }
+        },
+        "sweetness": {
+          "title": "Süße",
+          "text": {
+            "hi": "Du magst Kaffees mit einer sehr starken Süße.",
+            "lo": "Du magst Kaffees mit einer sehr geringen Süße.",
+            "mid": "Du magst Kaffees mit einer erkennbaren Süße."
+          }
+        }
+      },
+      "overline": "Erklärung",
+      "text": "Dein Kaffeetyp zeigt wie du deinen Kaffee magst. Diese Eigenschaften zeigen, wie dein optimaler Kaffeegenuss schmecken soll.",
+      "title": "Was bedeutet mein Kaffeetyp?",
+      "trigger": "Was bedeutet mein Kaffeetyp?"
     }
   },
   "pages": {
