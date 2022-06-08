@@ -1,4 +1,4 @@
-import { formatPrice, getAPIProductId, getSimplifiedProductId } from '.'
+import { formatPrice, getAPIProductId, getAromaKey, getSimplifiedProductId } from '.'
 
 describe('Formatter utils', () => {
   it('Format price works', () => {
@@ -11,5 +11,13 @@ describe('Formatter utils', () => {
 
   it('API product id works', () => {
     expect(getAPIProductId('7655228866776')).toEqual('gid://shopify/Product/7655228866776')
+  })
+
+  it('Get aroma key works', () => {
+    expect(getAromaKey('Floral & leicht')).toEqual('floral')
+    expect(getAromaKey('Fruchtig & lebhaft')).toEqual('fruits')
+    expect(getAromaKey('Nussig & schokoladig')).toEqual('chocolate')
+    expect(getAromaKey('Würzig & kräftig')).toEqual('spicy')
+    expect(getAromaKey('other')).toEqual('experimental')
   })
 })

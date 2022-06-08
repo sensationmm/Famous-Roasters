@@ -224,7 +224,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               <div
                 aria-live="polite"
                 class="swiper-wrapper"
-                id="swiper-wrapper-dacc9923f0236bdb"
+                id="swiper-wrapper-6dde2bd75202ffb1"
                 style="transition-duration: 0ms; transform: translate3d(NaNpx, 0px, 0px);"
               >
                 <div
@@ -1760,7 +1760,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
               <div
                 aria-live="polite"
                 class="swiper-wrapper"
-                id="swiper-wrapper-5814ee910100c8e8e8"
+                id="swiper-wrapper-635f10ab8968fe8d4"
                 style="transition-duration: 0ms; transform: translate3d(NaNpx, 0px, 0px);"
               >
                 <div

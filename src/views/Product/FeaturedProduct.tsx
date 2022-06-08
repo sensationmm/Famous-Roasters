@@ -32,7 +32,7 @@ import {
   TypographySize,
   TypographyType,
 } from 'src/components'
-import { getAPIProductId } from 'src/utils'
+import { getAPIProductId, getAromaKey } from 'src/utils'
 
 interface ProductMeta {
   value: string
@@ -105,34 +105,21 @@ export const FeaturedProduct: React.FC = () => {
     )
   }
 
-  const renderYourCoffeeTypeBlock = (aroma: string) => {
-    const getArtworkSrc = (aroma: string) => {
-      switch (aroma) {
-        case 'Floral & leicht':
+  const renderYourCoffeeTypeBlock = (aromaValue: string) => {
+    const aromaKey = getAromaKey(aromaValue)
+
+    const getArtworkSrc = () => {
+      switch (aromaKey) {
+        case 'floral':
           return Floral
-        case 'Fruchtig & lebhaft':
+        case 'fruits':
           return Fruits
-        case 'Nussig & schokoladig':
+        case 'chocolate':
           return Chocolate
-        case 'Würzig & kräftig':
+        case 'spicy':
           return Spicy
         default:
           return Experimental
-      }
-    }
-
-    const getAromaKey = (aroma: string) => {
-      switch (aroma) {
-        case 'Floral & leicht':
-          return 'floral'
-        case 'Fruchtig & lebhaft':
-          return 'fruits'
-        case 'Nussig & schokoladig':
-          return 'chocolate'
-        case 'Würzig & kräftig':
-          return 'spicy'
-        default:
-          return 'experimental'
       }
     }
 
@@ -140,18 +127,18 @@ export const FeaturedProduct: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 items-end">
         <div className="relative w-52 h-40 mx-auto md:order-2 md:w-64 md:h-52 xl:w-80 xl:h-64">
           <div className="w-40 h-40 top-0 left-6 absolute rounded-full bg-brand-grey-whisper md:w-52 md:h-52 xl:w-64 xl:h-64" />
-          <img src={getArtworkSrc(aroma)} alt={aroma} className="absolute w-52 top-5 md:w-64 xl:w-80" />
+          <img src={getArtworkSrc()} alt={aromaValue} className="absolute w-52 top-5 md:w-64 xl:w-80" />
         </div>
         <div className="md:order-1">
           <div className="flex items-center justify-center md:flex-col md:justify-start md:items-start">
-            <Circle type={CircleType.Aroma} value={aroma} className="flex-shrink-0 mr-2 md:mr-0" />
+            <Circle type={CircleType.Aroma} value={aromaValue} className="flex-shrink-0 mr-2 md:mr-0" />
             <Typography
               as="h1"
               type={TypographyType.Heading}
               size={TypographySize.Small}
               className="font-syne md:mt-2 md:text-3xl md:leading-10 xl:text-4xl xl:leading-10"
             >
-              {aroma}
+              {aromaValue}
             </Typography>
           </div>
           <div className="flex items-center justify-center mt-2 md:justify-start">
@@ -161,7 +148,7 @@ export const FeaturedProduct: React.FC = () => {
           </div>
           <div className="flex items-center justify-center mt-2 md:justify-start">
             <Typography className="text-center md:text-left">
-              {t(`pages.featuredProduct.items.${getAromaKey(aroma)}.description`)}
+              {t(`pages.featuredProduct.items.${aromaKey}.description`)}
             </Typography>
           </div>
           <Guide screenKey="brewing" guideType={GuideType.Text} className="mt-6" />

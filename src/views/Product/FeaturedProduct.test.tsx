@@ -29,11 +29,143 @@ jest.mock('react-router-dom', () => ({
 }))
 
 describe('Featured product view', () => {
-  it('Renders correctly for a successful call', async () => {
+  it('Renders correctly for a successful call with aroma experimental', async () => {
     const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
         mocks={[ProductMockWithCustomMetadata]}
+        addTypename={false}
+      >
+        <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
+          <I18nextProvider i18n={i18n}>
+            <MemoryRouter initialEntries={['/featured/7655228866776']}>
+              <FeaturedProduct />
+            </MemoryRouter>
+          </I18nextProvider>
+        </CartContext.Provider>
+      </MockedProvider>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 500)))
+    expect(container).toMatchSnapshot()
+  })
+
+  it('Renders correctly for a successful call with aroma floral', async () => {
+    const ProductMockWithCustomMetadataOtherAroma = {
+      ...ProductMockWithCustomMetadata,
+      result: {
+        data: {
+          product: {
+            ...ProductMockWithCustomMetadata.result.data.product,
+            aroma: {
+              value: 'Floral & leicht',
+            },
+          },
+        },
+      },
+    }
+    const { container } = render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
+        mocks={[ProductMockWithCustomMetadataOtherAroma]}
+        addTypename={false}
+      >
+        <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
+          <I18nextProvider i18n={i18n}>
+            <MemoryRouter initialEntries={['/featured/7655228866776']}>
+              <FeaturedProduct />
+            </MemoryRouter>
+          </I18nextProvider>
+        </CartContext.Provider>
+      </MockedProvider>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 500)))
+    expect(container).toMatchSnapshot()
+  })
+
+  it('Renders correctly for a successful call with aroma fruits', async () => {
+    const ProductMockWithCustomMetadataOtherAroma = {
+      ...ProductMockWithCustomMetadata,
+      result: {
+        data: {
+          product: {
+            ...ProductMockWithCustomMetadata.result.data.product,
+            aroma: {
+              value: 'Fruchtig & lebhaft',
+            },
+          },
+        },
+      },
+    }
+    const { container } = render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
+        mocks={[ProductMockWithCustomMetadataOtherAroma]}
+        addTypename={false}
+      >
+        <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
+          <I18nextProvider i18n={i18n}>
+            <MemoryRouter initialEntries={['/featured/7655228866776']}>
+              <FeaturedProduct />
+            </MemoryRouter>
+          </I18nextProvider>
+        </CartContext.Provider>
+      </MockedProvider>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 500)))
+    expect(container).toMatchSnapshot()
+  })
+
+  it('Renders correctly for a successful call with aroma chocolate', async () => {
+    const ProductMockWithCustomMetadataOtherAroma = {
+      ...ProductMockWithCustomMetadata,
+      result: {
+        data: {
+          product: {
+            ...ProductMockWithCustomMetadata.result.data.product,
+            aroma: {
+              value: 'Nussig & schokoladig',
+            },
+          },
+        },
+      },
+    }
+    const { container } = render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
+        mocks={[ProductMockWithCustomMetadataOtherAroma]}
+        addTypename={false}
+      >
+        <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
+          <I18nextProvider i18n={i18n}>
+            <MemoryRouter initialEntries={['/featured/7655228866776']}>
+              <FeaturedProduct />
+            </MemoryRouter>
+          </I18nextProvider>
+        </CartContext.Provider>
+      </MockedProvider>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 500)))
+    expect(container).toMatchSnapshot()
+  })
+
+  it('Renders correctly for a successful call with aroma spicy', async () => {
+    const ProductMockWithCustomMetadataOtherAroma = {
+      ...ProductMockWithCustomMetadata,
+      result: {
+        data: {
+          product: {
+            ...ProductMockWithCustomMetadata.result.data.product,
+            aroma: {
+              value: 'Würzig & kräftig',
+            },
+          },
+        },
+      },
+    }
+    const { container } = render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
+        mocks={[ProductMockWithCustomMetadataOtherAroma]}
         addTypename={false}
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
