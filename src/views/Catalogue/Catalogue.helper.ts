@@ -145,7 +145,7 @@ export const getFilterValues = (fData: Collection, key: string) => {
           fData.products.nodes
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
-            .map((productNode) => productNode.variants.nodes.map((variantNode) => variantNode['package_size'].value))
+            .map((productNode) => productNode.variants.nodes.map((variantNode) => variantNode['package_size']?.value))
             .flat()
             .sort((a, b) => (parseFloat(a) > parseFloat(b) ? 1 : -1)),
         ),
