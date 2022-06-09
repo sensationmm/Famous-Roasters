@@ -80,16 +80,36 @@ export const Guide: React.FC<GuideInfoProps> = ({
     })
   })
 
+  const getListItemContainerClassName = (idx: number, lastIdx: number) => {
+    if (idx === lastIdx) {
+      return 'flex items-start justify-between p-5'
+    } else {
+      return 'flex items-start justify-between p-5 border-b border-coreUI-background-images'
+    }
+  }
+
+  const getTasteParamRange = (param: TasteInfoEntry | undefined) => {
+    const value = param?.value || 0
+    if (value <= 3) {
+      return 'lo'
+    } else {
+      if (value > 7) {
+        return 'hi'
+      } else {
+        return 'mid'
+      }
+    }
+  }
+
   const renderGuideMainContent = () => {
     switch (guideType) {
       case GuideType.List:
         return infoData.map((item, idx) => {
-          const containerClassName =
-            idx === infoData.length - 1
-              ? 'flex items-start justify-between p-5'
-              : 'flex items-start justify-between p-5 border-b border-coreUI-background-images'
           return (
-            <div key={`grinds-info-item-${item.key}`} className={containerClassName}>
+            <div
+              key={`list-guide-item-${item.key}`}
+              className={getListItemContainerClassName(idx, infoData.length - 1)}
+            >
               <div className="relative w-20 h-20 rounded-full flex items-center justify-center overflow-clip shrink-0">
                 <div className="w-20 h-20 top-0 absolute rounded-full bg-brand-grey-whisper" />
                 {item.image && <img src={item.image} alt={`image-${item.key}`} className="absolute" />}
@@ -112,23 +132,11 @@ export const Guide: React.FC<GuideInfoProps> = ({
         })
       case GuideType.TasteResults:
         return infoData.map((item, idx) => {
-          const containerClassName =
-            idx === infoData.length - 1
-              ? 'flex items-start justify-between p-5'
-              : 'flex items-start justify-between p-5 border-b border-coreUI-background-images'
-          const range = () => {
-            if (item.tasteParam?.value && item.tasteParam?.value <= 3) {
-              return 'lo'
-            } else {
-              if (item.tasteParam?.value && item.tasteParam?.value > 7) {
-                return 'hi'
-              } else {
-                return 'mid'
-              }
-            }
-          }
           return (
-            <div key={`grinds-info-item-${item.key}`} className={containerClassName}>
+            <div
+              key={`results-guide-item-${item.key}`}
+              className={getListItemContainerClassName(idx, infoData.length - 1)}
+            >
               <div className="relative w-20 h-20 rounded-full flex items-center justify-center overflow-clip shrink-0">
                 <div className="w-20 h-20 top-0 absolute rounded-full bg-brand-grey-whisper" />
                 {item.image && <img src={item.image} alt={`image-${item.key}`} className="absolute" />}
@@ -145,7 +153,7 @@ export const Guide: React.FC<GuideInfoProps> = ({
                   size={TypographySize.Base}
                   className="text-coreUI-text-secondary mt-1"
                 >
-                  {t(`guides.${screenKey}.items.${item.tasteParam?.key}.text.${range()}`)}
+                  {t(`guides.${screenKey}.items.${item.tasteParam?.key}.text.${getTasteParamRange(item.tasteParam)}`)}
                 </Typography>
               </div>
             </div>

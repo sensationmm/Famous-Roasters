@@ -19,44 +19,27 @@ export interface TasteProfile {
   sweetness: number
 }
 
-export const getGuideImages = (tasteFinderResult: TasteProfile) => {
-  const guideImages = []
-  if (tasteFinderResult.acidity <= 3) {
-    guideImages.push(acidityLo)
-  } else {
-    if (tasteFinderResult.acidity > 7) {
-      guideImages.push(acidityHigh)
+export const getGuideImages = (tasteFinderResult: TasteProfile): string[] => {
+  const guideImages: string[] = []
+  const { acidity, bitterness, sweetness, body } = tasteFinderResult
+
+  const pushImage = (p: number, imgLo: string, imgMed: string, imgHigh: string) => {
+    if (p <= 3) {
+      guideImages.push(imgLo)
     } else {
-      guideImages.push(acidityMed)
+      if (p > 7) {
+        guideImages.push(imgHigh)
+      } else {
+        guideImages.push(imgMed)
+      }
     }
   }
-  if (tasteFinderResult.bitterness <= 3) {
-    guideImages.push(bitternessLo)
-  } else {
-    if (tasteFinderResult.bitterness > 7) {
-      guideImages.push(bitternessHi)
-    } else {
-      guideImages.push(bitternessMed)
-    }
-  }
-  if (tasteFinderResult.sweetness <= 3) {
-    guideImages.push(sweetnessLo)
-  } else {
-    if (tasteFinderResult.sweetness > 7) {
-      guideImages.push(sweetnessHi)
-    } else {
-      guideImages.push(sweetnessMed)
-    }
-  }
-  if (tasteFinderResult.body <= 3) {
-    guideImages.push(bodyLo)
-  } else {
-    if (tasteFinderResult.body > 7) {
-      guideImages.push(bodyHi)
-    } else {
-      guideImages.push(bodyMed)
-    }
-  }
+
+  pushImage(acidity, acidityLo, acidityMed, acidityHigh)
+  pushImage(bitterness, bitternessLo, bitternessMed, bitternessHi)
+  pushImage(sweetness, sweetnessLo, sweetnessMed, sweetnessHi)
+  pushImage(body, bodyLo, bodyMed, bodyHi)
+
   return guideImages
 }
 
