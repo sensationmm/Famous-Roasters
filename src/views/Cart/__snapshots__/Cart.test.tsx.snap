@@ -490,7 +490,7 @@ exports[`Cart view Renders correctly 1`] = `
           <div
             class="text-coreUI-text-secondary text-xs leading-4"
           >
-            Preise inkl. MwSt. und Versand
+            Preise inkl. MwSt.
           </div>
         </div>
         <div
