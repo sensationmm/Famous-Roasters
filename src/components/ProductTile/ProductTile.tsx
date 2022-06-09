@@ -29,7 +29,7 @@ export const ProductTile: React.FC<ProductTileProps> = ({
 }: ProductTileProps) => {
   const { title, vendor, featuredImage, images, priceRange, pricePerKg, coffee_type, origin } = productNode
   const { t } = useTranslation()
-  if (showImage && !featuredImage && !images.nodes[0]) return null
+  if (showImage && !featuredImage && (!images || !images.nodes[0])) return null
   const imgSrc = featuredImage?.url ? featuredImage.url : images.nodes[0].url
   return (
     <div className={className ? 'flex p-6 ' + className : 'flex p-6'}>
