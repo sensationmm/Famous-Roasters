@@ -436,7 +436,7 @@
           }
         },
         "price": {
-          "footNote": "Preise inkl. MwSt. und Versand"
+          "footNote": "Preise inkl. MwSt."
         },
         "qualityNote": "Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu Dir. Wir teilen Dir den geplanten Liefertermin im nächsten Schritt mit.",
         "shipping": {
