@@ -94,7 +94,8 @@ interface QueryProductsVariables {
 }
 
 const tabsData: TabsDataItem[] = [
-  { key: 'forYou', translationKey: 'pages.catalogue.tabs.forYou' },
+  // disabled for now
+  // { key: 'forYou', translationKey: 'pages.catalogue.tabs.forYou' },
   { key: 'discover', translationKey: 'pages.catalogue.tabs.discover' },
 ]
 

@@ -80,7 +80,7 @@ describe('Catalogue view', () => {
     expect(container).toMatchSnapshot()
   })
 
-  it('The user can navigate across tabs', async () => {
+  it.skip('The user can navigate across tabs', async () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
