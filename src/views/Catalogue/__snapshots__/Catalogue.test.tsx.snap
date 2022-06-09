@@ -216,19 +216,6 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
           role="tablist"
         >
           <button
-            aria-selected="false"
-            class="mr-6"
-            data-testid="tab-forYou"
-            role="tab"
-            type="button"
-          >
-            <span
-              class="text-coreUI-text-secondary hover:text-coreUI-text-primary pb-1.5 text-sm leading-5"
-            >
-              Für Dich
-            </span>
-          </button>
-          <button
             aria-selected="true"
             class="mr-6"
             data-testid="tab-discover"
@@ -1735,19 +1722,6 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
           class="flex"
           role="tablist"
         >
-          <button
-            aria-selected="false"
-            class="mr-6"
-            data-testid="tab-forYou"
-            role="tab"
-            type="button"
-          >
-            <span
-              class="text-coreUI-text-secondary hover:text-coreUI-text-primary pb-1.5 text-sm leading-5"
-            >
-              Für Dich
-            </span>
-          </button>
           <button
             aria-selected="true"
             class="mr-6"
