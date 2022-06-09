@@ -9,3 +9,18 @@ export const formatPrice = (amount: string, currency: string) =>
 export const getSimplifiedProductId = (id: string) => id.split('gid://shopify/Product/')[1]
 
 export const getAPIProductId = (id: string) => `gid://shopify/Product/${id}`
+
+export const getAromaKey = (aroma: string) => {
+  switch (aroma) {
+    case 'Floral & leicht':
+      return 'floral'
+    case 'Fruchtig & lebhaft':
+      return 'fruits'
+    case 'Nussig & schokoladig':
+      return 'chocolate'
+    case 'Würzig & kräftig':
+      return 'spicy'
+    default:
+      return 'experimental'
+  }
+}

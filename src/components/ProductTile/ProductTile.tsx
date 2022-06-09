@@ -15,27 +15,33 @@ interface ProductCustom extends ProductType {
   pricePerKg?: ProductMeta
 }
 
-interface ProductTileProps {
+interface ProductTileProps extends React.HTMLAttributes<HTMLElement> {
   productNode: ProductCustom
+  showImage?: boolean
+  showFrom?: boolean
 }
 
-export const ProductTile: React.FC<ProductTileProps> = ({ productNode }: ProductTileProps) => {
-  const { title, vendor, featuredImage, priceRange, pricePerKg, coffee_type, origin } = productNode
+export const ProductTile: React.FC<ProductTileProps> = ({
+  productNode,
+  showImage = true,
+  showFrom = false,
+  className,
+}: ProductTileProps) => {
+  const { title, vendor, featuredImage, images, priceRange, pricePerKg, coffee_type, origin } = productNode
   const { t } = useTranslation()
-  if (!featuredImage || !priceRange.minVariantPrice.amount) return null
+  if (showImage && !featuredImage && !images.nodes[0]) return null
+  const imgSrc = featuredImage?.url ? featuredImage.url : images.nodes[0].url
   return (
-    <div className="flex p-6">
-      <div className="shrink-0">
-        <img src={featuredImage.url} alt={title} className="w-32" />
-      </div>
+    <div className={className ? 'flex p-6 ' + className : 'flex p-6'}>
+      <div className="shrink-0 self-center">{showImage && <img src={imgSrc} alt={title} className="w-32" />}</div>
       <div className="flex flex-col justify-between p-2">
-        <Typography as="div" type={TypographyType.Label} size={TypographySize.Small}>
+        <Typography as="div" type={TypographyType.Label} size={TypographySize.Base}>
           {title}
         </Typography>
         <Typography
           as="div"
           type={TypographyType.Paragraph}
-          size={TypographySize.Small}
+          size={TypographySize.Base}
           className="text-coreUI-text-secondary"
         >
           {vendor}
@@ -44,7 +50,7 @@ export const ProductTile: React.FC<ProductTileProps> = ({ productNode }: Product
           <Typography
             as="div"
             type={TypographyType.Paragraph}
-            size={TypographySize.Small}
+            size={TypographySize.Base}
             className="text-coreUI-text-secondary"
           >
             {origin.value
@@ -61,7 +67,7 @@ export const ProductTile: React.FC<ProductTileProps> = ({ productNode }: Product
           <Typography
             as="div"
             type={TypographyType.Paragraph}
-            size={TypographySize.Small}
+            size={TypographySize.Base}
             className="text-coreUI-text-secondary"
           >
             {coffee_type.value}
@@ -69,6 +75,7 @@ export const ProductTile: React.FC<ProductTileProps> = ({ productNode }: Product
         )}
         <div>
           <Typography type={TypographyType.Label} size={TypographySize.Base} className="mr-1">
+            {showFrom && t('pages.catalogue.tile.from') + ' '}
             {formatPrice(priceRange.minVariantPrice.amount, priceRange.minVariantPrice.currencyCode)}
           </Typography>
           {pricePerKg && (

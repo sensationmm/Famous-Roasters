@@ -39,6 +39,7 @@ interface ProductCustom {
   variety?: ProductMeta
   processing?: ProductMeta
   pricePerKg?: ProductMeta
+  whyThisCoffee?: ProductMeta
   variants: ProductVariantConnectionCustom
 }
 
@@ -261,6 +262,10 @@ export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
   },
   pricePerKg: {
     value: '10.0',
+  },
+  whyThisCoffee: {
+    value:
+      'Dein Kaffee ist süß, leicht und trägt einen subtilen Duft, ähnlich wie Blumen. Er bringt fruchtige Töne, helle Säure und einen mittleren bis schweren Körper zusammen',
   },
   variants: {
     ...ProductMockData.variants,

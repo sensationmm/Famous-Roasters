@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Circle component Renders correctly 1`] = `
+<div>
+  <div
+    class="inline-flex rounded-full w-6 h-6 md:w-8 md:h-8 xl:w-12 xl:h-12 bg-brand-grey-bombay"
+  />
+</div>
+`;
+
+exports[`Circle component Renders correctly for aroma tag with a different value 1`] = `
+<div>
+  <div
+    class="inline-flex rounded-full w-6 h-6 md:w-8 md:h-8 xl:w-12 xl:h-12 bg-brand-grey-bombay"
+  />
+</div>
+`;
+
+exports[`Circle component Renders correctly for aroma tag with value experimentell & komplex 1`] = `
+<div>
+  <div
+    class="inline-flex rounded-full w-6 h-6 md:w-8 md:h-8 xl:w-12 xl:h-12 bg-tags-capeHoney"
+  />
+</div>
+`;
+
+exports[`Circle component Renders correctly for aroma tag with value floral & leicht 1`] = `
+<div>
+  <div
+    class="inline-flex rounded-full w-6 h-6 md:w-8 md:h-8 xl:w-12 xl:h-12 bg-tags-melrose"
+  />
+</div>
+`;
+
+exports[`Circle component Renders correctly for aroma tag with value fruchtig & lebhaft 1`] = `
+<div>
+  <div
+    class="inline-flex rounded-full w-6 h-6 md:w-8 md:h-8 xl:w-12 xl:h-12 bg-tags-cottonCandy"
+  />
+</div>
+`;
+
+exports[`Circle component Renders correctly for aroma tag with value nussig & schokoladig 1`] = `
+<div>
+  <div
+    class="inline-flex rounded-full w-6 h-6 md:w-8 md:h-8 xl:w-12 xl:h-12 bg-tags-coldTurkey"
+  />
+</div>
+`;
+
+exports[`Circle component Renders correctly for aroma tag with value würzig & kräftig 1`] = `
+<div>
+  <div
+    class="inline-flex rounded-full w-6 h-6 md:w-8 md:h-8 xl:w-12 xl:h-12 bg-tags-yourPink"
+  />
+</div>
+`;

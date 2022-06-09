@@ -17,7 +17,6 @@ const getButtonClassNames = (disabled: boolean): string => {
     'pr-1',
     'inline-flex',
     'items-center',
-    'text-sm',
     'font-bold',
   ]
 

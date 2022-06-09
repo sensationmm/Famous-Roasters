@@ -66,6 +66,7 @@ interface ProductCustom extends ProductType {
   bitterness: ProductMetaInteger
   acidity: ProductMetaInteger
   pricePerKg: ProductMeta
+  whyThisCoffee?: ProductMeta
   variants: ProductVariantConnectionCustom
 }
 

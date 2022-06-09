@@ -1,22 +1,40 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { Dialog, Drawer, Icon, IconName, IconSize, Typography, TypographySize, TypographyType } from 'src/components'
+import {
+  BeanScaleTag,
+  Dialog,
+  Drawer,
+  Icon,
+  IconName,
+  IconSize,
+  Typography,
+  TypographySize,
+  TypographyType,
+} from 'src/components'
+
+export interface TasteInfoEntry {
+  key: string
+  value: number
+}
 
 interface GuideEntry {
   key: string
   image?: string
   icon?: string
+  tasteParam?: TasteInfoEntry
 }
 
 export enum GuideType {
   List = 'list',
   Text = 'text',
+  TasteResults = 'tasteResults',
 }
 
 interface GuideInfoProps extends React.HTMLAttributes<HTMLElement> {
   screenKey: string
   images?: (string | undefined)[]
   icons?: (string | undefined)[]
+  tasteResults?: (TasteInfoEntry | undefined)[]
   guideType?: GuideType
   listGuideItems?: number
   className?: string
@@ -26,6 +44,7 @@ export const Guide: React.FC<GuideInfoProps> = ({
   screenKey,
   images,
   icons,
+  tasteResults,
   guideType = GuideType.List,
   listGuideItems = 3,
   className,
@@ -57,8 +76,102 @@ export const Guide: React.FC<GuideInfoProps> = ({
       key: index.toString(),
       image: images && images[index],
       icon: icons && icons[index],
+      tasteParam: tasteResults && tasteResults[index],
     })
   })
+
+  const getListItemContainerClassName = (idx: number, lastIdx: number) => {
+    if (idx === lastIdx) {
+      return 'flex items-start justify-between p-5'
+    } else {
+      return 'flex items-start justify-between p-5 border-b border-coreUI-background-images'
+    }
+  }
+
+  const getTasteParamRange = (param: TasteInfoEntry | undefined) => {
+    const value = param?.value || 0
+    if (value <= 3) {
+      return 'lo'
+    } else {
+      if (value > 7) {
+        return 'hi'
+      } else {
+        return 'mid'
+      }
+    }
+  }
+
+  const renderGuideMainContent = () => {
+    switch (guideType) {
+      case GuideType.List:
+        return infoData.map((item, idx) => {
+          return (
+            <div
+              key={`list-guide-item-${item.key}`}
+              className={getListItemContainerClassName(idx, infoData.length - 1)}
+            >
+              <div className="relative w-20 h-20 rounded-full flex items-center justify-center overflow-clip shrink-0">
+                <div className="w-20 h-20 top-0 absolute rounded-full bg-brand-grey-whisper" />
+                {item.image && <img src={item.image} alt={`image-${item.key}`} className="absolute" />}
+                {item.icon && <Icon name={item.icon} size={IconSize.lg} className="absolute" />}
+              </div>
+              <div className="flex flex-1 pl-4 flex-col">
+                <Typography type={TypographyType.Label} size={TypographySize.Large}>
+                  {t(`guides.${screenKey}.items.${item.key}.title`)}
+                </Typography>
+                <Typography
+                  type={TypographyType.Paragraph}
+                  size={TypographySize.Base}
+                  className="text-coreUI-text-secondary mt-1"
+                >
+                  {t(`guides.${screenKey}.items.${item.key}.text`)}
+                </Typography>
+              </div>
+            </div>
+          )
+        })
+      case GuideType.TasteResults:
+        return infoData.map((item, idx) => {
+          return (
+            <div
+              key={`results-guide-item-${item.key}`}
+              className={getListItemContainerClassName(idx, infoData.length - 1)}
+            >
+              <div className="relative w-20 h-20 rounded-full flex items-center justify-center overflow-clip shrink-0">
+                <div className="w-20 h-20 top-0 absolute rounded-full bg-brand-grey-whisper" />
+                {item.image && <img src={item.image} alt={`image-${item.key}`} className="absolute" />}
+              </div>
+              <div className="flex flex-1 pl-4 flex-col">
+                <div className="flex flex-row justify-between">
+                  <Typography type={TypographyType.Label} size={TypographySize.Large}>
+                    {t(`guides.${screenKey}.items.${item.tasteParam?.key}.title`)}
+                  </Typography>
+                  {item.tasteParam?.value && <BeanScaleTag value={item.tasteParam?.value} />}
+                </div>
+                <Typography
+                  type={TypographyType.Paragraph}
+                  size={TypographySize.Base}
+                  className="text-coreUI-text-secondary mt-1"
+                >
+                  {t(`guides.${screenKey}.items.${item.tasteParam?.key}.text.${getTasteParamRange(item.tasteParam)}`)}
+                </Typography>
+              </div>
+            </div>
+          )
+        })
+      default:
+        return (
+          <Typography
+            as="h4"
+            type={TypographyType.Paragraph}
+            size={TypographySize.Large}
+            className="text-coreUI-text-secondary font-semibold p-5 pt-0"
+          >
+            {t(`guides.${screenKey}.textBold`)}
+          </Typography>
+        )
+    }
+  }
 
   const renderMainContent = () => {
     return (
@@ -71,44 +184,7 @@ export const Guide: React.FC<GuideInfoProps> = ({
         >
           {t(`guides.${screenKey}.text`)}
         </Typography>
-        {guideType === GuideType.List ? (
-          infoData.map((item, idx) => {
-            const containerClassName =
-              idx === infoData.length - 1
-                ? 'flex items-start justify-between p-5'
-                : 'flex items-start justify-between p-5 border-b border-coreUI-background-images'
-            return (
-              <div key={`grinds-info-item-${item.key}`} className={containerClassName}>
-                <div className="relative w-20 h-20 rounded-full flex items-center justify-center overflow-clip">
-                  <div className="w-20 h-20 top-0 absolute rounded-full bg-brand-grey-whisper" />
-                  {item.image && <img src={item.image} alt={`image-${item.key}`} className="absolute" />}
-                  {item.icon && <Icon name={item.icon} size={IconSize.lg} className="absolute" />}
-                </div>
-                <div className="flex flex-1 pl-4 flex-col">
-                  <Typography type={TypographyType.Label} size={TypographySize.Large}>
-                    {t(`guides.${screenKey}.items.${item.key}.title`)}
-                  </Typography>
-                  <Typography
-                    type={TypographyType.Paragraph}
-                    size={TypographySize.Base}
-                    className="text-coreUI-text-secondary mt-1"
-                  >
-                    {t(`guides.${screenKey}.items.${item.key}.text`)}
-                  </Typography>
-                </div>
-              </div>
-            )
-          })
-        ) : (
-          <Typography
-            as="h4"
-            type={TypographyType.Paragraph}
-            size={TypographySize.Large}
-            className="text-coreUI-text-secondary font-semibold p-5 pt-0"
-          >
-            {t(`guides.${screenKey}.textBold`)}
-          </Typography>
-        )}
+        {renderGuideMainContent()}
       </>
     )
   }

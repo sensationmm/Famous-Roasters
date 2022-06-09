@@ -49,7 +49,7 @@
           "title": "Himbeeren"
         },
         "2": {
-          "text": "Du magst Kaffees mit deutlichen Säure.",
+          "text": "Du magst Kaffees mit deutlicher Säure.",
           "title": "Orangen"
         }
       },
@@ -70,7 +70,7 @@
         }
       },
       "overline": "Erklärung",
-      "text": "Unsere Kaffeeexperten nutzen diese Frage, um heraus-zufinden, wie offen für Neues du bist. Dadurch können wir sehen, ob wir dir auch Kaffees mit geringer Überein-stimmung empfehlen dürfen.",
+      "text": "Unsere Kaffeeexperten nutzen diese Frage, um herauszufinden, wie offen für Neues du bist.",
       "title": "Was hat das mit Kaffee zu tun?",
       "trigger": "Was hat das mit Kaffee zu tun?"
     },
@@ -98,15 +98,15 @@
       "items": {
         "0": {
           "text": "Du magst Kaffees mit einem leichten Körper und einem flüssigen Mundgefühl.",
-          "title": "Leichten Körper und flüssigen Mundgefühl Americano"
+          "title": "Leichter Körper und flüssiges Mundgefühl - Americano"
         },
         "1": {
-          "text": "Du magst Kaffees mit einem leichten Körper und einem flüssigen Mundgefühl.",
-          "title": "Ausgewogenen Körper und einem milchigen Mundgefühl Milchkaffee"
+          "text": "Du magst Kaffees mit einem leichten Körper und einem milchigen Mundgefühl.",
+          "title": "Ausgewogener Körper mit einem milchigen Mundgefühl - Milchkaffee"
         },
         "2": {
           "text": "Du magst Kaffees mit einem vollen Körper und einem cremigen Mundgefühl.",
-          "title": "Ausgewogenen Körper und einem milchigen Mundgefühl Milchkaffee "
+          "title": "Ausgewogener Körper mit einem cremigen Mundgefühl - Macchiato "
         }
       },
       "overline": "Erklärung",
@@ -140,6 +140,46 @@
       "text": "Unsere Kaffeeexperten nutzen den Vergleich mit Süßspeisen, um herauszufinden, wie süß dein Kaffee sein darf.",
       "title": "Was hat das mit Kaffee zu tun?",
       "trigger": "Was hat das mit Kaffee zu tun?"
+    },
+    "tasteResults": {
+      "items": {
+        "acidity": {
+          "title": "Lebendigkeit",
+          "text": {
+            "hi": "Du magst Kaffees mit deutlicher Säure.",
+            "lo": "Du magst Kaffees mit leichter Säure.",
+            "mid": "Du magst Kaffees mit erkennbarer Säure."
+          }
+        },
+        "bitterness": {
+          "title": "Stärke",
+          "text": {
+            "hi": "Du magst Kaffees mit einer starken Bitternote",
+            "lo": "Du magst Kaffee mit einer leichten Bitternote.",
+            "mid": "Du magst Kaffees mit einer ausgeglichenen Bitternote."
+          }
+        },
+        "body": {
+          "title": "Körper",
+          "text": {
+            "hi": "Du magst Kaffees mit einem vollen Körper und einem cremigen Mundgefühl.",
+            "lo": "Du magst Kaffees mit einem leichten Körper und einem flüssigen Mundgefühl.",
+            "mid": "Du magst Kaffees mit einem leichten Körper und einem milchigen Mundgefühl."
+          }
+        },
+        "sweetness": {
+          "title": "Süße",
+          "text": {
+            "hi": "Du magst Kaffees mit einer sehr starken Süße.",
+            "lo": "Du magst Kaffees mit einer sehr geringen Süße.",
+            "mid": "Du magst Kaffees mit einer erkennbaren Süße."
+          }
+        }
+      },
+      "overline": "Erklärung",
+      "text": "Dein Kaffeetyp zeigt wie du deinen Kaffee magst. Diese Eigenschaften zeigen, wie dein optimaler Kaffeegenuss schmecken soll.",
+      "title": "Was bedeutet mein Kaffeetyp?",
+      "trigger": "Was bedeutet mein Kaffeetyp?"
     }
   },
   "pages": {
@@ -167,12 +207,6 @@
       "title": "Warenkorb"
     },
     "catalogue": {
-      "navigation": "Shop",
-      "title": "Katalog",
-      "tabs": {
-        "discover": "Entdecken",
-        "forYou": "Für Dich"
-      },
       "filters": {
         "beanType": {
           "label": "Bohnensorte"
@@ -231,10 +265,19 @@
           "label": "Röster"
         }
       },
+      "navigation": "Shop",
       "pagination": {
         "next": "Weiter",
         "previous": "Zurück"
-      }
+      },
+      "tabs": {
+        "discover": "Entdecken",
+        "forYou": "Für Dich"
+      },
+      "tile": {
+        "from": "ab"
+      },
+      "title": "Katalog"
     },
     "checkout": {
       "navigation": "Checkout",
@@ -247,6 +290,38 @@
     "error": {
       "navigation": "Fehler",
       "title": "Fehler"
+    },
+    "featuredProduct": {
+      "cta": {
+        "discoverMore": "Mehr Kaffeesorten entdecken",
+        "goToProduct": "Zum Produkt"
+      },
+      "items": {
+        "chocolate": {
+          "description": "Dein Kaffee ist säurearm, hat einen nussig-süßen Geschmack und ist oft bittersüß mit einem schokoladigen Röstgeschmack."
+        },
+        "experimental": {
+          "description": "Dein Kaffee ist komplex, er zeigt einen mittleren Körper mit zitronigen Säurenoten. Die Frische und Lebendigkeit machen jede Tasse einzigartig."
+        },
+        "floral": {
+          "description": "Dein Kaffee ist süß, leicht und trägt einen subtilen Duft, ähnlich wie Blumen. Er bringt fruchtige Töne, helle Säure und einen mittleren bis schweren Körper zusammen."
+        },
+        "fruits": {
+          "description": "Weder subtil oder zart, Dein Kaffee ist frisch und lebendig. Du magst das Mundgefühl mit Schärfe, einem kräftigen Körper und fruchtigen Geschmacksnoten."
+        },
+        "spicy": {
+          "description": "Du liebst die rustikale Note und eine Vollkornbrotsüße. Er zeigt eine ausgewogene Säure mit einem kräftigen Körper und intensiven Aromen."
+        }
+      },
+      "navigation": "Aroma",
+      "recommendation": {
+        "title": "Was wir dir empfehlen",
+        "facts": "Warum du ihn lieben wirst"
+      },
+      "title": "Aroma",
+      "yourCoffeeType": {
+        "title": "Dein Kaffeetyp"
+      }
     },
     "home": {
       "navigation": "Home",
@@ -377,15 +452,15 @@
         "acidity": {
           "options": {
             "option1": {
-              "selectedText": "Leicht Lebendigkeit",
+              "selectedText": "Leichte Säure",
               "text": "Weniger saure Birnen"
             },
             "option2": {
-              "selectedText": "Mittel Lebendigkeit",
+              "selectedText": "Mittlere Säure",
               "text": "Ausgewogen saure Himbeeren"
             },
             "option3": {
-              "selectedText": "Hoch Lebendigkeit",
+              "selectedText": "Intensive Säure",
               "text": "Sehr saure Orangen"
             }
           },
@@ -405,15 +480,15 @@
         "bitterness": {
           "options": {
             "option1": {
-              "selectedText": "Leicht Stärke",
+              "selectedText": "Leichte Bitternote",
               "text": "Hellere und weniger bittere Milchschokolade"
             },
             "option2": {
-              "selectedText": "Mittel Stärke",
+              "selectedText": "Ausgeglichene Bitternote",
               "text": "Dunklere und ausgewogen bittere Schokolade"
             },
             "option3": {
-              "selectedText": "Hoch Stärke",
+              "selectedText": "Intensive Bitternote",
               "text": "Sehr dunkle Zartbitter-schokolade (70% +)"
             }
           },
@@ -422,15 +497,15 @@
         "body": {
           "options": {
             "option1": {
-              "selectedText": "Leicht Körper",
+              "selectedText": "Leichter Körper",
               "text": "Americano - leichter Körper, flüssiges Mundgefühl"
             },
             "option2": {
-              "selectedText": "Mittel Körper",
+              "selectedText": "Ausgewogener Körper",
               "text": "Milchkaffee - ausgewogener Körper, milchiges Mundgefühl "
             },
             "option3": {
-              "selectedText": "Hoch Körper",
+              "selectedText": "Voller Körper",
               "text": "Macchiato - voller Körper, cremiges Mundgefühl"
             }
           },
@@ -457,24 +532,24 @@
               "text": "Espresso Maschine"
             }
           },
-          "text": "Jeder weiß: der Tag beginnt nach der ersten Tasse Kaffee. Auf welche Art würdest du deinen Kaffee brühen?"
+          "text": "Jeder weiß: der Tag beginnt nach der ersten Tasse Kaffee. Auf welche Art brühst du deinen Kaffee?"
         },
         "sweetness": {
           "options": {
             "option1": {
-              "selectedText": "Leicht Süße",
-              "text": "Eine leicht süße Käse"
+              "selectedText": "Leichte Süße",
+              "text": "Eine leicht süßes Stück Käse"
             },
             "option2": {
-              "selectedText": "Mittel Süße",
+              "selectedText": "Mittlere Süße",
               "text": "Eine ausgewogen süße Panna Cotta"
             },
             "option3": {
-              "selectedText": "Hoch Süße",
+              "selectedText": "Intensive Süße",
               "text": "Ein intensiv süßes Stück Baklava"
             }
           },
-          "text": "Der Tag neigt sich dem Ende zu und du hast noch etwas Appetit. Für welche Snack entscheidest du dich?"
+          "text": "Der Tag neigt sich dem Ende zu und du hast noch etwas Appetit. Für welchen Snack entscheidest du dich?"
         },
         "welcome": {
           "cta": "Tastefinder starten",

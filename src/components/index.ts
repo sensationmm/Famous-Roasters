@@ -3,6 +3,7 @@ import { BeanScaleTag } from './BeanScaleTag'
 import { Button, ButtonEmphasis, ButtonSize } from './Button'
 import { Carousel } from './Carousel'
 import { CartContext, CartProvider } from './CartProvider'
+import { Circle, CircleType } from './Circle'
 import { Dialog } from './Dialog'
 import { Disclosure } from './Disclosure'
 import { Drawer } from './Drawer'
@@ -11,7 +12,7 @@ import { FilterData, FilterMobile } from './FilterMobile'
 import { FiltersMenuMobile } from './FiltersMenuMobile'
 import { Footer } from './Footer'
 import { GrindsInfo } from './GrindsInfo'
-import { Guide, GuideType } from './Guide'
+import { Guide, GuideType, TasteInfoEntry } from './Guide'
 import { Icon, IconName, IconSize } from './Icon'
 import { IconCheckbox } from './IconCheckbox'
 import { ImageCheckbox } from './ImageCheckbox'
@@ -38,6 +39,8 @@ export { ButtonSize as ButtonSize }
 export { Carousel as Carousel }
 export { CartContext as CartContext }
 export { CartProvider as CartProvider }
+export { Circle as Circle }
+export { CircleType as CircleType }
 export { Dialog as Dialog }
 export { Drawer as Drawer }
 export { Disclosure as Disclosure }
@@ -70,6 +73,7 @@ export { QuantitySelect as QuantitySelect }
 export { TabsNavigation as TabsNavigation }
 export { Tag as Tag }
 export { TagType as TagType }
+export type { TasteInfoEntry as TasteInfoEntry }
 export { TasteProfile as TasteProfile }
 export { Typography as Typography }
 export { TypographyType as TypographyType }

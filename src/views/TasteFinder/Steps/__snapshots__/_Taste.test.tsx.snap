@@ -436,7 +436,7 @@ exports[`Taste screen dynamic partial view Renders correctly for not scrollable 
       <h1
         class="flex md:text-2xl md:leading-8 xl:text-3xl xl:leading-10 text-xl leading-7 font-semibold"
       >
-        Jeder weiß: der Tag beginnt nach der ersten Tasse Kaffee. Auf welche Art würdest du deinen Kaffee brühen?
+        Jeder weiß: der Tag beginnt nach der ersten Tasse Kaffee. Auf welche Art brühst du deinen Kaffee?
       </h1>
       <div
         class="flex md:hidden"

@@ -240,18 +240,18 @@ exports[`Cart view Renders correctly 1`] = `
             >
               <div>
                 <div
-                  class="mb-1.5 md:mb-0 text-sm leading-5 font-semibold"
+                  class="mb-1.5 md:mb-0 text-base leading-6 font-semibold"
                 >
                   Cycle Blend
                 </div>
                 <div>
                   <span
-                    class="text-coreUI-text-secondary text-sm leading-5"
+                    class="text-coreUI-text-secondary text-base leading-6"
                   >
                     250g | 
                   </span>
                   <span
-                    class="text-coreUI-text-secondary text-sm leading-5"
+                    class="text-coreUI-text-secondary text-base leading-6"
                   >
                     Ganze Bohne
                   </span>
@@ -259,12 +259,12 @@ exports[`Cart view Renders correctly 1`] = `
               </div>
               <div>
                 <span
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   7,20 €
                 </span>
                 <span
-                  class="text-coreUI-text-secondary ml-1 text-sm leading-5"
+                  class="text-coreUI-text-secondary ml-1 text-base leading-6"
                 >
                   (
                   28,80 €
@@ -367,18 +367,18 @@ exports[`Cart view Renders correctly 1`] = `
             >
               <div>
                 <div
-                  class="mb-1.5 md:mb-0 text-sm leading-5 font-semibold"
+                  class="mb-1.5 md:mb-0 text-base leading-6 font-semibold"
                 >
                   WeBean
                 </div>
                 <div>
                   <span
-                    class="text-coreUI-text-secondary text-sm leading-5"
+                    class="text-coreUI-text-secondary text-base leading-6"
                   >
                     1000g | 
                   </span>
                   <span
-                    class="text-coreUI-text-secondary text-sm leading-5"
+                    class="text-coreUI-text-secondary text-base leading-6"
                   >
                     Ganze Bohne
                   </span>
@@ -386,12 +386,12 @@ exports[`Cart view Renders correctly 1`] = `
               </div>
               <div>
                 <span
-                  class="text-coreUI-text-secondary text-sm leading-5"
+                  class="text-coreUI-text-secondary text-base leading-6"
                 >
                   7,20 €
                 </span>
                 <span
-                  class="text-coreUI-text-secondary ml-1 text-sm leading-5"
+                  class="text-coreUI-text-secondary ml-1 text-base leading-6"
                 >
                   (
                   7,20 €

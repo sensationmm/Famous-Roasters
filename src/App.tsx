@@ -12,6 +12,7 @@ import {
   Checkout,
   Contact,
   Error,
+  FeaturedProduct,
   Home,
   OurRoasters,
   Product,
@@ -35,6 +36,7 @@ const App = () => {
               <Route path="/our-roasters" element={<OurRoasters />} />
               <Route path="/product/:id" element={<Product />} />
               <Route path="/taste-finder" element={<TasteFinder />} />
+              <Route path="/featured/:id" element={<FeaturedProduct />} />
               <Route path="*" element={<Error />} />
             </Routes>
           </BrowserRouter>

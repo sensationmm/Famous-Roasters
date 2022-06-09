@@ -97,3 +97,17 @@ exports[`Tag component Renders correctly for aroma tag with value würzig & krä
   </div>
 </div>
 `;
+
+exports[`Tag component Renders correctly for type taste finder 1`] = `
+<div>
+  <div
+    class="inline-flex rounded-full px-3 py-1 bg-brand-blue"
+  >
+    <span
+      class="text-xs leading-4"
+    >
+      100% matching
+    </span>
+  </div>
+</div>
+`;
