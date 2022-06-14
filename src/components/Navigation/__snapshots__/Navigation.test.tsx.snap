@@ -61,16 +61,6 @@ exports[`Navigation component Renders correctly with home theme 1`] = `
                   Tastefinder
                 </span>
               </a>
-              <a
-                class="flex items-center text-gray-700 hover:text-gray-800"
-                href="/our-roasters"
-              >
-                <span
-                  class="uppercase text-sm leading-5"
-                >
-                  Unsere Röster
-                </span>
-              </a>
             </div>
           </div>
           <a
@@ -118,7 +108,7 @@ exports[`Navigation component Renders correctly with home theme 1`] = `
               >
                 <a
                   class="flex items-center text-gray-700 hover:text-gray-800"
-                  href="/about"
+                  href="//www.60beans.de/uber-uns"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -126,42 +116,7 @@ exports[`Navigation component Renders correctly with home theme 1`] = `
                     Über uns
                   </span>
                 </a>
-                <a
-                  class="flex items-center text-gray-700 hover:text-gray-800"
-                  href="/contact"
-                >
-                  <span
-                    class="uppercase text-sm leading-5"
-                  >
-                    Kontakt
-                  </span>
-                </a>
               </div>
-              <a
-                class="hidden xl:block p-2 text-gray-400 hover:text-gray-500 xl:ml-6"
-                href="/account"
-              >
-                <span
-                  class="sr-only"
-                >
-                  Konto
-                </span>
-                <svg
-                  aria-hidden="true"
-                  class="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </a>
               <div
                 class="ml-4 flow-root xl:ml-6"
               >
@@ -243,16 +198,6 @@ exports[`Navigation component Renders correctly with shop theme 1`] = `
                   Tastefinder
                 </span>
               </a>
-              <a
-                class="flex items-center text-gray-700 hover:text-gray-800"
-                href="/our-roasters"
-              >
-                <span
-                  class="uppercase text-sm leading-5"
-                >
-                  Unsere Röster
-                </span>
-              </a>
             </div>
           </div>
           <a
@@ -300,7 +245,7 @@ exports[`Navigation component Renders correctly with shop theme 1`] = `
               >
                 <a
                   class="flex items-center text-gray-700 hover:text-gray-800"
-                  href="/about"
+                  href="//www.60beans.de/uber-uns"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -308,42 +253,7 @@ exports[`Navigation component Renders correctly with shop theme 1`] = `
                     Über uns
                   </span>
                 </a>
-                <a
-                  class="flex items-center text-gray-700 hover:text-gray-800"
-                  href="/contact"
-                >
-                  <span
-                    class="uppercase text-sm leading-5"
-                  >
-                    Kontakt
-                  </span>
-                </a>
               </div>
-              <a
-                class="hidden xl:block p-2 text-gray-400 hover:text-gray-500 xl:ml-6"
-                href="/account"
-              >
-                <span
-                  class="sr-only"
-                >
-                  Konto
-                </span>
-                <svg
-                  aria-hidden="true"
-                  class="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </a>
               <div
                 class="ml-4 flow-root xl:ml-6"
               >

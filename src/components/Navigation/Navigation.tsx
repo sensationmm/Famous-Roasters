@@ -1,5 +1,5 @@
 import { Dialog, Transition } from '@headlessui/react'
-import { MenuIcon, ShoppingBagIcon, UserIcon, XIcon } from '@heroicons/react/outline'
+import { MenuIcon, ShoppingBagIcon, XIcon } from '@heroicons/react/outline'
 import React, { Fragment, useContext, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useNavigate } from 'react-router-dom'
@@ -34,14 +34,8 @@ interface NavigationData {
 }
 
 const navigationData: NavigationData = {
-  pagesPrimary: [
-    { key: 'tasteFinder', href: '/taste-finder' },
-    { key: 'ourRoasters', href: '/our-roasters' },
-  ],
-  pagesSecondary: [
-    { key: 'about', href: '/about' },
-    { key: 'contact', href: '/contact' },
-  ],
+  pagesPrimary: [{ key: 'tasteFinder', href: '/taste-finder' }],
+  pagesSecondary: [{ key: 'about', href: '//www.60beans.de/uber-uns' }],
 }
 
 export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps) => {
@@ -125,11 +119,11 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
                 <div className="border-t border-coreUI-border" />
                 {renderMenuItemsMobile(navigationData.pagesSecondary)}
                 <div className="border-t border-coreUI-border" />
-                <div className="flow-root">
+                {/*<div className="flow-root">
                   <Link to="/account" className="-m-2 p-2 block font-medium text-gray-900">
                     {t(`pages.account.navigation`)}
                   </Link>
-                </div>
+                </div>*/}
               </div>
             </div>
           </Transition.Child>
@@ -201,10 +195,10 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
                 </div>
 
                 {/* Account */}
-                <Link to="/account" className="hidden xl:block p-2 text-gray-400 hover:text-gray-500 xl:ml-6">
+                {/*<Link to="/account" className="hidden xl:block p-2 text-gray-400 hover:text-gray-500 xl:ml-6">
                   <span className="sr-only">{t(`pages.account.navigation`)}</span>
                   <UserIcon className="w-6 h-6" aria-hidden="true" />
-                </Link>
+                </Link>*/}
 
                 {/* Cart */}
                 <div className="ml-4 flow-root xl:ml-6">
