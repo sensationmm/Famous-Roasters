@@ -318,7 +318,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                     class="flex p-6 p-0"
                   >
                     <div
-                      class="shrink-0 self-center"
+                      class="shrink-0 self-center relative"
                     />
                     <div
                       class="flex flex-col justify-between p-2"
@@ -1009,7 +1009,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                     class="flex p-6 p-0"
                   >
                     <div
-                      class="shrink-0 self-center"
+                      class="shrink-0 self-center relative"
                     />
                     <div
                       class="flex flex-col justify-between p-2"
@@ -1700,7 +1700,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                     class="flex p-6 p-0"
                   >
                     <div
-                      class="shrink-0 self-center"
+                      class="shrink-0 self-center relative"
                     />
                     <div
                       class="flex flex-col justify-between p-2"
@@ -2391,7 +2391,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                     class="flex p-6 p-0"
                   >
                     <div
-                      class="shrink-0 self-center"
+                      class="shrink-0 self-center relative"
                     />
                     <div
                       class="flex flex-col justify-between p-2"
@@ -3082,7 +3082,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                     class="flex p-6 p-0"
                   >
                     <div
-                      class="shrink-0 self-center"
+                      class="shrink-0 self-center relative"
                     />
                     <div
                       class="flex flex-col justify-between p-2"
@@ -3656,7 +3656,7 @@ exports[`Featured product view Renders correctly for a successful call without a
                     class="flex p-6 p-0"
                   >
                     <div
-                      class="shrink-0 self-center"
+                      class="shrink-0 self-center relative"
                     />
                     <div
                       class="flex flex-col justify-between p-2"

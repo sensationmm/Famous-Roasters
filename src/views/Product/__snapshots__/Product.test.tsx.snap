@@ -185,6 +185,19 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               >
                 Espresso Raritäten Set
               </h1>
+              <div
+                class="mt-1"
+              >
+                <div
+                  class="inline-flex rounded-full px-3 py-1 bg-tags-santasGray text-white border border-white"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    Decaf
+                  </span>
+                </div>
+              </div>
             </div>
             <div
               class="mt-4"
@@ -1608,6 +1621,19 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
               >
                 Espresso Raritäten Set
               </h1>
+              <div
+                class="mt-1"
+              >
+                <div
+                  class="inline-flex rounded-full px-3 py-1 bg-tags-santasGray text-white border border-white"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    Decaf
+                  </span>
+                </div>
+              </div>
             </div>
             <div
               class="mt-4"

@@ -496,13 +496,22 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center"
+                class="shrink-0 self-center relative"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-32"
+                  class="w-32 max-h-32"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
+                <div
+                  class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    Decaf
+                  </span>
+                </div>
               </div>
               <div
                 class="flex flex-col justify-between p-2"
@@ -531,6 +540,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
+                    ab 
                     19,99 €
                   </span>
                   <span
@@ -551,13 +561,22 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center"
+                class="shrink-0 self-center relative"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-32"
+                  class="w-32 max-h-32"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
+                <div
+                  class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    Decaf
+                  </span>
+                </div>
               </div>
               <div
                 class="flex flex-col justify-between p-2"
@@ -586,6 +605,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
+                    ab 
                     19,99 €
                   </span>
                   <span
@@ -606,13 +626,22 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center"
+                class="shrink-0 self-center relative"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-32"
+                  class="w-32 max-h-32"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
+                <div
+                  class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    Decaf
+                  </span>
+                </div>
               </div>
               <div
                 class="flex flex-col justify-between p-2"
@@ -641,6 +670,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
+                    ab 
                     19,99 €
                   </span>
                   <span
@@ -661,13 +691,22 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center"
+                class="shrink-0 self-center relative"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-32"
+                  class="w-32 max-h-32"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
+                <div
+                  class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    Decaf
+                  </span>
+                </div>
               </div>
               <div
                 class="flex flex-col justify-between p-2"
@@ -696,6 +735,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
+                    ab 
                     19,99 €
                   </span>
                   <span
@@ -716,13 +756,22 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center"
+                class="shrink-0 self-center relative"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-32"
+                  class="w-32 max-h-32"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
+                <div
+                  class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    Decaf
+                  </span>
+                </div>
               </div>
               <div
                 class="flex flex-col justify-between p-2"
@@ -751,6 +800,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
+                    ab 
                     19,99 €
                   </span>
                   <span
@@ -771,13 +821,22 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center"
+                class="shrink-0 self-center relative"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-32"
+                  class="w-32 max-h-32"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
+                <div
+                  class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    Decaf
+                  </span>
+                </div>
               </div>
               <div
                 class="flex flex-col justify-between p-2"
@@ -806,6 +865,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
+                    ab 
                     19,99 €
                   </span>
                   <span
@@ -826,13 +886,22 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center"
+                class="shrink-0 self-center relative"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-32"
+                  class="w-32 max-h-32"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
+                <div
+                  class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    Decaf
+                  </span>
+                </div>
               </div>
               <div
                 class="flex flex-col justify-between p-2"
@@ -861,6 +930,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
+                    ab 
                     19,99 €
                   </span>
                   <span
@@ -881,13 +951,22 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center"
+                class="shrink-0 self-center relative"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-32"
+                  class="w-32 max-h-32"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
+                <div
+                  class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    Decaf
+                  </span>
+                </div>
               </div>
               <div
                 class="flex flex-col justify-between p-2"
@@ -916,6 +995,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
+                    ab 
                     19,99 €
                   </span>
                   <span
@@ -936,13 +1016,22 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center"
+                class="shrink-0 self-center relative"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-32"
+                  class="w-32 max-h-32"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
+                <div
+                  class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    Decaf
+                  </span>
+                </div>
               </div>
               <div
                 class="flex flex-col justify-between p-2"
@@ -971,6 +1060,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
+                    ab 
                     19,99 €
                   </span>
                   <span
@@ -991,13 +1081,22 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center"
+                class="shrink-0 self-center relative"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-32"
+                  class="w-32 max-h-32"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
+                <div
+                  class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    Decaf
+                  </span>
+                </div>
               </div>
               <div
                 class="flex flex-col justify-between p-2"
@@ -1026,6 +1125,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
+                    ab 
                     19,99 €
                   </span>
                   <span
@@ -1046,13 +1146,22 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center"
+                class="shrink-0 self-center relative"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-32"
+                  class="w-32 max-h-32"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
+                <div
+                  class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    Decaf
+                  </span>
+                </div>
               </div>
               <div
                 class="flex flex-col justify-between p-2"
@@ -1081,6 +1190,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
+                    ab 
                     19,99 €
                   </span>
                   <span
@@ -1101,13 +1211,22 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center"
+                class="shrink-0 self-center relative"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-32"
+                  class="w-32 max-h-32"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
+                <div
+                  class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    Decaf
+                  </span>
+                </div>
               </div>
               <div
                 class="flex flex-col justify-between p-2"
@@ -1136,6 +1255,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
+                    ab 
                     19,99 €
                   </span>
                   <span
@@ -1931,13 +2051,22 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center"
+                class="shrink-0 self-center relative"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-32"
+                  class="w-32 max-h-32"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
+                <div
+                  class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    Decaf
+                  </span>
+                </div>
               </div>
               <div
                 class="flex flex-col justify-between p-2"
@@ -1966,6 +2095,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
+                    ab 
                     19,99 €
                   </span>
                   <span
@@ -1986,13 +2116,22 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center"
+                class="shrink-0 self-center relative"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-32"
+                  class="w-32 max-h-32"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
+                <div
+                  class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    Decaf
+                  </span>
+                </div>
               </div>
               <div
                 class="flex flex-col justify-between p-2"
@@ -2021,6 +2160,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
+                    ab 
                     19,99 €
                   </span>
                   <span
@@ -2041,13 +2181,22 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center"
+                class="shrink-0 self-center relative"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-32"
+                  class="w-32 max-h-32"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
+                <div
+                  class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    Decaf
+                  </span>
+                </div>
               </div>
               <div
                 class="flex flex-col justify-between p-2"
@@ -2076,6 +2225,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
+                    ab 
                     19,99 €
                   </span>
                   <span
@@ -2096,13 +2246,22 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center"
+                class="shrink-0 self-center relative"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-32"
+                  class="w-32 max-h-32"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
+                <div
+                  class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    Decaf
+                  </span>
+                </div>
               </div>
               <div
                 class="flex flex-col justify-between p-2"
@@ -2131,6 +2290,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
+                    ab 
                     19,99 €
                   </span>
                   <span
@@ -2151,13 +2311,22 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center"
+                class="shrink-0 self-center relative"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-32"
+                  class="w-32 max-h-32"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
+                <div
+                  class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    Decaf
+                  </span>
+                </div>
               </div>
               <div
                 class="flex flex-col justify-between p-2"
@@ -2186,6 +2355,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
+                    ab 
                     19,99 €
                   </span>
                   <span
@@ -2206,13 +2376,22 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center"
+                class="shrink-0 self-center relative"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-32"
+                  class="w-32 max-h-32"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
+                <div
+                  class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    Decaf
+                  </span>
+                </div>
               </div>
               <div
                 class="flex flex-col justify-between p-2"
@@ -2241,6 +2420,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
+                    ab 
                     19,99 €
                   </span>
                   <span
@@ -2261,13 +2441,22 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center"
+                class="shrink-0 self-center relative"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-32"
+                  class="w-32 max-h-32"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
+                <div
+                  class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    Decaf
+                  </span>
+                </div>
               </div>
               <div
                 class="flex flex-col justify-between p-2"
@@ -2296,6 +2485,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
+                    ab 
                     19,99 €
                   </span>
                   <span
@@ -2316,13 +2506,22 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center"
+                class="shrink-0 self-center relative"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-32"
+                  class="w-32 max-h-32"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
+                <div
+                  class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    Decaf
+                  </span>
+                </div>
               </div>
               <div
                 class="flex flex-col justify-between p-2"
@@ -2351,6 +2550,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
+                    ab 
                     19,99 €
                   </span>
                   <span
@@ -2371,13 +2571,22 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center"
+                class="shrink-0 self-center relative"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-32"
+                  class="w-32 max-h-32"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
+                <div
+                  class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    Decaf
+                  </span>
+                </div>
               </div>
               <div
                 class="flex flex-col justify-between p-2"
@@ -2406,6 +2615,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
+                    ab 
                     19,99 €
                   </span>
                   <span
@@ -2426,13 +2636,22 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center"
+                class="shrink-0 self-center relative"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-32"
+                  class="w-32 max-h-32"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
+                <div
+                  class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    Decaf
+                  </span>
+                </div>
               </div>
               <div
                 class="flex flex-col justify-between p-2"
@@ -2461,6 +2680,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
+                    ab 
                     19,99 €
                   </span>
                   <span
@@ -2481,13 +2701,22 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center"
+                class="shrink-0 self-center relative"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-32"
+                  class="w-32 max-h-32"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
+                <div
+                  class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    Decaf
+                  </span>
+                </div>
               </div>
               <div
                 class="flex flex-col justify-between p-2"
@@ -2516,6 +2745,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
+                    ab 
                     19,99 €
                   </span>
                   <span
@@ -2536,13 +2766,22 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center"
+                class="shrink-0 self-center relative"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-32"
+                  class="w-32 max-h-32"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
+                <div
+                  class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    Decaf
+                  </span>
+                </div>
               </div>
               <div
                 class="flex flex-col justify-between p-2"
@@ -2571,6 +2810,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
+                    ab 
                     19,99 €
                   </span>
                   <span
