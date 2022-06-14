@@ -64,16 +64,6 @@ exports[`Layout component Renders correctly 1`] = `
                     Tastefinder
                   </span>
                 </a>
-                <a
-                  class="flex items-center text-gray-700 hover:text-gray-800"
-                  href="/our-roasters"
-                >
-                  <span
-                    class="uppercase text-sm leading-5"
-                  >
-                    Unsere Röster
-                  </span>
-                </a>
               </div>
             </div>
             <a
@@ -121,7 +111,7 @@ exports[`Layout component Renders correctly 1`] = `
                 >
                   <a
                     class="flex items-center text-gray-700 hover:text-gray-800"
-                    href="/about"
+                    href="//www.60beans.de/uber-uns"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -129,42 +119,7 @@ exports[`Layout component Renders correctly 1`] = `
                       Über uns
                     </span>
                   </a>
-                  <a
-                    class="flex items-center text-gray-700 hover:text-gray-800"
-                    href="/contact"
-                  >
-                    <span
-                      class="uppercase text-sm leading-5"
-                    >
-                      Kontakt
-                    </span>
-                  </a>
                 </div>
-                <a
-                  class="hidden xl:block p-2 text-gray-400 hover:text-gray-500 xl:ml-6"
-                  href="/account"
-                >
-                  <span
-                    class="sr-only"
-                  >
-                    Konto
-                  </span>
-                  <svg
-                    aria-hidden="true"
-                    class="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </a>
                 <div
                   class="ml-4 flow-root xl:ml-6"
                 >
@@ -271,16 +226,7 @@ exports[`Layout component Renders correctly 1`] = `
               class="mt-6"
             >
               <a
-                href="/our-roasters"
-              >
-                Unsere Röster
-              </a>
-            </li>
-            <li
-              class="mt-6"
-            >
-              <a
-                href="/about"
+                href="//www.60beans.de/uber-uns"
               >
                 Über uns
               </a>
@@ -289,16 +235,7 @@ exports[`Layout component Renders correctly 1`] = `
               class="mt-6"
             >
               <a
-                href="/jobs"
-              >
-                Jobs
-              </a>
-            </li>
-            <li
-              class="mt-6"
-            >
-              <a
-                href="/privacy"
+                href="//www.notion.so/Datenschutzhinweise-ad5b45261a964166a74883d2770e28ea"
               >
                 Datenschutz-Bestimmungen
               </a>
@@ -307,16 +244,7 @@ exports[`Layout component Renders correctly 1`] = `
               class="mt-6"
             >
               <a
-                href="/press"
-              >
-                Presse
-              </a>
-            </li>
-            <li
-              class="mt-6"
-            >
-              <a
-                href="/imprint"
+                href="//slender-petunia-c3c.notion.site/Imprint-33b18fd9e469471ab768eef8155da968"
               >
                 Impressum
               </a>

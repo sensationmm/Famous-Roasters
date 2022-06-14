@@ -23,12 +23,9 @@ interface FooterLink {
 const footerLinks: FooterLink[] = [
   { key: 'catalogue', href: '/catalogue' },
   { key: 'tasteFinder', href: '/taste-finder' },
-  { key: 'ourRoasters', href: '/our-roasters' },
-  { key: 'about', href: '/about' },
-  { key: 'jobs', href: '/jobs' },
-  { key: 'privacy', href: '/privacy' },
-  { key: 'press', href: '/press' },
-  { key: 'imprint', href: '/imprint' },
+  { key: 'about', href: '//www.60beans.de/uber-uns' },
+  { key: 'privacy', href: '//www.notion.so/Datenschutzhinweise-ad5b45261a964166a74883d2770e28ea' },
+  { key: 'imprint', href: '//slender-petunia-c3c.notion.site/Imprint-33b18fd9e469471ab768eef8155da968' },
 ]
 
 type FormValues = {
