@@ -47,6 +47,7 @@ module.exports = {
                 melrose: '#CEBDFF',
                 coldTurkey: '#C7B2B2',
                 yourPink: '#FFC5C5',
+                santasGray: '#9799A9',
             }
         },
         fontFamily: {

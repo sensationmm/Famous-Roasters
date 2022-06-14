@@ -66,6 +66,7 @@ interface ProductCustom extends ProductType {
   bitterness: ProductMetaInteger
   acidity: ProductMetaInteger
   pricePerKg: ProductMeta
+  decaf?: ProductMeta
   whyThisCoffee?: ProductMeta
   variants: ProductVariantConnectionCustom
 }
@@ -112,6 +113,7 @@ export const Product: React.FC = () => {
     images,
     variants,
     descriptionHtml,
+    decaf,
   } = data?.product || {}
 
   useEffect(() => {
@@ -184,6 +186,12 @@ export const Product: React.FC = () => {
             <Typography as="h1" type={TypographyType.Heading} size={TypographySize.Small}>
               {title}
             </Typography>
+            {/* Decaf tag */}
+            {decaf && decaf.value === 'true' && (
+              <div className="mt-1">
+                <Tag type={TagType.Decaf} value="Decaf" />
+              </div>
+            )}
           </div>
           {/* Aroma tag */}
           {aroma && (

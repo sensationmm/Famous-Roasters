@@ -1,7 +1,7 @@
 import { Product as ProductType } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { Typography, TypographySize, TypographyType } from 'src/components'
+import { Tag, TagType, Typography, TypographySize, TypographyType } from 'src/components'
 import { formatPrice } from 'src/utils'
 
 interface ProductMeta {
@@ -13,6 +13,7 @@ interface ProductCustom extends ProductType {
   bean_type?: ProductMeta
   origin?: ProductMeta
   pricePerKg?: ProductMeta
+  decaf?: ProductMeta
 }
 
 interface ProductTileProps extends React.HTMLAttributes<HTMLElement> {
@@ -27,13 +28,22 @@ export const ProductTile: React.FC<ProductTileProps> = ({
   showFrom = false,
   className,
 }: ProductTileProps) => {
-  const { title, vendor, featuredImage, images, priceRange, pricePerKg, coffee_type, origin } = productNode
+  const { title, vendor, featuredImage, images, priceRange, pricePerKg, coffee_type, origin, decaf } = productNode
   const { t } = useTranslation()
   if (showImage && !featuredImage && (!images || !images.nodes[0])) return null
   const imgSrc = featuredImage?.url ? featuredImage.url : images.nodes[0].url
   return (
     <div className={className ? 'flex p-6 ' + className : 'flex p-6'}>
-      <div className="shrink-0 self-center">{showImage && <img src={imgSrc} alt={title} className="w-32" />}</div>
+      <div className="shrink-0 self-center relative">
+        {showImage && (
+          <>
+            <img src={imgSrc} alt={title} className="w-32 max-h-32" />
+            {decaf && decaf.value === 'true' && (
+              <Tag type={TagType.Decaf} value="Decaf" small={true} className="absolute top-2 left-0" />
+            )}
+          </>
+        )}
+      </div>
       <div className="flex flex-col justify-between p-2">
         <Typography as="div" type={TypographyType.Label} size={TypographySize.Base}>
           {title}

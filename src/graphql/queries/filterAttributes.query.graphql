@@ -11,6 +11,9 @@ query filterAttributes {
             origin: metafield(namespace: "my_fields", key: "origin") {
                 value
             }
+            decaf: metafield(namespace: "my_fields", key: "decaf") {
+                value
+            }
             variants(first: 10) {
                 nodes {
                     package_size: metafield(namespace: "my_fields", key: "package_size") {

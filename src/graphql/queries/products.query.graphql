@@ -31,6 +31,9 @@ query products($first: Int, $last: Int, $before: String, $after: String, $sortKe
                 pricePerKg: metafield(namespace: "my_fields", key:"price_per_kg"){
                     value
                 }
+                decaf: metafield(namespace: "my_fields", key: "decaf") {
+                    value
+                }
             }
             pageInfo {
                 startCursor

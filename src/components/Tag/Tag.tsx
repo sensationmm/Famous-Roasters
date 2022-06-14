@@ -3,16 +3,26 @@ import { Typography, TypographySize } from 'src/components'
 
 export enum TagType {
   Aroma = 'aroma',
+  Decaf = 'decaf',
   TasteFinder = 'finder',
 }
 
-interface TagProps {
+interface TagProps extends React.HTMLAttributes<HTMLElement> {
   value: string
   type?: TagType
+  small?: boolean
 }
 
-const getTagClassNames = (value: string, type?: TagType): string => {
-  const classNames: string[] = ['inline-flex', 'rounded-full', 'px-3', 'py-1']
+const getTagClassNames = (value: string, type?: TagType, small?: boolean, className?: string): string => {
+  const classNames: string[] = ['inline-flex', 'rounded-full']
+
+  if (small) {
+    classNames.push('px-2', 'py-0.5')
+  } else {
+    classNames.push('px-3', 'py-1')
+  }
+
+  if (className) className.split(' ').map((c) => classNames.push(c))
 
   if (type) {
     switch (type) {
@@ -43,6 +53,9 @@ const getTagClassNames = (value: string, type?: TagType): string => {
       case TagType.TasteFinder:
         classNames.push('bg-brand-blue')
         break
+      case TagType.Decaf:
+        classNames.push('bg-tags-santasGray text-white border border-white')
+        break
     }
   } else {
     classNames.push('bg-brand-grey-bombay')
@@ -51,9 +64,9 @@ const getTagClassNames = (value: string, type?: TagType): string => {
   return classNames.join(' ')
 }
 
-export const Tag: React.FC<TagProps> = ({ value, type = undefined }) => {
+export const Tag: React.FC<TagProps> = ({ value, type = undefined, small = false, className }) => {
   return (
-    <div className={getTagClassNames(value, type)}>
+    <div className={getTagClassNames(value, type, small, className)}>
       <Typography size={TypographySize.Tiny}>{value}</Typography>
     </div>
   )

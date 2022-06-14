@@ -177,6 +177,7 @@ export const Catalogue: React.FC = () => {
         res.data && processFilterValues(res.data, filtersData(res.data))
       })
       .catch((err) => {
+        console.log('error', err)
         throw new Error('Error fetching filter attributes', err)
       })
   }, [])
@@ -238,6 +239,7 @@ export const Catalogue: React.FC = () => {
       getProducts({
         variables: queryVars,
       }).catch((err) => {
+        console.log('error', err)
         throw new Error('Error fetching catalogue', err)
       })
     },
@@ -396,7 +398,7 @@ export const Catalogue: React.FC = () => {
             const id = getSimplifiedProductId(node.id)
             return (
               <Link to={`/product/${id}`} key={`product-tile-link-${i}`}>
-                <ProductTile key={`title-${i}`} productNode={node} />
+                <ProductTile key={`title-${i}`} showFrom={true} productNode={node} />
               </Link>
             )
           })}

@@ -56,6 +56,9 @@ query product($id: ID) {
         pricePerKg: metafield(namespace: "my_fields", key:"price_per_kg"){
             value
         }
+        decaf: metafield(namespace: "my_fields", key: "decaf") {
+            value
+        }
         whyThisCoffee: metafield(namespace: "my_fields", key:"why_this_coffee"){
             value
         }
