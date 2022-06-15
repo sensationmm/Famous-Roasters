@@ -111,11 +111,6 @@ exports[`Error view Renders correctly 1`] = `
       class="flex-grow flex items-center justify-center bg-brand-grey-whisper"
     >
       <div>
-        <img
-          alt="60beans"
-          class="h-16"
-          src="60beans-black.svg"
-        />
         <div
           class="text-center text-lg leading-7"
         >
