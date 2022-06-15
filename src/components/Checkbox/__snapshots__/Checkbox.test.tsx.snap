@@ -3,7 +3,7 @@
 exports[`Checkbox component Renders correctly 1`] = `
 <div>
   <button
-    class="flex w-full flex-row pl-0 py-4 items-center cursor-pointer"
+    class="flex w-full flex-row items-center cursor-pointer"
     data-testid="checkbox"
   >
     <div>
@@ -34,7 +34,7 @@ exports[`Checkbox component Renders correctly 1`] = `
 exports[`Checkbox component Renders correctly for selected 1`] = `
 <div>
   <button
-    class="flex w-full flex-row pl-0 py-4 items-center cursor-pointer"
+    class="flex w-full flex-row items-center cursor-pointer"
     data-testid="checkbox"
   >
     <div>

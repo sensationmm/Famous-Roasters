@@ -27,7 +27,7 @@ export const Checkbox: React.FC<IconCheckboxProps> = ({
 
   return (
     <button
-      className={`flex w-full flex-row pl-0 py-4 items-center cursor-pointer`}
+      className={`flex w-full flex-row items-center cursor-pointer`}
       data-testid="checkbox"
       onClick={(ev) => handleClick(ev)}
     >

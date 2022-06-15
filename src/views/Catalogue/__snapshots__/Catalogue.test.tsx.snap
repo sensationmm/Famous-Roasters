@@ -228,10 +228,10 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
           </div>
         </div>
         <div
-          class="md:w-1/4"
+          class="my-4 md:w-1/4"
         >
           <button
-            class="flex w-full flex-row pl-0 py-4 items-center cursor-pointer"
+            class="flex w-full flex-row items-center cursor-pointer"
             data-testid="checkbox"
           >
             <div>
@@ -473,7 +473,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             class="hidden md:block md:w-1/4"
           />
           <div
-            class="w-1/2 md:w-1/4"
+            class="w-1/2 md:w-1/4 md:mt-4"
           >
             <div
               class="w-full relative"
@@ -1813,10 +1813,10 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
           </div>
         </div>
         <div
-          class="md:w-1/4"
+          class="my-4 md:w-1/4"
         >
           <button
-            class="flex w-full flex-row pl-0 py-4 items-center cursor-pointer"
+            class="flex w-full flex-row items-center cursor-pointer"
             data-testid="checkbox"
           >
             <div>
@@ -2058,7 +2058,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
             class="hidden md:block md:w-1/4"
           />
           <div
-            class="w-1/2 md:w-1/4"
+            class="w-1/2 md:w-1/4 md:mt-4"
           >
             <div
               class="w-full relative"

@@ -375,7 +375,7 @@ export const Catalogue: React.FC = () => {
     return (
       <>
         <div className="mt-4">{renderListboxFilter('coffeeType', false)}</div>
-        <div className="md:w-1/4">{renderCheckboxFilter('decaf')}</div>
+        <div className="my-4 md:w-1/4">{renderCheckboxFilter('decaf')}</div>
         <div className="hidden md:flex gap-x-4">
           <div className="md:w-1/4">{renderListboxFilter('beanType', false)}</div>
           <div className="md:w-1/4">{renderListboxFilter('vendor', false)}</div>
@@ -404,7 +404,7 @@ export const Catalogue: React.FC = () => {
           {['1', '2', '3'].map((fillBlock) => (
             <div key={`fill-block-${fillBlock}`} className="hidden md:block md:w-1/4" />
           ))}
-          <div className="w-1/2 md:w-1/4">
+          <div className="w-1/2 md:w-1/4 md:mt-4">
             <Listbox
               items={sortByItems}
               hasNoneItem={true}
