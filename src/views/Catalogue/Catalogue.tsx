@@ -12,6 +12,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, URLSearchParamsInit, useSearchParams } from 'react-router-dom'
 import {
+  Checkbox,
   ErrorPrompt,
   FilterData,
   FiltersMenuMobile,
@@ -130,28 +131,31 @@ export const Catalogue: React.FC = () => {
 
   const filtersData = (filterInput: Collection): FilterData[] => {
     const coffeeType = searchParams.get('coffeeType')?.split('|')
+    const decaf = searchParams.get('decaf')?.split('|')
     const beanType = searchParams.get('beanType')?.split('|')
     const vendor = searchParams.get('vendor')?.split('|')
     const origin = searchParams.get('origin')?.split('|')
     const packageSize = searchParams.get('packageSize')?.split('|')
-    return getFilterData(filterInput, coffeeType, beanType, vendor, origin, packageSize)
+    return getFilterData(filterInput, coffeeType, decaf, beanType, vendor, origin, packageSize)
   }
 
   const processFilterValues = (fData: Collection, f: FilterData[]) => {
     setFilters(f)
-    const { queryFilter, vendor, coffeeType, beanType, origin, packageSize } = getQueryFilter(fData, f)
+    const { queryFilter, vendor, coffeeType, decaf, beanType, origin, packageSize } = getQueryFilter(fData, f)
     queryFilter.length > 0 ? setQueryFilterParams({ queryFilter }) : setQueryFilterParams({ queryFilter: undefined })
 
     const updatedSearchParams = {
       ...Object.fromEntries(searchParams),
       ...(vendor.length > 0 && { vendor: vendor.join('|') }),
       ...(coffeeType.length > 0 && { coffeeType: coffeeType.join('|') }),
+      ...(decaf.length > 0 && { decaf: decaf.join('|') }),
       ...(beanType.length > 0 && { beanType: beanType.join('|') }),
       ...(origin.length > 0 && { origin: origin.join('|') }),
       ...(packageSize.length > 0 && { packageSize: packageSize.join('|') }),
     }
     if (!vendor.length) delete updatedSearchParams.vendor
     if (!coffeeType.length) delete updatedSearchParams.coffeeType
+    if (!decaf.length) delete updatedSearchParams.decaf
     if (!beanType.length) delete updatedSearchParams.beanType
     if (!origin.length) delete updatedSearchParams.origin
     if (!packageSize.length) delete updatedSearchParams.packageSize
@@ -177,7 +181,6 @@ export const Catalogue: React.FC = () => {
         res.data && processFilterValues(res.data, filtersData(res.data))
       })
       .catch((err) => {
-        console.log('error', err)
         throw new Error('Error fetching filter attributes', err)
       })
   }, [])
@@ -239,7 +242,6 @@ export const Catalogue: React.FC = () => {
       getProducts({
         variables: queryVars,
       }).catch((err) => {
-        console.log('error', err)
         throw new Error('Error fetching catalogue', err)
       })
     },
@@ -317,7 +319,13 @@ export const Catalogue: React.FC = () => {
     filterAttributesData && processFilterValues(filterAttributesData, updatedFilters())
   }
 
-  const renderFilter = (key: string, hasTranslatedValues: boolean) => (
+  const onUpdateFilterCheckbox = (value: boolean, key: string) => {
+    const valueAsString = value.toString()
+    const items = valueAsString === 'true' ? [{ name: 'true' }] : []
+    onUpdateFiltersDesktop(items, key)
+  }
+
+  const renderListboxFilter = (key: string, hasTranslatedValues: boolean) => (
     <Listbox
       items={filters.filter((filter) => filter.key === key)[0].filterValues?.map((x) => ({ name: x })) || []}
       hasTranslatedValues={hasTranslatedValues}
@@ -330,6 +338,18 @@ export const Catalogue: React.FC = () => {
       big={key === 'coffeeType'}
     />
   )
+
+  const renderCheckboxFilter = (key: string) => {
+    const v = filters.filter((filter) => filter.key === key)[0]
+    return (
+      <Checkbox
+        name={key}
+        text={t(`pages.catalogue.filters.${key}`)}
+        selected={v && v.filterValuesSelected && v.filterValuesSelected[0] === 'true'}
+        toggleSelected={(v) => onUpdateFilterCheckbox(v, key)}
+      />
+    )
+  }
 
   const renderForYouProducts = () => {
     return (
@@ -354,14 +374,15 @@ export const Catalogue: React.FC = () => {
 
     return (
       <>
-        <div className="mt-4">{renderFilter('coffeeType', false)}</div>
-        <div className="hidden md:flex gap-x-4 mt-4">
-          <div className="md:w-1/4">{renderFilter('beanType', false)}</div>
-          <div className="md:w-1/4">{renderFilter('vendor', false)}</div>
-          <div className="md:w-1/4">{renderFilter('origin', true)}</div>
-          <div className="md:w-1/4">{renderFilter('packageSize', false)}</div>
+        <div className="mt-4">{renderListboxFilter('coffeeType', false)}</div>
+        <div className="md:w-1/4">{renderCheckboxFilter('decaf')}</div>
+        <div className="hidden md:flex gap-x-4">
+          <div className="md:w-1/4">{renderListboxFilter('beanType', false)}</div>
+          <div className="md:w-1/4">{renderListboxFilter('vendor', false)}</div>
+          <div className="md:w-1/4">{renderListboxFilter('origin', true)}</div>
+          <div className="md:w-1/4">{renderListboxFilter('packageSize', false)}</div>
         </div>
-        <div className="flex gap-x-4 justify-end mt-4">
+        <div className="flex gap-x-4 justify-end">
           <div className="w-1/2 md:hidden">
             {!filterAttributesData || filterAttributesLoading ? (
               <div
@@ -375,7 +396,7 @@ export const Catalogue: React.FC = () => {
               </div>
             ) : (
               <FiltersMenuMobile
-                initialFilters={filters.filter((f) => f.key !== 'coffeeType')}
+                initialFilters={filters.filter((f) => f.key !== 'coffeeType' && f.key !== 'decaf')}
                 onUpdateFilters={(f: FilterData[]) => onUpdateFiltersMobile(f)}
               />
             )}

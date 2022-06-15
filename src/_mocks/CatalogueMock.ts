@@ -353,6 +353,22 @@ export const CatalogueMockFilter7 = {
   },
 }
 
+export const CatalogueMockFilter8 = {
+  ...CatalogueMock1,
+  request: {
+    ...CatalogueMock1.request,
+    variables: {
+      first: 6,
+      last: null,
+      before: null,
+      after: null,
+      sortKey: undefined,
+      reverse: undefined,
+      filters: [{ productMetafield: { namespace: 'my_fields', key: 'decaf', value: 'true' } }],
+    },
+  },
+}
+
 export const CatalogueMocksFilters = [
   CatalogueMockFilter1,
   CatalogueMockFilter2,
@@ -361,6 +377,7 @@ export const CatalogueMocksFilters = [
   CatalogueMockFilter5,
   CatalogueMockFilter6,
   CatalogueMockFilter7,
+  CatalogueMockFilter8,
 ]
 
 export const CatalogueMocksPagination = [CatalogueMock6, CatalogueMock7, CatalogueMock8]

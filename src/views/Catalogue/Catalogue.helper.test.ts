@@ -38,13 +38,28 @@ describe('Catalogue helper', () => {
       expect(
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
-        getFilterData(FilterAttributesMock.result.data, undefined, undefined, undefined, undefined, undefined),
+        getFilterData(
+          FilterAttributesMock.result.data,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+        ),
       ).toEqual([
         {
           key: 'coffeeType',
           isOpen: false,
           filterType: 'enum',
           filterValues: ['Espresso', 'Filter'],
+          filterValuesSelected: [],
+        },
+        {
+          key: 'decaf',
+          isOpen: false,
+          filterType: 'enum',
+          filterValues: ['false', 'true'],
           filterValuesSelected: [],
         },
         {
@@ -83,7 +98,15 @@ describe('Catalogue helper', () => {
       expect(
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
-        getFilterData(FilterAttributesMock.result.data, ['Filter'], ['Arabica'], ['Cycle Roasters'], ['BR'], ['500g']),
+        getFilterData(
+          FilterAttributesMock.result.data,
+          ['Filter'],
+          ['true'],
+          ['Arabica'],
+          ['Cycle Roasters'],
+          ['BR'],
+          ['500g'],
+        ),
       ).toEqual([
         {
           key: 'coffeeType',
@@ -91,6 +114,13 @@ describe('Catalogue helper', () => {
           filterType: 'enum',
           filterValues: ['Espresso', 'Filter'],
           filterValuesSelected: ['Filter'],
+        },
+        {
+          key: 'decaf',
+          isOpen: false,
+          filterType: 'enum',
+          filterValues: ['false', 'true'],
+          filterValuesSelected: ['true'],
         },
         {
           key: 'beanType',

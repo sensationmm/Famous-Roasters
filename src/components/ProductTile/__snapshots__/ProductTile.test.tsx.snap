@@ -6,7 +6,7 @@ exports[`Product Tile component Renders as expected for missing attributes 1`] =
     class="flex p-6"
   >
     <div
-      class="shrink-0 self-center relative"
+      class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
     >
       <img
         alt="Espresso Raritäten Set"
@@ -59,7 +59,7 @@ exports[`Product Tile component Renders correctly 1`] = `
     class="flex p-6"
   >
     <div
-      class="shrink-0 self-center relative"
+      class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
     >
       <img
         alt="Espresso Raritäten Set"

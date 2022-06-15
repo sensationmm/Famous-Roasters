@@ -34,7 +34,7 @@ export const ProductTile: React.FC<ProductTileProps> = ({
   const imgSrc = featuredImage?.url ? featuredImage.url : images.nodes[0].url
   return (
     <div className={className ? 'flex p-6 ' + className : 'flex p-6'}>
-      <div className="shrink-0 self-center relative">
+      <div className="flex justify-center items-center shrink-0 self-center relative w-32 h-32">
         {showImage && (
           <>
             <img src={imgSrc} alt={title} className="w-32 max-h-32" />

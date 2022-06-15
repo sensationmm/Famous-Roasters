@@ -228,7 +228,37 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
           </div>
         </div>
         <div
-          class="hidden md:flex gap-x-4 mt-4"
+          class="md:w-1/4"
+        >
+          <button
+            class="flex w-full flex-row pl-0 py-4 items-center cursor-pointer"
+            data-testid="checkbox"
+          >
+            <div>
+              <svg
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M19 22H5c-1.7 0-3-1.3-3-3V5c0-1.7 1.3-3 3-3h14c1.7 0 3 1.3 3 3v14c0 1.7-1.3 3-3 3zM5 4c-.6 0-1 .4-1 1v14c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V5c0-.6-.4-1-1-1H5z"
+                  fill="#212121"
+                  fill-rule="evenodd"
+                  stroke="#212121"
+                  stroke-width="0.25"
+                />
+              </svg>
+            </div>
+            <div
+              class="flex grow text-left pl-2 text-base leading-6"
+            >
+              Nur Entkoffeiniert
+            </div>
+          </button>
+        </div>
+        <div
+          class="hidden md:flex gap-x-4"
         >
           <div
             class="md:w-1/4"
@@ -404,7 +434,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
           </div>
         </div>
         <div
-          class="flex gap-x-4 justify-end mt-4"
+          class="flex gap-x-4 justify-end"
         >
           <div
             class="w-1/2 md:hidden"
@@ -496,7 +526,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center relative"
+                class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -561,7 +591,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center relative"
+                class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -626,7 +656,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center relative"
+                class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -691,7 +721,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center relative"
+                class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -756,7 +786,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center relative"
+                class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -821,7 +851,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center relative"
+                class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -886,7 +916,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center relative"
+                class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -951,7 +981,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center relative"
+                class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -1016,7 +1046,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center relative"
+                class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -1081,7 +1111,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center relative"
+                class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -1146,7 +1176,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center relative"
+                class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -1211,7 +1241,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center relative"
+                class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -1783,7 +1813,37 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
           </div>
         </div>
         <div
-          class="hidden md:flex gap-x-4 mt-4"
+          class="md:w-1/4"
+        >
+          <button
+            class="flex w-full flex-row pl-0 py-4 items-center cursor-pointer"
+            data-testid="checkbox"
+          >
+            <div>
+              <svg
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M19 22H5c-1.7 0-3-1.3-3-3V5c0-1.7 1.3-3 3-3h14c1.7 0 3 1.3 3 3v14c0 1.7-1.3 3-3 3zM5 4c-.6 0-1 .4-1 1v14c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V5c0-.6-.4-1-1-1H5z"
+                  fill="#212121"
+                  fill-rule="evenodd"
+                  stroke="#212121"
+                  stroke-width="0.25"
+                />
+              </svg>
+            </div>
+            <div
+              class="flex grow text-left pl-2 text-base leading-6"
+            >
+              Nur Entkoffeiniert
+            </div>
+          </button>
+        </div>
+        <div
+          class="hidden md:flex gap-x-4"
         >
           <div
             class="md:w-1/4"
@@ -1959,7 +2019,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
           </div>
         </div>
         <div
-          class="flex gap-x-4 justify-end mt-4"
+          class="flex gap-x-4 justify-end"
         >
           <div
             class="w-1/2 md:hidden"
@@ -2051,7 +2111,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center relative"
+                class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -2116,7 +2176,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center relative"
+                class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -2181,7 +2241,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center relative"
+                class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -2246,7 +2306,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center relative"
+                class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -2311,7 +2371,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center relative"
+                class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -2376,7 +2436,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center relative"
+                class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -2441,7 +2501,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center relative"
+                class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -2506,7 +2566,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center relative"
+                class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -2571,7 +2631,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center relative"
+                class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -2636,7 +2696,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center relative"
+                class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -2701,7 +2761,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center relative"
+                class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -2766,7 +2826,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               class="flex p-6"
             >
               <div
-                class="shrink-0 self-center relative"
+                class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
               >
                 <img
                   alt="Espresso Raritäten Set"

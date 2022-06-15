@@ -3,6 +3,7 @@ import { BeanScaleTag } from './BeanScaleTag'
 import { Button, ButtonEmphasis, ButtonSize } from './Button'
 import { Carousel } from './Carousel'
 import { CartContext, CartProvider } from './CartProvider'
+import { Checkbox } from './Checkbox'
 import { Circle, CircleType } from './Circle'
 import { Dialog } from './Dialog'
 import { Disclosure } from './Disclosure'
@@ -39,6 +40,7 @@ export { ButtonSize as ButtonSize }
 export { Carousel as Carousel }
 export { CartContext as CartContext }
 export { CartProvider as CartProvider }
+export { Checkbox as Checkbox }
 export { Circle as Circle }
 export { CircleType as CircleType }
 export { Dialog as Dialog }
