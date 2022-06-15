@@ -431,6 +431,32 @@ describe('Catalogue view', () => {
     })
   })
 
+  it('The user can filter per decaf', async () => {
+    render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
+        mocks={[FilterAttributesMock, FilterAttributesMock, ...CatalogueMocks, ...CatalogueMocksFilters]}
+        addTypename={false}
+      >
+        <I18nextProvider i18n={i18n}>
+          <MemoryRouter initialEntries={['/catalogue']}>
+            <Catalogue />
+          </MemoryRouter>
+        </I18nextProvider>
+      </MockedProvider>,
+    )
+
+    await act(async (): Promise<void> => {
+      await new Promise((resolve) => setTimeout(resolve, 500))
+    })
+
+    await waitFor(async () => {
+      const button = await screen.findAllByTestId('checkbox')
+      expect(button[0]).toBeInTheDocument()
+      fireEvent.click(button[0])
+    })
+  })
+
   it('The user can use mobile filtering', async () => {
     render(
       <MockedProvider

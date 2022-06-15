@@ -5,6 +5,7 @@ interface QueryFilterResult {
   queryFilter: object[]
   vendor: string[]
   coffeeType: string[]
+  decaf: string[]
   beanType: string[]
   origin: string[]
   packageSize: string[]
@@ -19,6 +20,7 @@ export const getQueryFilter = (fData: Collection, f: FilterData[]): QueryFilterR
   const queryFilter: object[] = []
   const vendor: string[] = []
   const coffeeType: string[] = []
+  const decaf: string[] = []
   const beanType: string[] = []
   const origin: string[] = []
   const packageSize: string[] = []
@@ -37,6 +39,15 @@ export const getQueryFilter = (fData: Collection, f: FilterData[]): QueryFilterR
               coffeeType.push(filterValue)
               queryFilter.push({
                 productMetafield: { namespace: 'my_fields', key: 'coffee_type', value: `${filterValue}` },
+              })
+            })
+          break
+        case 'decaf':
+          filter.filterValuesSelected[0] !== 'none' &&
+            filter.filterValuesSelected.forEach((filterValue) => {
+              decaf.push(filterValue)
+              queryFilter.push({
+                productMetafield: { namespace: 'my_fields', key: 'decaf', value: `${filterValue}` },
               })
             })
           break
@@ -84,10 +95,22 @@ export const getQueryFilter = (fData: Collection, f: FilterData[]): QueryFilterR
     }
   })
 
-  return { queryFilter, vendor, coffeeType, beanType, origin, packageSize }
+  return { queryFilter, vendor, coffeeType, decaf, beanType, origin, packageSize }
 }
 
 export const getFilterValues = (fData: Collection, key: string) => {
+  const standardFilterValues = (k: string) =>
+    Array.from(
+      new Set(
+        fData.products.nodes
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-ignore
+          .map((productNode) => productNode[k]?.value)
+          .flat()
+          .filter((x) => x !== undefined)
+          .sort(),
+      ),
+    )
   switch (key) {
     case 'vendor':
       return Array.from(
@@ -116,29 +139,11 @@ export const getFilterValues = (fData: Collection, key: string) => {
       return Array.from(new Set(originMapping.map((value) => value.split(',')).flat())).sort()
     }
     case 'coffee_type':
-      return Array.from(
-        new Set(
-          fData.products.nodes
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore
-            .map((productNode) => productNode['coffee_type']?.value)
-            .flat()
-            .filter((x) => x !== undefined)
-            .sort(),
-        ),
-      )
+      return standardFilterValues('coffee_type')
+    case 'decaf':
+      return standardFilterValues('decaf')
     case 'bean_type':
-      return Array.from(
-        new Set(
-          fData.products.nodes
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore
-            .map((productNode) => productNode['bean_type']?.value)
-            .flat()
-            .filter((x) => x !== undefined)
-            .sort(),
-        ),
-      )
+      return standardFilterValues('bean_type')
     case 'package_size':
       return Array.from(
         new Set(
@@ -156,6 +161,7 @@ export const getFilterValues = (fData: Collection, key: string) => {
 export const getFilterData = (
   filterInput: Collection,
   coffeeType?: string[],
+  decaf?: string[],
   beanType?: string[],
   vendor?: string[],
   origin?: string[],
@@ -168,6 +174,13 @@ export const getFilterData = (
       filterType: 'enum',
       filterValues: getFilterValues(filterInput, 'coffee_type'),
       filterValuesSelected: coffeeType ? coffeeType : [],
+    },
+    {
+      key: 'decaf',
+      isOpen: false,
+      filterType: 'enum',
+      filterValues: getFilterValues(filterInput, 'decaf'),
+      filterValuesSelected: decaf && decaf[0] === 'true' ? ['true'] : [],
     },
     {
       key: 'beanType',

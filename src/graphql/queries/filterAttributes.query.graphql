@@ -1,5 +1,5 @@
 query filterAttributes {
-    products(first: 30) {
+    products(first: 50) {
         nodes {
             vendor
             coffee_type: metafield(namespace: "my_fields", key: "coffee_type") {
@@ -9,6 +9,9 @@ query filterAttributes {
                 value
             }
             origin: metafield(namespace: "my_fields", key: "origin") {
+                value
+            }
+            decaf: metafield(namespace: "my_fields", key: "decaf") {
                 value
             }
             variants(first: 10) {

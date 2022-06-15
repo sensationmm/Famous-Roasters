@@ -39,6 +39,7 @@ interface ProductCustom {
   variety?: ProductMeta
   processing?: ProductMeta
   pricePerKg?: ProductMeta
+  decaf?: ProductMeta
   whyThisCoffee?: ProductMeta
   variants: ProductVariantConnectionCustom
 }
@@ -262,6 +263,9 @@ export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
   },
   pricePerKg: {
     value: '10.0',
+  },
+  decaf: {
+    value: 'true',
   },
   whyThisCoffee: {
     value:

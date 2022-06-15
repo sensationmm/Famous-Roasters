@@ -22,6 +22,9 @@ export const FilterAttributesMock = {
             origin: {
               value: 'BR,CO',
             },
+            decaf: {
+              value: 'false',
+            },
             vendor: 'Cycle Roasters',
             variants: {
               nodes: [
@@ -53,6 +56,9 @@ export const FilterAttributesMock = {
             },
             origin: {
               value: 'BR,CO',
+            },
+            decaf: {
+              value: 'true',
             },
             vendor: 'WeBean',
             variants: {
