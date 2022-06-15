@@ -60,7 +60,7 @@ export const FilterAttributesMock = {
             decaf: {
               value: 'true',
             },
-            vendor: 'WeBean',
+            vendor: '60beans',
             variants: {
               nodes: [
                 {

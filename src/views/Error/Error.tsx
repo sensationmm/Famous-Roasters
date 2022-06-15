@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import LogoBlack from 'src/assets/images/logo/60beans-black.svg'
 import { Layout, NavigationTheme, Typography, TypographySize, TypographyType } from 'src/components'
 
 export const Error: React.FC = () => {
@@ -12,11 +13,7 @@ export const Error: React.FC = () => {
     <Layout navigationTheme={NavigationTheme.Home}>
       <main className="flex-grow flex items-center justify-center bg-brand-grey-whisper">
         <div>
-          <div className="font-syne flex justify-center text-4xl md:text-5xl xl:text-6xl">
-            <h1>
-              <span>Famous</span> <span className="font-bold">Roasters</span>
-            </h1>
-          </div>
+          <img src={LogoBlack} alt={t('brand.name')} className="h-16" />
           <Typography as="div" type={TypographyType.Paragraph} size={TypographySize.Large} className="text-center">
             {t('pages.error.title')}
           </Typography>

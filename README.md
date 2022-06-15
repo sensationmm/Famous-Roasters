@@ -1,5 +1,5 @@
 
-# WeBean - Frontend
+# 60beans - Frontend
 
 <!-- Status -->  
 ## Status
@@ -48,7 +48,7 @@ ___
 
 <!-- About -->  
 ### About
-This frontend app for WeBean is written in TypeScript, using Create React App, Tailwind CSS and Tailwind UI, Storybook and i18next.
+This frontend app for 60beans is written in TypeScript, using Create React App, Tailwind CSS and Tailwind UI, Storybook and i18next.
 
 <!-- Getting Started -->  
 ### Getting Started

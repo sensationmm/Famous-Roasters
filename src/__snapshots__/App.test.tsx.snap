@@ -53,52 +53,22 @@ exports[`App Renders correctly 1`] = `
             >
               <div
                 class="h-full flex space-x-8"
-              >
-                <a
-                  class="flex items-center text-gray-700 hover:text-gray-800"
-                  href="/taste-finder"
-                >
-                  <span
-                    class="uppercase text-sm leading-5"
-                  >
-                    Tastefinder
-                  </span>
-                </a>
-              </div>
+              />
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
-              href="/"
+              href="//www.60beans.de"
             >
               <span
                 class="sr-only"
               >
-                WeBean
+                60beans
               </span>
-              <div
-                class="xl:hidden font-syne text-3xl"
-              >
-                <span>
-                  W
-                </span>
-                <span
-                  class="font-extrabold"
-                >
-                  B
-                </span>
-              </div>
-              <div
-                class="hidden xl:block font-syne text-xl text-center"
-              >
-                <div
-                  class="h-7"
-                >
-                  WeBean
-                </div>
-                <div
-                  class="font-extrabold"
-                />
-              </div>
+              <img
+                alt="60beans"
+                class="h-6"
+                src="60beans-black.svg"
+              />
             </a>
             <div
               class="flex-1 flow-root flex h-full items-center"
@@ -141,21 +111,11 @@ exports[`App Renders correctly 1`] = `
       class="flex-grow flex items-center justify-center bg-brand-grey-whisper"
     >
       <div>
-        <div
-          class="font-syne flex justify-center text-4xl md:text-5xl xl:text-6xl"
-        >
-          <h1>
-            <span>
-              Famous
-            </span>
-             
-            <span
-              class="font-bold"
-            >
-              Roasters
-            </span>
-          </h1>
-        </div>
+        <img
+          alt="60beans"
+          class="h-16"
+          src="60beans-black.svg"
+        />
         <div
           class="text-center text-lg leading-7"
         >
@@ -175,19 +135,21 @@ exports[`App Renders correctly 1`] = `
           <svg
             fill="none"
             height="157"
+            viewBox="0 0 627 627"
             width="157"
             xmlns="http://www.w3.org/2000/svg"
           >
             <circle
-              cx="78.301"
-              cy="78.301"
+              cx="313.5"
+              cy="313.5"
               fill="#D4FF81"
-              r="63.932"
-              transform="rotate(15 78.3 78.301)"
+              r="313.5"
             />
             <path
-              d="m71.539 68.784-.427 1.595-8.082-2.166-1.22 4.552 6.615 1.772-.428 1.595-6.614-1.772-1.63 6.083-1.702-.456 3.705-13.825 9.783 2.622Zm-1.577 14.394 3.885-14.501 17.515 4.693c1.375.368 2.564.857 3.566 1.465 1.022.598 1.753 1.344 2.193 2.24.455.898.515 1.975.179 3.229-.223.83-.558 1.477-1.006 1.94a3.362 3.362 0 0 1-1.586.935c-.61.16-1.272.218-1.989.171a14.185 14.185 0 0 1-2.196-.321l-1.57-.76c1.794.496 3.156.942 4.086 1.337.946.4 1.559.83 1.84 1.294.299.453.36 1.012.182 1.676l-.832 3.105-5.665-1.518.65-2.425c.121-.453.122-.817.001-1.092-.101-.286-.434-.554-1-.802-.549-.245-1.428-.529-2.636-.853l-8.86-2.373-1.093 4.078-5.664-1.518Zm7.771-6.344 11.85 3.175c.454.121.852.147 1.194.077.358-.066.593-.31.707-.734.105-.392.017-.7-.264-.92-.261-.232-.619-.409-1.072-.53l-11.85-3.176-.565 2.108Z"
-              fill="#000"
+              clip-rule="evenodd"
+              d="M361.926 223.428C378.319 223.428 391.608 210.139 391.608 193.747C391.608 177.354 378.319 164.065 361.926 164.065C345.533 164.065 332.244 177.354 332.244 193.747C332.244 210.139 345.533 223.428 361.926 223.428ZM342.734 463.065C389.465 463.065 427.078 428.871 427.078 360.485V357.445C427.078 289.439 389.465 254.485 343.114 254.485C313.1 254.485 292.584 270.442 281.186 289.439V172.421H213.18V458.506H281.186V427.732C291.064 449.007 313.1 463.065 342.734 463.065ZM370.229 358.777C370.229 382.382 351.093 401.518 327.488 401.518C303.882 401.518 284.746 382.382 284.746 358.777C284.746 335.171 303.882 316.035 327.488 316.035C351.093 316.035 370.229 335.171 370.229 358.777Z"
+              fill="#212121"
+              fill-rule="evenodd"
             />
           </svg>
         </div>
@@ -259,7 +221,7 @@ exports[`App Renders correctly 1`] = `
               <span
                 class="font-syne text-3xl leading-10 font-semibold tracking-tight"
               >
-                Kunden Support
+                Kundensupport
               </span>
             </div>
             <div
@@ -268,100 +230,7 @@ exports[`App Renders correctly 1`] = `
               <span
                 class="text-lg leading-7"
               >
-                Fragen? Kommentare? Bedenken? Oder möchtest du uns einfach ein paar schöne Worte senden?
-              </span>
-            </div>
-            <div
-              class="mt-6"
-            >
-              <button
-                class="inline-flex items-center rounded-full border-2 px-4 py-2 text-md font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
-                role="button"
-                type="button"
-              >
-                Kunden Support
-                 
-                <svg
-                  aria-hidden="true"
-                  class="w-6 h-6 ml-2"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"
-                  />
-                  <path
-                    d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div
-            class="mt-12"
-          >
-            <div>
-              <span
-                class="font-syne text-3xl leading-10 font-semibold tracking-tight"
-              >
-                Newsletter
-              </span>
-            </div>
-            <div
-              class="mt-6"
-            >
-              <span
-                class="text-lg leading-7"
-              >
-                Melde dich für den Newsletter an und erhalte, einmalige Angebote, Neuigkeiten, Tipps und Insights zum Thema Specialty Coffee und neuen Röstern. 
-              </span>
-            </div>
-            <form>
-              <div
-                class="mt-6"
-              >
-                <label
-                  class="relative"
-                >
-                  <span
-                    class="absolute -top-6 left-3 px-2 bg-brand-black text-white"
-                  >
-                    <span
-                      class="text-sm leading-5"
-                    >
-                      Deine E-Mail
-                    </span>
-                  </span>
-                  <input
-                    class="w-72 border rounded-full px-4 py-2 bg-brand-black border-white text-white"
-                    data-testid="newsletter-email"
-                    name="email"
-                    placeholder="max.mustermann@email.com"
-                    type="text"
-                  />
-                </label>
-              </div>
-              <div
-                class="mt-6"
-              >
-                <button
-                  class="inline-flex items-center rounded-full border-2 px-4 py-2 text-md font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
-                  data-testid="newsletter-submit"
-                  role="button"
-                  type="submit"
-                >
-                  Anmelden
-                </button>
-              </div>
-            </form>
-            <div
-              class="mt-4"
-            >
-              <span
-                class="text-brand-grey-bombay text-base leading-6"
-              >
-                Hinweis: Sie können sich jederzeit abmelden. Siehe unsere Datenschutzrichtlinie und Bedingungen.
+                Fragen? Kommentare? Bedenken? Oder möchtest du uns einfach ein paar schöne Worte senden? Bitte klicke einfach unten rechts auf die Sprechblasen. Unser Team steht dir dort gerne zur Verfügung.
               </span>
             </div>
           </div>
@@ -373,13 +242,13 @@ exports[`App Renders correctly 1`] = `
         <span
           class="text-center text-base leading-6"
         >
-          © 2022 WeBean. Alle Rechte vorbehalten
+          © 2022 60beans. Alle Rechte vorbehalten.
         </span>
         <br />
         <span
           class="text-center text-base leading-6"
         >
-          Geröstet mit ❤️ in Berlin
+          Hergestellt mit ❤️ in Berlin.
         </span>
       </div>
     </footer>

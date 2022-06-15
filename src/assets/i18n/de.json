@@ -1,8 +1,8 @@
 {
   "brand": {
-    "copyright": "© {{year}} WeBean. Alle Rechte vorbehalten",
-    "name": "WeBean",
-    "withLove": "Geröstet mit ❤️ in Berlin"
+    "copyright": "© {{year}} 60beans. Alle Rechte vorbehalten.",
+    "name": "60beans",
+    "withLove": "Hergestellt mit ❤️ in Berlin."
   },
   "cta": {
     "next": "Weiter",
@@ -21,9 +21,10 @@
   },
   "footer": {
     "customerService": {
-      "cta": "Kunden Support",
+      "cta": "Kundensupport",
       "text": "Fragen? Kommentare? Bedenken? Oder möchtest du uns einfach ein paar schöne Worte senden?",
-      "title": "Kunden Support"
+      "howTo": "Bitte klicke einfach unten rechts auf die Sprechblasen. Unser Team steht dir dort gerne zur Verfügung.",
+      "title": "Kundensupport"
     },
     "newsletter": {
       "cta": "Anmelden",

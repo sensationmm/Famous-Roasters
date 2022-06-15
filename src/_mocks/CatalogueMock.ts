@@ -268,7 +268,7 @@ export const CatalogueMockFilter2 = {
       after: null,
       sortKey: undefined,
       reverse: undefined,
-      filters: [{ productVendor: 'Cycle Roasters' }, { productVendor: 'WeBean' }],
+      filters: [{ productVendor: '60beans' }],
     },
   },
 }
@@ -348,7 +348,7 @@ export const CatalogueMockFilter7 = {
       after: null,
       sortKey: undefined,
       reverse: undefined,
-      filters: [{ productVendor: 'Cycle Roasters' }, { productVendor: 'WeBean' }],
+      filters: [{ productVendor: '60beans' }, { productVendor: 'Cycle Roasters' }],
     },
   },
 }

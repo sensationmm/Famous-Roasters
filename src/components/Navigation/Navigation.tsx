@@ -3,6 +3,7 @@ import { MenuIcon, ShoppingBagIcon, XIcon } from '@heroicons/react/outline'
 import React, { Fragment, useContext, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useNavigate } from 'react-router-dom'
+import LogoBlack from 'src/assets/images/logo/60beans-black.svg'
 import {
   Button,
   ButtonEmphasis,
@@ -34,7 +35,9 @@ interface NavigationData {
 }
 
 const navigationData: NavigationData = {
-  pagesPrimary: [{ key: 'tasteFinder', href: '/taste-finder' }],
+  pagesPrimary: [
+    //  { key: 'tasteFinder', href: '/taste-finder' }
+  ],
   pagesSecondary: [{ key: 'about', href: '//www.60beans.de/uber-uns' }],
 }
 
@@ -115,8 +118,8 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
               </div>
 
               <div className="border-t border-coreUI-border py-6 px-4 space-y-6">
-                {renderMenuItemsMobile(navigationData.pagesPrimary)}
-                <div className="border-t border-coreUI-border" />
+                {/*{renderMenuItemsMobile(navigationData.pagesPrimary)}
+                <div className="border-t border-coreUI-border" />*/}
                 {renderMenuItemsMobile(navigationData.pagesSecondary)}
                 <div className="border-t border-coreUI-border" />
                 {/*<div className="flow-root">
@@ -164,16 +167,9 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
             </div>
 
             {/* Logo */}
-            <Link to="/" className="flex h-full items-center pl-2 pr-2">
+            <Link to="//www.60beans.de" className="flex h-full items-center pl-2 pr-2">
               <span className="sr-only">{t('brand.name')}</span>
-              <div className="xl:hidden font-syne text-3xl">
-                <span>W</span>
-                <span className="font-extrabold">B</span>
-              </div>
-              <div className="hidden xl:block font-syne text-xl text-center">
-                <div className="h-7">{t('brand.name').split(' ')[0]}</div>
-                <div className="font-extrabold">{t('brand.name').split(' ')[1]}</div>
-              </div>
+              <img src={LogoBlack} alt={t('brand.name')} className="h-6" />
             </Link>
 
             <div className="flex-1 flow-root flex h-full items-center">

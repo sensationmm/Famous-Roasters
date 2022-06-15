@@ -17,7 +17,7 @@ export const Carousel: React.FC<CarouselProps> = ({ images }: CarouselProps) => 
   const [swiper, setSwiper] = useState<SwiperNative>()
 
   return (
-    <div className="grid">
+    <div className="grid h-fit">
       <Swiper
         modules={[A11y, Keyboard, Pagination, Thumbs]}
         keyboard={{
@@ -32,7 +32,7 @@ export const Carousel: React.FC<CarouselProps> = ({ images }: CarouselProps) => 
         }}
         slidesPerView={1}
         onSwiper={(swiperElement) => setSwiper(swiperElement)}
-        className="w-full"
+        className="w-full h-fit"
         style={{
           paddingBottom: 32,
         }}

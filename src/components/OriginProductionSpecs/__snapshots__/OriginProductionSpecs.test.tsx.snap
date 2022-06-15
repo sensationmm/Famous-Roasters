@@ -121,7 +121,7 @@ exports[`OriginProductionSpecs component Renders correctly 1`] = `
         <span
           class="text-base leading-6"
         >
-          WeBean
+          60beans
         </span>
       </div>
     </div>

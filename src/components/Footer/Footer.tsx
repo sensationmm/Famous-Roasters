@@ -1,19 +1,7 @@
-import { ChatAlt2Icon } from '@heroicons/react/solid'
 import React from 'react'
-import { FieldValues, SubmitHandler, useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import {
-  Badge,
-  Button,
-  ButtonEmphasis,
-  ButtonSize,
-  Input,
-  InputMode,
-  Typography,
-  TypographySize,
-  TypographyType,
-} from 'src/components'
+import { Badge, Typography, TypographySize, TypographyType } from 'src/components'
 
 interface FooterLink {
   key: string
@@ -28,17 +16,17 @@ const footerLinks: FooterLink[] = [
   { key: 'imprint', href: '//slender-petunia-c3c.notion.site/Imprint-33b18fd9e469471ab768eef8155da968' },
 ]
 
-type FormValues = {
+/*type FormValues = {
   email: string
-}
+}*/
 
 export const Footer: React.FC = () => {
   const { t } = useTranslation()
-  const { register, handleSubmit } = useForm<FormValues>()
+  /*const { register, handleSubmit } = useForm<FormValues>()
 
   const onSubmit: SubmitHandler<FormValues> = (data: FieldValues) => {
     console.log('user wants to register with email', data.email)
-  }
+  }*/
 
   return (
     <footer className="bg-brand-black text-base text-white py-10">
@@ -71,17 +59,17 @@ export const Footer: React.FC = () => {
             </div>
             <div className="mt-6">
               <Typography type={TypographyType.Paragraph} size={TypographySize.Large}>
-                {t('footer.customerService.text')}
+                {t('footer.customerService.text') + ' ' + t('footer.customerService.howTo')}
               </Typography>
             </div>
-            <div className="mt-6">
+            {/*<div className="mt-6">
               <Button type="button" emphasis={ButtonEmphasis.Tertiary} size={ButtonSize.lg}>
                 {t('footer.customerService.cta')} <ChatAlt2Icon className="w-6 h-6 ml-2" />
               </Button>
-            </div>
+            </div>*/}
           </div>
           {/* Newsletter */}
-          <div className="mt-12">
+          {/*<div className="mt-12">
             <div>
               <Typography type={TypographyType.Heading} size={TypographySize.Base} className="font-syne">
                 {t('footer.newsletter.title')}
@@ -120,7 +108,7 @@ export const Footer: React.FC = () => {
                 {t('footer.newsletter.disclaimer')}
               </Typography>
             </div>
-          </div>
+          </div>*/}
         </div>
       </div>
       <div className="w-full max-w-7xl mx-auto text-center mt-10 mx-auto px-12 xl:px-14">
