@@ -36,9 +36,9 @@ describe('Catalogue helper', () => {
   describe('Filter data helper', () => {
     it('Works without values', () => {
       expect(
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
         getFilterData(
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-ignore
           FilterAttributesMock.result.data,
           undefined,
           undefined,
@@ -96,9 +96,9 @@ describe('Catalogue helper', () => {
 
     it('Works with values', () => {
       expect(
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
         getFilterData(
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-ignore
           FilterAttributesMock.result.data,
           ['Filter'],
           ['true'],
