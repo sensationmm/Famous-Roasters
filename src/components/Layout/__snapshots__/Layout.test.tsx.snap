@@ -189,15 +189,6 @@ exports[`Layout component Renders correctly 1`] = `
               class="mt-6"
             >
               <a
-                href="/taste-finder"
-              >
-                Tastefinder
-              </a>
-            </li>
-            <li
-              class="mt-6"
-            >
-              <a
                 href="//www.60beans.de/uber-uns"
               >
                 Über uns

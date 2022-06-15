@@ -10,7 +10,7 @@ interface FooterLink {
 
 const footerLinks: FooterLink[] = [
   { key: 'catalogue', href: '/catalogue' },
-  { key: 'tasteFinder', href: '/taste-finder' },
+  // { key: 'tasteFinder', href: '/taste-finder' },
   { key: 'about', href: '//www.60beans.de/uber-uns' },
   { key: 'privacy', href: '//www.notion.so/Datenschutzhinweise-ad5b45261a964166a74883d2770e28ea' },
   { key: 'imprint', href: '//slender-petunia-c3c.notion.site/Imprint-33b18fd9e469471ab768eef8155da968' },

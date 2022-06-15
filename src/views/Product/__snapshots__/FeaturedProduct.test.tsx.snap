@@ -493,15 +493,6 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mt-6"
             >
               <a
-                href="/taste-finder"
-              >
-                Tastefinder
-              </a>
-            </li>
-            <li
-              class="mt-6"
-            >
-              <a
                 href="//www.60beans.de/uber-uns"
               >
                 Über uns
@@ -1057,15 +1048,6 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 href="/catalogue"
               >
                 Shop
-              </a>
-            </li>
-            <li
-              class="mt-6"
-            >
-              <a
-                href="/taste-finder"
-              >
-                Tastefinder
               </a>
             </li>
             <li
@@ -1633,15 +1615,6 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mt-6"
             >
               <a
-                href="/taste-finder"
-              >
-                Tastefinder
-              </a>
-            </li>
-            <li
-              class="mt-6"
-            >
-              <a
                 href="//www.60beans.de/uber-uns"
               >
                 Über uns
@@ -2197,15 +2170,6 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 href="/catalogue"
               >
                 Shop
-              </a>
-            </li>
-            <li
-              class="mt-6"
-            >
-              <a
-                href="/taste-finder"
-              >
-                Tastefinder
               </a>
             </li>
             <li
@@ -2773,15 +2737,6 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mt-6"
             >
               <a
-                href="/taste-finder"
-              >
-                Tastefinder
-              </a>
-            </li>
-            <li
-              class="mt-6"
-            >
-              <a
                 href="//www.60beans.de/uber-uns"
               >
                 Über uns
@@ -3220,15 +3175,6 @@ exports[`Featured product view Renders correctly for a successful call without a
                 href="/catalogue"
               >
                 Shop
-              </a>
-            </li>
-            <li
-              class="mt-6"
-            >
-              <a
-                href="/taste-finder"
-              >
-                Tastefinder
               </a>
             </li>
             <li

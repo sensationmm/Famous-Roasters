@@ -1387,15 +1387,6 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               class="mt-6"
             >
               <a
-                href="/taste-finder"
-              >
-                Tastefinder
-              </a>
-            </li>
-            <li
-              class="mt-6"
-            >
-              <a
                 href="//www.60beans.de/uber-uns"
               >
                 Über uns
@@ -2845,15 +2836,6 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 href="/catalogue"
               >
                 Shop
-              </a>
-            </li>
-            <li
-              class="mt-6"
-            >
-              <a
-                href="/taste-finder"
-              >
-                Tastefinder
               </a>
             </li>
             <li
