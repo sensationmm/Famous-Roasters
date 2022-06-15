@@ -22,7 +22,7 @@ const getTagClassNames = (value: string, type?: TagType, small?: boolean, classN
     classNames.push('px-3', 'py-1')
   }
 
-  if (className) className.split(' ').map((c) => classNames.push(c))
+  if (className) className.split(' ').forEach((c) => classNames.push(c))
 
   if (type) {
     switch (type) {

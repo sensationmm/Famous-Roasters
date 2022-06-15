@@ -346,7 +346,7 @@ export const Catalogue: React.FC = () => {
         name={key}
         text={t(`pages.catalogue.filters.${key}`)}
         selected={v && v.filterValuesSelected && v.filterValuesSelected[0] === 'true'}
-        toggleSelected={(v) => onUpdateFilterCheckbox(v, key)}
+        toggleSelected={(value) => onUpdateFilterCheckbox(value, key)}
       />
     )
   }

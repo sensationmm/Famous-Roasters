@@ -99,6 +99,18 @@ export const getQueryFilter = (fData: Collection, f: FilterData[]): QueryFilterR
 }
 
 export const getFilterValues = (fData: Collection, key: string) => {
+  const standardFilterValues = (k: string) =>
+    Array.from(
+      new Set(
+        fData.products.nodes
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-ignore
+          .map((productNode) => productNode[k]?.value)
+          .flat()
+          .filter((x) => x !== undefined)
+          .sort(),
+      ),
+    )
   switch (key) {
     case 'vendor':
       return Array.from(
@@ -127,41 +139,11 @@ export const getFilterValues = (fData: Collection, key: string) => {
       return Array.from(new Set(originMapping.map((value) => value.split(',')).flat())).sort()
     }
     case 'coffee_type':
-      return Array.from(
-        new Set(
-          fData.products.nodes
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore
-            .map((productNode) => productNode['coffee_type']?.value)
-            .flat()
-            .filter((x) => x !== undefined)
-            .sort(),
-        ),
-      )
+      return standardFilterValues('coffee_type')
     case 'decaf':
-      return Array.from(
-        new Set(
-          fData.products.nodes
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore
-            .map((productNode) => productNode['decaf']?.value)
-            .flat()
-            .filter((x) => x !== undefined)
-            .sort(),
-        ),
-      )
+      return standardFilterValues('decaf')
     case 'bean_type':
-      return Array.from(
-        new Set(
-          fData.products.nodes
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore
-            .map((productNode) => productNode['bean_type']?.value)
-            .flat()
-            .filter((x) => x !== undefined)
-            .sort(),
-        ),
-      )
+      return standardFilterValues('bean_type')
     case 'package_size':
       return Array.from(
         new Set(
