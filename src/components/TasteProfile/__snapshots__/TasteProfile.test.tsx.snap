@@ -67,7 +67,7 @@ exports[`TasteProfile component Renders correctly 1`] = `
         <span
           class="text-coreUI-text-secondary text-xs leading-4 font-semibold"
         >
-          Lebendigkeit
+          Säure
         </span>
         <div
           class="flex md:hidden"

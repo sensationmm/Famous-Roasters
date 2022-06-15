@@ -23,18 +23,26 @@ export const TasteProfile: React.FC<TasteProfileProps> = ({
       <BeanScaleTag value={parameter} />
       <div className="inline-flex">
         <Typography type={TypographyType.Label} size={TypographySize.Tiny} className="text-coreUI-text-secondary">
-          {t(`pages.product.sections.tasteProfile.parameter.${key}`)}
+          {t(`pages.product.sections.tasteProfile.parameter.${key}.name`)}
         </Typography>
         <Drawer
           trigger={<InformationCircleIcon className="h-4 w-4 ml-1 text-coreUI-text-secondary cursor-pointer" />}
-          title={t(`pages.product.sections.tasteProfile.parameter.${key}`)}
-          body={<div className="border border-dashed border-brand-grey-bombay">Placeholder...</div>}
+          title={t(`pages.product.sections.tasteProfile.parameter.${key}.name`)}
+          body={
+            <Typography as="p" className="text-coreUI-text-secondary p-5">
+              {t(`pages.product.sections.tasteProfile.parameter.${key}.description`)}
+            </Typography>
+          }
           className="flex md:hidden"
         />
         <Dialog
           trigger={<InformationCircleIcon className="h-4 w-4 ml-1 text-coreUI-text-secondary cursor-pointer" />}
-          title={t(`pages.product.sections.tasteProfile.parameter.${key}`)}
-          body={<div className="border border-dashed border-brand-grey-bombay">Placeholder...</div>}
+          title={t(`pages.product.sections.tasteProfile.parameter.${key}.name`)}
+          body={
+            <Typography as="p" className="text-coreUI-text-secondary p-5 pt-0">
+              {t(`pages.product.sections.tasteProfile.parameter.${key}.description`)}
+            </Typography>
+          }
           className="hidden md:flex"
         />
       </div>
