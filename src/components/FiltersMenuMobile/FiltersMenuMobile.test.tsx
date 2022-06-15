@@ -31,7 +31,7 @@ window.history = { go: jest.fn() }
 describe('Filters Menu Mobile component', () => {
   const initialFilters: FilterData[] = [
     { key: 'beanType', isOpen: false, filterType: 'enum', filterValues: ['Arabica'] },
-    { key: 'vendor', isOpen: false, filterType: 'enum', filterValues: ['Rösttatte', 'WeBean'] },
+    { key: 'vendor', isOpen: false, filterType: 'enum', filterValues: ['Rösttatte', '60beans'] },
     { key: 'origin', isOpen: false, filterType: 'enum', filterValues: ['BR,CO'], i18nValues: true },
     { key: 'packageSize', isOpen: false, filterType: 'enum', filterValues: ['100g', '250g', '500g', '1kg'] },
   ]

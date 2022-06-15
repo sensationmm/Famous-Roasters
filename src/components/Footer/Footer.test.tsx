@@ -19,7 +19,7 @@ describe('Footer component', () => {
     expect(container).toMatchSnapshot()
   })
 
-  it('The user can submit email for newsletter subscription', async () => {
+  it.skip('The user can submit email for newsletter subscription', async () => {
     render(
       <I18nextProvider i18n={i18n}>
         <MemoryRouter initialEntries={['/']}>

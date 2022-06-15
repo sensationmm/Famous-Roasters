@@ -140,7 +140,7 @@ export const ProductMockDataBase: ProductType = {
       hasPreviousPage: false,
     },
   },
-  vendor: 'WeBean',
+  vendor: '60beans',
   metafields: {
     edges: [],
     nodes: [],
@@ -201,7 +201,7 @@ export const ProductMockData: ProductType = {
       hasPreviousPage: false,
     },
   },
-  vendor: 'WeBean',
+  vendor: '60beans',
   metafields: {
     edges: [],
     nodes: [],
@@ -250,7 +250,7 @@ export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
     value: 'CO',
   },
   producer: {
-    value: 'WeBean',
+    value: '60beans',
   },
   altitude: {
     value: '500m',

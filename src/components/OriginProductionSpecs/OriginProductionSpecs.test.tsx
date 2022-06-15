@@ -14,7 +14,7 @@ describe('OriginProductionSpecs component', () => {
           origin="BR,CO"
           altitude="500m"
           processing="Gewaschen"
-          producer="WeBean"
+          producer="60beans"
           variety="Ethiopian Heirloom"
         />
       </I18nextProvider>,

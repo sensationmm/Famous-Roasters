@@ -73,7 +73,7 @@ describe('Catalogue helper', () => {
           key: 'vendor',
           isOpen: false,
           filterType: 'enum',
-          filterValues: ['Cycle Roasters', 'WeBean'],
+          filterValues: ['60beans', 'Cycle Roasters'],
           filterValuesSelected: [],
         },
         {
@@ -133,7 +133,7 @@ describe('Catalogue helper', () => {
           key: 'vendor',
           isOpen: false,
           filterType: 'enum',
-          filterValues: ['Cycle Roasters', 'WeBean'],
+          filterValues: ['60beans', 'Cycle Roasters'],
           filterValuesSelected: ['Cycle Roasters'],
         },
         {

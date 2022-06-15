@@ -25,7 +25,7 @@ exports[`Product Tile component Renders as expected for missing attributes 1`] =
       <div
         class="text-coreUI-text-secondary text-base leading-6"
       >
-        WeBean
+        60beans
       </div>
       <div
         class="text-coreUI-text-secondary text-base leading-6"
@@ -78,7 +78,7 @@ exports[`Product Tile component Renders correctly 1`] = `
       <div
         class="text-coreUI-text-secondary text-base leading-6"
       >
-        WeBean
+        60beans
       </div>
       <div
         class="text-coreUI-text-secondary text-base leading-6"
