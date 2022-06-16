@@ -145,7 +145,7 @@
     "tasteResults": {
       "items": {
         "acidity": {
-          "title": "Lebendigkeit",
+          "title": "Säure",
           "text": {
             "hi": "Du magst Kaffees mit deutlicher Säure.",
             "lo": "Du magst Kaffees mit leichter Säure.",
@@ -624,10 +624,22 @@
         },
         "tasteProfile": {
           "parameter": {
-            "acidity": "Lebendigkeit",
-            "bitterness": "Stärke",
-            "body": "Körper",
-            "sweetness": "Süße"
+            "acidity": {
+              "description": "Kaffeebohnen enthalten von Natur aus Säure. Unsere Kaffeeexperten vergleichen den Säuregehalt auch mit Obst und Früchten, um herauszufinden, wie sauer dein Kaffee sein darf.",
+              "name": "Säure"
+            },
+            "bitterness": {
+              "description": "Die Stärke der Röstung beeinflusst den Grad der Bitterstoffe im Kaffee. Eine helle Röstung entspricht der Bitternote einer hellen Milchschokolade. Eine intensive Röstung entspricht einer dunkleren Schokolade.",
+              "name": "Stärke"
+            },
+            "body": {
+              "description": "Unsere Kaffeeexperten nutzen den Begriff Körper um das Mundgefühl des Kaffees zu beschreiben. Unter einem vollen Körper kannst du dir einen vollmundigen Espresso vorstellen. Ein leichter Körper entspricht eher einem leichten Americano.",
+              "name": "Körper"
+            },
+            "sweetness": {
+              "description": "Die Süße des Kaffees wird maßgeblich durch die Kaffeebohne, die Anbauhöhe und die Art der Röstung beeinflußt.\n\n",
+              "name": "Süße"
+            }
           },
           "scale": {
             "light": "Leicht",
