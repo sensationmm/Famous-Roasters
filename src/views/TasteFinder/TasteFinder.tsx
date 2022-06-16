@@ -9,6 +9,7 @@ import {
   Bitterness as BitternessPartial,
   Body as BodyPartial,
   Brewing as BrewingPartial,
+  Processing as ProcessingPartial,
   Sweetness as SweetnessPartial,
   Welcome as WelcomePartial,
   YourName as YourNamePartial,
@@ -23,6 +24,7 @@ enum TasteFinderStepsNames {
   Body = 'körper',
   Brewing = 'zubereitung',
   Adventurous = 'gewagt',
+  Processing = 'bearbeiten',
 }
 
 const TasteFinderSteps = [
@@ -114,6 +116,10 @@ export const TasteFinder: React.FC = () => {
         setActualStep(TasteFinderStepsNames.Adventurous)
         setSearchParams({ step: TasteFinderStepsNames.Adventurous })
         break
+      case 8:
+        setActualStep(TasteFinderStepsNames.Processing)
+        setSearchParams({ step: TasteFinderStepsNames.Processing })
+        break
       default:
         setActualStep(TasteFinderStepsNames.Welcome)
         setSearchParams({ step: TasteFinderStepsNames.Welcome })
@@ -134,9 +140,11 @@ export const TasteFinder: React.FC = () => {
       case TasteFinderStepsNames.Body:
         return <BodyPartial currentData={getCurrentData(['body'])} updateData={handleData} />
       case TasteFinderStepsNames.Brewing:
-        return <BrewingPartial currentData={getCurrentData(['brewing'])} updateData={handleData} />
+        return <BrewingPartial currentData={getCurrentData(['grindType'])} updateData={handleData} />
       case TasteFinderStepsNames.Adventurous:
         return <AdventurousPartial currentData={getCurrentData(['adventurous'])} updateData={handleData} />
+      case TasteFinderStepsNames.Processing:
+        return <ProcessingPartial data={tasteFinderFieldsData} />
       case TasteFinderStepsNames.Welcome:
       default:
         return <WelcomePartial next={() => navigateTo(1)} />
@@ -207,7 +215,7 @@ export const TasteFinder: React.FC = () => {
         return field === undefined || field.value === undefined
       }
       case TasteFinderStepsNames.Brewing: {
-        const field = getCurrentData(['brewing'])[0]
+        const field = getCurrentData(['grindType'])[0]
         return field === undefined || field.value === undefined
       }
       case TasteFinderStepsNames.Adventurous: {
@@ -223,14 +231,16 @@ export const TasteFinder: React.FC = () => {
     <Layout navigationTheme={NavigationTheme.Home}>
       <main className="flex flex-col" style={{ minHeight: 'calc(100vh - 66px)' }}>
         {actualStep !== undefined && renderStep(actualStep)}
-        {actualStep !== undefined && actualStep !== TasteFinderStepsNames.Welcome && (
-          <StickyBottomNavigation
-            percentage={getPercentage(actualStep)}
-            isNextDisabled={isNextDisabledInStep(actualStep)}
-            prevClicked={() => handlePrevClicked(actualStep)}
-            nextClicked={() => handleNextClicked(actualStep)}
-          />
-        )}
+        {actualStep !== undefined &&
+          actualStep !== TasteFinderStepsNames.Welcome &&
+          actualStep !== TasteFinderStepsNames.Processing && (
+            <StickyBottomNavigation
+              percentage={getPercentage(actualStep)}
+              isNextDisabled={isNextDisabledInStep(actualStep)}
+              prevClicked={() => handlePrevClicked(actualStep)}
+              nextClicked={() => handleNextClicked(actualStep)}
+            />
+          )}
       </main>
     </Layout>
   )

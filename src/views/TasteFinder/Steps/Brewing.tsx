@@ -13,40 +13,40 @@ export const Brewing: React.FC<TasteFinderFieldHandlerProps> = ({
 
   const BrewingData = [
     {
-      name: 'french',
+      name: 'French Press',
       iconName: IconName.FrenchPress,
-      text: t('pages.tasteFinder.steps.brewing.options.option1.text'),
+      text: t('pages.tasteFinder.steps.grindType.options.option1.text'),
     },
     {
-      name: 'aeropress',
+      name: 'Aeropress',
       iconName: IconName.Aeropress,
-      text: t('pages.tasteFinder.steps.brewing.options.option2.text'),
+      text: t('pages.tasteFinder.steps.grindType.options.option2.text'),
     },
     {
-      name: 'v60',
+      name: 'Filter',
       iconName: IconName.V60,
-      text: t('pages.tasteFinder.steps.brewing.options.option3.text'),
+      text: t('pages.tasteFinder.steps.grindType.options.option3.text'),
     },
     {
-      name: 'moka',
+      name: 'Herdkocher/Bialetti',
       iconName: IconName.Moka,
-      text: t('pages.tasteFinder.steps.brewing.options.option4.text'),
+      text: t('pages.tasteFinder.steps.grindType.options.option4.text'),
     },
     {
-      name: 'chemex',
+      name: 'Filter',
       iconName: IconName.Chemex,
-      text: t('pages.tasteFinder.steps.brewing.options.option5.text'),
+      text: t('pages.tasteFinder.steps.grindType.options.option5.text'),
     },
     {
-      name: 'espresso',
+      name: 'Siebträger',
       iconName: IconName.Espresso,
-      text: t('pages.tasteFinder.steps.brewing.options.option6.text'),
+      text: t('pages.tasteFinder.steps.grindType.options.option6.text'),
     },
   ]
 
   return (
     <TasteScreen
-      screenKey="brewing"
+      screenKey="grindType"
       screenData={BrewingData}
       imageType={TasteScreenImageType.Icon}
       guideType={GuideType.Text}
