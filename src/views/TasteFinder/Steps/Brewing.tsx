@@ -13,7 +13,7 @@ export const Brewing: React.FC<TasteFinderFieldHandlerProps> = ({
 
   const BrewingData = [
     {
-      name: 'French Press',
+      name: 'FrenchPress',
       iconName: IconName.FrenchPress,
       text: t('pages.tasteFinder.steps.grindType.options.option1.text'),
     },
@@ -23,22 +23,22 @@ export const Brewing: React.FC<TasteFinderFieldHandlerProps> = ({
       text: t('pages.tasteFinder.steps.grindType.options.option2.text'),
     },
     {
-      name: 'Filter',
+      name: 'V60',
       iconName: IconName.V60,
       text: t('pages.tasteFinder.steps.grindType.options.option3.text'),
     },
     {
-      name: 'Herdkocher/Bialetti',
+      name: 'Moka',
       iconName: IconName.Moka,
       text: t('pages.tasteFinder.steps.grindType.options.option4.text'),
     },
     {
-      name: 'Filter',
+      name: 'Chemex',
       iconName: IconName.Chemex,
       text: t('pages.tasteFinder.steps.grindType.options.option5.text'),
     },
     {
-      name: 'Siebträger',
+      name: 'Espresso',
       iconName: IconName.Espresso,
       text: t('pages.tasteFinder.steps.grindType.options.option6.text'),
     },

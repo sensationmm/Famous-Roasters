@@ -1,4 +1,8 @@
-import React from 'react'
+import Lottie from 'lottie-react'
+import React, { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
+import aeropressAni from 'src/assets/images/lottieAnimations/aeropress.json'
+import { Typography, TypographySize, TypographyType } from 'src/components'
 import { toRoundedValueInRealScale } from 'src/utils'
 import { TasteFinderField } from 'src/views/TasteFinder'
 
@@ -11,10 +15,12 @@ interface TasteFinderProfile {
   body: number
   bitterness: number
   acidity: number
-  grindType: string
+  coffeeType: string
 }
 
 export const Processing: React.FC<ProcessingProps> = ({ data }: ProcessingProps) => {
+  const { t } = useTranslation()
+
   const propsToProfile = (d: TasteFinderField[]): Partial<TasteFinderProfile> => {
     const parseParam = (n: string, v: string | undefined) => {
       switch (n) {
@@ -23,19 +29,42 @@ export const Processing: React.FC<ProcessingProps> = ({ data }: ProcessingProps)
         case 'bitterness':
         case 'acidity':
           return toRoundedValueInRealScale(parseInt(v as string))
+        case 'grindType':
+          return v === 'Espresso' || v === 'Moka' ? 'Espresso' : 'Filter'
         default:
           return v
       }
     }
-    const res = d.reduce((o, key) => ({ ...o, [key.name]: parseParam(key.name, key.value) }), {})
+    const res = d.reduce(
+      (o, key) => ({ ...o, [key.name === 'grindType' ? 'coffeeType' : key.name]: parseParam(key.name, key.value) }),
+      {},
+    )
     return Object.fromEntries(
-      Object.entries(res).filter(([key]) => ['sweetness', 'body', 'bitterness', 'acidity', 'grindType'].includes(key)),
+      Object.entries(res).filter(([key]) => ['sweetness', 'body', 'bitterness', 'acidity', 'coffeeType'].includes(key)),
     )
   }
 
-  const payload = propsToProfile(data)
-  console.log('data', data)
-  console.log('payload', payload)
+  useEffect(() => {
+    const payload = propsToProfile(data)
+    console.log('data', data)
+    console.log('payload', payload)
+  }, [])
 
-  return <div>Calculating...</div>
+  return (
+    <div className="flex-grow flex items-center justify-center">
+      <div className="flex flex-col items-center justify-center -mt-20">
+        <Lottie animationData={aeropressAni} loop={true} className="h-72" />
+        <Typography
+          as="h1"
+          type={TypographyType.Heading}
+          size={TypographySize.Tiny}
+          className="flex text-center w-3/4 md:w-2/3 md:text-2xl md:leading-8 xl:w-1/2 xl:text-3xl xl:leading-10 mt-8"
+        >
+          {t('pages.tasteFinder.steps.processing.loading1')}
+          <br />
+          {t('pages.tasteFinder.steps.processing.loading2')}
+        </Typography>
+      </div>
+    </div>
+  )
 }

@@ -794,6 +794,10 @@
           },
           "text": "Jeder weiß: der Tag beginnt nach der ersten Tasse Kaffee. Auf welche Art brühst du deinen Kaffee?"
         },
+        "processing": {
+          "loading1": "Kurze Kaffeepause.",
+          "loading2": "Wir stellen basierend auf deiner Auswahl dein Kaffeeprofil zusammen."
+        },
         "sweetness": {
           "options": {
             "option1": {
