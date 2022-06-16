@@ -9,7 +9,7 @@ describe('BeanScaleTag component', () => {
   it('Renders correctly for low scale', async () => {
     const { container } = render(
       <I18nextProvider i18n={i18n}>
-        <BeanScaleTag value={2} />
+        <BeanScaleTag value={1} />
       </I18nextProvider>,
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
@@ -19,7 +19,7 @@ describe('BeanScaleTag component', () => {
   it('Renders correctly for mid scale', async () => {
     const { container } = render(
       <I18nextProvider i18n={i18n}>
-        <BeanScaleTag value={6} />
+        <BeanScaleTag value={2} />
       </I18nextProvider>,
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
@@ -29,7 +29,7 @@ describe('BeanScaleTag component', () => {
   it('Renders correctly for high scale', async () => {
     const { container } = render(
       <I18nextProvider i18n={i18n}>
-        <BeanScaleTag value={10} />
+        <BeanScaleTag value={3} />
       </I18nextProvider>,
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))

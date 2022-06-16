@@ -1,4 +1,5 @@
 import React from 'react'
+import { toRoundedValueInRealScale } from 'src/utils'
 import { TasteFinderField } from 'src/views/TasteFinder'
 
 interface ProcessingProps {
@@ -21,7 +22,7 @@ export const Processing: React.FC<ProcessingProps> = ({ data }: ProcessingProps)
         case 'body':
         case 'bitterness':
         case 'acidity':
-          return parseInt(v as string)
+          return toRoundedValueInRealScale(parseInt(v as string))
         default:
           return v
       }

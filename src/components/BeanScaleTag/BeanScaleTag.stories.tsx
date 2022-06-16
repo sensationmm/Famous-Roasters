@@ -12,5 +12,5 @@ const Template: ComponentStory<typeof BeanScaleTag> = (args) => <BeanScaleTag {.
 
 export const Default = Template.bind({})
 Default.args = {
-  value: 5,
+  value: 2,
 }

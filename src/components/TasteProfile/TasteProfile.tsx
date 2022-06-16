@@ -2,6 +2,7 @@ import { InformationCircleIcon } from '@heroicons/react/outline'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { BeanScaleTag, Dialog, Drawer, Typography, TypographySize, TypographyType } from 'src/components'
+import { toValueInHumanScale } from 'src/utils'
 
 interface TasteProfileProps {
   acidity: number
@@ -20,7 +21,7 @@ export const TasteProfile: React.FC<TasteProfileProps> = ({
 
   const renderProfile = (key: string, parameter: number) => (
     <div>
-      <BeanScaleTag value={parameter} />
+      <BeanScaleTag value={toValueInHumanScale(parameter)} />
       <div className="inline-flex">
         <Typography type={TypographyType.Label} size={TypographySize.Tiny} className="text-coreUI-text-secondary">
           {t(`pages.product.sections.tasteProfile.parameter.${key}.name`)}

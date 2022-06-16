@@ -642,9 +642,9 @@
             }
           },
           "scale": {
-            "light": "Leicht",
-            "medium": "Mittel",
-            "strong": "Hoch"
+            "1": "Leicht",
+            "2": "Mittel",
+            "3": "Hoch"
           }
         }
       },
