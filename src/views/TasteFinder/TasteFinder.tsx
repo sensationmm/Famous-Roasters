@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { useSearchParams } from 'react-router-dom'
 import { Layout, NavigationTheme, StickyBottomNavigation } from 'src/components'
 
+import { useLocalStorage } from '../../utils'
 import {
   Acidity as AcidityPartial,
   Adventurous as AdventurousPartial,
@@ -84,7 +85,12 @@ export const TasteFinder: React.FC = () => {
   const { t } = useTranslation()
   const [searchParams, setSearchParams] = useSearchParams()
   const [actualStep, setActualStep] = useState<string>()
-  const [tasteFinderFieldsData, setTasteFinderFieldsData] = useState<TasteFinderField[]>([])
+  const [tasteFinderState, setTasteFinderState] = useState<TasteFinderField[]>([])
+  const [tasteFinderLocalStorage, setTasteFinderLocalStorage] = useLocalStorage('tasteFinder', '')
+
+  useEffect(() => {
+    tasteFinderLocalStorage && setTasteFinderState(JSON.parse(tasteFinderLocalStorage))
+  }, [])
 
   const navigateTo = (index: number) => {
     switch (index) {
@@ -144,7 +150,7 @@ export const TasteFinder: React.FC = () => {
       case TasteFinderStepsNames.Adventurous:
         return <AdventurousPartial currentData={getCurrentData(['adventurous'])} updateData={handleData} />
       case TasteFinderStepsNames.Processing:
-        return <ProcessingPartial data={tasteFinderFieldsData} />
+        return <ProcessingPartial data={tasteFinderState} />
       case TasteFinderStepsNames.Welcome:
       default:
         return <WelcomePartial next={() => navigateTo(1)} />
@@ -165,13 +171,16 @@ export const TasteFinder: React.FC = () => {
   }, [searchParams])
 
   const handleData = (data: TasteFinderField) => {
-    setTasteFinderFieldsData((prev) => [...prev.filter((p) => p.name !== data.name), data])
+    // updates the state
+    setTasteFinderState((prev) => [...prev.filter((p) => p.name !== data.name), data])
+    // stores in localstorage
+    setTasteFinderLocalStorage(JSON.stringify([...tasteFinderState.filter((p) => p.name !== data.name), data]))
   }
 
   const getCurrentData = (currentDataItems: string[]): TasteFinderField[] => {
     const res: TasteFinderField[] = []
     currentDataItems.forEach((currentDataItem) => {
-      const searchRes = tasteFinderFieldsData.find((item) => item.name === currentDataItem)
+      const searchRes = tasteFinderState.find((item) => item.name === currentDataItem)
       if (searchRes) res.push(searchRes)
     })
     return res

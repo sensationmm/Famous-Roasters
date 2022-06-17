@@ -30,7 +30,7 @@ export const Processing: React.FC<ProcessingProps> = ({ data }: ProcessingProps)
         case 'acidity':
           return toRoundedValueInRealScale(parseInt(v as string))
         case 'grindType':
-          return v === 'Espresso' || v === 'Moka' ? 'Espresso' : 'Filter'
+          return v === 'Espresso' || v === 'Moka' ? 'ESPRESSO' : 'FILTER'
         default:
           return v
       }
@@ -46,7 +46,6 @@ export const Processing: React.FC<ProcessingProps> = ({ data }: ProcessingProps)
 
   useEffect(() => {
     const payload = propsToProfile(data)
-    console.log('data', data)
     console.log('payload', payload)
   }, [])
 
