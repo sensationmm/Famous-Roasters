@@ -1,0 +1,3 @@
+query tasteFinderRecommendation($profile: TasteFinderProfile!) {
+    shopify_product_ids
+}

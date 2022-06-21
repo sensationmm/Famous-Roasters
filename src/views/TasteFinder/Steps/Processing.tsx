@@ -1,10 +1,13 @@
+import { useQuery } from '@apollo/client/react/hooks'
+import { loader } from 'graphql.macro'
 import Lottie from 'lottie-react'
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useTranslation } from 'react-i18next'
 import aeropressAni from 'src/assets/images/lottieAnimations/aeropress.json'
 import { Typography, TypographySize, TypographyType } from 'src/components'
 import { toRoundedValueInRealScale } from 'src/utils'
 import { TasteFinderField } from 'src/views/TasteFinder'
+const GET_TASTE_FINDER_RECOMMENDATION = loader('src/graphql/queries/tasteFinderRecommendation.query.graphql')
 
 interface ProcessingProps {
   data: TasteFinderField[]
@@ -44,10 +47,20 @@ export const Processing: React.FC<ProcessingProps> = ({ data }: ProcessingProps)
     )
   }
 
-  useEffect(() => {
-    const payload = propsToProfile(data)
-    console.log('payload', payload)
-  }, [])
+  const {
+    loading,
+    error,
+    data: queryData,
+  } = useQuery(GET_TASTE_FINDER_RECOMMENDATION, {
+    variables: {
+      profile: propsToProfile(data),
+    },
+  })
+
+  console.log('DEBUG')
+  console.log('loading', loading)
+  console.log('error', error)
+  console.log('queryData', queryData)
 
   return (
     <div className="flex-grow flex items-center justify-center">
