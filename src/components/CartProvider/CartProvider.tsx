@@ -59,6 +59,8 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProv
         .catch((err) => {
           throw new Error('Error fetching cart', err)
         })
+    } else {
+      setCartSize(0)
     }
   }, [])
 
@@ -86,10 +88,10 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProv
       })
   }
 
-  const addLinesToCart = (item: CartItem) => {
+  const addLinesToCart = (item: CartItem, localStorageCartId: string) => {
     cartLinesAdd({
       variables: {
-        cartId,
+        cartId: localStorageCartId,
         lines: [
           {
             quantity: item.quantity,
@@ -109,8 +111,12 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProv
   }
 
   const addToCart = (item: CartItem) => {
-    if (cartId || cartId !== undefined) {
-      addLinesToCart(item)
+    const localStorageCartIdValue = window.localStorage.getItem('cartId')
+    const localStorageCartId = (localStorageCartIdValue && JSON.parse(localStorageCartIdValue)) || null
+    // this step could be avoided if using a localstorage listener
+    if (localStorageCartId) {
+      addLinesToCart(item, localStorageCartId)
+      if (!cartId) setCartId(localStorageCartId)
     } else {
       createCart(item)
     }
