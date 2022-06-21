@@ -20,6 +20,7 @@ ___
 
 <!-- Environments -->  
 ## Environments
+- [App - Production](https://venture-famous-roasters.de/)
 - [App - Staging](https://staging.venture-famous-roasters.de/)
 - [Storybook - Staging](https://storybook.staging.venture-famous-roasters.de/)
 
@@ -33,12 +34,13 @@ ___
   <li><a href="#scripts">Scripts</a></li>  
   <li><a href="#create-react-app">Create React App</a></li>  
   <li><a href="#structure-overview">Structure Overview</a></li>  
-  <li><a href="#tailwind-css-and-tailwind-ui">Tailwind CSS & TailwindUI</a></li>  
+  <li><a href="#tailwind">Tailwind CSS & TailwindUI</a></li>  
   <li><a href="#storybook">Storybook</a></li>
   <li><a href="#i18n">i18n</a></li>  
   <li><a href="#commiting-code">Commiting code</a></li>  
   <li><a href="#unit-tests">Unit tests</a></li>
   <li><a href="#github-actions">GitHub Actions</a></li>  
+  <li><a href="#semantic-release">Semantic Release</a></li>  
   <li><a href="#deployment">Deployment</a></li>
   <li><a href="#questions">Questions?</a></li>
 </ol>  
@@ -123,13 +125,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### Structure Overview
 ```  
 /                                     # root folder  
-├── .github                           # github actions workflows (yml), PR template ├── .husky                            # pre-commit and pre-push actions  
+├── .github                           # github actions workflows (yml), PR template
+├── .husky                            # pre-commit and pre-push actions  
 ├── .storybook                        # storybook configuration files 
 ├── public                            # static public files
 ├── src                               # repo source files  
-│   ├── _mocks                        # mock objects  
+│   ├── _mocks                        # mock objects (tests)
 │   ├── assets                        # source code assets  
-│   │   └── i18n                      # translations json files
+│   │   ├── i18n                      # translations json files
+│   │   └── images                    # images used (webp, png, svg)
 │   ├── components                    # components folder  
 │   │   ├── ...    
 │   │   ├── <Component>  
@@ -158,6 +162,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ├── .gitignore                        # gitignore  
 ├── .prettierignore                   # ignores for code prettier  
 ├── .prettierrc                       # code prettier config  
+├── .releaserc                        # semantic release config  
 ├── package.json                      # package file  
 ├── README.md                         # this file  
 ├── tailwind.config.js                # tailwind config  
@@ -200,15 +205,23 @@ GitHub workflows is our solution for CI/CD and the config can be found at `.gith
 
 #### `test-build-deploy`
 - Executes only for `main` branch (typically after a PR merge)
-- Environment name: `staging`
+- Environments: `staging` and `prod`
 - Tasks: all the tasks done by `test-and-build` plus:
+  - create a release if applies
   - configure AWS credentials
   - deploy app (staging) to AWS S3
   - deploy storybook (staging) to AWS S3
+  - if test-build-deploy-staging and sonarcloud succeed, runs also test-build-deploy-prod upon approval
+  - deploy app (prod) to AWS S3
+
+<!-- Deployment -->
+### Semantic release
+This setup includes [semantic-release](https://github.com/semantic-release/semantic-release) to enable automate versioning and changelog generation on script-based already integrated on GitHub actions.
 
 <!-- Deployment -->  
 ### Deployment
 Deployment to staging is configured automatically for the `main` branch. For details, check the [GitHub Actions](#github-actions) section above.
+The deployed app (production) can be found [here](https://venture-famous-roasters.de/).
 The deployed app (staging) can be found [here](https://staging.venture-famous-roasters.de/).
 The deployed storybook (staging) can be found [here](https://storybook.staging.venture-famous-roasters.de/).
 

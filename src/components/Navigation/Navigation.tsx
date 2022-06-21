@@ -54,7 +54,7 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
       if (actualCartSize === undefined) {
         setActualCartSize(cartSize)
       } else {
-        if (cartSize > 0 && cartSize > actualCartSize) {
+        if (cartSize > actualCartSize) {
           setActualCartSize(cartSize)
           setShowAddedToCart(true)
           setTimeout(() => {
