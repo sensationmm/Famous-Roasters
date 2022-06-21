@@ -1,3 +1,5 @@
 query tasteFinderRecommendation($profile: TasteFinderProfile!) {
-    shopify_product_ids
+    tasteFinderRecommendation(profile: $profile) {
+        shopifyProductIds
+    }
 }
