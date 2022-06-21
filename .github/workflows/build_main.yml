@@ -152,7 +152,9 @@ jobs:
 
   test-build-deploy-prod:
     environment: prod
-    needs: test-build-deploy-staging
+    needs:
+      - test-build-deploy-staging
+      - sonarcloud
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -214,4 +216,4 @@ jobs:
           aws-region: eu-central-1
 
       - name: Push to S3
-        run: aws s3 sync build/ s3://famous-roasters-frontend-prod
+        run: aws s3 sync build/ s3://famous-roasters-frontend-production
