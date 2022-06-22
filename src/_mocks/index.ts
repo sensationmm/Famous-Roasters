@@ -26,7 +26,12 @@ import {
   ProductMockWithCustomMetadata,
   ProductMockWithCustomMetadataNoAroma,
 } from './ProductMock'
-import { TasteFinderMockEspresso, TasteFinderMockFilter } from './TasteFinderMock'
+import {
+  TasteFinderMockEspresso,
+  TasteFinderMockFilter,
+  TasteFinderMockQueryEspresso,
+  TasteFinderMockQueryFilter,
+} from './TasteFinderMock'
 
 export { CartAddLinesMock as CartAddLinesMock }
 export { CartCreateMock as CartCreateMock }
@@ -53,3 +58,5 @@ export { FilterAttributesMock as FilterAttributesMock }
 export { FilterAttributesMockError as FilterAttributesMockError }
 export { TasteFinderMockEspresso as TasteFinderMockEspresso }
 export { TasteFinderMockFilter as TasteFinderMockFilter }
+export { TasteFinderMockQueryEspresso as TasteFinderMockQueryEspresso }
+export { TasteFinderMockQueryFilter as TasteFinderMockQueryFilter }

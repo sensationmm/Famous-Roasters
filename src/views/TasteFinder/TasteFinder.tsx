@@ -1,11 +1,11 @@
 import { ApolloProvider } from '@apollo/client'
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useSearchParams } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import { Layout, NavigationTheme, StickyBottomNavigation } from 'src/components'
 import { famousRoastersClient } from 'src/config'
+import { useLocalStorage } from 'src/utils'
 
-import { useLocalStorage } from '../../utils'
 import {
   Acidity as AcidityPartial,
   Adventurous as AdventurousPartial,
@@ -85,6 +85,7 @@ export interface TasteFinderFieldHandlerProps {
 
 export const TasteFinder: React.FC = () => {
   const { t } = useTranslation()
+  const navigate = useNavigate()
   const [searchParams, setSearchParams] = useSearchParams()
   const [actualStep, setActualStep] = useState<string>()
   const [tasteFinderState, setTasteFinderState] = useState<TasteFinderField[]>([])
@@ -152,7 +153,7 @@ export const TasteFinder: React.FC = () => {
       case TasteFinderStepsNames.Adventurous:
         return <AdventurousPartial currentData={getCurrentData(['adventurous'])} updateData={handleData} />
       case TasteFinderStepsNames.Processing:
-        return <ProcessingPartial data={tasteFinderState} />
+        return <ProcessingPartial currentData={tasteFinderState} updateData={handleData} />
       case TasteFinderStepsNames.Welcome:
       default:
         return <WelcomePartial next={() => navigateTo(1)} />
@@ -177,6 +178,10 @@ export const TasteFinder: React.FC = () => {
     setTasteFinderState((prev) => [...prev.filter((p) => p.name !== data.name), data])
     // stores in localstorage
     setTasteFinderLocalStorage(JSON.stringify([...tasteFinderState.filter((p) => p.name !== data.name), data]))
+    // redirect when complete
+    if (data.name === 'shopifyProductIds' && data.value && data.value.length > 0) {
+      navigate(`/featured/${data.value[0]}`, { replace: true })
+    }
   }
 
   const getCurrentData = (currentDataItems: string[]): TasteFinderField[] => {

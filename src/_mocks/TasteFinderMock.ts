@@ -1,3 +1,7 @@
+import { loader } from 'graphql.macro'
+
+const GET_TASTE_FINDER_RECOMMENDATION = loader('src/graphql/queries/tasteFinderRecommendation.query.graphql')
+
 export const TasteFinderMockEspresso = [
   {
     name: 'name',
@@ -5,19 +9,19 @@ export const TasteFinderMockEspresso = [
   },
   {
     name: 'bitterness',
-    value: '3',
+    value: '2',
   },
   {
     name: 'sweetness',
-    value: '3',
+    value: '2',
   },
   {
     name: 'acidity',
-    value: '3',
+    value: '2',
   },
   {
     name: 'body',
-    value: '3',
+    value: '2',
   },
   {
     name: 'grindType',
@@ -30,9 +34,53 @@ export const TasteFinderMockEspresso = [
 ]
 
 export const TasteFinderMockFilter = [
-  ...TasteFinderMockEspresso,
+  ...TasteFinderMockEspresso.filter((x) => x.name !== 'grindType'),
   {
     name: 'grindType',
     value: 'Aeropress',
   },
 ]
+
+export const TasteFinderMockQueryEspresso = {
+  request: {
+    query: GET_TASTE_FINDER_RECOMMENDATION,
+    variables: {
+      profile: {
+        acidity: 5,
+        bitterness: 5,
+        body: 5,
+        coffeeType: 'ESPRESSO',
+        sweetness: 5,
+      },
+    },
+  },
+  result: {
+    data: {
+      tasteFinderRecommendation: {
+        shopifyProductIds: ['7655228866776'],
+      },
+    },
+  },
+}
+
+export const TasteFinderMockQueryFilter = {
+  request: {
+    query: GET_TASTE_FINDER_RECOMMENDATION,
+    variables: {
+      profile: {
+        acidity: 5,
+        bitterness: 5,
+        body: 5,
+        coffeeType: 'FILTER',
+        sweetness: 5,
+      },
+    },
+  },
+  result: {
+    data: {
+      tasteFinderRecommendation: {
+        shopifyProductIds: ['7655228866776'],
+      },
+    },
+  },
+}
