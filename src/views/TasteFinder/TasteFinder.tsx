@@ -1,9 +1,7 @@
-import { ApolloProvider } from '@apollo/client'
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { Layout, NavigationTheme, StickyBottomNavigation } from 'src/components'
-import { famousRoastersClient } from 'src/config'
 import { useLocalStorage } from 'src/utils'
 
 import {
@@ -244,22 +242,20 @@ export const TasteFinder: React.FC = () => {
   }
 
   return (
-    <ApolloProvider client={famousRoastersClient()}>
-      <Layout navigationTheme={NavigationTheme.Home}>
-        <main className="flex flex-col" style={{ minHeight: 'calc(100vh - 66px)' }}>
-          {actualStep !== undefined && renderStep(actualStep)}
-          {actualStep !== undefined &&
-            actualStep !== TasteFinderStepsNames.Welcome &&
-            actualStep !== TasteFinderStepsNames.Processing && (
-              <StickyBottomNavigation
-                percentage={getPercentage(actualStep)}
-                isNextDisabled={isNextDisabledInStep(actualStep)}
-                prevClicked={() => handlePrevClicked(actualStep)}
-                nextClicked={() => handleNextClicked(actualStep)}
-              />
-            )}
-        </main>
-      </Layout>
-    </ApolloProvider>
+    <Layout navigationTheme={NavigationTheme.Home}>
+      <main className="flex flex-col" style={{ minHeight: 'calc(100vh - 66px)' }}>
+        {actualStep !== undefined && renderStep(actualStep)}
+        {actualStep !== undefined &&
+          actualStep !== TasteFinderStepsNames.Welcome &&
+          actualStep !== TasteFinderStepsNames.Processing && (
+            <StickyBottomNavigation
+              percentage={getPercentage(actualStep)}
+              isNextDisabled={isNextDisabledInStep(actualStep)}
+              prevClicked={() => handlePrevClicked(actualStep)}
+              nextClicked={() => handleNextClicked(actualStep)}
+            />
+          )}
+      </main>
+    </Layout>
   )
 }

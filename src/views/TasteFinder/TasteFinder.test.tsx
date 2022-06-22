@@ -1,5 +1,5 @@
 import { MockedProvider } from '@apollo/client/testing'
-import { fireEvent, render, screen, waitFor } from '@testing-library/react'
+import { act, fireEvent, render, screen, waitFor } from '@testing-library/react'
 import React from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { MemoryRouter } from 'react-router-dom'
@@ -75,10 +75,9 @@ describe('Taste Finder view', () => {
     const iconCheckboxAdventurous = await screen.findAllByTestId('icon-checkbox')
     expect(iconCheckboxAdventurous[0]).toBeInTheDocument()
     fireEvent.click(iconCheckboxAdventurous[0])
-    // TODO mocks doing strange things
-    /*fireEvent.click(nextButton)
+    fireEvent.click(nextButton)
     await act(async () => {
       await new Promise((resolve) => setTimeout(resolve, 500))
-    })*/
+    })
   })
 })
