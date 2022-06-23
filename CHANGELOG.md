@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/Famous-Roasters/frontend/compare/v1.3.1...v1.3.2) (2022-06-23)
+
+
+### Bug Fixes
+
+* **cart:** fixes price column alignment on desktop ([a20e2a5](https://github.com/Famous-Roasters/frontend/commit/a20e2a59074ed85e25cb9c1df41dc332c833f2ae))
+
 ## [1.3.1](https://github.com/Famous-Roasters/frontend/compare/v1.3.0...v1.3.1) (2022-06-23)
 
 
