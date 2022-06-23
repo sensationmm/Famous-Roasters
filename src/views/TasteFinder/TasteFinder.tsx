@@ -242,7 +242,7 @@ export const TasteFinder: React.FC = () => {
   }
 
   return (
-    <Layout navigationTheme={NavigationTheme.Home}>
+    <Layout navigationTheme={NavigationTheme.Home} showFooter={false}>
       <main className="flex flex-col" style={{ minHeight: 'calc(100vh - 66px)' }}>
         {actualStep !== undefined && renderStep(actualStep)}
         {actualStep !== undefined &&
