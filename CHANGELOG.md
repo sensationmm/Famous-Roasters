@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Famous-Roasters/frontend/compare/v1.1.0...v1.2.0) (2022-06-23)
+
+
+### Features
+
+* **chore:** adds branded favicons ([c279446](https://github.com/Famous-Roasters/frontend/commit/c279446b9c95211c4b8c4486a80e1a556b4b05cf))
+
 # [1.1.0](https://github.com/Famous-Roasters/frontend/compare/v1.0.2...v1.1.0) (2022-06-23)
 
 
