@@ -1,3 +1,19 @@
+# [1.1.0](https://github.com/Famous-Roasters/frontend/compare/v1.0.2...v1.1.0) (2022-06-23)
+
+
+### Features
+
+* **taste finder:** adds env vars for graphql ([d65bf77](https://github.com/Famous-Roasters/frontend/commit/d65bf77449b8453bffa316eb5a2a6588e3d723c3))
+* **taste finder:** adds local storage to keep track of taste finder ([2a53d54](https://github.com/Famous-Roasters/frontend/commit/2a53d549653346275152e905a7f962c46cbee556))
+* **taste finder:** adds lottie and wrap up payload ([7098dae](https://github.com/Famous-Roasters/frontend/commit/7098dae6bf2babb157eca4e66b537202733103f1))
+* **taste finder:** attribute scale utils ([5ad603f](https://github.com/Famous-Roasters/frontend/commit/5ad603f83cb1723244fe53f6f0d70547d66d715b))
+* **taste finder:** completes headache test ([f742dba](https://github.com/Famous-Roasters/frontend/commit/f742dba70cc0c8064c66b59e9e86fa9e392d0270))
+* **taste finder:** creates processing step and generates payload wip ([3351c0a](https://github.com/Famous-Roasters/frontend/commit/3351c0aae66bd9341daae0bdf6fe83167d22af32))
+* **taste finder:** fix tests ([82008e3](https://github.com/Famous-Roasters/frontend/commit/82008e32ad4410b16eb62f76331dcef53986138b))
+* **taste finder:** integrating graphql done ([edfdc8e](https://github.com/Famous-Roasters/frontend/commit/edfdc8ed91fa46234dbb2fef0508b816d7b61a20))
+* **taste finder:** integrating graphql wip ([7c871ef](https://github.com/Famous-Roasters/frontend/commit/7c871efdcf3cb19155d13396f09edbe54b859b37))
+* **taste finder:** integrating graphql wip ([062c13c](https://github.com/Famous-Roasters/frontend/commit/062c13c1e5544f6bb1a4c3ecbe00541ed41e2b9c))
+
 ## [1.0.2](https://github.com/Famous-Roasters/frontend/compare/v1.0.1...v1.0.2) (2022-06-21)
 
 ## [1.0.1](https://github.com/Famous-Roasters/frontend/compare/v1.0.0...v1.0.1) (2022-06-21)
