@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/Famous-Roasters/frontend/compare/v1.2.0...v1.3.0) (2022-06-23)
+
+
+### Features
+
+* **product tile:** adds gray circular bg ([6e72246](https://github.com/Famous-Roasters/frontend/commit/6e72246ca122eac6bd8f23cf9481d50c77c66e26))
+
 # [1.2.0](https://github.com/Famous-Roasters/frontend/compare/v1.1.0...v1.2.0) (2022-06-23)
 
 
