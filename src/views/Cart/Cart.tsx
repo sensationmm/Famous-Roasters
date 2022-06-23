@@ -103,8 +103,8 @@ export const Cart: React.FC = () => {
                   key={`cart-item-${idx}`}
                   className={
                     idx < lines.edges.length - 1
-                      ? 'flex w-full md:grid-flow-col-dense md:columns-2 pb-6 border-b border-coreUI-border mb-4'
-                      : 'flex w-full md:grid-flow-col-dense md:columns-2 pb-6 border-b border-coreUI-border'
+                      ? 'flex w-full md:grid-cols-2 pb-6 border-b border-coreUI-border mb-4'
+                      : 'flex w-full md:grid-cols-2 pb-6 border-b border-coreUI-border'
                   }
                 >
                   <div className="flex justify-center items-center shrink-0 self-center relative w-32 h-32 mr-2">
@@ -115,7 +115,7 @@ export const Cart: React.FC = () => {
                       <img src={image?.url} alt={product.title} className="w-28 max-h-28" />
                     </Link>
                   </div>
-                  <div className="flex flex-1 flex-col justify-between justify-items-start md:grid-flow-col-dense md:columns-3 md:flex-row md:items-center">
+                  <div className="flex flex-1 flex-col justify-between justify-items-start md:grid md:grid-cols-3 md:items-center">
                     <div>
                       <Typography
                         as="div"
@@ -162,7 +162,7 @@ export const Cart: React.FC = () => {
                       )}
                     </div>
                     <span className="md:hidden" />
-                    <div>
+                    <div className="md:w-full md:flex md:justify-end">
                       <QuantitySelect
                         min={1}
                         max={10}
