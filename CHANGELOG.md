@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/Famous-Roasters/frontend/compare/v1.3.0...v1.3.1) (2022-06-23)
+
+
+### Bug Fixes
+
+* **icons:** fix bean icons ([2e30c3f](https://github.com/Famous-Roasters/frontend/commit/2e30c3fa8d87ce8632d8e02d5dbfe7a6b6eac42a))
+
 # [1.3.0](https://github.com/Famous-Roasters/frontend/compare/v1.2.0...v1.3.0) (2022-06-23)
 
 
