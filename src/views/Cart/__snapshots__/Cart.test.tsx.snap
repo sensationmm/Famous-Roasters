@@ -148,14 +148,15 @@ exports[`Cart view Renders correctly 1`] = `
             class="flex w-full md:grid-flow-col-dense md:columns-2 pb-6 border-b border-coreUI-border mb-4"
           >
             <div
-              class="shrink-0"
+              class="flex justify-center items-center shrink-0 self-center relative w-32 h-32 mr-2"
             >
               <a
+                class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
                 href="/product/7655228866776"
               >
                 <img
                   alt="Cycle Blend"
-                  class="w-32"
+                  class="w-28 max-h-28"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
               </a>
@@ -275,14 +276,15 @@ exports[`Cart view Renders correctly 1`] = `
             class="flex w-full md:grid-flow-col-dense md:columns-2 pb-6 border-b border-coreUI-border"
           >
             <div
-              class="shrink-0"
+              class="flex justify-center items-center shrink-0 self-center relative w-32 h-32 mr-2"
             >
               <a
+                class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
                 href="/product/23232323"
               >
                 <img
                   alt="60beans"
-                  class="w-32"
+                  class="w-28 max-h-28"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
               </a>

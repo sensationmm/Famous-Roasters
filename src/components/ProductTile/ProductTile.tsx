@@ -36,12 +36,12 @@ export const ProductTile: React.FC<ProductTileProps> = ({
     <div className={className ? 'flex p-6 ' + className : 'flex p-6'}>
       {showImage && (
         <div className="flex justify-center items-center shrink-0 self-center relative w-32 h-32">
-          <>
-            <img src={imgSrc} alt={title} className="w-32 max-h-32" />
+          <div className="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32">
+            <img src={imgSrc} alt={title} className="w-28 max-h-28" />
             {decaf && decaf.value === 'true' && (
               <Tag type={TagType.Decaf} value="Decaf" small={true} className="absolute top-2 left-0" />
             )}
-          </>
+          </div>
         </div>
       )}
       <div className="flex flex-col justify-between p-2">
