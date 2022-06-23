@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useSearchParams } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import { Layout, NavigationTheme, StickyBottomNavigation } from 'src/components'
+import { useLocalStorage } from 'src/utils'
 
 import {
   Acidity as AcidityPartial,
@@ -9,6 +10,7 @@ import {
   Bitterness as BitternessPartial,
   Body as BodyPartial,
   Brewing as BrewingPartial,
+  Processing as ProcessingPartial,
   Sweetness as SweetnessPartial,
   Welcome as WelcomePartial,
   YourName as YourNamePartial,
@@ -23,6 +25,7 @@ enum TasteFinderStepsNames {
   Body = 'körper',
   Brewing = 'zubereitung',
   Adventurous = 'gewagt',
+  Processing = 'bearbeiten',
 }
 
 const TasteFinderSteps = [
@@ -80,9 +83,15 @@ export interface TasteFinderFieldHandlerProps {
 
 export const TasteFinder: React.FC = () => {
   const { t } = useTranslation()
+  const navigate = useNavigate()
   const [searchParams, setSearchParams] = useSearchParams()
   const [actualStep, setActualStep] = useState<string>()
-  const [tasteFinderFieldsData, setTasteFinderFieldsData] = useState<TasteFinderField[]>([])
+  const [tasteFinderState, setTasteFinderState] = useState<TasteFinderField[]>([])
+  const [tasteFinderLocalStorage, setTasteFinderLocalStorage] = useLocalStorage('tasteFinder', '')
+
+  useEffect(() => {
+    tasteFinderLocalStorage && setTasteFinderState(JSON.parse(tasteFinderLocalStorage))
+  }, [])
 
   const navigateTo = (index: number) => {
     switch (index) {
@@ -114,6 +123,10 @@ export const TasteFinder: React.FC = () => {
         setActualStep(TasteFinderStepsNames.Adventurous)
         setSearchParams({ step: TasteFinderStepsNames.Adventurous })
         break
+      case 8:
+        setActualStep(TasteFinderStepsNames.Processing)
+        setSearchParams({ step: TasteFinderStepsNames.Processing })
+        break
       default:
         setActualStep(TasteFinderStepsNames.Welcome)
         setSearchParams({ step: TasteFinderStepsNames.Welcome })
@@ -134,9 +147,11 @@ export const TasteFinder: React.FC = () => {
       case TasteFinderStepsNames.Body:
         return <BodyPartial currentData={getCurrentData(['body'])} updateData={handleData} />
       case TasteFinderStepsNames.Brewing:
-        return <BrewingPartial currentData={getCurrentData(['brewing'])} updateData={handleData} />
+        return <BrewingPartial currentData={getCurrentData(['grindType'])} updateData={handleData} />
       case TasteFinderStepsNames.Adventurous:
         return <AdventurousPartial currentData={getCurrentData(['adventurous'])} updateData={handleData} />
+      case TasteFinderStepsNames.Processing:
+        return <ProcessingPartial currentData={tasteFinderState} updateData={handleData} />
       case TasteFinderStepsNames.Welcome:
       default:
         return <WelcomePartial next={() => navigateTo(1)} />
@@ -157,13 +172,20 @@ export const TasteFinder: React.FC = () => {
   }, [searchParams])
 
   const handleData = (data: TasteFinderField) => {
-    setTasteFinderFieldsData((prev) => [...prev.filter((p) => p.name !== data.name), data])
+    // updates the state
+    setTasteFinderState((prev) => [...prev.filter((p) => p.name !== data.name), data])
+    // stores in localstorage
+    setTasteFinderLocalStorage(JSON.stringify([...tasteFinderState.filter((p) => p.name !== data.name), data]))
+    // redirect when complete
+    if (data.name === 'shopifyProductIds' && data.value && data.value.length > 0) {
+      navigate(`/featured/${data.value[0]}`, { replace: true })
+    }
   }
 
   const getCurrentData = (currentDataItems: string[]): TasteFinderField[] => {
     const res: TasteFinderField[] = []
     currentDataItems.forEach((currentDataItem) => {
-      const searchRes = tasteFinderFieldsData.find((item) => item.name === currentDataItem)
+      const searchRes = tasteFinderState.find((item) => item.name === currentDataItem)
       if (searchRes) res.push(searchRes)
     })
     return res
@@ -207,7 +229,7 @@ export const TasteFinder: React.FC = () => {
         return field === undefined || field.value === undefined
       }
       case TasteFinderStepsNames.Brewing: {
-        const field = getCurrentData(['brewing'])[0]
+        const field = getCurrentData(['grindType'])[0]
         return field === undefined || field.value === undefined
       }
       case TasteFinderStepsNames.Adventurous: {
@@ -223,14 +245,16 @@ export const TasteFinder: React.FC = () => {
     <Layout navigationTheme={NavigationTheme.Home}>
       <main className="flex flex-col" style={{ minHeight: 'calc(100vh - 66px)' }}>
         {actualStep !== undefined && renderStep(actualStep)}
-        {actualStep !== undefined && actualStep !== TasteFinderStepsNames.Welcome && (
-          <StickyBottomNavigation
-            percentage={getPercentage(actualStep)}
-            isNextDisabled={isNextDisabledInStep(actualStep)}
-            prevClicked={() => handlePrevClicked(actualStep)}
-            nextClicked={() => handleNextClicked(actualStep)}
-          />
-        )}
+        {actualStep !== undefined &&
+          actualStep !== TasteFinderStepsNames.Welcome &&
+          actualStep !== TasteFinderStepsNames.Processing && (
+            <StickyBottomNavigation
+              percentage={getPercentage(actualStep)}
+              isNextDisabled={isNextDisabledInStep(actualStep)}
+              prevClicked={() => handlePrevClicked(actualStep)}
+              nextClicked={() => handleNextClicked(actualStep)}
+            />
+          )}
       </main>
     </Layout>
   )

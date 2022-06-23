@@ -34,7 +34,7 @@ ___
   <li><a href="#scripts">Scripts</a></li>  
   <li><a href="#create-react-app">Create React App</a></li>  
   <li><a href="#structure-overview">Structure Overview</a></li>  
-  <li><a href="#tailwind">Tailwind CSS & TailwindUI</a></li>  
+  <li><a href="#tailwind-css-and-tailwind-ui">Tailwind CSS & TailwindUI</a></li>  
   <li><a href="#storybook">Storybook</a></li>
   <li><a href="#i18n">i18n</a></li>  
   <li><a href="#commiting-code">Commiting code</a></li>  

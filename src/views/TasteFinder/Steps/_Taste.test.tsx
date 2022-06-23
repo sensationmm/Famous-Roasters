@@ -128,7 +128,7 @@ describe('Taste screen dynamic partial view', () => {
     const { container } = render(
       <I18nextProvider i18n={i18n}>
         <TasteScreen
-          screenKey="brewing"
+          screenKey="grindType"
           screenData={BrewingData}
           imageType={TasteScreenImageType.Icon}
           currentData={[]}

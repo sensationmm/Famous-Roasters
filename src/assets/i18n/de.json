@@ -115,7 +115,7 @@
       "title": "Was hat das mit Kaffee zu tun?",
       "trigger": "Was hat das mit Kaffee zu tun?"
     },
-    "brewing":{
+    "grindType":{
       "overline": "Erklärung",
       "text": "Da wir dir am Ende nicht nur neue, sondern auch möglichst passende Kaffeesorten vorschlagen möchten, müssen wir wissen, wie du deinen Kaffee am liebsten zubereitest.",
       "textBold": "Das heißt: wir empfehlen dir keinen Filterkaffee, wenn du einen Porta-Filter benutzt.",
@@ -642,9 +642,9 @@
             }
           },
           "scale": {
-            "light": "Leicht",
-            "medium": "Mittel",
-            "strong": "Hoch"
+            "1": "Leicht",
+            "2": "Mittel",
+            "3": "Hoch"
           }
         }
       },
@@ -771,7 +771,7 @@
           },
           "text": "Keine Termine und viel Zeit für eine gute Tasse Kaffee. Wie würdest du deinen Kaffee bestellen?"
         },
-        "brewing": {
+        "grindType": {
           "options": {
             "option1": {
               "text": "French Press"
@@ -793,6 +793,10 @@
             }
           },
           "text": "Jeder weiß: der Tag beginnt nach der ersten Tasse Kaffee. Auf welche Art brühst du deinen Kaffee?"
+        },
+        "processing": {
+          "loading1": "Kurze Kaffeepause.",
+          "loading2": "Wir stellen basierend auf deiner Auswahl dein Kaffeeprofil zusammen."
         },
         "sweetness": {
           "options": {

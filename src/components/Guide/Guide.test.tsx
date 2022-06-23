@@ -22,7 +22,7 @@ describe('ChocolateInfo component', () => {
   it('Renders correctly for text type', async () => {
     const { container } = render(
       <I18nextProvider i18n={i18n}>
-        <Guide screenKey="brewing" guideType={GuideType.Text} />
+        <Guide screenKey="grindType" guideType={GuideType.Text} />
       </I18nextProvider>,
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))

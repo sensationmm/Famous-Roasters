@@ -34,16 +34,16 @@ export const ProductTile: React.FC<ProductTileProps> = ({
   const imgSrc = featuredImage?.url ? featuredImage.url : images.nodes[0].url
   return (
     <div className={className ? 'flex p-6 ' + className : 'flex p-6'}>
-      <div className="flex justify-center items-center shrink-0 self-center relative w-32 h-32">
-        {showImage && (
+      {showImage && (
+        <div className="flex justify-center items-center shrink-0 self-center relative w-32 h-32">
           <>
             <img src={imgSrc} alt={title} className="w-32 max-h-32" />
             {decaf && decaf.value === 'true' && (
               <Tag type={TagType.Decaf} value="Decaf" small={true} className="absolute top-2 left-0" />
             )}
           </>
-        )}
-      </div>
+        </div>
+      )}
       <div className="flex flex-col justify-between p-2">
         <Typography as="div" type={TypographyType.Label} size={TypographySize.Base}>
           {title}
