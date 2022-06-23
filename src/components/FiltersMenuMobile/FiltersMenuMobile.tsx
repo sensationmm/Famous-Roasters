@@ -14,12 +14,22 @@ import {
   TypographyType,
 } from 'src/components'
 
+interface FilterSpacingEntry {
+  filterKey: string
+  filterValue: string
+}
+
 interface FiltersProps {
   onUpdateFilters: (f: FilterData[]) => void
   initialFilters: FilterData[]
+  hasSpacerAfterItem?: FilterSpacingEntry[]
 }
 
-export const FiltersMenuMobile: React.FC<FiltersProps> = ({ onUpdateFilters, initialFilters }: FiltersProps) => {
+export const FiltersMenuMobile: React.FC<FiltersProps> = ({
+  onUpdateFilters,
+  initialFilters,
+  hasSpacerAfterItem = undefined,
+}: FiltersProps) => {
   const [open, setOpen] = useState(false)
   const { t } = useTranslation()
 
@@ -65,6 +75,9 @@ export const FiltersMenuMobile: React.FC<FiltersProps> = ({ onUpdateFilters, ini
               show={filter.isOpen}
               back={() => closeFilter(filter.key)}
               update={(key: string, filterValuesSelected: string[]) => updateFilter(key, filterValuesSelected)}
+              hasSpacerAfterItem={hasSpacerAfterItem
+                ?.filter((spacingEntry) => spacingEntry.filterKey === filter.key)
+                .map((filteredSpacingEntry) => filteredSpacingEntry.filterValue)}
             />
           ))}
           <Transition.Child

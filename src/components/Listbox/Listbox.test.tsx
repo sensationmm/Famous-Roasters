@@ -162,4 +162,14 @@ describe('Listbox component', () => {
       fireEvent.click(option0)
     })
   })
+
+  it('Renders with spacing items correctly', async () => {
+    const { container } = render(
+      <I18nextProvider i18n={i18n}>
+        <Listbox items={items} translationPrefix="pages.catalogue.filters.sort" hasSpacerAfterItem={['option-2']} />
+      </I18nextProvider>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
 })
