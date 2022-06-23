@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/Famous-Roasters/frontend/compare/v1.3.2...v1.4.0) (2022-06-23)
+
+
+### Features
+
+* **taste finder:** hides footer on taste finder ([bbd337b](https://github.com/Famous-Roasters/frontend/commit/bbd337b08d47fe7f0650e24e7dd86a1cad826412))
+
 ## [1.3.2](https://github.com/Famous-Roasters/frontend/compare/v1.3.1...v1.3.2) (2022-06-23)
 
 
