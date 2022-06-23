@@ -107,9 +107,12 @@ export const Cart: React.FC = () => {
                       : 'flex w-full md:grid-flow-col-dense md:columns-2 pb-6 border-b border-coreUI-border'
                   }
                 >
-                  <div className="shrink-0">
-                    <Link to={`/product/${getSimplifiedProductId(productId)}`}>
-                      <img src={image?.url} alt={product.title} className="w-32" />
+                  <div className="flex justify-center items-center shrink-0 self-center relative w-32 h-32 mr-2">
+                    <Link
+                      to={`/product/${getSimplifiedProductId(productId)}`}
+                      className="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+                    >
+                      <img src={image?.url} alt={product.title} className="w-28 max-h-28" />
                     </Link>
                   </div>
                   <div className="flex flex-1 flex-col justify-between justify-items-start md:grid-flow-col-dense md:columns-3 md:flex-row md:items-center">
