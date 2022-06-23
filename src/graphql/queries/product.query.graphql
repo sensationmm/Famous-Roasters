@@ -3,6 +3,12 @@ query product($id: ID) {
         id
         title
         vendor
+        vendor_description: metafield(namespace: "my_fields", key: "vendor_description") {
+            value
+        }
+        vendor_image: metafield(namespace: "my_fields", key: "vendor_image") {
+            value
+        }
         priceRange {
             minVariantPrice {
                 amount

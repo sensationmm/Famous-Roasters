@@ -67,8 +67,9 @@ interface ProductCustom extends ProductType {
   acidity: ProductMetaInteger
   pricePerKg: ProductMeta
   decaf?: ProductMeta
-  whyThisCoffee?: ProductMeta
+  vendor_description?: ProductMeta
   variants: ProductVariantConnectionCustom
+  vendor_image?: ProductMeta
 }
 
 interface ProductQuery {
@@ -114,6 +115,8 @@ export const Product: React.FC = () => {
     variants,
     descriptionHtml,
     decaf,
+    vendor_description,
+    vendor_image,
   } = data?.product || {}
 
   useEffect(() => {
@@ -343,10 +346,23 @@ export const Product: React.FC = () => {
     </>
   )
 
+  const renderProductBlockContentMeetTheRoaster = () => {
+    return (
+      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-1">
+        <div className="order-1 xl:order-2 xl:max-w-screen-xl xl:mx-auto xl:px-24">
+          <img src={vendor_image?.value} alt={vendor} />
+        </div>
+        <div className="order-2 xl:order-1 xl:max-w-screen-xl xl:mx-auto">
+          <Typography as="p">{vendor_description?.value}</Typography>
+        </div>
+      </div>
+    )
+  }
+
   const renderProductCollapsableBlocks = () => {
-    // all blocks - disabled as no real content yet
+    // some blocks - disabled as no real content yet
     // const blocksData = [{ key: 'getToKnow' }, { key: 'meetTheRoaster' }, { key: 'learnToBrew' }, { key: 'findSimilar' }]
-    const blocksData = [{ key: 'getToKnow' }, { key: 'findSimilar' }]
+    const blocksData = [{ key: 'getToKnow' }, { key: 'meetTheRoaster' }, { key: 'findSimilar' }]
 
     const placeHolderText = (
       <>
@@ -369,6 +385,8 @@ export const Product: React.FC = () => {
       switch (key) {
         case 'getToKnow':
           return renderProductBlockContentGetToKnow()
+        case 'meetTheRoaster':
+          return vendor_description?.value && vendor_image?.value ? renderProductBlockContentMeetTheRoaster() : null
         case 'findSimilar':
           return aroma ? <FindSimilar aroma={aroma.value} productId={id} /> : null
         default:
