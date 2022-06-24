@@ -42,6 +42,8 @@ interface ProductCustom {
   decaf?: ProductMeta
   whyThisCoffee?: ProductMeta
   variants: ProductVariantConnectionCustom
+  vendor_description?: ProductMeta
+  vendor_image?: ProductMeta
 }
 
 export const ProductMockDataBase: ProductType = {
@@ -270,6 +272,12 @@ export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
   whyThisCoffee: {
     value:
       'Dein Kaffee ist süß, leicht und trägt einen subtilen Duft, ähnlich wie Blumen. Er bringt fruchtige Töne, helle Säure und einen mittleren bis schweren Körper zusammen',
+  },
+  vendor_description: {
+    value: 'the vendor description text',
+  },
+  vendor_image: {
+    value: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153',
   },
   variants: {
     ...ProductMockData.variants,
