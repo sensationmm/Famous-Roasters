@@ -20,9 +20,9 @@ ___
 
 <!-- Environments -->  
 ## Environments
-- [App - Production](https://venture-famous-roasters.de/)
-- [App - Staging](https://staging.venture-famous-roasters.de/)
-- [Storybook - Staging](https://storybook.staging.venture-famous-roasters.de/)
+- [App - Production](https://60beans.io/)
+- [App - Staging](https://staging.60beans.io/)
+- [Storybook - Staging](https://storybook.staging.60beans.io/)
 
 ___
 
@@ -221,9 +221,9 @@ This setup includes [semantic-release](https://github.com/semantic-release/seman
 <!-- Deployment -->  
 ### Deployment
 Deployment to staging is configured automatically for the `main` branch. For details, check the [GitHub Actions](#github-actions) section above.
-The deployed app (production) can be found [here](https://venture-famous-roasters.de/).
-The deployed app (staging) can be found [here](https://staging.venture-famous-roasters.de/).
-The deployed storybook (staging) can be found [here](https://storybook.staging.venture-famous-roasters.de/).
+The deployed app (production) can be found [here](https://60beans.io/).
+The deployed app (staging) can be found [here](https://staging.60beans.io/).
+The deployed storybook (staging) can be found [here](https://storybook.staging.60beans.io/).
 
 <!-- Questions? -->  
 ### Questions?
