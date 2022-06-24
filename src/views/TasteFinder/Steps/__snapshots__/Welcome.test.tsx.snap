@@ -3,25 +3,26 @@
 exports[`Welcome step partial view Renders correctly 1`] = `
 <div>
   <div
-    class="block min-h-screen md:grid md:grid-cols-3 md:grid-rows-1"
+    class="flex flex-col md:grid md:grid-cols-3 md:grid-rows-1"
+    style="height: calc(100vh - 66px);"
   >
     <div
-      class="flex items-center justify-center py-24 mt-6 relative md:justify-start md:order-2 md:py-8 md:mt-0"
+      class="flex items-center justify-center py-24 mt-4 relative md:justify-start md:order-2 md:py-8 md:mt-0"
     >
       <img
         alt="Tastefinder"
-        class="absolute top-16 md:top-auto md:-ml-16"
+        class="absolute top-16 max-h-64 md:top-auto md:max-h-96 md:-left-16 xl:max-h-96 xl:-left-32"
         src="welcome.webp"
       />
     </div>
     <div
-      class="flex col-span-2 items-center justify-center pt-12 pb-72 bg-brand-black text-white md:order-1 md:py-8"
+      class="grid items-center justify-center pt-10 pb-44 bg-brand-black text-white md:order-1 md:py-8 md:grid-cols-10 md:col-span-2 xl:grid-cols-5"
     >
       <div
-        class="flex flex-col items-center md:order-1"
+        class="flex flex-col col-items-center md:col-start-2 md:col-end-7 md:order-1 xl:col-start-2 xl:col-end-4"
       >
         <h1
-          class="flex w-80 mt-24 font-syne md:mt-0 text-3xl leading-10 font-semibold tracking-tight"
+          class="flex w-80 mt-32 font-syne md:mt-0 text-3xl leading-10 font-semibold tracking-tight"
         >
           Finde jetzt deinen Specialty Coffee mit dem Tastefinder.
         </h1>
@@ -48,7 +49,7 @@ exports[`Welcome step partial view Renders correctly 1`] = `
           </p>
         </div>
         <div
-          class="flex w-80 mt-8"
+          class="flex w-80 mt-8 xl:mt-24"
         >
           <button
             class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"

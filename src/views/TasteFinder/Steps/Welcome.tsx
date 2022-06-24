@@ -16,17 +16,21 @@ export const Welcome: React.FC<WelcomeProps> = ({ next }: WelcomeProps) => {
   }
 
   return (
-    <div className="block min-h-screen md:grid md:grid-cols-3 md:grid-rows-1">
-      <div className="flex items-center justify-center py-24 mt-6 relative md:justify-start md:order-2 md:py-8 md:mt-0">
-        <img src={welcome} alt={t('pages.tasteFinder.title')} className="absolute top-16 md:top-auto md:-ml-16" />
+    <div className="flex flex-col md:grid md:grid-cols-3 md:grid-rows-1" style={{ height: 'calc(100vh - 66px)' }}>
+      <div className="flex items-center justify-center py-24 mt-4 relative md:justify-start md:order-2 md:py-8 md:mt-0">
+        <img
+          src={welcome}
+          alt={t('pages.tasteFinder.title')}
+          className="absolute top-16 max-h-64 md:top-auto md:max-h-96 md:-left-16 xl:max-h-96 xl:-left-32"
+        />
       </div>
-      <div className="flex col-span-2 items-center justify-center pt-12 pb-72 bg-brand-black text-white md:order-1 md:py-8">
-        <div className="flex flex-col items-center md:order-1">
+      <div className="grid items-center justify-center pt-10 pb-44 bg-brand-black text-white md:order-1 md:py-8 md:grid-cols-10 md:col-span-2 xl:grid-cols-5">
+        <div className="flex flex-col col-items-center md:col-start-2 md:col-end-7 md:order-1 xl:col-start-2 xl:col-end-4">
           <Typography
             as="h1"
             type={TypographyType.Heading}
             size={TypographySize.Base}
-            className="flex w-80 mt-24 font-syne md:mt-0"
+            className="flex w-80 mt-32 font-syne md:mt-0"
           >
             {t('pages.tasteFinder.steps.welcome.title')}
           </Typography>
@@ -34,7 +38,7 @@ export const Welcome: React.FC<WelcomeProps> = ({ next }: WelcomeProps) => {
             <ArrowNarrowRightIcon className="w-12 h-6 mr-4" aria-hidden="true" />
             <Typography as="p">{t('pages.tasteFinder.steps.welcome.text')}</Typography>
           </div>
-          <div className="flex w-80 mt-8">
+          <div className="flex w-80 mt-8 xl:mt-24">
             <Button
               type="button"
               emphasis={ButtonEmphasis.Primary}
