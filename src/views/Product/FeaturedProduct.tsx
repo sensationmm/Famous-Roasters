@@ -212,15 +212,23 @@ export const FeaturedProduct: React.FC = () => {
         >
           {t('pages.featuredProduct.recommendation.title')}
         </Typography>
-        <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
-          <Link to={`/product/${id}`} className="flex aspect-1 justify-center items-center">
-            <img src={images.nodes[0].url} alt={title} className="w-full w-3/4 h-fit shrink-0 grow-0" />
+        <div className="grid gap-4 grid-cols-1 md:grid-cols-2 mt-8">
+          <Link to={`/product/${id}`} className="flex justify-center items-start">
+            <div className="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-full w-3/4 h-fit shrink-0 grow-0">
+              <img src={images.nodes[0].url} alt={title} className="w-full w-3/4 h-fit shrink-0 grow-0" />
+            </div>
           </Link>
           <div>
             {data?.product && (
               <div>
                 <Link to={`/product/${id}`} className="flex flex-col w-fit">
-                  <ProductTile productNode={data?.product} showImage={false} showFrom={true} className="p-0" />
+                  <ProductTile
+                    productNode={data?.product}
+                    featured={true}
+                    showImage={false}
+                    showFrom={true}
+                    className="p-0"
+                  />
                   <div>
                     <Tag type={TagType.TasteFinder} value="98% Übereinstimmung" />
                   </div>

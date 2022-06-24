@@ -65,4 +65,22 @@ describe('Product Tile component', () => {
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
     expect(container).toMatchSnapshot()
   })
+
+  it('Renders featured correctly', async () => {
+    const { container } = render(
+      <I18nextProvider i18n={i18n}>
+        <ProductTile
+          productNode={{
+            ...ProductMockData,
+            pricePerKg: { value: '10.0' },
+            coffee_type: { value: 'Filter' },
+            origin: { value: 'CO,BR' },
+          }}
+          featured={true}
+        />
+      </I18nextProvider>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
 })
