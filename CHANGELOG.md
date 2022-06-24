@@ -1,3 +1,11 @@
+# [1.6.0](https://github.com/Famous-Roasters/frontend/compare/v1.5.0...v1.6.0) (2022-06-24)
+
+
+### Features
+
+* **pdp:** adds roaster story ([63047cc](https://github.com/Famous-Roasters/frontend/commit/63047cc995d74168c121b8050a8645e0b0cab8d7))
+* **pdp:** adds roaster story - failing tests ([70e191a](https://github.com/Famous-Roasters/frontend/commit/70e191a2e7ccae29df44c253472a2f17501942a1))
+
 # [1.5.0](https://github.com/Famous-Roasters/frontend/compare/v1.4.1...v1.5.0) (2022-06-23)
 
 
