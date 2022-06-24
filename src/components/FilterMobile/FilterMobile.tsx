@@ -19,9 +19,16 @@ interface FilterMobileProps {
   show: boolean
   back: (key: string) => void
   update: (key: string, filterValuesSelected: string[]) => void
+  hasSpacerAfterItem?: string[]
 }
 
-export const FilterMobile: React.FC<FilterMobileProps> = ({ filter, show, back, update }: FilterMobileProps) => {
+export const FilterMobile: React.FC<FilterMobileProps> = ({
+  filter,
+  show,
+  back,
+  update,
+  hasSpacerAfterItem = undefined,
+}: FilterMobileProps) => {
   const { t } = useTranslation()
 
   const [activeItems, setActiveItems] = useState<string[]>([])
@@ -119,24 +126,28 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({ filter, show, back, 
             <div className="border-t border-coreUI-text-tertiary overflow-auto grow">
               {filter?.filterType === 'enum' && filter?.filterValues ? (
                 filter?.filterValues.map((filterValue: string, idx) => (
-                  <div
-                    key={`filter-${filter.key}-${idx}`}
-                    className="flex justify-between px-5 py-5 border-b border-coreUI-text-tertiary cursor-pointer"
-                    data-testid={`button-filter-mobile-${filter.key}-option-${idx}`}
-                    onClick={() => toggleSelected(filterValue)}
-                  >
-                    {isSelected(filterValue) ? (
-                      <span className="inline-flex items-center">
-                        <CheckIcon className="w-5 h-5 mr-2 text-brand-green-club" aria-hidden="true" />
-                        {renderFilterValue(filterValue, false)}
-                      </span>
-                    ) : (
-                      renderFilterValue(filterValue, true)
+                  <div key={`filter-${filter.key}-${idx}`}>
+                    <div
+                      className="flex justify-between px-5 py-5 border-b border-coreUI-text-tertiary cursor-pointer"
+                      data-testid={`button-filter-mobile-${filter.key}-option-${idx}`}
+                      onClick={() => toggleSelected(filterValue)}
+                    >
+                      {isSelected(filterValue) ? (
+                        <span className="inline-flex items-center">
+                          <CheckIcon className="w-5 h-5 mr-2 text-brand-green-club" aria-hidden="true" />
+                          {renderFilterValue(filterValue, false)}
+                        </span>
+                      ) : (
+                        renderFilterValue(filterValue, true)
+                      )}
+                    </div>
+                    {hasSpacerAfterItem && hasSpacerAfterItem.indexOf(filterValue) !== -1 && (
+                      <div className="flex justify-between px-5 py-5 border-b border-coreUI-text-tertiary">--</div>
                     )}
                   </div>
                 ))
               ) : (
-                <span>Content for the filter key {filter?.key}</span>
+                <span>dev - content for the filter key {filter?.key}</span>
               )}
             </div>
             <div className="inset-x-0 mx-5 py-6">

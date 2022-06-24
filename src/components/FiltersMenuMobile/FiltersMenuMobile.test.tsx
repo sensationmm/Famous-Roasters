@@ -138,4 +138,24 @@ describe('Filters Menu Mobile component', () => {
     expect(buttonRemove).toBeInTheDocument()
     fireEvent.click(buttonRemove)
   })
+
+  it('Renders with spacing items correctly', async () => {
+    const { container } = render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
+        mocks={[...CatalogueMocks, FilterAttributesMock]}
+        addTypename={false}
+      >
+        <I18nextProvider i18n={i18n}>
+          <FiltersMenuMobile
+            initialFilters={initialFilters}
+            onUpdateFilters={() => alert('update!')}
+            hasSpacerAfterItem={[{ filterKey: 'beanType', filterValue: 'Arabica' }]}
+          />
+        </I18nextProvider>
+      </MockedProvider>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
 })

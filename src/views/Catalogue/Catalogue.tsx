@@ -325,7 +325,7 @@ export const Catalogue: React.FC = () => {
     onUpdateFiltersDesktop(items, key)
   }
 
-  const renderListboxFilter = (key: string, hasTranslatedValues: boolean) => (
+  const renderListboxFilter = (key: string, hasTranslatedValues: boolean, hasSpacerAfterItem?: string[]) => (
     <Listbox
       items={filters.filter((filter) => filter.key === key)[0].filterValues?.map((x) => ({ name: x })) || []}
       hasTranslatedValues={hasTranslatedValues}
@@ -336,6 +336,7 @@ export const Catalogue: React.FC = () => {
       resetOnNoneClick={key === 'coffeeType'}
       onChange={(v) => onUpdateFiltersDesktop(v, key)}
       big={key === 'coffeeType'}
+      hasSpacerAfterItem={hasSpacerAfterItem}
     />
   )
 
@@ -377,7 +378,7 @@ export const Catalogue: React.FC = () => {
         <div className="mt-4">{renderListboxFilter('coffeeType', false)}</div>
         <div className="my-4 md:w-1/4">{renderCheckboxFilter('decaf')}</div>
         <div className="hidden md:flex gap-x-4">
-          <div className="md:w-1/4">{renderListboxFilter('beanType', false)}</div>
+          <div className="md:w-1/4">{renderListboxFilter('beanType', false, ['Arabica, Robusta'])}</div>
           <div className="md:w-1/4">{renderListboxFilter('vendor', false)}</div>
           <div className="md:w-1/4">{renderListboxFilter('origin', true)}</div>
           <div className="md:w-1/4">{renderListboxFilter('packageSize', false)}</div>
@@ -398,6 +399,7 @@ export const Catalogue: React.FC = () => {
               <FiltersMenuMobile
                 initialFilters={filters.filter((f) => f.key !== 'coffeeType' && f.key !== 'decaf')}
                 onUpdateFilters={(f: FilterData[]) => onUpdateFiltersMobile(f)}
+                hasSpacerAfterItem={[{ filterKey: 'beanType', filterValue: 'Arabica, Robusta' }]}
               />
             )}
           </div>

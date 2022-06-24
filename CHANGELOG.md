@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/Famous-Roasters/frontend/compare/v1.4.1...v1.5.0) (2022-06-23)
+
+
+### Features
+
+* **filters:** adds spacing items ([#81](https://github.com/Famous-Roasters/frontend/issues/81)) ([b4965e2](https://github.com/Famous-Roasters/frontend/commit/b4965e2a36c9860481bd33b1993e711222af5623))
+
 # [1.4.0](https://github.com/Famous-Roasters/frontend/compare/v1.3.2...v1.4.0) (2022-06-23)
 
 

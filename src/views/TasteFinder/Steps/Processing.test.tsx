@@ -13,8 +13,9 @@ import { i18n } from 'src/config'
 import { Processing } from '.'
 
 global.alert = jest.fn()
+jest.mock('lottie-react')
 
-describe('Sweetness partial view', () => {
+describe('Processing partial view', () => {
   it('Renders correctly for expresso', async () => {
     const { container } = render(
       <MockedProvider

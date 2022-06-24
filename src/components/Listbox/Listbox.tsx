@@ -20,6 +20,7 @@ interface ListboxProps {
   addOn?: React.ReactNode
   resetOnNoneClick?: boolean
   big?: boolean
+  hasSpacerAfterItem?: string[]
 }
 
 export const Listbox: React.FC<ListboxProps> = ({
@@ -34,6 +35,7 @@ export const Listbox: React.FC<ListboxProps> = ({
   addOn = undefined,
   resetOnNoneClick = false,
   big = false,
+  hasSpacerAfterItem = undefined,
   ...props
 }: ListboxProps) => {
   const noneItem: ListBoxItem = { name: 'none' }
@@ -159,35 +161,39 @@ export const Listbox: React.FC<ListboxProps> = ({
             >
               <HUIListbox.Options className="absolute z-10 w-full mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 border border-coreUI-background-images focus:outline-none">
                 {options.map((option, idx) => (
-                  <HUIListbox.Option
-                    key={idx}
-                    data-testid={`option-${idx}`}
-                    className={({ active }) =>
-                      `cursor-pointer select-none relative py-2 pl-8 pr-4 ${
-                        active ? 'bg-brand-grey-whisper' : 'bg-transparent'
-                      }`
-                    }
-                    value={option}
-                  >
-                    {({ selected }) => (
-                      <>
-                        <span
-                          className={`block truncate ${
-                            selected || activeItems?.find((activeItem) => activeItem.name === option.name)
-                              ? 'font-semibold'
-                              : 'font-normal'
-                          }`}
-                        >
-                          {renderOptionText(option)}
-                        </span>
-                        {selected || activeItems?.find((activeItem) => activeItem.name === option.name) ? (
-                          <span className="absolute inset-y-0 left-0 flex items-center pl-1.5">
-                            <CheckIcon className="w-5 h-5 text-brand-green-club" aria-hidden="true" />
+                  <div key={idx}>
+                    <HUIListbox.Option
+                      data-testid={`option-${idx}`}
+                      className={({ active }) =>
+                        `cursor-pointer select-none relative py-2 pl-8 pr-4 ${
+                          active ? 'bg-brand-grey-whisper' : 'bg-transparent'
+                        }`
+                      }
+                      value={option}
+                    >
+                      {({ selected }) => (
+                        <>
+                          <span
+                            className={`block truncate ${
+                              selected || activeItems?.find((activeItem) => activeItem.name === option.name)
+                                ? 'font-semibold'
+                                : 'font-normal'
+                            }`}
+                          >
+                            {renderOptionText(option)}
                           </span>
-                        ) : null}
-                      </>
+                          {selected || activeItems?.find((activeItem) => activeItem.name === option.name) ? (
+                            <span className="absolute inset-y-0 left-0 flex items-center pl-1.5">
+                              <CheckIcon className="w-5 h-5 text-brand-green-club" aria-hidden="true" />
+                            </span>
+                          ) : null}
+                        </>
+                      )}
+                    </HUIListbox.Option>
+                    {hasSpacerAfterItem && hasSpacerAfterItem.indexOf(option.name) !== -1 && (
+                      <li className="select-none relative py-2 pl-8 pr-4 bg-transparent">--</li>
                     )}
-                  </HUIListbox.Option>
+                  </div>
                 ))}
               </HUIListbox.Options>
             </Transition>
