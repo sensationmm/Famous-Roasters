@@ -32,6 +32,8 @@ export const ProductTile: React.FC<ProductTileProps> = ({
 }: ProductTileProps) => {
   const { title, vendor, featuredImage, images, priceRange, pricePerKg, coffee_type, origin, decaf } = productNode
   const { t } = useTranslation()
+  const textLineClassNames = featured ? 'mt-1 text-coreUI-text-secondary' : 'text-coreUI-text-secondary'
+
   if (showImage && !featuredImage && (!images || !images.nodes[0])) return null
   const imgSrc = featuredImage?.url ? featuredImage.url : images.nodes[0].url
   return (
@@ -56,12 +58,7 @@ export const ProductTile: React.FC<ProductTileProps> = ({
             {title}
           </Typography>
         )}
-        <Typography
-          as="div"
-          type={TypographyType.Paragraph}
-          size={TypographySize.Base}
-          className={featured ? 'mt-1 text-coreUI-text-secondary' : 'text-coreUI-text-secondary'}
-        >
+        <Typography as="div" type={TypographyType.Paragraph} size={TypographySize.Base} className={textLineClassNames}>
           {vendor}
         </Typography>
         {origin && (
@@ -69,7 +66,7 @@ export const ProductTile: React.FC<ProductTileProps> = ({
             as="div"
             type={TypographyType.Paragraph}
             size={TypographySize.Base}
-            className={featured ? 'mt-1 text-coreUI-text-secondary' : 'text-coreUI-text-secondary'}
+            className={textLineClassNames}
           >
             {origin.value
               .replace(', ', ',')
@@ -86,7 +83,7 @@ export const ProductTile: React.FC<ProductTileProps> = ({
             as="div"
             type={TypographyType.Paragraph}
             size={TypographySize.Base}
-            className={featured ? 'mt-1 text-coreUI-text-secondary' : 'text-coreUI-text-secondary'}
+            className={textLineClassNames}
           >
             {coffee_type.value}
           </Typography>
