@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/Famous-Roasters/frontend/compare/v1.7.0...v1.8.0) (2022-06-24)
+
+
+### Features
+
+* **taste finder:** welcome page adjustments ([#84](https://github.com/Famous-Roasters/frontend/issues/84)) ([c2b742a](https://github.com/Famous-Roasters/frontend/commit/c2b742a5c31fdd3934a926b7923420a4ddd1f401))
+
 # [1.7.0](https://github.com/Famous-Roasters/frontend/compare/v1.6.0...v1.7.0) (2022-06-24)
 
 
