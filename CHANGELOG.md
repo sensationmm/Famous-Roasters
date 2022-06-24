@@ -1,3 +1,12 @@
+# [1.7.0](https://github.com/Famous-Roasters/frontend/compare/v1.6.0...v1.7.0) (2022-06-24)
+
+
+### Features
+
+* **taste finder results:** adjust tag ([9ca0c07](https://github.com/Famous-Roasters/frontend/commit/9ca0c0711afefc4759638f89e6b18179936529f3))
+* **taste finder results:** code quality ([14dc965](https://github.com/Famous-Roasters/frontend/commit/14dc9650b5694c2c588a4fe738de5017f5785ca8))
+* **taste finder results:** visual improvements ([e9001d8](https://github.com/Famous-Roasters/frontend/commit/e9001d806a1814f00f9e9cc3b9a8d9199f25e6e8))
+
 # [1.6.0](https://github.com/Famous-Roasters/frontend/compare/v1.5.0...v1.6.0) (2022-06-24)
 
 
