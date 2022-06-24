@@ -540,7 +540,9 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 >
                   Filter
                 </div>
-                <div>
+                <div
+                  class="flex items-baseline"
+                >
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
@@ -609,7 +611,9 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 >
                   Filter
                 </div>
-                <div>
+                <div
+                  class="flex items-baseline"
+                >
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
@@ -678,7 +682,9 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 >
                   Filter
                 </div>
-                <div>
+                <div
+                  class="flex items-baseline"
+                >
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
@@ -747,7 +753,9 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 >
                   Filter
                 </div>
-                <div>
+                <div
+                  class="flex items-baseline"
+                >
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
@@ -816,7 +824,9 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 >
                   Filter
                 </div>
-                <div>
+                <div
+                  class="flex items-baseline"
+                >
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
@@ -885,7 +895,9 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 >
                   Filter
                 </div>
-                <div>
+                <div
+                  class="flex items-baseline"
+                >
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
@@ -954,7 +966,9 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 >
                   Filter
                 </div>
-                <div>
+                <div
+                  class="flex items-baseline"
+                >
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
@@ -1023,7 +1037,9 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 >
                   Filter
                 </div>
-                <div>
+                <div
+                  class="flex items-baseline"
+                >
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
@@ -1092,7 +1108,9 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 >
                   Filter
                 </div>
-                <div>
+                <div
+                  class="flex items-baseline"
+                >
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
@@ -1161,7 +1179,9 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 >
                   Filter
                 </div>
-                <div>
+                <div
+                  class="flex items-baseline"
+                >
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
@@ -1230,7 +1250,9 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 >
                   Filter
                 </div>
-                <div>
+                <div
+                  class="flex items-baseline"
+                >
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
@@ -1299,7 +1321,9 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 >
                   Filter
                 </div>
-                <div>
+                <div
+                  class="flex items-baseline"
+                >
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
@@ -2043,7 +2067,9 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 >
                   Filter
                 </div>
-                <div>
+                <div
+                  class="flex items-baseline"
+                >
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
@@ -2112,7 +2138,9 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 >
                   Filter
                 </div>
-                <div>
+                <div
+                  class="flex items-baseline"
+                >
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
@@ -2181,7 +2209,9 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 >
                   Filter
                 </div>
-                <div>
+                <div
+                  class="flex items-baseline"
+                >
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
@@ -2250,7 +2280,9 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 >
                   Filter
                 </div>
-                <div>
+                <div
+                  class="flex items-baseline"
+                >
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
@@ -2319,7 +2351,9 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 >
                   Filter
                 </div>
-                <div>
+                <div
+                  class="flex items-baseline"
+                >
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
@@ -2388,7 +2422,9 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 >
                   Filter
                 </div>
-                <div>
+                <div
+                  class="flex items-baseline"
+                >
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
@@ -2457,7 +2493,9 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 >
                   Filter
                 </div>
-                <div>
+                <div
+                  class="flex items-baseline"
+                >
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
@@ -2526,7 +2564,9 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 >
                   Filter
                 </div>
-                <div>
+                <div
+                  class="flex items-baseline"
+                >
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
@@ -2595,7 +2635,9 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 >
                   Filter
                 </div>
-                <div>
+                <div
+                  class="flex items-baseline"
+                >
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
@@ -2664,7 +2706,9 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 >
                   Filter
                 </div>
-                <div>
+                <div
+                  class="flex items-baseline"
+                >
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
@@ -2733,7 +2777,9 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 >
                   Filter
                 </div>
-                <div>
+                <div
+                  class="flex items-baseline"
+                >
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >
@@ -2802,7 +2848,9 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 >
                   Filter
                 </div>
-                <div>
+                <div
+                  class="flex items-baseline"
+                >
                   <span
                     class="mr-1 text-base leading-6 font-semibold"
                   >

@@ -20,16 +20,20 @@ interface ProductTileProps extends React.HTMLAttributes<HTMLElement> {
   productNode: ProductCustom
   showImage?: boolean
   showFrom?: boolean
+  featured?: boolean
 }
 
 export const ProductTile: React.FC<ProductTileProps> = ({
   productNode,
   showImage = true,
   showFrom = false,
+  featured = false,
   className,
 }: ProductTileProps) => {
   const { title, vendor, featuredImage, images, priceRange, pricePerKg, coffee_type, origin, decaf } = productNode
   const { t } = useTranslation()
+  const textLineClassNames = featured ? 'mt-1 text-coreUI-text-secondary' : 'text-coreUI-text-secondary'
+
   if (showImage && !featuredImage && (!images || !images.nodes[0])) return null
   const imgSrc = featuredImage?.url ? featuredImage.url : images.nodes[0].url
   return (
@@ -45,15 +49,16 @@ export const ProductTile: React.FC<ProductTileProps> = ({
         </div>
       )}
       <div className="flex flex-col justify-between p-2">
-        <Typography as="div" type={TypographyType.Label} size={TypographySize.Base}>
-          {title}
-        </Typography>
-        <Typography
-          as="div"
-          type={TypographyType.Paragraph}
-          size={TypographySize.Base}
-          className="text-coreUI-text-secondary"
-        >
+        {featured ? (
+          <Typography as="div" type={TypographyType.Heading} size={TypographySize.Tiny}>
+            {title}
+          </Typography>
+        ) : (
+          <Typography as="div" type={TypographyType.Label} size={TypographySize.Base}>
+            {title}
+          </Typography>
+        )}
+        <Typography as="div" type={TypographyType.Paragraph} size={TypographySize.Base} className={textLineClassNames}>
           {vendor}
         </Typography>
         {origin && (
@@ -61,7 +66,7 @@ export const ProductTile: React.FC<ProductTileProps> = ({
             as="div"
             type={TypographyType.Paragraph}
             size={TypographySize.Base}
-            className="text-coreUI-text-secondary"
+            className={textLineClassNames}
           >
             {origin.value
               .replace(', ', ',')
@@ -78,16 +83,23 @@ export const ProductTile: React.FC<ProductTileProps> = ({
             as="div"
             type={TypographyType.Paragraph}
             size={TypographySize.Base}
-            className="text-coreUI-text-secondary"
+            className={textLineClassNames}
           >
             {coffee_type.value}
           </Typography>
         )}
-        <div>
-          <Typography type={TypographyType.Label} size={TypographySize.Base} className="mr-1">
-            {showFrom && t('pages.catalogue.tile.from') + ' '}
-            {formatPrice(priceRange.minVariantPrice.amount, priceRange.minVariantPrice.currencyCode)}
-          </Typography>
+        <div className="flex items-baseline">
+          {featured ? (
+            <Typography as="div" type={TypographyType.Label} size={TypographySize.Large} className="mr-1 mt-1">
+              {showFrom && t('pages.catalogue.tile.from') + ' '}
+              {formatPrice(priceRange.minVariantPrice.amount, priceRange.minVariantPrice.currencyCode)}
+            </Typography>
+          ) : (
+            <Typography type={TypographyType.Label} size={TypographySize.Base} className="mr-1">
+              {showFrom && t('pages.catalogue.tile.from') + ' '}
+              {formatPrice(priceRange.minVariantPrice.amount, priceRange.minVariantPrice.currencyCode)}
+            </Typography>
+          )}
           {pricePerKg && (
             <Typography
               type={TypographyType.Paragraph}

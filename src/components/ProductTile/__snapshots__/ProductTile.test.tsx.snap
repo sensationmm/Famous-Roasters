@@ -36,7 +36,9 @@ exports[`Product Tile component Renders as expected for missing attributes 1`] =
       >
         Kolumbien
       </div>
-      <div>
+      <div
+        class="flex items-baseline"
+      >
         <span
           class="mr-1 text-base leading-6 font-semibold"
         >
@@ -99,12 +101,77 @@ exports[`Product Tile component Renders correctly 1`] = `
       >
         Filter
       </div>
-      <div>
+      <div
+        class="flex items-baseline"
+      >
         <span
           class="mr-1 text-base leading-6 font-semibold"
         >
           19,99 €
         </span>
+        <span
+          class="text-coreUI-text-secondary text-xs leading-4"
+        >
+          (
+          10,00 €
+          /kg)
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Product Tile component Renders featured correctly 1`] = `
+<div>
+  <div
+    class="flex p-6"
+  >
+    <div
+      class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+    >
+      <div
+        class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+      >
+        <img
+          alt="Espresso Raritäten Set"
+          class="w-28 max-h-28"
+          src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-col justify-between p-2"
+    >
+      <div
+        class="text-xl leading-7 font-semibold"
+      >
+        Espresso Raritäten Set
+      </div>
+      <div
+        class="mt-1 text-coreUI-text-secondary text-base leading-6"
+      >
+        60beans
+      </div>
+      <div
+        class="mt-1 text-coreUI-text-secondary text-base leading-6"
+      >
+        Kolumbien, 
+        Brasilien
+      </div>
+      <div
+        class="mt-1 text-coreUI-text-secondary text-base leading-6"
+      >
+        Filter
+      </div>
+      <div
+        class="flex items-baseline"
+      >
+        <div
+          class="mr-1 mt-1 text-lg leading-7 font-semibold"
+        >
+          19,99 €
+        </div>
         <span
           class="text-coreUI-text-secondary text-xs leading-4"
         >

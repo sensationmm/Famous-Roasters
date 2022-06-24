@@ -266,17 +266,21 @@ exports[`Featured product view Renders correctly for a successful call with arom
             Was wir dir empfehlen
           </h2>
           <div
-            class="grid gap-4 grid-cols-1 md:grid-cols-2"
+            class="grid gap-4 grid-cols-1 md:grid-cols-2 mt-8"
           >
             <a
-              class="flex aspect-1 justify-center items-center"
+              class="flex justify-center items-start"
               href="/product/7655228866776"
             >
-              <img
-                alt="Espresso Raritäten Set"
-                class="w-full w-3/4 h-fit shrink-0 grow-0"
-                src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
-              />
+              <div
+                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-full w-3/4 h-fit shrink-0 grow-0"
+              >
+                <img
+                  alt="Espresso Raritäten Set"
+                  class="w-full w-3/4 h-fit shrink-0 grow-0"
+                  src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+                />
+              </div>
             </a>
             <div>
               <div>
@@ -291,32 +295,34 @@ exports[`Featured product view Renders correctly for a successful call with arom
                       class="flex flex-col justify-between p-2"
                     >
                       <div
-                        class="text-base leading-6 font-semibold"
+                        class="text-xl leading-7 font-semibold"
                       >
                         Espresso Raritäten Set
                       </div>
                       <div
-                        class="text-coreUI-text-secondary text-base leading-6"
+                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
                       >
                         60beans
                       </div>
                       <div
-                        class="text-coreUI-text-secondary text-base leading-6"
+                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
                       >
                         Kolumbien
                       </div>
                       <div
-                        class="text-coreUI-text-secondary text-base leading-6"
+                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
                       >
                         Filter
                       </div>
-                      <div>
-                        <span
-                          class="mr-1 text-base leading-6 font-semibold"
+                      <div
+                        class="flex items-baseline"
+                      >
+                        <div
+                          class="mr-1 mt-1 text-lg leading-7 font-semibold"
                         >
                           ab 
                           19,99 €
-                        </span>
+                        </div>
                         <span
                           class="text-coreUI-text-secondary text-xs leading-4"
                         >
@@ -327,9 +333,11 @@ exports[`Featured product view Renders correctly for a successful call with arom
                       </div>
                     </div>
                   </div>
-                  <div>
+                  <div
+                    class="mt-4"
+                  >
                     <div
-                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue"
+                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
                     >
                       <span
                         class="text-xs leading-4"
@@ -824,17 +832,21 @@ exports[`Featured product view Renders correctly for a successful call with arom
             Was wir dir empfehlen
           </h2>
           <div
-            class="grid gap-4 grid-cols-1 md:grid-cols-2"
+            class="grid gap-4 grid-cols-1 md:grid-cols-2 mt-8"
           >
             <a
-              class="flex aspect-1 justify-center items-center"
+              class="flex justify-center items-start"
               href="/product/7655228866776"
             >
-              <img
-                alt="Espresso Raritäten Set"
-                class="w-full w-3/4 h-fit shrink-0 grow-0"
-                src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
-              />
+              <div
+                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-full w-3/4 h-fit shrink-0 grow-0"
+              >
+                <img
+                  alt="Espresso Raritäten Set"
+                  class="w-full w-3/4 h-fit shrink-0 grow-0"
+                  src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+                />
+              </div>
             </a>
             <div>
               <div>
@@ -849,32 +861,34 @@ exports[`Featured product view Renders correctly for a successful call with arom
                       class="flex flex-col justify-between p-2"
                     >
                       <div
-                        class="text-base leading-6 font-semibold"
+                        class="text-xl leading-7 font-semibold"
                       >
                         Espresso Raritäten Set
                       </div>
                       <div
-                        class="text-coreUI-text-secondary text-base leading-6"
+                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
                       >
                         60beans
                       </div>
                       <div
-                        class="text-coreUI-text-secondary text-base leading-6"
+                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
                       >
                         Kolumbien
                       </div>
                       <div
-                        class="text-coreUI-text-secondary text-base leading-6"
+                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
                       >
                         Filter
                       </div>
-                      <div>
-                        <span
-                          class="mr-1 text-base leading-6 font-semibold"
+                      <div
+                        class="flex items-baseline"
+                      >
+                        <div
+                          class="mr-1 mt-1 text-lg leading-7 font-semibold"
                         >
                           ab 
                           19,99 €
-                        </span>
+                        </div>
                         <span
                           class="text-coreUI-text-secondary text-xs leading-4"
                         >
@@ -885,9 +899,11 @@ exports[`Featured product view Renders correctly for a successful call with arom
                       </div>
                     </div>
                   </div>
-                  <div>
+                  <div
+                    class="mt-4"
+                  >
                     <div
-                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue"
+                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
                     >
                       <span
                         class="text-xs leading-4"
@@ -1382,17 +1398,21 @@ exports[`Featured product view Renders correctly for a successful call with arom
             Was wir dir empfehlen
           </h2>
           <div
-            class="grid gap-4 grid-cols-1 md:grid-cols-2"
+            class="grid gap-4 grid-cols-1 md:grid-cols-2 mt-8"
           >
             <a
-              class="flex aspect-1 justify-center items-center"
+              class="flex justify-center items-start"
               href="/product/7655228866776"
             >
-              <img
-                alt="Espresso Raritäten Set"
-                class="w-full w-3/4 h-fit shrink-0 grow-0"
-                src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
-              />
+              <div
+                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-full w-3/4 h-fit shrink-0 grow-0"
+              >
+                <img
+                  alt="Espresso Raritäten Set"
+                  class="w-full w-3/4 h-fit shrink-0 grow-0"
+                  src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+                />
+              </div>
             </a>
             <div>
               <div>
@@ -1407,32 +1427,34 @@ exports[`Featured product view Renders correctly for a successful call with arom
                       class="flex flex-col justify-between p-2"
                     >
                       <div
-                        class="text-base leading-6 font-semibold"
+                        class="text-xl leading-7 font-semibold"
                       >
                         Espresso Raritäten Set
                       </div>
                       <div
-                        class="text-coreUI-text-secondary text-base leading-6"
+                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
                       >
                         60beans
                       </div>
                       <div
-                        class="text-coreUI-text-secondary text-base leading-6"
+                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
                       >
                         Kolumbien
                       </div>
                       <div
-                        class="text-coreUI-text-secondary text-base leading-6"
+                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
                       >
                         Filter
                       </div>
-                      <div>
-                        <span
-                          class="mr-1 text-base leading-6 font-semibold"
+                      <div
+                        class="flex items-baseline"
+                      >
+                        <div
+                          class="mr-1 mt-1 text-lg leading-7 font-semibold"
                         >
                           ab 
                           19,99 €
-                        </span>
+                        </div>
                         <span
                           class="text-coreUI-text-secondary text-xs leading-4"
                         >
@@ -1443,9 +1465,11 @@ exports[`Featured product view Renders correctly for a successful call with arom
                       </div>
                     </div>
                   </div>
-                  <div>
+                  <div
+                    class="mt-4"
+                  >
                     <div
-                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue"
+                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
                     >
                       <span
                         class="text-xs leading-4"
@@ -1940,17 +1964,21 @@ exports[`Featured product view Renders correctly for a successful call with arom
             Was wir dir empfehlen
           </h2>
           <div
-            class="grid gap-4 grid-cols-1 md:grid-cols-2"
+            class="grid gap-4 grid-cols-1 md:grid-cols-2 mt-8"
           >
             <a
-              class="flex aspect-1 justify-center items-center"
+              class="flex justify-center items-start"
               href="/product/7655228866776"
             >
-              <img
-                alt="Espresso Raritäten Set"
-                class="w-full w-3/4 h-fit shrink-0 grow-0"
-                src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
-              />
+              <div
+                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-full w-3/4 h-fit shrink-0 grow-0"
+              >
+                <img
+                  alt="Espresso Raritäten Set"
+                  class="w-full w-3/4 h-fit shrink-0 grow-0"
+                  src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+                />
+              </div>
             </a>
             <div>
               <div>
@@ -1965,32 +1993,34 @@ exports[`Featured product view Renders correctly for a successful call with arom
                       class="flex flex-col justify-between p-2"
                     >
                       <div
-                        class="text-base leading-6 font-semibold"
+                        class="text-xl leading-7 font-semibold"
                       >
                         Espresso Raritäten Set
                       </div>
                       <div
-                        class="text-coreUI-text-secondary text-base leading-6"
+                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
                       >
                         60beans
                       </div>
                       <div
-                        class="text-coreUI-text-secondary text-base leading-6"
+                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
                       >
                         Kolumbien
                       </div>
                       <div
-                        class="text-coreUI-text-secondary text-base leading-6"
+                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
                       >
                         Filter
                       </div>
-                      <div>
-                        <span
-                          class="mr-1 text-base leading-6 font-semibold"
+                      <div
+                        class="flex items-baseline"
+                      >
+                        <div
+                          class="mr-1 mt-1 text-lg leading-7 font-semibold"
                         >
                           ab 
                           19,99 €
-                        </span>
+                        </div>
                         <span
                           class="text-coreUI-text-secondary text-xs leading-4"
                         >
@@ -2001,9 +2031,11 @@ exports[`Featured product view Renders correctly for a successful call with arom
                       </div>
                     </div>
                   </div>
-                  <div>
+                  <div
+                    class="mt-4"
+                  >
                     <div
-                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue"
+                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
                     >
                       <span
                         class="text-xs leading-4"
@@ -2498,17 +2530,21 @@ exports[`Featured product view Renders correctly for a successful call with arom
             Was wir dir empfehlen
           </h2>
           <div
-            class="grid gap-4 grid-cols-1 md:grid-cols-2"
+            class="grid gap-4 grid-cols-1 md:grid-cols-2 mt-8"
           >
             <a
-              class="flex aspect-1 justify-center items-center"
+              class="flex justify-center items-start"
               href="/product/7655228866776"
             >
-              <img
-                alt="Espresso Raritäten Set"
-                class="w-full w-3/4 h-fit shrink-0 grow-0"
-                src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
-              />
+              <div
+                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-full w-3/4 h-fit shrink-0 grow-0"
+              >
+                <img
+                  alt="Espresso Raritäten Set"
+                  class="w-full w-3/4 h-fit shrink-0 grow-0"
+                  src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+                />
+              </div>
             </a>
             <div>
               <div>
@@ -2523,32 +2559,34 @@ exports[`Featured product view Renders correctly for a successful call with arom
                       class="flex flex-col justify-between p-2"
                     >
                       <div
-                        class="text-base leading-6 font-semibold"
+                        class="text-xl leading-7 font-semibold"
                       >
                         Espresso Raritäten Set
                       </div>
                       <div
-                        class="text-coreUI-text-secondary text-base leading-6"
+                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
                       >
                         60beans
                       </div>
                       <div
-                        class="text-coreUI-text-secondary text-base leading-6"
+                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
                       >
                         Kolumbien
                       </div>
                       <div
-                        class="text-coreUI-text-secondary text-base leading-6"
+                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
                       >
                         Filter
                       </div>
-                      <div>
-                        <span
-                          class="mr-1 text-base leading-6 font-semibold"
+                      <div
+                        class="flex items-baseline"
+                      >
+                        <div
+                          class="mr-1 mt-1 text-lg leading-7 font-semibold"
                         >
                           ab 
                           19,99 €
-                        </span>
+                        </div>
                         <span
                           class="text-coreUI-text-secondary text-xs leading-4"
                         >
@@ -2559,9 +2597,11 @@ exports[`Featured product view Renders correctly for a successful call with arom
                       </div>
                     </div>
                   </div>
-                  <div>
+                  <div
+                    class="mt-4"
+                  >
                     <div
-                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue"
+                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
                     >
                       <span
                         class="text-xs leading-4"
@@ -2939,17 +2979,21 @@ exports[`Featured product view Renders correctly for a successful call without a
             Was wir dir empfehlen
           </h2>
           <div
-            class="grid gap-4 grid-cols-1 md:grid-cols-2"
+            class="grid gap-4 grid-cols-1 md:grid-cols-2 mt-8"
           >
             <a
-              class="flex aspect-1 justify-center items-center"
+              class="flex justify-center items-start"
               href="/product/7655228866776"
             >
-              <img
-                alt="Espresso Raritäten Set"
-                class="w-full w-3/4 h-fit shrink-0 grow-0"
-                src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
-              />
+              <div
+                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-full w-3/4 h-fit shrink-0 grow-0"
+              >
+                <img
+                  alt="Espresso Raritäten Set"
+                  class="w-full w-3/4 h-fit shrink-0 grow-0"
+                  src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+                />
+              </div>
             </a>
             <div>
               <div>
@@ -2964,32 +3008,34 @@ exports[`Featured product view Renders correctly for a successful call without a
                       class="flex flex-col justify-between p-2"
                     >
                       <div
-                        class="text-base leading-6 font-semibold"
+                        class="text-xl leading-7 font-semibold"
                       >
                         Espresso Raritäten Set
                       </div>
                       <div
-                        class="text-coreUI-text-secondary text-base leading-6"
+                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
                       >
                         60beans
                       </div>
                       <div
-                        class="text-coreUI-text-secondary text-base leading-6"
+                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
                       >
                         Kolumbien
                       </div>
                       <div
-                        class="text-coreUI-text-secondary text-base leading-6"
+                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
                       >
                         Filter
                       </div>
-                      <div>
-                        <span
-                          class="mr-1 text-base leading-6 font-semibold"
+                      <div
+                        class="flex items-baseline"
+                      >
+                        <div
+                          class="mr-1 mt-1 text-lg leading-7 font-semibold"
                         >
                           ab 
                           19,99 €
-                        </span>
+                        </div>
                         <span
                           class="text-coreUI-text-secondary text-xs leading-4"
                         >
@@ -3000,9 +3046,11 @@ exports[`Featured product view Renders correctly for a successful call without a
                       </div>
                     </div>
                   </div>
-                  <div>
+                  <div
+                    class="mt-4"
+                  >
                     <div
-                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue"
+                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
                     >
                       <span
                         class="text-xs leading-4"
