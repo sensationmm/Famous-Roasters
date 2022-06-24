@@ -48,6 +48,7 @@ module.exports = {
                 coldTurkey: '#C7B2B2',
                 yourPink: '#FFC5C5',
                 santasGray: '#9799A9',
+                jacksonsBlue: '#1E3A8A',
             }
         },
         fontFamily: {

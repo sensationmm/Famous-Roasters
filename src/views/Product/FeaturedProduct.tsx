@@ -229,7 +229,7 @@ export const FeaturedProduct: React.FC = () => {
                     showFrom={true}
                     className="p-0"
                   />
-                  <div>
+                  <div className="mt-4">
                     <Tag type={TagType.TasteFinder} value="98% Übereinstimmung" />
                   </div>
                 </Link>

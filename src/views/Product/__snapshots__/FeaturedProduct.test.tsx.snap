@@ -333,9 +333,11 @@ exports[`Featured product view Renders correctly for a successful call with arom
                       </div>
                     </div>
                   </div>
-                  <div>
+                  <div
+                    class="mt-4"
+                  >
                     <div
-                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue"
+                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
                     >
                       <span
                         class="text-xs leading-4"
@@ -897,9 +899,11 @@ exports[`Featured product view Renders correctly for a successful call with arom
                       </div>
                     </div>
                   </div>
-                  <div>
+                  <div
+                    class="mt-4"
+                  >
                     <div
-                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue"
+                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
                     >
                       <span
                         class="text-xs leading-4"
@@ -1461,9 +1465,11 @@ exports[`Featured product view Renders correctly for a successful call with arom
                       </div>
                     </div>
                   </div>
-                  <div>
+                  <div
+                    class="mt-4"
+                  >
                     <div
-                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue"
+                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
                     >
                       <span
                         class="text-xs leading-4"
@@ -2025,9 +2031,11 @@ exports[`Featured product view Renders correctly for a successful call with arom
                       </div>
                     </div>
                   </div>
-                  <div>
+                  <div
+                    class="mt-4"
+                  >
                     <div
-                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue"
+                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
                     >
                       <span
                         class="text-xs leading-4"
@@ -2589,9 +2597,11 @@ exports[`Featured product view Renders correctly for a successful call with arom
                       </div>
                     </div>
                   </div>
-                  <div>
+                  <div
+                    class="mt-4"
+                  >
                     <div
-                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue"
+                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
                     >
                       <span
                         class="text-xs leading-4"
@@ -3036,9 +3046,11 @@ exports[`Featured product view Renders correctly for a successful call without a
                       </div>
                     </div>
                   </div>
-                  <div>
+                  <div
+                    class="mt-4"
+                  >
                     <div
-                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue"
+                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
                     >
                       <span
                         class="text-xs leading-4"

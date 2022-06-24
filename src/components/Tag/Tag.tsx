@@ -51,7 +51,7 @@ const getTagClassNames = (value: string, type?: TagType, small?: boolean, classN
         }
         break
       case TagType.TasteFinder:
-        classNames.push('bg-brand-blue')
+        classNames.push('bg-brand-blue text-tags-jacksonsBlue')
         break
       case TagType.Decaf:
         classNames.push('bg-tags-santasGray text-white border border-white')
