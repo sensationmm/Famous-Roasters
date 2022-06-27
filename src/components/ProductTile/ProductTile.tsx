@@ -37,7 +37,7 @@ export const ProductTile: React.FC<ProductTileProps> = ({
   if (showImage && !featuredImage && (!images || !images.nodes[0])) return null
   const imgSrc = featuredImage?.url ? featuredImage.url : images.nodes[0].url
   return (
-    <div className={className ? 'flex p-6 ' + className : 'flex p-6'}>
+    <div className={className ? 'flex pt-8 md:px-6 ' + className : 'flex pt-8 md:px-6'}>
       {showImage && (
         <div className="flex justify-center items-center shrink-0 self-center relative w-32 h-32">
           <div className="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32">
@@ -48,7 +48,7 @@ export const ProductTile: React.FC<ProductTileProps> = ({
           </div>
         </div>
       )}
-      <div className="flex flex-col justify-between p-2">
+      <div className="flex flex-col w-full justify-between pl-4">
         {featured ? (
           <Typography as="div" type={TypographyType.Heading} size={TypographySize.Tiny}>
             {title}

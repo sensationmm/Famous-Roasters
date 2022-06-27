@@ -29,6 +29,10 @@ export const famousRoastersClient = (): ApolloClient<NormalizedCacheObject> => {
     link: from([
       createHttpLink({
         uri: process.env.REACT_APP_FAMOUS_ROASTERS_GRAPHQL_ENDPOINT,
+        headers: {
+          Accept: 'application/graphql',
+        },
+        credentials: 'include',
         fetch,
       }) as unknown as ApolloLink,
     ]),

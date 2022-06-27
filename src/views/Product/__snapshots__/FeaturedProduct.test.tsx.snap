@@ -289,10 +289,10 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   href="/product/7655228866776"
                 >
                   <div
-                    class="flex p-6 p-0"
+                    class="flex pt-8 md:px-6 p-0"
                   >
                     <div
-                      class="flex flex-col justify-between p-2"
+                      class="flex flex-col w-full justify-between pl-4"
                     >
                       <div
                         class="text-xl leading-7 font-semibold"
@@ -855,10 +855,10 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   href="/product/7655228866776"
                 >
                   <div
-                    class="flex p-6 p-0"
+                    class="flex pt-8 md:px-6 p-0"
                   >
                     <div
-                      class="flex flex-col justify-between p-2"
+                      class="flex flex-col w-full justify-between pl-4"
                     >
                       <div
                         class="text-xl leading-7 font-semibold"
@@ -1421,10 +1421,10 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   href="/product/7655228866776"
                 >
                   <div
-                    class="flex p-6 p-0"
+                    class="flex pt-8 md:px-6 p-0"
                   >
                     <div
-                      class="flex flex-col justify-between p-2"
+                      class="flex flex-col w-full justify-between pl-4"
                     >
                       <div
                         class="text-xl leading-7 font-semibold"
@@ -1987,10 +1987,10 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   href="/product/7655228866776"
                 >
                   <div
-                    class="flex p-6 p-0"
+                    class="flex pt-8 md:px-6 p-0"
                   >
                     <div
-                      class="flex flex-col justify-between p-2"
+                      class="flex flex-col w-full justify-between pl-4"
                     >
                       <div
                         class="text-xl leading-7 font-semibold"
@@ -2553,10 +2553,10 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   href="/product/7655228866776"
                 >
                   <div
-                    class="flex p-6 p-0"
+                    class="flex pt-8 md:px-6 p-0"
                   >
                     <div
-                      class="flex flex-col justify-between p-2"
+                      class="flex flex-col w-full justify-between pl-4"
                     >
                       <div
                         class="text-xl leading-7 font-semibold"
@@ -3002,10 +3002,10 @@ exports[`Featured product view Renders correctly for a successful call without a
                   href="/product/7655228866776"
                 >
                   <div
-                    class="flex p-6 p-0"
+                    class="flex pt-8 md:px-6 p-0"
                   >
                     <div
-                      class="flex flex-col justify-between p-2"
+                      class="flex flex-col w-full justify-between pl-4"
                     >
                       <div
                         class="text-xl leading-7 font-semibold"
