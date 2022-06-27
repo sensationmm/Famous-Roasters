@@ -426,7 +426,7 @@ export const Catalogue: React.FC = () => {
             )
           })}
         </div>
-        <div className="mb-8">
+        <div className="mb-8 mt-8">
           <Pagination
             hasNextPage={pageInfo?.hasNextPage || false}
             hasPreviousPage={pageInfo?.hasPreviousPage || false}

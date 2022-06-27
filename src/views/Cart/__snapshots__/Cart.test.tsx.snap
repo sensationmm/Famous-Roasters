@@ -148,7 +148,7 @@ exports[`Cart view Renders correctly 1`] = `
             class="flex w-full md:grid-cols-2 pb-6 border-b border-coreUI-border mb-4"
           >
             <div
-              class="flex justify-center items-center shrink-0 self-center relative w-32 h-32 mr-2"
+              class="flex justify-center items-center shrink-0 self-start relative w-32 h-32 mr-4"
             >
               <a
                 class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
@@ -166,7 +166,7 @@ exports[`Cart view Renders correctly 1`] = `
             >
               <div>
                 <div
-                  class="mb-1.5 md:mb-0 text-base leading-6 font-semibold"
+                  class="text-base leading-6 font-semibold"
                 >
                   Cycle Blend
                 </div>
@@ -201,10 +201,10 @@ exports[`Cart view Renders correctly 1`] = `
                 class="md:hidden"
               />
               <div
-                class="md:w-full md:flex md:justify-end"
+                class="mt-1.5 md:w-full md:flex md:justify-end"
               >
                 <div
-                  class="inline-flex justify-between px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default w-32"
+                  class="inline-flex justify-between px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                   data-testid="quantity-select"
                 >
                   <button
@@ -226,7 +226,7 @@ exports[`Cart view Renders correctly 1`] = `
                     </svg>
                   </button>
                   <div
-                    class="px-4"
+                    class="px-3.5"
                     data-testid="quantity-value"
                   >
                     1
@@ -251,7 +251,7 @@ exports[`Cart view Renders correctly 1`] = `
                   </button>
                 </div>
                 <button
-                  class="ml-4 inline-flex items-center px-4 py-2.5 w-fit rounded-full border border-coreUI-text-tertiary"
+                  class="ml-2 inline-flex items-center px-4 py-2.5 w-fit rounded-full border border-coreUI-text-tertiary"
                   data-testid="button-cart-item-remove"
                   type="button"
                 >
@@ -278,7 +278,7 @@ exports[`Cart view Renders correctly 1`] = `
             class="flex w-full md:grid-cols-2 pb-6 border-b border-coreUI-border"
           >
             <div
-              class="flex justify-center items-center shrink-0 self-center relative w-32 h-32 mr-2"
+              class="flex justify-center items-center shrink-0 self-start relative w-32 h-32 mr-4"
             >
               <a
                 class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
@@ -296,7 +296,7 @@ exports[`Cart view Renders correctly 1`] = `
             >
               <div>
                 <div
-                  class="mb-1.5 md:mb-0 text-base leading-6 font-semibold"
+                  class="text-base leading-6 font-semibold"
                 >
                   60beans
                 </div>
@@ -331,10 +331,10 @@ exports[`Cart view Renders correctly 1`] = `
                 class="md:hidden"
               />
               <div
-                class="md:w-full md:flex md:justify-end"
+                class="mt-1.5 md:w-full md:flex md:justify-end"
               >
                 <div
-                  class="inline-flex justify-between px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default w-32"
+                  class="inline-flex justify-between px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                   data-testid="quantity-select"
                 >
                   <button
@@ -356,7 +356,7 @@ exports[`Cart view Renders correctly 1`] = `
                     </svg>
                   </button>
                   <div
-                    class="px-4"
+                    class="px-3.5"
                     data-testid="quantity-value"
                   >
                     2
@@ -381,7 +381,7 @@ exports[`Cart view Renders correctly 1`] = `
                   </button>
                 </div>
                 <button
-                  class="ml-4 inline-flex items-center px-4 py-2.5 w-fit rounded-full border border-coreUI-text-tertiary"
+                  class="ml-2 inline-flex items-center px-4 py-2.5 w-fit rounded-full border border-coreUI-text-tertiary"
                   data-testid="button-cart-item-remove"
                   type="button"
                 >

@@ -493,7 +493,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             href="/product/7655228866776"
           >
             <div
-              class="flex p-6"
+              class="flex pt-8 md:px-6"
             >
               <div
                 class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -518,7 +518,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col justify-between p-2"
+                class="flex flex-col w-full justify-between pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -564,7 +564,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             href="/product/7655228866776"
           >
             <div
-              class="flex p-6"
+              class="flex pt-8 md:px-6"
             >
               <div
                 class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -589,7 +589,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col justify-between p-2"
+                class="flex flex-col w-full justify-between pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -635,7 +635,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             href="/product/7655228866776"
           >
             <div
-              class="flex p-6"
+              class="flex pt-8 md:px-6"
             >
               <div
                 class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -660,7 +660,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col justify-between p-2"
+                class="flex flex-col w-full justify-between pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -706,7 +706,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             href="/product/7655228866776"
           >
             <div
-              class="flex p-6"
+              class="flex pt-8 md:px-6"
             >
               <div
                 class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -731,7 +731,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col justify-between p-2"
+                class="flex flex-col w-full justify-between pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -777,7 +777,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             href="/product/7655228866776"
           >
             <div
-              class="flex p-6"
+              class="flex pt-8 md:px-6"
             >
               <div
                 class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -802,7 +802,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col justify-between p-2"
+                class="flex flex-col w-full justify-between pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -848,7 +848,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             href="/product/7655228866776"
           >
             <div
-              class="flex p-6"
+              class="flex pt-8 md:px-6"
             >
               <div
                 class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -873,7 +873,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col justify-between p-2"
+                class="flex flex-col w-full justify-between pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -919,7 +919,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             href="/product/7655228866776"
           >
             <div
-              class="flex p-6"
+              class="flex pt-8 md:px-6"
             >
               <div
                 class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -944,7 +944,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col justify-between p-2"
+                class="flex flex-col w-full justify-between pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -990,7 +990,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             href="/product/7655228866776"
           >
             <div
-              class="flex p-6"
+              class="flex pt-8 md:px-6"
             >
               <div
                 class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -1015,7 +1015,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col justify-between p-2"
+                class="flex flex-col w-full justify-between pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -1061,7 +1061,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             href="/product/7655228866776"
           >
             <div
-              class="flex p-6"
+              class="flex pt-8 md:px-6"
             >
               <div
                 class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -1086,7 +1086,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col justify-between p-2"
+                class="flex flex-col w-full justify-between pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -1132,7 +1132,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             href="/product/7655228866776"
           >
             <div
-              class="flex p-6"
+              class="flex pt-8 md:px-6"
             >
               <div
                 class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -1157,7 +1157,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col justify-between p-2"
+                class="flex flex-col w-full justify-between pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -1203,7 +1203,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             href="/product/7655228866776"
           >
             <div
-              class="flex p-6"
+              class="flex pt-8 md:px-6"
             >
               <div
                 class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -1228,7 +1228,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col justify-between p-2"
+                class="flex flex-col w-full justify-between pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -1274,7 +1274,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             href="/product/7655228866776"
           >
             <div
-              class="flex p-6"
+              class="flex pt-8 md:px-6"
             >
               <div
                 class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -1299,7 +1299,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col justify-between p-2"
+                class="flex flex-col w-full justify-between pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -1343,7 +1343,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
           </a>
         </div>
         <div
-          class="mb-8"
+          class="mb-8 mt-8"
         >
           <nav
             class="border-t border-coreUI-border flex items-center justify-between mb-4"
@@ -2020,7 +2020,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
             href="/product/7655228866776"
           >
             <div
-              class="flex p-6"
+              class="flex pt-8 md:px-6"
             >
               <div
                 class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -2045,7 +2045,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 </div>
               </div>
               <div
-                class="flex flex-col justify-between p-2"
+                class="flex flex-col w-full justify-between pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -2091,7 +2091,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
             href="/product/7655228866776"
           >
             <div
-              class="flex p-6"
+              class="flex pt-8 md:px-6"
             >
               <div
                 class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -2116,7 +2116,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 </div>
               </div>
               <div
-                class="flex flex-col justify-between p-2"
+                class="flex flex-col w-full justify-between pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -2162,7 +2162,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
             href="/product/7655228866776"
           >
             <div
-              class="flex p-6"
+              class="flex pt-8 md:px-6"
             >
               <div
                 class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -2187,7 +2187,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 </div>
               </div>
               <div
-                class="flex flex-col justify-between p-2"
+                class="flex flex-col w-full justify-between pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -2233,7 +2233,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
             href="/product/7655228866776"
           >
             <div
-              class="flex p-6"
+              class="flex pt-8 md:px-6"
             >
               <div
                 class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -2258,7 +2258,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 </div>
               </div>
               <div
-                class="flex flex-col justify-between p-2"
+                class="flex flex-col w-full justify-between pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -2304,7 +2304,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
             href="/product/7655228866776"
           >
             <div
-              class="flex p-6"
+              class="flex pt-8 md:px-6"
             >
               <div
                 class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -2329,7 +2329,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 </div>
               </div>
               <div
-                class="flex flex-col justify-between p-2"
+                class="flex flex-col w-full justify-between pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -2375,7 +2375,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
             href="/product/7655228866776"
           >
             <div
-              class="flex p-6"
+              class="flex pt-8 md:px-6"
             >
               <div
                 class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -2400,7 +2400,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 </div>
               </div>
               <div
-                class="flex flex-col justify-between p-2"
+                class="flex flex-col w-full justify-between pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -2446,7 +2446,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
             href="/product/7655228866776"
           >
             <div
-              class="flex p-6"
+              class="flex pt-8 md:px-6"
             >
               <div
                 class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -2471,7 +2471,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 </div>
               </div>
               <div
-                class="flex flex-col justify-between p-2"
+                class="flex flex-col w-full justify-between pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -2517,7 +2517,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
             href="/product/7655228866776"
           >
             <div
-              class="flex p-6"
+              class="flex pt-8 md:px-6"
             >
               <div
                 class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -2542,7 +2542,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 </div>
               </div>
               <div
-                class="flex flex-col justify-between p-2"
+                class="flex flex-col w-full justify-between pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -2588,7 +2588,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
             href="/product/7655228866776"
           >
             <div
-              class="flex p-6"
+              class="flex pt-8 md:px-6"
             >
               <div
                 class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -2613,7 +2613,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 </div>
               </div>
               <div
-                class="flex flex-col justify-between p-2"
+                class="flex flex-col w-full justify-between pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -2659,7 +2659,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
             href="/product/7655228866776"
           >
             <div
-              class="flex p-6"
+              class="flex pt-8 md:px-6"
             >
               <div
                 class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -2684,7 +2684,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 </div>
               </div>
               <div
-                class="flex flex-col justify-between p-2"
+                class="flex flex-col w-full justify-between pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -2730,7 +2730,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
             href="/product/7655228866776"
           >
             <div
-              class="flex p-6"
+              class="flex pt-8 md:px-6"
             >
               <div
                 class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -2755,7 +2755,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 </div>
               </div>
               <div
-                class="flex flex-col justify-between p-2"
+                class="flex flex-col w-full justify-between pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -2801,7 +2801,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
             href="/product/7655228866776"
           >
             <div
-              class="flex p-6"
+              class="flex pt-8 md:px-6"
             >
               <div
                 class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -2826,7 +2826,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 </div>
               </div>
               <div
-                class="flex flex-col justify-between p-2"
+                class="flex flex-col w-full justify-between pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -2870,7 +2870,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
           </a>
         </div>
         <div
-          class="mb-8"
+          class="mb-8 mt-8"
         >
           <nav
             class="border-t border-coreUI-border flex items-center justify-between mb-4"
