@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/Famous-Roasters/frontend/compare/v1.8.0...v1.8.1) (2022-06-27)
+
+
+### Bug Fixes
+
+* **catalogue:** small breakpoints fixes ([654fd6b](https://github.com/Famous-Roasters/frontend/commit/654fd6b11fbdb0e69898fd825aafe52c5d34181d))
+
 # [1.8.0](https://github.com/Famous-Roasters/frontend/compare/v1.7.0...v1.8.0) (2022-06-24)
 
 
