@@ -1,3 +1,10 @@
+## [1.8.3](https://github.com/Famous-Roasters/frontend/compare/v1.8.2...v1.8.3) (2022-06-27)
+
+
+### Bug Fixes
+
+* **graphql:** cors undo ([4e0687f](https://github.com/Famous-Roasters/frontend/commit/4e0687f4ed71b78a42f2a7efb1b83a4d2b613d0c))
+
 ## [1.8.2](https://github.com/Famous-Roasters/frontend/compare/v1.8.1...v1.8.2) (2022-06-27)
 
 
