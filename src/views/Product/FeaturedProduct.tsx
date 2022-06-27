@@ -212,56 +212,54 @@ export const FeaturedProduct: React.FC = () => {
         >
           {t('pages.featuredProduct.recommendation.title')}
         </Typography>
-        <div className="grid gap-4 grid-cols-1 md:grid-cols-2 mt-8">
+        <div className="grid grid-cols-2 gap-0 mt-8 md:gap-4">
           <Link to={`/product/${id}`} className="flex justify-center items-start">
             <div className="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-full w-3/4 h-fit shrink-0 grow-0">
               <img src={images.nodes[0].url} alt={title} className="w-full w-3/4 h-fit shrink-0 grow-0" />
             </div>
           </Link>
-          <div>
-            {data?.product && (
-              <div>
-                <Link to={`/product/${id}`} className="flex flex-col w-fit">
-                  <ProductTile
-                    productNode={data?.product}
-                    featured={true}
-                    showImage={false}
-                    showFrom={true}
-                    className="p-0"
-                  />
-                  <div className="mt-4">
-                    <Tag type={TagType.TasteFinder} value="98% Übereinstimmung" />
-                  </div>
-                </Link>
+          {data?.product && (
+            <Link to={`/product/${id}`} className="flex flex-col w-fit">
+              <ProductTile
+                productNode={data?.product}
+                featured={true}
+                showImage={false}
+                showFrom={true}
+                className="p-0"
+              />
+              <div className="mt-4">
+                <Tag type={TagType.TasteFinder} value="98% Übereinstimmung" />
               </div>
-            )}
+            </Link>
+          )}
+          <div className="col-span-2 md:col-start-2 md:col-span-1">
             {whyThisCoffee && parseWhyThisCoffee(whyThisCoffee.value)}
-            <div className="mt-8">
-              <Link to={`/product/${id}`}>
-                <Button
-                  type="button"
-                  emphasis={ButtonEmphasis.Primary}
-                  size={ButtonSize.md}
-                  className="flex w-full justify-center"
-                  data-testid="goToProduct"
-                >
-                  {t('pages.featuredProduct.cta.goToProduct')}
-                </Button>
-              </Link>
-            </div>
-            <div className="mt-4">
-              <Link to="/catalogue">
-                <Button
-                  type="button"
-                  emphasis={ButtonEmphasis.Secondary}
-                  size={ButtonSize.md}
-                  className="flex w-full justify-center"
-                  data-testid="discoverMore"
-                >
-                  {t('pages.featuredProduct.cta.discoverMore')}
-                </Button>
-              </Link>
-            </div>
+          </div>
+          <div className="mt-8 col-span-2 md:col-start-2 md:col-span-1">
+            <Link to={`/product/${id}`}>
+              <Button
+                type="button"
+                emphasis={ButtonEmphasis.Primary}
+                size={ButtonSize.md}
+                className="flex w-full justify-center"
+                data-testid="goToProduct"
+              >
+                {t('pages.featuredProduct.cta.goToProduct')}
+              </Button>
+            </Link>
+          </div>
+          <div className="mt-4 col-span-2 md:mt-0 md:col-start-2 md:col-span-1">
+            <Link to="/catalogue">
+              <Button
+                type="button"
+                emphasis={ButtonEmphasis.Secondary}
+                size={ButtonSize.md}
+                className="flex w-full justify-center"
+                data-testid="discoverMore"
+              >
+                {t('pages.featuredProduct.cta.discoverMore')}
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
