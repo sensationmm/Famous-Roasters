@@ -32,7 +32,6 @@ export const famousRoastersClient = (): ApolloClient<NormalizedCacheObject> => {
         headers: {
           Accept: 'application/graphql',
         },
-        credentials: 'same-origin',
         fetch,
       }) as unknown as ApolloLink,
     ]),
