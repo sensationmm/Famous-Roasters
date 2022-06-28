@@ -29,7 +29,7 @@ export const Footer: React.FC = () => {
   }*/
 
   return (
-    <footer className="bg-brand-black text-base text-white py-10">
+    <footer className="bg-brand-black text-base text-white py-10 z-30">
       <div className="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10">
         <div className="mb-2 md:mb-0 md:mr-2">
           <Badge />
