@@ -269,11 +269,11 @@ exports[`Featured product view Renders correctly for a successful call with arom
             class="grid grid-cols-2 gap-0 mt-8 md:gap-4"
           >
             <a
-              class="flex justify-center items-start"
+              class="flex justify-center items-start md:row-start-1 md:row-end-3"
               href="/product/7655228866776"
             >
               <div
-                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-full w-3/4 h-fit shrink-0 grow-0"
+                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-3/4 shrink-0 grow-0"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -443,7 +443,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
       </div>
     </main>
     <footer
-      class="bg-brand-black text-base text-white py-10"
+      class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
         class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
@@ -835,11 +835,11 @@ exports[`Featured product view Renders correctly for a successful call with arom
             class="grid grid-cols-2 gap-0 mt-8 md:gap-4"
           >
             <a
-              class="flex justify-center items-start"
+              class="flex justify-center items-start md:row-start-1 md:row-end-3"
               href="/product/7655228866776"
             >
               <div
-                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-full w-3/4 h-fit shrink-0 grow-0"
+                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-3/4 shrink-0 grow-0"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -1009,7 +1009,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
       </div>
     </main>
     <footer
-      class="bg-brand-black text-base text-white py-10"
+      class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
         class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
@@ -1401,11 +1401,11 @@ exports[`Featured product view Renders correctly for a successful call with arom
             class="grid grid-cols-2 gap-0 mt-8 md:gap-4"
           >
             <a
-              class="flex justify-center items-start"
+              class="flex justify-center items-start md:row-start-1 md:row-end-3"
               href="/product/7655228866776"
             >
               <div
-                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-full w-3/4 h-fit shrink-0 grow-0"
+                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-3/4 shrink-0 grow-0"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -1575,7 +1575,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
       </div>
     </main>
     <footer
-      class="bg-brand-black text-base text-white py-10"
+      class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
         class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
@@ -1967,11 +1967,11 @@ exports[`Featured product view Renders correctly for a successful call with arom
             class="grid grid-cols-2 gap-0 mt-8 md:gap-4"
           >
             <a
-              class="flex justify-center items-start"
+              class="flex justify-center items-start md:row-start-1 md:row-end-3"
               href="/product/7655228866776"
             >
               <div
-                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-full w-3/4 h-fit shrink-0 grow-0"
+                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-3/4 shrink-0 grow-0"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -2141,7 +2141,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
       </div>
     </main>
     <footer
-      class="bg-brand-black text-base text-white py-10"
+      class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
         class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
@@ -2533,11 +2533,11 @@ exports[`Featured product view Renders correctly for a successful call with arom
             class="grid grid-cols-2 gap-0 mt-8 md:gap-4"
           >
             <a
-              class="flex justify-center items-start"
+              class="flex justify-center items-start md:row-start-1 md:row-end-3"
               href="/product/7655228866776"
             >
               <div
-                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-full w-3/4 h-fit shrink-0 grow-0"
+                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-3/4 shrink-0 grow-0"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -2707,7 +2707,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
       </div>
     </main>
     <footer
-      class="bg-brand-black text-base text-white py-10"
+      class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
         class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
@@ -2982,11 +2982,11 @@ exports[`Featured product view Renders correctly for a successful call without a
             class="grid grid-cols-2 gap-0 mt-8 md:gap-4"
           >
             <a
-              class="flex justify-center items-start"
+              class="flex justify-center items-start md:row-start-1 md:row-end-3"
               href="/product/7655228866776"
             >
               <div
-                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-full w-3/4 h-fit shrink-0 grow-0"
+                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-3/4 shrink-0 grow-0"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -3156,7 +3156,7 @@ exports[`Featured product view Renders correctly for a successful call without a
       </div>
     </main>
     <footer
-      class="bg-brand-black text-base text-white py-10"
+      class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
         class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"

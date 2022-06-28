@@ -124,7 +124,7 @@ exports[`App Renders correctly 1`] = `
       </div>
     </main>
     <footer
-      class="bg-brand-black text-base text-white py-10"
+      class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
         class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"

@@ -879,8 +879,9 @@ exports[`Product view Renders correctly for a successful call 1`] = `
           </div>
         </div>
       </div>
+      <span />
       <div
-        class="mt-4 grid gap-4 grid-cols-2 grid-rows-1 px-6 py-4 w-full sticky bottom-0 z-30 bg-brand-grey-woodsmoke text-white md:hidden"
+        class="md:hidden transition-all ease-linear delay-75 mt-4 grid gap-4 grid-cols-2 grid-rows-1 px-6 py-4 w-full sticky bottom-0 z-20 bg-brand-grey-woodsmoke text-white md:hidden"
       >
         <div>
           <span
@@ -1326,7 +1327,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
       </div>
     </main>
     <footer
-      class="bg-brand-black text-base text-white py-10"
+      class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
         class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
@@ -2315,8 +2316,9 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
           </div>
         </div>
       </div>
+      <span />
       <div
-        class="mt-4 grid gap-4 grid-cols-2 grid-rows-1 px-6 py-4 w-full sticky bottom-0 z-30 bg-brand-grey-woodsmoke text-white md:hidden"
+        class="md:hidden transition-all ease-linear delay-75 mt-4 grid gap-4 grid-cols-2 grid-rows-1 px-6 py-4 w-full sticky bottom-0 z-20 bg-brand-grey-woodsmoke text-white md:hidden"
       >
         <div>
           <span
@@ -2758,7 +2760,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
       </div>
     </main>
     <footer
-      class="bg-brand-black text-base text-white py-10"
+      class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
         class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"

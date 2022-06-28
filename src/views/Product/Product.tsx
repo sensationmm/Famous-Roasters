@@ -96,12 +96,10 @@ export const Product: React.FC = () => {
 
     const handleScroll = () => {
       const stickyOffsetTop = stickyCTARef.current?.offsetTop || 0
-      const stickyHeight = stickyCTARef.current?.offsetHeight || 0
       const relScrollWindow = window.outerHeight + window.scrollY
-      const relScrollSticky = stickyOffsetTop + stickyHeight
-      if (relScrollWindow > relScrollSticky) {
+      if (relScrollWindow > stickyOffsetTop) {
         setIsSticky(false)
-        if (window.scrollY > relScrollSticky) {
+        if (window.scrollY > stickyOffsetTop) {
           setIsFixed(true)
         } else {
           setIsFixed(false)
@@ -275,12 +273,25 @@ export const Product: React.FC = () => {
   }
 
   const stickyCTAClassNames = () => {
-    const classNames = ['mt-4', 'grid', 'gap-4', 'grid-cols-2', 'grid-rows-1', 'px-6', 'py-4', 'w-full']
+    const classNames = [
+      'md:hidden',
+      'transition-all',
+      'ease-linear',
+      'delay-75',
+      'mt-4',
+      'grid',
+      'gap-4',
+      'grid-cols-2',
+      'grid-rows-1',
+      'px-6',
+      'py-4',
+      'w-full',
+    ]
     if (isSticky) {
-      classNames.push('sticky', 'bottom-0', 'z-30', 'bg-brand-grey-woodsmoke', 'text-white', 'md:hidden')
+      classNames.push('sticky', 'bottom-0', 'z-20', 'bg-brand-grey-woodsmoke', 'text-white', 'md:hidden')
     }
     if (isFixed) {
-      classNames.push('fixed', 'bottom-0', 'z-30', 'bg-brand-grey-woodsmoke', 'text-white', 'md:hidden')
+      classNames.push('fixed', 'bottom-0', 'z-20', 'bg-brand-grey-woodsmoke', 'text-white', 'md:hidden')
     }
     return classNames.join(' ')
   }
@@ -289,9 +300,8 @@ export const Product: React.FC = () => {
     return (
       <>
         {/* Sticky transactional section */}
-        <div className={stickyCTAClassNames()} ref={stickyCTARef}>
-          {renderCTAContent()}
-        </div>
+        <span ref={stickyCTARef} />
+        <div className={stickyCTAClassNames()}>{renderCTAContent()}</div>
         <div className="w-full max-w-7xl mx-auto px-6 md:hidden">{renderCTAFooter()}</div>
       </>
     )
