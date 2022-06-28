@@ -142,9 +142,9 @@ describe('Cart provider component', () => {
     await act(async (): Promise<void> => {
       await new Promise((resolve) => setTimeout(resolve, 500))
     })
-    const button = await screen.findByTestId('addToCart')
-    expect(button).toBeInTheDocument()
-    fireEvent.click(button)
+    const buttons = await screen.findAllByTestId('addToCart')
+    expect(buttons[0]).toBeInTheDocument()
+    fireEvent.click(buttons[0])
   })
 
   it('Handles add product on pdp with empty cart', async () => {
@@ -163,9 +163,9 @@ describe('Cart provider component', () => {
         </CartProvider>
       </MockedProvider>,
     )
-    const button = await screen.findByTestId('addToCart')
-    expect(button).toBeInTheDocument()
-    fireEvent.click(button)
+    const buttons = await screen.findAllByTestId('addToCart')
+    expect(buttons[0]).toBeInTheDocument()
+    fireEvent.click(buttons[0])
     await act(async (): Promise<void> => {
       await new Promise((resolve) => setTimeout(resolve, 500))
     })

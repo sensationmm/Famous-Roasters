@@ -181,10 +181,10 @@ describe('Product view', () => {
         </CartContext.Provider>
       </MockedProvider>,
     )
-    const button = await screen.findByTestId('addToCart')
-    expect(button).toBeInTheDocument()
-    fireEvent.click(button)
-    fireEvent.click(button)
+    const buttons = await screen.findAllByTestId('addToCart')
+    expect(buttons[0]).toBeInTheDocument()
+    fireEvent.click(buttons[0])
+    fireEvent.click(buttons[0])
   })
 
   it('Renders correctly for an error call on product', async () => {
@@ -230,9 +230,9 @@ describe('Product view', () => {
     await act(async (): Promise<void> => {
       await new Promise((resolve) => setTimeout(resolve, 500))
     })
-    const button = await screen.findByTestId('addToCart')
-    expect(button).toBeInTheDocument()
-    fireEvent.click(button)
+    const buttons = await screen.findAllByTestId('addToCart')
+    expect(buttons[0]).toBeInTheDocument()
+    fireEvent.click(buttons[0])
     await act(async (): Promise<void> => {
       await new Promise((resolve) => setTimeout(resolve, 500))
     })

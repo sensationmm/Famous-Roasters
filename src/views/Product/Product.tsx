@@ -17,6 +17,9 @@ import {
   Disclosure,
   ErrorPrompt,
   GrindsInfo,
+  Icon,
+  IconName,
+  IconSize,
   Layout,
   Listbox,
   ListBoxItem,
@@ -85,9 +88,35 @@ export const Product: React.FC = () => {
   const { addToCart } = useContext(CartContext)
   const transactionalRef = useRef<null | HTMLDivElement>(null)
   const stickyCTARef = useRef<null | HTMLDivElement>(null)
+  const [isSticky, setIsSticky] = useState<boolean>(true)
+  const [isFixed, setIsFixed] = useState<boolean>(false)
 
   useEffect(() => {
     document.title = `${t('brand.name')} | ${t('pages.product.title')}`
+
+    const handleScroll = () => {
+      const stickyOffsetTop = stickyCTARef.current?.offsetTop || 0
+      const stickyHeight = stickyCTARef.current?.offsetHeight || 0
+      const relScrollWindow = window.outerHeight + window.scrollY
+      const relScrollSticky = stickyOffsetTop + stickyHeight
+      if (relScrollWindow > relScrollSticky) {
+        setIsSticky(false)
+        if (window.scrollY > relScrollSticky) {
+          setIsFixed(true)
+        } else {
+          setIsFixed(false)
+        }
+      } else {
+        setIsSticky(true)
+        setIsFixed(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
   }, [])
 
   if (!id) return null
@@ -216,7 +245,10 @@ export const Product: React.FC = () => {
             onClick={handleAddToCart}
             data-testid="addToCart"
           >
-            {t('pages.product.transactional.cta')}
+            <span className="hidden md:block">{t('pages.product.transactional.cta')}</span>
+            <span className="md:hidden">
+              <Icon name={IconName.AddToCart} size={IconSize.lg} />
+            </span>
           </Button>
         </div>
       </>
@@ -242,14 +274,22 @@ export const Product: React.FC = () => {
     )
   }
 
+  const stickyCTAClassNames = () => {
+    const classNames = ['mt-4', 'grid', 'gap-4', 'grid-cols-2', 'grid-rows-1', 'px-6', 'py-4', 'w-full']
+    if (isSticky) {
+      classNames.push('sticky', 'bottom-0', 'z-30', 'bg-brand-grey-woodsmoke', 'text-white', 'md:hidden')
+    }
+    if (isFixed) {
+      classNames.push('fixed', 'bottom-0', 'z-30', 'bg-brand-grey-woodsmoke', 'text-white', 'md:hidden')
+    }
+    return classNames.join(' ')
+  }
+
   const renderMobileStickyCTABlock = () => {
     return (
       <>
         {/* Sticky transactional section */}
-        <div
-          className="mt-4 grid gap-4 grid-cols-2 grid-rows-1 sticky bottom-0 top-0 z-30 px-6 py-4 w-full bg-brand-grey-woodsmoke text-white md:hidden"
-          ref={stickyCTARef}
-        >
+        <div className={stickyCTAClassNames()} ref={stickyCTARef}>
           {renderCTAContent()}
         </div>
         <div className="w-full max-w-7xl mx-auto px-6 md:hidden">{renderCTAFooter()}</div>
