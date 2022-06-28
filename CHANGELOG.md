@@ -1,3 +1,13 @@
+# [1.9.0](https://github.com/Famous-Roasters/frontend/compare/v1.8.4...v1.9.0) (2022-06-28)
+
+
+### Features
+
+* **pdp:** quality gate ([c147d30](https://github.com/Famous-Roasters/frontend/commit/c147d30e9508aa4df1dd5f8e3f95fd4c53add316))
+* **pdp:** scrolls and mobile ux opt done ([c3adbf3](https://github.com/Famous-Roasters/frontend/commit/c3adbf34cf11fdba97e77352a5e2a2558bb096db))
+* **pdp:** scrolls cta 3 states on mobile ([04d1f5b](https://github.com/Famous-Roasters/frontend/commit/04d1f5bc69d83005d85eb52ccf433f4127de0732))
+* **pdp:** scrolls wip ([6ba69b4](https://github.com/Famous-Roasters/frontend/commit/6ba69b49d449a00afe165e80b10d2290840ee7c8))
+
 ## [1.8.4](https://github.com/Famous-Roasters/frontend/compare/v1.8.3...v1.8.4) (2022-06-28)
 
 
