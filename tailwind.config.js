@@ -32,6 +32,7 @@ module.exports = {
                     mine: '#343434',
                     bombay: '#B4B5BC',
                     whisper: '#F0F1F7',
+                    woodsmoke: '#08090B'
                 },
                 green: {
                     ash: '#B8C6B1',
