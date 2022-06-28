@@ -1,3 +1,10 @@
+## [1.8.4](https://github.com/Famous-Roasters/frontend/compare/v1.8.3...v1.8.4) (2022-06-28)
+
+
+### Bug Fixes
+
+* **product tile:** broken layout on featured pdp ([19dc238](https://github.com/Famous-Roasters/frontend/commit/19dc23850b5ee6d949d3560ab9ef5cd12f6e8f37))
+
 ## [1.8.3](https://github.com/Famous-Roasters/frontend/compare/v1.8.2...v1.8.3) (2022-06-27)
 
 

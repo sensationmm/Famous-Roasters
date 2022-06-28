@@ -266,7 +266,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
             Was wir dir empfehlen
           </h2>
           <div
-            class="grid gap-4 grid-cols-1 md:grid-cols-2 mt-8"
+            class="grid grid-cols-2 gap-0 mt-8 md:gap-4"
           >
             <a
               class="flex justify-center items-start"
@@ -282,72 +282,72 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 />
               </div>
             </a>
-            <div>
-              <div>
-                <a
-                  class="flex flex-col w-fit"
-                  href="/product/7655228866776"
+            <a
+              class="flex flex-col w-fit"
+              href="/product/7655228866776"
+            >
+              <div
+                class="p-0"
+              >
+                <div
+                  class="flex flex-col w-full justify-between"
                 >
                   <div
-                    class="flex pt-8 md:px-6 p-0"
+                    class="text-xl leading-7 font-semibold"
                   >
-                    <div
-                      class="flex flex-col w-full justify-between pl-4"
-                    >
-                      <div
-                        class="text-xl leading-7 font-semibold"
-                      >
-                        Espresso Raritäten Set
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        60beans
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Kolumbien
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Filter
-                      </div>
-                      <div
-                        class="flex items-baseline"
-                      >
-                        <div
-                          class="mr-1 mt-1 text-lg leading-7 font-semibold"
-                        >
-                          ab 
-                          19,99 €
-                        </div>
-                        <span
-                          class="text-coreUI-text-secondary text-xs leading-4"
-                        >
-                          (
-                          10,00 €
-                          /kg)
-                        </span>
-                      </div>
-                    </div>
+                    Espresso Raritäten Set
                   </div>
                   <div
-                    class="mt-4"
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    60beans
+                  </div>
+                  <div
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    Kolumbien
+                  </div>
+                  <div
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    Filter
+                  </div>
+                  <div
+                    class="flex items-baseline"
                   >
                     <div
-                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
+                      class="mr-1 mt-1 text-lg leading-7 font-semibold"
                     >
-                      <span
-                        class="text-xs leading-4"
-                      >
-                        98% Übereinstimmung
-                      </span>
+                      ab 
+                      19,99 €
                     </div>
+                    <span
+                      class="text-coreUI-text-secondary text-xs leading-4"
+                    >
+                      (
+                      10,00 €
+                      /kg)
+                    </span>
                   </div>
-                </a>
+                </div>
               </div>
+              <div
+                class="mt-4"
+              >
+                <div
+                  class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    98% Übereinstimmung
+                  </span>
+                </div>
+              </div>
+            </a>
+            <div
+              class="col-span-2 md:col-start-2 md:col-span-1"
+            >
               <div>
                 <h3
                   class="border-b border-brand-grey-whisper mt-8 text-xl leading-7 font-semibold"
@@ -405,38 +405,38 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   </li>
                 </ul>
               </div>
-              <div
-                class="mt-8"
+            </div>
+            <div
+              class="mt-8 col-span-2 md:col-start-2 md:col-span-1"
+            >
+              <a
+                href="/product/7655228866776"
               >
-                <a
-                  href="/product/7655228866776"
+                <button
+                  class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+                  data-testid="goToProduct"
+                  role="button"
+                  type="button"
                 >
-                  <button
-                    class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
-                    data-testid="goToProduct"
-                    role="button"
-                    type="button"
-                  >
-                    Zum Produkt
-                  </button>
-                </a>
-              </div>
-              <div
-                class="mt-4"
+                  Zum Produkt
+                </button>
+              </a>
+            </div>
+            <div
+              class="mt-4 col-span-2 md:mt-0 md:col-start-2 md:col-span-1"
+            >
+              <a
+                href="/catalogue"
               >
-                <a
-                  href="/catalogue"
+                <button
+                  class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
+                  data-testid="discoverMore"
+                  role="button"
+                  type="button"
                 >
-                  <button
-                    class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
-                    data-testid="discoverMore"
-                    role="button"
-                    type="button"
-                  >
-                    Mehr Kaffeesorten entdecken
-                  </button>
-                </a>
-              </div>
+                  Mehr Kaffeesorten entdecken
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -832,7 +832,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
             Was wir dir empfehlen
           </h2>
           <div
-            class="grid gap-4 grid-cols-1 md:grid-cols-2 mt-8"
+            class="grid grid-cols-2 gap-0 mt-8 md:gap-4"
           >
             <a
               class="flex justify-center items-start"
@@ -848,72 +848,72 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 />
               </div>
             </a>
-            <div>
-              <div>
-                <a
-                  class="flex flex-col w-fit"
-                  href="/product/7655228866776"
+            <a
+              class="flex flex-col w-fit"
+              href="/product/7655228866776"
+            >
+              <div
+                class="p-0"
+              >
+                <div
+                  class="flex flex-col w-full justify-between"
                 >
                   <div
-                    class="flex pt-8 md:px-6 p-0"
+                    class="text-xl leading-7 font-semibold"
                   >
-                    <div
-                      class="flex flex-col w-full justify-between pl-4"
-                    >
-                      <div
-                        class="text-xl leading-7 font-semibold"
-                      >
-                        Espresso Raritäten Set
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        60beans
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Kolumbien
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Filter
-                      </div>
-                      <div
-                        class="flex items-baseline"
-                      >
-                        <div
-                          class="mr-1 mt-1 text-lg leading-7 font-semibold"
-                        >
-                          ab 
-                          19,99 €
-                        </div>
-                        <span
-                          class="text-coreUI-text-secondary text-xs leading-4"
-                        >
-                          (
-                          10,00 €
-                          /kg)
-                        </span>
-                      </div>
-                    </div>
+                    Espresso Raritäten Set
                   </div>
                   <div
-                    class="mt-4"
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    60beans
+                  </div>
+                  <div
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    Kolumbien
+                  </div>
+                  <div
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    Filter
+                  </div>
+                  <div
+                    class="flex items-baseline"
                   >
                     <div
-                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
+                      class="mr-1 mt-1 text-lg leading-7 font-semibold"
                     >
-                      <span
-                        class="text-xs leading-4"
-                      >
-                        98% Übereinstimmung
-                      </span>
+                      ab 
+                      19,99 €
                     </div>
+                    <span
+                      class="text-coreUI-text-secondary text-xs leading-4"
+                    >
+                      (
+                      10,00 €
+                      /kg)
+                    </span>
                   </div>
-                </a>
+                </div>
               </div>
+              <div
+                class="mt-4"
+              >
+                <div
+                  class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    98% Übereinstimmung
+                  </span>
+                </div>
+              </div>
+            </a>
+            <div
+              class="col-span-2 md:col-start-2 md:col-span-1"
+            >
               <div>
                 <h3
                   class="border-b border-brand-grey-whisper mt-8 text-xl leading-7 font-semibold"
@@ -971,38 +971,38 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   </li>
                 </ul>
               </div>
-              <div
-                class="mt-8"
+            </div>
+            <div
+              class="mt-8 col-span-2 md:col-start-2 md:col-span-1"
+            >
+              <a
+                href="/product/7655228866776"
               >
-                <a
-                  href="/product/7655228866776"
+                <button
+                  class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+                  data-testid="goToProduct"
+                  role="button"
+                  type="button"
                 >
-                  <button
-                    class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
-                    data-testid="goToProduct"
-                    role="button"
-                    type="button"
-                  >
-                    Zum Produkt
-                  </button>
-                </a>
-              </div>
-              <div
-                class="mt-4"
+                  Zum Produkt
+                </button>
+              </a>
+            </div>
+            <div
+              class="mt-4 col-span-2 md:mt-0 md:col-start-2 md:col-span-1"
+            >
+              <a
+                href="/catalogue"
               >
-                <a
-                  href="/catalogue"
+                <button
+                  class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
+                  data-testid="discoverMore"
+                  role="button"
+                  type="button"
                 >
-                  <button
-                    class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
-                    data-testid="discoverMore"
-                    role="button"
-                    type="button"
-                  >
-                    Mehr Kaffeesorten entdecken
-                  </button>
-                </a>
-              </div>
+                  Mehr Kaffeesorten entdecken
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -1398,7 +1398,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
             Was wir dir empfehlen
           </h2>
           <div
-            class="grid gap-4 grid-cols-1 md:grid-cols-2 mt-8"
+            class="grid grid-cols-2 gap-0 mt-8 md:gap-4"
           >
             <a
               class="flex justify-center items-start"
@@ -1414,72 +1414,72 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 />
               </div>
             </a>
-            <div>
-              <div>
-                <a
-                  class="flex flex-col w-fit"
-                  href="/product/7655228866776"
+            <a
+              class="flex flex-col w-fit"
+              href="/product/7655228866776"
+            >
+              <div
+                class="p-0"
+              >
+                <div
+                  class="flex flex-col w-full justify-between"
                 >
                   <div
-                    class="flex pt-8 md:px-6 p-0"
+                    class="text-xl leading-7 font-semibold"
                   >
-                    <div
-                      class="flex flex-col w-full justify-between pl-4"
-                    >
-                      <div
-                        class="text-xl leading-7 font-semibold"
-                      >
-                        Espresso Raritäten Set
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        60beans
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Kolumbien
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Filter
-                      </div>
-                      <div
-                        class="flex items-baseline"
-                      >
-                        <div
-                          class="mr-1 mt-1 text-lg leading-7 font-semibold"
-                        >
-                          ab 
-                          19,99 €
-                        </div>
-                        <span
-                          class="text-coreUI-text-secondary text-xs leading-4"
-                        >
-                          (
-                          10,00 €
-                          /kg)
-                        </span>
-                      </div>
-                    </div>
+                    Espresso Raritäten Set
                   </div>
                   <div
-                    class="mt-4"
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    60beans
+                  </div>
+                  <div
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    Kolumbien
+                  </div>
+                  <div
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    Filter
+                  </div>
+                  <div
+                    class="flex items-baseline"
                   >
                     <div
-                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
+                      class="mr-1 mt-1 text-lg leading-7 font-semibold"
                     >
-                      <span
-                        class="text-xs leading-4"
-                      >
-                        98% Übereinstimmung
-                      </span>
+                      ab 
+                      19,99 €
                     </div>
+                    <span
+                      class="text-coreUI-text-secondary text-xs leading-4"
+                    >
+                      (
+                      10,00 €
+                      /kg)
+                    </span>
                   </div>
-                </a>
+                </div>
               </div>
+              <div
+                class="mt-4"
+              >
+                <div
+                  class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    98% Übereinstimmung
+                  </span>
+                </div>
+              </div>
+            </a>
+            <div
+              class="col-span-2 md:col-start-2 md:col-span-1"
+            >
               <div>
                 <h3
                   class="border-b border-brand-grey-whisper mt-8 text-xl leading-7 font-semibold"
@@ -1537,38 +1537,38 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   </li>
                 </ul>
               </div>
-              <div
-                class="mt-8"
+            </div>
+            <div
+              class="mt-8 col-span-2 md:col-start-2 md:col-span-1"
+            >
+              <a
+                href="/product/7655228866776"
               >
-                <a
-                  href="/product/7655228866776"
+                <button
+                  class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+                  data-testid="goToProduct"
+                  role="button"
+                  type="button"
                 >
-                  <button
-                    class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
-                    data-testid="goToProduct"
-                    role="button"
-                    type="button"
-                  >
-                    Zum Produkt
-                  </button>
-                </a>
-              </div>
-              <div
-                class="mt-4"
+                  Zum Produkt
+                </button>
+              </a>
+            </div>
+            <div
+              class="mt-4 col-span-2 md:mt-0 md:col-start-2 md:col-span-1"
+            >
+              <a
+                href="/catalogue"
               >
-                <a
-                  href="/catalogue"
+                <button
+                  class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
+                  data-testid="discoverMore"
+                  role="button"
+                  type="button"
                 >
-                  <button
-                    class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
-                    data-testid="discoverMore"
-                    role="button"
-                    type="button"
-                  >
-                    Mehr Kaffeesorten entdecken
-                  </button>
-                </a>
-              </div>
+                  Mehr Kaffeesorten entdecken
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -1964,7 +1964,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
             Was wir dir empfehlen
           </h2>
           <div
-            class="grid gap-4 grid-cols-1 md:grid-cols-2 mt-8"
+            class="grid grid-cols-2 gap-0 mt-8 md:gap-4"
           >
             <a
               class="flex justify-center items-start"
@@ -1980,72 +1980,72 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 />
               </div>
             </a>
-            <div>
-              <div>
-                <a
-                  class="flex flex-col w-fit"
-                  href="/product/7655228866776"
+            <a
+              class="flex flex-col w-fit"
+              href="/product/7655228866776"
+            >
+              <div
+                class="p-0"
+              >
+                <div
+                  class="flex flex-col w-full justify-between"
                 >
                   <div
-                    class="flex pt-8 md:px-6 p-0"
+                    class="text-xl leading-7 font-semibold"
                   >
-                    <div
-                      class="flex flex-col w-full justify-between pl-4"
-                    >
-                      <div
-                        class="text-xl leading-7 font-semibold"
-                      >
-                        Espresso Raritäten Set
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        60beans
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Kolumbien
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Filter
-                      </div>
-                      <div
-                        class="flex items-baseline"
-                      >
-                        <div
-                          class="mr-1 mt-1 text-lg leading-7 font-semibold"
-                        >
-                          ab 
-                          19,99 €
-                        </div>
-                        <span
-                          class="text-coreUI-text-secondary text-xs leading-4"
-                        >
-                          (
-                          10,00 €
-                          /kg)
-                        </span>
-                      </div>
-                    </div>
+                    Espresso Raritäten Set
                   </div>
                   <div
-                    class="mt-4"
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    60beans
+                  </div>
+                  <div
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    Kolumbien
+                  </div>
+                  <div
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    Filter
+                  </div>
+                  <div
+                    class="flex items-baseline"
                   >
                     <div
-                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
+                      class="mr-1 mt-1 text-lg leading-7 font-semibold"
                     >
-                      <span
-                        class="text-xs leading-4"
-                      >
-                        98% Übereinstimmung
-                      </span>
+                      ab 
+                      19,99 €
                     </div>
+                    <span
+                      class="text-coreUI-text-secondary text-xs leading-4"
+                    >
+                      (
+                      10,00 €
+                      /kg)
+                    </span>
                   </div>
-                </a>
+                </div>
               </div>
+              <div
+                class="mt-4"
+              >
+                <div
+                  class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    98% Übereinstimmung
+                  </span>
+                </div>
+              </div>
+            </a>
+            <div
+              class="col-span-2 md:col-start-2 md:col-span-1"
+            >
               <div>
                 <h3
                   class="border-b border-brand-grey-whisper mt-8 text-xl leading-7 font-semibold"
@@ -2103,38 +2103,38 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   </li>
                 </ul>
               </div>
-              <div
-                class="mt-8"
+            </div>
+            <div
+              class="mt-8 col-span-2 md:col-start-2 md:col-span-1"
+            >
+              <a
+                href="/product/7655228866776"
               >
-                <a
-                  href="/product/7655228866776"
+                <button
+                  class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+                  data-testid="goToProduct"
+                  role="button"
+                  type="button"
                 >
-                  <button
-                    class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
-                    data-testid="goToProduct"
-                    role="button"
-                    type="button"
-                  >
-                    Zum Produkt
-                  </button>
-                </a>
-              </div>
-              <div
-                class="mt-4"
+                  Zum Produkt
+                </button>
+              </a>
+            </div>
+            <div
+              class="mt-4 col-span-2 md:mt-0 md:col-start-2 md:col-span-1"
+            >
+              <a
+                href="/catalogue"
               >
-                <a
-                  href="/catalogue"
+                <button
+                  class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
+                  data-testid="discoverMore"
+                  role="button"
+                  type="button"
                 >
-                  <button
-                    class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
-                    data-testid="discoverMore"
-                    role="button"
-                    type="button"
-                  >
-                    Mehr Kaffeesorten entdecken
-                  </button>
-                </a>
-              </div>
+                  Mehr Kaffeesorten entdecken
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -2530,7 +2530,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
             Was wir dir empfehlen
           </h2>
           <div
-            class="grid gap-4 grid-cols-1 md:grid-cols-2 mt-8"
+            class="grid grid-cols-2 gap-0 mt-8 md:gap-4"
           >
             <a
               class="flex justify-center items-start"
@@ -2546,72 +2546,72 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 />
               </div>
             </a>
-            <div>
-              <div>
-                <a
-                  class="flex flex-col w-fit"
-                  href="/product/7655228866776"
+            <a
+              class="flex flex-col w-fit"
+              href="/product/7655228866776"
+            >
+              <div
+                class="p-0"
+              >
+                <div
+                  class="flex flex-col w-full justify-between"
                 >
                   <div
-                    class="flex pt-8 md:px-6 p-0"
+                    class="text-xl leading-7 font-semibold"
                   >
-                    <div
-                      class="flex flex-col w-full justify-between pl-4"
-                    >
-                      <div
-                        class="text-xl leading-7 font-semibold"
-                      >
-                        Espresso Raritäten Set
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        60beans
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Kolumbien
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Filter
-                      </div>
-                      <div
-                        class="flex items-baseline"
-                      >
-                        <div
-                          class="mr-1 mt-1 text-lg leading-7 font-semibold"
-                        >
-                          ab 
-                          19,99 €
-                        </div>
-                        <span
-                          class="text-coreUI-text-secondary text-xs leading-4"
-                        >
-                          (
-                          10,00 €
-                          /kg)
-                        </span>
-                      </div>
-                    </div>
+                    Espresso Raritäten Set
                   </div>
                   <div
-                    class="mt-4"
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    60beans
+                  </div>
+                  <div
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    Kolumbien
+                  </div>
+                  <div
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    Filter
+                  </div>
+                  <div
+                    class="flex items-baseline"
                   >
                     <div
-                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
+                      class="mr-1 mt-1 text-lg leading-7 font-semibold"
                     >
-                      <span
-                        class="text-xs leading-4"
-                      >
-                        98% Übereinstimmung
-                      </span>
+                      ab 
+                      19,99 €
                     </div>
+                    <span
+                      class="text-coreUI-text-secondary text-xs leading-4"
+                    >
+                      (
+                      10,00 €
+                      /kg)
+                    </span>
                   </div>
-                </a>
+                </div>
               </div>
+              <div
+                class="mt-4"
+              >
+                <div
+                  class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    98% Übereinstimmung
+                  </span>
+                </div>
+              </div>
+            </a>
+            <div
+              class="col-span-2 md:col-start-2 md:col-span-1"
+            >
               <div>
                 <h3
                   class="border-b border-brand-grey-whisper mt-8 text-xl leading-7 font-semibold"
@@ -2669,38 +2669,38 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   </li>
                 </ul>
               </div>
-              <div
-                class="mt-8"
+            </div>
+            <div
+              class="mt-8 col-span-2 md:col-start-2 md:col-span-1"
+            >
+              <a
+                href="/product/7655228866776"
               >
-                <a
-                  href="/product/7655228866776"
+                <button
+                  class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+                  data-testid="goToProduct"
+                  role="button"
+                  type="button"
                 >
-                  <button
-                    class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
-                    data-testid="goToProduct"
-                    role="button"
-                    type="button"
-                  >
-                    Zum Produkt
-                  </button>
-                </a>
-              </div>
-              <div
-                class="mt-4"
+                  Zum Produkt
+                </button>
+              </a>
+            </div>
+            <div
+              class="mt-4 col-span-2 md:mt-0 md:col-start-2 md:col-span-1"
+            >
+              <a
+                href="/catalogue"
               >
-                <a
-                  href="/catalogue"
+                <button
+                  class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
+                  data-testid="discoverMore"
+                  role="button"
+                  type="button"
                 >
-                  <button
-                    class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
-                    data-testid="discoverMore"
-                    role="button"
-                    type="button"
-                  >
-                    Mehr Kaffeesorten entdecken
-                  </button>
-                </a>
-              </div>
+                  Mehr Kaffeesorten entdecken
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -2979,7 +2979,7 @@ exports[`Featured product view Renders correctly for a successful call without a
             Was wir dir empfehlen
           </h2>
           <div
-            class="grid gap-4 grid-cols-1 md:grid-cols-2 mt-8"
+            class="grid grid-cols-2 gap-0 mt-8 md:gap-4"
           >
             <a
               class="flex justify-center items-start"
@@ -2995,72 +2995,72 @@ exports[`Featured product view Renders correctly for a successful call without a
                 />
               </div>
             </a>
-            <div>
-              <div>
-                <a
-                  class="flex flex-col w-fit"
-                  href="/product/7655228866776"
+            <a
+              class="flex flex-col w-fit"
+              href="/product/7655228866776"
+            >
+              <div
+                class="p-0"
+              >
+                <div
+                  class="flex flex-col w-full justify-between"
                 >
                   <div
-                    class="flex pt-8 md:px-6 p-0"
+                    class="text-xl leading-7 font-semibold"
                   >
-                    <div
-                      class="flex flex-col w-full justify-between pl-4"
-                    >
-                      <div
-                        class="text-xl leading-7 font-semibold"
-                      >
-                        Espresso Raritäten Set
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        60beans
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Kolumbien
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Filter
-                      </div>
-                      <div
-                        class="flex items-baseline"
-                      >
-                        <div
-                          class="mr-1 mt-1 text-lg leading-7 font-semibold"
-                        >
-                          ab 
-                          19,99 €
-                        </div>
-                        <span
-                          class="text-coreUI-text-secondary text-xs leading-4"
-                        >
-                          (
-                          10,00 €
-                          /kg)
-                        </span>
-                      </div>
-                    </div>
+                    Espresso Raritäten Set
                   </div>
                   <div
-                    class="mt-4"
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    60beans
+                  </div>
+                  <div
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    Kolumbien
+                  </div>
+                  <div
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    Filter
+                  </div>
+                  <div
+                    class="flex items-baseline"
                   >
                     <div
-                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
+                      class="mr-1 mt-1 text-lg leading-7 font-semibold"
                     >
-                      <span
-                        class="text-xs leading-4"
-                      >
-                        98% Übereinstimmung
-                      </span>
+                      ab 
+                      19,99 €
                     </div>
+                    <span
+                      class="text-coreUI-text-secondary text-xs leading-4"
+                    >
+                      (
+                      10,00 €
+                      /kg)
+                    </span>
                   </div>
-                </a>
+                </div>
               </div>
+              <div
+                class="mt-4"
+              >
+                <div
+                  class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    98% Übereinstimmung
+                  </span>
+                </div>
+              </div>
+            </a>
+            <div
+              class="col-span-2 md:col-start-2 md:col-span-1"
+            >
               <div>
                 <h3
                   class="border-b border-brand-grey-whisper mt-8 text-xl leading-7 font-semibold"
@@ -3118,38 +3118,38 @@ exports[`Featured product view Renders correctly for a successful call without a
                   </li>
                 </ul>
               </div>
-              <div
-                class="mt-8"
+            </div>
+            <div
+              class="mt-8 col-span-2 md:col-start-2 md:col-span-1"
+            >
+              <a
+                href="/product/7655228866776"
               >
-                <a
-                  href="/product/7655228866776"
+                <button
+                  class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+                  data-testid="goToProduct"
+                  role="button"
+                  type="button"
                 >
-                  <button
-                    class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
-                    data-testid="goToProduct"
-                    role="button"
-                    type="button"
-                  >
-                    Zum Produkt
-                  </button>
-                </a>
-              </div>
-              <div
-                class="mt-4"
+                  Zum Produkt
+                </button>
+              </a>
+            </div>
+            <div
+              class="mt-4 col-span-2 md:mt-0 md:col-start-2 md:col-span-1"
+            >
+              <a
+                href="/catalogue"
               >
-                <a
-                  href="/catalogue"
+                <button
+                  class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
+                  data-testid="discoverMore"
+                  role="button"
+                  type="button"
                 >
-                  <button
-                    class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
-                    data-testid="discoverMore"
-                    role="button"
-                    type="button"
-                  >
-                    Mehr Kaffeesorten entdecken
-                  </button>
-                </a>
-              </div>
+                  Mehr Kaffeesorten entdecken
+                </button>
+              </a>
             </div>
           </div>
         </div>
