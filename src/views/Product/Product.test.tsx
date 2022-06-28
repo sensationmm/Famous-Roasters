@@ -237,4 +237,29 @@ describe('Product view', () => {
       await new Promise((resolve) => setTimeout(resolve, 500))
     })
   })
+
+  it('The user can scroll', async () => {
+    render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
+        mocks={[ProductMockWithCustomMetadata]}
+        addTypename={false}
+      >
+        <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
+          <I18nextProvider i18n={i18n}>
+            <MemoryRouter initialEntries={['/product/7655228866776']}>
+              <Product />
+            </MemoryRouter>
+          </I18nextProvider>
+        </CartContext.Provider>
+      </MockedProvider>,
+    )
+    fireEvent.scroll(window, { target: { scrollY: 250 } })
+    fireEvent.scroll(window, { target: { scrollY: 500 } })
+    fireEvent.scroll(window, { target: { scrollY: 750 } })
+    fireEvent.scroll(window, { target: { scrollY: 1000 } })
+    const buttons = await screen.findAllByTestId('addToCart')
+    expect(buttons[0]).toBeInTheDocument()
+    fireEvent.click(buttons[0])
+  })
 })
