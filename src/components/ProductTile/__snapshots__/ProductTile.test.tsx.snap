@@ -125,7 +125,7 @@ exports[`Product Tile component Renders correctly 1`] = `
 exports[`Product Tile component Renders featured correctly 1`] = `
 <div>
   <div
-    class="flex pt-8 md:px-6"
+    class=""
   >
     <div
       class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -141,7 +141,7 @@ exports[`Product Tile component Renders featured correctly 1`] = `
       </div>
     </div>
     <div
-      class="flex flex-col w-full justify-between pl-4"
+      class="flex flex-col w-full justify-between"
     >
       <div
         class="text-xl leading-7 font-semibold"
