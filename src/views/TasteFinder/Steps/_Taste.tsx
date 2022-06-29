@@ -85,7 +85,7 @@ export const _Taste: React.FC<TastePartialScreenProps> = ({
   }
 
   const getIconCheckboxGridContainer = () => {
-    const classNames = ['grid', 'gap-x-4', 'w-full']
+    const classNames = ['grid', 'gap-x-4', 'w-full', 'm-auto']
     if (listGuideItems === undefined || listGuideItems > 3) {
       classNames.push('md:w-5/6', 'md:grid-rows-3', 'md:grid-cols-2', 'md:grid-flow-col')
     } else {
@@ -114,47 +114,49 @@ export const _Taste: React.FC<TastePartialScreenProps> = ({
           className="mt-4"
         />
       </div>
-      {scrollableImages ? (
-        <div className="relative flex w-full overflow-x-auto gap-x-10 snap-x xl:justify-center">
-          <div className="w-1/12 pr-12 -mx-2.5 h-80 relative shrink-0 snap-start scroll-auto" />
-          {screenData.map((item, idx) => {
-            if (imageType === 'image') {
-              return (
-                <ImageCheckbox
-                  key={`imagecheckbox-${idx}`}
-                  name={item.name}
-                  imageSrc={'image' in item ? item.image : null}
-                  text={item.text}
-                  selectedText={'selectedText' in item ? item.selectedText : undefined}
-                  selected={getCurrentFieldData() === item.name}
-                  toggleSelected={(selected: boolean) => handleDataChange(selected, item.name)}
-                  className={scrollableImages ? 'shrink-0 snap-center scroll-auto' : ''}
-                />
-              )
-            }
-          })}
-          <div className="w-1/12 pl-12 -mx-2.5 h-80 relative shrink-0 snap-start scroll-auto" />
-        </div>
-      ) : (
-        <div className={getIconCheckboxGridContainer()}>
-          {screenData.map((item, idx) => {
-            if (imageType === 'icon') {
-              return (
-                <div key={`iconcheckboxcontainer-${idx}`} className={getIconCheckboxContainerClass(idx)}>
-                  <IconCheckbox
+      <div className="flex md:flex-none flex-col flex-grow w-full justify-center align-center overflow-x-auto pb-6 md:pb-0">
+        {scrollableImages ? (
+          <div className="relative flex w-full overflow-x-auto gap-x-10 snap-x xl:justify-center">
+            <div className="w-1/12 pr-12 -mx-2.5 h-80 relative shrink-0 snap-start scroll-auto" />
+            {screenData.map((item, idx) => {
+              if (imageType === 'image') {
+                return (
+                  <ImageCheckbox
+                    key={`imagecheckbox-${idx}`}
                     name={item.name}
-                    iconName={'iconName' in item ? item.iconName : null}
-                    itemSize={itemSize}
+                    imageSrc={'image' in item ? item.image : null}
                     text={item.text}
+                    selectedText={'selectedText' in item ? item.selectedText : undefined}
                     selected={getCurrentFieldData() === item.name}
                     toggleSelected={(selected: boolean) => handleDataChange(selected, item.name)}
+                    className={scrollableImages ? 'shrink-0 snap-center scroll-auto' : ''}
                   />
-                </div>
-              )
-            }
-          })}
-        </div>
-      )}
+                )
+              }
+            })}
+            <div className="w-1/12 pl-12 -mx-2.5 h-80 relative shrink-0 snap-start scroll-auto" />
+          </div>
+        ) : (
+          <div className={getIconCheckboxGridContainer()}>
+            {screenData.map((item, idx) => {
+              if (imageType === 'icon') {
+                return (
+                  <div key={`iconcheckboxcontainer-${idx}`} className={getIconCheckboxContainerClass(idx)}>
+                    <IconCheckbox
+                      name={item.name}
+                      iconName={'iconName' in item ? item.iconName : null}
+                      itemSize={itemSize}
+                      text={item.text}
+                      selected={getCurrentFieldData() === item.name}
+                      toggleSelected={(selected: boolean) => handleDataChange(selected, item.name)}
+                    />
+                  </div>
+                )
+              }
+            })}
+          </div>
+        )}
+      </div>
     </div>
   )
 }
