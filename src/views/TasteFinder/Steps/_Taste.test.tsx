@@ -173,4 +173,28 @@ describe('Taste screen dynamic partial view', () => {
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
     expect(container).toMatchSnapshot()
   })
+
+  it('Handles null selectedText', async () => {
+    const { container } = render(
+      <I18nextProvider i18n={i18n}>
+        <TasteScreen
+          screenKey="bitterness"
+          screenData={[
+            ...IconsWithoutIconsData,
+            {
+              name: '4',
+              text: 'option 4',
+              image: image1,
+            },
+          ]}
+          imageType={TasteScreenImageType.Image}
+          scrollableImages={true}
+          currentData={[]}
+          updateData={() => null}
+        />
+      </I18nextProvider>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
 })

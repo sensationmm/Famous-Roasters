@@ -124,12 +124,12 @@ export const _Taste: React.FC<TastePartialScreenProps> = ({
                   <ImageCheckbox
                     key={`imagecheckbox-${idx}`}
                     name={item.name}
-                    imageSrc={'image' in item ? item.image : null}
+                    imageSrc={(item as TastePartialScreenDataImageItem).image}
                     text={item.text}
                     selectedText={'selectedText' in item ? item.selectedText : undefined}
                     selected={getCurrentFieldData() === item.name}
                     toggleSelected={(selected: boolean) => handleDataChange(selected, item.name)}
-                    className={scrollableImages ? 'shrink-0 snap-center scroll-auto' : ''}
+                    className={'shrink-0 snap-center scroll-auto'}
                   />
                 )
               }
