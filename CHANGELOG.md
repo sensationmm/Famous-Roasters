@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/Famous-Roasters/frontend/compare/v1.11.0...v1.12.0) (2022-06-30)
+
+
+### Features
+
+* **footer:** replace claim text ([e288af9](https://github.com/Famous-Roasters/frontend/commit/e288af9f186a34da570b32ad4aec529aa6223c3c))
+
 # [1.11.0](https://github.com/Famous-Roasters/frontend/compare/v1.10.0...v1.11.0) (2022-06-30)
 
 
