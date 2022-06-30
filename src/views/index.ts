@@ -1,3 +1,4 @@
+import { Auth } from './Auth'
 import { Cart } from './Cart'
 import { Catalogue } from './Catalogue'
 import { Error } from './Error'
@@ -5,6 +6,7 @@ import { Home } from './Home'
 import { FeaturedProduct, Product } from './Product'
 import { TasteFinder } from './TasteFinder'
 
+export { Auth as Auth }
 export { Cart as Cart }
 export { Catalogue as Catalogue }
 export { FeaturedProduct as FeaturedProduct }

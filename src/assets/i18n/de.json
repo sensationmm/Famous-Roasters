@@ -1,4 +1,33 @@
 {
+  "auth": {
+    "signIn": {
+      "email": {
+        "error": {
+          "invalidFormat": "Invalid email format",
+          "required": "Please input your email"
+        },
+        "label": "Deine E-Mail",
+        "placeholder": "Deine E-Mail"
+      },
+      "forgotPassword": {
+        "action": "Reset password",
+        "prompt": "Forgot your password?"
+      },
+      "password": {
+        "error": {
+          "required": "Please input your password"
+        },
+        "label": "Dein Passwort",
+        "placeholder": "Dein Passwort"
+      },
+      "signUp": {
+        "action": "Sign up here",
+        "prompt": "Don't have a Mallcule account yet?"
+      },
+      "title": "Sign in"
+    },
+    "welcome": "Welcome to 60beans"
+  },
   "brand": {
     "copyright": "© {{year}} 60beans. Alle Rechte vorbehalten.",
     "name": "60beans",

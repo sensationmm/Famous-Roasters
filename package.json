@@ -62,6 +62,7 @@
     ]
   },
   "devDependencies": {
+    "@aws-amplify/ui-react": "^3.0.3",
     "@babel/core": "^7.17.8",
     "@commitlint/cli": "^16.2.1",
     "@commitlint/config-conventional": "^16.2.1",
@@ -93,6 +94,8 @@
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.3",
     "autoprefixer": "^10.4.2",
+    "aws-amplify": "^4.3.26",
+    "aws-amplify-react": "^5.1.9",
     "babel-loader": "^8.2.3",
     "eslint": "^8.10.0",
     "eslint-plugin-react": "^7.29.2",

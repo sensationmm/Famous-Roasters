@@ -4,7 +4,7 @@ import { I18nextProvider } from 'react-i18next'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { CartProvider } from 'src/components'
 import { famousRoastersClient, i18n, storeFrontClient } from 'src/config'
-import { Cart, Catalogue, Error, FeaturedProduct, Home, Product, TasteFinder } from 'src/views'
+import { Auth, Cart, Catalogue, Error, FeaturedProduct, Home, Product, TasteFinder } from 'src/views'
 
 const App = () => {
   return (
@@ -26,6 +26,7 @@ const App = () => {
                 }
               />
               <Route path="/featured/:id" element={<FeaturedProduct />} />
+              <Route path="/login" element={<Auth key={'signIn'} />} />
               <Route path="*" element={<Error />} />
             </Routes>
           </BrowserRouter>
