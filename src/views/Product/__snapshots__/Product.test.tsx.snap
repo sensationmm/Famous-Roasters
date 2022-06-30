@@ -1359,7 +1359,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
         <div
           class="px-4 text-5xl leading-none"
         >
-          A pleasure for every taste.
+          Guten Kaffee besser finden.
         </div>
       </div>
       <div
@@ -2792,7 +2792,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
         <div
           class="px-4 text-5xl leading-none"
         >
-          A pleasure for every taste.
+          Guten Kaffee besser finden.
         </div>
       </div>
       <div
