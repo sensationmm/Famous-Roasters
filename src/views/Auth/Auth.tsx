@@ -24,8 +24,8 @@ export const Auth: React.FC<AuthProps> = ({ key }) => {
 
   return (
     <Layout navigationTheme={NavigationTheme.Home} showFooter={false}>
-      <main className="flex-grow flex items-start justify-center bg-white my-8 md:my-12">
-        <div className="w-fit md:w-1/2">{innerContent()}</div>
+      <main className="flex-grow flex items-start justify-center bg-white my-8 mx-6 md:my-12 md:mx-0">
+        <div className="w-full md:w-1/2">{innerContent()}</div>
       </main>
     </Layout>
   )
