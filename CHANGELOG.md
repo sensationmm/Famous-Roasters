@@ -1,3 +1,11 @@
+# [1.11.0](https://github.com/Famous-Roasters/frontend/compare/v1.10.0...v1.11.0) (2022-06-30)
+
+
+### Features
+
+* **pdp:** all disclosures open by default ([53225a0](https://github.com/Famous-Roasters/frontend/commit/53225a0fac378df311dd3636825e1e911b4e4fc6))
+* **taste finder:** restore links in header and footer navs ([1a29595](https://github.com/Famous-Roasters/frontend/commit/1a2959504a9e594a601117b1ee01a3430bf8cf80))
+
 # [1.10.0](https://github.com/Famous-Roasters/frontend/compare/v1.9.0...v1.10.0) (2022-06-30)
 
 
