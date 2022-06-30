@@ -35,9 +35,7 @@ interface NavigationData {
 }
 
 const navigationData: NavigationData = {
-  pagesPrimary: [
-    //  { key: 'tasteFinder', href: '/taste-finder' }
-  ],
+  pagesPrimary: [{ key: 'tasteFinder', href: '/taste-finder' }],
   pagesSecondary: [{ key: 'about', href: '//www.60beans.de/uber-uns' }],
 }
 
@@ -118,8 +116,8 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
               </div>
 
               <div className="border-t border-coreUI-border py-6 px-4 space-y-6">
-                {/*{renderMenuItemsMobile(navigationData.pagesPrimary)}
-                <div className="border-t border-coreUI-border" />*/}
+                {renderMenuItemsMobile(navigationData.pagesPrimary)}
+                <div className="border-t border-coreUI-border" />
                 {renderMenuItemsMobile(navigationData.pagesSecondary)}
                 <div className="border-t border-coreUI-border" />
                 {/*<div className="flow-root">
