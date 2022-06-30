@@ -53,7 +53,18 @@ exports[`Cart view Renders correctly 1`] = `
             >
               <div
                 class="h-full flex space-x-8"
-              />
+              >
+                <a
+                  class="flex items-center text-gray-700 hover:text-gray-800"
+                  href="/taste-finder"
+                >
+                  <span
+                    class="uppercase text-sm leading-5"
+                  >
+                    Tastefinder
+                  </span>
+                </a>
+              </div>
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
@@ -520,6 +531,15 @@ exports[`Cart view Renders correctly 1`] = `
               class="mt-6"
             >
               <a
+                href="/taste-finder"
+              >
+                Tastefinder
+              </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <a
                 href="//www.60beans.de/uber-uns"
               >
                 Über uns
@@ -641,7 +661,18 @@ exports[`Cart view Renders correctly for no cart id 1`] = `
             >
               <div
                 class="h-full flex space-x-8"
-              />
+              >
+                <a
+                  class="flex items-center text-gray-700 hover:text-gray-800"
+                  href="/taste-finder"
+                >
+                  <span
+                    class="uppercase text-sm leading-5"
+                  >
+                    Tastefinder
+                  </span>
+                </a>
+              </div>
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
@@ -807,6 +838,15 @@ exports[`Cart view Renders correctly for no cart id 1`] = `
                 href="/catalogue"
               >
                 Shop
+              </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <a
+                href="/taste-finder"
+              >
+                Tastefinder
               </a>
             </li>
             <li
