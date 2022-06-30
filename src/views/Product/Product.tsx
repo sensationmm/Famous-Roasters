@@ -485,7 +485,7 @@ export const Product: React.FC = () => {
                 {t(`pages.product.sections.${blockData.key}.title`)}
               </Typography>
             }
-            defaultOpen={blockData.key === 'getToKnow' || blockData.key === 'findSimilar'}
+            defaultOpen={true}
             canToggle={blockData.key !== 'findSimilar'}
             panelChildren={renderProductBlockContent(blockData.key)}
           />
