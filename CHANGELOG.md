@@ -1,3 +1,12 @@
+# [1.10.0](https://github.com/Famous-Roasters/frontend/compare/v1.9.0...v1.10.0) (2022-06-30)
+
+
+### Features
+
+* **taste finder:** copy correction ([c8a04d1](https://github.com/Famous-Roasters/frontend/commit/c8a04d12565061174e19f4fd75b56feb21bce3de))
+* **taste finder:** test coverage ([a7a4dc7](https://github.com/Famous-Roasters/frontend/commit/a7a4dc7134953ad655696220e616308e13540782))
+* **taste finder:** visual improvements from design ([cba0d38](https://github.com/Famous-Roasters/frontend/commit/cba0d3807907bf620c0270df737539eea36f47be))
+
 # [1.9.0](https://github.com/Famous-Roasters/frontend/compare/v1.8.4...v1.9.0) (2022-06-28)
 
 
