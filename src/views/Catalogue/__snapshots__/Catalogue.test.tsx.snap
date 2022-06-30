@@ -1447,7 +1447,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
         <div
           class="px-4 text-5xl leading-none"
         >
-          A pleasure for every taste.
+          Guten Kaffee besser finden.
         </div>
       </div>
       <div
@@ -2994,7 +2994,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
         <div
           class="px-4 text-5xl leading-none"
         >
-          A pleasure for every taste.
+          Guten Kaffee besser finden.
         </div>
       </div>
       <div
