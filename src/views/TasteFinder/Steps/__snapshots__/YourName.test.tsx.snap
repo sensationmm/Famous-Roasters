@@ -22,7 +22,7 @@ exports[`YourName step partial view Renders correctly 1`] = `
           <span
             class="text-sm leading-5"
           >
-            Gib deinen Namen Ein
+            Gib deinen Namen ein
           </span>
         </span>
         <input

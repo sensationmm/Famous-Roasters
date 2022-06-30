@@ -822,7 +822,7 @@
         },
         "yourName": {
           "input": {
-            "label": "Gib deinen Namen Ein",
+            "label": "Gib deinen Namen ein",
             "placeholder": "Dein Name"
           },
           "title": "Wie sollen wir dich nennen?"
