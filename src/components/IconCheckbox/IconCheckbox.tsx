@@ -48,7 +48,7 @@ export const IconCheckbox: React.FC<IconCheckboxProps> = ({
         <Typography
           as="div"
           type={TypographyType.Heading}
-          className="flex grow font-syne text-3xl font-normal text-left"
+          className="flex grow font-syne text-3xl font-normal text-left pr-3"
         >
           {text}
         </Typography>
@@ -70,7 +70,7 @@ export const IconCheckbox: React.FC<IconCheckboxProps> = ({
           <Icon name={iconName} size={IconSize.lg} />
         </div>
       )}
-      <Typography as="div" type={TypographyType.Label} size={TypographySize.Base} className="flex grow text-left">
+      <Typography as="div" type={TypographyType.Label} size={TypographySize.Base} className="flex grow text-left pr-3">
         {text}
       </Typography>
     </button>

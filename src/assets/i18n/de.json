@@ -56,8 +56,8 @@
       },
       "overline": "Erklärung",
       "text": "Unsere Kaffeeexperten nutzen den Vergleich mit Obst und Früchten, um herauszufinden, wie sauer dein Kaffee sein darf.",
-      "title": "Was hat das mit Kaffee zu tun?",
-      "trigger": "Was hat das mit Kaffee zu tun?"
+      "title": "Warum wir dich das fragen?",
+      "trigger": "Warum wir dich das fragen?"
     },
     "adventurous":{
       "items": {
@@ -72,8 +72,8 @@
       },
       "overline": "Erklärung",
       "text": "Unsere Kaffeeexperten nutzen diese Frage, um herauszufinden, wie offen für Neues du bist.",
-      "title": "Was hat das mit Kaffee zu tun?",
-      "trigger": "Was hat das mit Kaffee zu tun?"
+      "title": "Warum wir dich das fragen?",
+      "trigger": "Warum wir dich das fragen?"
     },
     "bitterness":{
       "items": {
@@ -92,8 +92,8 @@
       },
       "overline": "Erklärung",
       "text": "Unsere Kaffeeexperten nutzen den Vergleich mit Schokolade, um herauszufinden, wie bitter dein Kaffee sein darf.",
-      "title": "Was hat das mit Kaffee zu tun?",
-      "trigger": "Was hat das mit Kaffee zu tun?"
+      "title": "Warum wir dich das fragen?",
+      "trigger": "Warum wir dich das fragen?"
     },
     "body":{
       "items": {
@@ -112,15 +112,15 @@
       },
       "overline": "Erklärung",
       "text": "Unsere Kaffeeexperten nutzen deine Zubereitungspräferenz, um herauszufinden, wie der Körper bzw. das Mundgefühl deines Kaffees sein soll.",
-      "title": "Was hat das mit Kaffee zu tun?",
-      "trigger": "Was hat das mit Kaffee zu tun?"
+      "title": "Warum wir dich das fragen?",
+      "trigger": "Warum wir dich das fragen?"
     },
     "grindType":{
       "overline": "Erklärung",
       "text": "Da wir dir am Ende nicht nur neue, sondern auch möglichst passende Kaffeesorten vorschlagen möchten, müssen wir wissen, wie du deinen Kaffee am liebsten zubereitest.",
       "textBold": "Das heißt: wir empfehlen dir keinen Filterkaffee, wenn du einen Porta-Filter benutzt.",
-      "title": "Was hat das mit Kaffee zu tun?",
-      "trigger": "Was hat das mit Kaffee zu tun?"
+      "title": "Warum wir dich das fragen?",
+      "trigger": "Warum wir dich das fragen?"
     },
     "sweetness":{
       "items": {
@@ -139,8 +139,8 @@
       },
       "overline": "Erklärung",
       "text": "Unsere Kaffeeexperten nutzen den Vergleich mit Süßspeisen, um herauszufinden, wie süß dein Kaffee sein darf.",
-      "title": "Was hat das mit Kaffee zu tun?",
-      "trigger": "Was hat das mit Kaffee zu tun?"
+      "title": "Warum wir dich das fragen?",
+      "trigger": "Warum wir dich das fragen?"
     },
     "tasteResults": {
       "items": {
@@ -822,7 +822,8 @@
         },
         "yourName": {
           "input": {
-            "label": "Gib deinen Namen Ein"
+            "label": "Gib deinen Namen ein",
+            "placeholder": "Dein Name"
           },
           "title": "Wie sollen wir dich nennen?"
         }

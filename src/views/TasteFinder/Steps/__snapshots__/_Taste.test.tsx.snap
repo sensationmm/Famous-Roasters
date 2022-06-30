@@ -41,7 +41,7 @@ exports[`Taste screen dynamic partial view Handles correctly icon type without i
               class="flex border-b-2 mb-1 text-sm leading-5"
               style="border-bottom-width: 1px;"
             >
-              Was hat das mit Kaffee zu tun?
+              Warum wir dich das fragen?
             </span>
           </div>
         </button>
@@ -74,104 +74,108 @@ exports[`Taste screen dynamic partial view Handles correctly icon type without i
               class="flex border-b-2 mb-1 text-sm leading-5"
               style="border-bottom-width: 1px;"
             >
-              Was hat das mit Kaffee zu tun?
+              Warum wir dich das fragen?
             </span>
           </div>
         </button>
       </div>
     </div>
     <div
-      class="grid gap-x-4 w-full md:w-5/6 md:grid-rows-3 md:grid-cols-2 md:grid-flow-col"
+      class="flex md:flex-none flex-col flex-grow w-full justify-center align-center overflow-x-auto pb-6 md:pb-0"
     >
       <div
-        class="scroll-auto border-b border-brand-grey-whisper"
+        class="grid gap-x-4 w-full m-auto md:w-5/6 md:grid-rows-3 md:grid-cols-2 md:grid-flow-col"
       >
-        <button
-          class="flex w-full flex-row pl-6 py-4 items-center cursor-pointer"
-          data-testid="icon-checkbox"
+        <div
+          class="scroll-auto border-b border-brand-grey-whisper"
         >
-          <div>
-            <svg
-              height="24"
-              viewBox="0 0 16 16"
-              width="24"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M8,16c-4.4,0-8-3.6-8-8s3.6-8,8-8s8,3.6,8,8S12.4,16,8,16z M8,1C4.1,1,1,4.1,1,8s3.1,7,7,7s7-3.1,7-7S11.9,1,8,1z"
-                fill="#D8D8D8"
-                fill-rule="evenodd"
-                stroke="#D8D8D8"
-                stroke-width="0.1"
-              />
-            </svg>
-          </div>
-          <div
-            class="flex grow text-left text-base leading-6 font-semibold"
+          <button
+            class="flex w-full flex-row pl-6 py-4 items-center cursor-pointer"
+            data-testid="icon-checkbox"
           >
-            option 1
-          </div>
-        </button>
-      </div>
-      <div
-        class="scroll-auto border-b border-brand-grey-whisper"
-      >
-        <button
-          class="flex w-full flex-row pl-6 py-4 items-center cursor-pointer"
-          data-testid="icon-checkbox"
+            <div>
+              <svg
+                height="24"
+                viewBox="0 0 16 16"
+                width="24"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M8,16c-4.4,0-8-3.6-8-8s3.6-8,8-8s8,3.6,8,8S12.4,16,8,16z M8,1C4.1,1,1,4.1,1,8s3.1,7,7,7s7-3.1,7-7S11.9,1,8,1z"
+                  fill="#D8D8D8"
+                  fill-rule="evenodd"
+                  stroke="#D8D8D8"
+                  stroke-width="0.1"
+                />
+              </svg>
+            </div>
+            <div
+              class="flex grow text-left pr-3 text-base leading-6 font-semibold"
+            >
+              option 1
+            </div>
+          </button>
+        </div>
+        <div
+          class="scroll-auto border-b border-brand-grey-whisper"
         >
-          <div>
-            <svg
-              height="24"
-              viewBox="0 0 16 16"
-              width="24"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M8,16c-4.4,0-8-3.6-8-8s3.6-8,8-8s8,3.6,8,8S12.4,16,8,16z M8,1C4.1,1,1,4.1,1,8s3.1,7,7,7s7-3.1,7-7S11.9,1,8,1z"
-                fill="#D8D8D8"
-                fill-rule="evenodd"
-                stroke="#D8D8D8"
-                stroke-width="0.1"
-              />
-            </svg>
-          </div>
-          <div
-            class="flex grow text-left text-base leading-6 font-semibold"
+          <button
+            class="flex w-full flex-row pl-6 py-4 items-center cursor-pointer"
+            data-testid="icon-checkbox"
           >
-            option 2
-          </div>
-        </button>
-      </div>
-      <div
-        class="scroll-auto border-b border-brand-grey-whisper md:border-0 scroll-auto"
-      >
-        <button
-          class="flex w-full flex-row pl-6 py-4 items-center cursor-pointer"
-          data-testid="icon-checkbox"
+            <div>
+              <svg
+                height="24"
+                viewBox="0 0 16 16"
+                width="24"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M8,16c-4.4,0-8-3.6-8-8s3.6-8,8-8s8,3.6,8,8S12.4,16,8,16z M8,1C4.1,1,1,4.1,1,8s3.1,7,7,7s7-3.1,7-7S11.9,1,8,1z"
+                  fill="#D8D8D8"
+                  fill-rule="evenodd"
+                  stroke="#D8D8D8"
+                  stroke-width="0.1"
+                />
+              </svg>
+            </div>
+            <div
+              class="flex grow text-left pr-3 text-base leading-6 font-semibold"
+            >
+              option 2
+            </div>
+          </button>
+        </div>
+        <div
+          class="scroll-auto border-b border-brand-grey-whisper md:border-0 scroll-auto"
         >
-          <div>
-            <svg
-              height="24"
-              viewBox="0 0 16 16"
-              width="24"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M8,16c-4.4,0-8-3.6-8-8s3.6-8,8-8s8,3.6,8,8S12.4,16,8,16z M8,1C4.1,1,1,4.1,1,8s3.1,7,7,7s7-3.1,7-7S11.9,1,8,1z"
-                fill="#D8D8D8"
-                fill-rule="evenodd"
-                stroke="#D8D8D8"
-                stroke-width="0.1"
-              />
-            </svg>
-          </div>
-          <div
-            class="flex grow text-left text-base leading-6 font-semibold"
+          <button
+            class="flex w-full flex-row pl-6 py-4 items-center cursor-pointer"
+            data-testid="icon-checkbox"
           >
-            option 3
-          </div>
-        </button>
+            <div>
+              <svg
+                height="24"
+                viewBox="0 0 16 16"
+                width="24"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M8,16c-4.4,0-8-3.6-8-8s3.6-8,8-8s8,3.6,8,8S12.4,16,8,16z M8,1C4.1,1,1,4.1,1,8s3.1,7,7,7s7-3.1,7-7S11.9,1,8,1z"
+                  fill="#D8D8D8"
+                  fill-rule="evenodd"
+                  stroke="#D8D8D8"
+                  stroke-width="0.1"
+                />
+              </svg>
+            </div>
+            <div
+              class="flex grow text-left pr-3 text-base leading-6 font-semibold"
+            >
+              option 3
+            </div>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -219,7 +223,7 @@ exports[`Taste screen dynamic partial view Handles correctly image type without 
               class="flex border-b-2 mb-1 text-sm leading-5"
               style="border-bottom-width: 1px;"
             >
-              Was hat das mit Kaffee zu tun?
+              Warum wir dich das fragen?
             </span>
           </div>
         </button>
@@ -252,15 +256,205 @@ exports[`Taste screen dynamic partial view Handles correctly image type without 
               class="flex border-b-2 mb-1 text-sm leading-5"
               style="border-bottom-width: 1px;"
             >
-              Was hat das mit Kaffee zu tun?
+              Warum wir dich das fragen?
             </span>
           </div>
         </button>
       </div>
     </div>
     <div
-      class="grid gap-x-4 w-full md:w-5/6 md:grid-rows-3 md:grid-cols-2 md:grid-flow-col"
-    />
+      class="flex md:flex-none flex-col flex-grow w-full justify-center align-center overflow-x-auto pb-6 md:pb-0"
+    >
+      <div
+        class="grid gap-x-4 w-full m-auto md:w-5/6 md:grid-rows-3 md:grid-cols-2 md:grid-flow-col"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Taste screen dynamic partial view Handles null selectedText 1`] = `
+<div>
+  <div
+    class="flex-grow flex flex-col items-center bg-white md:justify-center"
+  >
+    <div
+      class="p-6 md:w-5/6"
+    >
+      <h1
+        class="flex md:text-2xl md:leading-8 xl:text-3xl xl:leading-10 text-xl leading-7 font-semibold"
+      >
+        Stell dir vor, dass verschiedene Sorten Schokolade vor dir auf dem Tisch liegen. Für welche würdest du dich entscheiden?
+      </h1>
+      <div
+        class="flex md:hidden"
+      >
+        <button
+          data-testid="drawer-trigger"
+        >
+          <div
+            class="flex mt-4"
+          >
+            <svg
+              class="mr-2.5"
+              height="20"
+              viewBox="0 0 20 20"
+              width="20"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10 18.8a8.8 8.8 0 1 1 0-17.6 8.8 8.8 0 0 1 0 17.6ZM0 10C0 4.477 4.477 0 10 0s10 4.477 10 10-4.477 10-10 10S0 15.523 0 10Zm8.706-.725v2.607h1.83v-1.35a4.686 4.686 0 0 0 1.749-.435 3.152 3.152 0 0 0 1.253-1.07c.308-.466.462-1.03.462-1.691 0-.476-.088-.916-.264-1.32a2.89 2.89 0 0 0-.742-1.054c-.33-.31-.748-.548-1.253-.714C11.246 4.083 10.669 4 10.009 4c-.539 0-1.028.062-1.468.186-.428.114-.802.28-1.121.497-.319.207-.588.45-.808.729-.21.28-.368.574-.478.884-.1.3-.143.61-.132.931h1.847a1.61 1.61 0 0 1 .264-.853c.164-.248.4-.445.709-.59.308-.145.687-.217 1.138-.217.637 0 1.148.16 1.533.481.396.31.594.755.594 1.334 0 .6-.214 1.066-.643 1.397-.418.33-1.072.496-1.963.496h-.775Zm-.165 4.034V15h2.227v-1.691H8.54Z"
+                fill="#212121"
+                fill-rule="evenodd"
+                stroke="#212121"
+                stroke-width="0.1"
+              />
+            </svg>
+            <span
+              class="flex border-b-2 mb-1 text-sm leading-5"
+              style="border-bottom-width: 1px;"
+            >
+              Warum wir dich das fragen?
+            </span>
+          </div>
+        </button>
+      </div>
+      <div
+        class="hidden md:flex"
+      >
+        <button
+          data-testid="dialog-trigger"
+        >
+          <div
+            class="flex mt-4"
+          >
+            <svg
+              class="mr-2.5"
+              height="20"
+              viewBox="0 0 20 20"
+              width="20"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10 18.8a8.8 8.8 0 1 1 0-17.6 8.8 8.8 0 0 1 0 17.6ZM0 10C0 4.477 4.477 0 10 0s10 4.477 10 10-4.477 10-10 10S0 15.523 0 10Zm8.706-.725v2.607h1.83v-1.35a4.686 4.686 0 0 0 1.749-.435 3.152 3.152 0 0 0 1.253-1.07c.308-.466.462-1.03.462-1.691 0-.476-.088-.916-.264-1.32a2.89 2.89 0 0 0-.742-1.054c-.33-.31-.748-.548-1.253-.714C11.246 4.083 10.669 4 10.009 4c-.539 0-1.028.062-1.468.186-.428.114-.802.28-1.121.497-.319.207-.588.45-.808.729-.21.28-.368.574-.478.884-.1.3-.143.61-.132.931h1.847a1.61 1.61 0 0 1 .264-.853c.164-.248.4-.445.709-.59.308-.145.687-.217 1.138-.217.637 0 1.148.16 1.533.481.396.31.594.755.594 1.334 0 .6-.214 1.066-.643 1.397-.418.33-1.072.496-1.963.496h-.775Zm-.165 4.034V15h2.227v-1.691H8.54Z"
+                fill="#212121"
+                fill-rule="evenodd"
+                stroke="#212121"
+                stroke-width="0.1"
+              />
+            </svg>
+            <span
+              class="flex border-b-2 mb-1 text-sm leading-5"
+              style="border-bottom-width: 1px;"
+            >
+              Warum wir dich das fragen?
+            </span>
+          </div>
+        </button>
+      </div>
+    </div>
+    <div
+      class="flex md:flex-none flex-col flex-grow w-full justify-center align-center overflow-x-auto pb-6 md:pb-0"
+    >
+      <div
+        class="relative flex w-full overflow-x-auto gap-x-10 snap-x xl:justify-center"
+      >
+        <div
+          class="w-1/12 pr-12 -mx-2.5 h-80 relative shrink-0 snap-start scroll-auto"
+        />
+        <button
+          class="w-64 h-80 mt-12 -top-4 relative cursor-pointer shrink-0 snap-center scroll-auto"
+          data-testid="image-checkbox"
+        >
+          <div
+            class="w-64 h-64 top-0 absolute rounded-full bg-brand-grey-whisper"
+          />
+          <img
+            alt=""
+            class="absolute -top-8"
+            src="01-chocolate-leicht.webp"
+          />
+          <div
+            class="absolute w-full h-32 text-center -bottom-4"
+          >
+            <div
+              class="font-syne font-normal text-2xl leading-8 font-semibold"
+            >
+              option 1
+            </div>
+          </div>
+        </button>
+        <button
+          class="w-64 h-80 mt-12 -top-4 relative cursor-pointer shrink-0 snap-center scroll-auto"
+          data-testid="image-checkbox"
+        >
+          <div
+            class="w-64 h-64 top-0 absolute rounded-full bg-brand-grey-whisper"
+          />
+          <img
+            alt=""
+            class="absolute -top-8"
+            src="01-chocolate-leicht.webp"
+          />
+          <div
+            class="absolute w-full h-32 text-center -bottom-4"
+          >
+            <div
+              class="font-syne font-normal text-2xl leading-8 font-semibold"
+            >
+              option 2
+            </div>
+          </div>
+        </button>
+        <button
+          class="w-64 h-80 mt-12 -top-4 relative cursor-pointer shrink-0 snap-center scroll-auto"
+          data-testid="image-checkbox"
+        >
+          <div
+            class="w-64 h-64 top-0 absolute rounded-full bg-brand-grey-whisper"
+          />
+          <img
+            alt=""
+            class="absolute -top-8"
+            src="01-chocolate-leicht.webp"
+          />
+          <div
+            class="absolute w-full h-32 text-center -bottom-4"
+          >
+            <div
+              class="font-syne font-normal text-2xl leading-8 font-semibold"
+            >
+              option 3
+            </div>
+          </div>
+        </button>
+        <button
+          class="w-64 h-80 mt-12 -top-4 relative cursor-pointer shrink-0 snap-center scroll-auto"
+          data-testid="image-checkbox"
+        >
+          <div
+            class="w-64 h-64 top-0 absolute rounded-full bg-brand-grey-whisper"
+          />
+          <img
+            alt=""
+            class="absolute -top-8"
+            src="01-chocolate-leicht.webp"
+          />
+          <div
+            class="absolute w-full h-32 text-center -bottom-4"
+          >
+            <div
+              class="font-syne font-normal text-2xl leading-8 font-semibold"
+            >
+              option 4
+            </div>
+          </div>
+        </button>
+        <div
+          class="w-1/12 pl-12 -mx-2.5 h-80 relative shrink-0 snap-start scroll-auto"
+        />
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -306,7 +500,7 @@ exports[`Taste screen dynamic partial view Renders correctly 1`] = `
               class="flex border-b-2 mb-1 text-sm leading-5"
               style="border-bottom-width: 1px;"
             >
-              Was hat das mit Kaffee zu tun?
+              Warum wir dich das fragen?
             </span>
           </div>
         </button>
@@ -339,87 +533,91 @@ exports[`Taste screen dynamic partial view Renders correctly 1`] = `
               class="flex border-b-2 mb-1 text-sm leading-5"
               style="border-bottom-width: 1px;"
             >
-              Was hat das mit Kaffee zu tun?
+              Warum wir dich das fragen?
             </span>
           </div>
         </button>
       </div>
     </div>
     <div
-      class="relative flex w-full overflow-x-auto gap-x-10 snap-x xl:justify-center"
+      class="flex md:flex-none flex-col flex-grow w-full justify-center align-center overflow-x-auto pb-6 md:pb-0"
     >
       <div
-        class="w-1/12 pr-12 -mx-2.5 h-80 relative shrink-0 snap-start scroll-auto"
-      />
-      <button
-        class="w-64 h-80 mt-12 -top-4 relative cursor-pointer shrink-0 snap-center scroll-auto"
-        data-testid="image-checkbox"
+        class="relative flex w-full overflow-x-auto gap-x-10 snap-x xl:justify-center"
       >
         <div
-          class="w-64 h-64 top-0 absolute rounded-full bg-brand-grey-whisper"
+          class="w-1/12 pr-12 -mx-2.5 h-80 relative shrink-0 snap-start scroll-auto"
         />
-        <img
-          alt=""
-          class="absolute -top-8"
-          src="01-chocolate-leicht.webp"
-        />
-        <div
-          class="absolute w-full h-32 text-center -bottom-4"
+        <button
+          class="w-64 h-80 mt-12 -top-4 relative cursor-pointer shrink-0 snap-center scroll-auto"
+          data-testid="image-checkbox"
         >
           <div
-            class="font-syne font-normal text-2xl leading-8 font-semibold"
+            class="w-64 h-64 top-0 absolute rounded-full bg-brand-grey-whisper"
+          />
+          <img
+            alt=""
+            class="absolute -top-8"
+            src="01-chocolate-leicht.webp"
+          />
+          <div
+            class="absolute w-full h-32 text-center -bottom-4"
           >
-            option 1
+            <div
+              class="font-syne font-normal text-2xl leading-8 font-semibold"
+            >
+              option 1
+            </div>
           </div>
-        </div>
-      </button>
-      <button
-        class="w-64 h-80 mt-12 -top-4 relative cursor-pointer shrink-0 snap-center scroll-auto"
-        data-testid="image-checkbox"
-      >
-        <div
-          class="w-64 h-64 top-0 absolute rounded-full bg-brand-grey-whisper"
-        />
-        <img
-          alt=""
-          class="absolute -top-8"
-          src="02-chocolate-mittel.webp"
-        />
-        <div
-          class="absolute w-full h-32 text-center -bottom-4"
+        </button>
+        <button
+          class="w-64 h-80 mt-12 -top-4 relative cursor-pointer shrink-0 snap-center scroll-auto"
+          data-testid="image-checkbox"
         >
           <div
-            class="font-syne font-normal text-2xl leading-8 font-semibold"
+            class="w-64 h-64 top-0 absolute rounded-full bg-brand-grey-whisper"
+          />
+          <img
+            alt=""
+            class="absolute -top-8"
+            src="02-chocolate-mittel.webp"
+          />
+          <div
+            class="absolute w-full h-32 text-center -bottom-4"
           >
-            option 2
+            <div
+              class="font-syne font-normal text-2xl leading-8 font-semibold"
+            >
+              option 2
+            </div>
           </div>
-        </div>
-      </button>
-      <button
-        class="w-64 h-80 mt-12 -top-4 relative cursor-pointer shrink-0 snap-center scroll-auto"
-        data-testid="image-checkbox"
-      >
-        <div
-          class="w-64 h-64 top-0 absolute rounded-full bg-brand-grey-whisper"
-        />
-        <img
-          alt=""
-          class="absolute -top-8"
-          src="03-chocolate-hoch.webp"
-        />
-        <div
-          class="absolute w-full h-32 text-center -bottom-4"
+        </button>
+        <button
+          class="w-64 h-80 mt-12 -top-4 relative cursor-pointer shrink-0 snap-center scroll-auto"
+          data-testid="image-checkbox"
         >
           <div
-            class="font-syne font-normal text-2xl leading-8 font-semibold"
+            class="w-64 h-64 top-0 absolute rounded-full bg-brand-grey-whisper"
+          />
+          <img
+            alt=""
+            class="absolute -top-8"
+            src="03-chocolate-hoch.webp"
+          />
+          <div
+            class="absolute w-full h-32 text-center -bottom-4"
           >
-            option 3
+            <div
+              class="font-syne font-normal text-2xl leading-8 font-semibold"
+            >
+              option 3
+            </div>
           </div>
-        </div>
-      </button>
-      <div
-        class="w-1/12 pl-12 -mx-2.5 h-80 relative shrink-0 snap-start scroll-auto"
-      />
+        </button>
+        <div
+          class="w-1/12 pl-12 -mx-2.5 h-80 relative shrink-0 snap-start scroll-auto"
+        />
+      </div>
     </div>
   </div>
 </div>
@@ -466,7 +664,7 @@ exports[`Taste screen dynamic partial view Renders correctly for not scrollable 
               class="flex border-b-2 mb-1 text-sm leading-5"
               style="border-bottom-width: 1px;"
             >
-              Was hat das mit Kaffee zu tun?
+              Warum wir dich das fragen?
             </span>
           </div>
         </button>
@@ -499,21 +697,25 @@ exports[`Taste screen dynamic partial view Renders correctly for not scrollable 
               class="flex border-b-2 mb-1 text-sm leading-5"
               style="border-bottom-width: 1px;"
             >
-              Was hat das mit Kaffee zu tun?
+              Warum wir dich das fragen?
             </span>
           </div>
         </button>
       </div>
     </div>
     <div
-      class="relative flex w-full overflow-x-auto gap-x-10 snap-x xl:justify-center"
+      class="flex md:flex-none flex-col flex-grow w-full justify-center align-center overflow-x-auto pb-6 md:pb-0"
     >
       <div
-        class="w-1/12 pr-12 -mx-2.5 h-80 relative shrink-0 snap-start scroll-auto"
-      />
-      <div
-        class="w-1/12 pl-12 -mx-2.5 h-80 relative shrink-0 snap-start scroll-auto"
-      />
+        class="relative flex w-full overflow-x-auto gap-x-10 snap-x xl:justify-center"
+      >
+        <div
+          class="w-1/12 pr-12 -mx-2.5 h-80 relative shrink-0 snap-start scroll-auto"
+        />
+        <div
+          class="w-1/12 pl-12 -mx-2.5 h-80 relative shrink-0 snap-start scroll-auto"
+        />
+      </div>
     </div>
   </div>
 </div>

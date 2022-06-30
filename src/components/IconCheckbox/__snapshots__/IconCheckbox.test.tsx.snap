@@ -41,7 +41,7 @@ exports[`ImageCheckbox component Renders correctly 1`] = `
       </svg>
     </div>
     <div
-      class="flex grow text-left text-base leading-6 font-semibold"
+      class="flex grow text-left pr-3 text-base leading-6 font-semibold"
     >
       Dieser Kaffee ist lekka
     </div>
@@ -90,7 +90,7 @@ exports[`ImageCheckbox component Renders correctly for selected 1`] = `
       </svg>
     </div>
     <div
-      class="flex grow text-left text-base leading-6 font-semibold"
+      class="flex grow text-left pr-3 text-base leading-6 font-semibold"
     >
       Dieser Kaffee ist lekka
     </div>
