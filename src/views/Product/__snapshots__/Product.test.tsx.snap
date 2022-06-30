@@ -1269,7 +1269,8 @@ exports[`Product view Renders correctly for a successful call 1`] = `
             class="border-t border-coreUI-border mx-auto w-full py-4"
           >
             <button
-              aria-expanded="false"
+              aria-controls="headlessui-disclosure-panel-:r5:"
+              aria-expanded="true"
               class="flex w-full justify-between py-2 text-left"
               data-testid="button-disclosure-toggle"
               id="headlessui-disclosure-button-:r4:"
@@ -1290,12 +1291,38 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M12 4v16m8-8H4"
+                  d="M20 12H4"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 />
               </svg>
             </button>
+            <div
+              class="py-2"
+              id="headlessui-disclosure-panel-:r5:"
+            >
+              <div
+                class="grid gap-6 md:grid-cols-2 xl:grid-cols-1"
+              >
+                <div
+                  class="order-1 xl:order-2 xl:max-w-screen-xl xl:mx-auto xl:px-24"
+                >
+                  <img
+                    alt="60beans"
+                    src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+                  />
+                </div>
+                <div
+                  class="order-2 xl:order-1 xl:max-w-screen-xl xl:mx-auto"
+                >
+                  <p
+                    class="text-base leading-6"
+                  >
+                    the vendor description text
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
           <div
             class="border-t border-coreUI-border mx-auto w-full py-4"
@@ -2706,7 +2733,8 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
             class="border-t border-coreUI-border mx-auto w-full py-4"
           >
             <button
-              aria-expanded="false"
+              aria-controls="headlessui-disclosure-panel-:rd:"
+              aria-expanded="true"
               class="flex w-full justify-between py-2 text-left"
               data-testid="button-disclosure-toggle"
               id="headlessui-disclosure-button-:rc:"
@@ -2727,12 +2755,38 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M12 4v16m8-8H4"
+                  d="M20 12H4"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 />
               </svg>
             </button>
+            <div
+              class="py-2"
+              id="headlessui-disclosure-panel-:rd:"
+            >
+              <div
+                class="grid gap-6 md:grid-cols-2 xl:grid-cols-1"
+              >
+                <div
+                  class="order-1 xl:order-2 xl:max-w-screen-xl xl:mx-auto xl:px-24"
+                >
+                  <img
+                    alt="60beans"
+                    src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+                  />
+                </div>
+                <div
+                  class="order-2 xl:order-1 xl:max-w-screen-xl xl:mx-auto"
+                >
+                  <p
+                    class="text-base leading-6"
+                  >
+                    the vendor description text
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
           <div
             class="border-t border-coreUI-border mx-auto w-full py-4"
