@@ -1,46 +1,65 @@
-query products($first: Int, $last: Int, $before: String, $after: String, $sortKey: ProductCollectionSortKeys, $reverse: Boolean, $filters: [ProductFilter!]) {
-    collection(id: "gid://shopify/Collection/386655387864") {
+query products(
+  $first: Int
+  $last: Int
+  $before: String
+  $after: String
+  $sortKey: ProductCollectionSortKeys
+  $reverse: Boolean
+  $filters: [ProductFilter!]
+) {
+  collection(id: "gid://shopify/Collection/386655387864") {
+    id
+    products(
+      first: $first
+      last: $last
+      before: $before
+      after: $after
+      sortKey: $sortKey
+      reverse: $reverse
+      filters: $filters
+    ) {
+      nodes {
         id
-        products(first: $first, last: $last, before: $before, after: $after, sortKey: $sortKey, reverse: $reverse, filters: $filters) {
-            nodes {
-                id
-                title
-                vendor
-                featuredImage {
-                    url
-                }
-                priceRange {
-                    minVariantPrice {
-                        amount
-                        currencyCode
-                    }
-                    maxVariantPrice {
-                        amount
-                        currencyCode
-                    }
-                }
-                coffee_type: metafield(namespace: "my_fields", key: "coffee_type") {
-                    value
-                }
-                bean_type: metafield(namespace: "my_fields", key: "bean_type") {
-                    value
-                }
-                origin: metafield(namespace: "my_fields", key: "origin") {
-                    value
-                }
-                pricePerKg: metafield(namespace: "my_fields", key:"price_per_kg"){
-                    value
-                }
-                decaf: metafield(namespace: "my_fields", key: "decaf") {
-                    value
-                }
-            }
-            pageInfo {
-                startCursor
-                endCursor
-                hasNextPage
-                hasPreviousPage
-            }
+        title
+        vendor
+        featuredImage {
+          url
         }
+        priceRange {
+          minVariantPrice {
+            amount
+            currencyCode
+          }
+          maxVariantPrice {
+            amount
+            currencyCode
+          }
+        }
+        coffee_type: metafield(namespace: "my_fields", key: "coffee_type") {
+          value
+        }
+        bean_type: metafield(namespace: "my_fields", key: "bean_type") {
+          value
+        }
+        origin: metafield(namespace: "my_fields", key: "origin") {
+          value
+        }
+        pricePerKg: metafield(namespace: "my_fields", key: "price_per_kg") {
+          value
+        }
+        decaf: metafield(namespace: "my_fields", key: "decaf") {
+          value
+        }
+        aroma: metafield(namespace: "my_fields", key: "aroma") {
+          value
+        }
+      }
+      pageInfo {
+        startCursor
+        endCursor
+        hasNextPage
+        hasPreviousPage
+      }
     }
+  }
 }
