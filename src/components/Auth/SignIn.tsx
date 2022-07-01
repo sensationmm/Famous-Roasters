@@ -1,6 +1,7 @@
 import Auth from '@aws-amplify/auth'
 import { SignIn } from 'aws-amplify-react'
 import { IAuthPieceProps } from 'aws-amplify-react/lib-esm/Auth/AuthPiece'
+import Form from 'rc-field-form'
 import React from 'react'
 import {
   AuthFormEmail,
@@ -111,12 +112,12 @@ export class AuthSignIn extends SignIn {
         </div>
         <div className="mt-12">
           {/*<AuthCognitoErrors errorCode={this.props.authData?.errorCode} />*/}
-          <form name="signIn">
+          <Form name="signIn" onFinish={this.signInUser}>
             {this.renderSignInInputs()}
             {this.renderSignInMiddleActions()}
             {this.renderSignInButton()}
             {this.renderSignInFooterActions()}
-          </form>
+          </Form>
         </div>
       </div>
     ) : (

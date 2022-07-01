@@ -7,7 +7,7 @@ import { AuthFormItemInput } from '.'
 describe('ConfirmSignUp custom auth component', () => {
   const snippet = (type?: string) => (
     <form name="testAuthFormItemInput">
-      <AuthFormItemInput name="itemName" label="itemLabel" type={type} placeholder="itemPlaceHolder" />
+      <AuthFormItemInput name="itemName" label="itemLabel" type={type} rules={[]} placeholder="itemPlaceHolder" />
     </form>
   )
 

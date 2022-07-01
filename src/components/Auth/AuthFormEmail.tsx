@@ -14,7 +14,10 @@ export const AuthFormEmail: React.FC<AuthFormEmailProps> = ({ screenKey, onChang
       name="email"
       label={i18n.t(`auth.${screenKey}.email.label`)}
       type="email"
-      hasFeedback
+      rules={[
+        { required: true, message: i18n.t(`auth.${screenKey}.email.error.required`) },
+        { type: 'email', message: i18n.t(`auth.${screenKey}.email.error.invalidFormat`) },
+      ]}
       placeholder={i18n.t(`auth.${screenKey}.email.placeholder`)}
       onChange={onChange}
       dataTestId="email"

@@ -2,16 +2,16 @@ import React from 'react'
 import { Authenticator, AuthSignIn, Layout, NavigationTheme } from 'src/components'
 
 interface AuthProps {
-  key: string
+  authState: string
 }
 
-export const Auth: React.FC<AuthProps> = ({ key }) => {
+export const Auth: React.FC<AuthProps> = ({ authState }) => {
   const handleAuthStateChange = (state: string) => {
     console.log('state becomes =', state)
   }
 
   const innerContent = () => {
-    switch (key) {
+    switch (authState) {
       case 'signIn':
       default:
         return (

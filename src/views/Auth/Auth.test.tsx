@@ -9,7 +9,7 @@ describe('Auth view', () => {
   it('Renders correctly', async () => {
     const { container } = render(
       <I18nextProvider i18n={i18n}>
-        <Auth key={'signIn'} />
+        <Auth authState={'signIn'} />
       </I18nextProvider>,
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))

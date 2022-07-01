@@ -14,6 +14,7 @@ export const AuthFormPassword: React.FC<AuthFormPasswordProps> = ({ screenKey, o
       name="password"
       label={i18n.t(`auth.${screenKey}.password.label`)}
       type="password"
+      rules={[{ required: true, message: i18n.t(`auth.${screenKey}.password.error.required`) }]}
       hasFeedback
       placeholder={i18n.t(`auth.${screenKey}.password.placeholder`)}
       onChange={onChange}
