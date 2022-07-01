@@ -4,9 +4,12 @@ import { I18nextProvider } from 'react-i18next'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { CartProvider } from 'src/components'
 import { famousRoastersClient, i18n, storeFrontClient } from 'src/config'
+import { useAuth } from 'src/config/cognito'
 import { Auth, Cart, Catalogue, Error, FeaturedProduct, Home, Product, TasteFinder } from 'src/views'
 
 const App = () => {
+  const [user] = useAuth()
+  console.log('user', user)
   return (
     <ApolloProvider client={storeFrontClient()}>
       <CartProvider>

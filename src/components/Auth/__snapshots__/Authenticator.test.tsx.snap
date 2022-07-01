@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Authenticator wrapper Renders correctly 1`] = `
+<div>
+  <div
+    class="Section__container___3YYTG"
+  >
+    <div
+      authstate="loading"
+      hide="function Greetings(props) {
+    var _this = _super.call(this, props) || this;
+
+    _this.state = {};
+    _this.onHubCapsule = _this.onHubCapsule.bind(_this);
+    _this.inGreeting = _this.inGreeting.bind(_this);
+    core_1.Hub.listen('auth', _this.onHubCapsule);
+    _this._validAuthStates = ['signedIn'];
+    return _this;
+  },function SignIn(props) {
+    var _this = _super.call(this, props) || this;
+
+    _this.checkContact = _this.checkContact.bind(_this);
+    _this.signIn = _this.signIn.bind(_this);
+    _this._validAuthStates = ['signIn', 'signedOut', 'signedUp'];
+    _this.state = {};
+    return _this;
+  },function ConfirmSignIn(props) {
+    var _this = _super.call(this, props) || this;
+
+    _this._validAuthStates = ['confirmSignIn'];
+    _this.confirm = _this.confirm.bind(_this);
+    _this.checkContact = _this.checkContact.bind(_this);
+    _this.state = {
+      mfaType: 'SMS'
+    };
+    return _this;
+  },function RequireNewPassword(props) {
+    var _this = _super.call(this, props) || this;
+
+    _this._validAuthStates = ['requireNewPassword'];
+    _this.change = _this.change.bind(_this);
+    _this.checkContact = _this.checkContact.bind(_this);
+    return _this;
+  },function SignUp(props) {
+    var _this = _super.call(this, props) || this;
+
+    _this.state = {
+      requestPending: false
+    };
+    _this._validAuthStates = ['signUp'];
+    _this.signUp = _this.signUp.bind(_this);
+    _this.sortFields = _this.sortFields.bind(_this);
+    _this.getDefaultDialCode = _this.getDefaultDialCode.bind(_this);
+    _this.checkCustomSignUpFields = _this.checkCustomSignUpFields.bind(_this);
+    _this.needPrefix = _this.needPrefix.bind(_this);
+    _this.header = _this.props && _this.props.signUpConfig && _this.props.signUpConfig.header ? _this.props.signUpConfig.header : 'Create a new account';
+    var _a = (_this.props || {}).usernameAttributes,
+        usernameAttributes = _a === void 0 ? types_1.UsernameAttributes.USERNAME : _a;
+
+    if (usernameAttributes === types_1.UsernameAttributes.EMAIL) {
+      _this.defaultSignUpFields = default_sign_up_fields_1.signUpWithEmailFields;
+    } else if (usernameAttributes === types_1.UsernameAttributes.PHONE_NUMBER) {
+      _this.defaultSignUpFields = default_sign_up_fields_1.signUpWithPhoneNumberFields;
+    } else {
+      _this.defaultSignUpFields = default_sign_up_fields_1.signUpWithUsernameFields;
+    }
+
+    return _this;
+  },function ConfirmSignUp(props) {
+    var _this = _super.call(this, props) || this;
+
+    _this._validAuthStates = ['confirmSignUp'];
+    _this.confirm = _this.confirm.bind(_this);
+    _this.resend = _this.resend.bind(_this);
+    return _this;
+  },function VerifyContact(props) {
+    var _this = _super.call(this, props) || this;
+
+    _this._validAuthStates = ['verifyContact'];
+    _this.verify = _this.verify.bind(_this);
+    _this.submit = _this.submit.bind(_this);
+    _this.state = {
+      verifyAttr: null
+    };
+    return _this;
+  },function ForgotPassword(props) {
+    var _this = _super.call(this, props) || this;
+
+    _this.send = _this.send.bind(_this);
+    _this.submit = _this.submit.bind(_this);
+    _this._validAuthStates = ['forgotPassword'];
+    _this.state = {
+      delivery: null
+    };
+    return _this;
+  },function TOTPSetup(props) {
+    var _this = _super.call(this, props) || this;
+
+    _this._validAuthStates = ['TOTPSetup'];
+    _this.onTOTPEvent = _this.onTOTPEvent.bind(_this);
+    _this.checkContact = _this.checkContact.bind(_this);
+    return _this;
+  },function Loading(props) {
+    var _this = _super.call(this, props) || this;
+
+    _this._validAuthStates = ['loading'];
+    return _this;
+  }"
+      override=""
+      theme="[object Object]"
+    >
+      Custom
+    </div>
+  </div>
+</div>
+`;
