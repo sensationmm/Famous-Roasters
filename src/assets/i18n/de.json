@@ -1,32 +1,58 @@
 {
   "auth": {
+    "cognito": {
+      "errors": {
+        "confirmUserInvalidParameter": {
+          "ctaText": "Anmelden",
+          "prompt": "E-mail-Adresse ungültig. Versuch eine andere E-mail-Adresse oder"
+        },
+        "confirmUserNotFound": {
+          "ctaText": "Registrieren",
+          "prompt": "E-mail-Adresse ungültig. Versuch eine andere E-mail-Adresse oder"
+        },
+        "forgotPasswordGeneric": {
+          "ctaText": "Registrieren",
+          "prompt": "E-mail-Adresse ungültig. Versuch eine andere E-mail-Adresse oder"
+        },
+        "generic": "Anmeldungsfehler",
+        "incorrectUserNameOrPassword": "Ungültige Daten",
+        "invalidCode": "Verifizierungscode ungültig oder abgelaufen. Bitte versuch mal einen neuen Code anzufragen.",
+        "loginGeneric": {
+          "ctaText": "Registrieren",
+          "prompt": "E-mail-Adresse oder Passwort ungültig, bitte prüfen oder"
+        },
+        "registerGeneric": {
+          "ctaText": "Anmelden",
+          "prompt": "E-mail-Adresse oder Passwort ungültig, bitte prüfen oder"
+        }
+      }
+    },
     "signIn": {
       "email": {
         "error": {
-          "invalidFormat": "Invalid email format",
-          "required": "Please input your email"
+          "invalidFormat": "Falsche Formatierung",
+          "required": "Trage bitte deine E-mail-Adresse ein"
         },
-        "label": "Deine E-Mail",
-        "placeholder": "Deine E-Mail"
+        "label": "Deine E-mail-Adresse",
+        "placeholder": "Deine E-mail-Adresse"
       },
       "forgotPassword": {
-        "action": "Reset password",
-        "prompt": "Forgot your password?"
+        "action": "Passwort vergessen?"
       },
       "password": {
         "error": {
-          "required": "Please input your password"
+          "required": "Trage bitte dein Passwort ein"
         },
         "label": "Dein Passwort",
         "placeholder": "Dein Passwort"
       },
       "signUp": {
-        "action": "Sign up here",
-        "prompt": "Don't have a Mallcule account yet?"
+        "action": "Registrieren",
+        "prompt": "Noch kein Konto?"
       },
-      "title": "Sign in"
+      "title": "Anmelden"
     },
-    "welcome": "Welcome to 60beans"
+    "welcome": "Willkommen bei 60beans"
   },
   "brand": {
     "copyright": "© {{year}} 60beans. Alle Rechte vorbehalten.",

@@ -4,17 +4,20 @@ import { IAuthPieceProps } from 'aws-amplify-react/lib-esm/Auth/AuthPiece'
 import Form from 'rc-field-form'
 import React from 'react'
 import {
+  AuthCognitoErrors,
+  AuthFormAction,
   AuthFormButton,
   AuthFormEmail,
   AuthFormPassword,
   Badge,
+  Button,
+  ButtonEmphasis,
+  ButtonSize,
   Typography,
   TypographySize,
   TypographyType,
 } from 'src/components'
 import i18n from 'src/config/i18n'
-
-// import { AuthCognitoErrors, AuthFormAction } from '.'
 
 interface SignInParams {
   email: string
@@ -64,25 +67,29 @@ export class AuthSignIn extends SignIn {
 
   renderSignInMiddleActions(): JSX.Element {
     return (
-      <div>SignInMiddleActions</div>
-      /*<AuthFormAction
-        promptText={`${i18n.t('auth.signIn.forgotPassword.prompt')} `}
+      <AuthFormAction
         onClick={() => this.changeState('forgotPassword')}
         dataTestId="forgotPasswordLink"
-        ctaText={i18n.t('auth.signIn.forgotPassword.action')}
-      />*/
+        ctaText={i18n.t<string>('auth.signIn.forgotPassword.action')}
+        className="flex w-fit float-right mt-6 mb-6 border-b cursor-pointer"
+      />
     )
   }
 
   renderSignInFooterActions(): JSX.Element {
     return (
-      <div>SignInFooterActions</div>
-      /*<AuthFormAction
-        promptText={`${i18n.t('auth.signIn.signUp.prompt')} `}
-        onClick={() => this.changeState('signUp')}
-        dataTestId="goToSignUpLink"
-        ctaText={i18n.t('auth.signIn.signUp.action')}
-      />*/
+      <div className="my-4">
+        <Button
+          type="button"
+          emphasis={ButtonEmphasis.Tertiary}
+          size={ButtonSize.lg}
+          onClick={() => this.changeState('signUp')}
+          data-testid="goToSignUpLink"
+          className="flex w-full justify-center"
+        >
+          {i18n.t<string>('auth.signIn.signUp.action')}
+        </Button>
+      </div>
     )
   }
 
@@ -98,8 +105,8 @@ export class AuthSignIn extends SignIn {
           </Typography>
         </div>
         <div className="mt-12">
-          {/*<AuthCognitoErrors errorCode={this.props.authData?.errorCode} />*/}
-          <Form name="signIn" onFinish={this.signInUser}>
+          <AuthCognitoErrors errorCode={this.props.authData?.errorCode} />
+          <Form name="signIn" onFinish={this.signInUser} method="POST">
             {(values, form) => {
               const allTouched = form.isFieldTouched('email') && form.isFieldTouched('password')
               const hasErrors = form.getFieldsError().filter((entry) => entry.errors.length > 0).length > 0
