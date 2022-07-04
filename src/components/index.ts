@@ -1,4 +1,4 @@
-import { Authenticator, AuthFormEmail, AuthFormItemInput, AuthFormPassword, AuthSignIn } from './Auth'
+import { Authenticator, AuthFormButton, AuthFormEmail, AuthFormItemInput, AuthFormPassword, AuthSignIn } from './Auth'
 import { Badge } from './Badge'
 import { BeanScaleTag } from './BeanScaleTag'
 import { Button, ButtonEmphasis, ButtonSize } from './Button'
@@ -33,6 +33,7 @@ import { Tag, TagType } from './Tag'
 import { TasteProfile } from './TasteProfile'
 import { Typography, TypographySize, TypographyType } from './Typography'
 
+export { AuthFormButton as AuthFormButton }
 export { AuthFormEmail as AuthFormEmail }
 export { AuthFormItemInput as AuthFormItemInput }
 export { AuthFormPassword as AuthFormPassword }

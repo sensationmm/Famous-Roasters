@@ -4,19 +4,17 @@ import { IAuthPieceProps } from 'aws-amplify-react/lib-esm/Auth/AuthPiece'
 import Form from 'rc-field-form'
 import React from 'react'
 import {
+  AuthFormButton,
   AuthFormEmail,
   AuthFormPassword,
   Badge,
-  Button,
-  ButtonEmphasis,
-  ButtonSize,
   Typography,
   TypographySize,
   TypographyType,
 } from 'src/components'
 import i18n from 'src/config/i18n'
 
-// import { AuthCognitoErrors, AuthFormAction, AuthFormButton } from '.'
+// import { AuthCognitoErrors, AuthFormAction } from '.'
 
 interface SignInParams {
   email: string
@@ -61,19 +59,7 @@ export class AuthSignIn extends SignIn {
   }
 
   renderSignInButton(disabled: boolean): JSX.Element {
-    return (
-      <Button
-        type="submit"
-        emphasis={ButtonEmphasis.Primary}
-        size={ButtonSize.lg}
-        data-testid="submit"
-        className="flex w-full justify-center"
-        disabled={disabled}
-      >
-        {i18n.t<string>('auth.signIn.title')}
-      </Button>
-    )
-    // return <AuthFormButton ctaText={i18n.t('auth.signIn.title')} />
+    return <AuthFormButton ctaText={i18n.t<string>('auth.signIn.title')} disabled={disabled} />
   }
 
   renderSignInMiddleActions(): JSX.Element {
@@ -115,12 +101,13 @@ export class AuthSignIn extends SignIn {
           {/*<AuthCognitoErrors errorCode={this.props.authData?.errorCode} />*/}
           <Form name="signIn" onFinish={this.signInUser}>
             {(values, form) => {
+              const allTouched = form.isFieldTouched('email') && form.isFieldTouched('password')
               const hasErrors = form.getFieldsError().filter((entry) => entry.errors.length > 0).length > 0
               return (
                 <>
                   {this.renderSignInInputs()}
                   {this.renderSignInMiddleActions()}
-                  {this.renderSignInButton(!form.isFieldsTouched() || hasErrors)}
+                  {this.renderSignInButton(!allTouched || hasErrors)}
                   {this.renderSignInFooterActions()}
                 </>
               )
