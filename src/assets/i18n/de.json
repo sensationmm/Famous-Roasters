@@ -48,7 +48,7 @@
       },
       "signUp": {
         "action": "Registrieren",
-        "prompt": "Noch kein Konto?"
+        "prompt": "Ich bin neu hier"
       },
       "title": "Anmelden"
     },

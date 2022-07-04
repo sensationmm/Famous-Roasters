@@ -78,7 +78,13 @@ export class AuthSignIn extends SignIn {
 
   renderSignInFooterActions(): JSX.Element {
     return (
-      <div className="my-4">
+      <div className="mt-10">
+        <div className="flex">
+          <div className="border-t border-brand-grey-whisper absolute w-full left-0" />
+        </div>
+        <Typography as="div" type={TypographyType.Heading} size={TypographySize.Tiny} className="mt-4 mb-4">
+          {i18n.t<string>('auth.signIn.signUp.prompt')}
+        </Typography>
         <Button
           type="button"
           emphasis={ButtonEmphasis.Tertiary}
