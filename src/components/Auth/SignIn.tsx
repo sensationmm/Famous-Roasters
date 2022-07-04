@@ -60,7 +60,7 @@ export class AuthSignIn extends SignIn {
     )
   }
 
-  renderSignInButton(): JSX.Element {
+  renderSignInButton(disabled: boolean): JSX.Element {
     return (
       <Button
         type="submit"
@@ -68,6 +68,7 @@ export class AuthSignIn extends SignIn {
         size={ButtonSize.lg}
         data-testid="submit"
         className="flex w-full justify-center"
+        disabled={disabled}
       >
         {i18n.t<string>('auth.signIn.title')}
       </Button>
@@ -113,10 +114,17 @@ export class AuthSignIn extends SignIn {
         <div className="mt-12">
           {/*<AuthCognitoErrors errorCode={this.props.authData?.errorCode} />*/}
           <Form name="signIn" onFinish={this.signInUser}>
-            {this.renderSignInInputs()}
-            {this.renderSignInMiddleActions()}
-            {this.renderSignInButton()}
-            {this.renderSignInFooterActions()}
+            {(values, form) => {
+              const hasErrors = form.getFieldsError().filter((entry) => entry.errors.length > 0).length > 0
+              return (
+                <>
+                  {this.renderSignInInputs()}
+                  {this.renderSignInMiddleActions()}
+                  {this.renderSignInButton(!form.isFieldsTouched() || hasErrors)}
+                  {this.renderSignInFooterActions()}
+                </>
+              )
+            }}
           </Form>
         </div>
       </div>
