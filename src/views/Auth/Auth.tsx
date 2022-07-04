@@ -1,17 +1,46 @@
 import React from 'react'
-import { Authenticator, AuthSignIn, Layout, NavigationTheme } from 'src/components'
+import { useNavigate } from 'react-router-dom'
+import { Authenticator, AuthSignIn, AuthSignUp, Layout, NavigationTheme } from 'src/components'
 
 interface AuthProps {
   authState: string
 }
 
 export const Auth: React.FC<AuthProps> = ({ authState }) => {
+  const navigate = useNavigate()
   const handleAuthStateChange = (state: string) => {
-    console.log('state becomes =', state)
+    switch (state) {
+      case 'signUp':
+      case 'signUpError':
+        window.location.pathname !== '/register' && navigate('/register')
+        break
+      case 'confirmSignUp':
+      case 'confirmSignUpError':
+        window.location.pathname !== '/register-confirm' && navigate('/register-confirm')
+        break
+      case 'forgotPassword':
+      case 'forgotPasswordError':
+        window.location.pathname !== '/reset-password' && navigate('/reset-password')
+        break
+      case 'signedIn':
+        navigate('/logged-in')
+        break
+      case 'signIn':
+      case 'signInError':
+      default:
+        window.location.pathname !== '/login' && navigate('/login')
+        break
+    }
   }
 
   const innerContent = () => {
     switch (authState) {
+      case 'signUp':
+        return (
+          <Authenticator hideDefault={true} authState="signUp" onStateChange={handleAuthStateChange}>
+            <AuthSignUp />
+          </Authenticator>
+        )
       case 'signIn':
       default:
         return (
@@ -24,7 +53,7 @@ export const Auth: React.FC<AuthProps> = ({ authState }) => {
 
   return (
     <Layout navigationTheme={NavigationTheme.Home} showFooter={false}>
-      <main className="flex-grow flex items-start justify-center bg-white my-8 mx-6 md:my-12 md:mx-0">
+      <main className="flex-grow flex items-start justify-center bg-white">
         <div className="w-full md:w-1/2">{innerContent()}</div>
       </main>
     </Layout>

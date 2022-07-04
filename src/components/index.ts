@@ -3,10 +3,12 @@ import {
   Authenticator,
   AuthFormAction,
   AuthFormButton,
+  AuthFormDoublePassword,
   AuthFormEmail,
   AuthFormItemInput,
   AuthFormPassword,
   AuthSignIn,
+  AuthSignUp,
 } from './Auth'
 import { Badge } from './Badge'
 import { BeanScaleTag } from './BeanScaleTag'
@@ -45,11 +47,13 @@ import { Typography, TypographySize, TypographyType } from './Typography'
 export { AuthCognitoErrors as AuthCognitoErrors }
 export { AuthFormAction as AuthFormAction }
 export { AuthFormButton as AuthFormButton }
+export { AuthFormDoublePassword as AuthFormDoublePassword }
 export { AuthFormEmail as AuthFormEmail }
 export { AuthFormItemInput as AuthFormItemInput }
 export { AuthFormPassword as AuthFormPassword }
 export { Authenticator as Authenticator }
 export { AuthSignIn as AuthSignIn }
+export { AuthSignUp as AuthSignUp }
 export { Badge as Badge }
 export { BeanScaleTag as BeanScaleTag }
 export { Button as Button }

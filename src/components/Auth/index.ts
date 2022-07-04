@@ -2,16 +2,20 @@ import { AuthCognitoErrors } from './AuthCognitoErrors'
 import { Authenticator } from './Authenticator'
 import { AuthFormAction } from './AuthFormAction'
 import { AuthFormButton } from './AuthFormButton'
+import { AuthFormDoublePassword } from './AuthFormDoublePassword'
 import { AuthFormEmail } from './AuthFormEmail'
 import { AuthFormItemInput } from './AuthFormItemInput'
 import { AuthFormPassword } from './AuthFormPassword'
 import { AuthSignIn } from './SignIn'
+import { AuthSignUp } from './SignUp'
 
 export { AuthCognitoErrors as AuthCognitoErrors }
 export { Authenticator as Authenticator }
 export { AuthFormAction as AuthFormAction }
 export { AuthFormButton as AuthFormButton }
+export { AuthFormDoublePassword as AuthFormDoublePassword }
 export { AuthFormEmail as AuthFormEmail }
 export { AuthFormItemInput as AuthFormItemInput }
 export { AuthFormPassword as AuthFormPassword }
 export { AuthSignIn as AuthSignIn }
+export { AuthSignUp as AuthSignUp }

@@ -52,6 +52,54 @@
       },
       "title": "Anmelden"
     },
+    "signUp": {
+      "confirmSignUp": {
+        "action": "E-mail-Adresse bestätigen"
+      },
+      "confirmTos": {
+        "error": {
+          "required": "You need to tick the check box below to agree with the Terms and Conditions and the Privacy Policy before we can proceed"
+        },
+        "label": "By signing up I agree with the Terms and conditions and Privacy Policy."
+      },
+      "cta": "Registrieren",
+      "email": {
+        "error": {
+          "invalidFormat": "Invalid email format",
+          "required": "Please input your email"
+        },
+        "label": "Deine E-mail-Adresse",
+        "placeholder": "Deine E-mail-Adresse"
+      },
+      "password": {
+        "error": {
+          "maxLength": "Your password must not be longer than 98 chars",
+          "minLength": "Your password must be at least 8 characters long",
+          "mustContainLowercase": "Your password must contain at least one lowercase letter",
+          "mustContainNumber": "Your password must contain at least one number",
+          "mustContainSpecial": "Your password must contain at least one special character: ^$*.[]{}()?\"!@#%&/\\,><':;|_~`",
+          "mustContainUppercase": "Your password must contain at least one uppercase letter",
+          "noSpaces": "Your password cannot contain spaces",
+          "required": "Please input your password"
+        },
+        "label": "Dein Passwort",
+        "placeholder": "Dein Passwort"
+      },
+      "passwordRepeat": {
+        "error": {
+          "matchError": "The password does not match",
+          "required": "Please repeat your password"
+        },
+        "label": "Passwort wiederholen",
+        "placeholder": "Passwort wiederholen"
+      },
+      "signIn": {
+        "action": "Anmelden",
+        "prompt": "Du hast bereits ein Konto?"
+      },
+      "title": "Erstelle ein Konto",
+      "withEmail": "Registrierung mit Email"
+    },
     "welcome": "Willkommen bei 60beans"
   },
   "brand": {

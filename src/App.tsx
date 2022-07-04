@@ -30,6 +30,7 @@ const App = () => {
               />
               <Route path="/featured/:id" element={<FeaturedProduct />} />
               <Route path="/login" element={<Auth authState={'signIn'} />} />
+              <Route path="/register" element={<Auth authState={'signUp'} />} />
               <Route path="*" element={<Error />} />
             </Routes>
           </BrowserRouter>
