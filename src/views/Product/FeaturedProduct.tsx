@@ -32,8 +32,9 @@ import {
   TypographySize,
   TypographyType,
 } from 'src/components'
-import { getAPIProductId, getAromaKey } from 'src/utils'
+import { getAPIProductId, getAromaKey, useLocalStorage } from 'src/utils'
 
+import { TasteFinderField } from '../TasteFinder'
 import { getGuideImages, getTasteResults, TasteProfile } from '.'
 
 interface ProductMeta {
@@ -80,6 +81,8 @@ export const FeaturedProduct: React.FC = () => {
   const { id } = useParams()
   const { t } = useTranslation()
   const GET_PRODUCT = loader('src/graphql/queries/product.query.graphql')
+  const [tasteFinderDataJSON] = useLocalStorage('tasteFinder', '')
+  const tasteFinderData = tasteFinderDataJSON && JSON.parse(tasteFinderDataJSON)
 
   useEffect(() => {
     document.title = `${t('brand.name')} | ${t('pages.product.title')}`
@@ -95,12 +98,11 @@ export const FeaturedProduct: React.FC = () => {
 
   const { aroma, images, title, whyThisCoffee } = data?.product || {}
 
-  // TODO - this is hardcoded for now, as next: grab the stored taste profile data
   const tasteProfileResults: TasteProfile = {
-    acidity: 1,
-    bitterness: 2,
-    sweetness: 3,
-    body: 1,
+    acidity: tasteFinderDataJSON && tasteFinderData.find((el: TasteFinderField) => el.name === 'acidity').value,
+    bitterness: tasteFinderDataJSON && tasteFinderData.find((el: TasteFinderField) => el.name === 'bitterness').value,
+    sweetness: tasteFinderDataJSON && tasteFinderData.find((el: TasteFinderField) => el.name === 'sweetness').value,
+    body: tasteFinderDataJSON && tasteFinderData.find((el: TasteFinderField) => el.name === 'body').value,
   }
 
   if (error) {
@@ -113,6 +115,14 @@ export const FeaturedProduct: React.FC = () => {
         <Loader />
       </div>
     )
+  }
+
+  const getMatchScore = () => {
+    const recommendations =
+      tasteFinderDataJSON && tasteFinderData.find((el: TasteFinderField) => el.name === 'recommendations').value
+    const score = Math.round(recommendations[0]?.score * 100)
+
+    return score || 0
   }
 
   const renderYourCoffeeTypeBlock = (aromaValue: string) => {
@@ -228,7 +238,7 @@ export const FeaturedProduct: React.FC = () => {
                 className="p-0"
               />
               <div className="mt-4">
-                <Tag type={TagType.TasteFinder} value="98% Übereinstimmung" />
+                <Tag type={TagType.TasteFinder} value={`${getMatchScore()}% Übereinstimmung`} />
               </div>
             </Link>
           )}

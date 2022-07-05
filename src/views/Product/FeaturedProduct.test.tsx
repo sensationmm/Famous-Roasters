@@ -15,6 +15,7 @@ delete window.history
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 window.history = { go: jest.fn() }
+window.localStorage.setItem('tasteFinder', '')
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'), // use actual for all non-hook parts

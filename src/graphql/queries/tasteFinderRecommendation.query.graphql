@@ -1,5 +1,13 @@
 query tasteFinderRecommendation($profile: TasteFinderProfile!) {
-    tasteFinderRecommendation(profile: $profile) {
-        shopifyProductIds
+  tasteFinderRecommendation(profile: $profile, algorithm: "SQUARE_DIFFERENCE") {
+    shopifyProductIds
+    recommendations {
+      shopifyId
+      score
+      acidity
+      bitterness
+      sweetness
+      body
     }
+  }
 }
