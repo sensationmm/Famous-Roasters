@@ -509,6 +509,10 @@
             "none": "Standard"
           }
         },
+        "aroma": {
+          "label": "Geschmacksprofile",
+          "values": {}
+        },
         "vendor": {
           "label": "Röster"
         }

@@ -3,7 +3,17 @@ import { TrashIcon } from '@heroicons/react/outline'
 import { CheckIcon, ChevronLeftIcon } from '@heroicons/react/solid'
 import React, { Fragment, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Button, ButtonEmphasis, ButtonSize, Typography, TypographySize, TypographyType } from 'src/components'
+import {
+  Button,
+  ButtonEmphasis,
+  ButtonSize,
+  Tag,
+  TagSwatch,
+  TagType,
+  Typography,
+  TypographySize,
+  TypographyType,
+} from 'src/components'
 
 export interface FilterData {
   key: string
@@ -135,14 +145,28 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({
                       {isSelected(filterValue) ? (
                         <span className="inline-flex items-center">
                           <CheckIcon className="w-5 h-5 mr-2 text-brand-green-club" aria-hidden="true" />
-                          {renderFilterValue(filterValue, false)}
+                          {filter?.key !== 'aroma' ? (
+                            renderFilterValue(filterValue, false)
+                          ) : (
+                            <Tag data-testid="filter-selected-tag" type={TagType.Aroma} value={filterValue} />
+                          )}
                         </span>
                       ) : (
-                        renderFilterValue(filterValue, true)
+                        <span className="inline-flex items-left">
+                          {filter?.key === 'aroma' && (
+                            <TagSwatch data-testid="filter-option-tagSwatch" type={TagType.Aroma} value={filterValue} />
+                          )}
+                          {renderFilterValue(filterValue, true)}
+                        </span>
                       )}
                     </div>
                     {hasSpacerAfterItem && hasSpacerAfterItem.indexOf(filterValue) !== -1 && (
-                      <div className="flex justify-between px-5 py-5 border-b border-coreUI-text-tertiary">--</div>
+                      <div
+                        data-testid="filter-option-spacer"
+                        className="flex justify-between px-5 py-5 border-b border-coreUI-text-tertiary"
+                      >
+                        --
+                      </div>
                     )}
                   </div>
                 ))

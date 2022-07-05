@@ -1,7 +1,15 @@
 import { render, waitFor } from '@testing-library/react'
 import React from 'react'
 
-import { Tag, TagType } from '.'
+import { Tag, TagSwatch, TagType } from '.'
+
+describe('TagSwatch component', () => {
+  it('Renders correctly', async () => {
+    const { container } = render(<TagSwatch value="sweet" />)
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
+})
 
 describe('Tag component', () => {
   it('Renders correctly', async () => {

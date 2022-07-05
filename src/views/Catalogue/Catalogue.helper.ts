@@ -9,6 +9,7 @@ interface QueryFilterResult {
   beanType: string[]
   origin: string[]
   packageSize: string[]
+  aroma: string[]
 }
 
 interface SortParams {
@@ -24,6 +25,7 @@ export const getQueryFilter = (fData: Collection, f: FilterData[]): QueryFilterR
   const beanType: string[] = []
   const origin: string[] = []
   const packageSize: string[] = []
+  const aroma: string[] = []
   f.forEach((filter) => {
     if (filter.filterValuesSelected && filter.filterValuesSelected?.length > 0) {
       switch (filter.key) {
@@ -34,22 +36,20 @@ export const getQueryFilter = (fData: Collection, f: FilterData[]): QueryFilterR
           })
           break
         case 'coffeeType':
-          filter.filterValuesSelected[0] !== 'none' &&
-            filter.filterValuesSelected.forEach((filterValue) => {
-              coffeeType.push(filterValue)
-              queryFilter.push({
-                productMetafield: { namespace: 'my_fields', key: 'coffee_type', value: `${filterValue}` },
-              })
+          filter.filterValuesSelected.forEach((filterValue) => {
+            coffeeType.push(filterValue)
+            queryFilter.push({
+              productMetafield: { namespace: 'my_fields', key: 'coffee_type', value: `${filterValue}` },
             })
+          })
           break
         case 'decaf':
-          filter.filterValuesSelected[0] !== 'none' &&
-            filter.filterValuesSelected.forEach((filterValue) => {
-              decaf.push(filterValue)
-              queryFilter.push({
-                productMetafield: { namespace: 'my_fields', key: 'decaf', value: `${filterValue}` },
-              })
+          filter.filterValuesSelected.forEach((filterValue) => {
+            decaf.push(filterValue)
+            queryFilter.push({
+              productMetafield: { namespace: 'my_fields', key: 'decaf', value: `${filterValue}` },
             })
+          })
           break
         case 'beanType':
           filter.filterValuesSelected.forEach((filterValue) => {
@@ -91,11 +91,19 @@ export const getQueryFilter = (fData: Collection, f: FilterData[]): QueryFilterR
             })
           })
           break
+        case 'aroma':
+          filter.filterValuesSelected.forEach((filterValue) => {
+            aroma.push(filterValue)
+            queryFilter.push({
+              productMetafield: { namespace: 'my_fields', key: 'aroma', value: `${filterValue}` },
+            })
+          })
+          break
       }
     }
   })
 
-  return { queryFilter, vendor, coffeeType, decaf, beanType, origin, packageSize }
+  return { queryFilter, vendor, coffeeType, decaf, beanType, origin, packageSize, aroma }
 }
 
 export const getFilterValues = (fData: Collection, key: string) => {
@@ -155,6 +163,8 @@ export const getFilterValues = (fData: Collection, key: string) => {
             .sort((a, b) => (parseFloat(a) > parseFloat(b) ? 1 : -1)),
         ),
       )
+    case 'aroma':
+      return standardFilterValues('aroma')
   }
 }
 
@@ -166,6 +176,7 @@ export const getFilterData = (
   vendor?: string[],
   origin?: string[],
   packageSize?: string[],
+  aroma?: string[],
 ): FilterData[] => {
   return [
     {
@@ -210,6 +221,13 @@ export const getFilterData = (
       filterType: 'enum',
       filterValues: getFilterValues(filterInput, 'package_size'),
       filterValuesSelected: packageSize ? packageSize : [],
+    },
+    {
+      key: 'aroma',
+      isOpen: false,
+      filterType: 'enum',
+      filterValues: getFilterValues(filterInput, 'aroma'),
+      filterValuesSelected: aroma ? aroma : [],
     },
   ]
 }

@@ -28,7 +28,7 @@ import { ProductTile } from './ProductTile'
 import { QuantitySelect } from './QuantitySelect'
 import { StickyBottomNavigation } from './StickyBottomNavigation'
 import { TabsNavigation } from './TabsNavigation'
-import { Tag, TagType } from './Tag'
+import { Tag, TagSwatch, TagType } from './Tag'
 import { TasteProfile } from './TasteProfile'
 import { Typography, TypographySize, TypographyType } from './Typography'
 
@@ -74,6 +74,7 @@ export { StickyBottomNavigation as StickyBottomNavigation }
 export { QuantitySelect as QuantitySelect }
 export { TabsNavigation as TabsNavigation }
 export { Tag as Tag }
+export { TagSwatch as TagSwatch }
 export { TagType as TagType }
 export type { TasteInfoEntry as TasteInfoEntry }
 export { TasteProfile as TasteProfile }

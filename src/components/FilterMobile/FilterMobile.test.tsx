@@ -90,6 +90,64 @@ describe('Filter Mobile component', () => {
     fireEvent.click(buttonFilterClose)
   })
 
+  it('show TagSwatch if aroma', async () => {
+    render(
+      <I18nextProvider i18n={i18n}>
+        <MemoryRouter initialEntries={['/catalogue']}>
+          <FilterMobile
+            filter={{ key: 'aroma', isOpen: true, filterType: 'enum', filterValues: ['1', '2'] }}
+            show={true}
+            back={() => alert('back!')}
+            update={() => alert('update!')}
+          />
+        </MemoryRouter>
+      </I18nextProvider>,
+    )
+    const TagSwatch = await screen.findAllByTestId('filter-option-tagSwatch')
+    expect(TagSwatch).toHaveLength(2)
+  })
+
+  it('show Tag if aroma and selected', async () => {
+    render(
+      <I18nextProvider i18n={i18n}>
+        <MemoryRouter initialEntries={['/catalogue']}>
+          <FilterMobile
+            filter={{
+              key: 'aroma',
+              isOpen: true,
+              filterType: 'enum',
+              filterValues: ['1', '2'],
+              filterValuesSelected: ['1'],
+            }}
+            show={true}
+            back={() => alert('back!')}
+            update={() => alert('update!')}
+          />
+        </MemoryRouter>
+      </I18nextProvider>,
+    )
+    const Tag = await screen.findByTestId('filter-selected-tag')
+    expect(Tag).toBeInTheDocument()
+  })
+
+  it('renders spacer', async () => {
+    render(
+      <I18nextProvider i18n={i18n}>
+        <MemoryRouter initialEntries={['/catalogue']}>
+          <FilterMobile
+            filter={{ key: 'filter-key', isOpen: true, filterType: 'enum', filterValues: ['1', '2'] }}
+            show={true}
+            back={() => alert('back!')}
+            update={() => alert('update!')}
+            hasSpacerAfterItem={['1']}
+          />
+        </MemoryRouter>
+      </I18nextProvider>,
+    )
+    const Spacer = await screen.findByTestId('filter-option-spacer')
+    expect(Spacer).toBeInTheDocument()
+  })
+
   it('Can be closed', async () => {
     render(
       <I18nextProvider i18n={i18n}>

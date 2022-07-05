@@ -1,26 +1,29 @@
 query filterAttributes {
-    products(first: 50) {
+  products(first: 50) {
+    nodes {
+      vendor
+      coffee_type: metafield(namespace: "my_fields", key: "coffee_type") {
+        value
+      }
+      aroma: metafield(namespace: "my_fields", key: "aroma") {
+        value
+      }
+      bean_type: metafield(namespace: "my_fields", key: "bean_type") {
+        value
+      }
+      origin: metafield(namespace: "my_fields", key: "origin") {
+        value
+      }
+      decaf: metafield(namespace: "my_fields", key: "decaf") {
+        value
+      }
+      variants(first: 10) {
         nodes {
-            vendor
-            coffee_type: metafield(namespace: "my_fields", key: "coffee_type") {
-                value
-            }
-            bean_type: metafield(namespace: "my_fields", key: "bean_type") {
-                value
-            }
-            origin: metafield(namespace: "my_fields", key: "origin") {
-                value
-            }
-            decaf: metafield(namespace: "my_fields", key: "decaf") {
-                value
-            }
-            variants(first: 10) {
-                nodes {
-                    package_size: metafield(namespace: "my_fields", key: "package_size") {
-                        value
-                    }
-                }
-            }
+          package_size: metafield(namespace: "my_fields", key: "package_size") {
+            value
+          }
         }
+      }
     }
+  }
 }
