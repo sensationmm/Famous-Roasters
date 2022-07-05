@@ -4,6 +4,7 @@ import { Icon, IconName, IconSize, Typography, TypographySize, TypographyType } 
 interface IconCheckboxProps extends React.HTMLAttributes<HTMLElement> {
   name: string
   text: string
+  small?: boolean
   selected?: boolean
   toggleSelected?: (selected: boolean) => void
 }
@@ -11,6 +12,7 @@ interface IconCheckboxProps extends React.HTMLAttributes<HTMLElement> {
 export const Checkbox: React.FC<IconCheckboxProps> = ({
   text,
   selected = false,
+  small = false,
   toggleSelected,
 }: IconCheckboxProps) => {
   const [isSelected, setIsSelected] = useState<boolean>(selected)
@@ -27,7 +29,7 @@ export const Checkbox: React.FC<IconCheckboxProps> = ({
 
   return (
     <button
-      className={`flex w-full flex-row items-center cursor-pointer`}
+      className={`flex w-full flex-row items-start cursor-pointer`}
       data-testid="checkbox"
       onClick={(ev) => handleClick(ev)}
     >
@@ -37,7 +39,7 @@ export const Checkbox: React.FC<IconCheckboxProps> = ({
       <Typography
         as="div"
         type={TypographyType.Paragraph}
-        size={TypographySize.Base}
+        size={small ? TypographySize.Tiny : TypographySize.Base}
         className="flex grow text-left pl-2"
       >
         {text}

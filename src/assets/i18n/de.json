@@ -60,7 +60,7 @@
         "error": {
           "required": "You need to tick the check box below to agree with the Terms and Conditions and the Privacy Policy before we can proceed"
         },
-        "label": "By signing up I agree with the Terms and conditions and Privacy Policy."
+        "label": "Indem Du auf “Registrieren” klickst, erstellst Du ein 60beans-Konto und stimmst unseren Nutzungs-bedingungen sowie Datenschutzrichtlinien zu."
       },
       "cta": "Registrieren",
       "email": {

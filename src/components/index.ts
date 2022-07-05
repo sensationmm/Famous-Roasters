@@ -3,6 +3,7 @@ import {
   Authenticator,
   AuthFormAction,
   AuthFormButton,
+  AuthFormCheckbox,
   AuthFormDoublePassword,
   AuthFormEmail,
   AuthFormItemInput,
@@ -47,6 +48,7 @@ import { Typography, TypographySize, TypographyType } from './Typography'
 export { AuthCognitoErrors as AuthCognitoErrors }
 export { AuthFormAction as AuthFormAction }
 export { AuthFormButton as AuthFormButton }
+export { AuthFormCheckbox as AuthFormCheckbox }
 export { AuthFormDoublePassword as AuthFormDoublePassword }
 export { AuthFormEmail as AuthFormEmail }
 export { AuthFormItemInput as AuthFormItemInput }

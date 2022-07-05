@@ -10,7 +10,7 @@ import {
   AuthCognitoErrors,
   AuthFormAction,
   AuthFormButton,
-  //AuthFormCheckbox,
+  AuthFormCheckbox,
   AuthFormDoublePassword,
   AuthFormEmail,
 } from '.'
@@ -27,6 +27,7 @@ export class AuthSignUp extends SignUp {
   }
 
   signUpUser = async (params: SignUpParams): Promise<void> => {
+    console.log('signUpUser', params)
     await Auth.signUp(params.email, params.password)
       .then(() => this.changeState('confirmSignUp'))
       .catch((error) => {
@@ -65,7 +66,11 @@ export class AuthSignUp extends SignUp {
   }
 
   renderSignUpButton(disabled: boolean): JSX.Element {
-    return <AuthFormButton ctaText={i18n.t<string>('auth.signUp.cta')} disabled={disabled} />
+    return (
+      <div className="mt-8">
+        <AuthFormButton ctaText={i18n.t<string>('auth.signUp.cta')} disabled={disabled} />
+      </div>
+    )
   }
 
   renderSignUpMiddleActions(): JSX.Element {
@@ -80,7 +85,11 @@ export class AuthSignUp extends SignUp {
   }
 
   renderConfirmTos(): JSX.Element {
-    return <span>TOS</span> /*<AuthFormCheckbox dataTestId="confirmTos" screenKey="signUp.confirmTos" />*/
+    return (
+      <div className="mt-8">
+        <AuthFormCheckbox dataTestId="confirmTos" screenKey="signUp.confirmTos" name="confirmTos" />
+      </div>
+    )
   }
 
   renderSignUpFooterActions(): JSX.Element {
