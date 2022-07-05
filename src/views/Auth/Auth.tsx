@@ -1,6 +1,14 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Authenticator, AuthSignIn, AuthSignUp, Layout, NavigationTheme } from 'src/components'
+import {
+  AuthConfirmSignUp,
+  Authenticator,
+  AuthForgotPassword,
+  AuthSignIn,
+  AuthSignUp,
+  Layout,
+  NavigationTheme,
+} from 'src/components'
 
 interface AuthProps {
   authState: string
@@ -39,6 +47,18 @@ export const Auth: React.FC<AuthProps> = ({ authState }) => {
         return (
           <Authenticator hideDefault={true} authState="signUp" onStateChange={handleAuthStateChange}>
             <AuthSignUp />
+          </Authenticator>
+        )
+      case 'forgotPassword':
+        return (
+          <Authenticator hideDefault={true} authState="signUp" onStateChange={handleAuthStateChange}>
+            <AuthForgotPassword />
+          </Authenticator>
+        )
+      case 'confirmSignUp':
+        return (
+          <Authenticator hideDefault={true} authState="signUp" onStateChange={handleAuthStateChange}>
+            <AuthConfirmSignUp />
           </Authenticator>
         )
       case 'signIn':

@@ -1,9 +1,12 @@
 import {
   AuthCognitoErrors,
+  AuthConfirmSignUp,
   Authenticator,
+  AuthForgotPassword,
   AuthFormAction,
   AuthFormButton,
   AuthFormCheckbox,
+  AuthFormCode,
   AuthFormDoublePassword,
   AuthFormEmail,
   AuthFormItemInput,
@@ -46,9 +49,12 @@ import { TasteProfile } from './TasteProfile'
 import { Typography, TypographySize, TypographyType } from './Typography'
 
 export { AuthCognitoErrors as AuthCognitoErrors }
+export { AuthConfirmSignUp as AuthConfirmSignUp }
+export { AuthForgotPassword as AuthForgotPassword }
 export { AuthFormAction as AuthFormAction }
 export { AuthFormButton as AuthFormButton }
 export { AuthFormCheckbox as AuthFormCheckbox }
+export { AuthFormCode as AuthFormCode }
 export { AuthFormDoublePassword as AuthFormDoublePassword }
 export { AuthFormEmail as AuthFormEmail }
 export { AuthFormItemInput as AuthFormItemInput }

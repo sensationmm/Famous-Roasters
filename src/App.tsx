@@ -31,6 +31,8 @@ const App = () => {
               <Route path="/featured/:id" element={<FeaturedProduct />} />
               <Route path="/login" element={<Auth authState={'signIn'} />} />
               <Route path="/register" element={<Auth authState={'signUp'} />} />
+              <Route path="/register-confirm" element={<Auth authState={'confirmSignUp'} />} />
+              <Route path="/reset-password" element={<Auth authState={'forgotPassword'} />} />
               <Route path="*" element={<Error />} />
             </Routes>
           </BrowserRouter>

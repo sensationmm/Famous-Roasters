@@ -27,6 +27,65 @@
         }
       }
     },
+    "forgotPassword": {
+      "cta": "Schicken",
+      "emailSent": "Verification code sent. Please check your email.",
+      "resend": {
+        "action": "Send again",
+        "prompt": "Need a new verification code?"
+      },
+      "setNewPassword": {
+        "code": {
+          "error": {
+            "format": "Invalid or expired verification code",
+            "required": "Please input your verification code"
+          },
+          "label": "Verification code",
+          "placeholder": "Please enter your verification code"
+        },
+        "cta": "Set password",
+        "password": {
+          "error": {
+            "maxLength": "Your password must not be longer than 98 chars",
+            "minLength": "Your password must be at least 8 characters long",
+            "mustContainLowercase": "Your password must contain at least one lowercase letter",
+            "mustContainNumber": "Your password must contain at least one number",
+            "mustContainSpecial": "Your password must contain at least one special character: ^$*.[]{}()?\"!@#%&/\\,><':;|_~`",
+            "mustContainUppercase": "Your password must contain at least one uppercase letter",
+            "noSpaces": "Your password cannot contain spaces",
+            "required": "Please input your new password"
+          },
+          "label": "New password",
+          "placeholder": "Please enter your new password"
+        },
+        "passwordRepeat": {
+          "error": {
+            "matchError": "The password does not match",
+            "required": "Please repeat your new password"
+          },
+          "label": "Repeat password",
+          "placeholder": "Please repeat your new password"
+        },
+        "signIn": {
+          "action": "Zurück zur Anmeldung"
+        },
+        "success": "Your password was changed successfully. Please, log in to continue",
+        "title": "Set new password"
+      },
+      "signIn": {
+        "action": "Zurück zur Anmeldung"
+      },
+      "text": "Kein Problem. Gib deine E-Mail-Adresse ein, mit der du ein Konto bei 60beans erstellt hast und wir schicken dir einen neuen Link zur Passworterstellung zu.",
+      "title": "Passwort zurücksetzen",
+      "username": {
+        "error": {
+          "invalidFormat": "Falsche Formatierung",
+          "required": "Trage bitte deine E-mail-Adresse ein"
+        },
+        "label": "Deine E-mail-Adresse",
+        "placeholder": "Deine E-mail-Adresse"
+      }
+    },
     "signIn": {
       "email": {
         "error": {

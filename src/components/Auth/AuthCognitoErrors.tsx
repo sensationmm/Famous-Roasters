@@ -22,7 +22,7 @@ export const AuthCognitoErrors: React.FC<AuthCognitoErrorsProps> = ({ errorCode 
         )
       case 'ForgotPasswordGenericException':
         return (
-          <div className="border-negative p-4" data-testid="alertForgotPasswordGeneric">
+          <div className="bg-brand-grey-whisper p-4 mb-8" data-testid="alertForgotPasswordGeneric">
             <Typography size={TypographySize.Small}>
               {i18n.t<string>('auth.cognito.errors.forgotPasswordGeneric.prompt')}{' '}
               <a href="/register" className="border-b">
@@ -33,7 +33,7 @@ export const AuthCognitoErrors: React.FC<AuthCognitoErrorsProps> = ({ errorCode 
         )
       case 'RegisterGenericException':
         return (
-          <div className="border-negative p-4" data-testid="alertRegisterGeneric">
+          <div className="bg-brand-grey-whisper p-4 mb-8" data-testid="alertRegisterGeneric">
             <Typography size={TypographySize.Small}>
               {i18n.t<string>('auth.cognito.errors.registerGeneric.prompt')}{' '}
               <a href="/login" className="border-b">
@@ -44,7 +44,7 @@ export const AuthCognitoErrors: React.FC<AuthCognitoErrorsProps> = ({ errorCode 
         )
       case 'ConfirmUserNotFoundException':
         return (
-          <div className="border-negative p-4" data-testid="alertConfirmUserNotFound">
+          <div className="bg-brand-grey-whisper p-4 mb-8" data-testid="alertConfirmUserNotFound">
             <Typography size={TypographySize.Small}>
               {i18n.t<string>('auth.cognito.errors.confirmUserNotFound.prompt')}{' '}
               <a href="/register" className="border-b">
@@ -55,7 +55,7 @@ export const AuthCognitoErrors: React.FC<AuthCognitoErrorsProps> = ({ errorCode 
         )
       case 'ConfirmUserInvalidParameterException':
         return (
-          <div className="border-negative p-4" data-testid="alertRegisterInvalidParam">
+          <div className="bg-brand-grey-whisper p-4 mb-8" data-testid="alertRegisterInvalidParam">
             <Typography size={TypographySize.Small}>
               {i18n.t<string>('auth.cognito.errors.confirmUserInvalidParameter.prompt')}{' '}
               <a href="/login" className="border-b">
@@ -68,7 +68,7 @@ export const AuthCognitoErrors: React.FC<AuthCognitoErrorsProps> = ({ errorCode 
       case 'UsernameExistsException':
       case 'NotAuthorizedException':
         return (
-          <div className="border-negative p-4" data-testid="alertIncorrectUserNameOrPassword">
+          <div className="bg-brand-grey-whisper p-4 mb-8" data-testid="alertIncorrectUserNameOrPassword">
             <Typography size={TypographySize.Small}>
               {i18n.t<string>('auth.cognito.errors.incorrectUserNameOrPassword')}
             </Typography>
@@ -76,13 +76,13 @@ export const AuthCognitoErrors: React.FC<AuthCognitoErrorsProps> = ({ errorCode 
         )
       case 'CodeMismatchException':
         return (
-          <div className="border-negative p-4" data-testid="alertInvalidCode">
+          <div className="bg-brand-grey-whisper p-4 mb-8" data-testid="alertInvalidCode">
             <Typography size={TypographySize.Small}>{i18n.t<string>('auth.cognito.errors.invalidCode')}</Typography>
           </div>
         )
       default:
         return (
-          <div className="border-negative p-4" data-testid="alertGeneric">
+          <div className="bg-brand-grey-whisper p-4 mb-8" data-testid="alertGeneric">
             <Typography size={TypographySize.Small}>{i18n.t<string>('auth.cognito.errors.generic')}</Typography>
           </div>
         )

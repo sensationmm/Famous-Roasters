@@ -3,18 +3,24 @@ import { Authenticator } from './Authenticator'
 import { AuthFormAction } from './AuthFormAction'
 import { AuthFormButton } from './AuthFormButton'
 import { AuthFormCheckbox } from './AuthFormCheckbox'
+import { AuthFormCode } from './AuthFormCode'
 import { AuthFormDoublePassword } from './AuthFormDoublePassword'
 import { AuthFormEmail } from './AuthFormEmail'
 import { AuthFormItemInput } from './AuthFormItemInput'
 import { AuthFormPassword } from './AuthFormPassword'
+import { AuthConfirmSignUp } from './ConfirmSignUp'
+import { AuthForgotPassword } from './ForgotPassword'
 import { AuthSignIn } from './SignIn'
 import { AuthSignUp } from './SignUp'
 
 export { AuthCognitoErrors as AuthCognitoErrors }
+export { AuthConfirmSignUp as AuthConfirmSignUp }
 export { Authenticator as Authenticator }
+export { AuthForgotPassword as AuthForgotPassword }
 export { AuthFormAction as AuthFormAction }
 export { AuthFormButton as AuthFormButton }
 export { AuthFormCheckbox as AuthFormCheckbox }
+export { AuthFormCode as AuthFormCode }
 export { AuthFormDoublePassword as AuthFormDoublePassword }
 export { AuthFormEmail as AuthFormEmail }
 export { AuthFormItemInput as AuthFormItemInput }

@@ -42,19 +42,6 @@ export class AuthSignUp extends SignUp {
   renderSignUpInputs(): JSX.Element {
     return (
       <>
-        <div className="flex">
-          <div className="border-t border-brand-grey-whisper absolute w-full left-0" />
-        </div>
-        <div className="w-full mt-4">
-          <Typography
-            as="div"
-            type={TypographyType.Label}
-            size={TypographySize.Tiny}
-            className="uppercase font-normal text-coreUI-text-secondary"
-          >
-            {i18n.t<string>('auth.signUp.withEmail')}
-          </Typography>
-        </div>
         <div className="w-full mt-6">
           <AuthFormEmail screenKey="signUp" onChange={this.handleInputChange} />
         </div>
@@ -124,7 +111,22 @@ export class AuthSignUp extends SignUp {
           </Typography>
         </div>
         <div className="mt-12">
-          <AuthCognitoErrors errorCode={this.props.authData?.errorCode} />
+          <div className="flex">
+            <div className="border-t border-brand-grey-whisper absolute w-full left-0" />
+          </div>
+          <div className="w-full mt-4">
+            <Typography
+              as="div"
+              type={TypographyType.Label}
+              size={TypographySize.Tiny}
+              className="uppercase font-normal text-coreUI-text-secondary"
+            >
+              {i18n.t<string>('auth.signUp.withEmail')}
+            </Typography>
+          </div>
+          <div className="mt-4">
+            <AuthCognitoErrors errorCode={this.props.authData?.errorCode} />
+          </div>
           <Form name="signUp" onFinish={this.signUpUser} method="POST">
             {(values, form) => {
               const allTouched =
@@ -133,7 +135,8 @@ export class AuthSignUp extends SignUp {
               return (
                 <>
                   {this.renderSignUpInputs()}
-                  {this.renderConfirmTos()}
+                  {/*{this.renderConfirmTos()}*/}
+                  {/* TODO needs to fix checkbox */}
                   {this.renderSignUpButton(!allTouched || hasErrors)}
                   {this.renderSignUpMiddleActions()}
                   {this.renderSignUpFooterActions()}
