@@ -119,10 +119,19 @@ export const FeaturedProduct: React.FC = () => {
 
   const getMatchScore = () => {
     const recommendations =
-      tasteFinderDataJSON && tasteFinderData.find((el: TasteFinderField) => el.name === 'recommendations').value
-    const score = Math.round(recommendations[0]?.score * 100)
+      tasteFinderDataJSON && tasteFinderData.find((el: TasteFinderField) => el.name === 'recommendations')?.value
+    const score =
+      tasteFinderDataJSON && recommendations && recommendations[0]?.score
+        ? Math.round(recommendations[0]?.score * 100)
+        : 0
 
-    return score || 0
+    if (score === 0) return null
+
+    return (
+      <div className="mt-4">
+        <Tag type={TagType.TasteFinder} value={`${score}% Übereinstimmung`} />
+      </div>
+    )
   }
 
   const renderYourCoffeeTypeBlock = (aromaValue: string) => {
@@ -237,9 +246,7 @@ export const FeaturedProduct: React.FC = () => {
                 showFrom={true}
                 className="p-0"
               />
-              <div className="mt-4">
-                <Tag type={TagType.TasteFinder} value={`${getMatchScore()}% Übereinstimmung`} />
-              </div>
+              {getMatchScore()}
             </Link>
           )}
           <div className="col-span-2 md:col-start-2 md:col-span-1">
