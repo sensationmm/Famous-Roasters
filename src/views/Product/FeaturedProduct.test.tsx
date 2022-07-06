@@ -15,7 +15,12 @@ delete window.history
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 window.history = { go: jest.fn() }
-window.localStorage.setItem('tasteFinder', '')
+window.localStorage.setItem(
+  'tasteFinder',
+  JSON.stringify(
+    '[{"name":"name","value":"asdasdasd"},{"name":"bitterness","value":"1"},{"name":"sweetness","value":"1"},{"name":"acidity","value":"1"},{"name":"body","value":"1"},{"name":"grindType","value":"FrenchPress"},{"name":"adventurous","value":"adventurous"},{"name":"shopifyProductIds","value":["7966736744714","7659871600856","7659907842264","7659906203864","7966820630794","7659905745112"]},    {"name":"recommendations","value": [{"shopifyId":"7966737858826","score":0.9814814814814815,"acidity":4,"bitterness":1,"sweetness":2,"body":3},{"shopifyId":"7966736875786","score":0.9567901234567902,"acidity":1,"bitterness":1,"sweetness":1,"body":1},{"shopifyId":"7966738678026","score":0.9351851851851852,"acidity":1,"bitterness":1,"sweetness":3,"body":4},{"shopifyId":"7966738448650","score":0.9320987654320988,"acidity":3,"bitterness":1,"sweetness":2,"body":6},{"shopifyId":"7659877466328","score":0.9074074074074074,"acidity":5,"bitterness":5,"sweetness":5,"body":5},{"shopifyId":"7659914723544","score":0.8950617283950617,"acidity":3,"bitterness":4,"sweetness":5,"body":6}]}]',
+  ),
+)
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'), // use actual for all non-hook parts
