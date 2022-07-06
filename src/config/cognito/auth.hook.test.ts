@@ -1,6 +1,10 @@
 import { renderHook } from '@testing-library/react-hooks'
+import Amplify from 'aws-amplify'
+import { awsconfig } from 'src/config/cognito/auth.hook'
 
 import useAuth from './auth.hook'
+
+Amplify.configure(awsconfig)
 
 describe('Auth Hook', () => {
   it('Auth Hook works', () => {

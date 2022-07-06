@@ -1,10 +1,14 @@
 import { render, waitFor } from '@testing-library/react'
+import Amplify from 'aws-amplify'
 import React from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { MemoryRouter } from 'react-router-dom'
 import { i18n } from 'src/config'
+import { awsconfig } from 'src/config/cognito/auth.hook'
 
 import { Profile } from '.'
+
+Amplify.configure(awsconfig)
 
 describe('Profile view', () => {
   it('Renders correctly', async () => {
