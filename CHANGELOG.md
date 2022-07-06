@@ -1,3 +1,10 @@
+# [1.15.0](https://github.com/Famous-Roasters/frontend/compare/v1.14.0...v1.15.0) (2022-07-06)
+
+
+### Features
+
+* **taste-finder:** fix missing score bug ([b59526c](https://github.com/Famous-Roasters/frontend/commit/b59526c7d7a07e23d5c8639d2e79758556656afc))
+
 # [1.14.0](https://github.com/Famous-Roasters/frontend/compare/v1.13.1...v1.14.0) (2022-07-06)
 
 
