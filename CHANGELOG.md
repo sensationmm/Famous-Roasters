@@ -1,3 +1,11 @@
+## [1.13.1](https://github.com/Famous-Roasters/frontend/compare/v1.13.0...v1.13.1) (2022-07-06)
+
+
+### Bug Fixes
+
+* **product:** grind info popup typo ([a1d7a48](https://github.com/Famous-Roasters/frontend/commit/a1d7a48f93923282ade90745deb9c70ec6d9b9fb))
+* **taste finder:** fix image skew on result page ([be41dca](https://github.com/Famous-Roasters/frontend/commit/be41dca6f594597f45511e6de60be0bb805c9f8a))
+
 # [1.13.0](https://github.com/Famous-Roasters/frontend/compare/v1.12.0...v1.13.0) (2022-07-05)
 
 
