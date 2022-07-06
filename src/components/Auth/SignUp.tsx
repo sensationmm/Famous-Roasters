@@ -135,7 +135,7 @@ export class AuthSignUp extends SignUp {
               return (
                 <>
                   {this.renderSignUpInputs()}
-                  {/*{this.renderConfirmTos()}*/}
+                  {this.renderConfirmTos()}
                   {/* TODO needs to fix checkbox */}
                   {this.renderSignUpButton(!allTouched || hasErrors)}
                   {this.renderSignUpMiddleActions()}

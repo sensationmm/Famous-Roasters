@@ -1,0 +1,239 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Auth cognito errors custom auth component Renders correctly for CodeMismatchException 1`] = `
+<div>
+  <form
+    name="testAuthFormCognitoErrors"
+  >
+    <div
+      class="bg-brand-grey-whisper p-4 mb-8"
+      data-testid="alertInvalidCode"
+    >
+      <span
+        class="text-sm leading-5"
+      >
+        Verifizierungscode ungültig oder abgelaufen. Bitte versuch mal einen neuen Code anzufragen.
+      </span>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Auth cognito errors custom auth component Renders correctly for ConfirmUserInvalidParameterException 1`] = `
+<div>
+  <form
+    name="testAuthFormCognitoErrors"
+  >
+    <div
+      class="bg-brand-grey-whisper p-4 mb-8"
+      data-testid="alertRegisterInvalidParam"
+    >
+      <span
+        class="text-sm leading-5"
+      >
+        E-mail-Adresse ungültig. Versuch eine andere E-mail-Adresse oder
+         
+        <a
+          class="border-b"
+          href="/login"
+        >
+          Anmelden
+          .
+        </a>
+      </span>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Auth cognito errors custom auth component Renders correctly for ConfirmUserNotFoundException 1`] = `
+<div>
+  <form
+    name="testAuthFormCognitoErrors"
+  >
+    <div
+      class="bg-brand-grey-whisper p-4 mb-8"
+      data-testid="alertConfirmUserNotFound"
+    >
+      <span
+        class="text-sm leading-5"
+      >
+        E-mail-Adresse ungültig. Versuch eine andere E-mail-Adresse oder
+         
+        <a
+          class="border-b"
+          href="/register"
+        >
+          Registrieren
+          .
+        </a>
+      </span>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Auth cognito errors custom auth component Renders correctly for ForgotPasswordGenericException 1`] = `
+<div>
+  <form
+    name="testAuthFormCognitoErrors"
+  >
+    <div
+      class="bg-brand-grey-whisper p-4 mb-8"
+      data-testid="alertForgotPasswordGeneric"
+    >
+      <span
+        class="text-sm leading-5"
+      >
+        E-mail-Adresse ungültig. Versuch eine andere E-mail-Adresse oder
+         
+        <a
+          class="border-b"
+          href="/register"
+        >
+          Registrieren
+          .
+        </a>
+      </span>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Auth cognito errors custom auth component Renders correctly for LoginGenericException 1`] = `
+<div>
+  <form
+    name="testAuthFormCognitoErrors"
+  >
+    <div
+      class="bg-brand-grey-whisper p-4 mb-8"
+      data-testid="alertLoginGeneric"
+    >
+      <span
+        class="text-sm leading-5"
+      >
+        E-mail-Adresse oder Passwort ungültig, bitte prüfen oder
+         
+        <a
+          class="border-b"
+          href="/register"
+        >
+          Registrieren
+          .
+        </a>
+      </span>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Auth cognito errors custom auth component Renders correctly for NotAuthorizedException 1`] = `
+<div>
+  <form
+    name="testAuthFormCognitoErrors"
+  >
+    <div
+      class="bg-brand-grey-whisper p-4 mb-8"
+      data-testid="alertIncorrectUserNameOrPassword"
+    >
+      <span
+        class="text-sm leading-5"
+      >
+        Ungültige Daten
+      </span>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Auth cognito errors custom auth component Renders correctly for RegisterGenericException 1`] = `
+<div>
+  <form
+    name="testAuthFormCognitoErrors"
+  >
+    <div
+      class="bg-brand-grey-whisper p-4 mb-8"
+      data-testid="alertRegisterGeneric"
+    >
+      <span
+        class="text-sm leading-5"
+      >
+        E-mail-Adresse oder Passwort ungültig, bitte prüfen oder
+         
+        <a
+          class="border-b"
+          href="/login"
+        >
+          Anmelden
+          .
+        </a>
+      </span>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Auth cognito errors custom auth component Renders correctly for UserNotFoundException 1`] = `
+<div>
+  <form
+    name="testAuthFormCognitoErrors"
+  >
+    <div
+      class="bg-brand-grey-whisper p-4 mb-8"
+      data-testid="alertIncorrectUserNameOrPassword"
+    >
+      <span
+        class="text-sm leading-5"
+      >
+        Ungültige Daten
+      </span>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Auth cognito errors custom auth component Renders correctly for UsernameExistsException 1`] = `
+<div>
+  <form
+    name="testAuthFormCognitoErrors"
+  >
+    <div
+      class="bg-brand-grey-whisper p-4 mb-8"
+      data-testid="alertIncorrectUserNameOrPassword"
+    >
+      <span
+        class="text-sm leading-5"
+      >
+        Ungültige Daten
+      </span>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Auth cognito errors custom auth component Renders correctly for no errors 1`] = `
+<div>
+  <form
+    name="testAuthFormCognitoErrors"
+  />
+</div>
+`;
+
+exports[`Auth cognito errors custom auth component Renders correctly for other error (generic) 1`] = `
+<div>
+  <form
+    name="testAuthFormCognitoErrors"
+  >
+    <div
+      class="bg-brand-grey-whisper p-4 mb-8"
+      data-testid="alertGeneric"
+    >
+      <span
+        class="text-sm leading-5"
+      >
+        Anmeldungsfehler
+      </span>
+    </div>
+  </form>
+</div>
+`;

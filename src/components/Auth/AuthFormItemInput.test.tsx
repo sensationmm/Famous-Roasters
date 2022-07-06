@@ -1,14 +1,15 @@
 import { MockedProvider } from '@apollo/client/testing'
 import { render, waitFor } from '@testing-library/react'
+import Form from 'rc-field-form'
 import React from 'react'
 
 import { AuthFormItemInput } from '.'
 
 describe('ConfirmSignUp custom auth component', () => {
   const snippet = (type?: string) => (
-    <form name="testAuthFormItemInput">
+    <Form name="testAuthFormItemInput" method="POST">
       <AuthFormItemInput name="itemName" label="itemLabel" type={type} rules={[]} placeholder="itemPlaceHolder" />
-    </form>
+    </Form>
   )
 
   it('Renders correctly', async () => {

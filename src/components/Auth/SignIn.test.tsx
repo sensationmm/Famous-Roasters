@@ -1,5 +1,5 @@
 import Auth from '@aws-amplify/auth'
-import { fireEvent, render, waitFor } from '@testing-library/react'
+import { act, fireEvent, render, waitFor } from '@testing-library/react'
 import React from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { MemoryRouter } from 'react-router-dom'
@@ -19,13 +19,20 @@ jest.mock('@aws-amplify/ui-react', () => ({
   AmplifyAuthenticator: jest.fn(),
 }))
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+delete window.location
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+window.location = new URL('https://www.60beans.com/login')
+
 describe('SignIn custom auth component', () => {
   const snippet = (initialAuthState = 'signIn', initialAuthData = {}) => (
-    <MemoryRouter>
-      <I18nextProvider i18n={i18n}>
+    <I18nextProvider i18n={i18n}>
+      <MemoryRouter initialEntries={['/login']}>
         <AuthSignIn authState={initialAuthState} authData={initialAuthData} />
-      </I18nextProvider>
-    </MemoryRouter>
+      </MemoryRouter>
+    </I18nextProvider>
   )
 
   it('Renders correctly for an expected state', async () => {
@@ -45,18 +52,20 @@ describe('SignIn custom auth component', () => {
     mockSignIn.mockResolvedValue({ data: true })
     const { getByTestId } = render(snippet())
 
-    await waitFor(() => {
-      const emailInput = getByTestId('email')
-      const passwordInput = getByTestId('password')
-      const submitBtn = getByTestId('submit')
-      expect(emailInput).toBeInTheDocument()
-      fireEvent.click(emailInput)
-      fireEvent.change(emailInput, { target: { value: 'user@60beans.com' } })
-      expect(passwordInput).toBeInTheDocument()
-      fireEvent.click(passwordInput)
-      fireEvent.change(passwordInput, { target: { value: '123456AbC?' } })
-      expect(submitBtn).toBeInTheDocument()
-      fireEvent.click(submitBtn)
+    const emailInput = getByTestId('email')
+    const passwordInput = getByTestId('password')
+    const submitBtn = getByTestId('submit')
+    expect(emailInput).toBeInTheDocument()
+    fireEvent.click(emailInput)
+    fireEvent.change(emailInput, { target: { value: 'user@60beans.com' } })
+    expect(passwordInput).toBeInTheDocument()
+    fireEvent.click(passwordInput)
+    fireEvent.change(passwordInput, { target: { value: '123456AbC?' } })
+    expect(submitBtn).toBeInTheDocument()
+    fireEvent.click(submitBtn)
+
+    await act(async () => {
+      await new Promise((resolve) => setTimeout(resolve, 500))
     })
 
     expect(mockSignIn).resolves
@@ -67,19 +76,22 @@ describe('SignIn custom auth component', () => {
     mockSignIn2.mockRejectedValue(new Error('UserNotFoundException: text'))
     const { getByTestId } = render(snippet())
 
-    await waitFor(() => {
-      const emailInput = getByTestId('email')
-      const passwordInput = getByTestId('password')
-      const submitBtn = getByTestId('submit')
-      expect(emailInput).toBeInTheDocument()
-      fireEvent.click(emailInput)
-      fireEvent.change(emailInput, { target: { value: 'user@60beans.com' } })
-      expect(passwordInput).toBeInTheDocument()
-      fireEvent.click(passwordInput)
-      fireEvent.change(passwordInput, { target: { value: '123456AbC?' } })
-      expect(submitBtn).toBeInTheDocument()
-      fireEvent.click(submitBtn)
+    const emailInput = getByTestId('email')
+    const passwordInput = getByTestId('password')
+    const submitBtn = getByTestId('submit')
+    expect(emailInput).toBeInTheDocument()
+    fireEvent.click(emailInput)
+    fireEvent.change(emailInput, { target: { value: 'user@60beans.com' } })
+    expect(passwordInput).toBeInTheDocument()
+    fireEvent.click(passwordInput)
+    fireEvent.change(passwordInput, { target: { value: '123456AbC?' } })
+    expect(submitBtn).toBeInTheDocument()
+    fireEvent.click(submitBtn)
+
+    await act(async () => {
+      await new Promise((resolve) => setTimeout(resolve, 500))
     })
+
     await expect(mockSignIn2).rejects.toThrowError('UserNotFoundException')
   })
 
@@ -88,19 +100,22 @@ describe('SignIn custom auth component', () => {
     mockSignIn3.mockRejectedValue(new Error('NotAuthorizedException: text'))
     const { getByTestId } = render(snippet())
 
-    await waitFor(() => {
-      const emailInput = getByTestId('email')
-      const passwordInput = getByTestId('password')
-      const submitBtn = getByTestId('submit')
-      expect(emailInput).toBeInTheDocument()
-      fireEvent.click(emailInput)
-      fireEvent.change(emailInput, { target: { value: 'user@60beans.com' } })
-      expect(passwordInput).toBeInTheDocument()
-      fireEvent.click(passwordInput)
-      fireEvent.change(passwordInput, { target: { value: '123456AbC?' } })
-      expect(submitBtn).toBeInTheDocument()
-      fireEvent.click(submitBtn)
+    const emailInput = getByTestId('email')
+    const passwordInput = getByTestId('password')
+    const submitBtn = getByTestId('submit')
+    expect(emailInput).toBeInTheDocument()
+    fireEvent.click(emailInput)
+    fireEvent.change(emailInput, { target: { value: 'user@60beans.com' } })
+    expect(passwordInput).toBeInTheDocument()
+    fireEvent.click(passwordInput)
+    fireEvent.change(passwordInput, { target: { value: '123456AbC?' } })
+    expect(submitBtn).toBeInTheDocument()
+    fireEvent.click(submitBtn)
+
+    await act(async () => {
+      await new Promise((resolve) => setTimeout(resolve, 500))
     })
+
     await expect(mockSignIn3).rejects.toThrowError('NotAuthorizedException')
   })
 
@@ -109,19 +124,22 @@ describe('SignIn custom auth component', () => {
     mockSignIn4.mockRejectedValue(new Error('OtherError'))
     const { getByTestId } = render(snippet())
 
-    await waitFor(() => {
-      const emailInput = getByTestId('email')
-      const passwordInput = getByTestId('password')
-      const submitBtn = getByTestId('submit')
-      expect(emailInput).toBeInTheDocument()
-      fireEvent.click(emailInput)
-      fireEvent.change(emailInput, { target: { value: 'user@60beans.com' } })
-      expect(passwordInput).toBeInTheDocument()
-      fireEvent.click(passwordInput)
-      fireEvent.change(passwordInput, { target: { value: '123456AbC?' } })
-      expect(submitBtn).toBeInTheDocument()
-      fireEvent.click(submitBtn)
+    const emailInput = getByTestId('email')
+    const passwordInput = getByTestId('password')
+    const submitBtn = getByTestId('submit')
+    expect(emailInput).toBeInTheDocument()
+    fireEvent.click(emailInput)
+    fireEvent.change(emailInput, { target: { value: 'user@60beans.com' } })
+    expect(passwordInput).toBeInTheDocument()
+    fireEvent.click(passwordInput)
+    fireEvent.change(passwordInput, { target: { value: '123456AbC?' } })
+    expect(submitBtn).toBeInTheDocument()
+    fireEvent.click(submitBtn)
+
+    await act(async () => {
+      await new Promise((resolve) => setTimeout(resolve, 500))
     })
+
     await expect(mockSignIn4).rejects.toThrowError('OtherError')
   })
 

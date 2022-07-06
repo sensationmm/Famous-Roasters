@@ -25,7 +25,7 @@ export const AuthFormCheckbox: React.FC<AuthFormCheckboxProps> = ({
         },
       ]}
     >
-      <Checkbox data-testid={dataTestId} name={name} small={true} text={i18n.t<string>(`auth.${screenKey}.label`)} />
+      <Checkbox dataTestId={dataTestId} name={name} small={true} text={i18n.t<string>(`auth.${screenKey}.label`)} />
     </Field>
   )
 }

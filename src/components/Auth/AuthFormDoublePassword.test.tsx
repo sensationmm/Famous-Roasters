@@ -1,13 +1,14 @@
 import { fireEvent, render, waitFor } from '@testing-library/react'
+import Form from 'rc-field-form'
 import React from 'react'
 
 import { AuthFormDoublePassword } from '.'
 
 describe('Email and double Password fields group custom auth component', () => {
   const snippet = () => (
-    <form name="testAuthFormItemInput">
+    <Form name="testAuthFormItemInput" method="POST">
       <AuthFormDoublePassword screenKey="signIn" onChange={() => null} />
-    </form>
+    </Form>
   )
 
   it('Renders correctly', async () => {

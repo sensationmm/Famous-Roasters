@@ -7,6 +7,7 @@ interface IconCheckboxProps extends React.HTMLAttributes<HTMLElement> {
   small?: boolean
   selected?: boolean
   toggleSelected?: (selected: boolean) => void
+  dataTestId?: string
 }
 
 export const Checkbox: React.FC<IconCheckboxProps> = ({
@@ -14,6 +15,7 @@ export const Checkbox: React.FC<IconCheckboxProps> = ({
   selected = false,
   small = false,
   toggleSelected,
+  dataTestId = 'checkbox',
 }: IconCheckboxProps) => {
   const [isSelected, setIsSelected] = useState<boolean>(selected)
 
@@ -30,7 +32,7 @@ export const Checkbox: React.FC<IconCheckboxProps> = ({
   return (
     <button
       className={`flex w-full flex-row items-start cursor-pointer`}
-      data-testid="checkbox"
+      data-testid={dataTestId}
       onClick={(ev) => handleClick(ev)}
     >
       <div>
