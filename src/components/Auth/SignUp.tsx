@@ -27,7 +27,6 @@ export class AuthSignUp extends SignUp {
   }
 
   signUpUser = async (params: SignUpParams): Promise<void> => {
-    console.log('signUpUser', params)
     await Auth.signUp(params.email, params.password)
       .then(() => this.changeState('confirmSignUp'))
       .catch((error) => {
@@ -128,7 +127,7 @@ export class AuthSignUp extends SignUp {
             <AuthCognitoErrors errorCode={this.props.authData?.errorCode} />
           </div>
           <Form name="signUp" onFinish={this.signUpUser} method="POST">
-            {(values, form) => {
+            {(_, form) => {
               const allTouched =
                 form.isFieldTouched('email') && form.isFieldTouched('password') && form.isFieldTouched('passwordRepeat')
               const hasErrors = form.getFieldsError().filter((entry) => entry.errors.length > 0).length > 0

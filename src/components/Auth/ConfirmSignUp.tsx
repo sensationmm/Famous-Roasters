@@ -146,7 +146,7 @@ export class AuthConfirmSignUp extends ConfirmSignUp {
           <AuthCognitoErrors errorCode={this.props.authData?.errorCode} />
         </div>
         <Form name="confirmSignUp" onFinish={this.confirmSignUpUser}>
-          {(values, form) => {
+          {(_, form) => {
             const allTouched = form.isFieldTouched('username') && form.isFieldTouched('code')
             const hasErrors = form.getFieldsError().filter((entry) => entry.errors.length > 0).length > 0
             return (

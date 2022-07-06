@@ -17,13 +17,13 @@ export const AuthFormCheckbox: React.FC<AuthFormCheckboxProps> = ({
   return (
     <Field
       name={name}
-      rules={[
+      /*      rules={[
         {
           required: true,
           type: 'boolean',
           message: i18n.t(`auth.${screenKey}.error.required`),
         },
-      ]}
+      ]}*/
     >
       <Checkbox dataTestId={dataTestId} name={name} small={true} text={i18n.t<string>(`auth.${screenKey}.label`)} />
     </Field>

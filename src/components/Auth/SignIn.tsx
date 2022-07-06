@@ -113,7 +113,7 @@ export class AuthSignIn extends SignIn {
         <div className="mt-12">
           <AuthCognitoErrors errorCode={this.props.authData?.errorCode} />
           <Form name="signIn" onFinish={this.signInUser} method="POST">
-            {(values, form) => {
+            {(_, form) => {
               const allTouched = form.isFieldTouched('email') && form.isFieldTouched('password')
               const hasErrors = form.getFieldsError().filter((entry) => entry.errors.length > 0).length > 0
               return (

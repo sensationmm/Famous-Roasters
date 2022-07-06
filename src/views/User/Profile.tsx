@@ -27,8 +27,8 @@ export const Profile: React.FC = () => {
 
   useEffect(() => {
     Auth.currentAuthenticatedUser()
-      .then((user) => {
-        setUserEmail(user.attributes.email)
+      .then((u) => {
+        setUserEmail(u.attributes.email)
       })
       .catch((err) => new Error(err))
   }, [user?.isValid])

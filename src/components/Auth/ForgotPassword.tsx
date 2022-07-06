@@ -184,7 +184,7 @@ export class AuthForgotPassword extends ForgotPassword {
           <AuthCognitoErrors errorCode={this.props.authData?.errorCode} />
         </div>
         <Form name="forgotPassword" onFinish={showSetNewPassword ? this.setNewPasswordUser : this.forgotPasswordUser}>
-          {(values, form) => {
+          {(_, form) => {
             const allTouched = showSetNewPassword ? true : form.isFieldTouched('username')
             const hasErrors = form.getFieldsError().filter((entry) => entry.errors.length > 0).length > 0
             return (
