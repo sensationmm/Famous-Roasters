@@ -238,7 +238,7 @@ exports[`Listbox component Renders with spacing items correctly 1`] = `
       aria-haspopup="true"
       class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
       data-testid="button-listbox"
-      id="headlessui-listbox-button-:r1b:"
+      id="headlessui-listbox-button-:rp:"
       type="button"
     >
       <span

@@ -4,10 +4,6 @@ exports[`Filter Mobile component Renders correctly 1`] = `
 <div>
   <div
     class="w-80 h-48"
-  >
-    <div
-      style="position: absolute; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px; display: none;"
-    />
-  </div>
+  />
 </div>
 `;
