@@ -1,3 +1,11 @@
+# [1.14.0](https://github.com/Famous-Roasters/frontend/compare/v1.13.1...v1.14.0) (2022-07-06)
+
+
+### Features
+
+* **taste finder:** dynamic taste match score ([8ec9fc1](https://github.com/Famous-Roasters/frontend/commit/8ec9fc186c775e8015d40b32e3878b5cfe42eb14))
+* **taste finder:** tests local storage ([339e6a2](https://github.com/Famous-Roasters/frontend/commit/339e6a29b654fb6fd554b19de5cc62bf3f0f1b67))
+
 ## [1.13.1](https://github.com/Famous-Roasters/frontend/compare/v1.13.0...v1.13.1) (2022-07-06)
 
 
