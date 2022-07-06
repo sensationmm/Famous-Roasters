@@ -2,7 +2,7 @@ import { MockedProvider } from '@apollo/client/testing'
 import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import React from 'react'
 import { I18nextProvider } from 'react-i18next'
-import { MemoryRouter } from 'react-router-dom'
+import Router, { MemoryRouter } from 'react-router-dom'
 import { ProductMock, ProductMockError, ProductMockWithCustomMetadata } from 'src/_mocks'
 import { CartContext } from 'src/components'
 import { i18n } from 'src/config'
@@ -321,9 +321,54 @@ describe('Featured product view', () => {
         </CartContext.Provider>
       </MockedProvider>,
     )
-    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    await waitFor(() => new Promise((res) => setTimeout(res, 700)))
     const buttonPrompt = await screen.findByTestId('button-prompt')
     expect(buttonPrompt).toBeInTheDocument()
     fireEvent.click(buttonPrompt)
+  })
+
+  it('fails gracefully if no id exists', async () => {
+    jest.spyOn(Router, 'useParams').mockReturnValue({ id: undefined })
+    const ProductMockWithCustomMetadataOtherAroma = {
+      ...ProductMockWithCustomMetadata,
+      result: {
+        data: {
+          product: {
+            ...ProductMockWithCustomMetadata.result.data.product,
+            images: {
+              nodes: [
+                {
+                  id: '123123',
+                  url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153',
+                  originalSrc: '',
+                  src: '',
+                  transformedSrc: '',
+                },
+              ],
+            },
+            aroma: {
+              value: 'experimentell & komplex',
+            },
+          },
+        },
+      },
+    }
+    const { container } = render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
+        mocks={[ProductMockWithCustomMetadataOtherAroma]}
+        addTypename={false}
+      >
+        <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
+          <I18nextProvider i18n={i18n}>
+            <MemoryRouter initialEntries={['/featured/7655228866776']}>
+              <FeaturedProduct />
+            </MemoryRouter>
+          </I18nextProvider>
+        </CartContext.Provider>
+      </MockedProvider>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 500)))
+    expect(container).toMatchSnapshot()
   })
 })
