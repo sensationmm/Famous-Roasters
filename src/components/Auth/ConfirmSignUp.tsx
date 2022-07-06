@@ -3,7 +3,7 @@ import { ConfirmSignUp } from 'aws-amplify-react'
 import { IAuthPieceProps } from 'aws-amplify-react/lib-esm/Auth/AuthPiece'
 import Form from 'rc-field-form'
 import React from 'react'
-import { Typography } from 'src/components'
+import { Button, ButtonEmphasis, ButtonSize, Typography, TypographySize, TypographyType } from 'src/components'
 import i18n from 'src/config/i18n'
 
 import { AuthCognitoErrors, AuthFormAction, AuthFormButton, AuthFormCode, AuthFormItemInput } from '.'
@@ -58,61 +58,107 @@ export class AuthConfirmSignUp extends ConfirmSignUp {
 
   renderConfirmSignUpInputs(): JSX.Element {
     return (
-      <div>
-        <AuthFormItemInput
-          name="username"
-          label={i18n.t('auth.confirmSignUp.username.label')}
-          rules={[{ required: true, message: i18n.t('auth.confirmSignUp.username.error.required') }]}
-          type="email"
-          placeholder={i18n.t('auth.confirmSignUp.username.placeholder')}
-          onChange={this.handleInputChange}
-          dataTestId="username"
-        />
-        <AuthFormCode screenKey="confirmSignUp" onChange={this.handleInputChange} />
+      <>
+        <div className="w-full mt-8">
+          <AuthFormItemInput
+            name="username"
+            label={i18n.t('auth.confirmSignUp.username.label')}
+            rules={[{ required: true, message: i18n.t('auth.confirmSignUp.username.error.required') }]}
+            type="email"
+            placeholder={i18n.t('auth.confirmSignUp.username.placeholder')}
+            onChange={this.handleInputChange}
+            dataTestId="username"
+          />
+        </div>
+        <div className="w-full mt-8">
+          <AuthFormCode screenKey="confirmSignUp" onChange={this.handleInputChange} />
+        </div>
+      </>
+    )
+  }
+
+  renderConfirmSignUpButton(disabled: boolean): JSX.Element {
+    return (
+      <div className="w-full mt-8">
+        <AuthFormButton disabled={disabled} ctaText={i18n.t('auth.confirmSignUp.cta')} />
       </div>
     )
   }
 
-  renderConfirmSignUpButton(): JSX.Element {
-    return <AuthFormButton ctaText={i18n.t('auth.confirmSignUp.cta')} />
-  }
-
   renderConfirmSignUpMiddleActions(): JSX.Element {
     return (
-      <AuthFormAction
-        promptText={`${i18n.t('auth.confirmSignUp.resend.prompt')} `}
-        onClick={this.resendSignUpUser}
-        dataTestId="resend"
-        ctaText={i18n.t('auth.confirmSignUp.resend.action')}
-      />
+      <div className="w-full mt-8">
+        <Typography type={TypographyType.Paragraph} size={TypographySize.Tiny}>
+          {i18n.t<string>('auth.confirmSignUp.resend.prompt')}
+        </Typography>
+        <AuthFormAction
+          onClick={this.resendSignUpUser}
+          dataTestId="resend"
+          ctaText={i18n.t('auth.confirmSignUp.resend.action')}
+          className="flex w-fit border-b cursor-pointer"
+        />
+      </div>
     )
   }
 
   renderConfirmSignUpFooterActions(): JSX.Element {
     return (
-      <AuthFormAction
-        promptText={`${i18n.t('auth.confirmSignUp.signIn.prompt')} `}
-        onClick={() => this.changeState('signIn')}
-        dataTestId="goToSignInLink"
-        ctaText={i18n.t('auth.confirmSignUp.signIn.action')}
-      />
+      <div className="mt-10">
+        <div className="flex">
+          <div className="border-t border-brand-grey-whisper absolute w-full left-0" />
+        </div>
+        <Typography as="div" type={TypographyType.Heading} size={TypographySize.Tiny} className="mt-4 mb-4">
+          {i18n.t<string>('auth.confirmSignUp.signIn.prompt')}
+        </Typography>
+        <Button
+          type="button"
+          emphasis={ButtonEmphasis.Tertiary}
+          size={ButtonSize.lg}
+          onClick={() => this.changeState('signIn')}
+          data-testid="goToSignInLink"
+          className="flex w-full justify-center"
+        >
+          {i18n.t<string>('auth.confirmSignUp.signIn.action')}
+        </Button>
+      </div>
     )
   }
 
   render(): JSX.Element {
     return (
-      <div className="auth-container">
-        <Typography>{i18n.t<string>('auth.confirmSignUp.title')}</Typography>
-        <Typography>{i18n.t<string>('auth.confirmSignUp.text')}</Typography>
-        <div className="form-container">
-          <AuthCognitoErrors errorCode={this.props.authData?.errorCode} />
-          <Form name="confirmSignUp" onFinish={this.confirmSignUpUser}>
-            {this.renderConfirmSignUpInputs()}
-            {this.renderConfirmSignUpMiddleActions()}
-            {this.renderConfirmSignUpButton()}
-            {this.renderConfirmSignUpFooterActions()}
-          </Form>
+      <div className="my-4 mx-6 md:mx-0">
+        <div className="flex w-full">
+          <Typography type={TypographyType.Heading} size={TypographySize.Small}>
+            {i18n.t<string>('auth.confirmSignUp.title')}
+          </Typography>
         </div>
+        <div className="flex w-full">
+          <Typography type={TypographyType.Paragraph} size={TypographySize.Base}>
+            {i18n.t<string>('auth.confirmSignUp.subtitle')}
+          </Typography>
+        </div>
+        <div className="flex w-full mt-2">
+          <Typography type={TypographyType.Paragraph} size={TypographySize.Small}>
+            {i18n.t<string>('auth.confirmSignUp.text')}
+          </Typography>
+        </div>
+        <div className="mt-4">
+          <AuthCognitoErrors errorCode={this.props.authData?.errorCode} />
+        </div>
+        <Form name="confirmSignUp" onFinish={this.confirmSignUpUser}>
+          {(values, form) => {
+            const allTouched = form.isFieldTouched('username') && form.isFieldTouched('code')
+            const hasErrors = form.getFieldsError().filter((entry) => entry.errors.length > 0).length > 0
+            return (
+              <>
+                {this.renderConfirmSignUpInputs()}
+                {this.renderConfirmSignUpButton(!allTouched || hasErrors)}
+                {this.renderConfirmSignUpMiddleActions()}
+                {this.renderConfirmSignUpFooterActions()}
+              </>
+            )
+          }}
+        </Form>
       </div>
     )
   }

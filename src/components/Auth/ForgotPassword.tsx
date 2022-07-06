@@ -78,27 +78,33 @@ export class AuthForgotPassword extends ForgotPassword {
 
   renderSetNewPasswordInputs(): JSX.Element {
     return (
-      <div>
-        <AuthFormItemInput
-          name="username"
-          label={i18n.t('auth.forgotPassword.username.label')}
-          rules={[{ required: true, message: i18n.t('auth.forgotPassword.username.error.required') }]}
-          type="email"
-          placeholder={i18n.t('auth.forgotPassword.username.placeholder')}
-          disabled={true}
-          value={this.inputs.username}
-          dataTestId="username"
-        />
-        {this.renderSetNewPasswordResend()}
-        <AuthFormCode screenKey="forgotPassword.setNewPassword" onChange={this.handleInputChange} />
-        <AuthFormDoublePassword screenKey="forgotPassword.setNewPassword" onChange={this.handleInputChange} />
-      </div>
+      <>
+        <div className="w-full mt-8">
+          <AuthFormItemInput
+            name="username"
+            label={i18n.t('auth.forgotPassword.username.label')}
+            rules={[{ required: true, message: i18n.t('auth.forgotPassword.username.error.required') }]}
+            type="email"
+            placeholder={i18n.t('auth.forgotPassword.username.placeholder')}
+            disabled={true}
+            value={this.inputs.username}
+            dataTestId="username"
+          />
+        </div>
+        <div className="w-full mt-8">{this.renderSetNewPasswordResend()}</div>
+        <div className="w-full mt-8">
+          <AuthFormCode screenKey="forgotPassword.setNewPassword" onChange={this.handleInputChange} />
+        </div>
+        <div className="w-full mt-8">
+          <AuthFormDoublePassword screenKey="forgotPassword.setNewPassword" onChange={this.handleInputChange} />
+        </div>
+      </>
     )
   }
 
   renderForgotPasswordInputs(): JSX.Element {
     return (
-      <div className="w-full mt-6">
+      <div className="w-full mt-8">
         <AuthFormItemInput
           name="username"
           label={i18n.t('auth.forgotPassword.username.label')}
@@ -130,7 +136,9 @@ export class AuthForgotPassword extends ForgotPassword {
     return (
       <>
         {this.renderSetNewPasswordInputs()}
-        <AuthFormButton ctaText={i18n.t('auth.forgotPassword.setNewPassword.cta')} />
+        <div className="mt-8">
+          <AuthFormButton ctaText={i18n.t('auth.forgotPassword.setNewPassword.cta')} />
+        </div>
       </>
     )
   }

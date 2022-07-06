@@ -27,23 +27,54 @@
         }
       }
     },
+    "confirmSignUp": {
+      "code": {
+        "error": {
+          "format": "Verifizierungscode ungültig oder abgelaufen",
+          "required": "Bitte Verifizierungscode eingeben"
+        },
+        "label": "Verifizierungscode",
+        "placeholder": "Verifizierungscode"
+      },
+      "cta": "Verifizieren",
+      "emailSent": "Verifizierungscode per E-mail geschickt.",
+      "resend": {
+        "action": "Bitte noch einmal senden.",
+        "prompt": "Du hast noch keinen Code erhalten?"
+      },
+      "signIn": {
+        "action": "Anmelden",
+        "prompt": "Du hast bereits ein Konto?"
+      },
+      "subtitle": "Nur noch einen Schritt um wirklich sicher zu gehen.",
+      "success": "Your signup is now complete. Please, log in to continue",
+      "text": "Wir haben dir einen Verifizierungscode per E-mail geschickt. Überprüfe gegebenenfalls auch deinen Spam-Ordner.",
+      "title": "Fast geschafft!",
+      "username": {
+        "error": {
+          "required": "Trage bitte deine E-mail-Adresse ein"
+        },
+        "label": "Deine E-mail-Adresse",
+        "placeholder": "Deine E-mail-Adresse"
+      }
+    },
     "forgotPassword": {
       "cta": "Schicken",
-      "emailSent": "Verification code sent. Please check your email.",
+      "emailSent": "Verifizierungscode per E-mail geschickt.",
       "resend": {
-        "action": "Send again",
-        "prompt": "Need a new verification code?"
+        "action": "Nochmal schicken",
+        "prompt": "Brauchst du einen neuen Verifizierungscode?"
       },
       "setNewPassword": {
         "code": {
           "error": {
-            "format": "Invalid or expired verification code",
-            "required": "Please input your verification code"
+            "format": "Ungültiger Verifizierungscode",
+            "required": "Bitte Verifizierungscode eingeben"
           },
-          "label": "Verification code",
-          "placeholder": "Please enter your verification code"
+          "label": "Verifizierungscode",
+          "placeholder": "Verifizierungscode"
         },
-        "cta": "Set password",
+        "cta": "Passwort setzen",
         "password": {
           "error": {
             "maxLength": "Your password must not be longer than 98 chars",
@@ -55,22 +86,22 @@
             "noSpaces": "Your password cannot contain spaces",
             "required": "Please input your new password"
           },
-          "label": "New password",
-          "placeholder": "Please enter your new password"
+          "label": "Neues Passwort",
+          "placeholder": "Neues Passwort"
         },
         "passwordRepeat": {
           "error": {
             "matchError": "The password does not match",
             "required": "Please repeat your new password"
           },
-          "label": "Repeat password",
-          "placeholder": "Please repeat your new password"
+          "label": "Neues Passwort wiederholen",
+          "placeholder": "Neues Passwort wiederholen"
         },
         "signIn": {
           "action": "Zurück zur Anmeldung"
         },
-        "success": "Your password was changed successfully. Please, log in to continue",
-        "title": "Set new password"
+        "success": "Dein Passwort wurde erfolgreich geändert. Bitte, nochmal anmelden.",
+        "title": "Neues Passwort setzen"
       },
       "signIn": {
         "action": "Zurück zur Anmeldung"
@@ -124,8 +155,8 @@
       "cta": "Registrieren",
       "email": {
         "error": {
-          "invalidFormat": "Invalid email format",
-          "required": "Please input your email"
+          "invalidFormat": "Falsche Formatierung",
+          "required": "Trage bitte deine E-mail-Adresse ein"
         },
         "label": "Deine E-mail-Adresse",
         "placeholder": "Deine E-mail-Adresse"
@@ -158,6 +189,9 @@
       },
       "title": "Erstelle ein Konto",
       "withEmail": "Registrierung mit Email"
+    },
+    "signOut": {
+      "action": "Abmelden"
     },
     "welcome": "Willkommen bei 60beans"
   },
@@ -866,6 +900,10 @@
           "value": "2-3 Tage"
         }
       }
+    },
+    "profile": {
+      "navigation": "Profil",
+      "title": "Profil"
     },
     "tasteFinder": {
       "navigation": "Tastefinder",

@@ -31,7 +31,7 @@ export const Auth: React.FC<AuthProps> = ({ authState }) => {
         window.location.pathname !== '/reset-password' && navigate('/reset-password')
         break
       case 'signedIn':
-        navigate('/logged-in')
+        navigate('/profile')
         break
       case 'signIn':
       case 'signInError':
