@@ -1,3 +1,12 @@
+# [1.13.0](https://github.com/Famous-Roasters/frontend/compare/v1.12.0...v1.13.0) (2022-07-05)
+
+
+### Features
+
+* **catalogue:** add taste profile filter ([af6f059](https://github.com/Famous-Roasters/frontend/commit/af6f059d9e873d1c32ec9a24e3dca7d489fb0327))
+* **catalogue:** failing snapshot ([5574d59](https://github.com/Famous-Roasters/frontend/commit/5574d5926a580b5a7e01a9bbfd48ecbbf871f9a9))
+* **catalog:** update snapshots ([3538f4e](https://github.com/Famous-Roasters/frontend/commit/3538f4ec54785eeda04985a31c91fadaf695a1fa))
+
 # [1.12.0](https://github.com/Famous-Roasters/frontend/compare/v1.11.0...v1.12.0) (2022-06-30)
 
 

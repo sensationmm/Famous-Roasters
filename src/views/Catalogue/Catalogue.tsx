@@ -136,12 +136,13 @@ export const Catalogue: React.FC = () => {
     const vendor = searchParams.get('vendor')?.split('|')
     const origin = searchParams.get('origin')?.split('|')
     const packageSize = searchParams.get('packageSize')?.split('|')
-    return getFilterData(filterInput, coffeeType, decaf, beanType, vendor, origin, packageSize)
+    const aroma = searchParams.get('aroma')?.split('|')
+    return getFilterData(filterInput, coffeeType, decaf, beanType, vendor, origin, packageSize, aroma)
   }
 
   const processFilterValues = (fData: Collection, f: FilterData[]) => {
     setFilters(f)
-    const { queryFilter, vendor, coffeeType, decaf, beanType, origin, packageSize } = getQueryFilter(fData, f)
+    const { queryFilter, vendor, coffeeType, decaf, beanType, origin, packageSize, aroma } = getQueryFilter(fData, f)
     queryFilter.length > 0 ? setQueryFilterParams({ queryFilter }) : setQueryFilterParams({ queryFilter: undefined })
 
     const updatedSearchParams = {
@@ -152,6 +153,7 @@ export const Catalogue: React.FC = () => {
       ...(beanType.length > 0 && { beanType: beanType.join('|') }),
       ...(origin.length > 0 && { origin: origin.join('|') }),
       ...(packageSize.length > 0 && { packageSize: packageSize.join('|') }),
+      ...(aroma.length > 0 && { aroma: aroma.join('|') }),
     }
     if (!vendor.length) delete updatedSearchParams.vendor
     if (!coffeeType.length) delete updatedSearchParams.coffeeType
@@ -159,6 +161,7 @@ export const Catalogue: React.FC = () => {
     if (!beanType.length) delete updatedSearchParams.beanType
     if (!origin.length) delete updatedSearchParams.origin
     if (!packageSize.length) delete updatedSearchParams.packageSize
+    if (!aroma.length) delete updatedSearchParams.aroma
 
     const currentSearchParams = Object.fromEntries(searchParams)
     if (JSON.stringify(updatedSearchParams) !== JSON.stringify(currentSearchParams)) {
@@ -378,6 +381,7 @@ export const Catalogue: React.FC = () => {
         <div className="mt-4">{renderListboxFilter('coffeeType', false)}</div>
         <div className="my-4 md:w-1/4">{renderCheckboxFilter('decaf')}</div>
         <div className="hidden md:flex gap-x-4">
+          <div className="md:w-1/4">{renderListboxFilter('aroma', false)}</div>
           <div className="md:w-1/4">{renderListboxFilter('beanType', false, ['Arabica, Robusta'])}</div>
           <div className="md:w-1/4">{renderListboxFilter('vendor', false)}</div>
           <div className="md:w-1/4">{renderListboxFilter('origin', true)}</div>

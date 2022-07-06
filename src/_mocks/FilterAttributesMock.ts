@@ -13,6 +13,9 @@ export const FilterAttributesMock = {
         nodes: [
           {
             id: '123123',
+            aroma: {
+              value: 'Floral & leicht',
+            },
             coffee_type: {
               value: 'Filter',
             },
@@ -48,6 +51,9 @@ export const FilterAttributesMock = {
           },
           {
             id: '123124',
+            aroma: {
+              value: 'Fruchtig & lebhaft',
+            },
             coffee_type: {
               value: 'Espresso',
             },

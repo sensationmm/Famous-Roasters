@@ -111,3 +111,11 @@ exports[`Tag component Renders correctly for type taste finder 1`] = `
   </div>
 </div>
 `;
+
+exports[`TagSwatch component Renders correctly 1`] = `
+<div>
+  <span
+    class="inline-flex rounded-full px-3 py-1 bg-brand-grey-bombay w-6 h-6 px-0 py-0 rounded-3xl mr-3"
+  />
+</div>
+`;
