@@ -1,3 +1,10 @@
+## [1.17.2](https://github.com/Famous-Roasters/frontend/compare/v1.17.1...v1.17.2) (2022-07-07)
+
+
+### Bug Fixes
+
+* **security:** dependencies security fixes ([8f14628](https://github.com/Famous-Roasters/frontend/commit/8f14628d525bcd94555cf545aa543f957df0509c))
+
 ## [1.17.1](https://github.com/Famous-Roasters/frontend/compare/v1.17.0...v1.17.1) (2022-07-07)
 
 # [1.17.0](https://github.com/Famous-Roasters/frontend/compare/v1.16.0...v1.17.0) (2022-07-07)
