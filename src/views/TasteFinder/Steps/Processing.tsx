@@ -56,7 +56,6 @@ export const Processing: React.FC<TasteFinderFieldHandlerProps> = ({
     })
       .then((data) => {
         updateData({ name: 'recommendations', value: data.data.tasteFinderRecommendation.recommendations })
-        updateData({ name: 'shopifyProductIds', value: data.data.tasteFinderRecommendation.shopifyProductIds })
       })
       .catch((err) => {
         throw new Error('Error getting recommendation', err)

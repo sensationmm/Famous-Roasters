@@ -57,7 +57,6 @@ export const TasteFinderMockQueryEspresso = {
   result: {
     data: {
       tasteFinderRecommendation: {
-        shopifyProductIds: ['7655228866776'],
         recommendations: [
           {
             shopifyId: '7655228866776',
@@ -89,7 +88,6 @@ export const TasteFinderMockQueryFilter = {
   result: {
     data: {
       tasteFinderRecommendation: {
-        shopifyProductIds: ['7655228866776'],
         recommendations: [
           {
             shopifyId: '7655228866776',
