@@ -212,7 +212,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
           class="my-4 md:w-1/4"
         >
           <button
-            class="flex w-full flex-row items-center cursor-pointer"
+            class="flex w-full flex-row items-start cursor-pointer"
             data-testid="checkbox"
           >
             <div>
@@ -1802,7 +1802,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
           class="my-4 md:w-1/4"
         >
           <button
-            class="flex w-full flex-row items-center cursor-pointer"
+            class="flex w-full flex-row items-start cursor-pointer"
             data-testid="checkbox"
           >
             <div>

@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Auth view Renders correctly 1`] = `
+<div>
+  <div
+    class="min-h-screen flex flex-col text-brand-black"
+  >
+    <div
+      class="bg-white z-10"
+    >
+      <header
+        class="relative bg-white"
+      >
+        <nav
+          aria-label="Top"
+          class="max-w-7xl mx-auto px-4 md:px-6 xl:px-8"
+        >
+          <div
+            class="h-16 mt-0.5 flex items-center justify-between border-b border-brand-grey-whisper"
+          >
+            <div
+              class="flex-1 flex items-center xl:hidden"
+            >
+              <button
+                class="-ml-2 bg-white p-2 rounded-md text-gray-400"
+                data-testid="button-open"
+                type="button"
+              >
+                <span
+                  class="sr-only"
+                >
+                  Open menu
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 6h16M4 12h16M4 18h16"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="hidden xl:flex-1 xl:block xl:self-stretch"
+            >
+              <div
+                class="h-full flex space-x-8"
+              >
+                <a
+                  class="flex items-center text-gray-700 hover:text-gray-800"
+                  href="/taste-finder"
+                >
+                  <span
+                    class="uppercase text-sm leading-5"
+                  >
+                    Tastefinder
+                  </span>
+                </a>
+              </div>
+            </div>
+            <a
+              class="flex h-full items-center pl-2 pr-2"
+              href="//www.60beans.de"
+            >
+              <span
+                class="sr-only"
+              >
+                60beans
+              </span>
+              <img
+                alt="60beans"
+                class="h-6"
+                src="60beans-black.svg"
+              />
+            </a>
+            <div
+              class="flex-1 flow-root flex h-full items-center"
+            >
+              <div
+                class="flex-1 flex h-full items-center justify-end xl:flex-none"
+              >
+                <div
+                  class="hidden h-full xl:flex space-x-8 justify-end"
+                >
+                  <a
+                    class="flex items-center text-gray-700 hover:text-gray-800"
+                    href="//www.60beans.de/uber-uns"
+                  >
+                    <span
+                      class="uppercase text-sm leading-5"
+                    >
+                      Über uns
+                    </span>
+                  </a>
+                </div>
+                <div
+                  class="ml-4 flow-root xl:ml-6"
+                >
+                  <button
+                    class="inline-flex items-center rounded-full border-2 px-3 py-2 text-sm font-semibold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
+                    data-testid="button-shop"
+                    role="button"
+                  >
+                    Shop
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </div>
+    <main
+      class="flex-grow flex items-start justify-center bg-white"
+    >
+      <div
+        class="w-full md:w-1/2"
+      >
+        <div
+          class="Section__container___3YYTG"
+        />
+      </div>
+    </main>
+  </div>
+</div>
+`;

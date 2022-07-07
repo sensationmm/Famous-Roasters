@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Auth form checkbox custom auth component Renders correctly 1`] = `
+<div>
+  <form
+    method="POST"
+  >
+    <button
+      class="flex w-full flex-row items-start cursor-pointer"
+      data-testid="checkbox"
+    >
+      <div>
+        <svg
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M19 22H5c-1.7 0-3-1.3-3-3V5c0-1.7 1.3-3 3-3h14c1.7 0 3 1.3 3 3v14c0 1.7-1.3 3-3 3zM5 4c-.6 0-1 .4-1 1v14c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V5c0-.6-.4-1-1-1H5z"
+            fill="#212121"
+            fill-rule="evenodd"
+            stroke="#212121"
+            stroke-width="0.25"
+          />
+        </svg>
+      </div>
+      <div
+        class="flex grow text-left pl-2 text-xs leading-4"
+      >
+        auth.signUp.label
+      </div>
+    </button>
+  </form>
+</div>
+`;

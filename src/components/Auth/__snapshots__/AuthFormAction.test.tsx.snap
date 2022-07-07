@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Auth form action custom renderer on auth component Renders correctly 1`] = `
+<div>
+  <form
+    name="testAuthFormAction"
+  >
+    <div
+      class="text-xs leading-4 font-semibold"
+    >
+      promptText 
+      <a
+        data-testid="testId"
+      >
+        ctaText
+      </a>
+    </div>
+  </form>
+</div>
+`;

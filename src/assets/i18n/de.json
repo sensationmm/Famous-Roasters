@@ -1,4 +1,200 @@
 {
+  "auth": {
+    "cognito": {
+      "errors": {
+        "confirmUserInvalidParameter": {
+          "ctaText": "Anmelden",
+          "prompt": "E-mail-Adresse ungültig. Versuch eine andere E-mail-Adresse oder"
+        },
+        "confirmUserNotFound": {
+          "ctaText": "Registrieren",
+          "prompt": "E-mail-Adresse ungültig. Versuch eine andere E-mail-Adresse oder"
+        },
+        "forgotPasswordGeneric": {
+          "ctaText": "Registrieren",
+          "prompt": "E-mail-Adresse ungültig. Versuch eine andere E-mail-Adresse oder"
+        },
+        "generic": "Anmeldungsfehler",
+        "incorrectUserNameOrPassword": "Ungültige Daten",
+        "invalidCode": "Verifizierungscode ungültig oder abgelaufen. Bitte versuch mal einen neuen Code anzufragen.",
+        "loginGeneric": {
+          "ctaText": "Registrieren",
+          "prompt": "E-mail-Adresse oder Passwort ungültig, bitte prüfen oder"
+        },
+        "registerGeneric": {
+          "ctaText": "Anmelden",
+          "prompt": "E-mail-Adresse oder Passwort ungültig, bitte prüfen oder"
+        }
+      }
+    },
+    "confirmSignUp": {
+      "code": {
+        "error": {
+          "format": "Verifizierungscode ungültig oder abgelaufen",
+          "required": "Bitte Verifizierungscode eingeben"
+        },
+        "label": "Verifizierungscode",
+        "placeholder": "Verifizierungscode"
+      },
+      "cta": "Verifizieren",
+      "emailSent": "Verifizierungscode per E-mail geschickt.",
+      "resend": {
+        "action": "Bitte noch einmal senden.",
+        "prompt": "Du hast noch keinen Code erhalten?"
+      },
+      "signIn": {
+        "action": "Anmelden",
+        "prompt": "Du hast bereits ein Konto?"
+      },
+      "subtitle": "Nur noch einen Schritt um wirklich sicher zu gehen.",
+      "success": "Your signup is now complete. Please, log in to continue",
+      "text": "Wir haben dir einen Verifizierungscode per E-mail geschickt. Überprüfe gegebenenfalls auch deinen Spam-Ordner.",
+      "title": "Fast geschafft!",
+      "username": {
+        "error": {
+          "required": "Trage bitte deine E-mail-Adresse ein"
+        },
+        "label": "Deine E-mail-Adresse",
+        "placeholder": "Deine E-mail-Adresse"
+      }
+    },
+    "forgotPassword": {
+      "cta": "Schicken",
+      "emailSent": "Verifizierungscode per E-mail geschickt.",
+      "resend": {
+        "action": "Nochmal schicken",
+        "prompt": "Brauchst du einen neuen Verifizierungscode?"
+      },
+      "setNewPassword": {
+        "code": {
+          "error": {
+            "format": "Ungültiger Verifizierungscode",
+            "required": "Bitte Verifizierungscode eingeben"
+          },
+          "label": "Verifizierungscode",
+          "placeholder": "Verifizierungscode"
+        },
+        "cta": "Passwort setzen",
+        "password": {
+          "error": {
+            "maxLength": "Your password must not be longer than 98 chars",
+            "minLength": "Your password must be at least 8 characters long",
+            "mustContainLowercase": "Your password must contain at least one lowercase letter",
+            "mustContainNumber": "Your password must contain at least one number",
+            "mustContainSpecial": "Your password must contain at least one special character: ^$*.[]{}()?\"!@#%&/\\,><':;|_~`",
+            "mustContainUppercase": "Your password must contain at least one uppercase letter",
+            "noSpaces": "Your password cannot contain spaces",
+            "required": "Please input your new password"
+          },
+          "label": "Neues Passwort",
+          "placeholder": "Neues Passwort"
+        },
+        "passwordRepeat": {
+          "error": {
+            "matchError": "The password does not match",
+            "required": "Please repeat your new password"
+          },
+          "label": "Neues Passwort wiederholen",
+          "placeholder": "Neues Passwort wiederholen"
+        },
+        "signIn": {
+          "action": "Zurück zur Anmeldung"
+        },
+        "success": "Dein Passwort wurde erfolgreich geändert. Bitte, nochmal anmelden.",
+        "title": "Neues Passwort setzen"
+      },
+      "signIn": {
+        "action": "Zurück zur Anmeldung"
+      },
+      "text": "Kein Problem. Gib deine E-Mail-Adresse ein, mit der du ein Konto bei 60beans erstellt hast und wir schicken dir einen neuen Link zur Passworterstellung zu.",
+      "title": "Passwort zurücksetzen",
+      "username": {
+        "error": {
+          "invalidFormat": "Falsche Formatierung",
+          "required": "Trage bitte deine E-mail-Adresse ein"
+        },
+        "label": "Deine E-mail-Adresse",
+        "placeholder": "Deine E-mail-Adresse"
+      }
+    },
+    "signIn": {
+      "email": {
+        "error": {
+          "invalidFormat": "Falsche Formatierung",
+          "required": "Trage bitte deine E-mail-Adresse ein"
+        },
+        "label": "Deine E-mail-Adresse",
+        "placeholder": "Deine E-mail-Adresse"
+      },
+      "forgotPassword": {
+        "action": "Passwort vergessen?"
+      },
+      "password": {
+        "error": {
+          "required": "Trage bitte dein Passwort ein"
+        },
+        "label": "Dein Passwort",
+        "placeholder": "Dein Passwort"
+      },
+      "signUp": {
+        "action": "Registrieren",
+        "prompt": "Ich bin neu hier"
+      },
+      "title": "Anmelden"
+    },
+    "signUp": {
+      "confirmSignUp": {
+        "action": "E-mail-Adresse bestätigen"
+      },
+      "confirmTos": {
+        "error": {
+          "required": "You need to tick the check box below to agree with the Terms and Conditions and the Privacy Policy before we can proceed"
+        },
+        "label": "Indem Du auf “Registrieren” klickst, erstellst Du ein 60beans-Konto und stimmst unseren Nutzungs-bedingungen sowie Datenschutzrichtlinien zu."
+      },
+      "cta": "Registrieren",
+      "email": {
+        "error": {
+          "invalidFormat": "Falsche Formatierung",
+          "required": "Trage bitte deine E-mail-Adresse ein"
+        },
+        "label": "Deine E-mail-Adresse",
+        "placeholder": "Deine E-mail-Adresse"
+      },
+      "password": {
+        "error": {
+          "maxLength": "Your password must not be longer than 98 chars",
+          "minLength": "Your password must be at least 8 characters long",
+          "mustContainLowercase": "Your password must contain at least one lowercase letter",
+          "mustContainNumber": "Your password must contain at least one number",
+          "mustContainSpecial": "Your password must contain at least one special character: ^$*.[]{}()?\"!@#%&/\\,><':;|_~`",
+          "mustContainUppercase": "Your password must contain at least one uppercase letter",
+          "noSpaces": "Your password cannot contain spaces",
+          "required": "Please input your password"
+        },
+        "label": "Dein Passwort",
+        "placeholder": "Dein Passwort"
+      },
+      "passwordRepeat": {
+        "error": {
+          "matchError": "The password does not match",
+          "required": "Please repeat your password"
+        },
+        "label": "Passwort wiederholen",
+        "placeholder": "Passwort wiederholen"
+      },
+      "signIn": {
+        "action": "Anmelden",
+        "prompt": "Du hast bereits ein Konto?"
+      },
+      "title": "Erstelle ein Konto",
+      "withEmail": "Registrierung mit Email"
+    },
+    "signOut": {
+      "action": "Abmelden"
+    },
+    "welcome": "Willkommen bei 60beans"
+  },
   "brand": {
     "copyright": "© {{year}} 60beans. Alle Rechte vorbehalten.",
     "name": "60beans",
@@ -708,6 +904,10 @@
           "value": "2-3 Tage"
         }
       }
+    },
+    "profile": {
+      "navigation": "Profil",
+      "title": "Profil"
     },
     "tasteFinder": {
       "navigation": "Tastefinder",

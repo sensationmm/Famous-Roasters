@@ -1,3 +1,19 @@
+import {
+  AuthCognitoErrors,
+  AuthConfirmSignUp,
+  Authenticator,
+  AuthForgotPassword,
+  AuthFormAction,
+  AuthFormButton,
+  AuthFormCheckbox,
+  AuthFormCode,
+  AuthFormDoublePassword,
+  AuthFormEmail,
+  AuthFormItemInput,
+  AuthFormPassword,
+  AuthSignIn,
+  AuthSignUp,
+} from './Auth'
 import { Badge } from './Badge'
 import { BeanScaleTag } from './BeanScaleTag'
 import { Button, ButtonEmphasis, ButtonSize } from './Button'
@@ -32,6 +48,20 @@ import { Tag, TagSwatch, TagType } from './Tag'
 import { TasteProfile } from './TasteProfile'
 import { Typography, TypographySize, TypographyType } from './Typography'
 
+export { AuthCognitoErrors as AuthCognitoErrors }
+export { AuthConfirmSignUp as AuthConfirmSignUp }
+export { AuthForgotPassword as AuthForgotPassword }
+export { AuthFormAction as AuthFormAction }
+export { AuthFormButton as AuthFormButton }
+export { AuthFormCheckbox as AuthFormCheckbox }
+export { AuthFormCode as AuthFormCode }
+export { AuthFormDoublePassword as AuthFormDoublePassword }
+export { AuthFormEmail as AuthFormEmail }
+export { AuthFormItemInput as AuthFormItemInput }
+export { AuthFormPassword as AuthFormPassword }
+export { Authenticator as Authenticator }
+export { AuthSignIn as AuthSignIn }
+export { AuthSignUp as AuthSignUp }
 export { Badge as Badge }
 export { BeanScaleTag as BeanScaleTag }
 export { Button as Button }

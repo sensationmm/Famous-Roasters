@@ -1,8 +1,12 @@
 import React from 'react'
 
-export const Badge: React.FC = () => {
+interface BadgeProps {
+  size?: number
+}
+
+export const Badge: React.FC<BadgeProps> = ({ size = 157 }) => {
   return (
-    <svg width="157" height="157" viewBox="0 0 627 627" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width={size} height={size} viewBox="0 0 627 627" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="313.5" cy="313.5" r="313.5" fill="#D4FF81" />
       <path
         fillRule="evenodd"
