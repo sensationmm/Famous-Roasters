@@ -1,3 +1,10 @@
+## [1.17.3](https://github.com/Famous-Roasters/frontend/compare/v1.17.2...v1.17.3) (2022-07-07)
+
+
+### Bug Fixes
+
+* **taste finder:** recommendations not setting on localstorage ([9c796ec](https://github.com/Famous-Roasters/frontend/commit/9c796ec159fc64c7d23cc64b9f602005b7a7b5d8))
+
 ## [1.17.2](https://github.com/Famous-Roasters/frontend/compare/v1.17.1...v1.17.2) (2022-07-07)
 
 
