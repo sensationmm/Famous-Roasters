@@ -1,3 +1,10 @@
+# [1.18.0](https://github.com/Famous-Roasters/frontend/compare/v1.17.3...v1.18.0) (2022-07-07)
+
+
+### Features
+
+* **header:** new logos ([0e682a4](https://github.com/Famous-Roasters/frontend/commit/0e682a4a69225fd055d10f7789c3d62039724364))
+
 ## [1.17.3](https://github.com/Famous-Roasters/frontend/compare/v1.17.2...v1.17.3) (2022-07-07)
 
 
