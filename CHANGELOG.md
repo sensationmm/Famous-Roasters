@@ -1,3 +1,27 @@
+# [1.16.0](https://github.com/Famous-Roasters/frontend/compare/v1.15.0...v1.16.0) (2022-07-07)
+
+
+### Features
+
+* **auth:** abstract button and improve validation ([3576341](https://github.com/Famous-Roasters/frontend/commit/3576341dc350f63bfd1b4d7990de28b685f68734))
+* **auth:** adding cognito conf + hook ([314a736](https://github.com/Famous-Roasters/frontend/commit/314a736891a40716c730b690824fc269a1d5ad8e))
+* **auth:** adding field basic validations and disabling submit ([ab31c19](https://github.com/Famous-Roasters/frontend/commit/ab31c19f2a1a005acda51ab5c1030dd538f0d8ce))
+* **auth:** adding rc field form for validation wip ([63482bd](https://github.com/Famous-Roasters/frontend/commit/63482bd540720171c4516251ce872ba9fa1c4836))
+* **auth:** almost complete signup ([9bc4ab1](https://github.com/Famous-Roasters/frontend/commit/9bc4ab1145256f13519c889a326e0710f1d47b1b))
+* **auth:** completes and adds profile page ([2cea39a](https://github.com/Famous-Roasters/frontend/commit/2cea39abf19391abbb82bdf7e68616fc2db0198d))
+* **auth:** forgot password wip ([b45dc75](https://github.com/Famous-Roasters/frontend/commit/b45dc75eb7af2c64d38fe4d0ad5c27c7647382cb))
+* **auth:** further styling signin ([5882fd7](https://github.com/Famous-Roasters/frontend/commit/5882fd79b84d50962846c3fb47fb78d0e313e9c9))
+* **auth:** initial commit ([e88bdf4](https://github.com/Famous-Roasters/frontend/commit/e88bdf45c74055cbcc35fdf186d2d768dd950361))
+* **auth:** quality ([006764a](https://github.com/Famous-Roasters/frontend/commit/006764a1bc57fe3b066584b6282c1962fd8afe96))
+* **auth:** quality gate ([f694cb6](https://github.com/Famous-Roasters/frontend/commit/f694cb6c7979af57ccae38c73e09bc896f5b4a15))
+* **auth:** registration wip ([069fc1a](https://github.com/Famous-Roasters/frontend/commit/069fc1ab4502e6fe814ec88a715d9a01c08f4f92))
+* **auth:** registration wip ([98d8739](https://github.com/Famous-Roasters/frontend/commit/98d8739c3325532ca122bd89a69086056a057433))
+* **auth:** registration wip ([52fc671](https://github.com/Famous-Roasters/frontend/commit/52fc6719fbe20010ecf79a25682e45cdc2e21561))
+* **auth:** right width ([7edcff3](https://github.com/Famous-Roasters/frontend/commit/7edcff3cff0352e6044f2b0b150351f7c6f1c0e2))
+* **auth:** tests fix ([fc2b312](https://github.com/Famous-Roasters/frontend/commit/fc2b3125ae64ec377156ee82bd3e8fcec175c5db))
+* **auth:** tests fix ([1db3ecd](https://github.com/Famous-Roasters/frontend/commit/1db3ecd5291b948507df7178e8a32a4b77cd5299))
+* **auth:** tests fix ([6da2a3a](https://github.com/Famous-Roasters/frontend/commit/6da2a3a4b7aeeca91b7a1fb127ff65b3f3335b4b))
+
 # [1.15.0](https://github.com/Famous-Roasters/frontend/compare/v1.14.0...v1.15.0) (2022-07-06)
 
 
