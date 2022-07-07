@@ -177,8 +177,8 @@ export const TasteFinder: React.FC = () => {
     // stores in localstorage
     setTasteFinderLocalStorage(JSON.stringify([...tasteFinderState.filter((p) => p.name !== data.name), data]))
     // redirect when complete
-    if (data.name === 'shopifyProductIds' && data.value && data.value.length > 0) {
-      navigate(`/featured/${data.value[0]}`, { replace: true })
+    if (data.name === 'recommendations' && data.value && data.value.length > 0) {
+      navigate(`/featured/${(data.value[0] as unknown as { shopifyId: string }).shopifyId}`, { replace: true })
     }
   }
 
