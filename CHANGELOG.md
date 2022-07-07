@@ -1,3 +1,15 @@
+# [1.17.0](https://github.com/Famous-Roasters/frontend/compare/v1.16.0...v1.17.0) (2022-07-07)
+
+
+### Bug Fixes
+
+* upgrade multiple dependencies with Snyk ([df4242d](https://github.com/Famous-Roasters/frontend/commit/df4242d279c509c8c6389420527993e48799c617))
+
+
+### Features
+
+* **auth:** adds ci config for staging and prod ([ffe3ec4](https://github.com/Famous-Roasters/frontend/commit/ffe3ec4abe81760b8fde5522a866a2eaa637c30e))
+
 # [1.16.0](https://github.com/Famous-Roasters/frontend/compare/v1.15.0...v1.16.0) (2022-07-07)
 
 
