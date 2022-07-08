@@ -88,6 +88,7 @@ export const Product: React.FC = () => {
   const { addToCart } = useContext(CartContext)
   const transactionalRef = useRef<null | HTMLDivElement>(null)
   const stickyCTARef = useRef<null | HTMLDivElement>(null)
+  const detailsRef = useRef<null | HTMLDivElement>(null)
   const [isSticky, setIsSticky] = useState<boolean>(true)
   const [isFixed, setIsFixed] = useState<boolean>(false)
 
@@ -192,11 +193,15 @@ export const Product: React.FC = () => {
   const packageSizesValues = () =>
     Array.from(new Set(variants.nodes.map((variant) => variant.package_size.value))).map((x) => ({ name: x })) || []
 
+  const backToDetails = () => {
+    if (detailsRef?.current?.offsetTop && detailsRef.current.offsetTop < window.scrollY) {
+      detailsRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   const handleAddToCart = () => {
     addToCart && addToCart({ quantity, item: variantSelected.id })
-    if (transactionalRef?.current?.offsetTop && transactionalRef.current.offsetTop < window.scrollY) {
-      transactionalRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
+    backToDetails()
   }
 
   const renderCTAContent = () => {
@@ -249,6 +254,11 @@ export const Product: React.FC = () => {
             </span>
           </Button>
         </div>
+        <div className={`absolute w-full text-center pt-1 md:hidden ${!isFixed && ' hidden'}`} onClick={backToDetails}>
+          <Typography size={TypographySize.Tiny} className="uppercase">
+            &uarr; {t('cta.backToDetails')} &uarr;
+          </Typography>
+        </div>
       </>
     )
   }
@@ -291,7 +301,7 @@ export const Product: React.FC = () => {
       classNames.push('sticky', 'bottom-0', 'z-20', 'bg-brand-grey-woodsmoke', 'text-white', 'md:hidden')
     }
     if (isFixed) {
-      classNames.push('fixed', 'bottom-0', 'z-20', 'bg-brand-grey-woodsmoke', 'text-white', 'md:hidden')
+      classNames.push('fixed', 'bottom-0', 'z-20', 'bg-brand-grey-woodsmoke', 'text-white', 'md:hidden', 'pt-8')
     }
     return classNames.join(' ')
   }
@@ -313,6 +323,7 @@ export const Product: React.FC = () => {
         {/* Images */}
         {images && images.nodes.length > 0 && <Carousel images={images.nodes} />}
         <div>
+          <span ref={detailsRef} />
           {/* Vendor and bean_type */}
           <div>
             <Typography

@@ -202,7 +202,8 @@
   },
   "cta": {
     "next": "Weiter",
-    "prev": "Zurück"
+    "prev": "Zurück",
+    "backToDetails": "Zurück zu den Einzelheiten"
   },
   "error": {
     "generic": {

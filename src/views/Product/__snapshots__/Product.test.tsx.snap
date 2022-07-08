@@ -151,6 +151,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
           class="grid gap-6 grid-cols-1 md:grid-cols-2"
         >
           <div>
+            <span />
             <div>
               <h2
                 class="text-coreUI-text-secondary text-sm leading-5"
@@ -861,6 +862,17 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                     </span>
                   </button>
                 </div>
+                <div
+                  class="absolute w-full text-center pt-1 md:hidden  hidden"
+                >
+                  <span
+                    class="uppercase text-xs leading-4"
+                  >
+                    ↑ 
+                    Zurück zu den Einzelheiten
+                     ↑
+                  </span>
+                </div>
               </div>
               <div
                 class="hidden md:block"
@@ -946,6 +958,17 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               </svg>
             </span>
           </button>
+        </div>
+        <div
+          class="absolute w-full text-center pt-1 md:hidden  hidden"
+        >
+          <span
+            class="uppercase text-xs leading-4"
+          >
+            ↑ 
+            Zurück zu den Einzelheiten
+             ↑
+          </span>
         </div>
       </div>
       <div
@@ -1648,6 +1671,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
           class="grid gap-6 grid-cols-1 md:grid-cols-2"
         >
           <div>
+            <span />
             <div>
               <h2
                 class="text-coreUI-text-secondary text-sm leading-5"
@@ -2345,6 +2369,17 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                     </span>
                   </button>
                 </div>
+                <div
+                  class="absolute w-full text-center pt-1 md:hidden  hidden"
+                >
+                  <span
+                    class="uppercase text-xs leading-4"
+                  >
+                    ↑ 
+                    Zurück zu den Einzelheiten
+                     ↑
+                  </span>
+                </div>
               </div>
               <div
                 class="hidden md:block"
@@ -2430,6 +2465,17 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
               </svg>
             </span>
           </button>
+        </div>
+        <div
+          class="absolute w-full text-center pt-1 md:hidden  hidden"
+        >
+          <span
+            class="uppercase text-xs leading-4"
+          >
+            ↑ 
+            Zurück zu den Einzelheiten
+             ↑
+          </span>
         </div>
       </div>
       <div
