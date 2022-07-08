@@ -21,6 +21,7 @@ interface ListboxProps {
   resetOnNoneClick?: boolean
   big?: boolean
   hasSpacerAfterItem?: string[]
+  swatches?: JSX.Element[]
 }
 
 export const Listbox: React.FC<ListboxProps> = ({
@@ -36,6 +37,7 @@ export const Listbox: React.FC<ListboxProps> = ({
   resetOnNoneClick = false,
   big = false,
   hasSpacerAfterItem = undefined,
+  swatches = undefined,
   ...props
 }: ListboxProps) => {
   const noneItem: ListBoxItem = { name: 'none' }
@@ -174,12 +176,13 @@ export const Listbox: React.FC<ListboxProps> = ({
                       {({ selected }) => (
                         <>
                           <span
-                            className={`block truncate ${
+                            className={`block truncate flex ${
                               selected || activeItems?.find((activeItem) => activeItem.name === option.name)
                                 ? 'font-semibold'
                                 : 'font-normal'
                             }`}
                           >
+                            {swatches && swatches.length > 0 && swatches[idx]}
                             {renderOptionText(option)}
                           </span>
                           {selected || activeItems?.find((activeItem) => activeItem.name === option.name) ? (
