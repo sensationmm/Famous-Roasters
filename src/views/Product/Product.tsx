@@ -86,8 +86,8 @@ export const Product: React.FC = () => {
   const [quantity, setQuantity] = useState<number>(1)
   const [variantSelected, setVariantSelected] = useState<ProductVariantCustom>()
   const { addToCart } = useContext(CartContext)
-  const transactionalRef = useRef<null | HTMLDivElement>(null)
   const stickyCTARef = useRef<null | HTMLDivElement>(null)
+  const detailsRef = useRef<null | HTMLDivElement>(null)
   const [isSticky, setIsSticky] = useState<boolean>(true)
   const [isFixed, setIsFixed] = useState<boolean>(false)
 
@@ -192,11 +192,14 @@ export const Product: React.FC = () => {
   const packageSizesValues = () =>
     Array.from(new Set(variants.nodes.map((variant) => variant.package_size.value))).map((x) => ({ name: x })) || []
 
+  const backToDetails = () => {
+    if (detailsRef?.current?.offsetTop && detailsRef.current.offsetTop < window.scrollY) {
+      detailsRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   const handleAddToCart = () => {
     addToCart && addToCart({ quantity, item: variantSelected.id })
-    if (transactionalRef?.current?.offsetTop && transactionalRef.current.offsetTop < window.scrollY) {
-      transactionalRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
   }
 
   const renderCTAContent = () => {
@@ -240,12 +243,12 @@ export const Product: React.FC = () => {
             emphasis={ButtonEmphasis.Primary}
             size={ButtonSize.md}
             className="flex w-full justify-center"
-            onClick={handleAddToCart}
+            onClick={!isFixed && !isSticky ? handleAddToCart : backToDetails}
             data-testid="addToCart"
           >
             <span className="hidden md:block">{t('pages.product.transactional.cta')}</span>
             <span className="md:hidden">
-              <Icon name={IconName.AddToCart} size={IconSize.lg} />
+              <Icon name={!isFixed && !isSticky ? IconName.AddToCart : IconName.Cart} size={IconSize.lg} />
             </span>
           </Button>
         </div>
@@ -313,6 +316,7 @@ export const Product: React.FC = () => {
         {/* Images */}
         {images && images.nodes.length > 0 && <Carousel images={images.nodes} />}
         <div>
+          <span ref={detailsRef} />
           {/* Vendor and bean_type */}
           <div>
             <Typography
@@ -354,7 +358,7 @@ export const Product: React.FC = () => {
             </div>
           )}
           {/* Transactional section */}
-          <div className="mt-4 pt-4 border-t border-brand-grey-whisper" ref={transactionalRef}>
+          <div className="mt-4 pt-4 border-t border-brand-grey-whisper">
             <div>
               {variants && variants.nodes[0].grind_type && (
                 <Listbox
