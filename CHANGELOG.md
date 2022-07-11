@@ -1,3 +1,15 @@
+# [1.21.0](https://github.com/Famous-Roasters/frontend/compare/v1.20.0...v1.21.0) (2022-07-11)
+
+
+### Bug Fixes
+
+* **product page:** review requests ([030507d](https://github.com/Famous-Roasters/frontend/commit/030507df197bd89345600e3d9cb9dcffd48f4979))
+
+
+### Features
+
+* **product page:** scroll up cta ([e94fbef](https://github.com/Famous-Roasters/frontend/commit/e94fbef5b152610b61770942b1b60187f25bfabe))
+
 # [1.20.0](https://github.com/Famous-Roasters/frontend/compare/v1.19.2...v1.20.0) (2022-07-11)
 
 
