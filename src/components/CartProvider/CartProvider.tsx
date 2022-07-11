@@ -52,6 +52,10 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProv
       })
         .then((r) => {
           const quantities = r.data?.cart?.lines.edges.map((node) => node.node.quantity)
+          // stale cart check
+          if (r.data?.cart === null) {
+            setStoredCartId('')
+          }
           const size = quantities?.reduce((x, y) => x + y)
           setCartId(storedCartId)
           size && setCartSize(size)
