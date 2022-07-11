@@ -67,7 +67,7 @@ const getTagClassNames = (value: string, type?: TagType, small?: boolean, classN
 export const TagSwatch: React.FC<TagProps> = ({ value, type = undefined, small = false, className, ...props }) => {
   return (
     <span
-      className={`${getTagClassNames(value, type, small, className)} w-6 h-6 px-0 py-0 rounded-3xl mr-3`}
+      className={`${getTagClassNames(value, type, small, className)} w-6 h-6 px-0 py-0 rounded-3xl mr-3 flex-shrink-0`}
       {...props}
     />
   )

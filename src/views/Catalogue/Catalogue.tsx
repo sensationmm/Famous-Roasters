@@ -22,6 +22,8 @@ import {
   Loader,
   ProductTile,
   TabsNavigation,
+  TagSwatch,
+  TagType,
   Typography,
   TypographySize,
 } from 'src/components'
@@ -328,20 +330,35 @@ export const Catalogue: React.FC = () => {
     onUpdateFiltersDesktop(items, key)
   }
 
-  const renderListboxFilter = (key: string, hasTranslatedValues: boolean, hasSpacerAfterItem?: string[]) => (
-    <Listbox
-      items={filters.filter((filter) => filter.key === key)[0].filterValues?.map((x) => ({ name: x })) || []}
-      hasTranslatedValues={hasTranslatedValues}
-      translationPrefix={`pages.catalogue.filters.${key}`}
-      value={filters.filter((filter) => filter.key === key)[0].filterValuesSelected?.map((fv) => ({ name: fv }))}
-      multiple={key !== 'coffeeType'}
-      hasNoneItem={key === 'coffeeType'}
-      resetOnNoneClick={key === 'coffeeType'}
-      onChange={(v) => onUpdateFiltersDesktop(v, key)}
-      big={key === 'coffeeType'}
-      hasSpacerAfterItem={hasSpacerAfterItem}
-    />
-  )
+  const renderListboxFilter = (key: string, hasTranslatedValues: boolean, hasSpacerAfterItem?: string[]) => {
+    const filtersToShow = filters.filter((filter) => filter.key === key)[0]
+    return (
+      <Listbox
+        items={filtersToShow?.filterValues?.map((x) => ({ name: x })) || []}
+        hasTranslatedValues={hasTranslatedValues}
+        translationPrefix={`pages.catalogue.filters.${key}`}
+        value={filtersToShow.filterValuesSelected?.map((fv) => ({ name: fv }))}
+        multiple={key !== 'coffeeType'}
+        hasNoneItem={key === 'coffeeType'}
+        resetOnNoneClick={key === 'coffeeType'}
+        onChange={(v) => onUpdateFiltersDesktop(v, key)}
+        big={key === 'coffeeType'}
+        hasSpacerAfterItem={hasSpacerAfterItem}
+        swatches={
+          key === 'aroma'
+            ? filtersToShow?.filterValues?.map((x, count) => (
+                <TagSwatch
+                  key={`filter-swatch-${count}`}
+                  data-testid="filter-option-tagSwatch"
+                  type={TagType.Aroma}
+                  value={x}
+                />
+              ))
+            : undefined
+        }
+      />
+    )
+  }
 
   const renderCheckboxFilter = (key: string) => {
     const v = filters.filter((filter) => filter.key === key)[0]
