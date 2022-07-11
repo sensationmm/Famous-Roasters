@@ -74,7 +74,7 @@ export const Auth: React.FC<AuthProps> = ({ authState }) => {
   return (
     <Layout navigationTheme={NavigationTheme.Home} showFooter={false}>
       <main className="flex-grow flex items-start justify-center bg-white">
-        <div className="w-full md:w-1/2">{innerContent()}</div>
+        <div className="w-full md:w-80 xl:w-auto xl:w-[32rem]">{innerContent()}</div>
       </main>
     </Layout>
   )
