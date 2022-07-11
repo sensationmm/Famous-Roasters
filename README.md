@@ -20,8 +20,8 @@ ___
 
 <!-- Environments -->  
 ## Environments
-- [App - Production](https://60beans.io/)
-- [App - Staging](https://staging.60beans.io/)
+- [App - Production](https://shop.60beans.com/)
+- [App - Staging](https://staging.shop.60beans.com/)
 - [Storybook - Staging](https://storybook.staging.60beans.io/)
 
 ___
@@ -222,8 +222,8 @@ This setup includes [semantic-release](https://github.com/semantic-release/seman
 <!-- Deployment -->  
 ### Deployment
 Deployment to staging is configured automatically for the `main` branch. For details, check the [GitHub Actions](#github-actions) section above.
-The deployed app (production) can be found [here](https://60beans.io/).
-The deployed app (staging) can be found [here](https://staging.60beans.io/).
+The deployed app (production) can be found [here](https://shop.60beans.com/).
+The deployed app (staging) can be found [here](https://staging.shop.60beans.com/).
 The deployed storybook (staging) can be found [here](https://storybook.staging.60beans.io/).
 
 <!-- Questions? -->  
