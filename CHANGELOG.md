@@ -1,3 +1,10 @@
+## [1.18.1](https://github.com/Famous-Roasters/frontend/compare/v1.18.0...v1.18.1) (2022-07-11)
+
+
+### Bug Fixes
+
+* **logo:** update badge component ([df5c098](https://github.com/Famous-Roasters/frontend/commit/df5c09872310b66280972c61af7baf78678171a6))
+
 # [1.18.0](https://github.com/Famous-Roasters/frontend/compare/v1.17.3...v1.18.0) (2022-07-07)
 
 
