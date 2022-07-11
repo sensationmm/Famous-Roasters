@@ -1,3 +1,10 @@
+## [1.19.1](https://github.com/Famous-Roasters/frontend/compare/v1.19.0...v1.19.1) (2022-07-11)
+
+
+### Bug Fixes
+
+* upgrade typescript from 4.6.4 to 4.7.3 ([50402a5](https://github.com/Famous-Roasters/frontend/commit/50402a5968a2c9a9c7042b404837e0dc5907d11b))
+
 # [1.19.0](https://github.com/Famous-Roasters/frontend/compare/v1.18.1...v1.19.0) (2022-07-11)
 
 
