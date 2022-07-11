@@ -1,3 +1,15 @@
+# [1.19.0](https://github.com/Famous-Roasters/frontend/compare/v1.18.1...v1.19.0) (2022-07-11)
+
+
+### Bug Fixes
+
+* **cart:** cannot add product if stale cart ([33aee63](https://github.com/Famous-Roasters/frontend/commit/33aee637e96a3b96c2ff7340f22aaeecfd6c3136))
+
+
+### Features
+
+* **taste finder:** add swatches to desktop filters ([531feef](https://github.com/Famous-Roasters/frontend/commit/531feef734b9e21fca1269cb0cd53a01c4fe50d4))
+
 ## [1.18.1](https://github.com/Famous-Roasters/frontend/compare/v1.18.0...v1.18.1) (2022-07-11)
 
 
