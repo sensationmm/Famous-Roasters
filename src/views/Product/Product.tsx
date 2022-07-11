@@ -86,7 +86,6 @@ export const Product: React.FC = () => {
   const [quantity, setQuantity] = useState<number>(1)
   const [variantSelected, setVariantSelected] = useState<ProductVariantCustom>()
   const { addToCart } = useContext(CartContext)
-  const transactionalRef = useRef<null | HTMLDivElement>(null)
   const stickyCTARef = useRef<null | HTMLDivElement>(null)
   const detailsRef = useRef<null | HTMLDivElement>(null)
   const [isSticky, setIsSticky] = useState<boolean>(true)
@@ -201,7 +200,6 @@ export const Product: React.FC = () => {
 
   const handleAddToCart = () => {
     addToCart && addToCart({ quantity, item: variantSelected.id })
-    backToDetails()
   }
 
   const renderCTAContent = () => {
@@ -245,19 +243,14 @@ export const Product: React.FC = () => {
             emphasis={ButtonEmphasis.Primary}
             size={ButtonSize.md}
             className="flex w-full justify-center"
-            onClick={handleAddToCart}
+            onClick={!isFixed && !isSticky ? handleAddToCart : backToDetails}
             data-testid="addToCart"
           >
             <span className="hidden md:block">{t('pages.product.transactional.cta')}</span>
             <span className="md:hidden">
-              <Icon name={IconName.AddToCart} size={IconSize.lg} />
+              <Icon name={!isFixed && !isSticky ? IconName.AddToCart : IconName.Cart} size={IconSize.lg} />
             </span>
           </Button>
-        </div>
-        <div className={`absolute w-full text-center pt-1 md:hidden ${!isFixed && ' hidden'}`} onClick={backToDetails}>
-          <Typography size={TypographySize.Tiny} className="uppercase">
-            &uarr; {t('cta.backToDetails')} &uarr;
-          </Typography>
         </div>
       </>
     )
@@ -301,7 +294,7 @@ export const Product: React.FC = () => {
       classNames.push('sticky', 'bottom-0', 'z-20', 'bg-brand-grey-woodsmoke', 'text-white', 'md:hidden')
     }
     if (isFixed) {
-      classNames.push('fixed', 'bottom-0', 'z-20', 'bg-brand-grey-woodsmoke', 'text-white', 'md:hidden', 'pt-8')
+      classNames.push('fixed', 'bottom-0', 'z-20', 'bg-brand-grey-woodsmoke', 'text-white', 'md:hidden')
     }
     return classNames.join(' ')
   }
@@ -365,7 +358,7 @@ export const Product: React.FC = () => {
             </div>
           )}
           {/* Transactional section */}
-          <div className="mt-4 pt-4 border-t border-brand-grey-whisper" ref={transactionalRef}>
+          <div className="mt-4 pt-4 border-t border-brand-grey-whisper">
             <div>
               {variants && variants.nodes[0].grind_type && (
                 <Listbox
