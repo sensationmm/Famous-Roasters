@@ -122,7 +122,7 @@ exports[`Auth view Renders correctly 1`] = `
       class="flex-grow flex items-start justify-center bg-white"
     >
       <div
-        class="w-full md:w-1/2"
+        class="w-full md:w-80 xl:w-auto xl:w-[32rem]"
       >
         <div
           class="Section__container___3YYTG"
