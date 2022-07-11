@@ -57,7 +57,16 @@ export const TasteFinderMockQueryEspresso = {
   result: {
     data: {
       tasteFinderRecommendation: {
-        shopifyProductIds: ['7655228866776'],
+        recommendations: [
+          {
+            shopifyId: '7655228866776',
+            score: 0.9814814814814815,
+            acidity: 4,
+            bitterness: 1,
+            sweetness: 2,
+            body: 3,
+          },
+        ],
       },
     },
   },
@@ -79,7 +88,16 @@ export const TasteFinderMockQueryFilter = {
   result: {
     data: {
       tasteFinderRecommendation: {
-        shopifyProductIds: ['7655228866776'],
+        recommendations: [
+          {
+            shopifyId: '7655228866776',
+            score: 0.9814814814814815,
+            acidity: 4,
+            bitterness: 1,
+            sweetness: 2,
+            body: 3,
+          },
+        ],
       },
     },
   },

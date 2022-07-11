@@ -49,19 +49,17 @@ export const Processing: React.FC<TasteFinderFieldHandlerProps> = ({
   const [getTasteFinderRecommendation] = useLazyQuery(GET_TASTE_FINDER_RECOMMENDATION)
 
   const getRecommendation = () => {
-    if (currentData) {
-      getTasteFinderRecommendation({
-        variables: {
-          profile: propsToProfile(currentData),
-        },
+    getTasteFinderRecommendation({
+      variables: {
+        profile: propsToProfile(currentData),
+      },
+    })
+      .then((data) => {
+        updateData({ name: 'recommendations', value: data.data.tasteFinderRecommendation.recommendations })
       })
-        .then((data) => {
-          updateData({ name: 'shopifyProductIds', value: data.data.tasteFinderRecommendation.shopifyProductIds })
-        })
-        .catch((err) => {
-          throw new Error('Error getting recommendation', err)
-        })
-    }
+      .catch((err) => {
+        throw new Error('Error getting recommendation', err)
+      })
   }
 
   useEffect(() => {

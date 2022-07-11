@@ -46,6 +46,7 @@ describe('Catalogue helper', () => {
           undefined,
           undefined,
           undefined,
+          undefined,
         ),
       ).toEqual([
         {
@@ -91,6 +92,13 @@ describe('Catalogue helper', () => {
           filterValues: ['250g', '500g', '1000g'],
           filterValuesSelected: [],
         },
+        {
+          key: 'aroma',
+          isOpen: false,
+          filterType: 'enum',
+          filterValues: ['Floral & leicht', 'Fruchtig & lebhaft'],
+          filterValuesSelected: [],
+        },
       ])
     })
 
@@ -106,6 +114,7 @@ describe('Catalogue helper', () => {
           ['Cycle Roasters'],
           ['BR'],
           ['500g'],
+          ['Floral & leicht'],
         ),
       ).toEqual([
         {
@@ -150,6 +159,13 @@ describe('Catalogue helper', () => {
           filterType: 'enum',
           filterValues: ['250g', '500g', '1000g'],
           filterValuesSelected: ['500g'],
+        },
+        {
+          key: 'aroma',
+          isOpen: false,
+          filterType: 'enum',
+          filterValues: ['Floral & leicht', 'Fruchtig & lebhaft'],
+          filterValuesSelected: ['Floral & leicht'],
         },
       ])
     })

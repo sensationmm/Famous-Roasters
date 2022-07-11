@@ -12,7 +12,7 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 }
 
 const getLabelTextClassNames = (mode: Mode): string => {
-  const classNames: string[] = ['absolute', '-top-6', 'left-3', 'px-2']
+  const classNames: string[] = ['absolute', '-top-6', 'left-3', 'px-1']
 
   // mode
   switch (mode) {
@@ -29,7 +29,7 @@ const getLabelTextClassNames = (mode: Mode): string => {
 }
 
 const getInputClassNames = (mode: Mode): string => {
-  const classNames: string[] = ['border', 'rounded-full', 'px-4', 'py-2']
+  const classNames: string[] = ['border', 'rounded-full', 'px-4', 'py-2', 'focus:outline-0', 'focus:ring']
 
   // mode
   switch (mode) {
@@ -38,6 +38,7 @@ const getInputClassNames = (mode: Mode): string => {
       break
     case Mode.normal:
     default:
+      classNames.push('focus:ring-primary/30')
       break
   }
 

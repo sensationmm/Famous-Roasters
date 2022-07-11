@@ -41,7 +41,7 @@ exports[`Body partial view Renders correctly 1`] = `
               class="flex border-b-2 mb-1 text-sm leading-5"
               style="border-bottom-width: 1px;"
             >
-              Was hat das mit Kaffee zu tun?
+              Warum wir dich das fragen?
             </span>
           </div>
         </button>
@@ -74,87 +74,91 @@ exports[`Body partial view Renders correctly 1`] = `
               class="flex border-b-2 mb-1 text-sm leading-5"
               style="border-bottom-width: 1px;"
             >
-              Was hat das mit Kaffee zu tun?
+              Warum wir dich das fragen?
             </span>
           </div>
         </button>
       </div>
     </div>
     <div
-      class="relative flex w-full overflow-x-auto gap-x-10 snap-x xl:justify-center"
+      class="flex md:flex-none flex-col flex-grow w-full justify-center align-center overflow-x-auto pb-6 md:pb-0"
     >
       <div
-        class="w-1/12 pr-12 -mx-2.5 h-80 relative shrink-0 snap-start scroll-auto"
-      />
-      <button
-        class="w-64 h-80 mt-12 -top-4 relative cursor-pointer shrink-0 snap-center scroll-auto"
-        data-testid="image-checkbox"
+        class="relative flex w-full overflow-x-auto gap-x-10 snap-x xl:justify-center"
       >
         <div
-          class="w-64 h-64 top-0 absolute rounded-full bg-brand-grey-whisper"
+          class="w-1/12 pr-12 -mx-2.5 h-80 relative shrink-0 snap-start scroll-auto"
         />
-        <img
-          alt=""
-          class="absolute -top-8"
-          src="01-coffee-leicht.webp"
-        />
-        <div
-          class="absolute w-full h-32 text-center -bottom-4"
+        <button
+          class="w-64 h-80 mt-12 -top-4 relative cursor-pointer shrink-0 snap-center scroll-auto"
+          data-testid="image-checkbox"
         >
           <div
-            class="font-syne font-normal text-2xl leading-8 font-semibold"
+            class="w-64 h-64 top-0 absolute rounded-full bg-brand-grey-whisper"
+          />
+          <img
+            alt=""
+            class="absolute -top-8"
+            src="01-coffee-leicht.webp"
+          />
+          <div
+            class="absolute w-full h-32 text-center -bottom-4"
           >
-            Americano - leichter Körper, flüssiges Mundgefühl
+            <div
+              class="font-syne font-normal text-2xl leading-8 font-semibold"
+            >
+              Americano - leichter Körper, flüssiges Mundgefühl
+            </div>
           </div>
-        </div>
-      </button>
-      <button
-        class="w-64 h-80 mt-12 -top-4 relative cursor-pointer shrink-0 snap-center scroll-auto"
-        data-testid="image-checkbox"
-      >
-        <div
-          class="w-64 h-64 top-0 absolute rounded-full bg-brand-grey-whisper"
-        />
-        <img
-          alt=""
-          class="absolute -top-8"
-          src="02-coffee-mittel.webp"
-        />
-        <div
-          class="absolute w-full h-32 text-center -bottom-4"
+        </button>
+        <button
+          class="w-64 h-80 mt-12 -top-4 relative cursor-pointer shrink-0 snap-center scroll-auto"
+          data-testid="image-checkbox"
         >
           <div
-            class="font-syne font-normal text-2xl leading-8 font-semibold"
+            class="w-64 h-64 top-0 absolute rounded-full bg-brand-grey-whisper"
+          />
+          <img
+            alt=""
+            class="absolute -top-8"
+            src="02-coffee-mittel.webp"
+          />
+          <div
+            class="absolute w-full h-32 text-center -bottom-4"
           >
-            Milchkaffee - ausgewogener Körper, milchiges Mundgefühl 
+            <div
+              class="font-syne font-normal text-2xl leading-8 font-semibold"
+            >
+              Milchkaffee - ausgewogener Körper, milchiges Mundgefühl 
+            </div>
           </div>
-        </div>
-      </button>
-      <button
-        class="w-64 h-80 mt-12 -top-4 relative cursor-pointer shrink-0 snap-center scroll-auto"
-        data-testid="image-checkbox"
-      >
-        <div
-          class="w-64 h-64 top-0 absolute rounded-full bg-brand-grey-whisper"
-        />
-        <img
-          alt=""
-          class="absolute -top-8"
-          src="03-coffee-hoch.webp"
-        />
-        <div
-          class="absolute w-full h-32 text-center -bottom-4"
+        </button>
+        <button
+          class="w-64 h-80 mt-12 -top-4 relative cursor-pointer shrink-0 snap-center scroll-auto"
+          data-testid="image-checkbox"
         >
           <div
-            class="font-syne font-normal text-2xl leading-8 font-semibold"
+            class="w-64 h-64 top-0 absolute rounded-full bg-brand-grey-whisper"
+          />
+          <img
+            alt=""
+            class="absolute -top-8"
+            src="03-coffee-hoch.webp"
+          />
+          <div
+            class="absolute w-full h-32 text-center -bottom-4"
           >
-            Macchiato - voller Körper, cremiges Mundgefühl
+            <div
+              class="font-syne font-normal text-2xl leading-8 font-semibold"
+            >
+              Macchiato - voller Körper, cremiges Mundgefühl
+            </div>
           </div>
-        </div>
-      </button>
-      <div
-        class="w-1/12 pl-12 -mx-2.5 h-80 relative shrink-0 snap-start scroll-auto"
-      />
+        </button>
+        <div
+          class="w-1/12 pl-12 -mx-2.5 h-80 relative shrink-0 snap-start scroll-auto"
+        />
+      </div>
     </div>
   </div>
 </div>

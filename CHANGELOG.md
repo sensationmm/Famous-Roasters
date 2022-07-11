@@ -1,3 +1,175 @@
+# [1.19.0](https://github.com/Famous-Roasters/frontend/compare/v1.18.1...v1.19.0) (2022-07-11)
+
+
+### Bug Fixes
+
+* **cart:** cannot add product if stale cart ([33aee63](https://github.com/Famous-Roasters/frontend/commit/33aee637e96a3b96c2ff7340f22aaeecfd6c3136))
+
+
+### Features
+
+* **taste finder:** add swatches to desktop filters ([531feef](https://github.com/Famous-Roasters/frontend/commit/531feef734b9e21fca1269cb0cd53a01c4fe50d4))
+
+## [1.18.1](https://github.com/Famous-Roasters/frontend/compare/v1.18.0...v1.18.1) (2022-07-11)
+
+
+### Bug Fixes
+
+* **logo:** update badge component ([df5c098](https://github.com/Famous-Roasters/frontend/commit/df5c09872310b66280972c61af7baf78678171a6))
+
+# [1.18.0](https://github.com/Famous-Roasters/frontend/compare/v1.17.3...v1.18.0) (2022-07-07)
+
+
+### Features
+
+* **header:** new logos ([0e682a4](https://github.com/Famous-Roasters/frontend/commit/0e682a4a69225fd055d10f7789c3d62039724364))
+
+## [1.17.3](https://github.com/Famous-Roasters/frontend/compare/v1.17.2...v1.17.3) (2022-07-07)
+
+
+### Bug Fixes
+
+* **taste finder:** recommendations not setting on localstorage ([9c796ec](https://github.com/Famous-Roasters/frontend/commit/9c796ec159fc64c7d23cc64b9f602005b7a7b5d8))
+
+## [1.17.2](https://github.com/Famous-Roasters/frontend/compare/v1.17.1...v1.17.2) (2022-07-07)
+
+
+### Bug Fixes
+
+* **security:** dependencies security fixes ([8f14628](https://github.com/Famous-Roasters/frontend/commit/8f14628d525bcd94555cf545aa543f957df0509c))
+
+## [1.17.1](https://github.com/Famous-Roasters/frontend/compare/v1.17.0...v1.17.1) (2022-07-07)
+
+# [1.17.0](https://github.com/Famous-Roasters/frontend/compare/v1.16.0...v1.17.0) (2022-07-07)
+
+
+### Bug Fixes
+
+* upgrade multiple dependencies with Snyk ([df4242d](https://github.com/Famous-Roasters/frontend/commit/df4242d279c509c8c6389420527993e48799c617))
+
+
+### Features
+
+* **auth:** adds ci config for staging and prod ([ffe3ec4](https://github.com/Famous-Roasters/frontend/commit/ffe3ec4abe81760b8fde5522a866a2eaa637c30e))
+
+# [1.16.0](https://github.com/Famous-Roasters/frontend/compare/v1.15.0...v1.16.0) (2022-07-07)
+
+
+### Features
+
+* **auth:** abstract button and improve validation ([3576341](https://github.com/Famous-Roasters/frontend/commit/3576341dc350f63bfd1b4d7990de28b685f68734))
+* **auth:** adding cognito conf + hook ([314a736](https://github.com/Famous-Roasters/frontend/commit/314a736891a40716c730b690824fc269a1d5ad8e))
+* **auth:** adding field basic validations and disabling submit ([ab31c19](https://github.com/Famous-Roasters/frontend/commit/ab31c19f2a1a005acda51ab5c1030dd538f0d8ce))
+* **auth:** adding rc field form for validation wip ([63482bd](https://github.com/Famous-Roasters/frontend/commit/63482bd540720171c4516251ce872ba9fa1c4836))
+* **auth:** almost complete signup ([9bc4ab1](https://github.com/Famous-Roasters/frontend/commit/9bc4ab1145256f13519c889a326e0710f1d47b1b))
+* **auth:** completes and adds profile page ([2cea39a](https://github.com/Famous-Roasters/frontend/commit/2cea39abf19391abbb82bdf7e68616fc2db0198d))
+* **auth:** forgot password wip ([b45dc75](https://github.com/Famous-Roasters/frontend/commit/b45dc75eb7af2c64d38fe4d0ad5c27c7647382cb))
+* **auth:** further styling signin ([5882fd7](https://github.com/Famous-Roasters/frontend/commit/5882fd79b84d50962846c3fb47fb78d0e313e9c9))
+* **auth:** initial commit ([e88bdf4](https://github.com/Famous-Roasters/frontend/commit/e88bdf45c74055cbcc35fdf186d2d768dd950361))
+* **auth:** quality ([006764a](https://github.com/Famous-Roasters/frontend/commit/006764a1bc57fe3b066584b6282c1962fd8afe96))
+* **auth:** quality gate ([f694cb6](https://github.com/Famous-Roasters/frontend/commit/f694cb6c7979af57ccae38c73e09bc896f5b4a15))
+* **auth:** registration wip ([069fc1a](https://github.com/Famous-Roasters/frontend/commit/069fc1ab4502e6fe814ec88a715d9a01c08f4f92))
+* **auth:** registration wip ([98d8739](https://github.com/Famous-Roasters/frontend/commit/98d8739c3325532ca122bd89a69086056a057433))
+* **auth:** registration wip ([52fc671](https://github.com/Famous-Roasters/frontend/commit/52fc6719fbe20010ecf79a25682e45cdc2e21561))
+* **auth:** right width ([7edcff3](https://github.com/Famous-Roasters/frontend/commit/7edcff3cff0352e6044f2b0b150351f7c6f1c0e2))
+* **auth:** tests fix ([fc2b312](https://github.com/Famous-Roasters/frontend/commit/fc2b3125ae64ec377156ee82bd3e8fcec175c5db))
+* **auth:** tests fix ([1db3ecd](https://github.com/Famous-Roasters/frontend/commit/1db3ecd5291b948507df7178e8a32a4b77cd5299))
+* **auth:** tests fix ([6da2a3a](https://github.com/Famous-Roasters/frontend/commit/6da2a3a4b7aeeca91b7a1fb127ff65b3f3335b4b))
+
+# [1.15.0](https://github.com/Famous-Roasters/frontend/compare/v1.14.0...v1.15.0) (2022-07-06)
+
+
+### Features
+
+* **taste-finder:** fix missing score bug ([b59526c](https://github.com/Famous-Roasters/frontend/commit/b59526c7d7a07e23d5c8639d2e79758556656afc))
+
+# [1.14.0](https://github.com/Famous-Roasters/frontend/compare/v1.13.1...v1.14.0) (2022-07-06)
+
+
+### Features
+
+* **taste finder:** dynamic taste match score ([8ec9fc1](https://github.com/Famous-Roasters/frontend/commit/8ec9fc186c775e8015d40b32e3878b5cfe42eb14))
+* **taste finder:** tests local storage ([339e6a2](https://github.com/Famous-Roasters/frontend/commit/339e6a29b654fb6fd554b19de5cc62bf3f0f1b67))
+
+## [1.13.1](https://github.com/Famous-Roasters/frontend/compare/v1.13.0...v1.13.1) (2022-07-06)
+
+
+### Bug Fixes
+
+* **product:** grind info popup typo ([a1d7a48](https://github.com/Famous-Roasters/frontend/commit/a1d7a48f93923282ade90745deb9c70ec6d9b9fb))
+* **taste finder:** fix image skew on result page ([be41dca](https://github.com/Famous-Roasters/frontend/commit/be41dca6f594597f45511e6de60be0bb805c9f8a))
+
+# [1.13.0](https://github.com/Famous-Roasters/frontend/compare/v1.12.0...v1.13.0) (2022-07-05)
+
+
+### Features
+
+* **catalogue:** add taste profile filter ([af6f059](https://github.com/Famous-Roasters/frontend/commit/af6f059d9e873d1c32ec9a24e3dca7d489fb0327))
+* **catalogue:** failing snapshot ([5574d59](https://github.com/Famous-Roasters/frontend/commit/5574d5926a580b5a7e01a9bbfd48ecbbf871f9a9))
+* **catalog:** update snapshots ([3538f4e](https://github.com/Famous-Roasters/frontend/commit/3538f4ec54785eeda04985a31c91fadaf695a1fa))
+
+# [1.12.0](https://github.com/Famous-Roasters/frontend/compare/v1.11.0...v1.12.0) (2022-06-30)
+
+
+### Features
+
+* **footer:** replace claim text ([e288af9](https://github.com/Famous-Roasters/frontend/commit/e288af9f186a34da570b32ad4aec529aa6223c3c))
+
+# [1.11.0](https://github.com/Famous-Roasters/frontend/compare/v1.10.0...v1.11.0) (2022-06-30)
+
+
+### Features
+
+* **pdp:** all disclosures open by default ([53225a0](https://github.com/Famous-Roasters/frontend/commit/53225a0fac378df311dd3636825e1e911b4e4fc6))
+* **taste finder:** restore links in header and footer navs ([1a29595](https://github.com/Famous-Roasters/frontend/commit/1a2959504a9e594a601117b1ee01a3430bf8cf80))
+
+# [1.10.0](https://github.com/Famous-Roasters/frontend/compare/v1.9.0...v1.10.0) (2022-06-30)
+
+
+### Features
+
+* **taste finder:** copy correction ([c8a04d1](https://github.com/Famous-Roasters/frontend/commit/c8a04d12565061174e19f4fd75b56feb21bce3de))
+* **taste finder:** test coverage ([a7a4dc7](https://github.com/Famous-Roasters/frontend/commit/a7a4dc7134953ad655696220e616308e13540782))
+* **taste finder:** visual improvements from design ([cba0d38](https://github.com/Famous-Roasters/frontend/commit/cba0d3807907bf620c0270df737539eea36f47be))
+
+# [1.9.0](https://github.com/Famous-Roasters/frontend/compare/v1.8.4...v1.9.0) (2022-06-28)
+
+
+### Features
+
+* **pdp:** quality gate ([c147d30](https://github.com/Famous-Roasters/frontend/commit/c147d30e9508aa4df1dd5f8e3f95fd4c53add316))
+* **pdp:** scrolls and mobile ux opt done ([c3adbf3](https://github.com/Famous-Roasters/frontend/commit/c3adbf34cf11fdba97e77352a5e2a2558bb096db))
+* **pdp:** scrolls cta 3 states on mobile ([04d1f5b](https://github.com/Famous-Roasters/frontend/commit/04d1f5bc69d83005d85eb52ccf433f4127de0732))
+* **pdp:** scrolls wip ([6ba69b4](https://github.com/Famous-Roasters/frontend/commit/6ba69b49d449a00afe165e80b10d2290840ee7c8))
+
+## [1.8.4](https://github.com/Famous-Roasters/frontend/compare/v1.8.3...v1.8.4) (2022-06-28)
+
+
+### Bug Fixes
+
+* **product tile:** broken layout on featured pdp ([19dc238](https://github.com/Famous-Roasters/frontend/commit/19dc23850b5ee6d949d3560ab9ef5cd12f6e8f37))
+
+## [1.8.3](https://github.com/Famous-Roasters/frontend/compare/v1.8.2...v1.8.3) (2022-06-27)
+
+
+### Bug Fixes
+
+* **graphql:** cors undo ([4e0687f](https://github.com/Famous-Roasters/frontend/commit/4e0687f4ed71b78a42f2a7efb1b83a4d2b613d0c))
+
+## [1.8.2](https://github.com/Famous-Roasters/frontend/compare/v1.8.1...v1.8.2) (2022-06-27)
+
+
+### Bug Fixes
+
+* **graphql:** cors ([008fabc](https://github.com/Famous-Roasters/frontend/commit/008fabc37c2e6f3aea62cd8df29965eeb7927f7c))
+
+## [1.8.1](https://github.com/Famous-Roasters/frontend/compare/v1.8.0...v1.8.1) (2022-06-27)
+
+
+### Bug Fixes
+
+* **catalogue:** small breakpoints fixes ([654fd6b](https://github.com/Famous-Roasters/frontend/commit/654fd6b11fbdb0e69898fd825aafe52c5d34181d))
+
 # [1.8.0](https://github.com/Famous-Roasters/frontend/compare/v1.7.0...v1.8.0) (2022-06-24)
 
 

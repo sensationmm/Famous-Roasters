@@ -1,4 +1,200 @@
 {
+  "auth": {
+    "cognito": {
+      "errors": {
+        "confirmUserInvalidParameter": {
+          "ctaText": "Anmelden",
+          "prompt": "E-mail-Adresse ungültig. Versuch eine andere E-mail-Adresse oder"
+        },
+        "confirmUserNotFound": {
+          "ctaText": "Registrieren",
+          "prompt": "E-mail-Adresse ungültig. Versuch eine andere E-mail-Adresse oder"
+        },
+        "forgotPasswordGeneric": {
+          "ctaText": "Registrieren",
+          "prompt": "E-mail-Adresse ungültig. Versuch eine andere E-mail-Adresse oder"
+        },
+        "generic": "Anmeldungsfehler",
+        "incorrectUserNameOrPassword": "Ungültige Daten",
+        "invalidCode": "Verifizierungscode ungültig oder abgelaufen. Bitte versuch mal einen neuen Code anzufragen.",
+        "loginGeneric": {
+          "ctaText": "Registrieren",
+          "prompt": "E-mail-Adresse oder Passwort ungültig, bitte prüfen oder"
+        },
+        "registerGeneric": {
+          "ctaText": "Anmelden",
+          "prompt": "E-mail-Adresse oder Passwort ungültig, bitte prüfen oder"
+        }
+      }
+    },
+    "confirmSignUp": {
+      "code": {
+        "error": {
+          "format": "Verifizierungscode ungültig oder abgelaufen",
+          "required": "Bitte Verifizierungscode eingeben"
+        },
+        "label": "Verifizierungscode",
+        "placeholder": "Verifizierungscode"
+      },
+      "cta": "Verifizieren",
+      "emailSent": "Verifizierungscode per E-mail geschickt.",
+      "resend": {
+        "action": "Bitte noch einmal senden.",
+        "prompt": "Du hast noch keinen Code erhalten?"
+      },
+      "signIn": {
+        "action": "Anmelden",
+        "prompt": "Du hast bereits ein Konto?"
+      },
+      "subtitle": "Nur noch einen Schritt um wirklich sicher zu gehen.",
+      "success": "Your signup is now complete. Please, log in to continue",
+      "text": "Wir haben dir einen Verifizierungscode per E-mail geschickt. Überprüfe gegebenenfalls auch deinen Spam-Ordner.",
+      "title": "Fast geschafft!",
+      "username": {
+        "error": {
+          "required": "Trage bitte deine E-mail-Adresse ein"
+        },
+        "label": "Deine E-mail-Adresse",
+        "placeholder": "Deine E-mail-Adresse"
+      }
+    },
+    "forgotPassword": {
+      "cta": "Schicken",
+      "emailSent": "Verifizierungscode per E-mail geschickt.",
+      "resend": {
+        "action": "Nochmal schicken",
+        "prompt": "Brauchst du einen neuen Verifizierungscode?"
+      },
+      "setNewPassword": {
+        "code": {
+          "error": {
+            "format": "Ungültiger Verifizierungscode",
+            "required": "Bitte Verifizierungscode eingeben"
+          },
+          "label": "Verifizierungscode",
+          "placeholder": "Verifizierungscode"
+        },
+        "cta": "Passwort setzen",
+        "password": {
+          "error": {
+            "maxLength": "Your password must not be longer than 98 chars",
+            "minLength": "Your password must be at least 8 characters long",
+            "mustContainLowercase": "Your password must contain at least one lowercase letter",
+            "mustContainNumber": "Your password must contain at least one number",
+            "mustContainSpecial": "Your password must contain at least one special character: ^$*.[]{}()?\"!@#%&/\\,><':;|_~`",
+            "mustContainUppercase": "Your password must contain at least one uppercase letter",
+            "noSpaces": "Your password cannot contain spaces",
+            "required": "Please input your new password"
+          },
+          "label": "Neues Passwort",
+          "placeholder": "Neues Passwort"
+        },
+        "passwordRepeat": {
+          "error": {
+            "matchError": "The password does not match",
+            "required": "Please repeat your new password"
+          },
+          "label": "Neues Passwort wiederholen",
+          "placeholder": "Neues Passwort wiederholen"
+        },
+        "signIn": {
+          "action": "Zurück zur Anmeldung"
+        },
+        "success": "Dein Passwort wurde erfolgreich geändert. Bitte, nochmal anmelden.",
+        "title": "Neues Passwort setzen"
+      },
+      "signIn": {
+        "action": "Zurück zur Anmeldung"
+      },
+      "text": "Kein Problem. Gib deine E-Mail-Adresse ein, mit der du ein Konto bei 60beans erstellt hast und wir schicken dir einen neuen Link zur Passworterstellung zu.",
+      "title": "Passwort zurücksetzen",
+      "username": {
+        "error": {
+          "invalidFormat": "Falsche Formatierung",
+          "required": "Trage bitte deine E-mail-Adresse ein"
+        },
+        "label": "Deine E-mail-Adresse",
+        "placeholder": "Deine E-mail-Adresse"
+      }
+    },
+    "signIn": {
+      "email": {
+        "error": {
+          "invalidFormat": "Falsche Formatierung",
+          "required": "Trage bitte deine E-mail-Adresse ein"
+        },
+        "label": "Deine E-mail-Adresse",
+        "placeholder": "Deine E-mail-Adresse"
+      },
+      "forgotPassword": {
+        "action": "Passwort vergessen?"
+      },
+      "password": {
+        "error": {
+          "required": "Trage bitte dein Passwort ein"
+        },
+        "label": "Dein Passwort",
+        "placeholder": "Dein Passwort"
+      },
+      "signUp": {
+        "action": "Registrieren",
+        "prompt": "Ich bin neu hier"
+      },
+      "title": "Anmelden"
+    },
+    "signUp": {
+      "confirmSignUp": {
+        "action": "E-mail-Adresse bestätigen"
+      },
+      "confirmTos": {
+        "error": {
+          "required": "You need to tick the check box below to agree with the Terms and Conditions and the Privacy Policy before we can proceed"
+        },
+        "label": "Indem Du auf “Registrieren” klickst, erstellst Du ein 60beans-Konto und stimmst unseren Nutzungs-bedingungen sowie Datenschutzrichtlinien zu."
+      },
+      "cta": "Registrieren",
+      "email": {
+        "error": {
+          "invalidFormat": "Falsche Formatierung",
+          "required": "Trage bitte deine E-mail-Adresse ein"
+        },
+        "label": "Deine E-mail-Adresse",
+        "placeholder": "Deine E-mail-Adresse"
+      },
+      "password": {
+        "error": {
+          "maxLength": "Your password must not be longer than 98 chars",
+          "minLength": "Your password must be at least 8 characters long",
+          "mustContainLowercase": "Your password must contain at least one lowercase letter",
+          "mustContainNumber": "Your password must contain at least one number",
+          "mustContainSpecial": "Your password must contain at least one special character: ^$*.[]{}()?\"!@#%&/\\,><':;|_~`",
+          "mustContainUppercase": "Your password must contain at least one uppercase letter",
+          "noSpaces": "Your password cannot contain spaces",
+          "required": "Please input your password"
+        },
+        "label": "Dein Passwort",
+        "placeholder": "Dein Passwort"
+      },
+      "passwordRepeat": {
+        "error": {
+          "matchError": "The password does not match",
+          "required": "Please repeat your password"
+        },
+        "label": "Passwort wiederholen",
+        "placeholder": "Passwort wiederholen"
+      },
+      "signIn": {
+        "action": "Anmelden",
+        "prompt": "Du hast bereits ein Konto?"
+      },
+      "title": "Erstelle ein Konto",
+      "withEmail": "Registrierung mit Email"
+    },
+    "signOut": {
+      "action": "Abmelden"
+    },
+    "welcome": "Willkommen bei 60beans"
+  },
   "brand": {
     "copyright": "© {{year}} 60beans. Alle Rechte vorbehalten.",
     "name": "60beans",
@@ -35,7 +231,7 @@
       "title": "Newsletter"
     },
     "slogan": {
-      "text": "A pleasure for every taste."
+      "text": "Guten Kaffee besser finden."
     }
   },
   "guides": {
@@ -56,8 +252,8 @@
       },
       "overline": "Erklärung",
       "text": "Unsere Kaffeeexperten nutzen den Vergleich mit Obst und Früchten, um herauszufinden, wie sauer dein Kaffee sein darf.",
-      "title": "Was hat das mit Kaffee zu tun?",
-      "trigger": "Was hat das mit Kaffee zu tun?"
+      "title": "Warum wir dich das fragen?",
+      "trigger": "Warum wir dich das fragen?"
     },
     "adventurous":{
       "items": {
@@ -72,8 +268,8 @@
       },
       "overline": "Erklärung",
       "text": "Unsere Kaffeeexperten nutzen diese Frage, um herauszufinden, wie offen für Neues du bist.",
-      "title": "Was hat das mit Kaffee zu tun?",
-      "trigger": "Was hat das mit Kaffee zu tun?"
+      "title": "Warum wir dich das fragen?",
+      "trigger": "Warum wir dich das fragen?"
     },
     "bitterness":{
       "items": {
@@ -92,8 +288,8 @@
       },
       "overline": "Erklärung",
       "text": "Unsere Kaffeeexperten nutzen den Vergleich mit Schokolade, um herauszufinden, wie bitter dein Kaffee sein darf.",
-      "title": "Was hat das mit Kaffee zu tun?",
-      "trigger": "Was hat das mit Kaffee zu tun?"
+      "title": "Warum wir dich das fragen?",
+      "trigger": "Warum wir dich das fragen?"
     },
     "body":{
       "items": {
@@ -112,15 +308,15 @@
       },
       "overline": "Erklärung",
       "text": "Unsere Kaffeeexperten nutzen deine Zubereitungspräferenz, um herauszufinden, wie der Körper bzw. das Mundgefühl deines Kaffees sein soll.",
-      "title": "Was hat das mit Kaffee zu tun?",
-      "trigger": "Was hat das mit Kaffee zu tun?"
+      "title": "Warum wir dich das fragen?",
+      "trigger": "Warum wir dich das fragen?"
     },
     "grindType":{
       "overline": "Erklärung",
       "text": "Da wir dir am Ende nicht nur neue, sondern auch möglichst passende Kaffeesorten vorschlagen möchten, müssen wir wissen, wie du deinen Kaffee am liebsten zubereitest.",
       "textBold": "Das heißt: wir empfehlen dir keinen Filterkaffee, wenn du einen Porta-Filter benutzt.",
-      "title": "Was hat das mit Kaffee zu tun?",
-      "trigger": "Was hat das mit Kaffee zu tun?"
+      "title": "Warum wir dich das fragen?",
+      "trigger": "Warum wir dich das fragen?"
     },
     "sweetness":{
       "items": {
@@ -139,8 +335,8 @@
       },
       "overline": "Erklärung",
       "text": "Unsere Kaffeeexperten nutzen den Vergleich mit Süßspeisen, um herauszufinden, wie süß dein Kaffee sein darf.",
-      "title": "Was hat das mit Kaffee zu tun?",
-      "trigger": "Was hat das mit Kaffee zu tun?"
+      "title": "Warum wir dich das fragen?",
+      "trigger": "Warum wir dich das fragen?"
     },
     "tasteResults": {
       "items": {
@@ -509,6 +705,10 @@
             "none": "Standard"
           }
         },
+        "aroma": {
+          "label": "Geschmacksprofile",
+          "values": {}
+        },
         "vendor": {
           "label": "Röster"
         }
@@ -655,7 +855,7 @@
             "label": "Mahlgrad",
             "moreInfo": "Mehr zu den Mahlgraden",
             "guide": {
-              "title": "Mahlgraden Handbuch",
+              "title": "Mahlgrad Handbuch",
               "items": {
                 "aeropress": {
                   "text": "Mittlere Körnung, etwas feiner als Sandkörner.",
@@ -704,6 +904,10 @@
           "value": "2-3 Tage"
         }
       }
+    },
+    "profile": {
+      "navigation": "Profil",
+      "title": "Profil"
     },
     "tasteFinder": {
       "navigation": "Tastefinder",
@@ -822,7 +1026,8 @@
         },
         "yourName": {
           "input": {
-            "label": "Gib deinen Namen Ein"
+            "label": "Gib deinen Namen ein",
+            "placeholder": "Dein Name"
           },
           "title": "Wie sollen wir dich nennen?"
         }

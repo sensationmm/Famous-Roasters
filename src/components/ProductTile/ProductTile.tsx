@@ -34,10 +34,27 @@ export const ProductTile: React.FC<ProductTileProps> = ({
   const { t } = useTranslation()
   const textLineClassNames = featured ? 'mt-1 text-coreUI-text-secondary' : 'text-coreUI-text-secondary'
 
+  const getOuterContainerClasses = () => {
+    const classNames: string[] = []
+    className?.split(' ').map((c) => classNames.push(c))
+    if (!featured) {
+      classNames.push('flex', 'pt-8', 'md:px-6')
+    }
+    return classNames.join(' ')
+  }
+
+  const getTextDataContainerClasses = () => {
+    const classNames: string[] = ['flex', 'flex-col', 'w-full', 'justify-between']
+    if (!featured) {
+      classNames.push('pl-4')
+    }
+    return classNames.join(' ')
+  }
+
   if (showImage && !featuredImage && (!images || !images.nodes[0])) return null
   const imgSrc = featuredImage?.url ? featuredImage.url : images.nodes[0].url
   return (
-    <div className={className ? 'flex p-6 ' + className : 'flex p-6'}>
+    <div className={getOuterContainerClasses()}>
       {showImage && (
         <div className="flex justify-center items-center shrink-0 self-center relative w-32 h-32">
           <div className="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32">
@@ -48,7 +65,7 @@ export const ProductTile: React.FC<ProductTileProps> = ({
           </div>
         </div>
       )}
-      <div className="flex flex-col justify-between p-2">
+      <div className={getTextDataContainerClasses()}>
         {featured ? (
           <Typography as="div" type={TypographyType.Heading} size={TypographySize.Tiny}>
             {title}

@@ -68,7 +68,7 @@ export const QuantitySelect: React.FC<QuantitySelectProps> = ({
         <button type="button" onClick={decrement} data-testid="quantity-minus">
           <MinusIcon className="w-5 h-5" />
         </button>
-        <div className="px-4" data-testid="quantity-value">
+        <div className="px-3.5" data-testid="quantity-value">
           {actualValue}
         </div>
         <button type="button" onClick={increment} data-testid="quantity-plus">

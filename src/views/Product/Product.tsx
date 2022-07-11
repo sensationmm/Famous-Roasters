@@ -5,7 +5,7 @@ import {
   ProductVariantConnection,
 } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router-dom'
 import {
@@ -17,6 +17,9 @@ import {
   Disclosure,
   ErrorPrompt,
   GrindsInfo,
+  Icon,
+  IconName,
+  IconSize,
   Layout,
   Listbox,
   ListBoxItem,
@@ -83,9 +86,35 @@ export const Product: React.FC = () => {
   const [quantity, setQuantity] = useState<number>(1)
   const [variantSelected, setVariantSelected] = useState<ProductVariantCustom>()
   const { addToCart } = useContext(CartContext)
+  const transactionalRef = useRef<null | HTMLDivElement>(null)
+  const stickyCTARef = useRef<null | HTMLDivElement>(null)
+  const [isSticky, setIsSticky] = useState<boolean>(true)
+  const [isFixed, setIsFixed] = useState<boolean>(false)
 
   useEffect(() => {
     document.title = `${t('brand.name')} | ${t('pages.product.title')}`
+
+    const handleScroll = () => {
+      const stickyOffsetTop = stickyCTARef.current?.offsetTop || 0
+      const relScrollWindow = window.outerHeight + window.scrollY
+      if (relScrollWindow > stickyOffsetTop) {
+        setIsSticky(false)
+        if (window.scrollY > stickyOffsetTop) {
+          setIsFixed(true)
+        } else {
+          setIsFixed(false)
+        }
+      } else {
+        setIsSticky(true)
+        setIsFixed(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
   }, [])
 
   if (!id) return null
@@ -165,6 +194,117 @@ export const Product: React.FC = () => {
 
   const handleAddToCart = () => {
     addToCart && addToCart({ quantity, item: variantSelected.id })
+    if (transactionalRef?.current?.offsetTop && transactionalRef.current.offsetTop < window.scrollY) {
+      transactionalRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
+  const renderCTAContent = () => {
+    return (
+      <>
+        <div>
+          {variants && (
+            <>
+              <Typography type={TypographyType.Heading} size={TypographySize.Small} className="mr-1">
+                {formatPrice((quantity * parseFloat(variantSelected?.price)).toString(), currencyCode)}
+              </Typography>
+              <Typography
+                type={TypographyType.Paragraph}
+                size={TypographySize.Tiny}
+                className="text-coreUI-text-tertiary"
+              >
+                (
+                {formatPrice(
+                  (
+                    (parseFloat(variantSelected?.price) * 1000) /
+                    parseFloat(variantSelected?.package_size?.value)
+                  ).toString(),
+                  'EUR',
+                )}
+                /kg)
+              </Typography>
+            </>
+          )}
+          <Typography
+            as="div"
+            type={TypographyType.Paragraph}
+            size={TypographySize.Tiny}
+            className="text-coreUI-text-tertiary"
+          >
+            {t('pages.product.transactional.price.footNote')}
+          </Typography>
+        </div>
+        <div className="flex align-middle">
+          <Button
+            type="button"
+            emphasis={ButtonEmphasis.Primary}
+            size={ButtonSize.md}
+            className="flex w-full justify-center"
+            onClick={handleAddToCart}
+            data-testid="addToCart"
+          >
+            <span className="hidden md:block">{t('pages.product.transactional.cta')}</span>
+            <span className="md:hidden">
+              <Icon name={IconName.AddToCart} size={IconSize.lg} />
+            </span>
+          </Button>
+        </div>
+      </>
+    )
+  }
+
+  const renderCTAFooter = () => {
+    return (
+      <>
+        <div className="mt-4">
+          <Typography type={TypographyType.Paragraph} size={TypographySize.Small}>
+            <strong>{t('pages.product.transactional.shipping.label')}</strong>
+            {': '}
+            {t('pages.product.transactional.shipping.value')}
+          </Typography>
+        </div>
+        <div>
+          <Typography type={TypographyType.Paragraph} size={TypographySize.Tiny} className="text-coreUI-text-secondary">
+            {t('pages.product.transactional.qualityNote')}
+          </Typography>
+        </div>
+      </>
+    )
+  }
+
+  const stickyCTAClassNames = () => {
+    const classNames = [
+      'md:hidden',
+      'transition-all',
+      'ease-linear',
+      'delay-75',
+      'mt-4',
+      'grid',
+      'gap-4',
+      'grid-cols-2',
+      'grid-rows-1',
+      'px-6',
+      'py-4',
+      'w-full',
+    ]
+    if (isSticky) {
+      classNames.push('sticky', 'bottom-0', 'z-20', 'bg-brand-grey-woodsmoke', 'text-white', 'md:hidden')
+    }
+    if (isFixed) {
+      classNames.push('fixed', 'bottom-0', 'z-20', 'bg-brand-grey-woodsmoke', 'text-white', 'md:hidden')
+    }
+    return classNames.join(' ')
+  }
+
+  const renderMobileStickyCTABlock = () => {
+    return (
+      <>
+        {/* Sticky transactional section */}
+        <span ref={stickyCTARef} />
+        <div className={stickyCTAClassNames()}>{renderCTAContent()}</div>
+        <div className="w-full max-w-7xl mx-auto px-6 md:hidden">{renderCTAFooter()}</div>
+      </>
+    )
   }
 
   const renderProductMainBlock = () => {
@@ -213,8 +353,8 @@ export const Product: React.FC = () => {
               />
             </div>
           )}
-          {/* Buy section */}
-          <div className="mt-4 pt-4 border-t border-brand-grey-whisper">
+          {/* Transactional section */}
+          <div className="mt-4 pt-4 border-t border-brand-grey-whisper" ref={transactionalRef}>
             <div>
               {variants && variants.nodes[0].grind_type && (
                 <Listbox
@@ -252,68 +392,8 @@ export const Product: React.FC = () => {
                 />
               </div>
             </div>
-            <div className="grid gap-4 grid-cols-1 grid-rows-2 mt-4">
-              <div>
-                {variants && (
-                  <>
-                    <Typography type={TypographyType.Heading} size={TypographySize.Small} className="mr-1">
-                      {formatPrice((quantity * parseFloat(variantSelected?.price)).toString(), currencyCode)}
-                    </Typography>
-                    <Typography
-                      type={TypographyType.Paragraph}
-                      size={TypographySize.Tiny}
-                      className="text-coreUI-text-secondary"
-                    >
-                      (
-                      {formatPrice(
-                        (
-                          (parseFloat(variantSelected?.price) * 1000) /
-                          parseFloat(variantSelected?.package_size?.value)
-                        ).toString(),
-                        'EUR',
-                      )}
-                      /kg)
-                    </Typography>
-                  </>
-                )}
-                <Typography
-                  as="div"
-                  type={TypographyType.Paragraph}
-                  size={TypographySize.Tiny}
-                  className="text-coreUI-text-secondary"
-                >
-                  {t('pages.product.transactional.price.footNote')}
-                </Typography>
-              </div>
-              <div className="flex align-middle">
-                <Button
-                  type="button"
-                  emphasis={ButtonEmphasis.Primary}
-                  size={ButtonSize.md}
-                  className="flex w-full justify-center"
-                  onClick={handleAddToCart}
-                  data-testid="addToCart"
-                >
-                  {t('pages.product.transactional.cta')}
-                </Button>
-              </div>
-            </div>
-            <div className="mt-4">
-              <Typography type={TypographyType.Paragraph} size={TypographySize.Small}>
-                <strong>{t('pages.product.transactional.shipping.label')}</strong>
-                {': '}
-                {t('pages.product.transactional.shipping.value')}
-              </Typography>
-            </div>
-            <div>
-              <Typography
-                type={TypographyType.Paragraph}
-                size={TypographySize.Tiny}
-                className="text-coreUI-text-secondary"
-              >
-                {t('pages.product.transactional.qualityNote')}
-              </Typography>
-            </div>
+            <div className="hidden md:grid gap-4 grid-cols-1 grid-rows-2 mt-4 w-full">{renderCTAContent()}</div>
+            <div className="hidden md:block">{renderCTAFooter()}</div>
           </div>
         </div>
       </div>
@@ -405,7 +485,7 @@ export const Product: React.FC = () => {
                 {t(`pages.product.sections.${blockData.key}.title`)}
               </Typography>
             }
-            defaultOpen={blockData.key === 'getToKnow' || blockData.key === 'findSimilar'}
+            defaultOpen={true}
             canToggle={blockData.key !== 'findSimilar'}
             panelChildren={renderProductBlockContent(blockData.key)}
           />
@@ -416,11 +496,10 @@ export const Product: React.FC = () => {
 
   return (
     <Layout>
-      <main className="flex flex-grow w-full items-start justify-center bg-white mt-4 mb-4">
-        <div className="w-full max-w-7xl mx-auto px-6 xl:px-8">
-          {renderProductMainBlock()}
-          {renderProductCollapsableBlocks()}
-        </div>
+      <main className="flex flex-col w-full items-start justify-center bg-white mt-4 mb-4">
+        <div className="w-full max-w-7xl mx-auto px-6 xl:px-8">{renderProductMainBlock()}</div>
+        {renderMobileStickyCTABlock()}
+        <div className="w-full max-w-7xl mx-auto px-6 xl:px-8">{renderProductCollapsableBlocks()}</div>
       </main>
     </Layout>
   )

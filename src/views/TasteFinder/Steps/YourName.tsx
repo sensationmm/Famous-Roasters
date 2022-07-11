@@ -33,6 +33,7 @@ export const YourName: React.FC<TasteFinderFieldHandlerProps> = ({
           data-testid="your-name-input"
           value={getCurrentFieldData('name')}
           onChange={(e) => handleDataChange(e)}
+          placeholder={t('pages.tasteFinder.steps.yourName.input.placeholder')}
         />
       </div>
     </div>

@@ -64,9 +64,18 @@ const getTagClassNames = (value: string, type?: TagType, small?: boolean, classN
   return classNames.join(' ')
 }
 
-export const Tag: React.FC<TagProps> = ({ value, type = undefined, small = false, className }) => {
+export const TagSwatch: React.FC<TagProps> = ({ value, type = undefined, small = false, className, ...props }) => {
   return (
-    <div className={getTagClassNames(value, type, small, className)}>
+    <span
+      className={`${getTagClassNames(value, type, small, className)} w-6 h-6 px-0 py-0 rounded-3xl mr-3 flex-shrink-0`}
+      {...props}
+    />
+  )
+}
+
+export const Tag: React.FC<TagProps> = ({ value, type = undefined, small = false, className, ...props }) => {
+  return (
+    <div className={getTagClassNames(value, type, small, className)} {...props}>
       <Typography size={TypographySize.Tiny}>{value}</Typography>
     </div>
   )

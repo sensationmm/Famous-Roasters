@@ -17,7 +17,7 @@ exports[`Find similar partial view Renders correctly for a successful call not e
       href="/product/7655228866776"
     >
       <div
-        class="flex p-6"
+        class="flex pt-8 md:px-6"
       >
         <div
           class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -42,7 +42,7 @@ exports[`Find similar partial view Renders correctly for a successful call not e
           </div>
         </div>
         <div
-          class="flex flex-col justify-between p-2"
+          class="flex flex-col w-full justify-between pl-4"
         >
           <div
             class="text-base leading-6 font-semibold"
@@ -87,7 +87,7 @@ exports[`Find similar partial view Renders correctly for a successful call not e
       href="/product/7655228866776"
     >
       <div
-        class="flex p-6"
+        class="flex pt-8 md:px-6"
       >
         <div
           class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -112,7 +112,7 @@ exports[`Find similar partial view Renders correctly for a successful call not e
           </div>
         </div>
         <div
-          class="flex flex-col justify-between p-2"
+          class="flex flex-col w-full justify-between pl-4"
         >
           <div
             class="text-base leading-6 font-semibold"
@@ -157,7 +157,7 @@ exports[`Find similar partial view Renders correctly for a successful call not e
       href="/product/7655228866776"
     >
       <div
-        class="flex p-6"
+        class="flex pt-8 md:px-6"
       >
         <div
           class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -182,7 +182,7 @@ exports[`Find similar partial view Renders correctly for a successful call not e
           </div>
         </div>
         <div
-          class="flex flex-col justify-between p-2"
+          class="flex flex-col w-full justify-between pl-4"
         >
           <div
             class="text-base leading-6 font-semibold"

@@ -53,7 +53,18 @@ exports[`Featured product view Renders correctly for a successful call with arom
             >
               <div
                 class="h-full flex space-x-8"
-              />
+              >
+                <a
+                  class="flex items-center text-gray-700 hover:text-gray-800"
+                  href="/taste-finder"
+                >
+                  <span
+                    class="uppercase text-sm leading-5"
+                  >
+                    Tastefinder
+                  </span>
+                </a>
+              </div>
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
@@ -266,88 +277,88 @@ exports[`Featured product view Renders correctly for a successful call with arom
             Was wir dir empfehlen
           </h2>
           <div
-            class="grid gap-4 grid-cols-1 md:grid-cols-2 mt-8"
+            class="grid grid-cols-2 gap-0 mt-8 md:gap-4"
           >
             <a
-              class="flex justify-center items-start"
+              class="flex justify-center items-start md:row-start-1 md:row-end-3"
               href="/product/7655228866776"
             >
               <div
-                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-full w-3/4 h-fit shrink-0 grow-0"
+                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-3/4 shrink-0 grow-0"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-full w-3/4 h-fit shrink-0 grow-0"
+                  class="w-full w-3/4 h-auto shrink-0 grow-0"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
               </div>
             </a>
-            <div>
-              <div>
-                <a
-                  class="flex flex-col w-fit"
-                  href="/product/7655228866776"
+            <a
+              class="flex flex-col w-fit"
+              href="/product/7655228866776"
+            >
+              <div
+                class="p-0"
+              >
+                <div
+                  class="flex flex-col w-full justify-between"
                 >
                   <div
-                    class="flex p-6 p-0"
+                    class="text-xl leading-7 font-semibold"
                   >
-                    <div
-                      class="flex flex-col justify-between p-2"
-                    >
-                      <div
-                        class="text-xl leading-7 font-semibold"
-                      >
-                        Espresso Raritäten Set
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        60beans
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Kolumbien
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Filter
-                      </div>
-                      <div
-                        class="flex items-baseline"
-                      >
-                        <div
-                          class="mr-1 mt-1 text-lg leading-7 font-semibold"
-                        >
-                          ab 
-                          19,99 €
-                        </div>
-                        <span
-                          class="text-coreUI-text-secondary text-xs leading-4"
-                        >
-                          (
-                          10,00 €
-                          /kg)
-                        </span>
-                      </div>
-                    </div>
+                    Espresso Raritäten Set
                   </div>
                   <div
-                    class="mt-4"
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    60beans
+                  </div>
+                  <div
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    Kolumbien
+                  </div>
+                  <div
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    Filter
+                  </div>
+                  <div
+                    class="flex items-baseline"
                   >
                     <div
-                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
+                      class="mr-1 mt-1 text-lg leading-7 font-semibold"
                     >
-                      <span
-                        class="text-xs leading-4"
-                      >
-                        98% Übereinstimmung
-                      </span>
+                      ab 
+                      19,99 €
                     </div>
+                    <span
+                      class="text-coreUI-text-secondary text-xs leading-4"
+                    >
+                      (
+                      10,00 €
+                      /kg)
+                    </span>
                   </div>
-                </a>
+                </div>
               </div>
+              <div
+                class="mt-4"
+              >
+                <div
+                  class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    98% Übereinstimmung
+                  </span>
+                </div>
+              </div>
+            </a>
+            <div
+              class="col-span-2 md:col-start-2 md:col-span-1"
+            >
               <div>
                 <h3
                   class="border-b border-brand-grey-whisper mt-8 text-xl leading-7 font-semibold"
@@ -405,45 +416,45 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   </li>
                 </ul>
               </div>
-              <div
-                class="mt-8"
+            </div>
+            <div
+              class="mt-8 col-span-2 md:col-start-2 md:col-span-1"
+            >
+              <a
+                href="/product/7655228866776"
               >
-                <a
-                  href="/product/7655228866776"
+                <button
+                  class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+                  data-testid="goToProduct"
+                  role="button"
+                  type="button"
                 >
-                  <button
-                    class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
-                    data-testid="goToProduct"
-                    role="button"
-                    type="button"
-                  >
-                    Zum Produkt
-                  </button>
-                </a>
-              </div>
-              <div
-                class="mt-4"
+                  Zum Produkt
+                </button>
+              </a>
+            </div>
+            <div
+              class="mt-4 col-span-2 md:mt-0 md:col-start-2 md:col-span-1"
+            >
+              <a
+                href="/catalogue"
               >
-                <a
-                  href="/catalogue"
+                <button
+                  class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
+                  data-testid="discoverMore"
+                  role="button"
+                  type="button"
                 >
-                  <button
-                    class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
-                    data-testid="discoverMore"
-                    role="button"
-                    type="button"
-                  >
-                    Mehr Kaffeesorten entdecken
-                  </button>
-                </a>
-              </div>
+                  Mehr Kaffeesorten entdecken
+                </button>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </main>
     <footer
-      class="bg-brand-black text-base text-white py-10"
+      class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
         class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
@@ -454,19 +465,19 @@ exports[`Featured product view Renders correctly for a successful call with arom
           <svg
             fill="none"
             height="157"
-            viewBox="0 0 627 627"
+            viewBox="0 0 400 400"
             width="157"
             xmlns="http://www.w3.org/2000/svg"
           >
             <circle
-              cx="313.5"
-              cy="313.5"
+              cx="200"
+              cy="200"
               fill="#D4FF81"
-              r="313.5"
+              r="200"
             />
             <path
               clip-rule="evenodd"
-              d="M361.926 223.428C378.319 223.428 391.608 210.139 391.608 193.747C391.608 177.354 378.319 164.065 361.926 164.065C345.533 164.065 332.244 177.354 332.244 193.747C332.244 210.139 345.533 223.428 361.926 223.428ZM342.734 463.065C389.465 463.065 427.078 428.871 427.078 360.485V357.445C427.078 289.439 389.465 254.485 343.114 254.485C313.1 254.485 292.584 270.442 281.186 289.439V172.421H213.18V458.506H281.186V427.732C291.064 449.007 313.1 463.065 342.734 463.065ZM370.229 358.777C370.229 382.382 351.093 401.518 327.488 401.518C303.882 401.518 284.746 382.382 284.746 358.777C284.746 335.171 303.882 316.035 327.488 316.035C351.093 316.035 370.229 335.171 370.229 358.777Z"
+              d="M266 225.882C266 267.294 243.14 288 214.739 288C196.728 288 183.336 279.488 177.332 266.604V285.239H136V112H177.332V182.86C184.259 171.357 196.728 161.694 214.97 161.694C243.14 161.694 266 182.86 266 224.042V225.882ZM231.006 225.964C231.006 240.559 219.132 252.391 204.483 252.391C189.835 252.391 177.96 240.559 177.96 225.964C177.96 211.369 189.835 199.538 204.483 199.538C219.132 199.538 231.006 211.369 231.006 225.964ZM251 156C263.15 156 273 146.15 273 134C273 121.85 263.15 112 251 112C238.85 112 229 121.85 229 134C229 146.15 238.85 156 251 156Z"
               fill="#212121"
               fill-rule="evenodd"
             />
@@ -475,7 +486,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
         <div
           class="px-4 text-5xl leading-none"
         >
-          A pleasure for every taste.
+          Guten Kaffee besser finden.
         </div>
       </div>
       <div
@@ -492,6 +503,15 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 href="/catalogue"
               >
                 Shop
+              </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <a
+                href="/taste-finder"
+              >
+                Tastefinder
               </a>
             </li>
             <li
@@ -619,7 +639,18 @@ exports[`Featured product view Renders correctly for a successful call with arom
             >
               <div
                 class="h-full flex space-x-8"
-              />
+              >
+                <a
+                  class="flex items-center text-gray-700 hover:text-gray-800"
+                  href="/taste-finder"
+                >
+                  <span
+                    class="uppercase text-sm leading-5"
+                  >
+                    Tastefinder
+                  </span>
+                </a>
+              </div>
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
@@ -832,88 +863,88 @@ exports[`Featured product view Renders correctly for a successful call with arom
             Was wir dir empfehlen
           </h2>
           <div
-            class="grid gap-4 grid-cols-1 md:grid-cols-2 mt-8"
+            class="grid grid-cols-2 gap-0 mt-8 md:gap-4"
           >
             <a
-              class="flex justify-center items-start"
+              class="flex justify-center items-start md:row-start-1 md:row-end-3"
               href="/product/7655228866776"
             >
               <div
-                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-full w-3/4 h-fit shrink-0 grow-0"
+                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-3/4 shrink-0 grow-0"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-full w-3/4 h-fit shrink-0 grow-0"
+                  class="w-full w-3/4 h-auto shrink-0 grow-0"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
               </div>
             </a>
-            <div>
-              <div>
-                <a
-                  class="flex flex-col w-fit"
-                  href="/product/7655228866776"
+            <a
+              class="flex flex-col w-fit"
+              href="/product/7655228866776"
+            >
+              <div
+                class="p-0"
+              >
+                <div
+                  class="flex flex-col w-full justify-between"
                 >
                   <div
-                    class="flex p-6 p-0"
+                    class="text-xl leading-7 font-semibold"
                   >
-                    <div
-                      class="flex flex-col justify-between p-2"
-                    >
-                      <div
-                        class="text-xl leading-7 font-semibold"
-                      >
-                        Espresso Raritäten Set
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        60beans
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Kolumbien
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Filter
-                      </div>
-                      <div
-                        class="flex items-baseline"
-                      >
-                        <div
-                          class="mr-1 mt-1 text-lg leading-7 font-semibold"
-                        >
-                          ab 
-                          19,99 €
-                        </div>
-                        <span
-                          class="text-coreUI-text-secondary text-xs leading-4"
-                        >
-                          (
-                          10,00 €
-                          /kg)
-                        </span>
-                      </div>
-                    </div>
+                    Espresso Raritäten Set
                   </div>
                   <div
-                    class="mt-4"
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    60beans
+                  </div>
+                  <div
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    Kolumbien
+                  </div>
+                  <div
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    Filter
+                  </div>
+                  <div
+                    class="flex items-baseline"
                   >
                     <div
-                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
+                      class="mr-1 mt-1 text-lg leading-7 font-semibold"
                     >
-                      <span
-                        class="text-xs leading-4"
-                      >
-                        98% Übereinstimmung
-                      </span>
+                      ab 
+                      19,99 €
                     </div>
+                    <span
+                      class="text-coreUI-text-secondary text-xs leading-4"
+                    >
+                      (
+                      10,00 €
+                      /kg)
+                    </span>
                   </div>
-                </a>
+                </div>
               </div>
+              <div
+                class="mt-4"
+              >
+                <div
+                  class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    98% Übereinstimmung
+                  </span>
+                </div>
+              </div>
+            </a>
+            <div
+              class="col-span-2 md:col-start-2 md:col-span-1"
+            >
               <div>
                 <h3
                   class="border-b border-brand-grey-whisper mt-8 text-xl leading-7 font-semibold"
@@ -971,45 +1002,45 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   </li>
                 </ul>
               </div>
-              <div
-                class="mt-8"
+            </div>
+            <div
+              class="mt-8 col-span-2 md:col-start-2 md:col-span-1"
+            >
+              <a
+                href="/product/7655228866776"
               >
-                <a
-                  href="/product/7655228866776"
+                <button
+                  class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+                  data-testid="goToProduct"
+                  role="button"
+                  type="button"
                 >
-                  <button
-                    class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
-                    data-testid="goToProduct"
-                    role="button"
-                    type="button"
-                  >
-                    Zum Produkt
-                  </button>
-                </a>
-              </div>
-              <div
-                class="mt-4"
+                  Zum Produkt
+                </button>
+              </a>
+            </div>
+            <div
+              class="mt-4 col-span-2 md:mt-0 md:col-start-2 md:col-span-1"
+            >
+              <a
+                href="/catalogue"
               >
-                <a
-                  href="/catalogue"
+                <button
+                  class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
+                  data-testid="discoverMore"
+                  role="button"
+                  type="button"
                 >
-                  <button
-                    class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
-                    data-testid="discoverMore"
-                    role="button"
-                    type="button"
-                  >
-                    Mehr Kaffeesorten entdecken
-                  </button>
-                </a>
-              </div>
+                  Mehr Kaffeesorten entdecken
+                </button>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </main>
     <footer
-      class="bg-brand-black text-base text-white py-10"
+      class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
         class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
@@ -1020,19 +1051,19 @@ exports[`Featured product view Renders correctly for a successful call with arom
           <svg
             fill="none"
             height="157"
-            viewBox="0 0 627 627"
+            viewBox="0 0 400 400"
             width="157"
             xmlns="http://www.w3.org/2000/svg"
           >
             <circle
-              cx="313.5"
-              cy="313.5"
+              cx="200"
+              cy="200"
               fill="#D4FF81"
-              r="313.5"
+              r="200"
             />
             <path
               clip-rule="evenodd"
-              d="M361.926 223.428C378.319 223.428 391.608 210.139 391.608 193.747C391.608 177.354 378.319 164.065 361.926 164.065C345.533 164.065 332.244 177.354 332.244 193.747C332.244 210.139 345.533 223.428 361.926 223.428ZM342.734 463.065C389.465 463.065 427.078 428.871 427.078 360.485V357.445C427.078 289.439 389.465 254.485 343.114 254.485C313.1 254.485 292.584 270.442 281.186 289.439V172.421H213.18V458.506H281.186V427.732C291.064 449.007 313.1 463.065 342.734 463.065ZM370.229 358.777C370.229 382.382 351.093 401.518 327.488 401.518C303.882 401.518 284.746 382.382 284.746 358.777C284.746 335.171 303.882 316.035 327.488 316.035C351.093 316.035 370.229 335.171 370.229 358.777Z"
+              d="M266 225.882C266 267.294 243.14 288 214.739 288C196.728 288 183.336 279.488 177.332 266.604V285.239H136V112H177.332V182.86C184.259 171.357 196.728 161.694 214.97 161.694C243.14 161.694 266 182.86 266 224.042V225.882ZM231.006 225.964C231.006 240.559 219.132 252.391 204.483 252.391C189.835 252.391 177.96 240.559 177.96 225.964C177.96 211.369 189.835 199.538 204.483 199.538C219.132 199.538 231.006 211.369 231.006 225.964ZM251 156C263.15 156 273 146.15 273 134C273 121.85 263.15 112 251 112C238.85 112 229 121.85 229 134C229 146.15 238.85 156 251 156Z"
               fill="#212121"
               fill-rule="evenodd"
             />
@@ -1041,7 +1072,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
         <div
           class="px-4 text-5xl leading-none"
         >
-          A pleasure for every taste.
+          Guten Kaffee besser finden.
         </div>
       </div>
       <div
@@ -1058,6 +1089,15 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 href="/catalogue"
               >
                 Shop
+              </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <a
+                href="/taste-finder"
+              >
+                Tastefinder
               </a>
             </li>
             <li
@@ -1185,7 +1225,18 @@ exports[`Featured product view Renders correctly for a successful call with arom
             >
               <div
                 class="h-full flex space-x-8"
-              />
+              >
+                <a
+                  class="flex items-center text-gray-700 hover:text-gray-800"
+                  href="/taste-finder"
+                >
+                  <span
+                    class="uppercase text-sm leading-5"
+                  >
+                    Tastefinder
+                  </span>
+                </a>
+              </div>
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
@@ -1398,88 +1449,88 @@ exports[`Featured product view Renders correctly for a successful call with arom
             Was wir dir empfehlen
           </h2>
           <div
-            class="grid gap-4 grid-cols-1 md:grid-cols-2 mt-8"
+            class="grid grid-cols-2 gap-0 mt-8 md:gap-4"
           >
             <a
-              class="flex justify-center items-start"
+              class="flex justify-center items-start md:row-start-1 md:row-end-3"
               href="/product/7655228866776"
             >
               <div
-                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-full w-3/4 h-fit shrink-0 grow-0"
+                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-3/4 shrink-0 grow-0"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-full w-3/4 h-fit shrink-0 grow-0"
+                  class="w-full w-3/4 h-auto shrink-0 grow-0"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
               </div>
             </a>
-            <div>
-              <div>
-                <a
-                  class="flex flex-col w-fit"
-                  href="/product/7655228866776"
+            <a
+              class="flex flex-col w-fit"
+              href="/product/7655228866776"
+            >
+              <div
+                class="p-0"
+              >
+                <div
+                  class="flex flex-col w-full justify-between"
                 >
                   <div
-                    class="flex p-6 p-0"
+                    class="text-xl leading-7 font-semibold"
                   >
-                    <div
-                      class="flex flex-col justify-between p-2"
-                    >
-                      <div
-                        class="text-xl leading-7 font-semibold"
-                      >
-                        Espresso Raritäten Set
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        60beans
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Kolumbien
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Filter
-                      </div>
-                      <div
-                        class="flex items-baseline"
-                      >
-                        <div
-                          class="mr-1 mt-1 text-lg leading-7 font-semibold"
-                        >
-                          ab 
-                          19,99 €
-                        </div>
-                        <span
-                          class="text-coreUI-text-secondary text-xs leading-4"
-                        >
-                          (
-                          10,00 €
-                          /kg)
-                        </span>
-                      </div>
-                    </div>
+                    Espresso Raritäten Set
                   </div>
                   <div
-                    class="mt-4"
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    60beans
+                  </div>
+                  <div
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    Kolumbien
+                  </div>
+                  <div
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    Filter
+                  </div>
+                  <div
+                    class="flex items-baseline"
                   >
                     <div
-                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
+                      class="mr-1 mt-1 text-lg leading-7 font-semibold"
                     >
-                      <span
-                        class="text-xs leading-4"
-                      >
-                        98% Übereinstimmung
-                      </span>
+                      ab 
+                      19,99 €
                     </div>
+                    <span
+                      class="text-coreUI-text-secondary text-xs leading-4"
+                    >
+                      (
+                      10,00 €
+                      /kg)
+                    </span>
                   </div>
-                </a>
+                </div>
               </div>
+              <div
+                class="mt-4"
+              >
+                <div
+                  class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    98% Übereinstimmung
+                  </span>
+                </div>
+              </div>
+            </a>
+            <div
+              class="col-span-2 md:col-start-2 md:col-span-1"
+            >
               <div>
                 <h3
                   class="border-b border-brand-grey-whisper mt-8 text-xl leading-7 font-semibold"
@@ -1537,45 +1588,45 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   </li>
                 </ul>
               </div>
-              <div
-                class="mt-8"
+            </div>
+            <div
+              class="mt-8 col-span-2 md:col-start-2 md:col-span-1"
+            >
+              <a
+                href="/product/7655228866776"
               >
-                <a
-                  href="/product/7655228866776"
+                <button
+                  class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+                  data-testid="goToProduct"
+                  role="button"
+                  type="button"
                 >
-                  <button
-                    class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
-                    data-testid="goToProduct"
-                    role="button"
-                    type="button"
-                  >
-                    Zum Produkt
-                  </button>
-                </a>
-              </div>
-              <div
-                class="mt-4"
+                  Zum Produkt
+                </button>
+              </a>
+            </div>
+            <div
+              class="mt-4 col-span-2 md:mt-0 md:col-start-2 md:col-span-1"
+            >
+              <a
+                href="/catalogue"
               >
-                <a
-                  href="/catalogue"
+                <button
+                  class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
+                  data-testid="discoverMore"
+                  role="button"
+                  type="button"
                 >
-                  <button
-                    class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
-                    data-testid="discoverMore"
-                    role="button"
-                    type="button"
-                  >
-                    Mehr Kaffeesorten entdecken
-                  </button>
-                </a>
-              </div>
+                  Mehr Kaffeesorten entdecken
+                </button>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </main>
     <footer
-      class="bg-brand-black text-base text-white py-10"
+      class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
         class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
@@ -1586,19 +1637,19 @@ exports[`Featured product view Renders correctly for a successful call with arom
           <svg
             fill="none"
             height="157"
-            viewBox="0 0 627 627"
+            viewBox="0 0 400 400"
             width="157"
             xmlns="http://www.w3.org/2000/svg"
           >
             <circle
-              cx="313.5"
-              cy="313.5"
+              cx="200"
+              cy="200"
               fill="#D4FF81"
-              r="313.5"
+              r="200"
             />
             <path
               clip-rule="evenodd"
-              d="M361.926 223.428C378.319 223.428 391.608 210.139 391.608 193.747C391.608 177.354 378.319 164.065 361.926 164.065C345.533 164.065 332.244 177.354 332.244 193.747C332.244 210.139 345.533 223.428 361.926 223.428ZM342.734 463.065C389.465 463.065 427.078 428.871 427.078 360.485V357.445C427.078 289.439 389.465 254.485 343.114 254.485C313.1 254.485 292.584 270.442 281.186 289.439V172.421H213.18V458.506H281.186V427.732C291.064 449.007 313.1 463.065 342.734 463.065ZM370.229 358.777C370.229 382.382 351.093 401.518 327.488 401.518C303.882 401.518 284.746 382.382 284.746 358.777C284.746 335.171 303.882 316.035 327.488 316.035C351.093 316.035 370.229 335.171 370.229 358.777Z"
+              d="M266 225.882C266 267.294 243.14 288 214.739 288C196.728 288 183.336 279.488 177.332 266.604V285.239H136V112H177.332V182.86C184.259 171.357 196.728 161.694 214.97 161.694C243.14 161.694 266 182.86 266 224.042V225.882ZM231.006 225.964C231.006 240.559 219.132 252.391 204.483 252.391C189.835 252.391 177.96 240.559 177.96 225.964C177.96 211.369 189.835 199.538 204.483 199.538C219.132 199.538 231.006 211.369 231.006 225.964ZM251 156C263.15 156 273 146.15 273 134C273 121.85 263.15 112 251 112C238.85 112 229 121.85 229 134C229 146.15 238.85 156 251 156Z"
               fill="#212121"
               fill-rule="evenodd"
             />
@@ -1607,7 +1658,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
         <div
           class="px-4 text-5xl leading-none"
         >
-          A pleasure for every taste.
+          Guten Kaffee besser finden.
         </div>
       </div>
       <div
@@ -1624,6 +1675,15 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 href="/catalogue"
               >
                 Shop
+              </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <a
+                href="/taste-finder"
+              >
+                Tastefinder
               </a>
             </li>
             <li
@@ -1751,7 +1811,18 @@ exports[`Featured product view Renders correctly for a successful call with arom
             >
               <div
                 class="h-full flex space-x-8"
-              />
+              >
+                <a
+                  class="flex items-center text-gray-700 hover:text-gray-800"
+                  href="/taste-finder"
+                >
+                  <span
+                    class="uppercase text-sm leading-5"
+                  >
+                    Tastefinder
+                  </span>
+                </a>
+              </div>
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
@@ -1964,88 +2035,88 @@ exports[`Featured product view Renders correctly for a successful call with arom
             Was wir dir empfehlen
           </h2>
           <div
-            class="grid gap-4 grid-cols-1 md:grid-cols-2 mt-8"
+            class="grid grid-cols-2 gap-0 mt-8 md:gap-4"
           >
             <a
-              class="flex justify-center items-start"
+              class="flex justify-center items-start md:row-start-1 md:row-end-3"
               href="/product/7655228866776"
             >
               <div
-                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-full w-3/4 h-fit shrink-0 grow-0"
+                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-3/4 shrink-0 grow-0"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-full w-3/4 h-fit shrink-0 grow-0"
+                  class="w-full w-3/4 h-auto shrink-0 grow-0"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
               </div>
             </a>
-            <div>
-              <div>
-                <a
-                  class="flex flex-col w-fit"
-                  href="/product/7655228866776"
+            <a
+              class="flex flex-col w-fit"
+              href="/product/7655228866776"
+            >
+              <div
+                class="p-0"
+              >
+                <div
+                  class="flex flex-col w-full justify-between"
                 >
                   <div
-                    class="flex p-6 p-0"
+                    class="text-xl leading-7 font-semibold"
                   >
-                    <div
-                      class="flex flex-col justify-between p-2"
-                    >
-                      <div
-                        class="text-xl leading-7 font-semibold"
-                      >
-                        Espresso Raritäten Set
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        60beans
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Kolumbien
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Filter
-                      </div>
-                      <div
-                        class="flex items-baseline"
-                      >
-                        <div
-                          class="mr-1 mt-1 text-lg leading-7 font-semibold"
-                        >
-                          ab 
-                          19,99 €
-                        </div>
-                        <span
-                          class="text-coreUI-text-secondary text-xs leading-4"
-                        >
-                          (
-                          10,00 €
-                          /kg)
-                        </span>
-                      </div>
-                    </div>
+                    Espresso Raritäten Set
                   </div>
                   <div
-                    class="mt-4"
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    60beans
+                  </div>
+                  <div
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    Kolumbien
+                  </div>
+                  <div
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    Filter
+                  </div>
+                  <div
+                    class="flex items-baseline"
                   >
                     <div
-                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
+                      class="mr-1 mt-1 text-lg leading-7 font-semibold"
                     >
-                      <span
-                        class="text-xs leading-4"
-                      >
-                        98% Übereinstimmung
-                      </span>
+                      ab 
+                      19,99 €
                     </div>
+                    <span
+                      class="text-coreUI-text-secondary text-xs leading-4"
+                    >
+                      (
+                      10,00 €
+                      /kg)
+                    </span>
                   </div>
-                </a>
+                </div>
               </div>
+              <div
+                class="mt-4"
+              >
+                <div
+                  class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    98% Übereinstimmung
+                  </span>
+                </div>
+              </div>
+            </a>
+            <div
+              class="col-span-2 md:col-start-2 md:col-span-1"
+            >
               <div>
                 <h3
                   class="border-b border-brand-grey-whisper mt-8 text-xl leading-7 font-semibold"
@@ -2103,45 +2174,45 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   </li>
                 </ul>
               </div>
-              <div
-                class="mt-8"
+            </div>
+            <div
+              class="mt-8 col-span-2 md:col-start-2 md:col-span-1"
+            >
+              <a
+                href="/product/7655228866776"
               >
-                <a
-                  href="/product/7655228866776"
+                <button
+                  class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+                  data-testid="goToProduct"
+                  role="button"
+                  type="button"
                 >
-                  <button
-                    class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
-                    data-testid="goToProduct"
-                    role="button"
-                    type="button"
-                  >
-                    Zum Produkt
-                  </button>
-                </a>
-              </div>
-              <div
-                class="mt-4"
+                  Zum Produkt
+                </button>
+              </a>
+            </div>
+            <div
+              class="mt-4 col-span-2 md:mt-0 md:col-start-2 md:col-span-1"
+            >
+              <a
+                href="/catalogue"
               >
-                <a
-                  href="/catalogue"
+                <button
+                  class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
+                  data-testid="discoverMore"
+                  role="button"
+                  type="button"
                 >
-                  <button
-                    class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
-                    data-testid="discoverMore"
-                    role="button"
-                    type="button"
-                  >
-                    Mehr Kaffeesorten entdecken
-                  </button>
-                </a>
-              </div>
+                  Mehr Kaffeesorten entdecken
+                </button>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </main>
     <footer
-      class="bg-brand-black text-base text-white py-10"
+      class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
         class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
@@ -2152,19 +2223,19 @@ exports[`Featured product view Renders correctly for a successful call with arom
           <svg
             fill="none"
             height="157"
-            viewBox="0 0 627 627"
+            viewBox="0 0 400 400"
             width="157"
             xmlns="http://www.w3.org/2000/svg"
           >
             <circle
-              cx="313.5"
-              cy="313.5"
+              cx="200"
+              cy="200"
               fill="#D4FF81"
-              r="313.5"
+              r="200"
             />
             <path
               clip-rule="evenodd"
-              d="M361.926 223.428C378.319 223.428 391.608 210.139 391.608 193.747C391.608 177.354 378.319 164.065 361.926 164.065C345.533 164.065 332.244 177.354 332.244 193.747C332.244 210.139 345.533 223.428 361.926 223.428ZM342.734 463.065C389.465 463.065 427.078 428.871 427.078 360.485V357.445C427.078 289.439 389.465 254.485 343.114 254.485C313.1 254.485 292.584 270.442 281.186 289.439V172.421H213.18V458.506H281.186V427.732C291.064 449.007 313.1 463.065 342.734 463.065ZM370.229 358.777C370.229 382.382 351.093 401.518 327.488 401.518C303.882 401.518 284.746 382.382 284.746 358.777C284.746 335.171 303.882 316.035 327.488 316.035C351.093 316.035 370.229 335.171 370.229 358.777Z"
+              d="M266 225.882C266 267.294 243.14 288 214.739 288C196.728 288 183.336 279.488 177.332 266.604V285.239H136V112H177.332V182.86C184.259 171.357 196.728 161.694 214.97 161.694C243.14 161.694 266 182.86 266 224.042V225.882ZM231.006 225.964C231.006 240.559 219.132 252.391 204.483 252.391C189.835 252.391 177.96 240.559 177.96 225.964C177.96 211.369 189.835 199.538 204.483 199.538C219.132 199.538 231.006 211.369 231.006 225.964ZM251 156C263.15 156 273 146.15 273 134C273 121.85 263.15 112 251 112C238.85 112 229 121.85 229 134C229 146.15 238.85 156 251 156Z"
               fill="#212121"
               fill-rule="evenodd"
             />
@@ -2173,7 +2244,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
         <div
           class="px-4 text-5xl leading-none"
         >
-          A pleasure for every taste.
+          Guten Kaffee besser finden.
         </div>
       </div>
       <div
@@ -2190,6 +2261,15 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 href="/catalogue"
               >
                 Shop
+              </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <a
+                href="/taste-finder"
+              >
+                Tastefinder
               </a>
             </li>
             <li
@@ -2317,7 +2397,18 @@ exports[`Featured product view Renders correctly for a successful call with arom
             >
               <div
                 class="h-full flex space-x-8"
-              />
+              >
+                <a
+                  class="flex items-center text-gray-700 hover:text-gray-800"
+                  href="/taste-finder"
+                >
+                  <span
+                    class="uppercase text-sm leading-5"
+                  >
+                    Tastefinder
+                  </span>
+                </a>
+              </div>
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
@@ -2530,88 +2621,88 @@ exports[`Featured product view Renders correctly for a successful call with arom
             Was wir dir empfehlen
           </h2>
           <div
-            class="grid gap-4 grid-cols-1 md:grid-cols-2 mt-8"
+            class="grid grid-cols-2 gap-0 mt-8 md:gap-4"
           >
             <a
-              class="flex justify-center items-start"
+              class="flex justify-center items-start md:row-start-1 md:row-end-3"
               href="/product/7655228866776"
             >
               <div
-                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-full w-3/4 h-fit shrink-0 grow-0"
+                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-3/4 shrink-0 grow-0"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-full w-3/4 h-fit shrink-0 grow-0"
+                  class="w-full w-3/4 h-auto shrink-0 grow-0"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
               </div>
             </a>
-            <div>
-              <div>
-                <a
-                  class="flex flex-col w-fit"
-                  href="/product/7655228866776"
+            <a
+              class="flex flex-col w-fit"
+              href="/product/7655228866776"
+            >
+              <div
+                class="p-0"
+              >
+                <div
+                  class="flex flex-col w-full justify-between"
                 >
                   <div
-                    class="flex p-6 p-0"
+                    class="text-xl leading-7 font-semibold"
                   >
-                    <div
-                      class="flex flex-col justify-between p-2"
-                    >
-                      <div
-                        class="text-xl leading-7 font-semibold"
-                      >
-                        Espresso Raritäten Set
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        60beans
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Kolumbien
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Filter
-                      </div>
-                      <div
-                        class="flex items-baseline"
-                      >
-                        <div
-                          class="mr-1 mt-1 text-lg leading-7 font-semibold"
-                        >
-                          ab 
-                          19,99 €
-                        </div>
-                        <span
-                          class="text-coreUI-text-secondary text-xs leading-4"
-                        >
-                          (
-                          10,00 €
-                          /kg)
-                        </span>
-                      </div>
-                    </div>
+                    Espresso Raritäten Set
                   </div>
                   <div
-                    class="mt-4"
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    60beans
+                  </div>
+                  <div
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    Kolumbien
+                  </div>
+                  <div
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    Filter
+                  </div>
+                  <div
+                    class="flex items-baseline"
                   >
                     <div
-                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
+                      class="mr-1 mt-1 text-lg leading-7 font-semibold"
                     >
-                      <span
-                        class="text-xs leading-4"
-                      >
-                        98% Übereinstimmung
-                      </span>
+                      ab 
+                      19,99 €
                     </div>
+                    <span
+                      class="text-coreUI-text-secondary text-xs leading-4"
+                    >
+                      (
+                      10,00 €
+                      /kg)
+                    </span>
                   </div>
-                </a>
+                </div>
               </div>
+              <div
+                class="mt-4"
+              >
+                <div
+                  class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    98% Übereinstimmung
+                  </span>
+                </div>
+              </div>
+            </a>
+            <div
+              class="col-span-2 md:col-start-2 md:col-span-1"
+            >
               <div>
                 <h3
                   class="border-b border-brand-grey-whisper mt-8 text-xl leading-7 font-semibold"
@@ -2669,45 +2760,45 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   </li>
                 </ul>
               </div>
-              <div
-                class="mt-8"
+            </div>
+            <div
+              class="mt-8 col-span-2 md:col-start-2 md:col-span-1"
+            >
+              <a
+                href="/product/7655228866776"
               >
-                <a
-                  href="/product/7655228866776"
+                <button
+                  class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+                  data-testid="goToProduct"
+                  role="button"
+                  type="button"
                 >
-                  <button
-                    class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
-                    data-testid="goToProduct"
-                    role="button"
-                    type="button"
-                  >
-                    Zum Produkt
-                  </button>
-                </a>
-              </div>
-              <div
-                class="mt-4"
+                  Zum Produkt
+                </button>
+              </a>
+            </div>
+            <div
+              class="mt-4 col-span-2 md:mt-0 md:col-start-2 md:col-span-1"
+            >
+              <a
+                href="/catalogue"
               >
-                <a
-                  href="/catalogue"
+                <button
+                  class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
+                  data-testid="discoverMore"
+                  role="button"
+                  type="button"
                 >
-                  <button
-                    class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
-                    data-testid="discoverMore"
-                    role="button"
-                    type="button"
-                  >
-                    Mehr Kaffeesorten entdecken
-                  </button>
-                </a>
-              </div>
+                  Mehr Kaffeesorten entdecken
+                </button>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </main>
     <footer
-      class="bg-brand-black text-base text-white py-10"
+      class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
         class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
@@ -2718,19 +2809,19 @@ exports[`Featured product view Renders correctly for a successful call with arom
           <svg
             fill="none"
             height="157"
-            viewBox="0 0 627 627"
+            viewBox="0 0 400 400"
             width="157"
             xmlns="http://www.w3.org/2000/svg"
           >
             <circle
-              cx="313.5"
-              cy="313.5"
+              cx="200"
+              cy="200"
               fill="#D4FF81"
-              r="313.5"
+              r="200"
             />
             <path
               clip-rule="evenodd"
-              d="M361.926 223.428C378.319 223.428 391.608 210.139 391.608 193.747C391.608 177.354 378.319 164.065 361.926 164.065C345.533 164.065 332.244 177.354 332.244 193.747C332.244 210.139 345.533 223.428 361.926 223.428ZM342.734 463.065C389.465 463.065 427.078 428.871 427.078 360.485V357.445C427.078 289.439 389.465 254.485 343.114 254.485C313.1 254.485 292.584 270.442 281.186 289.439V172.421H213.18V458.506H281.186V427.732C291.064 449.007 313.1 463.065 342.734 463.065ZM370.229 358.777C370.229 382.382 351.093 401.518 327.488 401.518C303.882 401.518 284.746 382.382 284.746 358.777C284.746 335.171 303.882 316.035 327.488 316.035C351.093 316.035 370.229 335.171 370.229 358.777Z"
+              d="M266 225.882C266 267.294 243.14 288 214.739 288C196.728 288 183.336 279.488 177.332 266.604V285.239H136V112H177.332V182.86C184.259 171.357 196.728 161.694 214.97 161.694C243.14 161.694 266 182.86 266 224.042V225.882ZM231.006 225.964C231.006 240.559 219.132 252.391 204.483 252.391C189.835 252.391 177.96 240.559 177.96 225.964C177.96 211.369 189.835 199.538 204.483 199.538C219.132 199.538 231.006 211.369 231.006 225.964ZM251 156C263.15 156 273 146.15 273 134C273 121.85 263.15 112 251 112C238.85 112 229 121.85 229 134C229 146.15 238.85 156 251 156Z"
               fill="#212121"
               fill-rule="evenodd"
             />
@@ -2739,7 +2830,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
         <div
           class="px-4 text-5xl leading-none"
         >
-          A pleasure for every taste.
+          Guten Kaffee besser finden.
         </div>
       </div>
       <div
@@ -2756,6 +2847,15 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 href="/catalogue"
               >
                 Shop
+              </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <a
+                href="/taste-finder"
+              >
+                Tastefinder
               </a>
             </li>
             <li
@@ -2883,7 +2983,18 @@ exports[`Featured product view Renders correctly for a successful call without a
             >
               <div
                 class="h-full flex space-x-8"
-              />
+              >
+                <a
+                  class="flex items-center text-gray-700 hover:text-gray-800"
+                  href="/taste-finder"
+                >
+                  <span
+                    class="uppercase text-sm leading-5"
+                  >
+                    Tastefinder
+                  </span>
+                </a>
+              </div>
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
@@ -2979,88 +3090,88 @@ exports[`Featured product view Renders correctly for a successful call without a
             Was wir dir empfehlen
           </h2>
           <div
-            class="grid gap-4 grid-cols-1 md:grid-cols-2 mt-8"
+            class="grid grid-cols-2 gap-0 mt-8 md:gap-4"
           >
             <a
-              class="flex justify-center items-start"
+              class="flex justify-center items-start md:row-start-1 md:row-end-3"
               href="/product/7655228866776"
             >
               <div
-                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-full w-3/4 h-fit shrink-0 grow-0"
+                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-3/4 shrink-0 grow-0"
               >
                 <img
                   alt="Espresso Raritäten Set"
-                  class="w-full w-3/4 h-fit shrink-0 grow-0"
+                  class="w-full w-3/4 h-auto shrink-0 grow-0"
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
               </div>
             </a>
-            <div>
-              <div>
-                <a
-                  class="flex flex-col w-fit"
-                  href="/product/7655228866776"
+            <a
+              class="flex flex-col w-fit"
+              href="/product/7655228866776"
+            >
+              <div
+                class="p-0"
+              >
+                <div
+                  class="flex flex-col w-full justify-between"
                 >
                   <div
-                    class="flex p-6 p-0"
+                    class="text-xl leading-7 font-semibold"
                   >
-                    <div
-                      class="flex flex-col justify-between p-2"
-                    >
-                      <div
-                        class="text-xl leading-7 font-semibold"
-                      >
-                        Espresso Raritäten Set
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        60beans
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Kolumbien
-                      </div>
-                      <div
-                        class="mt-1 text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Filter
-                      </div>
-                      <div
-                        class="flex items-baseline"
-                      >
-                        <div
-                          class="mr-1 mt-1 text-lg leading-7 font-semibold"
-                        >
-                          ab 
-                          19,99 €
-                        </div>
-                        <span
-                          class="text-coreUI-text-secondary text-xs leading-4"
-                        >
-                          (
-                          10,00 €
-                          /kg)
-                        </span>
-                      </div>
-                    </div>
+                    Espresso Raritäten Set
                   </div>
                   <div
-                    class="mt-4"
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    60beans
+                  </div>
+                  <div
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    Kolumbien
+                  </div>
+                  <div
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    Filter
+                  </div>
+                  <div
+                    class="flex items-baseline"
                   >
                     <div
-                      class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
+                      class="mr-1 mt-1 text-lg leading-7 font-semibold"
                     >
-                      <span
-                        class="text-xs leading-4"
-                      >
-                        98% Übereinstimmung
-                      </span>
+                      ab 
+                      19,99 €
                     </div>
+                    <span
+                      class="text-coreUI-text-secondary text-xs leading-4"
+                    >
+                      (
+                      10,00 €
+                      /kg)
+                    </span>
                   </div>
-                </a>
+                </div>
               </div>
+              <div
+                class="mt-4"
+              >
+                <div
+                  class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    98% Übereinstimmung
+                  </span>
+                </div>
+              </div>
+            </a>
+            <div
+              class="col-span-2 md:col-start-2 md:col-span-1"
+            >
               <div>
                 <h3
                   class="border-b border-brand-grey-whisper mt-8 text-xl leading-7 font-semibold"
@@ -3118,45 +3229,45 @@ exports[`Featured product view Renders correctly for a successful call without a
                   </li>
                 </ul>
               </div>
-              <div
-                class="mt-8"
+            </div>
+            <div
+              class="mt-8 col-span-2 md:col-start-2 md:col-span-1"
+            >
+              <a
+                href="/product/7655228866776"
               >
-                <a
-                  href="/product/7655228866776"
+                <button
+                  class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+                  data-testid="goToProduct"
+                  role="button"
+                  type="button"
                 >
-                  <button
-                    class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
-                    data-testid="goToProduct"
-                    role="button"
-                    type="button"
-                  >
-                    Zum Produkt
-                  </button>
-                </a>
-              </div>
-              <div
-                class="mt-4"
+                  Zum Produkt
+                </button>
+              </a>
+            </div>
+            <div
+              class="mt-4 col-span-2 md:mt-0 md:col-start-2 md:col-span-1"
+            >
+              <a
+                href="/catalogue"
               >
-                <a
-                  href="/catalogue"
+                <button
+                  class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
+                  data-testid="discoverMore"
+                  role="button"
+                  type="button"
                 >
-                  <button
-                    class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
-                    data-testid="discoverMore"
-                    role="button"
-                    type="button"
-                  >
-                    Mehr Kaffeesorten entdecken
-                  </button>
-                </a>
-              </div>
+                  Mehr Kaffeesorten entdecken
+                </button>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </main>
     <footer
-      class="bg-brand-black text-base text-white py-10"
+      class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
         class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
@@ -3167,19 +3278,19 @@ exports[`Featured product view Renders correctly for a successful call without a
           <svg
             fill="none"
             height="157"
-            viewBox="0 0 627 627"
+            viewBox="0 0 400 400"
             width="157"
             xmlns="http://www.w3.org/2000/svg"
           >
             <circle
-              cx="313.5"
-              cy="313.5"
+              cx="200"
+              cy="200"
               fill="#D4FF81"
-              r="313.5"
+              r="200"
             />
             <path
               clip-rule="evenodd"
-              d="M361.926 223.428C378.319 223.428 391.608 210.139 391.608 193.747C391.608 177.354 378.319 164.065 361.926 164.065C345.533 164.065 332.244 177.354 332.244 193.747C332.244 210.139 345.533 223.428 361.926 223.428ZM342.734 463.065C389.465 463.065 427.078 428.871 427.078 360.485V357.445C427.078 289.439 389.465 254.485 343.114 254.485C313.1 254.485 292.584 270.442 281.186 289.439V172.421H213.18V458.506H281.186V427.732C291.064 449.007 313.1 463.065 342.734 463.065ZM370.229 358.777C370.229 382.382 351.093 401.518 327.488 401.518C303.882 401.518 284.746 382.382 284.746 358.777C284.746 335.171 303.882 316.035 327.488 316.035C351.093 316.035 370.229 335.171 370.229 358.777Z"
+              d="M266 225.882C266 267.294 243.14 288 214.739 288C196.728 288 183.336 279.488 177.332 266.604V285.239H136V112H177.332V182.86C184.259 171.357 196.728 161.694 214.97 161.694C243.14 161.694 266 182.86 266 224.042V225.882ZM231.006 225.964C231.006 240.559 219.132 252.391 204.483 252.391C189.835 252.391 177.96 240.559 177.96 225.964C177.96 211.369 189.835 199.538 204.483 199.538C219.132 199.538 231.006 211.369 231.006 225.964ZM251 156C263.15 156 273 146.15 273 134C273 121.85 263.15 112 251 112C238.85 112 229 121.85 229 134C229 146.15 238.85 156 251 156Z"
               fill="#212121"
               fill-rule="evenodd"
             />
@@ -3188,7 +3299,7 @@ exports[`Featured product view Renders correctly for a successful call without a
         <div
           class="px-4 text-5xl leading-none"
         >
-          A pleasure for every taste.
+          Guten Kaffee besser finden.
         </div>
       </div>
       <div
@@ -3205,6 +3316,15 @@ exports[`Featured product view Renders correctly for a successful call without a
                 href="/catalogue"
               >
                 Shop
+              </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <a
+                href="/taste-finder"
+              >
+                Tastefinder
               </a>
             </li>
             <li
@@ -3278,3 +3398,5 @@ exports[`Featured product view Renders correctly for a successful call without a
   </div>
 </div>
 `;
+
+exports[`Featured product view fails gracefully if no id exists 1`] = `<div />`;

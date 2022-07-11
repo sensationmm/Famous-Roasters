@@ -107,7 +107,7 @@ export const Cart: React.FC = () => {
                       : 'flex w-full md:grid-cols-2 pb-6 border-b border-coreUI-border'
                   }
                 >
-                  <div className="flex justify-center items-center shrink-0 self-center relative w-32 h-32 mr-2">
+                  <div className="flex justify-center items-center shrink-0 self-start relative w-32 h-32 mr-4">
                     <Link
                       to={`/product/${getSimplifiedProductId(productId)}`}
                       className="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
@@ -117,12 +117,7 @@ export const Cart: React.FC = () => {
                   </div>
                   <div className="flex flex-1 flex-col justify-between justify-items-start md:grid md:grid-cols-3 md:items-center">
                     <div>
-                      <Typography
-                        as="div"
-                        type={TypographyType.Label}
-                        size={TypographySize.Base}
-                        className="mb-1.5 md:mb-0"
-                      >
+                      <Typography as="div" type={TypographyType.Label} size={TypographySize.Base}>
                         {product.title}
                       </Typography>
                       <div>
@@ -162,19 +157,18 @@ export const Cart: React.FC = () => {
                       )}
                     </div>
                     <span className="md:hidden" />
-                    <div className="md:w-full md:flex md:justify-end">
+                    <div className="mt-1.5 md:w-full md:flex md:justify-end">
                       <QuantitySelect
                         min={1}
                         max={10}
                         value={cartEdge.node.quantity}
                         onChange={(q: number) => handleModifyQuantity(lineId, q)}
-                        className="w-32"
                       />
                       <button
                         type="button"
                         onClick={() => handleRemoveFromCart(lineId, cartEdge.node.quantity)}
                         data-testid="button-cart-item-remove"
-                        className="ml-4 inline-flex items-center px-4 py-2.5 w-fit rounded-full border border-coreUI-text-tertiary"
+                        className="ml-2 inline-flex items-center px-4 py-2.5 w-fit rounded-full border border-coreUI-text-tertiary"
                       >
                         <TrashIcon className="h-5 w-5" />
                       </button>

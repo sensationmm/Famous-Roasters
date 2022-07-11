@@ -53,7 +53,18 @@ exports[`Cart view Renders correctly 1`] = `
             >
               <div
                 class="h-full flex space-x-8"
-              />
+              >
+                <a
+                  class="flex items-center text-gray-700 hover:text-gray-800"
+                  href="/taste-finder"
+                >
+                  <span
+                    class="uppercase text-sm leading-5"
+                  >
+                    Tastefinder
+                  </span>
+                </a>
+              </div>
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
@@ -148,7 +159,7 @@ exports[`Cart view Renders correctly 1`] = `
             class="flex w-full md:grid-cols-2 pb-6 border-b border-coreUI-border mb-4"
           >
             <div
-              class="flex justify-center items-center shrink-0 self-center relative w-32 h-32 mr-2"
+              class="flex justify-center items-center shrink-0 self-start relative w-32 h-32 mr-4"
             >
               <a
                 class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
@@ -166,7 +177,7 @@ exports[`Cart view Renders correctly 1`] = `
             >
               <div>
                 <div
-                  class="mb-1.5 md:mb-0 text-base leading-6 font-semibold"
+                  class="text-base leading-6 font-semibold"
                 >
                   Cycle Blend
                 </div>
@@ -201,10 +212,10 @@ exports[`Cart view Renders correctly 1`] = `
                 class="md:hidden"
               />
               <div
-                class="md:w-full md:flex md:justify-end"
+                class="mt-1.5 md:w-full md:flex md:justify-end"
               >
                 <div
-                  class="inline-flex justify-between px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default w-32"
+                  class="inline-flex justify-between px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                   data-testid="quantity-select"
                 >
                   <button
@@ -226,7 +237,7 @@ exports[`Cart view Renders correctly 1`] = `
                     </svg>
                   </button>
                   <div
-                    class="px-4"
+                    class="px-3.5"
                     data-testid="quantity-value"
                   >
                     1
@@ -251,7 +262,7 @@ exports[`Cart view Renders correctly 1`] = `
                   </button>
                 </div>
                 <button
-                  class="ml-4 inline-flex items-center px-4 py-2.5 w-fit rounded-full border border-coreUI-text-tertiary"
+                  class="ml-2 inline-flex items-center px-4 py-2.5 w-fit rounded-full border border-coreUI-text-tertiary"
                   data-testid="button-cart-item-remove"
                   type="button"
                 >
@@ -278,7 +289,7 @@ exports[`Cart view Renders correctly 1`] = `
             class="flex w-full md:grid-cols-2 pb-6 border-b border-coreUI-border"
           >
             <div
-              class="flex justify-center items-center shrink-0 self-center relative w-32 h-32 mr-2"
+              class="flex justify-center items-center shrink-0 self-start relative w-32 h-32 mr-4"
             >
               <a
                 class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
@@ -296,7 +307,7 @@ exports[`Cart view Renders correctly 1`] = `
             >
               <div>
                 <div
-                  class="mb-1.5 md:mb-0 text-base leading-6 font-semibold"
+                  class="text-base leading-6 font-semibold"
                 >
                   60beans
                 </div>
@@ -331,10 +342,10 @@ exports[`Cart view Renders correctly 1`] = `
                 class="md:hidden"
               />
               <div
-                class="md:w-full md:flex md:justify-end"
+                class="mt-1.5 md:w-full md:flex md:justify-end"
               >
                 <div
-                  class="inline-flex justify-between px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default w-32"
+                  class="inline-flex justify-between px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                   data-testid="quantity-select"
                 >
                   <button
@@ -356,7 +367,7 @@ exports[`Cart view Renders correctly 1`] = `
                     </svg>
                   </button>
                   <div
-                    class="px-4"
+                    class="px-3.5"
                     data-testid="quantity-value"
                   >
                     2
@@ -381,7 +392,7 @@ exports[`Cart view Renders correctly 1`] = `
                   </button>
                 </div>
                 <button
-                  class="ml-4 inline-flex items-center px-4 py-2.5 w-fit rounded-full border border-coreUI-text-tertiary"
+                  class="ml-2 inline-flex items-center px-4 py-2.5 w-fit rounded-full border border-coreUI-text-tertiary"
                   data-testid="button-cart-item-remove"
                   type="button"
                 >
@@ -465,7 +476,7 @@ exports[`Cart view Renders correctly 1`] = `
       </div>
     </main>
     <footer
-      class="bg-brand-black text-base text-white py-10"
+      class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
         class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
@@ -476,19 +487,19 @@ exports[`Cart view Renders correctly 1`] = `
           <svg
             fill="none"
             height="157"
-            viewBox="0 0 627 627"
+            viewBox="0 0 400 400"
             width="157"
             xmlns="http://www.w3.org/2000/svg"
           >
             <circle
-              cx="313.5"
-              cy="313.5"
+              cx="200"
+              cy="200"
               fill="#D4FF81"
-              r="313.5"
+              r="200"
             />
             <path
               clip-rule="evenodd"
-              d="M361.926 223.428C378.319 223.428 391.608 210.139 391.608 193.747C391.608 177.354 378.319 164.065 361.926 164.065C345.533 164.065 332.244 177.354 332.244 193.747C332.244 210.139 345.533 223.428 361.926 223.428ZM342.734 463.065C389.465 463.065 427.078 428.871 427.078 360.485V357.445C427.078 289.439 389.465 254.485 343.114 254.485C313.1 254.485 292.584 270.442 281.186 289.439V172.421H213.18V458.506H281.186V427.732C291.064 449.007 313.1 463.065 342.734 463.065ZM370.229 358.777C370.229 382.382 351.093 401.518 327.488 401.518C303.882 401.518 284.746 382.382 284.746 358.777C284.746 335.171 303.882 316.035 327.488 316.035C351.093 316.035 370.229 335.171 370.229 358.777Z"
+              d="M266 225.882C266 267.294 243.14 288 214.739 288C196.728 288 183.336 279.488 177.332 266.604V285.239H136V112H177.332V182.86C184.259 171.357 196.728 161.694 214.97 161.694C243.14 161.694 266 182.86 266 224.042V225.882ZM231.006 225.964C231.006 240.559 219.132 252.391 204.483 252.391C189.835 252.391 177.96 240.559 177.96 225.964C177.96 211.369 189.835 199.538 204.483 199.538C219.132 199.538 231.006 211.369 231.006 225.964ZM251 156C263.15 156 273 146.15 273 134C273 121.85 263.15 112 251 112C238.85 112 229 121.85 229 134C229 146.15 238.85 156 251 156Z"
               fill="#212121"
               fill-rule="evenodd"
             />
@@ -497,7 +508,7 @@ exports[`Cart view Renders correctly 1`] = `
         <div
           class="px-4 text-5xl leading-none"
         >
-          A pleasure for every taste.
+          Guten Kaffee besser finden.
         </div>
       </div>
       <div
@@ -514,6 +525,15 @@ exports[`Cart view Renders correctly 1`] = `
                 href="/catalogue"
               >
                 Shop
+              </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <a
+                href="/taste-finder"
+              >
+                Tastefinder
               </a>
             </li>
             <li
@@ -641,7 +661,18 @@ exports[`Cart view Renders correctly for no cart id 1`] = `
             >
               <div
                 class="h-full flex space-x-8"
-              />
+              >
+                <a
+                  class="flex items-center text-gray-700 hover:text-gray-800"
+                  href="/taste-finder"
+                >
+                  <span
+                    class="uppercase text-sm leading-5"
+                  >
+                    Tastefinder
+                  </span>
+                </a>
+              </div>
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
@@ -758,7 +789,7 @@ exports[`Cart view Renders correctly for no cart id 1`] = `
       </div>
     </main>
     <footer
-      class="bg-brand-black text-base text-white py-10"
+      class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
         class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
@@ -769,19 +800,19 @@ exports[`Cart view Renders correctly for no cart id 1`] = `
           <svg
             fill="none"
             height="157"
-            viewBox="0 0 627 627"
+            viewBox="0 0 400 400"
             width="157"
             xmlns="http://www.w3.org/2000/svg"
           >
             <circle
-              cx="313.5"
-              cy="313.5"
+              cx="200"
+              cy="200"
               fill="#D4FF81"
-              r="313.5"
+              r="200"
             />
             <path
               clip-rule="evenodd"
-              d="M361.926 223.428C378.319 223.428 391.608 210.139 391.608 193.747C391.608 177.354 378.319 164.065 361.926 164.065C345.533 164.065 332.244 177.354 332.244 193.747C332.244 210.139 345.533 223.428 361.926 223.428ZM342.734 463.065C389.465 463.065 427.078 428.871 427.078 360.485V357.445C427.078 289.439 389.465 254.485 343.114 254.485C313.1 254.485 292.584 270.442 281.186 289.439V172.421H213.18V458.506H281.186V427.732C291.064 449.007 313.1 463.065 342.734 463.065ZM370.229 358.777C370.229 382.382 351.093 401.518 327.488 401.518C303.882 401.518 284.746 382.382 284.746 358.777C284.746 335.171 303.882 316.035 327.488 316.035C351.093 316.035 370.229 335.171 370.229 358.777Z"
+              d="M266 225.882C266 267.294 243.14 288 214.739 288C196.728 288 183.336 279.488 177.332 266.604V285.239H136V112H177.332V182.86C184.259 171.357 196.728 161.694 214.97 161.694C243.14 161.694 266 182.86 266 224.042V225.882ZM231.006 225.964C231.006 240.559 219.132 252.391 204.483 252.391C189.835 252.391 177.96 240.559 177.96 225.964C177.96 211.369 189.835 199.538 204.483 199.538C219.132 199.538 231.006 211.369 231.006 225.964ZM251 156C263.15 156 273 146.15 273 134C273 121.85 263.15 112 251 112C238.85 112 229 121.85 229 134C229 146.15 238.85 156 251 156Z"
               fill="#212121"
               fill-rule="evenodd"
             />
@@ -790,7 +821,7 @@ exports[`Cart view Renders correctly for no cart id 1`] = `
         <div
           class="px-4 text-5xl leading-none"
         >
-          A pleasure for every taste.
+          Guten Kaffee besser finden.
         </div>
       </div>
       <div
@@ -807,6 +838,15 @@ exports[`Cart view Renders correctly for no cart id 1`] = `
                 href="/catalogue"
               >
                 Shop
+              </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <a
+                href="/taste-finder"
+              >
+                Tastefinder
               </a>
             </li>
             <li
