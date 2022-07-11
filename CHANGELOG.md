@@ -1,3 +1,11 @@
+# [1.20.0](https://github.com/Famous-Roasters/frontend/compare/v1.19.2...v1.20.0) (2022-07-11)
+
+
+### Features
+
+* **auth:** adjusts responsive widths ([d4958fb](https://github.com/Famous-Roasters/frontend/commit/d4958fb92151f2b236b5efeadb59f3e602b14190))
+* **auth:** adjusts responsive widths - fix test ([0572a41](https://github.com/Famous-Roasters/frontend/commit/0572a411b6c78b99a3c36340714a96219f4d0754))
+
 ## [1.19.2](https://github.com/Famous-Roasters/frontend/compare/v1.19.1...v1.19.2) (2022-07-11)
 
 ## [1.19.1](https://github.com/Famous-Roasters/frontend/compare/v1.19.0...v1.19.1) (2022-07-11)
