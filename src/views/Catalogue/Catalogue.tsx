@@ -317,7 +317,7 @@ export const Catalogue: React.FC = () => {
         ...original,
         key: original?.key || '',
         isOpen: original?.isOpen || false,
-        filterValuesSelected: items?.map((x: { name: string }) => x.name) || [],
+        filterValuesSelected: items?.map((x: { name: string }) => x.name).filter((fv) => fv != 'none') || [],
       }
       return [...rest, actual]
     }
@@ -399,7 +399,7 @@ export const Catalogue: React.FC = () => {
         <div className="my-4 md:w-1/4">{renderCheckboxFilter('decaf')}</div>
         <div className="hidden md:flex gap-x-4">
           <div className="md:w-1/4">{renderListboxFilter('aroma', false)}</div>
-          <div className="md:w-1/4">{renderListboxFilter('beanType', false, ['Arabica, Robusta'])}</div>
+          <div className="md:w-1/4">{renderListboxFilter('beanType', false)}</div>
           <div className="md:w-1/4">{renderListboxFilter('vendor', false)}</div>
           <div className="md:w-1/4">{renderListboxFilter('origin', true)}</div>
           <div className="md:w-1/4">{renderListboxFilter('packageSize', false)}</div>
