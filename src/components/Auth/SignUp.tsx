@@ -36,7 +36,7 @@ export class AuthSignUp extends SignUp {
 
   signUpUser = async (params: SignUpParams): Promise<void> => {
     await Auth.signUp(params.email, params.password)
-      .then(() => this.changeState('confirmSignUp'))
+      .then(() => this.changeState('confirmSignUp', params.email))
       .catch((error) => {
         if (error.toString().indexOf('UsernameExistsException') !== -1) {
           this.changeState('signUpError', { errorCode: 'RegisterGenericException' })

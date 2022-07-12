@@ -49,6 +49,8 @@
       "subtitle": "Nur noch einen Schritt um wirklich sicher zu gehen.",
       "success": "Your signup is now complete. Please, log in to continue",
       "text": "Wir haben dir einen Verifizierungscode per E-mail geschickt. Überprüfe gegebenenfalls auch deinen Spam-Ordner.",
+      "textCustom1": "Wir haben dir einen Verifizierungscode an",
+      "textCustom2": "geschickt. Überprüfe gegebenenfalls auch deinen Spam-Ordner.",
       "title": "Fast geschafft!",
       "username": {
         "error": {
