@@ -36,7 +36,7 @@ describe('ConfirmSignUp custom auth component', () => {
   )
 
   it('Renders correctly', async () => {
-    const { container } = render(snippet())
+    const { container } = render(snippet('confirmSignUp', { username: 'hello@60beans.com' }))
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
     expect(container).toMatchSnapshot()
   })
@@ -68,7 +68,7 @@ describe('ConfirmSignUp custom auth component', () => {
   it('The user confirmation failing for user not found is catched', async () => {
     const mockConfirmSignUp = jest.spyOn(Auth, 'confirmSignUp')
     mockConfirmSignUp.mockRejectedValue(new Error('UserNotFoundException: text'))
-    const { getByTestId } = render(snippet())
+    const { getByTestId } = render(snippet('confirmSignUp', { username: 'hello@60beans.com' }))
 
     const usernameInput = getByTestId('username')
     const codeInput = getByTestId('code')
@@ -90,7 +90,7 @@ describe('ConfirmSignUp custom auth component', () => {
   })
 
   it('The user confirmation failing for wrong code format shows error', async () => {
-    const { getByTestId } = render(snippet())
+    const { getByTestId } = render(snippet('confirmSignUp', { username: 'hello@60beans.com' }))
 
     const usernameInput = getByTestId('username')
     const codeInput = getByTestId('code')
@@ -112,7 +112,7 @@ describe('ConfirmSignUp custom auth component', () => {
   it('The user confirmation failing for wrong code is catched', async () => {
     const mockConfirmSignUp = jest.spyOn(Auth, 'confirmSignUp')
     mockConfirmSignUp.mockRejectedValue(new Error('CodeMismatchException: text'))
-    const { getByTestId } = render(snippet())
+    const { getByTestId } = render(snippet('confirmSignUp', { username: 'hello@60beans.com' }))
 
     const usernameInput = getByTestId('username')
     const codeInput = getByTestId('code')
@@ -136,7 +136,7 @@ describe('ConfirmSignUp custom auth component', () => {
   it('The user confirmation failing for invalid parameter is catched', async () => {
     const mockConfirmSignUp = jest.spyOn(Auth, 'confirmSignUp')
     mockConfirmSignUp.mockRejectedValue(new Error('InvalidParameterException: text'))
-    const { getByTestId } = render(snippet())
+    const { getByTestId } = render(snippet('confirmSignUp', { username: 'hello@60beans.com' }))
 
     const usernameInput = getByTestId('username')
     const codeInput = getByTestId('code')
@@ -160,7 +160,7 @@ describe('ConfirmSignUp custom auth component', () => {
   it('The user confirmation generic failing is catched', async () => {
     const mockConfirmSignUp = jest.spyOn(Auth, 'confirmSignUp')
     mockConfirmSignUp.mockRejectedValue(new Error('An error'))
-    const { getByTestId } = render(snippet())
+    const { getByTestId } = render(snippet('confirmSignUp', { username: 'hello@60beans.com' }))
 
     const usernameInput = getByTestId('username')
     const codeInput = getByTestId('code')
@@ -184,7 +184,7 @@ describe('ConfirmSignUp custom auth component', () => {
   it.skip('The user can request a new registration code', async () => {
     const mockResendSignUp = jest.spyOn(Auth, 'resendSignUp')
     mockResendSignUp.mockResolvedValue('')
-    const { getByTestId } = render(snippet())
+    const { getByTestId } = render(snippet('confirmSignUp', { username: 'hello@60beans.com' }))
 
     const usernameInput = getByTestId('username')
     const resendLink = getByTestId('resend')
@@ -204,7 +204,7 @@ describe('ConfirmSignUp custom auth component', () => {
   it.skip('The new registration code request failing is catched', async () => {
     const mockResendSignUp = jest.spyOn(Auth, 'resendSignUp')
     mockResendSignUp.mockRejectedValue(new Error('An error'))
-    const { getByTestId } = render(snippet())
+    const { getByTestId } = render(snippet('confirmSignUp', { username: 'hello@60beans.com' }))
 
     const usernameInput = getByTestId('username')
     const resendLink = getByTestId('resend')

@@ -29,7 +29,13 @@ exports[`ConfirmSignUp custom auth component Renders correctly 1`] = `
       <span
         class="text-sm leading-5"
       >
-        Wir haben dir einen Verifizierungscode per E-mail geschickt. Überprüfe gegebenenfalls auch deinen Spam-Ordner.
+        Wir haben dir einen Verifizierungscode an
+         
+        <strong>
+          hello@60beans.com
+        </strong>
+         
+        geschickt. Überprüfe gegebenenfalls auch deinen Spam-Ordner.
       </span>
     </div>
     <div
@@ -56,7 +62,7 @@ exports[`ConfirmSignUp custom auth component Renders correctly 1`] = `
             data-testid="username"
             placeholder="Deine E-mail-Adresse"
             type="email"
-            value=""
+            value="hello@60beans.com"
           />
         </label>
       </div>

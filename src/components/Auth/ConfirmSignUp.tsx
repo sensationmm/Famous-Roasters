@@ -75,7 +75,7 @@ export class AuthConfirmSignUp extends ConfirmSignUp {
             type="email"
             placeholder={i18n.t('auth.confirmSignUp.username.placeholder')}
             onChange={this.handleInputChange}
-            value={this.props.authData ? this.props.authData : ''}
+            value={this.props.authData.username ? this.props.authData.username : ''}
             dataTestId="username"
           />
         </div>
@@ -147,9 +147,9 @@ export class AuthConfirmSignUp extends ConfirmSignUp {
           </Typography>
         </div>
         <div className="flex w-full mt-2">
-          {this.props.authData ? (
+          {this.props.authData.username ? (
             <Typography type={TypographyType.Paragraph} size={TypographySize.Small}>
-              {i18n.t<string>('auth.confirmSignUp.textCustom1')} <strong>{this.props.authData}</strong>{' '}
+              {i18n.t<string>('auth.confirmSignUp.textCustom1')} <strong>{this.props.authData.username}</strong>{' '}
               {i18n.t<string>('auth.confirmSignUp.textCustom2')}
             </Typography>
           ) : (
@@ -163,7 +163,8 @@ export class AuthConfirmSignUp extends ConfirmSignUp {
         </div>
         <Form name="confirmSignUp" onFinish={this.confirmSignUpUser}>
           {(_, form) => {
-            const allTouched = (this.props.authData || form.isFieldTouched('username')) && form.isFieldTouched('code')
+            const allTouched =
+              (this.props.authData.username || form.isFieldTouched('username')) && form.isFieldTouched('code')
             const hasErrors = form.getFieldsError().filter((entry) => entry.errors.length > 0).length > 0
             return (
               <>
