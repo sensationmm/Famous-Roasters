@@ -7,8 +7,12 @@ import App from './App'
 
 const container = document.getElementById('root') as Element
 const root = createRoot(container)
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+if (process.env.NODE_ENV === 'development') {
+  root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+  )
+} else {
+  root.render(<App />)
+}
