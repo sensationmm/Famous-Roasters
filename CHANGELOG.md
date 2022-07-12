@@ -1,3 +1,12 @@
+# [1.23.0](https://github.com/Famous-Roasters/frontend/compare/v1.22.0...v1.23.0) (2022-07-12)
+
+
+### Features
+
+* **auth:** adds legal footer ([1ec1958](https://github.com/Famous-Roasters/frontend/commit/1ec195874dd4c4b473f5a5c7f6a22b45ce412cb1))
+* **chore:** ensures not React.StrictMode on prod ([1b8d3de](https://github.com/Famous-Roasters/frontend/commit/1b8d3dec3091b98b41c938487b682a92b9fa5224))
+* **chore:** ensures not React.StrictMode on prod ([21df631](https://github.com/Famous-Roasters/frontend/commit/21df6310077da6b17fdaa6c8f3321db2f4fb9b98))
+
 # [1.22.0](https://github.com/Famous-Roasters/frontend/compare/v1.21.0...v1.22.0) (2022-07-12)
 
 
