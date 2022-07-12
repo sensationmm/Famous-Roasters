@@ -242,14 +242,23 @@ export const Product: React.FC = () => {
             type="button"
             emphasis={ButtonEmphasis.Primary}
             size={ButtonSize.md}
-            className="flex w-full justify-center"
+            className="flex w-full justify-center md:hidden"
             onClick={!isFixed && !isSticky ? handleAddToCart : backToDetails}
             data-testid="addToCart"
           >
-            <span className="hidden md:block">{t('pages.product.transactional.cta')}</span>
-            <span className="md:hidden">
+            <span>
               <Icon name={!isFixed && !isSticky ? IconName.AddToCart : IconName.Cart} size={IconSize.lg} />
             </span>
+          </Button>
+          <Button
+            type="button"
+            emphasis={ButtonEmphasis.Primary}
+            size={ButtonSize.md}
+            className="flex w-full justify-center hidden md:block"
+            onClick={handleAddToCart}
+            data-testid="addToCart"
+          >
+            <span>{t('pages.product.transactional.cta')}</span>
           </Button>
         </div>
       </>
