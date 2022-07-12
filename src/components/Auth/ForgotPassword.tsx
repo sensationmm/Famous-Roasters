@@ -3,7 +3,15 @@ import { ForgotPassword } from 'aws-amplify-react'
 import { IAuthPieceProps } from 'aws-amplify-react/lib-esm/Auth/AuthPiece'
 import Form from 'rc-field-form'
 import React from 'react'
-import { Button, ButtonEmphasis, ButtonSize, Typography, TypographySize, TypographyType } from 'src/components'
+import {
+  AuthFooter,
+  Button,
+  ButtonEmphasis,
+  ButtonSize,
+  Typography,
+  TypographySize,
+  TypographyType,
+} from 'src/components'
 import i18n from 'src/config/i18n'
 
 import {
@@ -145,7 +153,7 @@ export class AuthForgotPassword extends ForgotPassword {
 
   renderSignInFooterActions(): JSX.Element {
     return (
-      <div className="mt-10">
+      <div className="mt-12">
         <div className="flex">
           <div className="border-t border-brand-grey-whisper absolute w-full left-0" />
         </div>
@@ -201,6 +209,9 @@ export class AuthForgotPassword extends ForgotPassword {
           }}
         </Form>
         {this.renderSignInFooterActions()}
+        <div className="mt-12">
+          <AuthFooter />
+        </div>
       </div>
     )
   }

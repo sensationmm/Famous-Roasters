@@ -5,6 +5,7 @@ import Form from 'rc-field-form'
 import React from 'react'
 import {
   AuthCognitoErrors,
+  AuthFooter,
   AuthFormAction,
   AuthFormButton,
   AuthFormEmail,
@@ -126,6 +127,9 @@ export class AuthSignIn extends SignIn {
               )
             }}
           </Form>
+        </div>
+        <div className="mt-12">
+          <AuthFooter />
         </div>
       </div>
     ) : (

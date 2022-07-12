@@ -1,5 +1,6 @@
 import { AuthCognitoErrors } from './AuthCognitoErrors'
 import { Authenticator } from './Authenticator'
+import { AuthFooter } from './AuthFooter'
 import { AuthFormAction } from './AuthFormAction'
 import { AuthFormButton } from './AuthFormButton'
 import { AuthFormCheckbox } from './AuthFormCheckbox'
@@ -16,6 +17,7 @@ import { AuthSignUp } from './SignUp'
 export { AuthCognitoErrors as AuthCognitoErrors }
 export { AuthConfirmSignUp as AuthConfirmSignUp }
 export { Authenticator as Authenticator }
+export { AuthFooter as AuthFooter }
 export { AuthForgotPassword as AuthForgotPassword }
 export { AuthFormAction as AuthFormAction }
 export { AuthFormButton as AuthFormButton }

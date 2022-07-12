@@ -3,7 +3,15 @@ import { ConfirmSignUp } from 'aws-amplify-react'
 import { IAuthPieceProps } from 'aws-amplify-react/lib-esm/Auth/AuthPiece'
 import Form from 'rc-field-form'
 import React from 'react'
-import { Button, ButtonEmphasis, ButtonSize, Typography, TypographySize, TypographyType } from 'src/components'
+import {
+  AuthFooter,
+  Button,
+  ButtonEmphasis,
+  ButtonSize,
+  Typography,
+  TypographySize,
+  TypographyType,
+} from 'src/components'
 import i18n from 'src/config/i18n'
 
 import { AuthCognitoErrors, AuthFormAction, AuthFormButton, AuthFormCode, AuthFormItemInput } from '.'
@@ -159,6 +167,9 @@ export class AuthConfirmSignUp extends ConfirmSignUp {
             )
           }}
         </Form>
+        <div className="mt-12">
+          <AuthFooter />
+        </div>
       </div>
     )
   }
