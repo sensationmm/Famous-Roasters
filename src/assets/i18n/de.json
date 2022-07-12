@@ -58,6 +58,10 @@
         "placeholder": "Deine E-mail-Adresse"
       }
     },
+    "footer": {
+      "imprintLink": "Impressum",
+      "privacyLink": "Datenschutz-Bestimmungen"
+    },
     "forgotPassword": {
       "cta": "Schicken",
       "emailSent": "Verifizierungscode per E-mail geschickt.",

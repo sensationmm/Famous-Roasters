@@ -2,6 +2,7 @@ import {
   AuthCognitoErrors,
   AuthConfirmSignUp,
   Authenticator,
+  AuthFooter,
   AuthForgotPassword,
   AuthFormAction,
   AuthFormButton,
@@ -50,6 +51,7 @@ import { Typography, TypographySize, TypographyType } from './Typography'
 
 export { AuthCognitoErrors as AuthCognitoErrors }
 export { AuthConfirmSignUp as AuthConfirmSignUp }
+export { AuthFooter as AuthFooter }
 export { AuthForgotPassword as AuthForgotPassword }
 export { AuthFormAction as AuthFormAction }
 export { AuthFormButton as AuthFormButton }

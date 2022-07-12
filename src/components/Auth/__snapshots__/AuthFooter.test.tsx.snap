@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Auth footer Renders correctly 1`] = `
+<div>
+  <div
+    class="flex"
+  >
+    <div
+      class="border-t border-brand-grey-whisper absolute w-full left-0"
+    />
+  </div>
+  <div
+    class="w-full mt-4 flex justify-center"
+  >
+    <a
+      href="//www.notion.so/Datenschutzhinweise-ad5b45261a964166a74883d2770e28ea"
+      target="_blank"
+    >
+      <div
+        class="font-normal border-b text-xs leading-4"
+      >
+        Datenschutz-Bestimmungen
+      </div>
+    </a>
+    <a
+      class="ml-10"
+      href="//slender-petunia-c3c.notion.site/Imprint-33b18fd9e469471ab768eef8155da968"
+      target="_blank"
+    >
+      <div
+        class="font-normal border-b text-xs leading-4"
+      >
+        Impressum
+      </div>
+    </a>
+  </div>
+</div>
+`;
