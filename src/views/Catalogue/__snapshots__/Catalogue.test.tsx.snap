@@ -184,7 +184,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               aria-haspopup="true"
               class="inline-flex justify-between py-2 pr-1 border-b-2 border-brand-black text-left bg-white cursor-default"
               data-testid="button-listbox"
-              id="headlessui-listbox-button-:r7:"
+              id="headlessui-listbox-button-:r0:"
               type="button"
             >
               <span
@@ -260,7 +260,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 aria-haspopup="true"
                 class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                 data-testid="button-listbox"
-                id="headlessui-listbox-button-:r8:"
+                id="headlessui-listbox-button-:r1:"
                 type="button"
               >
                 <span
@@ -303,7 +303,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 aria-haspopup="true"
                 class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                 data-testid="button-listbox"
-                id="headlessui-listbox-button-:r9:"
+                id="headlessui-listbox-button-:r2:"
                 type="button"
               >
                 <span
@@ -346,7 +346,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 aria-haspopup="true"
                 class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                 data-testid="button-listbox"
-                id="headlessui-listbox-button-:ra:"
+                id="headlessui-listbox-button-:r3:"
                 type="button"
               >
                 <span
@@ -389,7 +389,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 aria-haspopup="true"
                 class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                 data-testid="button-listbox"
-                id="headlessui-listbox-button-:rb:"
+                id="headlessui-listbox-button-:r4:"
                 type="button"
               >
                 <span
@@ -432,7 +432,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 aria-haspopup="true"
                 class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                 data-testid="button-listbox"
-                id="headlessui-listbox-button-:rc:"
+                id="headlessui-listbox-button-:r5:"
                 type="button"
               >
                 <span
@@ -515,7 +515,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 aria-haspopup="true"
                 class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                 data-testid="button-listbox"
-                id="headlessui-listbox-button-:rd:"
+                id="headlessui-listbox-button-:r6:"
                 type="button"
               >
                 <span
@@ -1774,7 +1774,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               aria-haspopup="true"
               class="inline-flex justify-between py-2 pr-1 border-b-2 border-brand-black text-left bg-white cursor-default"
               data-testid="button-listbox"
-              id="headlessui-listbox-button-:rl:"
+              id="headlessui-listbox-button-:r7:"
               type="button"
             >
               <span
@@ -1850,7 +1850,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 aria-haspopup="true"
                 class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                 data-testid="button-listbox"
-                id="headlessui-listbox-button-:rm:"
+                id="headlessui-listbox-button-:r8:"
                 type="button"
               >
                 <span
@@ -1893,7 +1893,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 aria-haspopup="true"
                 class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                 data-testid="button-listbox"
-                id="headlessui-listbox-button-:rn:"
+                id="headlessui-listbox-button-:r9:"
                 type="button"
               >
                 <span
@@ -1936,7 +1936,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 aria-haspopup="true"
                 class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                 data-testid="button-listbox"
-                id="headlessui-listbox-button-:ro:"
+                id="headlessui-listbox-button-:ra:"
                 type="button"
               >
                 <span
@@ -1979,7 +1979,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 aria-haspopup="true"
                 class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                 data-testid="button-listbox"
-                id="headlessui-listbox-button-:rp:"
+                id="headlessui-listbox-button-:rb:"
                 type="button"
               >
                 <span
@@ -2022,7 +2022,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 aria-haspopup="true"
                 class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                 data-testid="button-listbox"
-                id="headlessui-listbox-button-:rq:"
+                id="headlessui-listbox-button-:rc:"
                 type="button"
               >
                 <span
@@ -2105,7 +2105,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 aria-haspopup="true"
                 class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                 data-testid="button-listbox"
-                id="headlessui-listbox-button-:rr:"
+                id="headlessui-listbox-button-:rd:"
                 type="button"
               >
                 <span
