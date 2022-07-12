@@ -240,7 +240,7 @@ export const Catalogue: React.FC = () => {
     setPaginationParams(paginationParamsInitialValue)
   }, [queryFilterParams, sortParams])
 
-  const [getProducts, { loading, error, data }] = useLazyQuery<CollectionQuery>(GET_PRODUCTS)
+  const [getProducts, { error, data }] = useLazyQuery<CollectionQuery>(GET_PRODUCTS)
 
   const fetchProducts = useCallback(
     (queryVars: QueryProductsVariables) => {
@@ -381,7 +381,7 @@ export const Catalogue: React.FC = () => {
   }
 
   const renderDiscoverProducts = () => {
-    if (loading || filterAttributesLoading || !filters.length || queryFilterParams === undefined) {
+    if (!data || !filterAttributesData || !filters.length || queryFilterParams === undefined) {
       return (
         <div className="flex h-64 mb-32 justify-center items-center">
           <Loader />
