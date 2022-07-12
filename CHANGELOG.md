@@ -1,3 +1,10 @@
+## [1.23.1](https://github.com/Famous-Roasters/frontend/compare/v1.23.0...v1.23.1) (2022-07-12)
+
+
+### Bug Fixes
+
+* **add to cart:** works on md and above ([2de4320](https://github.com/Famous-Roasters/frontend/commit/2de432054dfbfd9ce5a1dd82df0d7c0905f92c22))
+
 # [1.23.0](https://github.com/Famous-Roasters/frontend/compare/v1.22.0...v1.23.0) (2022-07-12)
 
 
