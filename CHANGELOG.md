@@ -1,3 +1,15 @@
+# [1.22.0](https://github.com/Famous-Roasters/frontend/compare/v1.21.0...v1.22.0) (2022-07-12)
+
+
+### Bug Fixes
+
+* **catalogue:** avoid filter value none item populated to filters ([e515606](https://github.com/Famous-Roasters/frontend/commit/e51560677ff67aea613c78ab4f3f9b57cbe0e48d))
+
+
+### Features
+
+* **chore:** ensures not React.StrictMode on prod ([f1f76c7](https://github.com/Famous-Roasters/frontend/commit/f1f76c718130d7a9d58be31a87cb90ff213cf7dc))
+
 # [1.21.0](https://github.com/Famous-Roasters/frontend/compare/v1.20.0...v1.21.0) (2022-07-11)
 
 
