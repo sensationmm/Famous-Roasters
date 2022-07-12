@@ -1,3 +1,11 @@
+# [1.24.0](https://github.com/Famous-Roasters/frontend/compare/v1.23.1...v1.24.0) (2022-07-12)
+
+
+### Features
+
+* **auth:** adds email populated to confirm ([3aca8fa](https://github.com/Famous-Roasters/frontend/commit/3aca8facd39526b110712f826d835ba36e18bf13))
+* **auth:** adds email populated to confirm - tests failing ([1c7e6a1](https://github.com/Famous-Roasters/frontend/commit/1c7e6a1097b355c9ea0fd71de906f673fb15fa37))
+
 ## [1.23.1](https://github.com/Famous-Roasters/frontend/compare/v1.23.0...v1.23.1) (2022-07-12)
 
 
