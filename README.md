@@ -57,7 +57,7 @@ This frontend app for 60beans is written in TypeScript, using Create React App, 
 ### Getting Started
 1. Make sure you have [Node](https://nodejs.org/) `^14.18.1` and [Yarn](https://yarnpkg.com/) `^1.22.17` running in your machine.
 2. Execute `yarn` to resolve dependencies.
-3. Make sure you have an .env file (please check <a href="#env-file">check the env file section</a>)
+3. Make sure you have an .env file (please <a href="#env-file">check the env file section</a>)
 4. Run the project with `yarn start`
 
 For handling node versioning it is recommended to have node setup using [nvm](https://github.com/nvm-sh/nvm).
