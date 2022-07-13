@@ -30,7 +30,8 @@ ___
 ## Documentation
 <ol>  
   <li><a href="#about">About</a></li>  
-  <li><a href="#getting-started">Getting started</a></li>  
+  <li><a href="#getting-started">Getting started</a></li>
+  <li><a href="#env-file">Env file</a></li>
   <li><a href="#scripts">Scripts</a></li>  
   <li><a href="#create-react-app">Create React App</a></li>  
   <li><a href="#structure-overview">Structure Overview</a></li>  
@@ -56,12 +57,21 @@ This frontend app for 60beans is written in TypeScript, using Create React App, 
 ### Getting Started
 1. Make sure you have [Node](https://nodejs.org/) `^14.18.1` and [Yarn](https://yarnpkg.com/) `^1.22.17` running in your machine.
 2. Execute `yarn` to resolve dependencies.
-3. Make sure you have an .env file (check Frontend .env at 1Password)
+3. Make sure you have an .env file (please <a href="#env-file">check the env file section</a>)
 4. Run the project with `yarn start`
 
 For handling node versioning it is recommended to have node setup using [nvm](https://github.com/nvm-sh/nvm).
 
 For more info on getting started, please read the <a href="#scripts">Scripts</a> section.
+
+<!-- Env File -->  
+### Env File
+1. Pick the `.env.example` of the root project and rename it into `.env` or just create it (note `.env` is gitignored and so it should remain)
+2. Go to 1Password (ask for credentials) and search for "Frontend .env (dev + staging)"
+3. Copy the credentials into the file
+4. Run the project with `yarn start`
+
+Env files on GitHub Actions are set under [Organisation secrets](https://github.com/organizations/Famous-Roasters/settings/secrets/actions)
 
 <!-- Scripts -->  
 ### Scripts
@@ -225,6 +235,8 @@ Deployment to staging is configured automatically for the `main` branch. For det
 The deployed app (production) can be found [here](https://shop.60beans.com/).
 The deployed app (staging) can be found [here](https://staging.shop.60beans.com/).
 The deployed storybook (staging) can be found [here](https://storybook.staging.60beans.io/).
+
+Env files on GitHub Actions are set under [Organisation secrets](https://github.com/organizations/Famous-Roasters/settings/secrets/actions)
 
 <!-- Questions? -->  
 ### Questions?
