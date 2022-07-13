@@ -26,16 +26,30 @@ import {
 interface SignUpParams {
   email: string
   password: string
+  userConfirmed: boolean
 }
 
 export class AuthSignUp extends SignUp {
+  private timeout: ReturnType<typeof setTimeout> | undefined
+
   constructor(props: IAuthPieceProps) {
     super(props)
     this._validAuthStates = ['signUp', 'signUpError']
+    this.timeout = undefined
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timeout)
   }
 
   signUpUser = async (params: SignUpParams): Promise<void> => {
-    await Auth.signUp(params.email, params.password)
+    await Auth.signUp({
+      username: params.email,
+      password: params.password,
+      attributes: {
+        'custom:tos_consent': 'true',
+      },
+    })
       .then(() => this.changeState('confirmSignUp', { username: params.email }))
       .catch((error) => {
         if (error.toString().indexOf('UsernameExistsException') !== -1) {
@@ -59,10 +73,14 @@ export class AuthSignUp extends SignUp {
     )
   }
 
-  renderSignUpButton(disabled: boolean): JSX.Element {
+  renderSignUpButton(fields: SignUpParams, disabled: boolean): JSX.Element {
     return (
       <div className="mt-8">
-        <AuthFormButton ctaText={i18n.t<string>('auth.signUp.cta')} disabled={disabled} />
+        <AuthFormButton
+          ctaText={`${i18n.t<string>('auth.signUp.cta')}`}
+          disabled={disabled}
+          onClick={() => this.signUpUser(fields)}
+        />
       </div>
     )
   }
@@ -134,17 +152,19 @@ export class AuthSignUp extends SignUp {
           <div className="mt-4">
             <AuthCognitoErrors errorCode={this.props.authData?.errorCode} />
           </div>
-          <Form name="signUp" onFinish={this.signUpUser} method="POST">
+          <Form name="signUp" method="POST">
             {(_, form) => {
               const allTouched =
                 form.isFieldTouched('email') && form.isFieldTouched('password') && form.isFieldTouched('passwordRepeat')
               const hasErrors = form.getFieldsError().filter((entry) => entry.errors.length > 0).length > 0
+
+              this.timeout = setTimeout(() => form.validateFields(['confirmTos']), 100)
+
               return (
                 <>
                   {this.renderSignUpInputs()}
                   {this.renderConfirmTos()}
-                  {/* TODO needs to fix checkbox */}
-                  {this.renderSignUpButton(!allTouched || hasErrors)}
+                  {this.renderSignUpButton(form.getFieldsValue(), !allTouched || hasErrors)}
                   {this.renderSignUpMiddleActions()}
                   {this.renderSignUpFooterActions()}
                 </>

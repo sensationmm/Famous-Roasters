@@ -1,42 +1,30 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Icon, IconName, IconSize, Typography, TypographySize, TypographyType } from 'src/components'
 
 interface IconCheckboxProps extends React.HTMLAttributes<HTMLElement> {
   name: string
   text: string
   small?: boolean
-  selected?: boolean
-  toggleSelected?: (selected: boolean) => void
+  selected: boolean
+  toggleSelected: (selected: boolean) => void
   dataTestId?: string
 }
 
 export const Checkbox: React.FC<IconCheckboxProps> = ({
   text,
-  selected = false,
+  selected,
   small = false,
   toggleSelected,
   dataTestId = 'checkbox',
 }: IconCheckboxProps) => {
-  const [isSelected, setIsSelected] = useState<boolean>(selected)
-
-  useEffect(() => {
-    setIsSelected(selected)
-  }, [selected])
-
-  const handleClick = (ev: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    ev.preventDefault()
-    setIsSelected(!isSelected)
-    toggleSelected && toggleSelected(!isSelected)
-  }
-
   return (
     <button
       className={`flex w-full flex-row items-start cursor-pointer`}
       data-testid={dataTestId}
-      onClick={(ev) => handleClick(ev)}
+      onClick={() => toggleSelected(!selected)}
     >
       <div>
-        <Icon name={isSelected ? IconName.CheckboxChecked : IconName.CheckboxUnchecked} size={IconSize.md} />
+        <Icon name={selected ? IconName.CheckboxChecked : IconName.CheckboxUnchecked} size={IconSize.md} />
       </div>
       <Typography
         as="div"
