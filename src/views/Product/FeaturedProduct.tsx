@@ -32,7 +32,7 @@ import {
   TypographySize,
   TypographyType,
 } from 'src/components'
-import { getAPIProductId, getAromaKey, useLocalStorage } from 'src/utils'
+import { getAPIProductId, getAromaKey, toRoundedValueInRealScale, useLocalStorage } from 'src/utils'
 
 import { TasteFinderField } from '../TasteFinder'
 import { getGuideImages, getTasteResults, TasteProfile } from '.'
@@ -99,10 +99,22 @@ export const FeaturedProduct: React.FC = () => {
   const { aroma, images, title, whyThisCoffee } = data?.product || {}
 
   const tasteProfileResults: TasteProfile = {
-    acidity: tasteFinderDataJSON && tasteFinderData.find((el: TasteFinderField) => el.name === 'acidity').value,
-    bitterness: tasteFinderDataJSON && tasteFinderData.find((el: TasteFinderField) => el.name === 'bitterness').value,
-    sweetness: tasteFinderDataJSON && tasteFinderData.find((el: TasteFinderField) => el.name === 'sweetness').value,
-    body: tasteFinderDataJSON && tasteFinderData.find((el: TasteFinderField) => el.name === 'body').value,
+    acidity: tasteFinderDataJSON
+      ? toRoundedValueInRealScale(parseInt(tasteFinderData.find((el: TasteFinderField) => el.name === 'acidity').value))
+      : 0,
+    bitterness: tasteFinderDataJSON
+      ? toRoundedValueInRealScale(
+          parseInt(tasteFinderData.find((el: TasteFinderField) => el.name === 'bitterness').value),
+        )
+      : 0,
+    sweetness: tasteFinderDataJSON
+      ? toRoundedValueInRealScale(
+          parseInt(tasteFinderData.find((el: TasteFinderField) => el.name === 'sweetness').value),
+        )
+      : 0,
+    body: tasteFinderDataJSON
+      ? toRoundedValueInRealScale(parseInt(tasteFinderData.find((el: TasteFinderField) => el.name === 'body').value))
+      : 0,
   }
 
   if (error) {
