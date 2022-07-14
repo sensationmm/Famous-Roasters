@@ -8,7 +8,7 @@ import { AuthFormCheckbox } from '.'
 describe('Auth form checkbox custom auth component', () => {
   const snippet = () => (
     <Form name="testAuthFormItemInput" method="POST">
-      <AuthFormCheckbox screenKey="signUp" name="tos" />
+      <AuthFormCheckbox screenKey="signUp" name="tos" onChange={jest.fn} />
     </Form>
   )
 

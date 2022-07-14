@@ -29,6 +29,7 @@ interface SignUpParams {
   password: string
   firstName: string
   userConfirmed: boolean
+  newsletterSignup: boolean
 }
 
 export class AuthSignUp extends SignUp {
@@ -49,8 +50,9 @@ export class AuthSignUp extends SignUp {
       username: params.email,
       password: params.password,
       attributes: {
-        'custom:tos_consent': 'true',
+        'custom:tos_consent': this.inputs['confirmTos'],
         'custom:first_name': params.firstName,
+        'custom:newsletter_signup': this.inputs['newsletterSignup'],
       },
     })
       .then(() => this.changeState('confirmSignUp', { username: params.email }))
@@ -104,9 +106,25 @@ export class AuthSignUp extends SignUp {
 
   renderConfirmTos(): JSX.Element {
     return (
-      <div className="mt-8">
-        <AuthFormCheckbox dataTestId="confirmTos" screenKey="signUp.confirmTos" name="confirmTos" />
-      </div>
+      <>
+        <div className="mt-8">
+          <AuthFormCheckbox
+            dataTestId="newsletterSignup"
+            screenKey="signUp.newsletterSignup"
+            name="newsletterSignup"
+            onChange={this.handleInputChange}
+          />
+        </div>
+        <div className="mt-8">
+          <AuthFormCheckbox
+            dataTestId="confirmTos"
+            screenKey="signUp.confirmTos"
+            name="confirmTos"
+            onChange={this.handleInputChange}
+            required
+          />
+        </div>
+      </>
     )
   }
 
