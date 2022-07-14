@@ -4,9 +4,14 @@ import { Button, ButtonEmphasis, ButtonSize } from 'src/components/Button'
 interface AuthFormButtonProps {
   ctaText: string
   disabled?: boolean
+  onClick?: () => void
 }
 
-export const AuthFormButton: React.FC<AuthFormButtonProps> = ({ ctaText, disabled = false }: AuthFormButtonProps) => {
+export const AuthFormButton: React.FC<AuthFormButtonProps> = ({
+  ctaText,
+  disabled = false,
+  onClick,
+}: AuthFormButtonProps) => {
   return (
     <Button
       type="submit"
@@ -15,6 +20,7 @@ export const AuthFormButton: React.FC<AuthFormButtonProps> = ({ ctaText, disable
       data-testid="submit"
       className="flex w-full justify-center"
       disabled={disabled}
+      onClick={onClick}
     >
       {ctaText}
     </Button>

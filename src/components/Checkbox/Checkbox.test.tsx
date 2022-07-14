@@ -7,19 +7,23 @@ global.alert = jest.fn()
 
 describe('Checkbox component', () => {
   it('Renders correctly', async () => {
-    const { container } = render(<Checkbox name="test" text="Dieser Kaffee ist lekka" />)
+    const { container } = render(
+      <Checkbox name="test" text="Dieser Kaffee ist lekka" selected={false} toggleSelected={jest.fn} />,
+    )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
     expect(container).toMatchSnapshot()
   })
 
   it('Renders correctly for selected', async () => {
-    const { container } = render(<Checkbox name="test" text="Dieser Kaffee ist lekka" selected={true} />)
+    const { container } = render(
+      <Checkbox name="test" text="Dieser Kaffee ist lekka" selected={true} toggleSelected={jest.fn} />,
+    )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
     expect(container).toMatchSnapshot()
   })
 
   it('The user can toggle the state by clicking', async () => {
-    render(<Checkbox name="test" text="Dieser Kaffee ist lekka" toggleSelected={() => alert('works')} />)
+    render(<Checkbox name="test" text="Dieser Kaffee ist lekka" selected={false} toggleSelected={jest.fn} />)
     const checkbox = await screen.findByTestId('checkbox')
     expect(checkbox).toBeInTheDocument()
     fireEvent.click(checkbox)
