@@ -167,6 +167,13 @@
         "label": "Deine E-mail-Adresse",
         "placeholder": "Deine E-mail-Adresse"
       },
+      "firstName": {
+        "error": {
+          "required": "Trage bitte deine Vorname ein"
+        },
+        "label": "Deine Vorname",
+        "placeholder": "Deine Vorname"
+      },
       "password": {
         "error": {
           "maxLength": "Your password must not be longer than 98 chars",

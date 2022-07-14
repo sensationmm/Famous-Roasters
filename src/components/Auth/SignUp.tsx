@@ -21,11 +21,13 @@ import {
   AuthFormCheckbox,
   AuthFormDoublePassword,
   AuthFormEmail,
+  AuthFormFirstName,
 } from '.'
 
 interface SignUpParams {
   email: string
   password: string
+  firstName: string
   userConfirmed: boolean
 }
 
@@ -48,6 +50,7 @@ export class AuthSignUp extends SignUp {
       password: params.password,
       attributes: {
         'custom:tos_consent': 'true',
+        'custom:first_name': params.firstName,
       },
     })
       .then(() => this.changeState('confirmSignUp', { username: params.email }))
@@ -63,6 +66,9 @@ export class AuthSignUp extends SignUp {
   renderSignUpInputs(): JSX.Element {
     return (
       <>
+        <div className="w-full mt-6">
+          <AuthFormFirstName screenKey="signUp" onChange={this.handleInputChange} />
+        </div>
         <div className="w-full mt-6">
           <AuthFormEmail screenKey="signUp" onChange={this.handleInputChange} />
         </div>
