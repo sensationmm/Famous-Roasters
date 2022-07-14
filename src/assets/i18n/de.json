@@ -774,7 +774,8 @@
       },
       "title": "Aroma",
       "yourCoffeeType": {
-        "title": "Dein Kaffeetyp"
+        "title": "{{name}}'s Kaffeetyp",
+        "namePlaceholder": "Kaffeeliebhaber"
       }
     },
     "home": {
