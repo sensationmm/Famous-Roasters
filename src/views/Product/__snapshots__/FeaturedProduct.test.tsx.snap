@@ -183,7 +183,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <span
                 class="text-coreUI-text-secondary text-base leading-6"
               >
-                Dein Kaffeetyp
+                asdasdasd's Kaffeetyp
               </span>
             </div>
             <div
@@ -769,7 +769,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <span
                 class="text-coreUI-text-secondary text-base leading-6"
               >
-                Dein Kaffeetyp
+                asdasdasd's Kaffeetyp
               </span>
             </div>
             <div
@@ -1355,7 +1355,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <span
                 class="text-coreUI-text-secondary text-base leading-6"
               >
-                Dein Kaffeetyp
+                asdasdasd's Kaffeetyp
               </span>
             </div>
             <div
@@ -1941,7 +1941,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <span
                 class="text-coreUI-text-secondary text-base leading-6"
               >
-                Dein Kaffeetyp
+                asdasdasd's Kaffeetyp
               </span>
             </div>
             <div
@@ -2527,7 +2527,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <span
                 class="text-coreUI-text-secondary text-base leading-6"
               >
-                Dein Kaffeetyp
+                asdasdasd's Kaffeetyp
               </span>
             </div>
             <div
@@ -3077,6 +3077,592 @@ exports[`Featured product view Renders correctly for a successful call without a
       <div
         class="w-full max-w-7xl mx-auto px-6 xl:px-8"
       />
+      <div
+        class="border-t border-brand-grey-whisper mt-8"
+      />
+      <div
+        class="w-full max-w-7xl mx-auto mt-8 px-6 xl:px-8"
+      >
+        <div>
+          <h2
+            class="md:text-2xl xl:text-3xl text-xl leading-7 font-semibold"
+          >
+            Was wir dir empfehlen
+          </h2>
+          <div
+            class="grid grid-cols-2 gap-0 mt-8 md:gap-4"
+          >
+            <a
+              class="flex justify-center items-start md:row-start-1 md:row-end-3"
+              href="/product/7655228866776"
+            >
+              <div
+                class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-3/4 shrink-0 grow-0"
+              >
+                <img
+                  alt="Espresso Raritäten Set"
+                  class="w-full w-3/4 h-auto shrink-0 grow-0"
+                  src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+                />
+              </div>
+            </a>
+            <a
+              class="flex flex-col w-fit"
+              href="/product/7655228866776"
+            >
+              <div
+                class="p-0"
+              >
+                <div
+                  class="flex flex-col w-full justify-between"
+                >
+                  <div
+                    class="text-xl leading-7 font-semibold"
+                  >
+                    Espresso Raritäten Set
+                  </div>
+                  <div
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    60beans
+                  </div>
+                  <div
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    Kolumbien
+                  </div>
+                  <div
+                    class="mt-1 text-coreUI-text-secondary text-base leading-6"
+                  >
+                    Filter
+                  </div>
+                  <div
+                    class="flex items-baseline"
+                  >
+                    <div
+                      class="mr-1 mt-1 text-lg leading-7 font-semibold"
+                    >
+                      ab 
+                      19,99 €
+                    </div>
+                    <span
+                      class="text-coreUI-text-secondary text-xs leading-4"
+                    >
+                      (
+                      10,00 €
+                      /kg)
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="mt-4"
+              >
+                <div
+                  class="inline-flex rounded-full px-3 py-1 bg-brand-blue text-tags-jacksonsBlue"
+                >
+                  <span
+                    class="text-xs leading-4"
+                  >
+                    98% Übereinstimmung
+                  </span>
+                </div>
+              </div>
+            </a>
+            <div
+              class="col-span-2 md:col-start-2 md:col-span-1"
+            >
+              <div>
+                <h3
+                  class="border-b border-brand-grey-whisper mt-8 text-xl leading-7 font-semibold"
+                >
+                  Warum du ihn lieben wirst
+                </h3>
+                <ul>
+                  <li
+                    class="flex mt-4"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="flex w-6 h-6 mr-2 text-coreUI-text-tertiary flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span
+                      class="flex text-coreUI-text-secondary text-base leading-6"
+                    >
+                      Dein Kaffee ist süß, leicht und trägt einen subtilen Duft, ähnlich wie Blumen
+                    </span>
+                  </li>
+                  <li
+                    class="flex mt-4"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="flex w-6 h-6 mr-2 text-coreUI-text-tertiary flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span
+                      class="flex text-coreUI-text-secondary text-base leading-6"
+                    >
+                      Er bringt fruchtige Töne, helle Säure und einen mittleren bis schweren Körper zusammen
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="mt-8 col-span-2 md:col-start-2 md:col-span-1"
+            >
+              <a
+                href="/product/7655228866776"
+              >
+                <button
+                  class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+                  data-testid="goToProduct"
+                  role="button"
+                  type="button"
+                >
+                  Zum Produkt
+                </button>
+              </a>
+            </div>
+            <div
+              class="mt-4 col-span-2 md:mt-0 md:col-start-2 md:col-span-1"
+            >
+              <a
+                href="/catalogue"
+              >
+                <button
+                  class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
+                  data-testid="discoverMore"
+                  role="button"
+                  type="button"
+                >
+                  Mehr Kaffeesorten entdecken
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer
+      class="bg-brand-black text-base text-white py-10 z-30"
+    >
+      <div
+        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
+      >
+        <div
+          class="mb-2 md:mb-0 md:mr-2"
+        >
+          <svg
+            fill="none"
+            height="157"
+            viewBox="0 0 400 400"
+            width="157"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="200"
+              cy="200"
+              fill="#D4FF81"
+              r="200"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M266 225.882C266 267.294 243.14 288 214.739 288C196.728 288 183.336 279.488 177.332 266.604V285.239H136V112H177.332V182.86C184.259 171.357 196.728 161.694 214.97 161.694C243.14 161.694 266 182.86 266 224.042V225.882ZM231.006 225.964C231.006 240.559 219.132 252.391 204.483 252.391C189.835 252.391 177.96 240.559 177.96 225.964C177.96 211.369 189.835 199.538 204.483 199.538C219.132 199.538 231.006 211.369 231.006 225.964ZM251 156C263.15 156 273 146.15 273 134C273 121.85 263.15 112 251 112C238.85 112 229 121.85 229 134C229 146.15 238.85 156 251 156Z"
+              fill="#212121"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div
+          class="px-4 text-5xl leading-none"
+        >
+          Guten Kaffee besser finden.
+        </div>
+      </div>
+      <div
+        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 mx-auto px-12 xl:px-14"
+      >
+        <div
+          class="order-2 md:order-1"
+        >
+          <ul>
+            <li
+              class="mt-0"
+            >
+              <a
+                href="/catalogue"
+              >
+                Shop
+              </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <a
+                href="/taste-finder"
+              >
+                Tastefinder
+              </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <a
+                href="//www.60beans.de/uber-uns"
+              >
+                Über uns
+              </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <a
+                href="//www.notion.so/Datenschutzhinweise-ad5b45261a964166a74883d2770e28ea"
+              >
+                Datenschutz-Bestimmungen
+              </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <a
+                href="//slender-petunia-c3c.notion.site/Imprint-33b18fd9e469471ab768eef8155da968"
+              >
+                Impressum
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="order-1 md:order-2"
+        >
+          <div>
+            <div>
+              <span
+                class="font-syne text-3xl leading-10 font-semibold tracking-tight"
+              >
+                Kundensupport
+              </span>
+            </div>
+            <div
+              class="mt-6"
+            >
+              <span
+                class="text-lg leading-7"
+              >
+                Fragen? Kommentare? Bedenken? Oder möchtest du uns einfach ein paar schöne Worte senden? Bitte klicke einfach unten rechts auf die Sprechblasen. Unser Team steht dir dort gerne zur Verfügung.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-full max-w-7xl mx-auto text-center mt-10 mx-auto px-12 xl:px-14"
+      >
+        <span
+          class="text-center text-base leading-6"
+        >
+          © 2022 60beans. Alle Rechte vorbehalten.
+        </span>
+        <br />
+        <span
+          class="text-center text-base leading-6"
+        >
+          Hergestellt mit ❤️ in Berlin.
+        </span>
+      </div>
+    </footer>
+  </div>
+</div>
+`;
+
+exports[`Featured product view Renders correctly when user name is missing 1`] = `
+<div>
+  <div
+    class="min-h-screen flex flex-col text-brand-black"
+  >
+    <div
+      class="bg-white z-10"
+    >
+      <header
+        class="relative bg-white"
+      >
+        <nav
+          aria-label="Top"
+          class="max-w-7xl mx-auto px-4 md:px-6 xl:px-8"
+        >
+          <div
+            class="h-16 mt-0.5 flex items-center justify-between border-b border-brand-grey-whisper"
+          >
+            <div
+              class="flex-1 flex items-center xl:hidden"
+            >
+              <button
+                class="-ml-2 bg-white p-2 rounded-md text-gray-400"
+                data-testid="button-open"
+                type="button"
+              >
+                <span
+                  class="sr-only"
+                >
+                  Open menu
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 6h16M4 12h16M4 18h16"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="hidden xl:flex-1 xl:block xl:self-stretch"
+            >
+              <div
+                class="h-full flex space-x-8"
+              >
+                <a
+                  class="flex items-center text-gray-700 hover:text-gray-800"
+                  href="/taste-finder"
+                >
+                  <span
+                    class="uppercase text-sm leading-5"
+                  >
+                    Tastefinder
+                  </span>
+                </a>
+              </div>
+            </div>
+            <a
+              class="flex h-full items-center pl-2 pr-2"
+              href="//www.60beans.de"
+            >
+              <span
+                class="sr-only"
+              >
+                60beans
+              </span>
+              <img
+                alt="60beans"
+                class="h-6"
+                src="60beans-black.svg"
+              />
+            </a>
+            <div
+              class="flex-1 flow-root flex h-full items-center"
+            >
+              <div
+                class="flex-1 flex h-full items-center justify-end xl:flex-none"
+              >
+                <div
+                  class="hidden h-full xl:flex space-x-8 justify-end"
+                >
+                  <a
+                    class="flex items-center text-gray-700 hover:text-gray-800"
+                    href="//www.60beans.de/uber-uns"
+                  >
+                    <span
+                      class="uppercase text-sm leading-5"
+                    >
+                      Über uns
+                    </span>
+                  </a>
+                </div>
+                <div
+                  class="ml-4 flow-root xl:ml-6"
+                >
+                  <a
+                    class="group -m-2 p-2 flex items-center"
+                    href="/cart"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span
+                      class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800"
+                    >
+                      1
+                    </span>
+                    <span
+                      class="sr-only"
+                    >
+                      items in cart, view bag
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </div>
+    <main
+      class="flex flex-col w-full bg-white mt-8 mb-8"
+    >
+      <div
+        class="w-full max-w-7xl mx-auto px-6 xl:px-8"
+      >
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 items-end"
+        >
+          <div
+            class="relative w-52 h-40 mx-auto md:order-2 md:w-64 md:h-52 xl:w-80 xl:h-64"
+          >
+            <div
+              class="w-40 h-40 top-0 left-6 absolute rounded-full bg-brand-grey-whisper md:w-52 md:h-52 xl:w-64 xl:h-64"
+            />
+            <img
+              alt="experimentell & komplex"
+              class="absolute w-52 top-5 md:w-64 xl:w-80"
+              src="Experimental.webp"
+            />
+          </div>
+          <div
+            class="md:order-1"
+          >
+            <div
+              class="flex items-center justify-center md:flex-col md:justify-start md:items-start"
+            >
+              <div
+                class="inline-flex rounded-full w-6 h-6 md:w-8 md:h-8 xl:w-12 xl:h-12 flex-shrink-0 mr-2 md:mr-0 bg-tags-capeHoney"
+              />
+              <h1
+                class="font-syne md:mt-2 md:text-3xl md:leading-10 xl:text-4xl xl:leading-10 text-2xl leading-8 font-semibold"
+              >
+                experimentell & komplex
+              </h1>
+            </div>
+            <div
+              class="flex items-center justify-center mt-2 md:justify-start"
+            >
+              <span
+                class="text-coreUI-text-secondary text-base leading-6"
+              >
+                Kaffeeliebhaber's Kaffeetyp
+              </span>
+            </div>
+            <div
+              class="flex items-center justify-center mt-2 md:justify-start"
+            >
+              <span
+                class="text-center md:text-left text-base leading-6"
+              >
+                Dein Kaffee ist komplex, er zeigt einen mittleren Körper mit zitronigen Säurenoten. Die Frische und Lebendigkeit machen jede Tasse einzigartig.
+              </span>
+            </div>
+            <div
+              class="flex md:hidden"
+            >
+              <button
+                data-testid="drawer-trigger"
+              >
+                <div
+                  class="flex mt-6"
+                >
+                  <svg
+                    class="mr-2.5"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    width="20"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M10 18.8a8.8 8.8 0 1 1 0-17.6 8.8 8.8 0 0 1 0 17.6ZM0 10C0 4.477 4.477 0 10 0s10 4.477 10 10-4.477 10-10 10S0 15.523 0 10Zm8.706-.725v2.607h1.83v-1.35a4.686 4.686 0 0 0 1.749-.435 3.152 3.152 0 0 0 1.253-1.07c.308-.466.462-1.03.462-1.691 0-.476-.088-.916-.264-1.32a2.89 2.89 0 0 0-.742-1.054c-.33-.31-.748-.548-1.253-.714C11.246 4.083 10.669 4 10.009 4c-.539 0-1.028.062-1.468.186-.428.114-.802.28-1.121.497-.319.207-.588.45-.808.729-.21.28-.368.574-.478.884-.1.3-.143.61-.132.931h1.847a1.61 1.61 0 0 1 .264-.853c.164-.248.4-.445.709-.59.308-.145.687-.217 1.138-.217.637 0 1.148.16 1.533.481.396.31.594.755.594 1.334 0 .6-.214 1.066-.643 1.397-.418.33-1.072.496-1.963.496h-.775Zm-.165 4.034V15h2.227v-1.691H8.54Z"
+                      fill="#212121"
+                      fill-rule="evenodd"
+                      stroke="#212121"
+                      stroke-width="0.1"
+                    />
+                  </svg>
+                  <span
+                    class="flex border-b-2 mb-1 text-sm leading-5"
+                    style="border-bottom-width: 1px;"
+                  >
+                    Was bedeutet mein Kaffeetyp?
+                  </span>
+                </div>
+              </button>
+            </div>
+            <div
+              class="hidden md:flex"
+            >
+              <button
+                data-testid="dialog-trigger"
+              >
+                <div
+                  class="flex mt-6"
+                >
+                  <svg
+                    class="mr-2.5"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    width="20"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M10 18.8a8.8 8.8 0 1 1 0-17.6 8.8 8.8 0 0 1 0 17.6ZM0 10C0 4.477 4.477 0 10 0s10 4.477 10 10-4.477 10-10 10S0 15.523 0 10Zm8.706-.725v2.607h1.83v-1.35a4.686 4.686 0 0 0 1.749-.435 3.152 3.152 0 0 0 1.253-1.07c.308-.466.462-1.03.462-1.691 0-.476-.088-.916-.264-1.32a2.89 2.89 0 0 0-.742-1.054c-.33-.31-.748-.548-1.253-.714C11.246 4.083 10.669 4 10.009 4c-.539 0-1.028.062-1.468.186-.428.114-.802.28-1.121.497-.319.207-.588.45-.808.729-.21.28-.368.574-.478.884-.1.3-.143.61-.132.931h1.847a1.61 1.61 0 0 1 .264-.853c.164-.248.4-.445.709-.59.308-.145.687-.217 1.138-.217.637 0 1.148.16 1.533.481.396.31.594.755.594 1.334 0 .6-.214 1.066-.643 1.397-.418.33-1.072.496-1.963.496h-.775Zm-.165 4.034V15h2.227v-1.691H8.54Z"
+                      fill="#212121"
+                      fill-rule="evenodd"
+                      stroke="#212121"
+                      stroke-width="0.1"
+                    />
+                  </svg>
+                  <span
+                    class="flex border-b-2 mb-1 text-sm leading-5"
+                    style="border-bottom-width: 1px;"
+                  >
+                    Was bedeutet mein Kaffeetyp?
+                  </span>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
       <div
         class="border-t border-brand-grey-whisper mt-8"
       />
