@@ -1,3 +1,10 @@
+# [1.25.0](https://github.com/Famous-Roasters/frontend/compare/v1.24.1...v1.25.0) (2022-07-14)
+
+
+### Features
+
+* **register:** validatable checkbox ([7208f64](https://github.com/Famous-Roasters/frontend/commit/7208f64e2a10254a4a0841ea97e69d1f114307ae))
+
 ## [1.24.1](https://github.com/Famous-Roasters/frontend/compare/v1.24.0...v1.24.1) (2022-07-13)
 
 # [1.24.0](https://github.com/Famous-Roasters/frontend/compare/v1.23.1...v1.24.0) (2022-07-12)
