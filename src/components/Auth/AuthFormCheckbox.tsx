@@ -7,14 +7,28 @@ interface AuthFormCheckboxProps {
   screenKey: string
   name: string
   dataTestId?: string
+  required?: boolean
+  /* Required because onChange function comes from aws-amplify-react */
+  /* eslint-disable  @typescript-eslint/no-explicit-any */
+  onChange: (evt: any) => void
 }
 
 export const AuthFormCheckbox: React.FC<AuthFormCheckboxProps> = ({
   screenKey,
   name,
   dataTestId = undefined,
+  required = false,
+  onChange,
 }: AuthFormCheckboxProps) => {
   const [isSelected, setIsSelected] = useState<boolean>(false)
+
+  const handleChange = (val: boolean) => {
+    val &&
+      onChange({
+        target: { name: name, type: 'checkbox', checked: val },
+      })
+    setIsSelected(val)
+  }
 
   return (
     <Field
@@ -24,7 +38,7 @@ export const AuthFormCheckbox: React.FC<AuthFormCheckboxProps> = ({
           type: 'string',
           validator: () => {
             return new Promise<void>((resolve, reject) => {
-              if (isSelected) {
+              if (!required || isSelected) {
                 resolve()
               } else {
                 reject(i18n.t(`auth.${screenKey}.error.required`))
@@ -40,7 +54,7 @@ export const AuthFormCheckbox: React.FC<AuthFormCheckboxProps> = ({
         small={true}
         text={i18n.t<string>(`auth.${screenKey}.label`)}
         selected={isSelected}
-        toggleSelected={setIsSelected}
+        toggleSelected={handleChange}
       />
     </Field>
   )

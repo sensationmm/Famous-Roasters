@@ -7,6 +7,7 @@ import { AuthFormCheckbox } from './AuthFormCheckbox'
 import { AuthFormCode } from './AuthFormCode'
 import { AuthFormDoublePassword } from './AuthFormDoublePassword'
 import { AuthFormEmail } from './AuthFormEmail'
+import { AuthFormFirstName } from './AuthFormFirstName'
 import { AuthFormItemInput } from './AuthFormItemInput'
 import { AuthFormPassword } from './AuthFormPassword'
 import { AuthConfirmSignUp } from './ConfirmSignUp'
@@ -25,6 +26,7 @@ export { AuthFormCheckbox as AuthFormCheckbox }
 export { AuthFormCode as AuthFormCode }
 export { AuthFormDoublePassword as AuthFormDoublePassword }
 export { AuthFormEmail as AuthFormEmail }
+export { AuthFormFirstName as AuthFormFirstName }
 export { AuthFormItemInput as AuthFormItemInput }
 export { AuthFormPassword as AuthFormPassword }
 export { AuthSignIn as AuthSignIn }

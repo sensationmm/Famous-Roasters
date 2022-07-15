@@ -158,6 +158,9 @@
         },
         "label": "Indem Du auf “Registrieren” klickst, erstellst Du ein 60beans-Konto und stimmst unseren Nutzungs-bedingungen sowie Datenschutzrichtlinien zu."
       },
+      "newsletterSignup": {
+        "label": "Ja, ich möchte gelegentlich E-Mails über Produkt-neuheiten, Rabatte und exklusive Aktionen erhalten. Ich kann mich jederzeit vom Newsletter abmelden."
+      },
       "cta": "Registrieren",
       "email": {
         "error": {
@@ -166,6 +169,13 @@
         },
         "label": "Deine E-mail-Adresse",
         "placeholder": "Deine E-mail-Adresse"
+      },
+      "firstName": {
+        "error": {
+          "required": "Trage bitte deine Vorname ein"
+        },
+        "label": "Deine Vorname",
+        "placeholder": "Deine Vorname"
       },
       "password": {
         "error": {

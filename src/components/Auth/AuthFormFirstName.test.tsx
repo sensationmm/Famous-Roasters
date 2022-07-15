@@ -3,12 +3,12 @@ import { render, waitFor } from '@testing-library/react'
 import Form from 'rc-field-form'
 import React from 'react'
 
-import { AuthFormCheckbox } from '.'
+import { AuthFormFirstName } from '.'
 
-describe('Auth form checkbox custom auth component', () => {
+describe('First name fields group custom auth component', () => {
   const snippet = () => (
     <Form name="testAuthFormItemInput" method="POST">
-      <AuthFormCheckbox screenKey="signUp" name="tos" onChange={jest.fn} />
+      <AuthFormFirstName screenKey="signIn" onChange={() => null} />
     </Form>
   )
 
