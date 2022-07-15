@@ -1,3 +1,11 @@
+## [1.27.1](https://github.com/Famous-Roasters/frontend/compare/v1.27.0...v1.27.1) (2022-07-15)
+
+
+### Bug Fixes
+
+* **catalogue:** mock match query ([a80e9f4](https://github.com/Famous-Roasters/frontend/commit/a80e9f47297ca86db3add07f1713bc31ca83b4ec))
+* **WB-276:** improve number of filters returned ([3906244](https://github.com/Famous-Roasters/frontend/commit/3906244e45404d678007764976c73eeb73de742f))
+
 # [1.27.0](https://github.com/Famous-Roasters/frontend/compare/v1.26.0...v1.27.0) (2022-07-15)
 
 
