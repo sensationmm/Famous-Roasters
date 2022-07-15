@@ -1,3 +1,12 @@
+# [1.27.0](https://github.com/Famous-Roasters/frontend/compare/v1.26.0...v1.27.0) (2022-07-15)
+
+
+### Features
+
+* **taste finder:** add test coverage for default name ([502496d](https://github.com/Famous-Roasters/frontend/commit/502496d9c6e74244ae47ae6df1a986918619b952))
+* **taste finder:** add user's name to taste finder result page ([1f7322a](https://github.com/Famous-Roasters/frontend/commit/1f7322a9e453ffa53270e5aa44bca2328d2ab540))
+* **taste finder:** fix name mock ([c73f485](https://github.com/Famous-Roasters/frontend/commit/c73f485df0cc9aadd6d553848c4da8cb671ee322))
+
 # [1.26.0](https://github.com/Famous-Roasters/frontend/compare/v1.25.1...v1.26.0) (2022-07-15)
 
 
