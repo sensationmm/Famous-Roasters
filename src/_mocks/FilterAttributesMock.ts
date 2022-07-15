@@ -13,11 +13,12 @@ export const FilterAttributesMock = {
         nodes: [
           {
             id: '123123',
-            aroma: {
-              value: 'Floral & leicht',
-            },
+            vendor: 'Cycle Roasters',
             coffee_type: {
               value: 'Filter',
+            },
+            aroma: {
+              value: 'Floral & leicht',
             },
             bean_type: {
               value: 'Arabica',
@@ -28,7 +29,6 @@ export const FilterAttributesMock = {
             decaf: {
               value: 'false',
             },
-            vendor: 'Cycle Roasters',
             variants: {
               nodes: [
                 {
@@ -51,11 +51,12 @@ export const FilterAttributesMock = {
           },
           {
             id: '123124',
-            aroma: {
-              value: 'Fruchtig & lebhaft',
-            },
+            vendor: '60beans',
             coffee_type: {
               value: 'Espresso',
+            },
+            aroma: {
+              value: 'Fruchtig & lebhaft',
             },
             bean_type: {
               value: 'Arabica',
@@ -66,7 +67,6 @@ export const FilterAttributesMock = {
             decaf: {
               value: 'true',
             },
-            vendor: '60beans',
             variants: {
               nodes: [
                 {
