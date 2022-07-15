@@ -1,3 +1,11 @@
+# [1.26.0](https://github.com/Famous-Roasters/frontend/compare/v1.25.1...v1.26.0) (2022-07-15)
+
+
+### Features
+
+* **register:** add optional newsletter signup ([a303002](https://github.com/Famous-Roasters/frontend/commit/a30300284a46a4fed4ed5c3f23ccd63864cd0d7f))
+* **register:** add required first name in signup ([86b36db](https://github.com/Famous-Roasters/frontend/commit/86b36db2b1a729cd59630b9eba33fd1c9b2842e6))
+
 ## [1.25.1](https://github.com/Famous-Roasters/frontend/compare/v1.25.0...v1.25.1) (2022-07-15)
 
 
