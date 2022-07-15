@@ -1,3 +1,10 @@
+## [1.25.1](https://github.com/Famous-Roasters/frontend/compare/v1.25.0...v1.25.1) (2022-07-15)
+
+
+### Bug Fixes
+
+* **taste finder:** guide result images/icons dont tally ([4d4dd79](https://github.com/Famous-Roasters/frontend/commit/4d4dd793ed2dad0be1ebf770b7e743b60204234e))
+
 # [1.25.0](https://github.com/Famous-Roasters/frontend/compare/v1.24.1...v1.25.0) (2022-07-14)
 
 
