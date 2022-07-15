@@ -23,10 +23,9 @@ export const AuthFormCheckbox: React.FC<AuthFormCheckboxProps> = ({
   const [isSelected, setIsSelected] = useState<boolean>(false)
 
   const handleChange = (val: boolean) => {
-    val &&
-      onChange({
-        target: { name: name, type: 'checkbox', checked: val },
-      })
+    onChange({
+      target: { name: name, type: 'checkbox', checked: val },
+    })
     setIsSelected(val)
   }
 

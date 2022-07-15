@@ -33,16 +33,9 @@ interface SignUpParams {
 }
 
 export class AuthSignUp extends SignUp {
-  private timeout: ReturnType<typeof setTimeout> | undefined
-
   constructor(props: IAuthPieceProps) {
     super(props)
     this._validAuthStates = ['signUp', 'signUpError']
-    this.timeout = undefined
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.timeout)
   }
 
   signUpUser = async (params: SignUpParams): Promise<void> => {
@@ -180,9 +173,10 @@ export class AuthSignUp extends SignUp {
             {(_, form) => {
               const allTouched =
                 form.isFieldTouched('email') && form.isFieldTouched('password') && form.isFieldTouched('passwordRepeat')
-              const hasErrors = form.getFieldsError().filter((entry) => entry.errors.length > 0).length > 0
-
-              this.timeout = setTimeout(() => form.validateFields(['confirmTos']), 100)
+              const hasErrors =
+                form.getFieldsError().filter((entry) => entry.errors.length > 0).length > 0 ||
+                'confirmTos' in this.inputs === false ||
+                this.inputs['confirmTos'] !== 'true'
 
               return (
                 <>
