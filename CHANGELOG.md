@@ -1,3 +1,10 @@
+## [1.27.2](https://github.com/Famous-Roasters/frontend/compare/v1.27.1...v1.27.2) (2022-07-15)
+
+
+### Bug Fixes
+
+* **WB-273:** register timeout error ([21cf944](https://github.com/Famous-Roasters/frontend/commit/21cf944075b1dbfeee288cdbd647be79d4cb0c21))
+
 ## [1.27.1](https://github.com/Famous-Roasters/frontend/compare/v1.27.0...v1.27.1) (2022-07-15)
 
 
