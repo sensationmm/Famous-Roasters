@@ -164,6 +164,10 @@ export const FeaturedProduct: React.FC = () => {
       }
     }
 
+    const name = tasteFinderData.find((el: TasteFinderField) => el.name === 'name')
+      ? tasteFinderData.find((el: TasteFinderField) => el.name === 'name').value
+      : t('pages.featuredProduct.yourCoffeeType.namePlaceholder')
+
     return (
       <div className="grid grid-cols-1 md:grid-cols-2 items-end">
         <div className="relative w-52 h-40 mx-auto md:order-2 md:w-64 md:h-52 xl:w-80 xl:h-64">
@@ -184,7 +188,7 @@ export const FeaturedProduct: React.FC = () => {
           </div>
           <div className="flex items-center justify-center mt-2 md:justify-start">
             <Typography className="text-coreUI-text-secondary">
-              {t('pages.featuredProduct.yourCoffeeType.title')}
+              {t('pages.featuredProduct.yourCoffeeType.title', { name: name })}
             </Typography>
           </div>
           <div className="flex items-center justify-center mt-2 md:justify-start">
