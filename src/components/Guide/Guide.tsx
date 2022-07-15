@@ -11,6 +11,7 @@ import {
   TypographySize,
   TypographyType,
 } from 'src/components'
+import { toValueInHumanScale } from 'src/utils'
 
 export interface TasteInfoEntry {
   key: string
@@ -146,7 +147,7 @@ export const Guide: React.FC<GuideInfoProps> = ({
                   <Typography type={TypographyType.Label} size={TypographySize.Large}>
                     {t(`guides.${screenKey}.items.${item.tasteParam?.key}.title`)}
                   </Typography>
-                  {item.tasteParam?.value && <BeanScaleTag value={item.tasteParam?.value} />}
+                  {item.tasteParam?.value && <BeanScaleTag value={toValueInHumanScale(item.tasteParam?.value)} />}
                 </div>
                 <Typography
                   type={TypographyType.Paragraph}
