@@ -107,6 +107,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   <a
                     class="group -m-2 p-2 flex items-center"
                     href="/cart"
+                    id="toCart"
                   >
                     <svg
                       aria-hidden="true"
@@ -693,6 +694,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   <a
                     class="group -m-2 p-2 flex items-center"
                     href="/cart"
+                    id="toCart"
                   >
                     <svg
                       aria-hidden="true"
@@ -1279,6 +1281,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   <a
                     class="group -m-2 p-2 flex items-center"
                     href="/cart"
+                    id="toCart"
                   >
                     <svg
                       aria-hidden="true"
@@ -1865,6 +1868,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   <a
                     class="group -m-2 p-2 flex items-center"
                     href="/cart"
+                    id="toCart"
                   >
                     <svg
                       aria-hidden="true"
@@ -2451,6 +2455,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   <a
                     class="group -m-2 p-2 flex items-center"
                     href="/cart"
+                    id="toCart"
                   >
                     <svg
                       aria-hidden="true"
@@ -3037,6 +3042,7 @@ exports[`Featured product view Renders correctly for a successful call without a
                   <a
                     class="group -m-2 p-2 flex items-center"
                     href="/cart"
+                    id="toCart"
                   >
                     <svg
                       aria-hidden="true"
@@ -3506,6 +3512,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
                   <a
                     class="group -m-2 p-2 flex items-center"
                     href="/cart"
+                    id="toCart"
                   >
                     <svg
                       aria-hidden="true"

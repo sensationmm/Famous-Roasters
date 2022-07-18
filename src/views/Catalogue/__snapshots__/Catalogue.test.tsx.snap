@@ -107,6 +107,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                   <a
                     class="group -m-2 p-2 flex items-center"
                     href="/cart"
+                    id="toCart"
                   >
                     <svg
                       aria-hidden="true"
@@ -1697,6 +1698,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                   <a
                     class="group -m-2 p-2 flex items-center"
                     href="/cart"
+                    id="toCart"
                   >
                     <svg
                       aria-hidden="true"
