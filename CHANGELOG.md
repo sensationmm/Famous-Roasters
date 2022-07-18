@@ -1,3 +1,10 @@
+# [1.28.0](https://github.com/Famous-Roasters/frontend/compare/v1.27.2...v1.28.0) (2022-07-18)
+
+
+### Features
+
+* **cart:** add tracking IDs ([b0a7416](https://github.com/Famous-Roasters/frontend/commit/b0a74160b7e775b89b669e057ac52c7377974152))
+
 ## [1.27.2](https://github.com/Famous-Roasters/frontend/compare/v1.27.1...v1.27.2) (2022-07-15)
 
 
