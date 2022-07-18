@@ -107,6 +107,7 @@ exports[`Layout component Renders correctly 1`] = `
                   <a
                     class="group -m-2 p-2 flex items-center"
                     href="/cart"
+                    id="toCart"
                   >
                     <svg
                       aria-hidden="true"

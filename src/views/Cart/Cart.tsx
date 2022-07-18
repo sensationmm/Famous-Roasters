@@ -202,7 +202,12 @@ export const Cart: React.FC = () => {
         )}
         <div className="grid gap-4 grid-cols-1 md:flex md:justify-end my-6">
           <div className="grid md:order-2 justify-items-end">
-            <a href={data?.cart?.checkoutUrl} className="flex w-full md:w-max" data-testid="goToCheckout">
+            <a
+              id="toCheckout"
+              href={data?.cart?.checkoutUrl}
+              className="flex w-full md:w-max"
+              data-testid="goToCheckout"
+            >
               <Button
                 type="button"
                 emphasis={ButtonEmphasis.Primary}

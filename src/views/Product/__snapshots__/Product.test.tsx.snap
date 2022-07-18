@@ -107,6 +107,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                   <a
                     class="group -m-2 p-2 flex items-center"
                     href="/cart"
+                    id="toCart"
                   >
                     <svg
                       aria-hidden="true"
@@ -1611,6 +1612,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                   <a
                     class="group -m-2 p-2 flex items-center"
                     href="/cart"
+                    id="toCart"
                   >
                     <svg
                       aria-hidden="true"

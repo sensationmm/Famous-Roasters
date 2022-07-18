@@ -198,7 +198,7 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
                 <div className="ml-4 flow-root xl:ml-6">
                   {theme === NavigationTheme.Shop ? (
                     <>
-                      <Link to="/cart" className="group -m-2 p-2 flex items-center">
+                      <Link id="toCart" to="/cart" className="group -m-2 p-2 flex items-center">
                         <ShoppingBagIcon
                           className="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
                           aria-hidden="true"

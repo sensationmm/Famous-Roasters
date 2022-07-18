@@ -107,6 +107,7 @@ exports[`Cart view Renders correctly 1`] = `
                   <a
                     class="group -m-2 p-2 flex items-center"
                     href="/cart"
+                    id="toCart"
                   >
                     <svg
                       aria-hidden="true"
@@ -445,6 +446,7 @@ exports[`Cart view Renders correctly 1`] = `
               class="flex w-full md:w-max"
               data-testid="goToCheckout"
               href="https://famousroasters.myshopify.com/cart/c/123456789"
+              id="toCheckout"
             >
               <button
                 class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
@@ -715,6 +717,7 @@ exports[`Cart view Renders correctly for no cart id 1`] = `
                   <a
                     class="group -m-2 p-2 flex items-center"
                     href="/cart"
+                    id="toCart"
                   >
                     <svg
                       aria-hidden="true"
