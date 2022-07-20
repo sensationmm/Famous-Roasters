@@ -867,6 +867,7 @@
       },
       "transactional": {
         "cta": "In den Warenkorb",
+        "outOfStock": "Ausverkauft",
         "options": {
           "grindType": {
             "label": "Mahlgrad",

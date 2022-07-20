@@ -1,11 +1,12 @@
 import { Listbox as HUIListbox, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/solid'
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Typography, TypographySize, TypographyType } from 'src/components'
 
 export interface ListBoxItem {
   name: string
+  disabled?: boolean
 }
 
 interface ListboxProps {
@@ -22,6 +23,7 @@ interface ListboxProps {
   big?: boolean
   hasSpacerAfterItem?: string[]
   swatches?: JSX.Element[]
+  itemDisabledMsg?: string
 }
 
 export const Listbox: React.FC<ListboxProps> = ({
@@ -38,6 +40,7 @@ export const Listbox: React.FC<ListboxProps> = ({
   big = false,
   hasSpacerAfterItem = undefined,
   swatches = undefined,
+  itemDisabledMsg = 'Unavailable',
   ...props
 }: ListboxProps) => {
   const noneItem: ListBoxItem = { name: 'none' }
@@ -53,6 +56,12 @@ export const Listbox: React.FC<ListboxProps> = ({
   const [activeItems, setActiveItems] = useState<ListBoxItem[]>(activeInitialValue())
   const { t } = useTranslation()
   const options = hasNoneItem ? [...items, noneItem] : items
+
+  useEffect(() => {
+    if (activeItems && value) {
+      setActiveItems(value)
+    }
+  }, [value])
 
   const selectedOption = () => {
     if (multiple) {
@@ -115,12 +124,17 @@ export const Listbox: React.FC<ListboxProps> = ({
       }
     }
 
+    const classNames = ['block', 'truncate']
+    if (items.find((i) => i.name === activeItems[0]?.name)?.disabled) {
+      classNames.push('text-brand-grey-bombay')
+    }
+
     return big ? (
       <HUIListbox.Button
         className="inline-flex justify-between py-2 pr-1 border-b-2 border-brand-black text-left bg-white cursor-default"
         data-testid="button-listbox"
       >
-        <Typography type={TypographyType.Heading} size={TypographySize.Tiny} className="block truncate">
+        <Typography type={TypographyType.Heading} size={TypographySize.Tiny} className={classNames.join(' ')}>
           {selectedOption()}
         </Typography>
         {renderIcon()}
@@ -130,7 +144,7 @@ export const Listbox: React.FC<ListboxProps> = ({
         className="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
         data-testid="button-listbox"
       >
-        <Typography size={TypographySize.Base} className="block truncate">
+        <Typography size={TypographySize.Base} className={classNames.join(' ')}>
           {selectedOption()}
         </Typography>
         {renderIcon()}
@@ -173,25 +187,35 @@ export const Listbox: React.FC<ListboxProps> = ({
                       }
                       value={option}
                     >
-                      {({ selected }) => (
-                        <>
-                          <span
-                            className={`block truncate flex ${
-                              selected || activeItems?.find((activeItem) => activeItem.name === option.name)
-                                ? 'font-semibold'
-                                : 'font-normal'
-                            }`}
-                          >
-                            {swatches && swatches.length > 0 && swatches[idx]}
-                            {renderOptionText(option)}
-                          </span>
-                          {selected || activeItems?.find((activeItem) => activeItem.name === option.name) ? (
-                            <span className="absolute inset-y-0 left-0 flex items-center pl-1.5">
-                              <CheckIcon className="w-5 h-5 text-brand-green-club" aria-hidden="true" />
+                      {({ selected }) => {
+                        const isSelected =
+                          selected ||
+                          activeItems?.find((activeItem) => activeItem.name === option.name && !option.disabled)
+
+                        return (
+                          <>
+                            <span
+                              className={`block truncate flex align-middle ${
+                                isSelected ? 'font-semibold' : 'font-normal'
+                              } ${option.disabled && 'text-brand-grey-bombay'}`}
+                            >
+                              {swatches && swatches.length > 0 && swatches[idx]}
+                              {renderOptionText(option)}
+
+                              {option.disabled && (
+                                <span className="inline pl-2 text-xs leading-6 text-negative font-normal">
+                                  {itemDisabledMsg}
+                                </span>
+                              )}
                             </span>
-                          ) : null}
-                        </>
-                      )}
+                            {isSelected ? (
+                              <span className="absolute inset-y-0 left-0 flex items-center pl-1.5">
+                                <CheckIcon className="w-5 h-5 text-brand-green-club" aria-hidden="true" />
+                              </span>
+                            ) : null}
+                          </>
+                        )
+                      }}
                     </HUIListbox.Option>
                     {hasSpacerAfterItem && hasSpacerAfterItem.indexOf(option.name) !== -1 && (
                       <li className="select-none relative py-2 pl-8 pr-4 bg-transparent">--</li>

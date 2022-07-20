@@ -18,6 +18,7 @@ interface ProductMeta {
 interface ProductVariantCustom extends ProductVariant {
   grind_type: ProductMeta
   package_size: ProductMeta
+  availableForSale: boolean
 }
 
 interface ProductVariantConnectionCustom extends ProductVariantConnection {
@@ -47,6 +48,21 @@ interface ProductCustom {
 }
 
 export const ProductMockDataBase: ProductType = {
+  id: 'gid://shopify/Product/7655228866776',
+  title: 'Espresso Raritäten Set',
+  vendor: '60beans',
+  totalInventory: 100,
+  priceRange: {
+    maxVariantPrice: {
+      amount: '9.99',
+      currencyCode: CurrencyCode.Eur,
+    },
+    minVariantPrice: {
+      amount: '19.99',
+      currencyCode: CurrencyCode.Eur,
+    },
+  },
+  descriptionHtml: '<p>Hello world</p>',
   availableForSale: false,
   collections: {
     edges: [],
@@ -68,7 +84,6 @@ export const ProductMockDataBase: ProductType = {
   },
   createdAt: '',
   description: '',
-  descriptionHtml: '<p>Hello world</p>',
   featuredImage: {
     url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153',
     originalSrc: '',
@@ -76,7 +91,6 @@ export const ProductMockDataBase: ProductType = {
     transformedSrc: '',
   },
   handle: '',
-  id: 'gid://shopify/Product/7655228866776',
   images: {
     edges: [],
     nodes: [
@@ -109,16 +123,6 @@ export const ProductMockDataBase: ProductType = {
     },
   },
   options: [],
-  priceRange: {
-    maxVariantPrice: {
-      amount: '9.99',
-      currencyCode: CurrencyCode.Eur,
-    },
-    minVariantPrice: {
-      amount: '19.99',
-      currencyCode: CurrencyCode.Eur,
-    },
-  },
   productType: '',
   publishedAt: '',
   requiresSellingPlan: false,
@@ -132,7 +136,6 @@ export const ProductMockDataBase: ProductType = {
   },
   seo: {},
   tags: [],
-  title: 'Espresso Raritäten Set',
   updatedAt: '',
   variants: {
     edges: [],
@@ -142,7 +145,6 @@ export const ProductMockDataBase: ProductType = {
       hasPreviousPage: false,
     },
   },
-  vendor: '60beans',
   metafields: {
     edges: [],
     nodes: [],
@@ -204,6 +206,7 @@ export const ProductMockData: ProductType = {
     },
   },
   vendor: '60beans',
+  totalInventory: 100,
   metafields: {
     edges: [],
     nodes: [],
@@ -216,40 +219,14 @@ export const ProductMockData: ProductType = {
 
 export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
   ...ProductMockData,
-  images: {
-    edges: [],
-    nodes: [],
-    pageInfo: {
-      hasNextPage: false,
-      hasPreviousPage: false,
-    },
-  },
-  bean_type: {
-    value: 'Arabica',
-  },
-  coffee_type: {
-    value: 'Filter',
+  vendor_description: {
+    value: 'the vendor description text',
   },
   aroma: {
     value: 'experimentell & komplex',
   },
   flavourNotes: {
     value: 'Weiße Schokolade, Melone, Orangenblüten',
-  },
-  acidity: {
-    value: 3,
-  },
-  bitterness: {
-    value: 3,
-  },
-  body: {
-    value: 3,
-  },
-  sweetness: {
-    value: 2,
-  },
-  origin: {
-    value: 'CO',
   },
   producer: {
     value: '60beans',
@@ -263,6 +240,27 @@ export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
   processing: {
     value: 'Gewaschen',
   },
+  sweetness: {
+    value: 2,
+  },
+  body: {
+    value: 3,
+  },
+  bitterness: {
+    value: 3,
+  },
+  acidity: {
+    value: 3,
+  },
+  bean_type: {
+    value: 'Arabica',
+  },
+  coffee_type: {
+    value: 'Filter',
+  },
+  origin: {
+    value: 'CO',
+  },
   pricePerKg: {
     value: '10.0',
   },
@@ -272,12 +270,6 @@ export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
   whyThisCoffee: {
     value:
       'Dein Kaffee ist süß, leicht und trägt einen subtilen Duft, ähnlich wie Blumen. Er bringt fruchtige Töne, helle Säure und einen mittleren bis schweren Körper zusammen',
-  },
-  vendor_description: {
-    value: 'the vendor description text',
-  },
-  vendor_image: {
-    value: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153',
   },
   variants: {
     ...ProductMockData.variants,
@@ -319,6 +311,18 @@ export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
         },
       },
     ],
+  },
+  images: {
+    edges: [],
+    nodes: [],
+    pageInfo: {
+      hasNextPage: false,
+      hasPreviousPage: false,
+    },
+  },
+  totalInventory: 1000,
+  vendor_image: {
+    value: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153',
   },
 }
 

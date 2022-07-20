@@ -1,89 +1,90 @@
 query product($id: ID) {
-    product(id: $id) {
-        id
-        title
-        vendor
-        vendor_description: metafield(namespace: "my_fields", key: "vendor_description") {
-            value
-        }
-        vendor_image: metafield(namespace: "my_fields", key: "vendor_image") {
-            value
-        }
-        priceRange {
-            minVariantPrice {
-                amount
-                currencyCode
-            }
-            maxVariantPrice {
-                amount
-                currencyCode
-            }
-        }
-        descriptionHtml
-        aroma: metafield(namespace: "my_fields", key: "aroma") {
-            value
-        }
-        flavourNotes: metafield(namespace: "my_fields", key: "flavournotes") {
-            value
-        }
-        producer: metafield(namespace: "my_fields", key: "producer") {
-            value
-        }
-        altitude: metafield(namespace: "my_fields", key: "altitude") {
-            value
-        }
-        variety: metafield(namespace: "my_fields", key: "variety") {
-            value
-        }
-        processing: metafield(namespace: "my_fields", key: "processing") {
-            value
-        }
-        sweetness: metafield(namespace: "my_fields", key: "sweetness") {
-            value
-        }
-        body: metafield(namespace: "my_fields", key: "body") {
-            value
-        }
-        bitterness: metafield(namespace: "my_fields", key: "bitterness") {
-            value
-        }
-        acidity: metafield(namespace: "my_fields", key: "acidity_") {
-            value
-        }
-        bean_type: metafield(namespace: "my_fields", key: "bean_type") {
-            value
-        }
-        coffee_type: metafield(namespace: "my_fields", key: "coffee_type") {
-            value
-        }
-        origin: metafield(namespace: "my_fields", key: "origin") {
-            value
-        }
-        pricePerKg: metafield(namespace: "my_fields", key:"price_per_kg"){
-            value
-        }
-        decaf: metafield(namespace: "my_fields", key: "decaf") {
-            value
-        }
-        whyThisCoffee: metafield(namespace: "my_fields", key:"why_this_coffee"){
-            value
-        }
-        variants(first: 24) {
-            nodes {
-                id
-                package_size: metafield(namespace: "my_fields", key: "package_size") {
-                    value
-                }
-                grind_type: metafield(namespace: "my_fields", key: "grind_type") {
-                    value
-                }
-                price
-            }
-        }
-        images(first: 3) {
-            nodes {
-                url
-            }
-        }
+  product(id: $id) {
+    id
+    title
+    vendor
+    vendor_description: metafield(namespace: "my_fields", key: "vendor_description") {
+      value
     }
+    vendor_image: metafield(namespace: "my_fields", key: "vendor_image") {
+      value
+    }
+    priceRange {
+      minVariantPrice {
+        amount
+        currencyCode
+      }
+      maxVariantPrice {
+        amount
+        currencyCode
+      }
+    }
+    descriptionHtml
+    aroma: metafield(namespace: "my_fields", key: "aroma") {
+      value
+    }
+    flavourNotes: metafield(namespace: "my_fields", key: "flavournotes") {
+      value
+    }
+    producer: metafield(namespace: "my_fields", key: "producer") {
+      value
+    }
+    altitude: metafield(namespace: "my_fields", key: "altitude") {
+      value
+    }
+    variety: metafield(namespace: "my_fields", key: "variety") {
+      value
+    }
+    processing: metafield(namespace: "my_fields", key: "processing") {
+      value
+    }
+    sweetness: metafield(namespace: "my_fields", key: "sweetness") {
+      value
+    }
+    body: metafield(namespace: "my_fields", key: "body") {
+      value
+    }
+    bitterness: metafield(namespace: "my_fields", key: "bitterness") {
+      value
+    }
+    acidity: metafield(namespace: "my_fields", key: "acidity_") {
+      value
+    }
+    bean_type: metafield(namespace: "my_fields", key: "bean_type") {
+      value
+    }
+    coffee_type: metafield(namespace: "my_fields", key: "coffee_type") {
+      value
+    }
+    origin: metafield(namespace: "my_fields", key: "origin") {
+      value
+    }
+    pricePerKg: metafield(namespace: "my_fields", key: "price_per_kg") {
+      value
+    }
+    decaf: metafield(namespace: "my_fields", key: "decaf") {
+      value
+    }
+    whyThisCoffee: metafield(namespace: "my_fields", key: "why_this_coffee") {
+      value
+    }
+    variants(first: 24) {
+      nodes {
+        id
+        availableForSale
+        price
+        package_size: metafield(namespace: "my_fields", key: "package_size") {
+          value
+        }
+        grind_type: metafield(namespace: "my_fields", key: "grind_type") {
+          value
+        }
+      }
+    }
+    images(first: 3) {
+      nodes {
+        url
+      }
+    }
+  }
 }

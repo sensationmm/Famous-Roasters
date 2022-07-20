@@ -1,10 +1,5 @@
 import { useQuery } from '@apollo/client/react/hooks'
 import { CheckCircleIcon } from '@heroicons/react/outline'
-import {
-  Product as ProductType,
-  ProductVariant,
-  ProductVariantConnection,
-} from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
 import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -35,47 +30,7 @@ import {
 import { getAPIProductId, getAromaKey, toRoundedValueInRealScale, useLocalStorage } from 'src/utils'
 
 import { TasteFinderField } from '../TasteFinder'
-import { getGuideImages, getTasteResults, TasteProfile } from '.'
-
-interface ProductMeta {
-  value: string
-}
-
-interface ProductMetaInteger {
-  value: number
-}
-
-interface ProductVariantCustom extends ProductVariant {
-  grind_type: ProductMeta
-  package_size: ProductMeta
-}
-
-interface ProductVariantConnectionCustom extends ProductVariantConnection {
-  nodes: Array<ProductVariantCustom>
-}
-
-interface ProductCustom extends ProductType {
-  coffee_type: ProductMeta
-  bean_type: ProductMeta
-  aroma: ProductMeta
-  flavourNotes: ProductMeta
-  origin: ProductMeta
-  producer: ProductMeta
-  altitude: ProductMeta
-  variety: ProductMeta
-  processing: ProductMeta
-  whyThisCoffee: ProductMeta
-  sweetness: ProductMetaInteger
-  body: ProductMetaInteger
-  bitterness: ProductMetaInteger
-  acidity: ProductMetaInteger
-  pricePerKg: ProductMeta
-  variants: ProductVariantConnectionCustom
-}
-
-interface ProductQuery {
-  product: ProductCustom
-}
+import { getGuideImages, getTasteResults, ProductQuery, TasteProfile } from '.'
 
 export const FeaturedProduct: React.FC = () => {
   const { id } = useParams()
@@ -164,9 +119,10 @@ export const FeaturedProduct: React.FC = () => {
       }
     }
 
-    const name = tasteFinderData.find((el: TasteFinderField) => el.name === 'name')
-      ? tasteFinderData.find((el: TasteFinderField) => el.name === 'name').value
-      : t('pages.featuredProduct.yourCoffeeType.namePlaceholder')
+    const name =
+      tasteFinderData && tasteFinderData.find((el: TasteFinderField) => el.name === 'name')
+        ? tasteFinderData.find((el: TasteFinderField) => el.name === 'name').value
+        : t('pages.featuredProduct.yourCoffeeType.namePlaceholder')
 
     return (
       <div className="grid grid-cols-1 md:grid-cols-2 items-end">

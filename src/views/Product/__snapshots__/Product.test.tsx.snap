@@ -195,7 +195,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               </div>
             </div>
             <div
-              class="mt-4"
+              class="mt-4 pb-4 border-b border-brand-grey-whisper"
             >
               <div
                 class="grid gap-4 grid-cols-2 grid-rows-2"
@@ -627,7 +627,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               </div>
             </div>
             <div
-              class="mt-4 pt-4 border-t border-brand-grey-whisper"
+              class="pt-4"
             >
               <div>
                 <div
@@ -1686,7 +1686,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
               </div>
             </div>
             <div
-              class="mt-4"
+              class="mt-4 pb-4 border-b border-brand-grey-whisper"
             >
               <div
                 class="grid gap-4 grid-cols-2 grid-rows-2"
@@ -2118,7 +2118,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
               </div>
             </div>
             <div
-              class="mt-4 pt-4 border-t border-brand-grey-whisper"
+              class="pt-4"
             >
               <div>
                 <div

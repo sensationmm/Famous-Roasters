@@ -70,12 +70,13 @@ interface ProductCustom extends ProductType {
   acidity: ProductMetaInteger
   pricePerKg: ProductMeta
   decaf?: ProductMeta
+  whyThisCoffee: ProductMeta
   vendor_description?: ProductMeta
   variants: ProductVariantConnectionCustom
   vendor_image?: ProductMeta
 }
 
-interface ProductQuery {
+export interface ProductQuery {
   product: ProductCustom
 }
 
@@ -90,6 +91,7 @@ export const Product: React.FC = () => {
   const detailsRef = useRef<null | HTMLDivElement>(null)
   const [isSticky, setIsSticky] = useState<boolean>(true)
   const [isFixed, setIsFixed] = useState<boolean>(false)
+  const [packageSizes, setPackageSizes] = useState<ListBoxItem[]>([])
 
   useEffect(() => {
     document.title = `${t('brand.name')} | ${t('pages.product.title')}`
@@ -154,6 +156,13 @@ export const Product: React.FC = () => {
     }
   }, [!!variants])
 
+  useEffect(() => {
+    variantSelected &&
+      (variantSelected.grind_type
+        ? setPackageSizes(packageSizesValues(variantSelected.grind_type.value))
+        : setPackageSizes(packageSizesValues()))
+  }, [variantSelected])
+
   if (error) {
     return <ErrorPrompt promptAction={() => history.go(0)} />
   }
@@ -167,30 +176,44 @@ export const Product: React.FC = () => {
   }
 
   const updateVariantSelectedWithGrind = (v: ListBoxItem[]) => {
+    const availableSizesForGrindType = packageSizesValues(v[0].name)
+    setPackageSizes(availableSizesForGrindType)
+
     const updatedSelected =
       variants &&
       variants.nodes.find(
-        (x) => x.grind_type.value === v[0].name && x.package_size.value === variantSelected.package_size.value,
+        (x) => x.grind_type.value === v[0].name && x.package_size.value === availableSizesForGrindType[0].name,
       )
     updatedSelected && setVariantSelected(updatedSelected)
   }
 
   const updateVariantSelectedWithPackage = (v: ListBoxItem[]) => {
-    const updatedSelected =
-      variants &&
-      variants.nodes.find(
-        (x) => x.package_size.value === v[0].name && x.grind_type.value === variantSelected.grind_type.value,
-      )
+    const check = (x: ProductVariantCustom) =>
+      variantSelected.grind_type
+        ? x.package_size.value === v[0].name && x.grind_type.value === variantSelected.grind_type.value
+        : x.package_size.value === v[0].name
+    const updatedSelected = variants && variants.nodes.find((x) => check(x))
     updatedSelected && setVariantSelected(updatedSelected)
   }
 
   const currencyCode = 'EUR'
-  const grindTypeValues = () =>
-    Array.from(new Set(variants.nodes.map((variant) => variant.grind_type.value))).map((x) => ({
-      name: x,
-    })) || []
-  const packageSizesValues = () =>
-    Array.from(new Set(variants.nodes.map((variant) => variant.package_size.value))).map((x) => ({ name: x })) || []
+  const grindTypeValues = () => {
+    const availableGrindTypes =
+      Array.from(new Set(variants.nodes.map((variant) => variant.grind_type.value))).map((x) => ({
+        name: x,
+      })) || []
+    !packageSizes && setPackageSizes(packageSizesValues(availableGrindTypes[0].name))
+    return availableGrindTypes
+  }
+
+  const packageSizesValues = (grindType?: string) =>
+    Array.from(
+      new Set(
+        variants.nodes
+          .filter((variant) => (grindType ? variant.grind_type.value === grindType : true))
+          .map((variant) => ({ name: variant.package_size.value, disabled: variant.availableForSale !== true })),
+      ),
+    ).map((x) => x) || []
 
   const backToDetails = () => {
     if (detailsRef?.current?.offsetTop && detailsRef.current.offsetTop < window.scrollY) {
@@ -245,6 +268,7 @@ export const Product: React.FC = () => {
             className="flex w-full justify-center md:hidden"
             onClick={!isFixed && !isSticky ? handleAddToCart : backToDetails}
             data-testid="addToCart"
+            disabled={!variantSelected.availableForSale}
           >
             <span>
               <Icon name={!isFixed && !isSticky ? IconName.AddToCart : IconName.Cart} size={IconSize.lg} />
@@ -257,6 +281,7 @@ export const Product: React.FC = () => {
             className="flex w-full justify-center hidden md:block"
             onClick={handleAddToCart}
             data-testid="addToCart"
+            disabled={!variantSelected.availableForSale}
           >
             <span>{t('pages.product.transactional.cta')}</span>
           </Button>
@@ -357,7 +382,7 @@ export const Product: React.FC = () => {
           )}
           {/* Taste profile */}
           {sweetness && body && bitterness && acidity && (
-            <div className="mt-4">
+            <div className="mt-4 pb-4 border-b border-brand-grey-whisper">
               <TasteProfile
                 sweetness={sweetness.value}
                 body={body.value}
@@ -367,7 +392,7 @@ export const Product: React.FC = () => {
             </div>
           )}
           {/* Transactional section */}
-          <div className="mt-4 pt-4 border-t border-brand-grey-whisper">
+          <div className="pt-4">
             <div>
               {variants && variants.nodes[0].grind_type && (
                 <Listbox
@@ -385,13 +410,14 @@ export const Product: React.FC = () => {
             <div className="grid gap-6 grid-cols-2 mt-4">
               {variants && variants.nodes[0].package_size && (
                 <Listbox
-                  items={packageSizesValues()}
+                  items={packageSizes}
                   hasTranslatedValues={false}
                   translationPrefix="pages.product.transactional.options.packageSize"
                   multiple={false}
                   value={[{ name: variantSelected?.package_size?.value }]}
                   onChange={(v) => v && updateVariantSelectedWithPackage(v)}
                   label={t('pages.product.transactional.options.packageSize.label')}
+                  itemDisabledMsg={t('pages.product.transactional.outOfStock')}
                 />
               )}
               <div>
@@ -402,6 +428,7 @@ export const Product: React.FC = () => {
                   onChange={(q: number) => setQuantity(q)}
                   label={t('pages.product.transactional.options.quantity.label')}
                   className="w-full"
+                  disabled={!variantSelected.availableForSale}
                 />
               </div>
             </div>

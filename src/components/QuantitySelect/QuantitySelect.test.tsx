@@ -12,6 +12,12 @@ describe('QuantitySelect component', () => {
     expect(container).toMatchSnapshot()
   })
 
+  it('Renders correctly if disabled', async () => {
+    const { container } = render(<QuantitySelect min={1} max={10} disabled={true} />)
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
+
   it('The user can increment if is not yet on max', async () => {
     render(<QuantitySelect min={1} max={10} value={1} onChange={(v) => alert(v)} />)
     const button = await screen.findByTestId('quantity-plus')

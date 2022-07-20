@@ -172,4 +172,31 @@ describe('Listbox component', () => {
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
     expect(container).toMatchSnapshot()
   })
+
+  it('Renders with disabled items correctly', async () => {
+    const { container } = render(
+      <I18nextProvider i18n={i18n}>
+        <Listbox
+          items={[{ name: 'option1', disabled: true }, { name: 'option2' }, { name: 'option3' }]}
+          translationPrefix="pages.catalogue.filters.sort"
+        />
+      </I18nextProvider>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
+
+  it('Renders with selected disabled items correctly', async () => {
+    const { container } = render(
+      <I18nextProvider i18n={i18n}>
+        <Listbox
+          items={[{ name: 'option1', disabled: true }, { name: 'option2' }, { name: 'option3' }]}
+          value={[{ name: 'option1', disabled: true }]}
+          translationPrefix="pages.catalogue.filters.sort"
+        />
+      </I18nextProvider>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
 })

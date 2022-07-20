@@ -220,6 +220,94 @@ exports[`Listbox component Renders correctly with none item 1`] = `
 </div>
 `;
 
+exports[`Listbox component Renders with disabled items correctly 1`] = `
+<div>
+  <div
+    class="w-full relative"
+  >
+    <div
+      class="grid grid-cols-2 items-end"
+    >
+      <div />
+      <div
+        class="justify-self-end"
+      />
+    </div>
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
+      data-testid="button-listbox"
+      id="headlessui-listbox-button-:rq:"
+      type="button"
+    >
+      <span
+        class="block truncate text-base leading-6"
+      >
+        Sortieren nach...
+      </span>
+      <svg
+        aria-hidden="true"
+        class="-mr-1 ml-2 h-6 w-6"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Listbox component Renders with selected disabled items correctly 1`] = `
+<div>
+  <div
+    class="w-full relative"
+  >
+    <div
+      class="grid grid-cols-2 items-end"
+    >
+      <div />
+      <div
+        class="justify-self-end"
+      />
+    </div>
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
+      data-testid="button-listbox"
+      id="headlessui-listbox-button-:rr:"
+      type="button"
+    >
+      <span
+        class="block truncate text-brand-grey-bombay text-base leading-6"
+      >
+        pages.catalogue.filters.sort.values.option1
+      </span>
+      <svg
+        aria-hidden="true"
+        class="-mr-1 ml-2 h-6 w-6"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
+
 exports[`Listbox component Renders with spacing items correctly 1`] = `
 <div>
   <div
