@@ -1,3 +1,11 @@
+# [1.29.0](https://github.com/Famous-Roasters/frontend/compare/v1.28.0...v1.29.0) (2022-07-20)
+
+
+### Features
+
+* **product:** out of stock functionality ([9b2c36c](https://github.com/Famous-Roasters/frontend/commit/9b2c36c67c4f241c8f90a08253baf325a7597bac))
+* **product:** screenshot failure ([65880b4](https://github.com/Famous-Roasters/frontend/commit/65880b4259b392bd1d1fabaab86a545166263971))
+
 # [1.28.0](https://github.com/Famous-Roasters/frontend/compare/v1.27.2...v1.28.0) (2022-07-18)
 
 
