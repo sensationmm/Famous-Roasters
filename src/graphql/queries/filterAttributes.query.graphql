@@ -1,5 +1,5 @@
 query filterAttributes {
-  products(first: 150) {
+  products(first: 250) {
     nodes {
       vendor
       coffee_type: metafield(namespace: "my_fields", key: "coffee_type") {

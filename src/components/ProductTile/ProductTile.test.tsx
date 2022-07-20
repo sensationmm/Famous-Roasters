@@ -83,4 +83,41 @@ describe('Product Tile component', () => {
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
     expect(container).toMatchSnapshot()
   })
+
+  it('Renders as expected for out of stock item', async () => {
+    const { container } = render(
+      <I18nextProvider i18n={i18n}>
+        <ProductTile
+          productNode={{
+            ...ProductMockData,
+            pricePerKg: { value: '10.0' },
+            coffee_type: { value: 'Filter' },
+            origin: { value: 'CO,BR' },
+            totalInventory: 0,
+          }}
+        />
+      </I18nextProvider>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
+
+  it('Renders as expected for out of stock featured item', async () => {
+    const { container } = render(
+      <I18nextProvider i18n={i18n}>
+        <ProductTile
+          productNode={{
+            ...ProductMockData,
+            pricePerKg: { value: '10.0' },
+            coffee_type: { value: 'Filter' },
+            origin: { value: 'CO,BR' },
+            totalInventory: 0,
+          }}
+          featured={true}
+        />
+      </I18nextProvider>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
 })

@@ -30,9 +30,9 @@ export const ProductTile: React.FC<ProductTileProps> = ({
   featured = false,
   className,
 }: ProductTileProps) => {
-  const { title, vendor, featuredImage, images, priceRange, pricePerKg, coffee_type, origin, decaf } = productNode
+  const { title, vendor, featuredImage, images, priceRange, pricePerKg, coffee_type, origin, decaf, totalInventory } =
+    productNode
   const { t } = useTranslation()
-  const textLineClassNames = featured ? 'mt-1 text-coreUI-text-secondary' : 'text-coreUI-text-secondary'
 
   const getOuterContainerClasses = () => {
     const classNames: string[] = []
@@ -44,7 +44,7 @@ export const ProductTile: React.FC<ProductTileProps> = ({
   }
 
   const getTextDataContainerClasses = () => {
-    const classNames: string[] = ['flex', 'flex-col', 'w-full', 'justify-between']
+    const classNames: string[] = ['flex', 'flex-col', 'w-full', 'justify-start']
     if (!featured) {
       classNames.push('pl-4')
     }
@@ -53,6 +53,14 @@ export const ProductTile: React.FC<ProductTileProps> = ({
 
   if (showImage && !featuredImage && (!images || !images.nodes[0])) return null
   const imgSrc = featuredImage?.url ? featuredImage.url : images.nodes[0].url
+
+  const outOfStock = totalInventory === 0
+  const textLineClassNames = outOfStock
+    ? 'text-coreUI-text-tertiary'
+    : featured
+    ? 'mt-1 text-coreUI-text-secondary'
+    : 'text-coreUI-text-secondary'
+
   return (
     <div className={getOuterContainerClasses()}>
       {showImage && (
@@ -67,11 +75,21 @@ export const ProductTile: React.FC<ProductTileProps> = ({
       )}
       <div className={getTextDataContainerClasses()}>
         {featured ? (
-          <Typography as="div" type={TypographyType.Heading} size={TypographySize.Tiny}>
+          <Typography
+            as="div"
+            type={TypographyType.Heading}
+            size={TypographySize.Tiny}
+            className={outOfStock ? 'text-coreUI-text-tertiary' : ''}
+          >
             {title}
           </Typography>
         ) : (
-          <Typography as="div" type={TypographyType.Label} size={TypographySize.Base}>
+          <Typography
+            as="div"
+            type={TypographyType.Label}
+            size={TypographySize.Base}
+            className={outOfStock ? 'text-coreUI-text-tertiary' : ''}
+          >
             {title}
           </Typography>
         )}
@@ -107,12 +125,21 @@ export const ProductTile: React.FC<ProductTileProps> = ({
         )}
         <div className="flex items-baseline">
           {featured ? (
-            <Typography as="div" type={TypographyType.Label} size={TypographySize.Large} className="mr-1 mt-1">
+            <Typography
+              as="div"
+              type={TypographyType.Label}
+              size={TypographySize.Large}
+              className={`mr-1 mt-1${outOfStock ? ' text-gray-400' : ''}`}
+            >
               {showFrom && t('pages.catalogue.tile.from') + ' '}
               {formatPrice(priceRange.minVariantPrice.amount, priceRange.minVariantPrice.currencyCode)}
             </Typography>
           ) : (
-            <Typography type={TypographyType.Label} size={TypographySize.Base} className="mr-1">
+            <Typography
+              type={TypographyType.Label}
+              size={TypographySize.Base}
+              className={`mr-1${outOfStock ? ' text-coreUI-text-tertiary' : ''}`}
+            >
               {showFrom && t('pages.catalogue.tile.from') + ' '}
               {formatPrice(priceRange.minVariantPrice.amount, priceRange.minVariantPrice.currencyCode)}
             </Typography>
@@ -121,12 +148,17 @@ export const ProductTile: React.FC<ProductTileProps> = ({
             <Typography
               type={TypographyType.Paragraph}
               size={TypographySize.Tiny}
-              className="text-coreUI-text-secondary"
+              className={outOfStock ? 'text-coreUI-text-tertiary' : 'text-coreUI-text-secondary'}
             >
               ({formatPrice(pricePerKg.value, 'EUR')}/kg)
             </Typography>
           )}
         </div>
+        {outOfStock && (
+          <Typography type={TypographyType.Paragraph} size={TypographySize.Tiny} className="text-negative">
+            {t('pages.product.transactional.outOfStock')}
+          </Typography>
+        )}
       </div>
     </div>
   )

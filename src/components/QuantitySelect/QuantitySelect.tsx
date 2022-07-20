@@ -9,6 +9,7 @@ interface QuantitySelectProps {
   onChange?: (actualValue: number) => void
   label?: string
   className?: string
+  disabled?: boolean
 }
 
 export const QuantitySelect: React.FC<QuantitySelectProps> = ({
@@ -18,6 +19,7 @@ export const QuantitySelect: React.FC<QuantitySelectProps> = ({
   onChange,
   label = undefined,
   className,
+  disabled = false,
 }: QuantitySelectProps) => {
   const [actualValue, setActualValue] = useState<number>(value)
 
@@ -65,13 +67,13 @@ export const QuantitySelect: React.FC<QuantitySelectProps> = ({
         </Typography>
       )}
       <div className={classNames.join(' ')} data-testid="quantity-select">
-        <button type="button" onClick={decrement} data-testid="quantity-minus">
+        <button type="button" onClick={decrement} data-testid="quantity-minus" disabled={disabled}>
           <MinusIcon className="w-5 h-5" />
         </button>
-        <div className="px-3.5" data-testid="quantity-value">
+        <div className={`px-3.5${disabled ? ' text-brand-grey-bombay' : ''}`} data-testid="quantity-value">
           {actualValue}
         </div>
-        <button type="button" onClick={increment} data-testid="quantity-plus">
+        <button type="button" onClick={increment} data-testid="quantity-plus" disabled={disabled}>
           <PlusIcon className="w-5 h-5" />
         </button>
       </div>

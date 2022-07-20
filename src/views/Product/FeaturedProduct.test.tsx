@@ -427,4 +427,51 @@ describe('Featured product view', () => {
     await waitFor(() => new Promise((res) => setTimeout(res, 500)))
     expect(container).toMatchSnapshot()
   })
+
+  it('renders as expected if no taste finder data exists', async () => {
+    jest.spyOn(Router, 'useParams').mockReturnValue({ id: '7655228866776' })
+    window.localStorage.setItem('tasteFinder', JSON.stringify(''))
+
+    const ProductMockWithCustomMetadataOtherAroma = {
+      ...ProductMockWithCustomMetadata,
+      result: {
+        data: {
+          product: {
+            ...ProductMockWithCustomMetadata.result.data.product,
+            images: {
+              nodes: [
+                {
+                  id: '123123',
+                  url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153',
+                  originalSrc: '',
+                  src: '',
+                  transformedSrc: '',
+                },
+              ],
+            },
+            aroma: {
+              value: 'experimentell & komplex',
+            },
+          },
+        },
+      },
+    }
+    const { container } = render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
+        mocks={[ProductMockWithCustomMetadataOtherAroma]}
+        addTypename={false}
+      >
+        <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
+          <I18nextProvider i18n={i18n}>
+            <MemoryRouter initialEntries={['/featured/7655228866776']}>
+              <FeaturedProduct />
+            </MemoryRouter>
+          </I18nextProvider>
+        </CartContext.Provider>
+      </MockedProvider>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 500)))
+    expect(container).toMatchSnapshot()
+  })
 })

@@ -46,11 +46,11 @@ export const TasteFinderMockQueryEspresso = {
     query: GET_TASTE_FINDER_RECOMMENDATION,
     variables: {
       profile: {
-        acidity: 5,
-        bitterness: 5,
-        body: 5,
-        coffeeType: 'ESPRESSO',
         sweetness: 5,
+        body: 5,
+        bitterness: 5,
+        acidity: 5,
+        coffeeType: 'ESPRESSO',
       },
     },
   },
@@ -77,11 +77,11 @@ export const TasteFinderMockQueryFilter = {
     query: GET_TASTE_FINDER_RECOMMENDATION,
     variables: {
       profile: {
-        acidity: 5,
-        bitterness: 5,
-        body: 5,
-        coffeeType: 'FILTER',
         sweetness: 5,
+        body: 5,
+        bitterness: 5,
+        acidity: 5,
+        coffeeType: 'FILTER',
       },
     },
   },
