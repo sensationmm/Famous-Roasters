@@ -14,25 +14,25 @@ export const BeanScaleTag: React.FC<BeanScaleTagProps> = ({ value }) => {
       case 1:
         return (
           <>
-            <Icon name={IconName.BeanFill} size={IconSize.sm} />
-            <Icon name={IconName.BeanOutline} size={IconSize.sm} className="ml-0.5" />
-            <Icon name={IconName.BeanOutline} size={IconSize.sm} className="ml-0.5" />
+            <Icon name={IconName.BeanFill} size={IconSize.xs} />
+            <Icon name={IconName.BeanOutline} size={IconSize.xs} className="ml-0.5" />
+            <Icon name={IconName.BeanOutline} size={IconSize.xs} className="ml-0.5" />
           </>
         )
       case 2:
         return (
           <>
-            <Icon name={IconName.BeanFill} size={IconSize.sm} />
-            <Icon name={IconName.BeanFill} size={IconSize.sm} className="ml-0.5" />
-            <Icon name={IconName.BeanOutline} size={IconSize.sm} className="ml-0.5" />
+            <Icon name={IconName.BeanFill} size={IconSize.xs} />
+            <Icon name={IconName.BeanFill} size={IconSize.xs} className="ml-0.5" />
+            <Icon name={IconName.BeanOutline} size={IconSize.xs} className="ml-0.5" />
           </>
         )
       case 3:
         return (
           <>
-            <Icon name={IconName.BeanFill} size={IconSize.sm} className="ml-0.5" />
-            <Icon name={IconName.BeanFill} size={IconSize.sm} className="ml-0.5" />
-            <Icon name={IconName.BeanFill} size={IconSize.sm} className="ml-0.5" />
+            <Icon name={IconName.BeanFill} size={IconSize.xs} className="ml-0.5" />
+            <Icon name={IconName.BeanFill} size={IconSize.xs} className="ml-0.5" />
+            <Icon name={IconName.BeanFill} size={IconSize.xs} className="ml-0.5" />
           </>
         )
     }

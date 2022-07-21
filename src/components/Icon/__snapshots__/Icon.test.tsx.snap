@@ -79,9 +79,9 @@ exports[`Icon component Renders correctly medium icon 1`] = `
 exports[`Icon component Renders correctly small icon 1`] = `
 <div>
   <svg
-    height="10"
+    height="14"
     viewBox="0 0 11 11"
-    width="10"
+    width="14"
   >
     <path
       clip-rule="evenodd"

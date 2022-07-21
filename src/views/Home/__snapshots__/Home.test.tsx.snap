@@ -105,7 +105,7 @@ exports[`Home view Renders correctly 1`] = `
                   class="ml-4 flow-root xl:ml-6"
                 >
                   <button
-                    class="inline-flex items-center rounded-full border-2 px-3 py-2 text-sm font-semibold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
+                    class="relative inline-flex flex-row items-center rounded-full border-2 px-3 py-2 text-sm font-semibold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
                     data-testid="button-shop"
                     role="button"
                   >

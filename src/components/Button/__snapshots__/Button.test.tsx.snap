@@ -3,7 +3,7 @@
 exports[`Button component Renders correctly 1`] = `
 <div>
   <button
-    class="inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+    class="relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
     role="button"
   >
     CTA
@@ -14,7 +14,7 @@ exports[`Button component Renders correctly 1`] = `
 exports[`Button component Renders correctly secondary 1`] = `
 <div>
   <button
-    class="inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
+    class="relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
     role="button"
   >
     CTA
@@ -25,7 +25,7 @@ exports[`Button component Renders correctly secondary 1`] = `
 exports[`Button component Renders correctly size lg 1`] = `
 <div>
   <button
-    class="inline-flex items-center rounded-full border-2 px-4 py-2 text-md font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+    class="relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-md font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
     role="button"
   >
     CTA
@@ -36,7 +36,7 @@ exports[`Button component Renders correctly size lg 1`] = `
 exports[`Button component Renders correctly size sm 1`] = `
 <div>
   <button
-    class="inline-flex items-center rounded-full border-2 px-3 py-2 text-sm font-semibold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+    class="relative inline-flex flex-row items-center rounded-full border-2 px-3 py-2 text-sm font-semibold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
     role="button"
   >
     CTA
@@ -47,7 +47,7 @@ exports[`Button component Renders correctly size sm 1`] = `
 exports[`Button component Renders correctly size xl 1`] = `
 <div>
   <button
-    class="inline-flex items-center rounded-full border-2 px-6 py-3 text-lg font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+    class="relative inline-flex flex-row items-center rounded-full border-2 px-6 py-3 text-lg font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
     role="button"
   >
     CTA
@@ -58,7 +58,7 @@ exports[`Button component Renders correctly size xl 1`] = `
 exports[`Button component Renders correctly size xs 1`] = `
 <div>
   <button
-    class="inline-flex items-center rounded-full border-2 px-3 py-2 text-xs font-semibold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+    class="relative inline-flex flex-row items-center rounded-full border-2 px-3 py-2 text-xs font-semibold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
     role="button"
   >
     CTA
@@ -69,7 +69,7 @@ exports[`Button component Renders correctly size xs 1`] = `
 exports[`Button component Renders correctly tertiary 1`] = `
 <div>
   <button
-    class="inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
+    class="relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-base font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
     role="button"
   >
     CTA
@@ -80,7 +80,7 @@ exports[`Button component Renders correctly tertiary 1`] = `
 exports[`Button component Renders correctly with extra classes 1`] = `
 <div>
   <button
-    class="anotherClass inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+    class="anotherClass relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
     role="button"
   >
     CTA

@@ -449,7 +449,7 @@ exports[`Cart view Renders correctly 1`] = `
               id="toCheckout"
             >
               <button
-                class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+                class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
                 role="button"
                 type="button"
               >
@@ -465,7 +465,7 @@ exports[`Cart view Renders correctly 1`] = `
               href="/catalogue"
             >
               <button
-                class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
+                class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
                 data-testid="continueShopping"
                 role="button"
                 type="button"
@@ -779,7 +779,7 @@ exports[`Cart view Renders correctly for no cart id 1`] = `
               href="/catalogue"
             >
               <button
-                class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+                class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
                 data-testid="continueShopping"
                 role="button"
                 type="button"
