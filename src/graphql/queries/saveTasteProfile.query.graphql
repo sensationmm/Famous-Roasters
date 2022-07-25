@@ -1,5 +1,7 @@
-query saveTasteProfile($acidity: Int!, $bitterness: Int!, $sweetness: Int!, $body: Int!) {
-  saveTasteFinderProfile(profile: { acidity: $acidity, bitterness: $bitterness, sweetness: $sweetness, body: $body }) {
+query saveTasteProfile($acidity: Int!, $bitterness: Int!, $sweetness: Int!, $body: Int!, $coffeeType: string) {
+  saveTasteFinderProfile(
+    profile: { acidity: $acidity, bitterness: $bitterness, sweetness: $sweetness, body: $body, coffeeType: $coffeeType }
+  ) {
     acidity
     bitterness
     sweetness
