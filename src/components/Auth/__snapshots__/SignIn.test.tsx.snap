@@ -104,7 +104,7 @@ exports[`SignIn custom auth component Renders correctly for an expected state 1`
           </a>
         </div>
         <button
-          class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-md font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+          class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-md font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
           data-testid="submit"
           disabled=""
           role="button"
@@ -128,7 +128,7 @@ exports[`SignIn custom auth component Renders correctly for an expected state 1`
             Ich bin neu hier
           </div>
           <button
-            class="flex w-full justify-center inline-flex items-center rounded-full border-2 px-4 py-2 text-md font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
+            class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-md font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
             data-testid="goToSignUpLink"
             role="button"
             type="button"

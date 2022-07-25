@@ -1,0 +1,14 @@
+import { Meta, IconGallery, IconItem } from '@storybook/addon-docs'
+import { Icon, IconName as IconLibrary } from '../src/components'
+
+<Meta title="DesignSystem/Icons" />
+
+<IconGallery>
+  {Object.keys(IconLibrary).map((iconName, count) => {
+    return (
+      <IconItem name={iconName} key={`icon-${count}`}>
+        <Icon name={IconLibrary[iconName]} />
+      </IconItem>
+    )
+  })}
+</IconGallery>

@@ -105,7 +105,7 @@ exports[`Profile view Renders correctly 1`] = `
                   class="ml-4 flow-root xl:ml-6"
                 >
                   <button
-                    class="inline-flex items-center rounded-full border-2 px-3 py-2 text-sm font-semibold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
+                    class="relative inline-flex flex-row items-center rounded-full border-2 px-3 py-2 text-sm font-semibold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
                     data-testid="button-shop"
                     role="button"
                   >
@@ -128,7 +128,7 @@ exports[`Profile view Renders correctly 1`] = `
           Not logged in
         </p>
         <button
-          class="flex w-full justify-center mt-8 inline-flex items-center rounded-full border-2 px-4 py-2 text-md font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+          class="flex w-full justify-center mt-8 relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-md font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
           data-testid="signOut"
           role="button"
           type="button"
