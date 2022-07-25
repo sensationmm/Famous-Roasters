@@ -1,3 +1,11 @@
+## [1.29.1](https://github.com/Famous-Roasters/frontend/compare/v1.29.0...v1.29.1) (2022-07-22)
+
+
+### Bug Fixes
+
+* **catalog:** showing as in stock when quantity less than zero ([20c5f5c](https://github.com/Famous-Roasters/frontend/commit/20c5f5c133579bf2e1ce99126ffa5f8af2035c62))
+* **catalog:** update snapshots ([a33cd6c](https://github.com/Famous-Roasters/frontend/commit/a33cd6c8d0fe443c40b7c595352b1e7dc7a3f4de))
+
 # [1.29.0](https://github.com/Famous-Roasters/frontend/compare/v1.28.0...v1.29.0) (2022-07-20)
 
 

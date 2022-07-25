@@ -81,23 +81,23 @@ exports[`Product Tile component Renders as expected for out of stock featured it
       class="flex flex-col w-full justify-start"
     >
       <div
-        class="text-coreUI-text-tertiary text-xl leading-7 font-semibold"
+        class="text-xl leading-7 font-semibold"
       >
         Espresso Raritäten Set
       </div>
       <div
-        class="text-coreUI-text-tertiary text-base leading-6"
+        class="mt-1 text-coreUI-text-secondary text-base leading-6"
       >
         60beans
       </div>
       <div
-        class="text-coreUI-text-tertiary text-base leading-6"
+        class="mt-1 text-coreUI-text-secondary text-base leading-6"
       >
         Kolumbien, 
         Brasilien
       </div>
       <div
-        class="text-coreUI-text-tertiary text-base leading-6"
+        class="mt-1 text-coreUI-text-secondary text-base leading-6"
       >
         Filter
       </div>
@@ -105,23 +105,19 @@ exports[`Product Tile component Renders as expected for out of stock featured it
         class="flex items-baseline"
       >
         <div
-          class="mr-1 mt-1 text-gray-400 text-lg leading-7 font-semibold"
+          class="mr-1 mt-1 text-lg leading-7 font-semibold"
         >
           19,99 €
         </div>
         <span
-          class="text-coreUI-text-tertiary text-xs leading-4"
+          class="text-coreUI-text-secondary text-xs leading-4"
         >
           (
           10,00 €
           /kg)
         </span>
       </div>
-      <span
-        class="text-negative text-xs leading-4"
-      >
-        Ausverkauft
-      </span>
+      0
     </div>
   </div>
 </div>
@@ -149,23 +145,23 @@ exports[`Product Tile component Renders as expected for out of stock item 1`] = 
       class="flex flex-col w-full justify-start pl-4"
     >
       <div
-        class="text-coreUI-text-tertiary text-base leading-6 font-semibold"
+        class="text-base leading-6 font-semibold"
       >
         Espresso Raritäten Set
       </div>
       <div
-        class="text-coreUI-text-tertiary text-base leading-6"
+        class="text-coreUI-text-secondary text-base leading-6"
       >
         60beans
       </div>
       <div
-        class="text-coreUI-text-tertiary text-base leading-6"
+        class="text-coreUI-text-secondary text-base leading-6"
       >
         Kolumbien, 
         Brasilien
       </div>
       <div
-        class="text-coreUI-text-tertiary text-base leading-6"
+        class="text-coreUI-text-secondary text-base leading-6"
       >
         Filter
       </div>
@@ -173,23 +169,19 @@ exports[`Product Tile component Renders as expected for out of stock item 1`] = 
         class="flex items-baseline"
       >
         <span
-          class="mr-1 text-coreUI-text-tertiary text-base leading-6 font-semibold"
+          class="mr-1 text-base leading-6 font-semibold"
         >
           19,99 €
         </span>
         <span
-          class="text-coreUI-text-tertiary text-xs leading-4"
+          class="text-coreUI-text-secondary text-xs leading-4"
         >
           (
           10,00 €
           /kg)
         </span>
       </div>
-      <span
-        class="text-negative text-xs leading-4"
-      >
-        Ausverkauft
-      </span>
+      0
     </div>
   </div>
 </div>
