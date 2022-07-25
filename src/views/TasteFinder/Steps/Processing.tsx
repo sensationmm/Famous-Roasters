@@ -68,10 +68,10 @@ export const Processing: React.FC<TasteFinderFieldHandlerProps> = ({
   const saveProfile = () => {
     saveTasteProfileData({
       variables: {
-        acidity: currentData.find((el) => el.name === 'acidity')?.value,
-        bitterness: currentData.find((el) => el.name === 'bitterness')?.value,
-        sweetness: currentData.find((el) => el.name === 'sweetness')?.value,
-        body: currentData.find((el) => el.name === 'body')?.value,
+        acidity: parseInt(currentData.find((el) => el.name === 'acidity')?.value as string),
+        bitterness: parseInt(currentData.find((el) => el.name === 'bitterness')?.value as string),
+        sweetness: parseInt(currentData.find((el) => el.name === 'sweetness')?.value as string),
+        body: parseInt(currentData.find((el) => el.name === 'body')?.value as string),
         coffeeType: getCoffeeType(currentData.find((el) => el.name === 'grindType')?.value),
       },
     }).catch((err) => {
