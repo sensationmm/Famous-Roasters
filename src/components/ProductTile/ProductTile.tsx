@@ -53,8 +53,7 @@ export const ProductTile: React.FC<ProductTileProps> = ({
 
   if (showImage && !featuredImage && (!images || !images.nodes[0])) return null
   const imgSrc = featuredImage?.url ? featuredImage.url : images.nodes[0].url
-
-  const outOfStock = totalInventory && totalInventory <= 0
+  const outOfStock = totalInventory !== undefined && totalInventory !== null && totalInventory <= 0
   const textLineClassNames = outOfStock
     ? 'text-coreUI-text-tertiary'
     : featured
