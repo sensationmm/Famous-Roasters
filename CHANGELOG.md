@@ -1,3 +1,10 @@
+## [1.30.3](https://github.com/Famous-Roasters/frontend/compare/v1.30.2...v1.30.3) (2022-07-25)
+
+
+### Bug Fixes
+
+* **taste finder:** missing coffee type var ([ebd575a](https://github.com/Famous-Roasters/frontend/commit/ebd575ab6b6c6c98ee5abf1979463af28e8d23ee))
+
 ## [1.30.2](https://github.com/Famous-Roasters/frontend/compare/v1.30.1...v1.30.2) (2022-07-25)
 
 
