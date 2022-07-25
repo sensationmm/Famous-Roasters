@@ -1,3 +1,10 @@
+## [1.30.2](https://github.com/Famous-Roasters/frontend/compare/v1.30.1...v1.30.2) (2022-07-25)
+
+
+### Bug Fixes
+
+* **taste finder:** correct graphql type ([9031b73](https://github.com/Famous-Roasters/frontend/commit/9031b735b6caf6c65a970ca523bc686e6facaeb4))
+
 ## [1.30.1](https://github.com/Famous-Roasters/frontend/compare/v1.30.0...v1.30.1) (2022-07-25)
 
 
