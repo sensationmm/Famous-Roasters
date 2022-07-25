@@ -1,3 +1,13 @@
+# [1.30.0](https://github.com/Famous-Roasters/frontend/compare/v1.29.2...v1.30.0) (2022-07-25)
+
+
+### Features
+
+* **button:** add icon and arrow props ([d83a141](https://github.com/Famous-Roasters/frontend/commit/d83a141a574080d3c73d4fe79414a9baf9a8f07a))
+* **icon:** improve icon managability with defaults ([bbbe2b9](https://github.com/Famous-Roasters/frontend/commit/bbbe2b9a08ea69d68c182a84de0c015f211c261a))
+* **taste finder:** updated snaps ([fba372c](https://github.com/Famous-Roasters/frontend/commit/fba372c13cb22ea5bfb125a98aa0b8ac2bdd88c7))
+* **taste finedr:** save taste profile ([90048b8](https://github.com/Famous-Roasters/frontend/commit/90048b8612ad8e5ab1c911d7c264354c8b6f3b52))
+
 ## [1.29.2](https://github.com/Famous-Roasters/frontend/compare/v1.29.1...v1.29.2) (2022-07-25)
 
 
