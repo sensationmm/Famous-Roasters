@@ -1,13 +1,16 @@
 import { useLazyQuery } from '@apollo/client/react/hooks'
+import { Auth } from 'aws-amplify'
 import { loader } from 'graphql.macro'
 import Lottie from 'lottie-react'
 import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import aeropressAni from 'src/assets/images/lottieAnimations/aeropress.json'
 import { Typography, TypographySize, TypographyType } from 'src/components'
+import { useAuth } from 'src/config/cognito'
 import { toRoundedValueInRealScale } from 'src/utils'
 import { TasteFinderField, TasteFinderFieldHandlerProps } from 'src/views/TasteFinder'
 const GET_TASTE_FINDER_RECOMMENDATION = loader('src/graphql/queries/tasteFinderRecommendation.query.graphql')
+const SAVE_TASTE_PROFILE = loader('src/graphql/queries/saveTasteProfile.query.graphql')
 
 interface TasteFinderProfile {
   sweetness: number
@@ -22,6 +25,19 @@ export const Processing: React.FC<TasteFinderFieldHandlerProps> = ({
   updateData,
 }: TasteFinderFieldHandlerProps) => {
   const { t } = useTranslation()
+  const [user] = useAuth()
+
+  useEffect(() => {
+    Auth.currentAuthenticatedUser()
+      .then(() => {
+        saveProfile()
+      })
+      .catch((err) => new Error(err))
+  }, [user?.isValid])
+
+  const getCoffeeType = (value?: string) => {
+    return value === 'Espresso' || value === 'Moka' ? 'ESPRESSO' : 'FILTER'
+  }
 
   const propsToProfile = (d: TasteFinderField[]): Partial<TasteFinderProfile> => {
     const parseParam = (n: string, v: string | undefined) => {
@@ -32,7 +48,7 @@ export const Processing: React.FC<TasteFinderFieldHandlerProps> = ({
         case 'acidity':
           return toRoundedValueInRealScale(parseInt(v as string))
         case 'grindType':
-          return v === 'Espresso' || v === 'Moka' ? 'ESPRESSO' : 'FILTER'
+          return getCoffeeType(v)
         default:
           return v
       }
@@ -47,6 +63,21 @@ export const Processing: React.FC<TasteFinderFieldHandlerProps> = ({
   }
 
   const [getTasteFinderRecommendation] = useLazyQuery(GET_TASTE_FINDER_RECOMMENDATION)
+  const [saveTasteProfileData] = useLazyQuery(SAVE_TASTE_PROFILE)
+
+  const saveProfile = () => {
+    saveTasteProfileData({
+      variables: {
+        acidity: currentData.find((el) => el.name === 'acidity')?.value,
+        bitterness: currentData.find((el) => el.name === 'bitterness')?.value,
+        sweetness: currentData.find((el) => el.name === 'sweetness')?.value,
+        body: currentData.find((el) => el.name === 'body')?.value,
+        coffeeType: getCoffeeType(currentData.find((el) => el.name === 'grindType')?.value),
+      },
+    }).catch((err) => {
+      throw new Error('Error getting recommendation', err)
+    })
+  }
 
   const getRecommendation = () => {
     getTasteFinderRecommendation({
