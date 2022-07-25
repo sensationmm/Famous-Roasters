@@ -1,3 +1,10 @@
+## [1.30.1](https://github.com/Famous-Roasters/frontend/compare/v1.30.0...v1.30.1) (2022-07-25)
+
+
+### Bug Fixes
+
+* **taste finder:** correct param type ([3d55cb3](https://github.com/Famous-Roasters/frontend/commit/3d55cb3283a2a729f64ee95c391f5b6d67c78b71))
+
 # [1.30.0](https://github.com/Famous-Roasters/frontend/compare/v1.29.2...v1.30.0) (2022-07-25)
 
 
