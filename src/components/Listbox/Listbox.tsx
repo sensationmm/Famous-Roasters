@@ -175,7 +175,7 @@ export const Listbox: React.FC<ListboxProps> = ({
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <HUIListbox.Options className="absolute z-10 w-full mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 border border-coreUI-background-images focus:outline-none">
+              <HUIListbox.Options className="absolute z-10 min-w-full mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 border border-coreUI-background-images focus:outline-none">
                 {options.map((option, idx) => (
                   <div key={idx}>
                     <HUIListbox.Option
