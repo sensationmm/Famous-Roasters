@@ -1,3 +1,10 @@
+## [1.30.4](https://github.com/Famous-Roasters/frontend/compare/v1.30.3...v1.30.4) (2022-07-26)
+
+
+### Bug Fixes
+
+* **ui:** clipped listbox values in taste profile filter due to width constraint ([#134](https://github.com/Famous-Roasters/frontend/issues/134)) ([f474559](https://github.com/Famous-Roasters/frontend/commit/f47455995f1fa5d4f480f4f42c62397cf171befd))
+
 ## [1.30.3](https://github.com/Famous-Roasters/frontend/compare/v1.30.2...v1.30.3) (2022-07-25)
 
 
