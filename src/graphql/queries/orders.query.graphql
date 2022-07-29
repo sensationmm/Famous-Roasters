@@ -1,0 +1,6 @@
+query orders {
+  orders {
+    id
+    shopifyId
+  }
+}
