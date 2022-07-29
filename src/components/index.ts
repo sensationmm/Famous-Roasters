@@ -41,6 +41,7 @@ import { Loader } from './Loader'
 import { CoffeeAroma, MyAroma } from './MyAroma'
 import { Navigation, NavigationTheme } from './Navigation'
 import { Notification } from './Notification'
+import { OrderTile } from './OrderTile'
 import { OriginProductionSpecs } from './OriginProductionSpecs'
 import { ProductTile } from './ProductTile'
 import { QuantitySelect } from './QuantitySelect'
@@ -103,6 +104,7 @@ export { MyAroma as MyAroma }
 export { Navigation as Navigation }
 export { NavigationTheme as NavigationTheme }
 export { Notification as Notification }
+export { OrderTile as OrderTile }
 export { OriginProductionSpecs as OriginProductionSpecs }
 export { ProductTile as ProductTile }
 export { StickyBottomNavigation as StickyBottomNavigation }

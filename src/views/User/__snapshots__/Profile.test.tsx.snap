@@ -330,7 +330,6 @@ exports[`Profile view Renders correctly 1`] = `
         >
           Deine letzte Bestellung
         </h2>
-        <div />
         <div
           class="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-6"
         >
@@ -344,7 +343,7 @@ exports[`Profile view Renders correctly 1`] = `
             <span
               class="text-xs leading-4"
             >
-              123455#
+              #131140
             </span>
           </div>
           <div>
@@ -357,7 +356,20 @@ exports[`Profile view Renders correctly 1`] = `
             <span
               class="text-xs leading-4"
             >
-              37,38 €
+              17,10 €
+            </span>
+          </div>
+          <div>
+            <label
+              class="font-bold text-xs leading-4"
+            >
+              Discount code
+            </label>
+            <br />
+            <span
+              class="text-xs leading-4"
+            >
+              BCGDV
             </span>
           </div>
           <div>
@@ -370,7 +382,7 @@ exports[`Profile view Renders correctly 1`] = `
             <span
               class="text-xs leading-4"
             >
-              Mo, 01.02.2022
+              Tu, 26.07.2022
             </span>
           </div>
           <div>
@@ -396,7 +408,7 @@ exports[`Profile view Renders correctly 1`] = `
             <span
               class="text-xs leading-4"
             >
-              Out for delivery
+              Fulfilled
             </span>
           </div>
         </div>
@@ -412,12 +424,14 @@ exports[`Profile view Renders correctly 1`] = `
         >
           <button
             class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-4 py-2 text-base font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
+            disabled=""
             role="button"
           >
             Zu den Bestelldetails
           </button>
           <button
             class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
+            disabled=""
             role="button"
           >
             Nochmal bestellen

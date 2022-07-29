@@ -1,3 +1,9 @@
+import { format } from 'date-fns'
+
+export const formatDate = (date: string) => {
+  return format(new Date(date), 'EEEEEE, dd.MM.yyyy')
+}
+
 export const formatPrice = (amount: string, currency: string) =>
   Intl.NumberFormat('de-DE', {
     style: 'currency',

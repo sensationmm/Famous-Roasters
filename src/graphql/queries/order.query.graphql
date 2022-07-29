@@ -1,0 +1,34 @@
+query order($id: ID!) {
+  order(id: $id) {
+    id
+    name
+    createdAt
+    displayFulfillmentStatus
+    displayFinancialStatus
+    totalPriceSet {
+      shopMoney {
+        amount
+        currencyCode
+      }
+    }
+    discountCode
+    lineItems(first: 10) {
+      edges {
+        node {
+          id
+          title
+          image {
+            src
+          }
+          quantity
+          variant {
+            id
+            title
+            price
+            weight
+          }
+        }
+      }
+    }
+  }
+}

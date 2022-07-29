@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product Tile component Renders correctly 1`] = `
+<div>
+  <div
+    class="flex pt-8 md:px-6"
+  >
+    <div
+      class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+    >
+      <div
+        class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+      >
+        <img
+          alt="Wild At Heart"
+          class="w-28 max-h-28"
+          src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/19grams_Wild_At_Heart_3782237a-8643-42da-93d4-15849d5c0d4d_20copy.webp?v=1655308036"
+        />
+      </div>
+    </div>
+    <div
+      class="pl-4"
+    >
+      <div
+        class="text-base leading-6 font-semibold"
+      >
+        Wild At Heart
+      </div>
+      <div
+        class="text-coreUI-text-secondary text-base leading-6"
+      >
+        250g / ganze Bohne
+      </div>
+      <div
+        class="flex items-baseline"
+      >
+        <span
+          class="mr-1 text-base leading-6 font-semibold"
+        >
+          11,90 €
+        </span>
+        <span
+          class="text-coreUI-text-secondary text-xs leading-4"
+        >
+          (
+          0,04 €
+          /kg)
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

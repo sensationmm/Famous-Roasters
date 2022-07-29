@@ -1,8 +1,9 @@
 import { toRoundedValueInRealScale, toValueInHumanScale } from './attributeScaleUtils'
-import { formatPrice, getAPIProductId, getAromaKey, getSimplifiedProductId } from './formatters'
+import { formatDate, formatPrice, getAPIProductId, getAromaKey, getSimplifiedProductId } from './formatters'
 import { formatHtmlElement, isAllowedHtmlElement, parseHtmlSafely } from './htmlContentParser'
 import { useLocalStorage } from './localStorage'
 
+export { formatDate as formatDate }
 export { formatPrice as formatPrice }
 export { getAPIProductId as getAPIProductId }
 export { getAromaKey as getAromaKey }
