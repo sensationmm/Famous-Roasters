@@ -26,6 +26,7 @@ import {
 } from 'src/components'
 import { useAuth } from 'src/config/cognito'
 const USER_PROFILE = loader('src/graphql/queries/userProfile.query.graphql')
+const ORDERS = loader('src/graphql/queries/orders.query.graphql')
 
 interface TasteFinderProfile extends TasteProfileProps {
   coffeeType: string
@@ -39,13 +40,20 @@ interface UserProfile {
   aroma: CoffeeAroma
 }
 
+type Order = {
+  id: number
+  shopifyId: number
+}
+
 export const Profile: React.FC = () => {
   const [user] = useAuth()
   const { t } = useTranslation()
   const navigate = useNavigate()
   const [userName, setUserName] = useState<string>()
   const [userProfile, setUserProfile] = useState<UserProfile>()
+  const [lastOrder, setLastOrder] = useState<Order[]>()
   const [getUserProfile] = useLazyQuery(USER_PROFILE)
+  const [getOrders] = useLazyQuery(ORDERS)
 
   useEffect(() => {
     document.title = `${t('brand.name')} | ${t('pages.profile.title')}`
@@ -55,9 +63,14 @@ export const Profile: React.FC = () => {
     Auth.currentAuthenticatedUser()
       .then((u) => {
         setUserName(u.attributes['custom:first_name'])
+
         getUserProfile()
           .then((res) => setUserProfile(res.data.userProfile))
           .catch(() => signOut())
+
+        getOrders()
+          .then((res) => setLastOrder(res.data.orders))
+          .catch(console.log)
       })
       .catch(() => {
         navigate('/login')
@@ -159,7 +172,7 @@ export const Profile: React.FC = () => {
           <Typography as="h2" type={TypographyType.Heading} size={TypographySize.Tiny} className="mb-3">
             {t('pages.profile.sections.lastOrder.title')}
           </Typography>
-
+          <div>{lastOrder?.map((o) => o.shopifyId)}</div>
           <div className="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-6">
             <div>
               <Typography as="label" size={TypographySize.Tiny} className="font-bold">

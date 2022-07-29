@@ -330,6 +330,7 @@ exports[`Profile view Renders correctly 1`] = `
         >
           Deine letzte Bestellung
         </h2>
+        <div />
         <div
           class="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-6"
         >

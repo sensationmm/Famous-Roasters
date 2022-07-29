@@ -33,6 +33,12 @@ export class AuthSignIn extends SignIn {
     this._validAuthStates = ['signIn', 'signInError']
   }
 
+  componentDidUpdate() {
+    if (this.props.authState === 'signedIn') {
+      window.location.pathname = '/profile'
+    }
+  }
+
   signInUser = async (params: SignInParams): Promise<void> => {
     const client = famousRoastersClient()
     await Auth.signIn(params.email, params.password)
