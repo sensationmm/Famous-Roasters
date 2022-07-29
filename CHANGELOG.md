@@ -1,3 +1,10 @@
+## [1.30.5](https://github.com/Famous-Roasters/frontend/compare/v1.30.4...v1.30.5) (2022-07-29)
+
+
+### Bug Fixes
+
+* **ci:** add verbose SonarCloud scan output ([2ea6c25](https://github.com/Famous-Roasters/frontend/commit/2ea6c2523ab033ac14d434e95d3e580a2d0eaf40))
+
 ## [1.30.4](https://github.com/Famous-Roasters/frontend/compare/v1.30.3...v1.30.4) (2022-07-26)
 
 
