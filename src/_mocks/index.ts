@@ -32,6 +32,7 @@ import {
   TasteFinderMockQueryEspresso,
   TasteFinderMockQueryFilter,
 } from './TasteFinderMock'
+import { UserProfileMock } from './UserProfileMock'
 
 export { CartAddLinesMock as CartAddLinesMock }
 export { CartCreateMock as CartCreateMock }
@@ -60,3 +61,4 @@ export { TasteFinderMockEspresso as TasteFinderMockEspresso }
 export { TasteFinderMockFilter as TasteFinderMockFilter }
 export { TasteFinderMockQueryEspresso as TasteFinderMockQueryEspresso }
 export { TasteFinderMockQueryFilter as TasteFinderMockQueryFilter }
+export { UserProfileMock as UserProfileMock }

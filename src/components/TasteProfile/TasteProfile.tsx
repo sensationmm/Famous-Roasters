@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { BeanScaleTag, Dialog, Drawer, Typography, TypographySize, TypographyType } from 'src/components'
 import { toValueInHumanScale } from 'src/utils'
 
-interface TasteProfileProps {
+export interface TasteProfileProps {
   acidity: number
   bitterness: number
   body: number

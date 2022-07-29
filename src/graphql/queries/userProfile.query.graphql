@@ -1,0 +1,15 @@
+query userProfile {
+  userProfile {
+    id
+    newsletterSignup
+    email
+    tasteFinderProfile {
+      acidity
+      bitterness
+      sweetness
+      body
+      coffeeType
+    }
+    aroma
+  }
+}

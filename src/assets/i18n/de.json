@@ -785,7 +785,8 @@
       "title": "Aroma",
       "yourCoffeeType": {
         "title": "{{name}}'s Kaffeetyp",
-        "namePlaceholder": "Kaffeeliebhaber"
+        "namePlaceholder": "Kaffeeliebhaber",
+        "profileTitle": "Dein Kaffeetype"
       }
     },
     "home": {
@@ -925,7 +926,30 @@
     },
     "profile": {
       "navigation": "Profil",
-      "title": "Profil"
+      "links": {
+        "orders": "Bestellungen",
+        "account": "Konto",
+        "tasteProfile": "Geschmacksprofil",
+        "myCoffee": "Mein Kaffee"
+      },
+      "sections": {
+        "discover": {
+          "title":"Für dich zu entdecken"
+        },
+        "lastOrder":{
+          "title": "Deine letzte Bestellung",
+          "orderNumber": "Bestellnummer",
+          "totalAmount": "Summe",
+          "orderDate": "Bestelldatum",
+          "paymentStatus": "Zahlungsstatus",
+          "orderStatus": "Bestellstatus",
+          "buttonOrderPage": "Zu den Bestelldetails",
+          "buttonOrderAgain": "Nochmal bestellen"
+        }
+      },
+      "title": "Profil",
+      "greeting": "Hallo,",
+      "intro": "Willkommen in deiner privaten Kaffeeecke, in der du deine Bestellungen, Profil und Konto verwalten kannst."
     },
     "tasteFinder": {
       "navigation": "Tastefinder",

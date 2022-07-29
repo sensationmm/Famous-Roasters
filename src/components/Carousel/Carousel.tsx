@@ -5,16 +5,24 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
 import { Image } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
-import React, { useState } from 'react'
+import React, { ReactNode, useState } from 'react'
 import { A11y, Keyboard, Pagination, Swiper as SwiperNative, Thumbs } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 interface CarouselProps {
-  images: Image[]
+  images?: Image[]
+  slides?: ReactNode[]
 }
 
-export const Carousel: React.FC<CarouselProps> = ({ images }: CarouselProps) => {
+export const Carousel: React.FC<CarouselProps> = ({ images = [], slides }: CarouselProps) => {
   const [swiper, setSwiper] = useState<SwiperNative>()
+
+  if (!images && !slides) {
+    throw new Error('Either images or slides must be defined')
+  }
+
+  const content = slides || images
+  const isImages = images.length > 0
 
   return (
     <div className="grid h-fit">
@@ -37,11 +45,20 @@ export const Carousel: React.FC<CarouselProps> = ({ images }: CarouselProps) => 
           paddingBottom: 32,
         }}
       >
-        {images.map((image, idx) => (
-          <SwiperSlide key={`carousel-image-${idx}`} className="flex justify-center bg-brand-grey-whisper">
-            <img src={image.url} alt={`carousel-image-${idx}`} />
-          </SwiperSlide>
-        ))}
+        {content.map((slide, idx) => {
+          return (
+            <SwiperSlide
+              key={`carousel-image-${idx}`}
+              className={`flex justify-center ${isImages && 'bg-brand-grey-whisper'}`}
+            >
+              {images.length > 0 ? (
+                <img src={(slide as Image).url} alt={`carousel-image-${idx}`} />
+              ) : (
+                (slide as ReactNode)
+              )}
+            </SwiperSlide>
+          )
+        })}
       </Swiper>
       <div className="hidden md:grid grid-flow-col auto-cols-max gap-2">
         {images.map((image, idx) => (

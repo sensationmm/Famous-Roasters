@@ -1,5 +1,13 @@
-query tasteFinderRecommendation($profile: TasteFinderProfile!) {
-  tasteFinderRecommendation(profile: $profile, algorithm: "SQUARE_DIFFERENCE") {
+query tasteFinderRecommendation(
+  $acidity: Int!
+  $bitterness: Int!
+  $sweetness: Int!
+  $body: Int!
+  $coffeeType: String!
+) {
+  tasteFinderRecommendation(
+    profile: { acidity: $acidity, bitterness: $bitterness, sweetness: $sweetness, body: $body, coffeeType: $coffeeType }
+  ) {
     recommendations {
       shopifyId
       score

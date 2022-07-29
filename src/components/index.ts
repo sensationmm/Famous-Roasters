@@ -38,6 +38,7 @@ import { Input, InputMode } from './Input'
 import { Layout } from './Layout'
 import { Listbox, ListBoxItem } from './Listbox'
 import { Loader } from './Loader'
+import { CoffeeAroma, MyAroma } from './MyAroma'
 import { Navigation, NavigationTheme } from './Navigation'
 import { Notification } from './Notification'
 import { OriginProductionSpecs } from './OriginProductionSpecs'
@@ -46,7 +47,7 @@ import { QuantitySelect } from './QuantitySelect'
 import { StickyBottomNavigation } from './StickyBottomNavigation'
 import { TabsNavigation } from './TabsNavigation'
 import { Tag, TagSwatch, TagType } from './Tag'
-import { TasteProfile } from './TasteProfile'
+import { TasteProfile, TasteProfileProps } from './TasteProfile'
 import { Typography, TypographySize, TypographyType } from './Typography'
 
 export { AuthCognitoErrors as AuthCognitoErrors }
@@ -75,6 +76,7 @@ export { CartProvider as CartProvider }
 export { Checkbox as Checkbox }
 export { Circle as Circle }
 export { CircleType as CircleType }
+export type { CoffeeAroma as CoffeeAroma }
 export { Dialog as Dialog }
 export { Drawer as Drawer }
 export { Disclosure as Disclosure }
@@ -97,6 +99,7 @@ export { Layout as Layout }
 export { Listbox as Listbox }
 export type { ListBoxItem as ListBoxItem }
 export { Loader as Loader }
+export { MyAroma as MyAroma }
 export { Navigation as Navigation }
 export { NavigationTheme as NavigationTheme }
 export { Notification as Notification }
@@ -110,6 +113,7 @@ export { TagSwatch as TagSwatch }
 export { TagType as TagType }
 export type { TasteInfoEntry as TasteInfoEntry }
 export { TasteProfile as TasteProfile }
+export type { TasteProfileProps as TasteProfileProps }
 export { Typography as Typography }
 export { TypographyType as TypographyType }
 export { TypographySize as TypographySize }

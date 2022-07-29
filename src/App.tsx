@@ -4,7 +4,20 @@ import { I18nextProvider } from 'react-i18next'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { CartProvider } from 'src/components'
 import { famousRoastersClient, i18n, storeFrontClient } from 'src/config'
-import { Auth, Cart, Catalogue, Error, FeaturedProduct, Home, Product, Profile, TasteFinder } from 'src/views'
+import {
+  Auth,
+  Cart,
+  Catalogue,
+  Error,
+  FeaturedProduct,
+  Home,
+  Product,
+  Profile,
+  ProfileSub,
+  TasteFinder,
+} from 'src/views'
+
+import ScrollToTop from './ScrollToTop'
 
 const App = () => {
   return (
@@ -12,6 +25,7 @@ const App = () => {
       <CartProvider>
         <I18nextProvider i18n={i18n}>
           <BrowserRouter>
+            <ScrollToTop />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/cart" element={<Cart />} />
@@ -30,7 +44,15 @@ const App = () => {
               <Route path="/register" element={<Auth authState={'signUp'} />} />
               <Route path="/register-confirm" element={<Auth authState={'confirmSignUp'} />} />
               <Route path="/reset-password" element={<Auth authState={'forgotPassword'} />} />
-              <Route path="/profile" element={<Profile />} />
+              <Route
+                path="/profile"
+                element={
+                  <ApolloProvider client={famousRoastersClient()}>
+                    <Profile />
+                  </ApolloProvider>
+                }
+              />
+              <Route path="/profile/:slug" element={<ProfileSub />} />
               <Route path="*" element={<Error />} />
             </Routes>
           </BrowserRouter>

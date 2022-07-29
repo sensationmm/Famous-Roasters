@@ -1,8 +1,10 @@
-import { getGuideImages, TasteProfile } from '.'
+import { TasteProfileProps } from 'src/components'
+
+import { getGuideImages } from '.'
 
 describe('Featured product helper', () => {
   it('getGuideImages works correctly for lo values', () => {
-    const tasteProfileResults: TasteProfile = {
+    const tasteProfileResults: TasteProfileProps = {
       acidity: 1,
       bitterness: 1,
       sweetness: 1,
@@ -16,7 +18,7 @@ describe('Featured product helper', () => {
     ])
   })
   it('getGuideImages works correctly for mid values', () => {
-    const tasteProfileResults: TasteProfile = {
+    const tasteProfileResults: TasteProfileProps = {
       acidity: 5,
       bitterness: 5,
       sweetness: 5,
@@ -30,7 +32,7 @@ describe('Featured product helper', () => {
     ])
   })
   it('getGuideImages works correctly for hi values', () => {
-    const tasteProfileResults: TasteProfile = {
+    const tasteProfileResults: TasteProfileProps = {
       acidity: 9,
       bitterness: 9,
       sweetness: 9,

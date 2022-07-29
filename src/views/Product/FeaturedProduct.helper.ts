@@ -10,16 +10,9 @@ import bitternessHi from 'src/assets/images/tasteFinder/03-chocolate-hoch.webp'
 import bodyHi from 'src/assets/images/tasteFinder/03-coffee-hoch.webp'
 import acidityHigh from 'src/assets/images/tasteFinder/03-fruit-hoch.webp'
 import sweetnessHi from 'src/assets/images/tasteFinder/03-sweet-hoch.webp'
-import { TasteInfoEntry } from 'src/components'
+import { TasteInfoEntry, TasteProfileProps } from 'src/components'
 
-export interface TasteProfile {
-  acidity: number
-  bitterness: number
-  body: number
-  sweetness: number
-}
-
-export const getGuideImages = (tasteFinderResult: TasteProfile): string[] => {
+export const getGuideImages = (tasteFinderResult: TasteProfileProps): string[] => {
   const guideImages: string[] = []
   const { acidity, bitterness, sweetness, body } = tasteFinderResult
 
@@ -43,7 +36,7 @@ export const getGuideImages = (tasteFinderResult: TasteProfile): string[] => {
   return guideImages
 }
 
-export const getTasteResults = (tasteFinderResult: TasteProfile): TasteInfoEntry[] => {
+export const getTasteResults = (tasteFinderResult: TasteProfileProps): TasteInfoEntry[] => {
   return [
     {
       key: 'acidity',

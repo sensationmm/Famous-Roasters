@@ -1,4 +1,5 @@
 import { ApolloClient, ApolloLink, createHttpLink, from, InMemoryCache, NormalizedCacheObject } from '@apollo/client'
+import { setContext } from '@apollo/client/link/context'
 
 export const storeFrontClient = (): ApolloClient<NormalizedCacheObject> => {
   return new ApolloClient({
@@ -23,17 +24,25 @@ export const storeFrontClient = (): ApolloClient<NormalizedCacheObject> => {
   })
 }
 
+const httpLink = createHttpLink({
+  uri: process.env.REACT_APP_FAMOUS_ROASTERS_GRAPHQL_ENDPOINT,
+})
+
+const authLink = setContext((_, { headers }) => {
+  // get the authentication token from local storage if it exists
+  const token = localStorage.getItem('authToken')
+  // return the headers to the context so httpLink can read them
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  }
+})
+
 export const famousRoastersClient = (): ApolloClient<NormalizedCacheObject> => {
   return new ApolloClient({
     cache: new InMemoryCache(),
-    link: from([
-      createHttpLink({
-        uri: process.env.REACT_APP_FAMOUS_ROASTERS_GRAPHQL_ENDPOINT,
-        headers: {
-          Accept: 'application/graphql',
-        },
-        fetch,
-      }) as unknown as ApolloLink,
-    ]),
+    link: authLink.concat(httpLink),
   })
 }

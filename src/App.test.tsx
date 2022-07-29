@@ -3,6 +3,8 @@ import React from 'react'
 
 import App from './App'
 
+window.scrollTo = jest.fn()
+
 describe('App', () => {
   it('Renders correctly', async () => {
     const { container } = render(<App />)

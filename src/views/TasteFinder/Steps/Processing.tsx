@@ -81,9 +81,7 @@ export const Processing: React.FC<TasteFinderFieldHandlerProps> = ({
 
   const getRecommendation = () => {
     getTasteFinderRecommendation({
-      variables: {
-        profile: propsToProfile(currentData),
-      },
+      variables: propsToProfile(currentData),
     })
       .then((data) => {
         updateData({ name: 'recommendations', value: data.data.tasteFinderRecommendation.recommendations })

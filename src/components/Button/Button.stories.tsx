@@ -36,4 +36,5 @@ Tertiary.args = {
   emphasis: Emphasis.Tertiary,
   children: 'Button',
   hasArrow: false,
+  center: false,
 }

@@ -4,33 +4,27 @@ import { loader } from 'graphql.macro'
 import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useParams } from 'react-router-dom'
-import Chocolate from 'src/assets/images/coffeeProfile/Chocolate.webp'
-import Experimental from 'src/assets/images/coffeeProfile/Experimental.webp'
-import Floral from 'src/assets/images/coffeeProfile/Floral.webp'
-import Fruits from 'src/assets/images/coffeeProfile/Fruits.webp'
-import Spicy from 'src/assets/images/coffeeProfile/Spicy.webp'
 import {
   Button,
   ButtonEmphasis,
   ButtonSize,
-  Circle,
-  CircleType,
+  CoffeeAroma,
   ErrorPrompt,
-  Guide,
-  GuideType,
   Layout,
   Loader,
+  MyAroma,
   ProductTile,
   Tag,
   TagType,
+  TasteProfileProps,
   Typography,
   TypographySize,
   TypographyType,
 } from 'src/components'
-import { getAPIProductId, getAromaKey, toRoundedValueInRealScale, useLocalStorage } from 'src/utils'
+import { getAPIProductId, toRoundedValueInRealScale, useLocalStorage } from 'src/utils'
 
 import { TasteFinderField } from '../TasteFinder'
-import { getGuideImages, getTasteResults, ProductQuery, TasteProfile } from '.'
+import { ProductQuery } from '.'
 
 export const FeaturedProduct: React.FC = () => {
   const { id } = useParams()
@@ -53,7 +47,7 @@ export const FeaturedProduct: React.FC = () => {
 
   const { aroma, images, title, whyThisCoffee } = data?.product || {}
 
-  const tasteProfileResults: TasteProfile = {
+  const tasteProfileResults: TasteProfileProps = {
     acidity: tasteFinderDataJSON
       ? toRoundedValueInRealScale(parseInt(tasteFinderData.find((el: TasteFinderField) => el.name === 'acidity').value))
       : 0,
@@ -101,69 +95,10 @@ export const FeaturedProduct: React.FC = () => {
     )
   }
 
-  const renderYourCoffeeTypeBlock = (aromaValue: string) => {
-    const aromaKey = getAromaKey(aromaValue)
-
-    const getArtworkSrc = () => {
-      switch (aromaKey) {
-        case 'floral':
-          return Floral
-        case 'fruits':
-          return Fruits
-        case 'chocolate':
-          return Chocolate
-        case 'spicy':
-          return Spicy
-        default:
-          return Experimental
-      }
-    }
-
-    const name =
-      tasteFinderData && tasteFinderData.find((el: TasteFinderField) => el.name === 'name')
-        ? tasteFinderData.find((el: TasteFinderField) => el.name === 'name').value
-        : t('pages.featuredProduct.yourCoffeeType.namePlaceholder')
-
-    return (
-      <div className="grid grid-cols-1 md:grid-cols-2 items-end">
-        <div className="relative w-52 h-40 mx-auto md:order-2 md:w-64 md:h-52 xl:w-80 xl:h-64">
-          <div className="w-40 h-40 top-0 left-6 absolute rounded-full bg-brand-grey-whisper md:w-52 md:h-52 xl:w-64 xl:h-64" />
-          <img src={getArtworkSrc()} alt={aromaValue} className="absolute w-52 top-5 md:w-64 xl:w-80" />
-        </div>
-        <div className="md:order-1">
-          <div className="flex items-center justify-center md:flex-col md:justify-start md:items-start">
-            <Circle type={CircleType.Aroma} value={aromaValue} className="flex-shrink-0 mr-2 md:mr-0" />
-            <Typography
-              as="h1"
-              type={TypographyType.Heading}
-              size={TypographySize.Small}
-              className="font-syne md:mt-2 md:text-3xl md:leading-10 xl:text-4xl xl:leading-10"
-            >
-              {aromaValue}
-            </Typography>
-          </div>
-          <div className="flex items-center justify-center mt-2 md:justify-start">
-            <Typography className="text-coreUI-text-secondary">
-              {t('pages.featuredProduct.yourCoffeeType.title', { name: name })}
-            </Typography>
-          </div>
-          <div className="flex items-center justify-center mt-2 md:justify-start">
-            <Typography className="text-center md:text-left">
-              {t(`pages.featuredProduct.items.${aromaKey}.description`)}
-            </Typography>
-          </div>
-          <Guide
-            screenKey="tasteResults"
-            listGuideItems={4}
-            guideType={GuideType.TasteResults}
-            images={getGuideImages(tasteProfileResults)}
-            tasteResults={getTasteResults(tasteProfileResults)}
-            className="mt-6"
-          />
-        </div>
-      </div>
-    )
-  }
+  const name =
+    tasteFinderData && tasteFinderData?.find((el: TasteFinderField) => el.name === 'name')
+      ? tasteFinderData.find((el: TasteFinderField) => el.name === 'name').value
+      : undefined
 
   const renderRecommendationBlock = () => {
     const parseWhyThisCoffee = (value: string) => {
@@ -258,7 +193,17 @@ export const FeaturedProduct: React.FC = () => {
   return (
     <Layout>
       <main className="flex flex-col w-full bg-white mt-8 mb-8">
-        <div className="w-full max-w-7xl mx-auto px-6 xl:px-8">{aroma && renderYourCoffeeTypeBlock(aroma.value)}</div>
+        <div className="w-full max-w-7xl mx-auto px-6 xl:px-8">
+          {aroma && (
+            <MyAroma
+              aroma={aroma.value as CoffeeAroma}
+              tasteProfileResults={tasteProfileResults}
+              showInfo
+              showGuide
+              name={name}
+            />
+          )}
+        </div>
         <div className="border-t border-brand-grey-whisper mt-8" />
         <div className="w-full max-w-7xl mx-auto mt-8 px-6 xl:px-8">{renderRecommendationBlock()}</div>
       </main>

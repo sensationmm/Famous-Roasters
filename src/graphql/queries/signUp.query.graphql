@@ -1,0 +1,6 @@
+query signUp($accessToken: String!) {
+  signUp(cognitoAccessToken: $accessToken) {
+    id
+    email
+  }
+}

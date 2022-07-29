@@ -9,6 +9,8 @@ import {
   ButtonEmphasis,
   ButtonSize,
   CartContext,
+  Icon,
+  IconName,
   Notification,
   Typography,
   TypographySize,
@@ -32,11 +34,13 @@ interface NavigationDataItem {
 interface NavigationData {
   pagesPrimary: NavigationDataItem[]
   pagesSecondary: NavigationDataItem[]
+  pagesMobile: NavigationDataItem[]
 }
 
 const navigationData: NavigationData = {
   pagesPrimary: [{ key: 'tasteFinder', href: '/taste-finder' }],
   pagesSecondary: [{ key: 'about', href: '//www.60beans.de/uber-uns' }],
+  pagesMobile: [{ key: 'profile', href: '/profile' }],
 }
 
 export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps) => {
@@ -67,7 +71,7 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
 
   const renderMenuItemsMobile = (data: NavigationDataItem[]) =>
     data.map((page) => (
-      <div key={page.key} className="flow-root">
+      <div key={page.key} className="flow-root border-b border-coreUI-border py-6">
         <Link to={page.href} className="-m-2 p-2 block font-medium text-gray-900">
           {t(`pages.${page.key}.navigation`)}
         </Link>
@@ -115,16 +119,10 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
                 </button>
               </div>
 
-              <div className="border-t border-coreUI-border py-6 px-4 space-y-6">
+              <div className="border-t border-coreUI-border px-4">
                 {renderMenuItemsMobile(navigationData.pagesPrimary)}
-                <div className="border-t border-coreUI-border" />
                 {renderMenuItemsMobile(navigationData.pagesSecondary)}
-                <div className="border-t border-coreUI-border" />
-                {/*<div className="flow-root">
-                  <Link to="/account" className="-m-2 p-2 block font-medium text-gray-900">
-                    {t(`pages.account.navigation`)}
-                  </Link>
-                </div>*/}
+                {renderMenuItemsMobile(navigationData.pagesMobile)}
               </div>
             </div>
           </Transition.Child>
@@ -188,11 +186,9 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
                   ))}
                 </div>
 
-                {/* Account */}
-                {/*<Link to="/account" className="hidden xl:block p-2 text-gray-400 hover:text-gray-500 xl:ml-6">
-                  <span className="sr-only">{t(`pages.account.navigation`)}</span>
-                  <UserIcon className="w-6 h-6" aria-hidden="true" />
-                </Link>*/}
+                <Link to={'/profile'} className="hidden xl:block ml-4">
+                  <Icon name={IconName.Profile} />
+                </Link>
 
                 {/* Cart */}
                 <div className="ml-4 flow-root xl:ml-6">

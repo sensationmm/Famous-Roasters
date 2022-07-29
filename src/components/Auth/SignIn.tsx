@@ -1,6 +1,7 @@
 import Auth from '@aws-amplify/auth'
 import { SignIn } from 'aws-amplify-react'
 import { IAuthPieceProps } from 'aws-amplify-react/lib-esm/Auth/AuthPiece'
+import { loader } from 'graphql.macro'
 import Form from 'rc-field-form'
 import React from 'react'
 import {
@@ -18,7 +19,8 @@ import {
   TypographySize,
   TypographyType,
 } from 'src/components'
-import i18n from 'src/config/i18n'
+import { famousRoastersClient, i18n } from 'src/config'
+const SIGN_UP = loader('src/graphql/queries/signUp.query.graphql')
 
 interface SignInParams {
   email: string
@@ -32,10 +34,21 @@ export class AuthSignIn extends SignIn {
   }
 
   signInUser = async (params: SignInParams): Promise<void> => {
+    const client = famousRoastersClient()
     await Auth.signIn(params.email, params.password)
-      .then(() => {
-        this.changeState('signedIn', params.email)
-        window.location.reload()
+      .then((res) => {
+        client
+          .query({
+            query: SIGN_UP,
+            variables: {
+              accessToken: res.signInUserSession.accessToken.jwtToken,
+            },
+          })
+          .then(() => {
+            this.changeState('signedIn', params.email)
+            window.localStorage.setItem('authToken', res.signInUserSession.accessToken.jwtToken)
+            window.location.reload()
+          })
       })
       .catch((error) => {
         if (
