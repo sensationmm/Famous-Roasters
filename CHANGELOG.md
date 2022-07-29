@@ -1,3 +1,11 @@
+# [1.31.0](https://github.com/Famous-Roasters/frontend/compare/v1.30.5...v1.31.0) (2022-07-29)
+
+
+### Features
+
+* **profile orders:** add mock data ([55144d0](https://github.com/Famous-Roasters/frontend/commit/55144d028393fc06569744728b45f89577737a2e))
+* **user profile:** last order ([bf5b067](https://github.com/Famous-Roasters/frontend/commit/bf5b06752e6eb11d02731e50fc8cc5a7d02fa101))
+
 ## [1.30.5](https://github.com/Famous-Roasters/frontend/compare/v1.30.4...v1.30.5) (2022-07-29)
 
 
