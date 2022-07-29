@@ -4,7 +4,7 @@ import Amplify from 'aws-amplify'
 import React from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { MemoryRouter } from 'react-router-dom'
-import { UserProfileMock } from 'src/_mocks'
+import { OrdersMock, UserProfileMock } from 'src/_mocks'
 import { i18n } from 'src/config'
 import { awsconfig } from 'src/config/cognito/auth.hook'
 
@@ -23,7 +23,7 @@ describe('Profile view', () => {
     const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
-        mocks={[UserProfileMock]}
+        mocks={[UserProfileMock, OrdersMock]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>

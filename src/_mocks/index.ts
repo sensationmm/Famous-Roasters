@@ -17,6 +17,7 @@ import {
   CatalogueMocksPagination,
 } from './CatalogueMock'
 import { FilterAttributesMock, FilterAttributesMockError } from './FilterAttributesMock'
+import { OrdersMock } from './OrdersMock'
 import {
   ProductMock,
   ProductMockData,
@@ -48,6 +49,7 @@ export { CatalogueMocksPagination as CatalogueMocksPagination }
 export { CatalogueMockError as CatalogueMockError }
 export { CatalogueMockMissingData as CatalogueMockMissingData }
 export { CatalogueMockSimilar as CatalogueMockSimilar }
+export { OrdersMock as OrdersMock }
 export { ProductMock as ProductMock }
 export { ProductMockError as ProductMockError }
 export { ProductMockData as ProductMockData }
