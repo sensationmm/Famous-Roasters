@@ -1,3 +1,10 @@
+## [1.33.2](https://github.com/Famous-Roasters/frontend/compare/v1.33.1...v1.33.2) (2022-08-01)
+
+
+### Bug Fixes
+
+* **user profile:** correct access token header ([aa497bb](https://github.com/Famous-Roasters/frontend/commit/aa497bbb0c83b5b1cb7afe9f209254b387ca61b1))
+
 ## [1.33.1](https://github.com/Famous-Roasters/frontend/compare/v1.33.0...v1.33.1) (2022-08-01)
 
 
