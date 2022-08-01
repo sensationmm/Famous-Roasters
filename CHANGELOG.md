@@ -1,3 +1,10 @@
+## [1.33.1](https://github.com/Famous-Roasters/frontend/compare/v1.33.0...v1.33.1) (2022-08-01)
+
+
+### Bug Fixes
+
+* **user profile:** try again with the admin endpoint ([b3e7c1d](https://github.com/Famous-Roasters/frontend/commit/b3e7c1d85fe3aea6b7294c6a6c82305d8161484b))
+
 # [1.33.0](https://github.com/Famous-Roasters/frontend/compare/v1.32.0...v1.33.0) (2022-08-01)
 
 
