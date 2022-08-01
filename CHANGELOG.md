@@ -1,3 +1,10 @@
+# [1.32.0](https://github.com/Famous-Roasters/frontend/compare/v1.31.0...v1.32.0) (2022-08-01)
+
+
+### Features
+
+* **profile orders:** test get shopify orders ([92ebd65](https://github.com/Famous-Roasters/frontend/commit/92ebd65e9d65bebf7c99ec7e1d6ddae4912a3aba))
+
 # [1.31.0](https://github.com/Famous-Roasters/frontend/compare/v1.30.5...v1.31.0) (2022-07-29)
 
 
