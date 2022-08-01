@@ -940,6 +940,7 @@
           "title": "Deine letzte Bestellung",
           "orderNumber": "Bestellnummer",
           "totalAmount": "Summe",
+          "discount": "Discount code",
           "orderDate": "Bestelldatum",
           "paymentStatus": "Zahlungsstatus",
           "orderStatus": "Bestellstatus",
@@ -1074,6 +1075,29 @@
           "title": "Wie sollen wir dich nennen?"
         }
       }
+    }
+  },
+  "shopify": {
+    "paymentStatus": {
+      "PENDING": "Pending",
+      "AUTHORIZED": "Authorized",
+      "PARTIALLY_PAID": "Paid",
+      "PARTIALLY_REFUNDED": "Refunded",
+      "VOIDED": "Voided",
+      "PAID": "Paid",
+      "REFUNDED": "Refunded",
+      "EXPIRED": "Expired"
+    },
+    "deliveryStatus": {
+      "UNFULFILLED": "Unfulfilled",
+      "PARTIALLY_FULFILLED": "Partially fulfilled",
+      "FULFILLED": "Fulfilled",
+      "RESTOCKED": "Restocked",
+      "PENDING_FULFILLMENT": "Pending fulfillment",
+      "OPEN": "Open",
+      "IN_PROGRESS": "In progress",
+      "ON_HOLD": "On hold",
+      "SCHEDULED": "Scheduled"
     }
   }
 }

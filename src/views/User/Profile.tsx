@@ -4,7 +4,6 @@ import { loader } from 'graphql.macro'
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useNavigate } from 'react-router-dom'
-import { ProductMockData } from 'src/_mocks/ProductMock'
 import CoffeeTaste from 'src/assets/images/profile/coffee-taste.png'
 import Myanmar from 'src/assets/images/profile/myanmar.png'
 import {
@@ -18,7 +17,7 @@ import {
   Loader,
   MyAroma,
   NavigationTheme,
-  ProductTile,
+  OrderTile,
   TasteProfileProps,
   Typography,
   TypographySize,
@@ -27,6 +26,10 @@ import {
 import { useAuth } from 'src/config/cognito'
 const USER_PROFILE = loader('src/graphql/queries/userProfile.query.graphql')
 const ORDERS = loader('src/graphql/queries/orders.query.graphql')
+const ORDER_DETAILS = loader('src/graphql/queries/order.query.graphql')
+import { OrderMock } from 'src/_mocks'
+import { adminClient } from 'src/config/apollo'
+import { formatDate, formatPrice } from 'src/utils'
 
 interface TasteFinderProfile extends TasteProfileProps {
   coffeeType: string
@@ -40,9 +43,39 @@ interface UserProfile {
   aroma: CoffeeAroma
 }
 
+export type OrderVariant = {
+  node: {
+    id: string
+    title: string
+    image: {
+      url: string
+    }
+    quantity: number
+    variant: {
+      id: string
+      title: string
+      price: string
+      weight: number
+    }
+  }
+}
+
 type Order = {
-  id: number
-  shopifyId: number
+  id: string
+  name: string
+  createdAt: string
+  displayFulfillmentStatus: string
+  displayFinancialStatus: string
+  totalPriceSet: {
+    shopMoney: {
+      amount: string
+      currencyCode: string
+    }
+  }
+  discountCode: string
+  lineItems: {
+    edges: OrderVariant[]
+  }
 }
 
 export const Profile: React.FC = () => {
@@ -51,9 +84,11 @@ export const Profile: React.FC = () => {
   const navigate = useNavigate()
   const [userName, setUserName] = useState<string>()
   const [userProfile, setUserProfile] = useState<UserProfile>()
-  const [lastOrder, setLastOrder] = useState<Order[]>()
+  const [lastOrder] = useState<Order>(OrderMock.result.data.order)
   const [getUserProfile] = useLazyQuery(USER_PROFILE)
   const [getOrders] = useLazyQuery(ORDERS)
+
+  const shopifyAdminClient = adminClient()
 
   useEffect(() => {
     document.title = `${t('brand.name')} | ${t('pages.profile.title')}`
@@ -69,7 +104,22 @@ export const Profile: React.FC = () => {
           .catch(() => signOut())
 
         getOrders()
-          .then((res) => setLastOrder(res.data.orders))
+          .then((res) => {
+            const lastOrderIndex = res.data.orders.length - 1
+            const lastOrder = res.data.orders[lastOrderIndex].shopifyId
+
+            shopifyAdminClient
+              .query({
+                query: ORDER_DETAILS,
+                variables: {
+                  id: lastOrder,
+                },
+              })
+              .then((res) => {
+                console.log(res)
+              })
+              .catch(console.log)
+          })
           .catch(console.log)
       })
       .catch(() => {
@@ -95,7 +145,6 @@ export const Profile: React.FC = () => {
 
     return classNames.join(' ')
   }
-
   return (
     <Layout navigationTheme={NavigationTheme.Home}>
       <main className="flex flex-col flex-grow w-full items-start bg-white mt-4y">
@@ -168,64 +217,89 @@ export const Profile: React.FC = () => {
           </Button>
         </div>
 
-        <div className={sectionStyle()}>
-          <Typography as="h2" type={TypographyType.Heading} size={TypographySize.Tiny} className="mb-3">
-            {t('pages.profile.sections.lastOrder.title')}
-          </Typography>
-          <div>{lastOrder?.map((o) => o.shopifyId)}</div>
-          <div className="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-6">
-            <div>
-              <Typography as="label" size={TypographySize.Tiny} className="font-bold">
-                {t('pages.profile.sections.lastOrder.orderNumber')}
-              </Typography>
-              <br />
-              <Typography size={TypographySize.Tiny}>123455#</Typography>
+        {lastOrder ? (
+          <div className={sectionStyle()}>
+            <Typography as="h2" type={TypographyType.Heading} size={TypographySize.Tiny} className="mb-3">
+              {t('pages.profile.sections.lastOrder.title')}
+            </Typography>
+            <div className="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-6">
+              <div>
+                <Typography as="label" size={TypographySize.Tiny} className="font-bold">
+                  {t('pages.profile.sections.lastOrder.orderNumber')}
+                </Typography>
+                <br />
+                <Typography size={TypographySize.Tiny}>{lastOrder.name}</Typography>
+              </div>
+              <div>
+                <Typography as="label" size={TypographySize.Tiny} className="font-bold">
+                  {t('pages.profile.sections.lastOrder.totalAmount')}
+                </Typography>
+                <br />
+                <Typography size={TypographySize.Tiny}>
+                  {formatPrice(
+                    lastOrder.totalPriceSet.shopMoney.amount,
+                    lastOrder.totalPriceSet.shopMoney.currencyCode,
+                  )}
+                </Typography>
+              </div>
+              {lastOrder.discountCode && (
+                <div>
+                  <Typography as="label" size={TypographySize.Tiny} className="font-bold">
+                    {t('pages.profile.sections.lastOrder.discount')}
+                  </Typography>
+                  <br />
+                  <Typography size={TypographySize.Tiny}>{lastOrder.discountCode}</Typography>
+                </div>
+              )}
+              <div>
+                <Typography as="label" size={TypographySize.Tiny} className="font-bold">
+                  {t('pages.profile.sections.lastOrder.orderDate')}
+                </Typography>
+                <br />
+                <Typography size={TypographySize.Tiny}>{formatDate(lastOrder.createdAt)}</Typography>
+              </div>
+              <div>
+                <Typography as="label" size={TypographySize.Tiny} className="font-bold">
+                  {t('pages.profile.sections.lastOrder.paymentStatus')}
+                </Typography>
+                <br />
+                <Typography size={TypographySize.Tiny}>
+                  {t(`shopify.paymentStatus.${lastOrder.displayFinancialStatus}`)}
+                </Typography>
+              </div>
+              <div>
+                <Typography as="label" size={TypographySize.Tiny} className="font-bold">
+                  {t('pages.profile.sections.lastOrder.orderStatus')}
+                </Typography>
+                <br />
+                <Typography size={TypographySize.Tiny}>
+                  {t(`shopify.deliveryStatus.${lastOrder.displayFulfillmentStatus}`)}
+                </Typography>
+              </div>
             </div>
-            <div>
-              <Typography as="label" size={TypographySize.Tiny} className="font-bold">
-                {t('pages.profile.sections.lastOrder.totalAmount')}
-              </Typography>
-              <br />
-              <Typography size={TypographySize.Tiny}>37,38 €</Typography>
-            </div>
-            <div>
-              <Typography as="label" size={TypographySize.Tiny} className="font-bold">
-                {t('pages.profile.sections.lastOrder.orderDate')}
-              </Typography>
-              <br />
-              <Typography size={TypographySize.Tiny}>Mo, 01.02.2022</Typography>
-            </div>
-            <div>
-              <Typography as="label" size={TypographySize.Tiny} className="font-bold">
-                {t('pages.profile.sections.lastOrder.paymentStatus')}
-              </Typography>
-              <br />
-              <Typography size={TypographySize.Tiny}>Paid</Typography>
-            </div>
-            <div>
-              <Typography as="label" size={TypographySize.Tiny} className="font-bold">
-                {t('pages.profile.sections.lastOrder.orderStatus')}
-              </Typography>
-              <br />
-              <Typography size={TypographySize.Tiny}>Out for delivery</Typography>
-            </div>
-          </div>
 
-          <div className="pt-2 pb-8">
-            <Carousel
-              slides={[<ProductTile productNode={ProductMockData} />, <ProductTile productNode={ProductMockData} />]}
-            />
-          </div>
+            <div className="pt-2 pb-8">
+              <Carousel
+                slides={lastOrder.lineItems.edges.map((item) => (
+                  <OrderTile node={item.node} />
+                ))}
+              />
+            </div>
 
-          <div className="grid gap-4 mb-8">
-            <Button emphasis={ButtonEmphasis.Tertiary} center>
-              {t('pages.profile.sections.lastOrder.buttonOrderPage')}
-            </Button>
-            <Button emphasis={ButtonEmphasis.Secondary} center>
-              {t('pages.profile.sections.lastOrder.buttonOrderAgain')}
-            </Button>
+            <div className="grid gap-4 mb-8">
+              <Button emphasis={ButtonEmphasis.Tertiary} center disabled>
+                {t('pages.profile.sections.lastOrder.buttonOrderPage')}
+              </Button>
+              <Button emphasis={ButtonEmphasis.Secondary} center disabled>
+                {t('pages.profile.sections.lastOrder.buttonOrderAgain')}
+              </Button>
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className={`${sectionStyle(true)}`}>
+            <Loader />
+          </div>
+        )}
 
         <div className={sectionStyle()}>
           <Typography as="h2" type={TypographyType.Heading} size={TypographySize.Tiny}>
