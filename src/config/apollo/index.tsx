@@ -13,7 +13,7 @@ export const adminClient = (): ApolloClient<NormalizedCacheObject> => {
 
     link: from([
       createHttpLink({
-        uri: process.env.REACT_APP_SHOPIFY_STOREFRONT_GRAPHQL_ENDPOINT,
+        uri: process.env.REACT_APP_SHOPIFY_ADMIN_ACCESS_TOKEN,
         headers: {
           'X-Shopify-Storefront-Access-Token': process.env.REACT_APP_SHOPIFY_ADMIN_ACCESS_TOKEN,
           Accept: 'application/graphql',
