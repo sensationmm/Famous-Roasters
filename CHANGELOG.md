@@ -1,3 +1,10 @@
+# [1.33.0](https://github.com/Famous-Roasters/frontend/compare/v1.32.0...v1.33.0) (2022-08-01)
+
+
+### Features
+
+* **user profile:** correct admin client uri ([382c8ca](https://github.com/Famous-Roasters/frontend/commit/382c8ca8cf19f60548c22cb07778125031e9f61d))
+
 # [1.32.0](https://github.com/Famous-Roasters/frontend/compare/v1.31.0...v1.32.0) (2022-08-01)
 
 
