@@ -1,3 +1,11 @@
+# [1.35.0](https://github.com/Famous-Roasters/frontend/compare/v1.34.1...v1.35.0) (2022-08-02)
+
+
+### Features
+
+* **carousel:** make tiling optional ([22ba8e2](https://github.com/Famous-Roasters/frontend/commit/22ba8e2524c133ccff286472420a84be67cba5ca))
+* **user profile:** orders carousel ([db04974](https://github.com/Famous-Roasters/frontend/commit/db04974f5cd7652b9502c9a5e70d2b53b8e73787))
+
 ## [1.34.1](https://github.com/Famous-Roasters/frontend/compare/v1.34.0...v1.34.1) (2022-08-02)
 
 
