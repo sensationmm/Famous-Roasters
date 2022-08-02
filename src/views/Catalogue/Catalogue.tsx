@@ -400,8 +400,8 @@ export const Catalogue: React.FC = () => {
         <div className="hidden md:flex gap-x-4">
           <div className="md:w-1/4">{renderListboxFilter('aroma', false)}</div>
           <div className="md:w-1/4">{renderListboxFilter('beanType', false)}</div>
-          <div className="md:w-1/4">{renderListboxFilter('vendor', false)}</div>
           <div className="md:w-1/4">{renderListboxFilter('origin', true)}</div>
+          <div className="md:w-1/4">{renderListboxFilter('vendor', false)}</div>
           <div className="md:w-1/4">{renderListboxFilter('packageSize', false)}</div>
         </div>
         <div className="flex gap-x-4 justify-end">

@@ -445,7 +445,7 @@
         },
         "decaf": "Nur Entkoffeiniert",
         "origin": {
-          "label": "Herkunft",
+          "label": "Ursprung",
           "values": {
             "AC":"Ascension",
             "AD":"Andorra",
@@ -707,7 +707,7 @@
           }
         },
         "packageSize": {
-          "label": "Packungsgröße"
+          "label": "Verpackungsgröße"
         },
         "pricePerKg": {
           "label": "Preis je Kg"
@@ -722,11 +722,11 @@
           }
         },
         "aroma": {
-          "label": "Geschmacksprofile",
+          "label": "Geschmacksprofil",
           "values": {}
         },
         "vendor": {
-          "label": "Röster"
+          "label": "Rösterei"
         }
       },
       "navigation": "Shop",
