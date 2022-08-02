@@ -940,7 +940,7 @@
           "title": "Deine letzte Bestellung",
           "orderNumber": "Bestellnummer",
           "totalAmount": "Summe",
-          "discount": "Discount code",
+          "discount": "Rabattcode",
           "orderDate": "Bestelldatum",
           "paymentStatus": "Zahlungsstatus",
           "orderStatus": "Bestellstatus",
@@ -1079,25 +1079,25 @@
   },
   "shopify": {
     "paymentStatus": {
-      "PENDING": "Pending",
-      "AUTHORIZED": "Authorized",
-      "PARTIALLY_PAID": "Paid",
-      "PARTIALLY_REFUNDED": "Refunded",
-      "VOIDED": "Voided",
-      "PAID": "Paid",
-      "REFUNDED": "Refunded",
-      "EXPIRED": "Expired"
+      "PENDING": "Ausstehend",
+      "AUTHORIZED": "Authorisiert",
+      "PARTIALLY_PAID": "Bezahlt",
+      "PARTIALLY_REFUNDED": "Teilweise erstattet",
+      "VOIDED": "Storniert",
+      "PAID": "Bezahlt",
+      "REFUNDED": "Erstattet",
+      "EXPIRED": "Abgelaufen"
     },
     "deliveryStatus": {
-      "UNFULFILLED": "Unfulfilled",
-      "PARTIALLY_FULFILLED": "Partially fulfilled",
-      "FULFILLED": "Fulfilled",
-      "RESTOCKED": "Restocked",
-      "PENDING_FULFILLMENT": "Pending fulfillment",
-      "OPEN": "Open",
-      "IN_PROGRESS": "In progress",
-      "ON_HOLD": "On hold",
-      "SCHEDULED": "Scheduled"
+      "UNFULFILLED": "Ausstehend",
+      "PARTIALLY_FULFILLED": "Teilweise geliefert",
+      "FULFILLED": "Geliefert",
+      "RESTOCKED": "Aufgestockt",
+      "PENDING_FULFILLMENT": "Lieferung pausiert",
+      "OPEN": "Offen",
+      "IN_PROGRESS": "In Bearbeitung",
+      "ON_HOLD": "Pausiert",
+      "SCHEDULED": "Terminiert"
     }
   }
 }

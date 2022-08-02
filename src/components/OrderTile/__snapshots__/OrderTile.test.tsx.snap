@@ -1,9 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Product Tile component Renders correctly 1`] = `
+exports[`Order Tile component Renders correctly 1`] = `
 <div>
   <div
     class="flex pt-8 md:px-6"
+    data-testid="wrapper"
   >
     <div
       class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
@@ -43,7 +44,55 @@ exports[`Product Tile component Renders correctly 1`] = `
           class="text-coreUI-text-secondary text-xs leading-4"
         >
           (
-          0,04 €
+          47,60 €
+          /kg)
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Order Tile component Renders correctly for multi item order 1`] = `
+<div>
+  <div
+    class="flex pt-8 md:px-6"
+    data-testid="wrapper"
+  >
+    <div
+      class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+    >
+      <div
+        class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+      >
+        <img
+          alt="Chakra Warmi"
+          class="w-28 max-h-28"
+          src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/CHAKRA-WARMI_Square-scaled.webp?v=1657545324"
+        />
+      </div>
+    </div>
+    <div
+      class="pl-4"
+    >
+      <div
+        class="text-base leading-6 font-semibold"
+      >
+        2 x Chakra Warmi
+      </div>
+      <div
+        class="flex items-baseline"
+      >
+        <span
+          class="mr-1 text-base leading-6 font-semibold"
+        >
+          14,50 €
+        </span>
+        <span
+          class="text-coreUI-text-secondary text-xs leading-4"
+        >
+          (
+          53,70 €
           /kg)
         </span>
       </div>

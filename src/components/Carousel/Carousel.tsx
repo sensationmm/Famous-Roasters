@@ -44,6 +44,14 @@ export const Carousel: React.FC<CarouselProps> = ({ images = [], slides }: Carou
         style={{
           paddingBottom: 32,
         }}
+        breakpoints={{
+          640: {
+            slidesPerView: content.length < 2 ? content.length : 2,
+          },
+          1024: {
+            slidesPerView: content.length < 3 ? content.length : 3,
+          },
+        }}
       >
         {content.map((slide, idx) => {
           return (

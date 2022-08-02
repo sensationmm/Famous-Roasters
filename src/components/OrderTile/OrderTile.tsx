@@ -1,11 +1,15 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Typography, TypographySize, TypographyType } from 'src/components'
-import { formatPrice } from 'src/utils'
+import { formatPrice, getSimplifiedProductId } from 'src/utils'
 import { OrderVariant } from 'src/views'
 
-type OrderTileProps = OrderVariant
+interface OrderTileProps extends OrderVariant {
+  productId: string
+}
 
 export const OrderTile: React.FC<OrderTileProps> = ({
+  productId,
   node: {
     title,
     image: { url },
@@ -13,8 +17,13 @@ export const OrderTile: React.FC<OrderTileProps> = ({
     variant: { title: variantTitle, price, weight },
   },
 }: OrderTileProps) => {
+  const navigate = useNavigate()
   return (
-    <div className={'flex pt-8 md:px-6'}>
+    <div
+      data-testid="wrapper"
+      className={'flex pt-8 md:px-6'}
+      onClick={() => navigate(`/product/${getSimplifiedProductId(productId)}`)}
+    >
       <div className="flex justify-center items-center shrink-0 self-center relative w-32 h-32">
         <div className="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32">
           <img src={url} alt={title} className="w-28 max-h-28" />
@@ -43,7 +52,7 @@ export const OrderTile: React.FC<OrderTileProps> = ({
             size={TypographySize.Tiny}
             className={'text-coreUI-text-secondary'}
           >
-            ({formatPrice((parseInt(price) / weight).toString(), 'EUR')}/kg)
+            ({formatPrice(((1000 / weight) * parseFloat(price)).toString(), 'EUR')}/kg)
           </Typography>
         </div>
       </div>

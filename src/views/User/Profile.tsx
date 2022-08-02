@@ -47,6 +47,9 @@ export type OrderVariant = {
   node: {
     id: string
     title: string
+    product: {
+      id: string
+    }
     image: {
       url: string
     }
@@ -184,6 +187,7 @@ export const Profile: React.FC = () => {
         </div>
         <div className={`${sectionStyle(true)} grid gap-4 md:grid-cols-2 xl:grid-cols-4`}>
           <Button
+            data-testid="button-orders"
             emphasis={ButtonEmphasis.Tertiary}
             icon={IconName.Orders}
             hasArrow
@@ -192,6 +196,7 @@ export const Profile: React.FC = () => {
             {t('pages.profile.links.orders')}
           </Button>
           <Button
+            data-testid="button-account"
             emphasis={ButtonEmphasis.Tertiary}
             icon={IconName.Account}
             hasArrow
@@ -200,6 +205,7 @@ export const Profile: React.FC = () => {
             {t('pages.profile.links.account')}
           </Button>
           <Button
+            data-testid="button-taste-profile"
             emphasis={ButtonEmphasis.Tertiary}
             icon={IconName.Taste}
             hasArrow
@@ -208,6 +214,7 @@ export const Profile: React.FC = () => {
             {t('pages.profile.links.tasteProfile')}
           </Button>
           <Button
+            data-testid="button-my-coffee"
             emphasis={ButtonEmphasis.Tertiary}
             icon={IconName.MyCoffee}
             hasArrow
@@ -281,19 +288,19 @@ export const Profile: React.FC = () => {
             <div className="pt-2 pb-8">
               <Carousel
                 slides={lastOrder.lineItems.edges.map((item) => (
-                  <OrderTile node={item.node} />
+                  <OrderTile node={item.node} productId={item.node.product.id} />
                 ))}
               />
             </div>
 
-            <div className="grid gap-4 mb-8">
+            {/* <div className="grid gap-4 mb-8">
               <Button emphasis={ButtonEmphasis.Tertiary} center disabled>
                 {t('pages.profile.sections.lastOrder.buttonOrderPage')}
               </Button>
               <Button emphasis={ButtonEmphasis.Secondary} center disabled>
                 {t('pages.profile.sections.lastOrder.buttonOrderAgain')}
               </Button>
-            </div>
+            </div> */}
           </div>
         ) : (
           <div className={`${sectionStyle(true)}`}>
@@ -317,6 +324,7 @@ export const Profile: React.FC = () => {
                   NOMAD Coffee is our latetest roaster in the catalog!
                 </Typography>
                 <Button
+                  data-testid="button-vendor=Nomad"
                   emphasis={ButtonEmphasis.Secondary}
                   size={ButtonSize.xs}
                   hasArrow
@@ -337,6 +345,7 @@ export const Profile: React.FC = () => {
                   Discover new complex origins: Myanmar!
                 </Typography>
                 <Button
+                  data-testid="button-origin=BU"
                   emphasis={ButtonEmphasis.Secondary}
                   size={ButtonSize.xs}
                   hasArrow
