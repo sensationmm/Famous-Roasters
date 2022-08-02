@@ -1,3 +1,12 @@
+# [1.34.0](https://github.com/Famous-Roasters/frontend/compare/v1.33.2...v1.34.0) (2022-08-02)
+
+
+### Features
+
+* **catalogue:** rename labels ([3b1d142](https://github.com/Famous-Roasters/frontend/commit/3b1d1426bfdbeb5dd8333b18dc216704b7064960))
+* **catalogue:** reorder filters ([e51ebb4](https://github.com/Famous-Roasters/frontend/commit/e51ebb4df9c3a9c2bf1069ada4ac008b93fb6a6d))
+* **catalogue:** update snapshot ([5a8a675](https://github.com/Famous-Roasters/frontend/commit/5a8a6752faebaf9b1316537ed6a293b26ee5ee31))
+
 ## [1.33.2](https://github.com/Famous-Roasters/frontend/compare/v1.33.1...v1.33.2) (2022-08-01)
 
 
