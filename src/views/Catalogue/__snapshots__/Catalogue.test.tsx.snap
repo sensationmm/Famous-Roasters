@@ -290,7 +290,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <span
                   class="block truncate text-base leading-6"
                 >
-                  Geschmacksprofile
+                  Geschmacksprofil
                 </span>
                 <svg
                   aria-hidden="true"
@@ -376,7 +376,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <span
                   class="block truncate text-base leading-6"
                 >
-                  Röster
+                  Ursprung
                 </span>
                 <svg
                   aria-hidden="true"
@@ -419,7 +419,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <span
                   class="block truncate text-base leading-6"
                 >
-                  Herkunft
+                  Rösterei
                 </span>
                 <svg
                   aria-hidden="true"
@@ -462,7 +462,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <span
                   class="block truncate text-base leading-6"
                 >
-                  Packungsgröße
+                  Verpackungsgröße
                 </span>
                 <svg
                   aria-hidden="true"
@@ -1904,7 +1904,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 <span
                   class="block truncate text-base leading-6"
                 >
-                  Geschmacksprofile
+                  Geschmacksprofil
                 </span>
                 <svg
                   aria-hidden="true"
@@ -1990,7 +1990,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 <span
                   class="block truncate text-base leading-6"
                 >
-                  Röster
+                  Ursprung
                 </span>
                 <svg
                   aria-hidden="true"
@@ -2033,7 +2033,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 <span
                   class="block truncate text-base leading-6"
                 >
-                  Herkunft
+                  Rösterei
                 </span>
                 <svg
                   aria-hidden="true"
@@ -2076,7 +2076,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 <span
                   class="block truncate text-base leading-6"
                 >
-                  Packungsgröße
+                  Verpackungsgröße
                 </span>
                 <svg
                   aria-hidden="true"
