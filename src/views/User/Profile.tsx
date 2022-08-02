@@ -290,6 +290,7 @@ export const Profile: React.FC = () => {
                 slides={lastOrder.lineItems.edges.map((item) => (
                   <OrderTile node={item.node} productId={item.node.product.id} />
                 ))}
+                tile
               />
             </div>
 

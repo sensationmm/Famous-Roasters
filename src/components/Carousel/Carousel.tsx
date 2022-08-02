@@ -12,9 +12,10 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 interface CarouselProps {
   images?: Image[]
   slides?: ReactNode[]
+  tile?: boolean
 }
 
-export const Carousel: React.FC<CarouselProps> = ({ images = [], slides }: CarouselProps) => {
+export const Carousel: React.FC<CarouselProps> = ({ images = [], slides, tile = false }: CarouselProps) => {
   const [swiper, setSwiper] = useState<SwiperNative>()
 
   if (!images && !slides) {
@@ -46,10 +47,10 @@ export const Carousel: React.FC<CarouselProps> = ({ images = [], slides }: Carou
         }}
         breakpoints={{
           640: {
-            slidesPerView: content.length < 2 ? content.length : 2,
+            slidesPerView: !tile ? 1 : content.length < 2 ? content.length : 2,
           },
           1024: {
-            slidesPerView: content.length < 3 ? content.length : 3,
+            slidesPerView: !tile ? 1 : content.length < 3 ? content.length : 3,
           },
         }}
       >
