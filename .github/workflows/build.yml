@@ -10,7 +10,6 @@ on:
       - '!main'
 
 jobs:
-
   test-and-build:
     environment: test
     runs-on: ubuntu-latest
@@ -60,6 +59,8 @@ jobs:
       - name: Build & Package
         run: yarn run build
         env:
+          REACT_APP_SHOPIFY_ADMIN_GRAPHQL_ENDPOINT: ${{ secrets.REACT_APP_SHOPIFY_ADMIN_GRAPHQL_ENDPOINT}}
+          REACT_APP_SHOPIFY_ADMIN_ACCESS_TOKEN: ${{ secrets.REACT_APP_SHOPIFY_ADMIN_ACCESS_TOKEN}}
           REACT_APP_SHOPIFY_STOREFRONT_GRAPHQL_ENDPOINT: ${{ secrets.REACT_APP_SHOPIFY_STOREFRONT_GRAPHQL_ENDPOINT }}
           REACT_APP_SHOPIFY_STOREFRONT_ACCESS_TOKEN: ${{ secrets.REACT_APP_SHOPIFY_STOREFRONT_ACCESS_TOKEN }}
           REACT_APP_GTM_ID: ${{ secrets.REACT_APP_GTM_ID }}
