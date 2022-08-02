@@ -1,3 +1,10 @@
+## [1.34.1](https://github.com/Famous-Roasters/frontend/compare/v1.34.0...v1.34.1) (2022-08-02)
+
+
+### Bug Fixes
+
+* **user profile:** add new env vars into build ([7a6178e](https://github.com/Famous-Roasters/frontend/commit/7a6178e24653a7acd64a800d6bffbbf22da31062))
+
 # [1.34.0](https://github.com/Famous-Roasters/frontend/compare/v1.33.2...v1.34.0) (2022-08-02)
 
 
