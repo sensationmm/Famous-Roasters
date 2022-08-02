@@ -1,6 +1,9 @@
 query order($id: ID!) {
   order(id: $id) {
     id
+    product {
+      id
+    }
     name
     createdAt
     displayFulfillmentStatus

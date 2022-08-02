@@ -1,14 +1,28 @@
 import { MockedProvider } from '@apollo/client/testing'
-import { render, waitFor } from '@testing-library/react'
+import { render, screen, waitFor } from '@testing-library/react'
 import Amplify from 'aws-amplify'
 import React from 'react'
 import { I18nextProvider } from 'react-i18next'
-import { MemoryRouter } from 'react-router-dom'
+import ReactRouterDom from 'react-router-dom'
 import { OrdersMock, UserProfileMock } from 'src/_mocks'
 import { i18n } from 'src/config'
 import { awsconfig } from 'src/config/cognito/auth.hook'
 
 import { Profile } from '.'
+
+const mockUseNavigate = jest.fn()
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: () => mockUseNavigate,
+  useHref: jest.fn,
+  Link: (props: any) => {
+    return (
+      <a className={props.class} href={props.to}>
+        {props.children}
+      </a>
+    )
+  },
+}))
 
 Amplify.configure(awsconfig)
 
@@ -27,13 +41,51 @@ describe('Profile view', () => {
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
-          <MemoryRouter initialEntries={['/profile']}>
+          <ReactRouterDom.MemoryRouter initialEntries={['/profile']}>
             <Profile />
-          </MemoryRouter>
+          </ReactRouterDom.MemoryRouter>
         </I18nextProvider>
       </MockedProvider>,
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
     expect(container).toMatchSnapshot()
+  })
+
+  it.each(['orders', 'account', 'taste-profile', 'my-coffee'])('handles click on profile %s', async (btn) => {
+    jest.mock('@apollo/client/react/hooks', () => ({
+      ...jest.requireActual('@apollo/client/react/hooks'),
+      useLazyQuery: () => [{}],
+    }))
+    render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
+        mocks={[UserProfileMock, OrdersMock]}
+        addTypename={false}
+      >
+        <Profile />
+      </MockedProvider>,
+    )
+    const button = await screen.findByTestId(`button-${btn}`)
+    button.click()
+    expect(mockUseNavigate).toHaveBeenCalledWith(`/profile/${btn}`)
+  })
+
+  it.each(['vendor=Nomad', 'origin=BU'])('handles click on catalogue %s', async (btn) => {
+    jest.mock('@apollo/client/react/hooks', () => ({
+      ...jest.requireActual('@apollo/client/react/hooks'),
+      useLazyQuery: () => [{}],
+    }))
+    render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
+        mocks={[UserProfileMock, OrdersMock]}
+        addTypename={false}
+      >
+        <Profile />
+      </MockedProvider>,
+    )
+    const button = await screen.findByTestId(`button-${btn}`)
+    button.click()
+    expect(mockUseNavigate).toHaveBeenCalledWith(`/catalogue?${btn}`)
   })
 })

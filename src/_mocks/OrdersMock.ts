@@ -51,6 +51,9 @@ export const OrderMock = {
               node: {
                 id: 'gid://shopify/LineItem/12718816166154',
                 title: 'Wild At Heart',
+                product: {
+                  id: 'gid://shopify/Product/7659880087768',
+                },
                 image: {
                   url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/19grams_Wild_At_Heart_3782237a-8643-42da-93d4-15849d5c0d4d_20copy.webp?v=1655308036',
                 },
@@ -67,10 +70,13 @@ export const OrderMock = {
               node: {
                 id: 'gid://shopify/LineItem/12718816198922',
                 title: 'Chakra Warmi',
+                product: {
+                  id: 'gid://shopify/Product/7974309363978',
+                },
                 image: {
                   url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/CHAKRA-WARMI_Square-scaled.webp?v=1657545324',
                 },
-                quantity: 1,
+                quantity: 2,
                 variant: {
                   id: 'gid://shopify/ProductVariant/43608366481674',
                   title: 'Default Title',
