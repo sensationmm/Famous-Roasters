@@ -1,4 +1,5 @@
 import { Auth } from './Auth'
+import { Blog } from './Blog'
 import { Cart } from './Cart'
 import { Catalogue } from './Catalogue'
 import { Error } from './Error'
@@ -8,6 +9,7 @@ import { TasteFinder } from './TasteFinder'
 import { OrderVariant, Profile, ProfileSub } from './User'
 
 export { Auth as Auth }
+export { Blog as Blog }
 export { Cart as Cart }
 export { Catalogue as Catalogue }
 export { FeaturedProduct as FeaturedProduct }

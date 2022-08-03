@@ -6,6 +6,7 @@ import { CartProvider } from 'src/components'
 import { famousRoastersClient, i18n, storeFrontClient } from 'src/config'
 import {
   Auth,
+  Blog,
   Cart,
   Catalogue,
   Error,
@@ -40,6 +41,9 @@ const App = () => {
                 }
               />
               <Route path="/featured/:id" element={<FeaturedProduct />} />
+              <Route path="/en/coffee-knowledge/:id" element={<Blog />} />
+              <Route path="/de/kaffeewissen/:id" element={<Blog />} />
+
               <Route path="/login" element={<Auth authState={'signIn'} />} />
               <Route path="/register" element={<Auth authState={'signUp'} />} />
               <Route path="/register-confirm" element={<Auth authState={'confirmSignUp'} />} />
