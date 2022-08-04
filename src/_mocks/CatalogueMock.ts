@@ -259,7 +259,7 @@ export const CatalogueMockRandom = {
     query: GET_PRODUCTS,
     variables: {
       collectionId: 'gid://shopify/Collection/386655387864',
-      first: 3,
+      first: 10,
       last: null,
       before: null,
       after: null,
@@ -289,13 +289,14 @@ export const CatalogueMockAccessories = {
   request: {
     query: GET_PRODUCTS,
     variables: {
-      collectionId: 'gid://shopify/Collection/385139605720',
-      first: 3,
+      collectionId: 'gid://shopify/Collection/479115477258',
+      first: 10,
       last: null,
       before: null,
       after: null,
       sortKey: undefined,
       reverse: undefined,
+      filters: { productType: 'Accessories' },
     },
   },
   result: {
