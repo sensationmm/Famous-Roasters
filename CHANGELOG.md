@@ -1,3 +1,10 @@
+## [1.35.2](https://github.com/Famous-Roasters/frontend/compare/v1.35.1...v1.35.2) (2022-08-04)
+
+
+### Bug Fixes
+
+* **sign up:** boolean as string ([ddecebb](https://github.com/Famous-Roasters/frontend/commit/ddecebb1645faa6df6f6b2f953023f0b236aa754))
+
 ## [1.35.1](https://github.com/Famous-Roasters/frontend/compare/v1.35.0...v1.35.1) (2022-08-04)
 
 
