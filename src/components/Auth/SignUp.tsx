@@ -45,7 +45,7 @@ export class AuthSignUp extends SignUp {
       attributes: {
         'custom:tos_consent': this.inputs['confirmTos'],
         'custom:first_name': params.firstName,
-        'custom:newsletter_signup': this.inputs['newsletterSignup'],
+        'custom:newsletter_signup': this.inputs['newsletterSignup'] || false,
       },
     })
       .then(() => this.changeState('confirmSignUp', { username: params.email }))
