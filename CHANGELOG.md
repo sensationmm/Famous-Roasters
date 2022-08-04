@@ -1,3 +1,10 @@
+## [1.35.1](https://github.com/Famous-Roasters/frontend/compare/v1.35.0...v1.35.1) (2022-08-04)
+
+
+### Bug Fixes
+
+* **sign up:** ensure value passed for newsletter ([91a0dd7](https://github.com/Famous-Roasters/frontend/commit/91a0dd711fc05a0ce6144ba31eac6cbaee491a9e))
+
 # [1.35.0](https://github.com/Famous-Roasters/frontend/compare/v1.34.1...v1.35.0) (2022-08-02)
 
 
