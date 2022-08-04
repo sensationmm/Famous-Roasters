@@ -121,16 +121,17 @@ export const Cart: React.FC = () => {
                         {product.title}
                       </Typography>
                       <div>
-                        {selectedOptions.map((option, optionIdx: number) => (
-                          <Typography
-                            key={`cart-item-detail-${optionIdx}`}
-                            type={TypographyType.Paragraph}
-                            size={TypographySize.Base}
-                            className="text-coreUI-text-secondary"
-                          >
-                            {optionIdx < selectedOptions?.length - 1 ? `${option.value} | ` : option.value}
-                          </Typography>
-                        ))}
+                        {selectedOptions[0].value !== 'Default Title' &&
+                          selectedOptions.map((option, optionIdx: number) => (
+                            <Typography
+                              key={`cart-item-detail-${optionIdx}`}
+                              type={TypographyType.Paragraph}
+                              size={TypographySize.Base}
+                              className="text-coreUI-text-secondary"
+                            >
+                              {optionIdx < selectedOptions?.length - 1 ? `${option.value} | ` : option.value}
+                            </Typography>
+                          ))}
                       </div>
                     </div>
                     <div>
@@ -141,7 +142,7 @@ export const Cart: React.FC = () => {
                       >
                         {formatPrice(priceV2.amount, priceV2.currencyCode)}
                       </Typography>
-                      {selectedOptions[0] && (
+                      {selectedOptions[0] && selectedOptions[0].value !== 'Default Title' && (
                         <Typography
                           type={TypographyType.Paragraph}
                           size={TypographySize.Base}

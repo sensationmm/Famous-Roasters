@@ -6,6 +6,10 @@ const GET_PRODUCTS = loader('src/graphql/queries/products.query.graphql')
 
 const ProductNode = {
   ...ProductMockDataWithCustomMetadata,
+  productType: 'Expresso',
+  extraDescription: {
+    value: '',
+  },
   pricePerKg: {
     value: '10.0',
   },
@@ -17,6 +21,7 @@ const CatalogueMock1 = {
   request: {
     query: GET_PRODUCTS,
     variables: {
+      collectionId: 'gid://shopify/Collection/386655387864',
       first: 6,
       last: null,
       before: null,
@@ -49,6 +54,7 @@ const CatalogueMock2 = {
   request: {
     ...CatalogueMock1.request,
     variables: {
+      ...CatalogueMock1.request.variables,
       first: 6,
       last: null,
       before: null,
@@ -65,6 +71,7 @@ const CatalogueMock3 = {
   request: {
     ...CatalogueMock1.request,
     variables: {
+      ...CatalogueMock1.request.variables,
       first: 6,
       last: null,
       before: null,
@@ -81,6 +88,7 @@ const CatalogueMock4 = {
   request: {
     ...CatalogueMock1.request,
     variables: {
+      ...CatalogueMock1.request.variables,
       first: 6,
       last: null,
       before: null,
@@ -97,6 +105,7 @@ const CatalogueMock5 = {
   request: {
     ...CatalogueMock1.request,
     variables: {
+      ...CatalogueMock1.request.variables,
       first: 6,
       last: null,
       before: null,
@@ -112,6 +121,7 @@ const CatalogueMock6 = {
   request: {
     query: GET_PRODUCTS,
     variables: {
+      collectionId: 'gid://shopify/Collection/386655387864',
       first: 6,
       last: null,
       before: null,
@@ -143,6 +153,7 @@ const CatalogueMock7 = {
   request: {
     query: GET_PRODUCTS,
     variables: {
+      collectionId: 'gid://shopify/Collection/386655387864',
       first: 6,
       last: null,
       before: null,
@@ -174,6 +185,7 @@ const CatalogueMock8 = {
   request: {
     query: GET_PRODUCTS,
     variables: {
+      collectionId: 'gid://shopify/Collection/386655387864',
       first: null,
       last: 6,
       before: '2',
@@ -214,6 +226,7 @@ export const CatalogueMockSimilar = {
   request: {
     query: GET_PRODUCTS,
     variables: {
+      collectionId: 'gid://shopify/Collection/386655387864',
       first: 4,
       last: null,
       before: null,
@@ -241,11 +254,74 @@ export const CatalogueMockSimilar = {
   },
 }
 
+export const CatalogueMockRandom = {
+  request: {
+    query: GET_PRODUCTS,
+    variables: {
+      collectionId: 'gid://shopify/Collection/386655387864',
+      first: 3,
+      last: null,
+      before: null,
+      after: null,
+      sortKey: undefined,
+      reverse: undefined,
+    },
+  },
+  result: {
+    data: {
+      collection: {
+        id: 'abcdef',
+        products: {
+          nodes: [...ProductNodes],
+          pageInfo: {
+            hasNextPage: true,
+            hasPreviousPage: false,
+            startCursor: '1',
+            endCursor: '2',
+          },
+        },
+      },
+    },
+  },
+}
+
+export const CatalogueMockAccessories = {
+  request: {
+    query: GET_PRODUCTS,
+    variables: {
+      collectionId: 'gid://shopify/Collection/385139605720',
+      first: 3,
+      last: null,
+      before: null,
+      after: null,
+      sortKey: undefined,
+      reverse: undefined,
+    },
+  },
+  result: {
+    data: {
+      collection: {
+        id: 'abcdef',
+        products: {
+          nodes: [...ProductNodes],
+          pageInfo: {
+            hasNextPage: true,
+            hasPreviousPage: false,
+            startCursor: '1',
+            endCursor: '2',
+          },
+        },
+      },
+    },
+  },
+}
+
 export const CatalogueMockFilter1 = {
   ...CatalogueMock1,
   request: {
     ...CatalogueMock1.request,
     variables: {
+      ...CatalogueMock1.request.variables,
       first: 6,
       last: null,
       before: null,
@@ -262,6 +338,7 @@ export const CatalogueMockFilter2 = {
   request: {
     ...CatalogueMock1.request,
     variables: {
+      ...CatalogueMock1.request.variables,
       first: 6,
       last: null,
       before: null,
@@ -278,6 +355,7 @@ export const CatalogueMockFilter3 = {
   request: {
     ...CatalogueMock1.request,
     variables: {
+      ...CatalogueMock1.request.variables,
       first: 6,
       last: null,
       before: null,
@@ -294,6 +372,7 @@ export const CatalogueMockFilter4 = {
   request: {
     ...CatalogueMock1.request,
     variables: {
+      ...CatalogueMock1.request.variables,
       first: 6,
       last: null,
       before: null,
@@ -310,6 +389,7 @@ export const CatalogueMockFilter5 = {
   request: {
     ...CatalogueMock1.request,
     variables: {
+      ...CatalogueMock1.request.variables,
       first: 6,
       last: null,
       before: null,
@@ -326,6 +406,7 @@ export const CatalogueMockFilter6 = {
   request: {
     ...CatalogueMock1.request,
     variables: {
+      ...CatalogueMock1.request.variables,
       first: 6,
       last: null,
       before: null,
@@ -342,6 +423,7 @@ export const CatalogueMockFilter7 = {
   request: {
     ...CatalogueMock1.request,
     variables: {
+      ...CatalogueMock1.request.variables,
       first: 6,
       last: null,
       before: null,
@@ -358,6 +440,7 @@ export const CatalogueMockFilter8 = {
   request: {
     ...CatalogueMock1.request,
     variables: {
+      ...CatalogueMock1.request.variables,
       first: 6,
       last: null,
       before: null,
@@ -374,6 +457,7 @@ export const CatalogueMockFilter9 = {
   request: {
     ...CatalogueMock1.request,
     variables: {
+      ...CatalogueMock1.request.variables,
       first: 6,
       last: null,
       before: null,
@@ -403,6 +487,7 @@ export const CatalogueMockError = {
   request: {
     query: GET_PRODUCTS,
     variables: {
+      collectionId: 'gid://shopify/Collection/386655387864',
       first: 6,
       last: null,
       before: null,
@@ -421,6 +506,7 @@ export const CatalogueMockMissingData = {
   request: {
     query: GET_PRODUCTS,
     variables: {
+      collectionId: 'gid://shopify/Collection/386655387864',
       first: 6,
       last: null,
       before: null,

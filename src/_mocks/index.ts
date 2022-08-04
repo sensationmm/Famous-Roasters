@@ -9,8 +9,10 @@ import {
   CartMockError,
 } from './CartMock'
 import {
+  CatalogueMockAccessories,
   CatalogueMockError,
   CatalogueMockMissingData,
+  CatalogueMockRandom,
   CatalogueMocks,
   CatalogueMocksFilters,
   CatalogueMockSimilar,
@@ -19,7 +21,10 @@ import {
 import { FilterAttributesMock, FilterAttributesMockError } from './FilterAttributesMock'
 import { OrderMock, OrdersMock } from './OrdersMock'
 import {
+  AccessoryMockDataBase,
+  AccessoryMockDataBaseWithVariant,
   ProductMock,
+  ProductMockAccessory,
   ProductMockData,
   ProductMockDataNoImage,
   ProductMockDataWithCustomMetadata,
@@ -35,6 +40,8 @@ import {
 } from './TasteFinderMock'
 import { UserProfileMock } from './UserProfileMock'
 
+export { AccessoryMockDataBase as AccessoryMockDataBase }
+export { AccessoryMockDataBaseWithVariant as AccessoryMockDataBaseWithVariant }
 export { CartAddLinesMock as CartAddLinesMock }
 export { CartCreateMock as CartCreateMock }
 export { CartLinesRemoveMock as CartLinesRemoveMock }
@@ -43,15 +50,18 @@ export { CartLinesUpdateMock as CartLinesUpdateMock }
 export { CartMock as CartMock }
 export { CartMockData as CartMockData }
 export { CartMockError as CartMockError }
+export { CatalogueMockAccessories as CatalogueMockAccessories }
 export { CatalogueMocks as CatalogueMocks }
 export { CatalogueMocksFilters as CatalogueMocksFilters }
 export { CatalogueMocksPagination as CatalogueMocksPagination }
 export { CatalogueMockError as CatalogueMockError }
 export { CatalogueMockMissingData as CatalogueMockMissingData }
+export { CatalogueMockRandom as CatalogueMockRandom }
 export { CatalogueMockSimilar as CatalogueMockSimilar }
 export { OrderMock as OrderMock }
 export { OrdersMock as OrdersMock }
 export { ProductMock as ProductMock }
+export { ProductMockAccessory as ProductMockAccessory }
 export { ProductMockError as ProductMockError }
 export { ProductMockData as ProductMockData }
 export { ProductMockDataNoImage as ProductMockDataNoImage }

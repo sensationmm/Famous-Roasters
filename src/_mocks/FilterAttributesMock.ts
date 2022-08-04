@@ -14,6 +14,7 @@ export const FilterAttributesMock = {
           {
             id: '123123',
             vendor: 'Cycle Roasters',
+            productType: 'Expresso',
             coffee_type: {
               value: 'Filter',
             },
@@ -52,6 +53,7 @@ export const FilterAttributesMock = {
           {
             id: '123124',
             vendor: '60beans',
+            productType: 'Expresso',
             coffee_type: {
               value: 'Espresso',
             },

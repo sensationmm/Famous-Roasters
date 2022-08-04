@@ -6,8 +6,11 @@ import { MemoryRouter } from 'react-router-dom'
 import {
   CartAddLinesMock,
   CartMock,
+  CatalogueMockAccessories,
+  CatalogueMockRandom,
   CatalogueMockSimilar,
   ProductMock,
+  ProductMockAccessory,
   ProductMockError,
   ProductMockWithCustomMetadata,
   ProductMockWithCustomMetadataNoAroma,
@@ -30,6 +33,12 @@ jest.mock('react-router-dom', () => ({
   useParams: () => ({
     id: '7655228866776',
   }),
+}))
+
+jest.mock('src/components/Carousel/Carousel', () => ({
+  Carousel: () => {
+    return <div>Carousel here</div>
+  },
 }))
 
 describe('Product view', () => {
@@ -261,5 +270,25 @@ describe('Product view', () => {
     const buttons = await screen.findAllByTestId('addToCart')
     expect(buttons[0]).toBeInTheDocument()
     fireEvent.click(buttons[0])
+  })
+
+  it('Renders correctly for a accessories', async () => {
+    const { container } = render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
+        mocks={[ProductMockAccessory, CatalogueMockRandom, CatalogueMockAccessories]}
+        addTypename={false}
+      >
+        <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
+          <I18nextProvider i18n={i18n}>
+            <MemoryRouter initialEntries={['/product/123456789']}>
+              <Product />
+            </MemoryRouter>
+          </I18nextProvider>
+        </CartContext.Provider>
+      </MockedProvider>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 500)))
+    expect(container).toMatchSnapshot()
   })
 })
