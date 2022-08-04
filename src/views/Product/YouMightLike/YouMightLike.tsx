@@ -70,21 +70,21 @@ export const YouMightLike: React.FC<YouMightLikeProps> = ({ productId }: YouMigh
   } = useQuery<CollectionQuery>(GET_PRODUCTS, {
     variables: {
       collectionId: shopifyAccessoryCollection,
-      first: 3,
+      first: 4,
       last: null,
       before: null,
       after: null,
       sortKey: undefined,
       reverse: undefined,
-      // filters: { productType: 'Accessories' },
+      filters: { productType: 'Accessories' },
     },
   })
 
   const resultsCoffee = data?.collection?.products.nodes || []
-  const resultsAccessories = data2?.collection?.products.nodes || []
-  const results = resultsCoffee.concat(resultsAccessories).sort(() => Math.random() - 0.5)
-
-  const productNodes = results.filter((node) => getSimplifiedProductId(node.id) !== productId)
+  const resultsAccessories = (data2?.collection?.products.nodes || [])
+    .filter((node) => getSimplifiedProductId(node.id) !== productId)
+    .slice(0, 3)
+  const productNodes = resultsCoffee.concat(resultsAccessories).sort(() => Math.random() - 0.5)
 
   const pageInfo = data?.collection?.products.pageInfo || {
     hasNextPage: false,

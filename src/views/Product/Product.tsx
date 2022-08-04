@@ -512,7 +512,7 @@ export const Product: React.FC = () => {
         case 'youMightLike':
           return <YouMightLike productId={id} />
         case 'aboutProduct':
-          return <div>{extraDescription?.value}</div>
+          return extraDescription?.value
         default:
           return ''
       }
