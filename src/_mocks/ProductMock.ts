@@ -2,54 +2,17 @@ import {
   CurrencyCode,
   Product,
   Product as ProductType,
-  ProductVariant,
-  ProductVariantConnection,
   WeightUnit,
 } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { GraphQLError } from 'graphql'
 import { loader } from 'graphql.macro'
-
+import { ProductCustom } from 'src/views/Product/Product'
 const GET_PRODUCT = loader('src/graphql/queries/product.query.graphql')
-
-interface ProductMeta {
-  value: string | number
-}
-
-interface ProductVariantCustom extends ProductVariant {
-  grind_type: ProductMeta
-  package_size: ProductMeta
-  availableForSale: boolean
-}
-
-interface ProductVariantConnectionCustom extends ProductVariantConnection {
-  nodes: Array<ProductVariantCustom>
-}
-
-interface ProductCustom {
-  coffee_type?: ProductMeta
-  bean_type?: ProductMeta
-  aroma?: ProductMeta
-  flavourNotes?: ProductMeta
-  sweetness?: ProductMeta
-  body?: ProductMeta
-  bitterness?: ProductMeta
-  acidity?: ProductMeta
-  origin?: ProductMeta
-  producer?: ProductMeta
-  altitude?: ProductMeta
-  variety?: ProductMeta
-  processing?: ProductMeta
-  pricePerKg?: ProductMeta
-  decaf?: ProductMeta
-  whyThisCoffee?: ProductMeta
-  variants: ProductVariantConnectionCustom
-  vendor_description?: ProductMeta
-  vendor_image?: ProductMeta
-}
 
 export const ProductMockDataBase: ProductType = {
   id: 'gid://shopify/Product/7655228866776',
   title: 'Espresso Raritäten Set',
+  productType: 'Espresso',
   vendor: '60beans',
   totalInventory: 100,
   priceRange: {
@@ -123,7 +86,6 @@ export const ProductMockDataBase: ProductType = {
     },
   },
   options: [],
-  productType: '',
   publishedAt: '',
   requiresSellingPlan: false,
   sellingPlanGroups: {
@@ -155,9 +117,187 @@ export const ProductMockDataBase: ProductType = {
   },
 }
 
+export const AccessoryMockDataBase: ProductType = {
+  id: 'gid://shopify/Product/7968366166282',
+  title: 'Barista Pinsel | barista.tools',
+  productType: 'Accessories',
+  vendor: 'Johann Jacobs Haus',
+  priceRange: {
+    minVariantPrice: {
+      amount: '28.5',
+      currencyCode: CurrencyCode.Eur,
+    },
+    maxVariantPrice: {
+      amount: '28.5',
+      currencyCode: CurrencyCode.Eur,
+    },
+  },
+  description: '',
+  descriptionHtml:
+    '<p>Der Naturhaarpinsel von barista.tools ist ideal für das Reinigen des Siebträgers und des Bereichs rund um die Mühle. Gerade für die Arbeit im professionellen Bereich ist dies der optimale Mühlenpinsel - optisch ansprechend, praktisch um schnell Kaffeekrümmel von der Mühle oder dem Arbeitsbereich zu entfernen und liegt gut in der Hand.</p>\n<p>Das Naturhaar ist hitzebeständig und der Pinsel langlebig verarbeitet.</p>\n<p> </p>',
+  variants: {
+    edges: [],
+    nodes: [],
+    pageInfo: {
+      hasNextPage: false,
+      hasPreviousPage: false,
+    },
+  },
+  images: {
+    edges: [],
+    nodes: [
+      {
+        id: '12345',
+        url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/baristatools-barista-pinsel-fur-muhle-und-siebtrager-baristatools-341875_20copy.webp?v=1655308319',
+        originalSrc: '',
+        src: '',
+        transformedSrc: '',
+      },
+      {
+        id: '23456',
+        url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/baristatools-barista-pinsel-fur-muhle-und-siebtrager-baristatools-263505_20copy.webp?v=1655308319',
+        originalSrc: '',
+        src: '',
+        transformedSrc: '',
+      },
+    ],
+    pageInfo: {
+      hasNextPage: false,
+      hasPreviousPage: false,
+    },
+  },
+  metafields: {
+    edges: [],
+    nodes: [],
+    pageInfo: {
+      hasNextPage: false,
+      hasPreviousPage: false,
+    },
+  },
+  availableForSale: true,
+  collections: {
+    edges: [],
+    nodes: [],
+    pageInfo: {
+      hasNextPage: false,
+      hasPreviousPage: false,
+    },
+  },
+  compareAtPriceRange: {
+    maxVariantPrice: {
+      amount: '28.5',
+      currencyCode: CurrencyCode.Eur,
+    },
+    minVariantPrice: {
+      amount: '28.5',
+      currencyCode: CurrencyCode.Eur,
+    },
+  },
+  createdAt: '',
+  handle: '',
+  media: {
+    edges: [],
+    nodes: [],
+    pageInfo: {
+      hasNextPage: false,
+      hasPreviousPage: false,
+    },
+  },
+  options: [],
+  publishedAt: '',
+  requiresSellingPlan: false,
+  sellingPlanGroups: {
+    edges: [],
+    nodes: [],
+    pageInfo: {
+      hasNextPage: false,
+      hasPreviousPage: false,
+    },
+  },
+  seo: {},
+  tags: [],
+  updatedAt: '',
+}
+
+export const AccessoryMockDataBaseWithVariant: Product & ProductCustom = {
+  ...AccessoryMockDataBase,
+  extraDescription: {
+    value: '',
+  },
+  variants: {
+    edges: [],
+    nodes: [
+      {
+        id: 'gid://shopify/ProductVariant/43570607653130',
+        availableForSale: true,
+        price: '28.50',
+        package_size: {
+          value: '300g',
+        },
+        grind_type: undefined,
+        metafields: {
+          edges: [],
+          nodes: [],
+          pageInfo: {
+            hasNextPage: false,
+            hasPreviousPage: false,
+          },
+        },
+        currentlyNotInStock: false,
+        priceV2: {
+          amount: '9.99',
+          currencyCode: CurrencyCode.Eur,
+        },
+        product: AccessoryMockDataBase,
+        requiresShipping: true,
+        selectedOptions: [],
+        sellingPlanAllocations: {
+          edges: [],
+          nodes: [],
+          pageInfo: {
+            hasNextPage: false,
+            hasPreviousPage: false,
+          },
+        },
+        storeAvailability: {
+          edges: [],
+          nodes: [],
+          pageInfo: {
+            hasNextPage: false,
+            hasPreviousPage: false,
+          },
+        },
+        title: 'variant',
+        weightUnit: WeightUnit.Kilograms,
+      },
+    ],
+    pageInfo: {
+      hasNextPage: false,
+      hasPreviousPage: false,
+    },
+  },
+  aroma: undefined,
+  flavourNotes: undefined,
+  producer: undefined,
+  altitude: undefined,
+  variety: undefined,
+  processing: undefined,
+  sweetness: undefined,
+  body: undefined,
+  bitterness: undefined,
+  acidity: undefined,
+  bean_type: undefined,
+  coffee_type: undefined,
+  origin: undefined,
+  pricePerKg: undefined,
+  decaf: undefined,
+  whyThisCoffee: undefined,
+}
+
 export const ProductMockData: ProductType = {
   ...ProductMockDataBase,
   variants: {
+    ...ProductMockDataBase.variants,
     edges: [],
     nodes: [
       {
@@ -219,6 +359,9 @@ export const ProductMockData: ProductType = {
 
 export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
   ...ProductMockData,
+  extraDescription: {
+    value: '',
+  },
   vendor_description: {
     value: 'the vendor description text',
   },
@@ -372,6 +515,20 @@ export const ProductMockWithCustomMetadataNoAroma = {
         ...ProductMockDataWithCustomMetadata,
         aroma: null,
       },
+    },
+  },
+}
+
+export const ProductMockAccessory = {
+  request: {
+    query: GET_PRODUCT,
+    variables: {
+      id: 'gid://shopify/Product/7655228866776',
+    },
+  },
+  result: {
+    data: {
+      product: AccessoryMockDataBaseWithVariant,
     },
   },
 }

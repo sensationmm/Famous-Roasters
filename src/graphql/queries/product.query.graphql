@@ -2,6 +2,7 @@ query product($id: ID) {
   product(id: $id) {
     id
     title
+    productType
     vendor
     vendor_description: metafield(namespace: "my_fields", key: "vendor_description") {
       value
@@ -20,6 +21,9 @@ query product($id: ID) {
       }
     }
     descriptionHtml
+    extraDescription: metafield(namespace: "my_fields", key: "equipment_extra_description") {
+      value
+    }
     aroma: metafield(namespace: "my_fields", key: "aroma") {
       value
     }

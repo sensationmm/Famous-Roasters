@@ -8,7 +8,8 @@ import { loader } from 'graphql.macro'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { ErrorPrompt, Loader, ProductTile } from 'src/components'
-import { shopifyCoffeeCollection } from 'src/config'
+import { shopifyAccessoryCollection, shopifyCoffeeCollection } from 'src/config'
+import useBreakpoint from 'src/hooks/useBreakpoint'
 import { getSimplifiedProductId } from 'src/utils/formatters'
 
 interface ProductMeta {
@@ -44,32 +45,51 @@ interface CollectionQuery {
   collection: CollectionCustom
 }
 
-const totalItemsPerPage = 4
-
-interface FindSimilarProps {
-  aroma: string
+interface YouMightLikeProps {
   productId: string
 }
 
-export const FindSimilar: React.FC<FindSimilarProps> = ({ aroma, productId }: FindSimilarProps) => {
+export const YouMightLike: React.FC<YouMightLikeProps> = ({ productId }: YouMightLikeProps) => {
   const GET_PRODUCTS = loader('src/graphql/queries/products.query.graphql')
+  const breakpoint = useBreakpoint()
 
   const { loading, error, data } = useQuery<CollectionQuery>(GET_PRODUCTS, {
     variables: {
       collectionId: shopifyCoffeeCollection,
-      first: totalItemsPerPage,
+      first: 10,
       last: null,
       before: null,
       after: null,
       sortKey: undefined,
       reverse: undefined,
-      filters: { productMetafield: { namespace: 'my_fields', key: 'aroma', value: `${aroma}` } },
     },
   })
 
-  const productNodes = data?.collection?.products.nodes
+  const {
+    loading: loading2,
+    error: error2,
+    data: data2,
+  } = useQuery<CollectionQuery>(GET_PRODUCTS, {
+    variables: {
+      collectionId: shopifyAccessoryCollection,
+      first: 10,
+      last: null,
+      before: null,
+      after: null,
+      sortKey: undefined,
+      reverse: undefined,
+      filters: { productType: 'Accessories' },
+    },
+  })
+
+  const resultsCoffee = [...(data?.collection?.products?.nodes || [])]
+    .sort(() => Math.random() - 0.5)
+    .slice(0, breakpoint === 'lg' ? 3 : 2)
+  const resultsAccessories = [...(data2?.collection?.products?.nodes || [])]
+    .sort(() => Math.random() - 0.5)
     .filter((node) => getSimplifiedProductId(node.id) !== productId)
-    .slice(0, 3)
+    .slice(0, breakpoint === 'lg' ? 3 : 2)
+  const productNodes = resultsCoffee.concat(resultsAccessories).sort(() => Math.random() - 0.5)
 
   const pageInfo = data?.collection?.products.pageInfo || {
     hasNextPage: false,
@@ -78,7 +98,7 @@ export const FindSimilar: React.FC<FindSimilarProps> = ({ aroma, productId }: Fi
     endCursor: null,
   }
 
-  if (loading) {
+  if (loading || loading2) {
     return (
       <div className="flex h-64 mb-32 justify-center items-center">
         <Loader />
@@ -86,7 +106,7 @@ export const FindSimilar: React.FC<FindSimilarProps> = ({ aroma, productId }: Fi
     )
   }
 
-  if (error || !pageInfo) {
+  if (error || error2 || !pageInfo) {
     return <ErrorPrompt promptAction={() => history.go(0)} />
   }
 

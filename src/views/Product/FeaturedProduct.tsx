@@ -67,6 +67,7 @@ export const FeaturedProduct: React.FC = () => {
   }
 
   if (error) {
+    // console.log(error)
     return <ErrorPrompt promptAction={() => history.go(0)} />
   }
 
