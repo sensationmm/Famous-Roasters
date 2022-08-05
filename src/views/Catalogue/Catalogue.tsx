@@ -403,8 +403,8 @@ export const Catalogue: React.FC = () => {
   }
 
   const renderDiscoverProducts = () => {
+    // console.log('error', error)
     if (error !== undefined || !pageInfo) {
-      // console.log(error)
       return <ErrorPrompt promptAction={() => history.go(0)} />
     }
 
