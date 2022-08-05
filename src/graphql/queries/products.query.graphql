@@ -1,4 +1,5 @@
 query products(
+  $collectionId: ID!
   $first: Int
   $last: Int
   $before: String
@@ -7,7 +8,7 @@ query products(
   $reverse: Boolean
   $filters: [ProductFilter!]
 ) {
-  collection(id: "gid://shopify/Collection/386655387864") {
+  collection(id: $collectionId) {
     id
     products(
       first: $first
@@ -21,6 +22,7 @@ query products(
       nodes {
         id
         title
+        productType
         vendor
         totalInventory
         featuredImage {

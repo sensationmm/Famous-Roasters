@@ -38,6 +38,7 @@ describe('Featured product view', () => {
           product: {
             ...ProductMockWithCustomMetadata.result.data.product,
             images: {
+              ...ProductMockWithCustomMetadata.result.data.product.images,
               nodes: [
                 {
                   id: '123123',
@@ -82,6 +83,7 @@ describe('Featured product view', () => {
           product: {
             ...ProductMockWithCustomMetadata.result.data.product,
             images: {
+              ...ProductMockWithCustomMetadata.result.data.product.images,
               nodes: [
                 {
                   id: '123123',
@@ -126,6 +128,7 @@ describe('Featured product view', () => {
           product: {
             ...ProductMockWithCustomMetadata.result.data.product,
             images: {
+              ...ProductMockWithCustomMetadata.result.data.product.images,
               nodes: [
                 {
                   id: '123123',
@@ -170,6 +173,7 @@ describe('Featured product view', () => {
           product: {
             ...ProductMockWithCustomMetadata.result.data.product,
             images: {
+              ...ProductMockWithCustomMetadata.result.data.product.images,
               nodes: [
                 {
                   id: '123123',
@@ -214,6 +218,7 @@ describe('Featured product view', () => {
           product: {
             ...ProductMockWithCustomMetadata.result.data.product,
             images: {
+              ...ProductMockWithCustomMetadata.result.data.product.images,
               nodes: [
                 {
                   id: '123123',
@@ -258,6 +263,7 @@ describe('Featured product view', () => {
           product: {
             ...ProductMockWithCustomMetadata.result.data.product,
             images: {
+              ...ProductMockWithCustomMetadata.result.data.product.images,
               nodes: [
                 {
                   id: '123123',
@@ -325,6 +331,7 @@ describe('Featured product view', () => {
           product: {
             ...ProductMockWithCustomMetadata.result.data.product,
             images: {
+              ...ProductMockWithCustomMetadata.result.data.product.images,
               nodes: [
                 {
                   id: '123123',
@@ -392,6 +399,7 @@ describe('Featured product view', () => {
           product: {
             ...ProductMockWithCustomMetadata.result.data.product,
             images: {
+              ...ProductMockWithCustomMetadata.result.data.product.images,
               nodes: [
                 {
                   id: '123123',

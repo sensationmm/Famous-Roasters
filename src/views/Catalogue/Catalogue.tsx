@@ -29,7 +29,7 @@ import {
   TypographySize,
 } from 'src/components'
 import { Pagination } from 'src/components/Pagination'
-import { famousRoastersClient as frClient } from 'src/config'
+import { famousRoastersClient as frClient, shopifyCoffeeCollection } from 'src/config'
 import { getSimplifiedProductId } from 'src/utils/formatters'
 
 import { getFilterData, getQueryFilter, sortParamsToListBoxItem } from '.'
@@ -89,6 +89,7 @@ interface QueryFilterParams {
 }
 
 interface QueryProductsVariables {
+  collectionId?: string
   first: Maybe<number>
   last: Maybe<number>
   before: Maybe<string>
@@ -278,6 +279,7 @@ export const Catalogue: React.FC = () => {
       const sortKey = searchParams.get('sortKey')
       const reverseParam = searchParams.get('reverse')
       const queryVars: QueryProductsVariables = {
+        collectionId: shopifyCoffeeCollection,
         first: paginationParams?.first,
         last: paginationParams?.last,
         before: paginationParams?.before,

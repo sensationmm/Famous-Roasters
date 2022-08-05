@@ -834,6 +834,12 @@
         "getToKnow": {
           "title": "Alles zum Kaffee"
         },
+        "aboutProduct": {
+          "title": "Alles zum Produkt"
+        },
+        "youMightLike": {
+          "title": "Was dir gefallen könnten"
+        },
         "learnToBrew": {
           "title": "Zubereitungstipps"
         },
@@ -918,6 +924,7 @@
           "footNote": "Preise inkl. MwSt."
         },
         "qualityNote": "Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu Dir. Wir teilen Dir den geplanten Liefertermin im nächsten Schritt mit.",
+        "qualityNoteAccessory": "Wir tun immer unser Bestes, um dein Bestellung rechtzeitig zu bearbeiten und zu versenden. Bitte beachten, dass wir einen Drittanbieter-Kurier verwenden, um das Produkt an dein Haustür zu liefern.",
         "shipping": {
           "label": "Lieferzeit",
           "value": "2-3 Tage"

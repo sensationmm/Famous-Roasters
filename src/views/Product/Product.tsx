@@ -36,41 +36,44 @@ import {
 import { formatPrice, getAPIProductId, parseHtmlSafely } from 'src/utils'
 
 import { FindSimilar } from './FindSimilar'
+import { YouMightLike } from './YouMightLike'
 
-interface ProductMeta {
+export interface ProductMeta {
   value: string
 }
 
-interface ProductMetaInteger {
+export interface ProductMetaInteger {
   value: number
 }
 
-interface ProductVariantCustom extends ProductVariant {
-  grind_type: ProductMeta
+export interface ProductVariantCustom extends ProductVariant {
+  grind_type?: ProductMeta
   package_size: ProductMeta
+  availableForSale: boolean
 }
 
-interface ProductVariantConnectionCustom extends ProductVariantConnection {
+export interface ProductVariantConnectionCustom extends ProductVariantConnection {
   nodes: Array<ProductVariantCustom>
 }
 
-interface ProductCustom extends ProductType {
-  coffee_type: ProductMeta
-  bean_type: ProductMeta
-  aroma: ProductMeta
-  flavourNotes: ProductMeta
-  origin: ProductMeta
-  producer: ProductMeta
-  altitude: ProductMeta
-  variety: ProductMeta
-  processing: ProductMeta
-  sweetness: ProductMetaInteger
-  body: ProductMetaInteger
-  bitterness: ProductMetaInteger
-  acidity: ProductMetaInteger
-  pricePerKg: ProductMeta
+export interface ProductCustom extends ProductType {
+  extraDescription?: ProductMeta
+  coffee_type?: ProductMeta
+  bean_type?: ProductMeta
+  aroma?: ProductMeta
+  flavourNotes?: ProductMeta
+  origin?: ProductMeta
+  producer?: ProductMeta
+  altitude?: ProductMeta
+  variety?: ProductMeta
+  processing?: ProductMeta
+  sweetness?: ProductMetaInteger
+  body?: ProductMetaInteger
+  bitterness?: ProductMetaInteger
+  acidity?: ProductMetaInteger
+  pricePerKg?: ProductMeta
   decaf?: ProductMeta
-  whyThisCoffee: ProductMeta
+  whyThisCoffee?: ProductMeta
   vendor_description?: ProductMeta
   variants: ProductVariantConnectionCustom
   vendor_image?: ProductMeta
@@ -129,6 +132,7 @@ export const Product: React.FC = () => {
 
   const {
     title,
+    productType,
     vendor,
     coffee_type,
     aroma,
@@ -148,7 +152,10 @@ export const Product: React.FC = () => {
     decaf,
     vendor_description,
     vendor_image,
+    extraDescription,
   } = data?.product || {}
+
+  const isAccessory = productType === 'Accessories'
 
   useEffect(() => {
     if (variants) {
@@ -182,7 +189,7 @@ export const Product: React.FC = () => {
     const updatedSelected =
       variants &&
       variants.nodes.find(
-        (x) => x.grind_type.value === v[0].name && x.package_size.value === availableSizesForGrindType[0].name,
+        (x) => x.grind_type?.value === v[0].name && x.package_size.value === availableSizesForGrindType[0].name,
       )
     updatedSelected && setVariantSelected(updatedSelected)
   }
@@ -190,7 +197,7 @@ export const Product: React.FC = () => {
   const updateVariantSelectedWithPackage = (v: ListBoxItem[]) => {
     const check = (x: ProductVariantCustom) =>
       variantSelected.grind_type
-        ? x.package_size.value === v[0].name && x.grind_type.value === variantSelected.grind_type.value
+        ? x.package_size.value === v[0].name && x.grind_type?.value === variantSelected.grind_type.value
         : x.package_size.value === v[0].name
     const updatedSelected = variants && variants.nodes.find((x) => check(x))
     updatedSelected && setVariantSelected(updatedSelected)
@@ -199,7 +206,7 @@ export const Product: React.FC = () => {
   const currencyCode = 'EUR'
   const grindTypeValues = () => {
     const availableGrindTypes =
-      Array.from(new Set(variants.nodes.map((variant) => variant.grind_type.value))).map((x) => ({
+      Array.from(new Set(variants.nodes.map((variant) => variant.grind_type?.value))).map((x) => ({
         name: x,
       })) || []
     !packageSizes && setPackageSizes(packageSizesValues(availableGrindTypes[0].name))
@@ -210,7 +217,7 @@ export const Product: React.FC = () => {
     Array.from(
       new Set(
         variants.nodes
-          .filter((variant) => (grindType ? variant.grind_type.value === grindType : true))
+          .filter((variant) => (grindType ? variant.grind_type?.value === grindType : true))
           .map((variant) => ({ name: variant.package_size.value, disabled: variant.availableForSale !== true })),
       ),
     ).map((x) => x) || []
@@ -302,7 +309,7 @@ export const Product: React.FC = () => {
         </div>
         <div>
           <Typography type={TypographyType.Paragraph} size={TypographySize.Tiny} className="text-coreUI-text-secondary">
-            {t('pages.product.transactional.qualityNote')}
+            {t(`pages.product.transactional.qualityNote${isAccessory ? 'Accessory' : ''}`)}
           </Typography>
         </div>
       </>
@@ -391,16 +398,24 @@ export const Product: React.FC = () => {
               />
             </div>
           )}
+
+          {isAccessory && descriptionHtml && (
+            <div
+              className="pt-4 border-b border-brand-grey-whisper"
+              dangerouslySetInnerHTML={{ __html: parseHtmlSafely(descriptionHtml) }}
+            />
+          )}
+
           {/* Transactional section */}
           <div className="pt-4">
             <div>
               {variants && variants.nodes[0].grind_type && (
                 <Listbox
-                  items={grindTypeValues()}
+                  items={grindTypeValues() as ListBoxItem[]}
                   hasTranslatedValues={false}
                   translationPrefix="pages.product.transactional.options.grindType"
                   multiple={false}
-                  value={[{ name: variantSelected?.grind_type?.value }]}
+                  value={[{ name: variantSelected?.grind_type?.value || '' }]}
                   onChange={(v) => v && updateVariantSelectedWithGrind(v)}
                   label={t('pages.product.transactional.options.grindType.label')}
                   addOn={<GrindsInfo />}
@@ -482,24 +497,9 @@ export const Product: React.FC = () => {
   const renderProductCollapsableBlocks = () => {
     // some blocks - disabled as no real content yet
     // const blocksData = [{ key: 'getToKnow' }, { key: 'meetTheRoaster' }, { key: 'learnToBrew' }, { key: 'findSimilar' }]
-    const blocksData = [{ key: 'getToKnow' }, { key: 'meetTheRoaster' }, { key: 'findSimilar' }]
-
-    const placeHolderText = (
-      <>
-        <Typography as="p" className="mb-2">
-          Cup, crema doppio fair trade sweet cinnamon galão acerbic beans irish. Breve, id qui, bar et, eu, viennese as
-          body filter aftertaste cappuccino.
-        </Typography>
-        <Typography as="p" className="mb-2">
-          Irish cup frappuccino saucer dark white body arabica. Plunger pot ristretto trifecta single origin, acerbic
-          barista milk qui et aroma americano.
-        </Typography>
-        <Typography as="p" className="mb-2">
-          Trifecta cortado grinder variety aroma at mazagran, saucer carajillo french press rich extra. As, flavour,
-          foam, extra , frappuccino espresso trifecta macchiato robust flavour a ristretto.
-        </Typography>
-      </>
-    )
+    const blocksData = !isAccessory
+      ? [{ key: 'getToKnow' }, { key: 'meetTheRoaster' }, { key: 'findSimilar' }]
+      : [{ key: 'aboutProduct' }, { key: 'youMightLike' }]
 
     const renderProductBlockContent = (key: string) => {
       switch (key) {
@@ -509,27 +509,37 @@ export const Product: React.FC = () => {
           return vendor_description?.value && vendor_image?.value ? renderProductBlockContentMeetTheRoaster() : null
         case 'findSimilar':
           return aroma ? <FindSimilar aroma={aroma.value} productId={id} /> : null
+        case 'youMightLike':
+          return <YouMightLike productId={id} />
+        case 'aboutProduct':
+          return extraDescription?.value
         default:
-          return placeHolderText
+          return ''
       }
     }
 
     return (
       <div className="mt-6">
-        {blocksData.map((blockData, idx) => (
-          <Disclosure
-            key={`pdp-disclosure-${idx}`}
-            className="border-t border-coreUI-border"
-            buttonChildren={
-              <Typography type={TypographyType.Heading} size={TypographySize.Tiny}>
-                {t(`pages.product.sections.${blockData.key}.title`)}
-              </Typography>
-            }
-            defaultOpen={true}
-            canToggle={blockData.key !== 'findSimilar'}
-            panelChildren={renderProductBlockContent(blockData.key)}
-          />
-        ))}
+        {blocksData.map((blockData, idx) => {
+          const content = renderProductBlockContent(blockData.key)
+
+          if (!content) return null
+
+          return (
+            <Disclosure
+              key={`pdp-disclosure-${idx}`}
+              className="border-t border-coreUI-border"
+              buttonChildren={
+                <Typography type={TypographyType.Heading} size={TypographySize.Tiny}>
+                  {t(`pages.product.sections.${blockData.key}.title`)}
+                </Typography>
+              }
+              defaultOpen={true}
+              canToggle={['findSimilar', 'youMightLike'].filter((el) => el === blockData.key).length === 0}
+              panelChildren={content}
+            />
+          )
+        })}
       </div>
     )
   }

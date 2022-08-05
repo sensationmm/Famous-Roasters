@@ -1,0 +1,674 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Find accessories partial view Renders correctly for a successful call 1`] = `
+<div>
+  <div
+    class="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
+  >
+    <a
+      href="/product/7655228866776"
+    >
+      <div
+        class="flex pt-8 md:px-6"
+      >
+        <div
+          class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+        >
+          <div
+            class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+          >
+            <img
+              alt="Espresso Raritäten Set"
+              class="w-28 max-h-28"
+              src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+            />
+            <div
+              class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+            >
+              <span
+                class="text-xs leading-4"
+              >
+                Decaf
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col w-full justify-start pl-4"
+        >
+          <div
+            class="text-base leading-6 font-semibold"
+          >
+            Espresso Raritäten Set
+          </div>
+          <div
+            class="text-coreUI-text-secondary text-base leading-6"
+          >
+            60beans
+          </div>
+          <div
+            class="text-coreUI-text-secondary text-base leading-6"
+          >
+            Kolumbien
+          </div>
+          <div
+            class="text-coreUI-text-secondary text-base leading-6"
+          >
+            Filter
+          </div>
+          <div
+            class="flex items-baseline"
+          >
+            <span
+              class="mr-1 text-base leading-6 font-semibold"
+            >
+              19,99 €
+            </span>
+            <span
+              class="text-coreUI-text-secondary text-xs leading-4"
+            >
+              (
+              10,00 €
+              /kg)
+            </span>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a
+      href="/product/7655228866776"
+    >
+      <div
+        class="flex pt-8 md:px-6"
+      >
+        <div
+          class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+        >
+          <div
+            class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+          >
+            <img
+              alt="Espresso Raritäten Set"
+              class="w-28 max-h-28"
+              src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+            />
+            <div
+              class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+            >
+              <span
+                class="text-xs leading-4"
+              >
+                Decaf
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col w-full justify-start pl-4"
+        >
+          <div
+            class="text-base leading-6 font-semibold"
+          >
+            Espresso Raritäten Set
+          </div>
+          <div
+            class="text-coreUI-text-secondary text-base leading-6"
+          >
+            60beans
+          </div>
+          <div
+            class="text-coreUI-text-secondary text-base leading-6"
+          >
+            Kolumbien
+          </div>
+          <div
+            class="text-coreUI-text-secondary text-base leading-6"
+          >
+            Filter
+          </div>
+          <div
+            class="flex items-baseline"
+          >
+            <span
+              class="mr-1 text-base leading-6 font-semibold"
+            >
+              19,99 €
+            </span>
+            <span
+              class="text-coreUI-text-secondary text-xs leading-4"
+            >
+              (
+              10,00 €
+              /kg)
+            </span>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a
+      href="/product/7655228866776"
+    >
+      <div
+        class="flex pt-8 md:px-6"
+      >
+        <div
+          class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+        >
+          <div
+            class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+          >
+            <img
+              alt="Espresso Raritäten Set"
+              class="w-28 max-h-28"
+              src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+            />
+            <div
+              class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+            >
+              <span
+                class="text-xs leading-4"
+              >
+                Decaf
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col w-full justify-start pl-4"
+        >
+          <div
+            class="text-base leading-6 font-semibold"
+          >
+            Espresso Raritäten Set
+          </div>
+          <div
+            class="text-coreUI-text-secondary text-base leading-6"
+          >
+            60beans
+          </div>
+          <div
+            class="text-coreUI-text-secondary text-base leading-6"
+          >
+            Kolumbien
+          </div>
+          <div
+            class="text-coreUI-text-secondary text-base leading-6"
+          >
+            Filter
+          </div>
+          <div
+            class="flex items-baseline"
+          >
+            <span
+              class="mr-1 text-base leading-6 font-semibold"
+            >
+              19,99 €
+            </span>
+            <span
+              class="text-coreUI-text-secondary text-xs leading-4"
+            >
+              (
+              10,00 €
+              /kg)
+            </span>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a
+      href="/product/7655228866776"
+    >
+      <div
+        class="flex pt-8 md:px-6"
+      >
+        <div
+          class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+        >
+          <div
+            class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+          >
+            <img
+              alt="Espresso Raritäten Set"
+              class="w-28 max-h-28"
+              src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+            />
+            <div
+              class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+            >
+              <span
+                class="text-xs leading-4"
+              >
+                Decaf
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col w-full justify-start pl-4"
+        >
+          <div
+            class="text-base leading-6 font-semibold"
+          >
+            Espresso Raritäten Set
+          </div>
+          <div
+            class="text-coreUI-text-secondary text-base leading-6"
+          >
+            60beans
+          </div>
+          <div
+            class="text-coreUI-text-secondary text-base leading-6"
+          >
+            Kolumbien
+          </div>
+          <div
+            class="text-coreUI-text-secondary text-base leading-6"
+          >
+            Filter
+          </div>
+          <div
+            class="flex items-baseline"
+          >
+            <span
+              class="mr-1 text-base leading-6 font-semibold"
+            >
+              19,99 €
+            </span>
+            <span
+              class="text-coreUI-text-secondary text-xs leading-4"
+            >
+              (
+              10,00 €
+              /kg)
+            </span>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a
+      href="/product/7655228866776"
+    >
+      <div
+        class="flex pt-8 md:px-6"
+      >
+        <div
+          class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+        >
+          <div
+            class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+          >
+            <img
+              alt="Espresso Raritäten Set"
+              class="w-28 max-h-28"
+              src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+            />
+            <div
+              class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+            >
+              <span
+                class="text-xs leading-4"
+              >
+                Decaf
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col w-full justify-start pl-4"
+        >
+          <div
+            class="text-base leading-6 font-semibold"
+          >
+            Espresso Raritäten Set
+          </div>
+          <div
+            class="text-coreUI-text-secondary text-base leading-6"
+          >
+            60beans
+          </div>
+          <div
+            class="text-coreUI-text-secondary text-base leading-6"
+          >
+            Kolumbien
+          </div>
+          <div
+            class="text-coreUI-text-secondary text-base leading-6"
+          >
+            Filter
+          </div>
+          <div
+            class="flex items-baseline"
+          >
+            <span
+              class="mr-1 text-base leading-6 font-semibold"
+            >
+              19,99 €
+            </span>
+            <span
+              class="text-coreUI-text-secondary text-xs leading-4"
+            >
+              (
+              10,00 €
+              /kg)
+            </span>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a
+      href="/product/7655228866776"
+    >
+      <div
+        class="flex pt-8 md:px-6"
+      >
+        <div
+          class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+        >
+          <div
+            class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+          >
+            <img
+              alt="Espresso Raritäten Set"
+              class="w-28 max-h-28"
+              src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+            />
+            <div
+              class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+            >
+              <span
+                class="text-xs leading-4"
+              >
+                Decaf
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col w-full justify-start pl-4"
+        >
+          <div
+            class="text-base leading-6 font-semibold"
+          >
+            Espresso Raritäten Set
+          </div>
+          <div
+            class="text-coreUI-text-secondary text-base leading-6"
+          >
+            60beans
+          </div>
+          <div
+            class="text-coreUI-text-secondary text-base leading-6"
+          >
+            Kolumbien
+          </div>
+          <div
+            class="text-coreUI-text-secondary text-base leading-6"
+          >
+            Filter
+          </div>
+          <div
+            class="flex items-baseline"
+          >
+            <span
+              class="mr-1 text-base leading-6 font-semibold"
+            >
+              19,99 €
+            </span>
+            <span
+              class="text-coreUI-text-secondary text-xs leading-4"
+            >
+              (
+              10,00 €
+              /kg)
+            </span>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Find accessories partial view Renders correctly for a successful call not excluding 1`] = `
+<div>
+  <div
+    class="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
+  >
+    <a
+      href="/product/7655228866776"
+    >
+      <div
+        class="flex pt-8 md:px-6"
+      >
+        <div
+          class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+        >
+          <div
+            class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+          >
+            <img
+              alt="Espresso Raritäten Set"
+              class="w-28 max-h-28"
+              src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+            />
+            <div
+              class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+            >
+              <span
+                class="text-xs leading-4"
+              >
+                Decaf
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col w-full justify-start pl-4"
+        >
+          <div
+            class="text-base leading-6 font-semibold"
+          >
+            Espresso Raritäten Set
+          </div>
+          <div
+            class="text-coreUI-text-secondary text-base leading-6"
+          >
+            60beans
+          </div>
+          <div
+            class="text-coreUI-text-secondary text-base leading-6"
+          >
+            Kolumbien
+          </div>
+          <div
+            class="text-coreUI-text-secondary text-base leading-6"
+          >
+            Filter
+          </div>
+          <div
+            class="flex items-baseline"
+          >
+            <span
+              class="mr-1 text-base leading-6 font-semibold"
+            >
+              19,99 €
+            </span>
+            <span
+              class="text-coreUI-text-secondary text-xs leading-4"
+            >
+              (
+              10,00 €
+              /kg)
+            </span>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a
+      href="/product/7655228866776"
+    >
+      <div
+        class="flex pt-8 md:px-6"
+      >
+        <div
+          class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+        >
+          <div
+            class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+          >
+            <img
+              alt="Espresso Raritäten Set"
+              class="w-28 max-h-28"
+              src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+            />
+            <div
+              class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+            >
+              <span
+                class="text-xs leading-4"
+              >
+                Decaf
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col w-full justify-start pl-4"
+        >
+          <div
+            class="text-base leading-6 font-semibold"
+          >
+            Espresso Raritäten Set
+          </div>
+          <div
+            class="text-coreUI-text-secondary text-base leading-6"
+          >
+            60beans
+          </div>
+          <div
+            class="text-coreUI-text-secondary text-base leading-6"
+          >
+            Kolumbien
+          </div>
+          <div
+            class="text-coreUI-text-secondary text-base leading-6"
+          >
+            Filter
+          </div>
+          <div
+            class="flex items-baseline"
+          >
+            <span
+              class="mr-1 text-base leading-6 font-semibold"
+            >
+              19,99 €
+            </span>
+            <span
+              class="text-coreUI-text-secondary text-xs leading-4"
+            >
+              (
+              10,00 €
+              /kg)
+            </span>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a
+      href="/product/7655228866776"
+    >
+      <div
+        class="flex pt-8 md:px-6"
+      >
+        <div
+          class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+        >
+          <div
+            class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+          >
+            <img
+              alt="Espresso Raritäten Set"
+              class="w-28 max-h-28"
+              src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+            />
+            <div
+              class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+            >
+              <span
+                class="text-xs leading-4"
+              >
+                Decaf
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col w-full justify-start pl-4"
+        >
+          <div
+            class="text-base leading-6 font-semibold"
+          >
+            Espresso Raritäten Set
+          </div>
+          <div
+            class="text-coreUI-text-secondary text-base leading-6"
+          >
+            60beans
+          </div>
+          <div
+            class="text-coreUI-text-secondary text-base leading-6"
+          >
+            Kolumbien
+          </div>
+          <div
+            class="text-coreUI-text-secondary text-base leading-6"
+          >
+            Filter
+          </div>
+          <div
+            class="flex items-baseline"
+          >
+            <span
+              class="mr-1 text-base leading-6 font-semibold"
+            >
+              19,99 €
+            </span>
+            <span
+              class="text-coreUI-text-secondary text-xs leading-4"
+            >
+              (
+              10,00 €
+              /kg)
+            </span>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Find accessories partial view handles error 1`] = `
+<div>
+  <div
+    class="p-4 border border-coreUI-border bg-white"
+  >
+    <div
+      class="text-center text-base leading-6"
+    >
+      Ein Fehler ist aufgetreten
+    </div>
+    <div
+      class="mt-4 flex justify-center"
+    >
+      <button
+        class="relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+        data-testid="button-prompt"
+        role="button"
+      >
+        Erneut versuchen
+      </button>
+    </div>
+  </div>
+</div>
+`;
