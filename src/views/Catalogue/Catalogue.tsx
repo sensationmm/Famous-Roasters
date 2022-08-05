@@ -1,3 +1,4 @@
+import { ApolloError } from '@apollo/client'
 import { useLazyQuery } from '@apollo/client/react/hooks'
 import { ChevronRightIcon } from '@heroicons/react/solid'
 import {
@@ -28,7 +29,7 @@ import {
   TypographySize,
 } from 'src/components'
 import { Pagination } from 'src/components/Pagination'
-import { shopifyCoffeeCollection } from 'src/config'
+import { famousRoastersClient as frClient, shopifyCoffeeCollection } from 'src/config'
 import { getSimplifiedProductId } from 'src/utils/formatters'
 
 import { getFilterData, getQueryFilter, sortParamsToListBoxItem } from '.'
@@ -115,12 +116,22 @@ const paginationParamsInitialValue = {
   after: null,
 }
 
+export type FilterResponse = {
+  aromas: Array<string>
+  beanTypes: Array<string>
+  coffeeTypes: Array<string>
+  origins: Array<string>
+  packageSizes: Array<string>
+  vendors: Array<string>
+}
+
 export const Catalogue: React.FC = () => {
   const { t } = useTranslation()
   const [activeTab, setActiveTab] = useState<string>('discover')
   const [sortValue, setSortValue] = useState<ListBoxItem[]>()
   const [sortParams, setSortParams] = useState<SortParams>()
   const [filters, setFilters] = useState<FilterData[]>([])
+  const [filterAttributesData, setFilterAttributesData] = useState<FilterResponse>()
   const [queryFilterParams, setQueryFilterParams] = useState<QueryFilterParams>()
   const [paginationParams, setPaginationParams] = useState<PaginationParams>(paginationParamsInitialValue)
   const [queryProductsVariables, setQueryProductsVariables] = useState<QueryProductsVariables>()
@@ -128,12 +139,11 @@ export const Catalogue: React.FC = () => {
   const GET_PRODUCTS = loader('src/graphql/queries/products.query.graphql')
   const GET_FILTER_ATTRIBUTES = loader('src/graphql/queries/filterAttributes.query.graphql')
 
-  const [
-    getFilterAttributes,
-    { loading: filterAttributesLoading, error: filterAttributesError, data: filterAttributesData },
-  ] = useLazyQuery<Collection>(GET_FILTER_ATTRIBUTES)
+  const famousRoastersClient = frClient()
 
-  const filtersData = (filterInput: Collection): FilterData[] => {
+  let filterAttributesLoading: boolean, filterAttributesError: ApolloError | undefined
+
+  const filtersData = (filterInput: FilterResponse): FilterData[] => {
     const coffeeType = searchParams.get('coffeeType')?.split('|')
     const decaf = searchParams.get('decaf')?.split('|')
     const beanType = searchParams.get('beanType')?.split('|')
@@ -144,7 +154,7 @@ export const Catalogue: React.FC = () => {
     return getFilterData(filterInput, coffeeType, decaf, beanType, vendor, origin, packageSize, aroma)
   }
 
-  const processFilterValues = (fData: Collection, f: FilterData[]) => {
+  const processFilterValues = (fData: FilterResponse, f: FilterData[]) => {
     setFilters(f)
     const { queryFilter, vendor, coffeeType, decaf, beanType, origin, packageSize, aroma } = getQueryFilter(fData, f)
     queryFilter.length > 0 ? setQueryFilterParams({ queryFilter }) : setQueryFilterParams({ queryFilter: undefined })
@@ -183,11 +193,20 @@ export const Catalogue: React.FC = () => {
     }
     setSortParams(updatedSortParams)
     setSortValue(sortParamsToListBoxItem(updatedSortParams))
-    getFilterAttributes()
+
+    famousRoastersClient
+      .query({
+        query: GET_FILTER_ATTRIBUTES,
+      })
       .then((res) => {
-        res.data && processFilterValues(res.data, filtersData(res.data))
+        const { loading, error, data } = res
+        filterAttributesLoading = loading
+        filterAttributesError = error
+        setFilterAttributesData(data.filterDictionaries)
+        data.filterDictionaries && processFilterValues(data.filterDictionaries, filtersData(data.filterDictionaries))
       })
       .catch((err) => {
+        filterAttributesError = error
         throw new Error('Error fetching filter attributes', err)
       })
   }, [])
@@ -384,16 +403,17 @@ export const Catalogue: React.FC = () => {
   }
 
   const renderDiscoverProducts = () => {
+    // console.log('error', error)
+    if (error !== undefined || !pageInfo) {
+      return <ErrorPrompt promptAction={() => history.go(0)} />
+    }
+
     if (!data || !filterAttributesData || !filters.length || queryFilterParams === undefined) {
       return (
         <div className="flex h-64 mb-32 justify-center items-center">
           <Loader />
         </div>
       )
-    }
-
-    if (error || !pageInfo) {
-      return <ErrorPrompt promptAction={() => history.go(0)} />
     }
 
     return (

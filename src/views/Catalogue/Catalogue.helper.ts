@@ -1,5 +1,6 @@
-import { Collection } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { FilterData, ListBoxItem } from 'src/components'
+
+import { FilterResponse } from './Catalogue'
 
 interface QueryFilterResult {
   queryFilter: object[]
@@ -17,7 +18,7 @@ interface SortParams {
   reverse?: boolean
 }
 
-export const getQueryFilter = (fData: Collection, f: FilterData[]): QueryFilterResult => {
+export const getQueryFilter = (fData: FilterResponse, f: FilterData[]): QueryFilterResult => {
   const queryFilter: object[] = []
   const vendor: string[] = []
   const coffeeType: string[] = []
@@ -60,26 +61,11 @@ export const getQueryFilter = (fData: Collection, f: FilterData[]): QueryFilterR
           })
           break
         case 'origin': {
-          const originValues = Array.from(
-            new Set(
-              fData.products.nodes
-                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                // @ts-ignore
-                .map((productNode) => productNode['origin']?.value.replace(', ', ','))
-                .flat()
-                .filter((x) => x !== undefined)
-                .sort(),
-            ),
-          )
           filter.filterValuesSelected.forEach((filterValue) => {
             origin.push(filterValue)
-            originValues
-              .filter((x) => x.indexOf(filterValue) !== -1)
-              .forEach((fv) => {
-                queryFilter.push({
-                  productMetafield: { namespace: 'my_fields', key: 'origin', value: `${fv}` },
-                })
-              })
+            queryFilter.push({
+              productMetafield: { namespace: 'my_fields', key: 'origin', value: `${filterValue}` },
+            })
           })
           break
         }
@@ -106,70 +92,8 @@ export const getQueryFilter = (fData: Collection, f: FilterData[]): QueryFilterR
   return { queryFilter, vendor, coffeeType, decaf, beanType, origin, packageSize, aroma }
 }
 
-export const getFilterValues = (fData: Collection, key: string) => {
-  const standardFilterValues = (k: string) =>
-    Array.from(
-      new Set(
-        fData.products.nodes
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          // @ts-ignore
-          .map((productNode) => productNode[k]?.value)
-          .flat()
-          .filter((x) => x !== undefined)
-          .sort(),
-      ),
-    )
-  switch (key) {
-    case 'vendor':
-      return Array.from(
-        new Set(
-          fData.products.nodes
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore
-            .map((productNode) => productNode.vendor)
-            .flat()
-            .filter((x) => x !== undefined)
-            .sort(),
-        ),
-      )
-    case 'origin': {
-      const originMapping = Array.from(
-        new Set(
-          fData.products.nodes
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore
-            .map((productNode) => productNode['origin']?.value.replace(', ', ','))
-            .flat()
-            .filter((x) => x !== undefined)
-            .sort(),
-        ),
-      )
-      return Array.from(new Set(originMapping.map((value) => value.split(',')).flat())).sort()
-    }
-    case 'coffee_type':
-      return standardFilterValues('coffee_type')
-    case 'decaf':
-      return standardFilterValues('decaf')
-    case 'bean_type':
-      return standardFilterValues('bean_type')
-    case 'package_size':
-      return Array.from(
-        new Set(
-          fData.products.nodes
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore
-            .map((productNode) => productNode.variants.nodes.map((variantNode) => variantNode['package_size']?.value))
-            .flat()
-            .sort((a, b) => (parseFloat(a) > parseFloat(b) ? 1 : -1)),
-        ),
-      )
-    case 'aroma':
-      return standardFilterValues('aroma')
-  }
-}
-
 export const getFilterData = (
-  filterInput: Collection,
+  filterInput: FilterResponse,
   coffeeType?: string[],
   decaf?: string[],
   beanType?: string[],
@@ -178,40 +102,48 @@ export const getFilterData = (
   packageSize?: string[],
   aroma?: string[],
 ): FilterData[] => {
+  const sortPackageSizes = (data: FilterResponse['packageSizes']) => {
+    const preSort = data?.slice()
+    const getSize = (size: string) => {
+      return parseInt(size.replace('g', ''))
+    }
+    return preSort.sort((a, b) => (getSize(a) > getSize(b) ? 1 : -1))
+  }
+
   return [
     {
       key: 'coffeeType',
       isOpen: false,
       filterType: 'enum',
-      filterValues: getFilterValues(filterInput, 'coffee_type'),
+      filterValues: filterInput.coffeeTypes,
       filterValuesSelected: coffeeType ? coffeeType : [],
     },
     {
       key: 'decaf',
       isOpen: false,
       filterType: 'enum',
-      filterValues: getFilterValues(filterInput, 'decaf'),
+      filterValues: ['false', 'true'],
       filterValuesSelected: decaf && decaf[0] === 'true' ? ['true'] : [],
     },
     {
       key: 'beanType',
       isOpen: false,
       filterType: 'enum',
-      filterValues: getFilterValues(filterInput, 'bean_type'),
+      filterValues: filterInput.beanTypes,
       filterValuesSelected: beanType ? beanType : [],
     },
     {
       key: 'vendor',
       isOpen: false,
       filterType: 'enum',
-      filterValues: getFilterValues(filterInput, 'vendor'),
+      filterValues: filterInput.vendors,
       filterValuesSelected: vendor ? vendor : [],
     },
     {
       key: 'origin',
       isOpen: false,
       filterType: 'enum',
-      filterValues: getFilterValues(filterInput, 'origin'),
+      filterValues: filterInput.origins,
       i18nValues: true,
       filterValuesSelected: origin ? origin : [],
     },
@@ -219,14 +151,14 @@ export const getFilterData = (
       key: 'packageSize',
       isOpen: false,
       filterType: 'enum',
-      filterValues: getFilterValues(filterInput, 'package_size'),
+      filterValues: sortPackageSizes(filterInput.packageSizes),
       filterValuesSelected: packageSize ? packageSize : [],
     },
     {
       key: 'aroma',
       isOpen: false,
       filterType: 'enum',
-      filterValues: getFilterValues(filterInput, 'aroma'),
+      filterValues: filterInput.aromas,
       filterValuesSelected: aroma ? aroma : [],
     },
   ]

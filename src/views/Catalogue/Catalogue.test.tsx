@@ -8,7 +8,8 @@ import {
   CatalogueMocks,
   CatalogueMocksFilters,
   CatalogueMocksPagination,
-  FilterAttributesMock,
+  FilterAttributesMock as mockFilterAttributes,
+  FilterAttributesMockError,
 } from 'src/_mocks'
 import { i18n } from 'src/config'
 
@@ -31,12 +32,19 @@ const intersectionObserverMock = function () {
 // @ts-ignore
 window.IntersectionObserver = intersectionObserverMock
 
+jest.mock('src/config', () => ({
+  ...jest.requireActual('src/config'),
+  famousRoastersClient: () => ({
+    query: () => Promise.resolve({ data: mockFilterAttributes.result.data, loading: false, error: null }),
+  }),
+}))
+
 describe('Catalogue view', () => {
   it('Renders correctly for a successful call', async () => {
     const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
-        mocks={[FilterAttributesMock, FilterAttributesMock, ...CatalogueMocks]}
+        mocks={[mockFilterAttributes, mockFilterAttributes, ...CatalogueMocks]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -64,7 +72,7 @@ describe('Catalogue view', () => {
     const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
-        mocks={[FilterAttributesMock, FilterAttributesMock, ...CatalogueMocks]}
+        mocks={[mockFilterAttributes, mockFilterAttributes, ...CatalogueMocks]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -84,7 +92,7 @@ describe('Catalogue view', () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
-        mocks={[...CatalogueMocks, FilterAttributesMock]}
+        mocks={[...CatalogueMocks, mockFilterAttributes]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -106,7 +114,7 @@ describe('Catalogue view', () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
-        mocks={[FilterAttributesMock, FilterAttributesMock, ...CatalogueMocksPagination, ...CatalogueMocksPagination]}
+        mocks={[mockFilterAttributes, mockFilterAttributes, ...CatalogueMocksPagination, ...CatalogueMocksPagination]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -144,7 +152,7 @@ describe('Catalogue view', () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
-        mocks={[FilterAttributesMock, FilterAttributesMock, ...CatalogueMocksPagination, ...CatalogueMocksPagination]}
+        mocks={[mockFilterAttributes, mockFilterAttributes, ...CatalogueMocksPagination, ...CatalogueMocksPagination]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -181,7 +189,7 @@ describe('Catalogue view', () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
-        mocks={[FilterAttributesMock, FilterAttributesMock, ...CatalogueMocks]}
+        mocks={[mockFilterAttributes, mockFilterAttributes, ...CatalogueMocks]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -207,7 +215,7 @@ describe('Catalogue view', () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
-        mocks={[FilterAttributesMock, FilterAttributesMock, ...CatalogueMocks, ...CatalogueMocks]}
+        mocks={[mockFilterAttributes, mockFilterAttributes, ...CatalogueMocks, ...CatalogueMocks]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -275,7 +283,7 @@ describe('Catalogue view', () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
-        mocks={[FilterAttributesMock, FilterAttributesMock, ...CatalogueMocks, ...CatalogueMocksFilters]}
+        mocks={[mockFilterAttributes, mockFilterAttributes, ...CatalogueMocks, ...CatalogueMocksFilters]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -307,39 +315,7 @@ describe('Catalogue view', () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
-        mocks={[FilterAttributesMock, FilterAttributesMock, ...CatalogueMocks, ...CatalogueMocksFilters]}
-        addTypename={false}
-      >
-        <I18nextProvider i18n={i18n}>
-          <MemoryRouter initialEntries={['/catalogue']}>
-            <Catalogue />
-          </MemoryRouter>
-        </I18nextProvider>
-      </MockedProvider>,
-    )
-
-    await act(async (): Promise<void> => {
-      await new Promise((resolve) => setTimeout(resolve, 500))
-    })
-
-    await waitFor(async () => {
-      const button = await screen.findAllByTestId('button-listbox')
-      expect(button[1]).toBeInTheDocument()
-      fireEvent.click(button[2])
-    })
-
-    await waitFor(async () => {
-      const option = screen.getByTestId('option-0')
-      expect(option).toBeInTheDocument()
-      fireEvent.click(option)
-    })
-  })
-
-  it('The user can filter per roaster on desktop', async () => {
-    render(
-      <MockedProvider
-        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
-        mocks={[FilterAttributesMock, FilterAttributesMock, ...CatalogueMocks, ...CatalogueMocksFilters]}
+        mocks={[mockFilterAttributes, mockFilterAttributes, ...CatalogueMocks, ...CatalogueMocksFilters]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -357,7 +333,71 @@ describe('Catalogue view', () => {
     await waitFor(async () => {
       const button = await screen.findAllByTestId('button-listbox')
       expect(button[2]).toBeInTheDocument()
+      fireEvent.click(button[2])
+    })
+
+    await waitFor(async () => {
+      const option = screen.getByTestId('option-0')
+      expect(option).toBeInTheDocument()
+      fireEvent.click(option)
+    })
+  })
+
+  it('The user can filter per origin on desktop', async () => {
+    render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
+        mocks={[mockFilterAttributes, mockFilterAttributes, ...CatalogueMocks, ...CatalogueMocksFilters]}
+        addTypename={false}
+      >
+        <I18nextProvider i18n={i18n}>
+          <MemoryRouter initialEntries={['/catalogue']}>
+            <Catalogue />
+          </MemoryRouter>
+        </I18nextProvider>
+      </MockedProvider>,
+    )
+
+    await act(async (): Promise<void> => {
+      await new Promise((resolve) => setTimeout(resolve, 500))
+    })
+
+    await waitFor(async () => {
+      const button = await screen.findAllByTestId('button-listbox')
+      expect(button[3]).toBeInTheDocument()
       fireEvent.click(button[3])
+    })
+
+    await waitFor(async () => {
+      const option = screen.getByTestId('option-0')
+      expect(option).toBeInTheDocument()
+      fireEvent.click(option)
+    })
+  })
+
+  it('The user can filter per roaster on desktop', async () => {
+    render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
+        mocks={[mockFilterAttributes, mockFilterAttributes, ...CatalogueMocks, ...CatalogueMocksFilters]}
+        addTypename={false}
+      >
+        <I18nextProvider i18n={i18n}>
+          <MemoryRouter initialEntries={['/catalogue']}>
+            <Catalogue />
+          </MemoryRouter>
+        </I18nextProvider>
+      </MockedProvider>,
+    )
+
+    await act(async (): Promise<void> => {
+      await new Promise((resolve) => setTimeout(resolve, 500))
+    })
+
+    await waitFor(async () => {
+      const button = await screen.findAllByTestId('button-listbox')
+      expect(button[4]).toBeInTheDocument()
+      fireEvent.click(button[4])
     })
 
     await waitFor(async () => {
@@ -371,7 +411,7 @@ describe('Catalogue view', () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
-        mocks={[FilterAttributesMock, FilterAttributesMock, ...CatalogueMocks, ...CatalogueMocksFilters]}
+        mocks={[mockFilterAttributes, mockFilterAttributes, ...CatalogueMocks, ...CatalogueMocksFilters]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -403,7 +443,7 @@ describe('Catalogue view', () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
-        mocks={[FilterAttributesMock, FilterAttributesMock, ...CatalogueMocks, ...CatalogueMocksFilters]}
+        mocks={[mockFilterAttributes, mockFilterAttributes, ...CatalogueMocks, ...CatalogueMocksFilters]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -420,7 +460,7 @@ describe('Catalogue view', () => {
 
     await waitFor(async () => {
       const button = await screen.findAllByTestId('button-listbox')
-      expect(button[4]).toBeInTheDocument()
+      expect(button[5]).toBeInTheDocument()
       fireEvent.click(button[5])
     })
 
@@ -435,7 +475,7 @@ describe('Catalogue view', () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
-        mocks={[FilterAttributesMock, FilterAttributesMock, ...CatalogueMocks, ...CatalogueMocksFilters]}
+        mocks={[mockFilterAttributes, mockFilterAttributes, ...CatalogueMocks, ...CatalogueMocksFilters]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -467,7 +507,7 @@ describe('Catalogue view', () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
-        mocks={[FilterAttributesMock, FilterAttributesMock, ...CatalogueMocks, ...CatalogueMocksFilters]}
+        mocks={[mockFilterAttributes, mockFilterAttributes, ...CatalogueMocks, ...CatalogueMocksFilters]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -494,8 +534,8 @@ describe('Catalogue view', () => {
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
         mocks={[
-          FilterAttributesMock,
-          FilterAttributesMock,
+          mockFilterAttributes,
+          mockFilterAttributes,
           ...CatalogueMocks,
           ...CatalogueMocks,
           ...CatalogueMocksFilters,
@@ -555,7 +595,7 @@ describe('Catalogue view', () => {
     const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
-        mocks={[CatalogueMockError, FilterAttributesMock, ...CatalogueMocksFilters]}
+        mocks={[CatalogueMockError, FilterAttributesMockError]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -567,7 +607,7 @@ describe('Catalogue view', () => {
     )
 
     await act(async (): Promise<void> => {
-      await new Promise((resolve) => setTimeout(resolve, 500))
+      await new Promise((resolve) => setTimeout(resolve, 1000))
     })
 
     expect(container).toMatchSnapshot()

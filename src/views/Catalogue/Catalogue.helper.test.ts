@@ -39,7 +39,7 @@ describe('Catalogue helper', () => {
         getFilterData(
           // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore
-          FilterAttributesMock.result.data,
+          FilterAttributesMock.result.data.filterDictionaries,
           undefined,
           undefined,
           undefined,
@@ -107,7 +107,7 @@ describe('Catalogue helper', () => {
         getFilterData(
           // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore
-          FilterAttributesMock.result.data,
+          FilterAttributesMock.result.data.filterDictionaries,
           ['Filter'],
           ['true'],
           ['Arabica'],
