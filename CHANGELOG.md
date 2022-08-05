@@ -1,3 +1,13 @@
+# [1.36.0](https://github.com/Famous-Roasters/frontend/compare/v1.35.2...v1.36.0) (2022-08-05)
+
+
+### Features
+
+* **git:** local branch prune script ([f72db6f](https://github.com/Famous-Roasters/frontend/commit/f72db6f90da1981e6d0eaa8a9cd402ab5718bfdd))
+* **product page:** accessories PDP ([fc5ae40](https://github.com/Famous-Roasters/frontend/commit/fc5ae40bf8fcbe3298bfecf53e7d2ded2a6f83ca))
+* **product page:** correct accesssories collection ([7adddae](https://github.com/Famous-Roasters/frontend/commit/7adddae58eb15c83729cf0855832598e630c24a8))
+* **product page:** responsive product count rendering ([19345e2](https://github.com/Famous-Roasters/frontend/commit/19345e21ec6e4315150641f2f0a42f3d070b76f2))
+
 ## [1.35.2](https://github.com/Famous-Roasters/frontend/compare/v1.35.1...v1.35.2) (2022-08-04)
 
 
