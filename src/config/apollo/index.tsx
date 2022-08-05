@@ -69,3 +69,10 @@ export const famousRoastersClient = (): ApolloClient<NormalizedCacheObject> => {
     link: authLink.concat(httpLink),
   })
 }
+
+export const hygraphClient = (): ApolloClient<NormalizedCacheObject> => {
+  return new ApolloClient({
+    cache: new InMemoryCache(),
+    uri: process.env.REACT_APP_HYGRAPH_CONTENT_GRAPHQL_ENDPOINT,
+  })
+}

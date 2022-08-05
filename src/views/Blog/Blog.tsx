@@ -1,16 +1,98 @@
-import React, { useEffect } from 'react'
+import { useQuery } from '@apollo/client/react/hooks'
+import { loader } from 'graphql.macro'
+import React from 'react'
+import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
-import { Layout, NavigationTheme } from 'src/components'
+import { useParams } from 'react-router-dom'
+import {
+  ErrorPrompt,
+  Layout,
+  Loader,
+  NavigationTheme,
+  Typography,
+  TypographySize,
+  TypographyType,
+} from 'src/components'
+import { parseHtmlSafely, readTimeCalculator } from 'src/utils'
 
-export const Blog: React.FC = () => {
+interface BlogProps {
+  locale: string
+}
+
+export const Blog: React.FC<BlogProps> = ({ locale }) => {
+  const { slug } = useParams()
   const { t } = useTranslation()
-  useEffect(() => {
-    document.title = `${t('brand.name')} | ${t('pages.blog.title')}`
-  }, [])
+  // const navigate = useNavigate()
+  const GET_BLOG = loader('src/graphql/queries/blog.query.graphql')
+
+  const blogName = locale === 'de_de' ? 'Kaffeewissen' : 'Coffee knowledge' // HACK: temporarily hardcoded this to get the correct blog name as there is no translation keys for en
+
+  const documentTitle = `${t('brand.name')} | ${t('pages.blog.title')}`
+
+  const { loading, error, data } = useQuery(GET_BLOG, {
+    variables: {
+      slug: slug,
+      locale: locale,
+    },
+  })
+
+  if (error) {
+    return <ErrorPrompt promptAction={() => history.go(0)} />
+  }
+
+  if (loading) {
+    return (
+      <div className="flex h-64 mb-32 justify-center items-center">
+        <Loader />
+      </div>
+    )
+  }
+
+  if (data) {
+    // console.log(JSON.stringify(data.brewingMethods[0], null, 2))
+    const blogNotFound = data.brewingMethods.length === 0
+
+    console.log({ blogNotFound })
+  }
 
   return (
     <Layout navigationTheme={NavigationTheme.Home}>
-      <main className="flex-grow flex items-center justify-center bg-brand-grey-whisper">**** BLOG ***</main>
+      <main className="flex-grow flex w-full flex-col bg-brand-grey-whisper">
+        <div className="w-full max-w-7xl mx-auto px-6 xl:px-8 my-8 ">
+          <Helmet>
+            <title>
+              {documentTitle} - {data?.brewingMethods[0]?.seoTitle}
+            </title>
+            <meta name="description" content={data?.brewingMethods[0]?.seoMetaDescription} />
+          </Helmet>
+
+          <Typography
+            as="h2"
+            type={TypographyType.Heading}
+            size={TypographySize.Tiny}
+            className="md:text-2xl xl:text-3xl font-syne"
+          >
+            {data?.brewingMethods[0]?.seoTitle}
+          </Typography>
+
+          <div className="flex py-8 border-b-2 border-brand-grey-bombay">
+            <div className="w-8 h-8 mr-4">
+              <img className="rounded-full" src={data?.brewingMethods[0]?.createdBy.picture} />
+            </div>
+            <div className="flex flex-col">
+              <span>{data?.brewingMethods[0]?.createdBy.name}</span>
+              <span>
+                {blogName} &middot; {readTimeCalculator(data?.brewingMethods[0]?.content.text)} min read
+              </span>
+            </div>
+          </div>
+
+          <div
+            className="mt-8"
+            dangerouslySetInnerHTML={{ __html: parseHtmlSafely(data?.brewingMethods[0]?.content.html) }}
+          />
+        </div>
+      </main>
     </Layout>
   )
 }
