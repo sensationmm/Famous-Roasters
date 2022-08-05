@@ -1,3 +1,15 @@
+# [1.37.0](https://github.com/Famous-Roasters/frontend/compare/v1.36.0...v1.37.0) (2022-08-05)
+
+
+### Bug Fixes
+
+* **catalogue:** weird snapshot error ([68a4dfc](https://github.com/Famous-Roasters/frontend/commit/68a4dfcb35ade20fc2b608a3d62648ced567f239))
+
+
+### Features
+
+* **catalogue:** implement new filter endpoint ([6344d3b](https://github.com/Famous-Roasters/frontend/commit/6344d3b7d8afef9993a33ddf846e81aada205961))
+
 # [1.36.0](https://github.com/Famous-Roasters/frontend/compare/v1.35.2...v1.36.0) (2022-08-05)
 
 
