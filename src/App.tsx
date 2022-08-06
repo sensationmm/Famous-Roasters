@@ -22,11 +22,11 @@ import ScrollToTop from './ScrollToTop'
 
 const App = () => {
   const [isBlog, setIsBlog] = useState(false)
-  const [isLocalhost, setIsLocalhost] = useState(false)
+  // const [isLocalhost, setIsLocalhost] = useState(false)
 
   useLayoutEffect(() => {
     const host = window.location.host
-    setIsLocalhost(host.startsWith('localhost')) // TODO: work out what to do here
+    // setIsLocalhost(host.startsWith('localhost')) // TODO: work out what to do here
     setIsBlog(host.split('.').includes('blog'))
   }, [])
 
