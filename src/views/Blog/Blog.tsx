@@ -22,12 +22,9 @@ interface BlogProps {
 export const Blog: React.FC<BlogProps> = ({ locale }) => {
   const { slug } = useParams()
   const { t } = useTranslation()
-  // const navigate = useNavigate()
   const GET_BLOG = loader('src/graphql/queries/blog.query.graphql')
 
-  const blogName = locale === 'de_de' ? 'Kaffeewissen' : 'Coffee knowledge' // HACK: temporarily hardcoded this to get the correct blog name as there is no translation keys for en
-
-  const documentTitle = `${t('brand.name')} | ${t('pages.blog.title')}`
+  const blogCategory = locale === 'de_de' ? 'Kaffeewissen' : 'Coffee knowledge' // HACK: temporarily hardcoded this to get the category until we have something in the CMS schema
 
   const { loading, error, data } = useQuery(GET_BLOG, {
     variables: {
@@ -57,40 +54,43 @@ export const Blog: React.FC<BlogProps> = ({ locale }) => {
 
   return (
     <Layout navigationTheme={NavigationTheme.Home}>
-      <main className="flex-grow flex w-full flex-col bg-brand-grey-whisper">
+      <main className="flex-grow flex w-full flex-col">
         <div className="w-full max-w-7xl mx-auto px-6 xl:px-8 my-8 ">
-          <Helmet>
-            <title>
-              {documentTitle} - {data?.brewingMethods[0]?.seoTitle}
-            </title>
-            <meta name="description" content={data?.brewingMethods[0]?.seoMetaDescription} />
-          </Helmet>
+          {data.brewingMethods.length !== 0 ? (
+            <>
+              <Helmet>
+                <title>{data.brewingMethods[0].seoTitle}</title>
+                <meta name="description" content={data.brewingMethods[0].seoMetaDescription} />
+              </Helmet>
 
-          <Typography
-            as="h2"
-            type={TypographyType.Heading}
-            size={TypographySize.Tiny}
-            className="md:text-2xl xl:text-3xl font-syne"
-          >
-            {data?.brewingMethods[0]?.seoTitle}
-          </Typography>
+              <Typography as="h1" type={TypographyType.Heading} size={TypographySize.Base} className="font-syne">
+                {data.brewingMethods[0].title}
+              </Typography>
 
-          <div className="flex py-8 border-b-2 border-brand-grey-bombay">
-            <div className="w-8 h-8 mr-4">
-              <img className="rounded-full" src={data?.brewingMethods[0]?.createdBy.picture} />
-            </div>
-            <div className="flex flex-col">
-              <span>{data?.brewingMethods[0]?.createdBy.name}</span>
-              <span>
-                {blogName} &middot; {readTimeCalculator(data?.brewingMethods[0]?.content.text)} min read
-              </span>
-            </div>
-          </div>
+              <div className="flex items-center py-6 border-b border-coreUI-border">
+                <div className="w-8 h-8 mr-3">
+                  <img className="rounded-full" src={data.brewingMethods[0].createdBy.picture} />
+                </div>
+                <div className="flex flex-col text-coreUI-text-secondary">
+                  <Typography size={TypographySize.Small} type={TypographyType.Paragraph}>
+                    {data?.brewingMethods[0]?.createdBy.name}
+                  </Typography>
+                  <Typography size={TypographySize.Small} type={TypographyType.Paragraph}>
+                    {blogCategory} &middot; {readTimeCalculator(data.brewingMethods[0].content.text)} min read
+                  </Typography>
+                </div>
+              </div>
 
-          <div
-            className="mt-8"
-            dangerouslySetInnerHTML={{ __html: parseHtmlSafely(data?.brewingMethods[0]?.content.html) }}
-          />
+              <div
+                className="mt-8"
+                dangerouslySetInnerHTML={{
+                  __html: parseHtmlSafely(data.brewingMethods[0].content.html),
+                }}
+              />
+            </>
+          ) : (
+            <p>404 - blog not found</p>
+          )}
         </div>
       </main>
     </Layout>
