@@ -21,7 +21,6 @@ interface BlogProps {
 
 export const Blog: React.FC<BlogProps> = ({ locale }) => {
   const { slug } = useParams()
-  const { t } = useTranslation()
   const GET_BLOG = loader('src/graphql/queries/blog.query.graphql')
 
   const blogCategory = locale === 'de_de' ? 'Kaffeewissen' : 'Coffee knowledge' // HACK: temporarily hardcoded this to get the category until we have something in the CMS schema
