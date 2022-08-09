@@ -4,6 +4,7 @@ export const isAllowedHtmlElement = (el: Element) => {
   return el.innerHTML.indexOf('<script') === -1 && allowedNodes.indexOf(el.nodeName) >= 0
 }
 
+// used on the product page for content from Shopify
 export const formatHtmlElement = (el: Element) => {
   el.removeAttribute('data-mce-fragment')
   const elementType = el.nodeName
@@ -34,10 +35,37 @@ export const formatHtmlElement = (el: Element) => {
   }
 }
 
-export const parseHtmlSafely = (html: string) => {
+// used by the blog page for content from hygraph CMS
+export const formatBlogHtmlElement = (el: Element) => {
+  const elementType = el.nodeName
+  switch (elementType) {
+    case 'H1':
+    case 'H2':
+    case 'H3':
+    case 'H4':
+    case 'H5':
+    case 'H6': {
+      el.setAttribute('class', 'mb-4 text-2xl leading-8 font-semibold font-syne')
+      return el
+    }
+    case 'P':
+      el.setAttribute('class', 'text-lg leading-7 mb-4')
+      return el
+    case 'IFRAME': {
+      const containerEl = document.createElement('div')
+      containerEl.setAttribute('class', 'video-container mb-4')
+      containerEl.append(el)
+      return containerEl
+    }
+    default:
+      return el
+  }
+}
+
+export const parseHtmlSafely = (html: string, formatter: (el: Element) => Element = formatHtmlElement) => {
   const parser = new DOMParser()
   const children = Array.from(parser.parseFromString(html, 'text/html').body.children)
   const resultContainer = document.createElement('html')
-  children.forEach((child) => isAllowedHtmlElement(child) && resultContainer.append(formatHtmlElement(child)))
+  children.forEach((child) => isAllowedHtmlElement(child) && resultContainer.append(formatter(child)))
   return resultContainer.innerHTML
 }
