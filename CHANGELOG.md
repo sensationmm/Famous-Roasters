@@ -1,3 +1,10 @@
+# [1.39.0](https://github.com/Famous-Roasters/frontend/compare/v1.38.0...v1.39.0) (2022-08-10)
+
+
+### Features
+
+* **profile:** pass auth ([5d32eca](https://github.com/Famous-Roasters/frontend/commit/5d32eca8d26cf8416f6629632c1aa0f8ce2002ed))
+
 # [1.38.0](https://github.com/Famous-Roasters/frontend/compare/v1.37.0...v1.38.0) (2022-08-10)
 
 
