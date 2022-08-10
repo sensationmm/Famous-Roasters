@@ -1,0 +1,73 @@
+<a id="teaser-template" href="#" class="blog_item w-inline-block">
+  <div class="blog-teaser__img-wrapper">
+    <img
+      src="https://uploads-ssl.webflow.com/6299b8b0e1db16aa7f896614/6299b8b0e1db160b08896648_Placeholder%20Image%20-%20Landscape.svg"
+      loading="lazy"
+      alt=""
+      class="blog-teaser__img"
+    />
+  </div>
+  <div class="blog-teaser__category"></div>
+  <h3 class="blog-teaser__title"></h3>
+  <div class="blog-teaser__link"></div>
+</a>
+
+<script>
+  const BLOG_URL = 'https://blog.60beans.de/de/'
+  const HYGRAPHCMS_ENDPOINT = 'https://api-eu-central-1.hygraph.com/v2/cl57yydg84u2b01ui7dk349qd/master'
+  const GRAPHQL_QUERY = `
+              query getFeaturedBlogs {
+                brewingMethods(where: {featured: true}, orderBy: updatedAt_DESC, last: 3) {
+                  title
+                  slug
+                  localizations(locales: de_de) {
+                    id
+                  }
+                  featured
+                  thumbnail {
+                    url
+                  }
+                  category
+                }
+              }
+            `
+  const PLACEHOLDER_IMAGE =
+    'https://uploads-ssl.webflow.com/6299b8b0e1db16aa7f896614/6299b8b0e1db160b08896648_Placeholder%20Image%20-%20Landscape.svg'
+
+  async function getFeaturedBlogs() {
+    const response = await fetch(HYGRAPHCMS_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        query: GRAPHQL_QUERY,
+      }),
+    })
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`)
+    }
+    const res = await response.json()
+    return res.data.brewingMethods
+  }
+
+  async function renderFeaturedBlogs() {
+    const blogs = await getFeaturedBlogs()
+    const blogTemplate = document.getElementById('teaser-template')
+    const blogWrapper = document.getElementById('blog-wrapper')
+    blogs.forEach((blog) => {
+      const blogClone = blogTemplate.cloneNode(true)
+      blogClone.querySelector('.blog-teaser__title').innerText = blog.title
+      blogClone.href = `${BLOG_URL}${blog.slug}`
+      blogClone.querySelector('.blog-teaser__img').src = blog.thumbnail ? blog.thumbnail.url : PLACEHOLDER_IMAGE
+      blogClone.querySelector('.blog-teaser__category').innerText = blog.category
+      blogWrapper.appendChild(blogClone)
+    }),
+      () => {
+        blogTemplate.remove()
+      }
+  }
+
+  renderFeaturedBlogs()
+</script>
