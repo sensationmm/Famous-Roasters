@@ -1,3 +1,16 @@
+# [1.38.0](https://github.com/Famous-Roasters/frontend/compare/v1.37.0...v1.38.0) (2022-08-10)
+
+
+### Bug Fixes
+
+* **profile:** code smells ([c35303a](https://github.com/Famous-Roasters/frontend/commit/c35303abe1adae17ec05f896ea22b02c0092178d))
+
+
+### Features
+
+* **profile:** test coverage ([45bc70f](https://github.com/Famous-Roasters/frontend/commit/45bc70ffe5a877451ea8775659b85ccec3a283c0))
+* **profile:** test last orders rest api ([54fdd91](https://github.com/Famous-Roasters/frontend/commit/54fdd91fe0cfc2259ba6efd1c4ddb35e98a6e2d9))
+
 # [1.37.0](https://github.com/Famous-Roasters/frontend/compare/v1.36.0...v1.37.0) (2022-08-05)
 
 
