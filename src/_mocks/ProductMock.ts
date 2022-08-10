@@ -362,6 +362,7 @@ export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
   extraDescription: {
     value: '',
   },
+  productType: 'sadad',
   vendor_description: {
     value: 'the vendor description text',
   },

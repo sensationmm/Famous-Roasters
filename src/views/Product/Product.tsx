@@ -171,6 +171,7 @@ export const Product: React.FC = () => {
   }, [variantSelected])
 
   if (error) {
+    // console.log('error', error)
     return <ErrorPrompt promptAction={() => history.go(0)} />
   }
 

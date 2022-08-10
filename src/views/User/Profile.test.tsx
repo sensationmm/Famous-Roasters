@@ -24,6 +24,23 @@ jest.mock('react-router-dom', () => ({
   },
 }))
 
+jest.mock('src/config/cognito', () => ({
+  ...jest.requireActual('src/config/cognito'),
+  useAuth: () => [{ isValid: true }, jest.fn],
+}))
+
+jest.mock('aws-amplify', () => ({
+  ...jest.requireActual('aws-amplify'),
+  __esModule: true,
+  Auth: {
+    ...jest.requireActual('aws-amplify').Auth,
+    currentAuthenticatedUser: () => Promise.resolve({ attributes: { 'custom:first_name': 'asdd' } }),
+    currentSession: () => Promise.resolve(),
+  },
+}))
+
+const fetchSpy = jest.spyOn(global, 'fetch')
+
 Amplify.configure(awsconfig)
 
 jest.mock('src/components/Carousel/Carousel', () => ({
@@ -49,6 +66,7 @@ describe('Profile view', () => {
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
     expect(container).toMatchSnapshot()
+    expect(fetchSpy).toHaveBeenCalledTimes(1)
   })
 
   it.each(['orders', 'account', 'taste-profile', 'my-coffee'])('handles click on profile %s', async (btn) => {
@@ -87,5 +105,9 @@ describe('Profile view', () => {
     const button = await screen.findByTestId(`button-${btn}`)
     button.click()
     expect(mockUseNavigate).toHaveBeenCalledWith(`/catalogue?${btn}`)
+  })
+
+  afterAll(() => {
+    jest.resetAllMocks()
   })
 })
