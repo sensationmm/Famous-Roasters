@@ -25,8 +25,6 @@ import {
 } from 'src/components'
 import { useAuth } from 'src/config/cognito'
 const USER_PROFILE = loader('src/graphql/queries/userProfile.query.graphql')
-// const ORDERS = loader('src/graphql/queries/orders.query.graphql')
-// const ORDER_DETAILS = loader('src/graphql/queries/order.query.graphql')
 import { OrderMock } from 'src/_mocks'
 import { formatDate, formatPrice } from 'src/utils'
 
@@ -88,7 +86,6 @@ export const Profile: React.FC = () => {
   const [userProfile, setUserProfile] = useState<UserProfile>()
   const [lastOrder] = useState<Order>(OrderMock.result.data.order)
   const [getUserProfile] = useLazyQuery(USER_PROFILE)
-  // const [getOrders] = useLazyQuery(ORDERS)
 
   useEffect(() => {
     document.title = `${t('brand.name')} | ${t('pages.profile.title')}`
@@ -102,25 +99,6 @@ export const Profile: React.FC = () => {
         getUserProfile()
           .then((res) => setUserProfile(res.data.userProfile))
           .catch(() => signOut())
-
-        // getOrders()
-        //   .then((res) => {
-        //     const lastOrderIndex = res.data.orders.length - 1
-        //     const lastOrder = res.data.orders[lastOrderIndex].shopifyId
-
-        //     shopifyAdminClient
-        //       .query({
-        //         query: ORDER_DETAILS,
-        //         variables: {
-        //           id: lastOrder,
-        //         },
-        //       })
-        //       .then((res) => {
-        //         console.log(res)
-        //       })
-        //       .catch(console.log)
-        //   })
-        //   .catch(console.log)
 
         fetch('https://api.staging.60beans.io/proxy/orders')
           .then((response) => response.json())
