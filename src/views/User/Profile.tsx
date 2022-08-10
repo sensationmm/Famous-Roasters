@@ -100,7 +100,12 @@ export const Profile: React.FC = () => {
           .then((res) => setUserProfile(res.data.userProfile))
           .catch(() => signOut())
 
-        fetch('https://api.staging.60beans.io/proxy/orders')
+        const token = localStorage.getItem('authToken')
+        fetch('https://api.staging.60beans.io/proxy/orders', {
+          headers: {
+            authorization: token ? `Bearer ${token}` : '',
+          },
+        })
           .then((response) => response.json())
           .then((data) => console.log('orders', data))
       })
