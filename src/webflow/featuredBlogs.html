@@ -63,10 +63,8 @@
       blogClone.querySelector('.blog-teaser__img').src = blog.thumbnail ? blog.thumbnail.url : PLACEHOLDER_IMAGE
       blogClone.querySelector('.blog-teaser__category').innerText = blog.category
       blogWrapper.appendChild(blogClone)
-    }),
-      () => {
-        blogTemplate.remove()
-      }
+    })
+    blogTemplate.remove();
   }
 
   renderFeaturedBlogs()
