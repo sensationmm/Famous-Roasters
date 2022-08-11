@@ -424,6 +424,12 @@
         "beanType": {
           "label": "Bohnensorte"
         },
+        "accessoryType": {
+          "label": "Alle Kategorien",
+          "values": {
+            "none": "Alle Kategorien"
+          }
+        },
         "coffeeType": {
           "label": "Alle Zubereitungsmethoden",
           "values": {
@@ -642,6 +648,7 @@
             "PY":"Paraguay",
             "QA":"Katar",
             "RE":"Réunion",
+            "RN":"Saint Martin",
             "RO":"Rumänien",
             "RS":"Serbien",
             "RU":"Russland",
@@ -736,7 +743,9 @@
       },
       "tabs": {
         "discover": "Entdecken",
-        "forYou": "Für Dich"
+        "forYou": "Für Dich",
+        "coffee": "Kaffee",
+        "accessories": "Zubehör"
       },
       "tile": {
         "from": "ab"
@@ -915,6 +924,9 @@
           },
           "packageSize": {
             "label": "Größe/Menge"
+          },
+          "color": {
+            "label": "Farbe"
           },
           "quantity": {
             "label": "Anzahl"

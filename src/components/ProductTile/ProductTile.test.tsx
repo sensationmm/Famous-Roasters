@@ -120,4 +120,24 @@ describe('Product Tile component', () => {
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
     expect(container).toMatchSnapshot()
   })
+
+  it('Renders as expected with type category', async () => {
+    const { container } = render(
+      <I18nextProvider i18n={i18n}>
+        <ProductTile
+          productNode={{
+            ...ProductMockData,
+            pricePerKg: { value: '10.0' },
+            coffee_type: { value: 'Filter' },
+            origin: { value: 'CO,BR' },
+            totalInventory: 0,
+          }}
+          featured={true}
+          showType="category"
+        />
+      </I18nextProvider>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
 })

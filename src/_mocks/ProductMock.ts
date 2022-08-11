@@ -1,15 +1,10 @@
-import {
-  CurrencyCode,
-  Product,
-  Product as ProductType,
-  WeightUnit,
-} from '@shopify/hydrogen/dist/esnext/storefront-api-types'
+import { CurrencyCode, Product, WeightUnit } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { GraphQLError } from 'graphql'
 import { loader } from 'graphql.macro'
 import { ProductCustom } from 'src/views/Product/Product'
 const GET_PRODUCT = loader('src/graphql/queries/product.query.graphql')
 
-export const ProductMockDataBase: ProductType = {
+export const ProductMockDataBase: ProductCustom = {
   id: 'gid://shopify/Product/7655228866776',
   title: 'Espresso Raritäten Set',
   productType: 'Espresso',
@@ -117,7 +112,7 @@ export const ProductMockDataBase: ProductType = {
   },
 }
 
-export const AccessoryMockDataBase: ProductType = {
+export const AccessoryMockDataBase: ProductCustom = {
   id: 'gid://shopify/Product/7968366166282',
   title: 'Barista Pinsel | barista.tools',
   productType: 'Accessories',
@@ -135,6 +130,10 @@ export const AccessoryMockDataBase: ProductType = {
   description: '',
   descriptionHtml:
     '<p>Der Naturhaarpinsel von barista.tools ist ideal für das Reinigen des Siebträgers und des Bereichs rund um die Mühle. Gerade für die Arbeit im professionellen Bereich ist dies der optimale Mühlenpinsel - optisch ansprechend, praktisch um schnell Kaffeekrümmel von der Mühle oder dem Arbeitsbereich zu entfernen und liegt gut in der Hand.</p>\n<p>Das Naturhaar ist hitzebeständig und der Pinsel langlebig verarbeitet.</p>\n<p> </p>',
+  whyThisCoffee: {
+    value: '',
+  },
+  decaf: undefined,
   variants: {
     edges: [],
     nodes: [],
@@ -217,9 +216,10 @@ export const AccessoryMockDataBase: ProductType = {
   seo: {},
   tags: [],
   updatedAt: '',
+  vendor_description: undefined,
 }
 
-export const AccessoryMockDataBaseWithVariant: Product & ProductCustom = {
+export const AccessoryMockDataBaseWithVariant: ProductCustom = {
   ...AccessoryMockDataBase,
   extraDescription: {
     value: '',
@@ -234,7 +234,12 @@ export const AccessoryMockDataBaseWithVariant: Product & ProductCustom = {
         package_size: {
           value: '300g',
         },
-        grind_type: undefined,
+        color: {
+          value: '',
+        },
+        grind_type: {
+          value: '',
+        },
         metafields: {
           edges: [],
           nodes: [],
@@ -276,25 +281,12 @@ export const AccessoryMockDataBaseWithVariant: Product & ProductCustom = {
       hasPreviousPage: false,
     },
   },
-  aroma: undefined,
-  flavourNotes: undefined,
-  producer: undefined,
-  altitude: undefined,
-  variety: undefined,
-  processing: undefined,
-  sweetness: undefined,
-  body: undefined,
-  bitterness: undefined,
-  acidity: undefined,
-  bean_type: undefined,
-  coffee_type: undefined,
-  origin: undefined,
-  pricePerKg: undefined,
-  decaf: undefined,
-  whyThisCoffee: undefined,
+  accessory_type: {
+    value: 'Tamper',
+  },
 }
 
-export const ProductMockData: ProductType = {
+export const ProductMockData: ProductCustom = {
   ...ProductMockDataBase,
   variants: {
     ...ProductMockDataBase.variants,
@@ -338,6 +330,12 @@ export const ProductMockData: ProductType = {
         },
         title: 'variant',
         weightUnit: WeightUnit.Kilograms,
+        package_size: {
+          value: '',
+        },
+        color: {
+          value: '',
+        },
       },
     ],
     pageInfo: {
@@ -357,7 +355,7 @@ export const ProductMockData: ProductType = {
   },
 }
 
-export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
+export const ProductMockDataWithCustomMetadata: ProductCustom = {
   ...ProductMockData,
   extraDescription: {
     value: '',
@@ -402,6 +400,9 @@ export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
   coffee_type: {
     value: 'Filter',
   },
+  accessory_type: {
+    value: '',
+  },
   origin: {
     value: 'CO',
   },
@@ -426,6 +427,9 @@ export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
         package_size: {
           value: '250g',
         },
+        color: {
+          value: '',
+        },
       },
       {
         ...ProductMockData.variants.nodes[0],
@@ -434,6 +438,9 @@ export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
         },
         package_size: {
           value: '250g',
+        },
+        color: {
+          value: '',
         },
       },
       {
@@ -444,6 +451,9 @@ export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
         package_size: {
           value: '1000g',
         },
+        color: {
+          value: '',
+        },
       },
       {
         ...ProductMockData.variants.nodes[0],
@@ -452,6 +462,9 @@ export const ProductMockDataWithCustomMetadata: ProductType & ProductCustom = {
         },
         package_size: {
           value: '1000g',
+        },
+        color: {
+          value: '',
         },
       },
     ],

@@ -1,26 +1,15 @@
-import { Product as ProductType } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Tag, TagType, Typography, TypographySize, TypographyType } from 'src/components'
 import { formatPrice } from 'src/utils'
-
-interface ProductMeta {
-  value: string
-}
-
-interface ProductCustom extends ProductType {
-  coffee_type?: ProductMeta
-  bean_type?: ProductMeta
-  origin?: ProductMeta
-  pricePerKg?: ProductMeta
-  decaf?: ProductMeta
-}
+import { ProductCustom } from 'src/views/Product'
 
 interface ProductTileProps extends React.HTMLAttributes<HTMLElement> {
   productNode: ProductCustom
   showImage?: boolean
   showFrom?: boolean
   featured?: boolean
+  showType?: 'vendor' | 'category'
 }
 
 export const ProductTile: React.FC<ProductTileProps> = ({
@@ -29,9 +18,21 @@ export const ProductTile: React.FC<ProductTileProps> = ({
   showFrom = false,
   featured = false,
   className,
+  showType = 'vendor',
 }: ProductTileProps) => {
-  const { title, vendor, featuredImage, images, priceRange, pricePerKg, coffee_type, origin, decaf, totalInventory } =
-    productNode
+  const {
+    title,
+    vendor,
+    featuredImage,
+    images,
+    priceRange,
+    pricePerKg,
+    coffee_type,
+    accessory_type,
+    origin,
+    decaf,
+    totalInventory,
+  } = productNode
   const { t } = useTranslation()
 
   const getOuterContainerClasses = () => {
@@ -93,7 +94,7 @@ export const ProductTile: React.FC<ProductTileProps> = ({
           </Typography>
         )}
         <Typography as="div" type={TypographyType.Paragraph} size={TypographySize.Base} className={textLineClassNames}>
-          {vendor}
+          {showType === 'vendor' ? vendor : accessory_type?.value}
         </Typography>
         {origin && (
           <Typography

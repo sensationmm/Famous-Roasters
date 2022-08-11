@@ -11,6 +11,7 @@ export const FilterAttributesMock = {
     data: {
       filterDictionaries: {
         coffeeTypes: ['Espresso', 'Filter'],
+        accessoryTypes: ['Filters', 'Refills'],
         vendors: ['60beans', 'Cycle Roasters'],
         beanTypes: ['Arabica'],
         origins: ['BR', 'CO'],

@@ -60,6 +60,9 @@ query product($id: ID) {
     coffee_type: metafield(namespace: "my_fields", key: "coffee_type") {
       value
     }
+    accessory_type: metafield(namespace: "my_fields", key: "accessory_type") {
+      value
+    }
     origin: metafield(namespace: "my_fields", key: "origin") {
       value
     }
@@ -83,9 +86,12 @@ query product($id: ID) {
         grind_type: metafield(namespace: "my_fields", key: "grind_type") {
           value
         }
+        color: metafield(namespace: "my_fields", key: "color") {
+          value
+        }
       }
     }
-    images(first: 3) {
+    images(first: 10) {
       nodes {
         url
       }
