@@ -21,6 +21,7 @@ import {
 } from 'src/views'
 
 import ScrollToTop from './ScrollToTop'
+import Search from './views/search'
 
 const App = () => {
   const [isBlog, setIsBlog] = useState(false)
@@ -68,6 +69,7 @@ const App = () => {
               <Route path="/cart" element={<Cart />} />
               <Route path="/catalogue" element={<Catalogue />} />
               <Route path="/product/:id" element={<Product />} />
+              <Route path="/search" element={<Search />} />
               <Route
                 path="/taste-finder"
                 element={
