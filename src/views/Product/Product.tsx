@@ -49,7 +49,7 @@ export interface ProductMetaInteger {
 export interface ProductVariantCustom extends ProductVariant {
   grind_type?: ProductMeta
   package_size: ProductMeta
-  color?: ProductMeta
+  equipmentvariant?: ProductMeta
   availableForSale: boolean
 }
 
@@ -209,7 +209,7 @@ export const Product: React.FC = () => {
   }
 
   const updateVariantSelectedWithColor = (v: ListBoxItem[]) => {
-    const updatedSelected = variants && variants.nodes.find((x) => x.color?.value === v[0].name)
+    const updatedSelected = variants && variants.nodes.find((x) => x.equipmentvariant?.value === v[0].name)
     updatedSelected && setVariantSelected(updatedSelected)
   }
 
@@ -232,10 +232,13 @@ export const Product: React.FC = () => {
       ) || [],
     ).map((x) => x) || []
 
-  const colorValues = () =>
+  const variantValues = () =>
     Array.from(
       new Set(
-        variants.nodes.map((variant) => ({ name: variant.color?.value, disabled: variant.availableForSale !== true })),
+        variants.nodes.map((variant) => ({
+          name: variant.equipmentvariant?.value,
+          disabled: variant.availableForSale !== true,
+        })),
       ) || [],
     ).map((x) => x) || []
 
@@ -453,15 +456,15 @@ export const Product: React.FC = () => {
                   itemDisabledMsg={t('pages.product.transactional.outOfStock')}
                 />
               )}
-              {variants && variants.nodes[0].color && (
+              {variants && variants.nodes[0].equipmentvariant && (
                 <Listbox
-                  items={colorValues() as ListBoxItem[]}
+                  items={variantValues() as ListBoxItem[]}
                   hasTranslatedValues={false}
-                  translationPrefix="pages.product.transactional.options.color"
+                  translationPrefix="pages.product.transactional.options.equipmentvariant"
                   multiple={false}
-                  value={[{ name: variantSelected?.color?.value || '' }]}
+                  value={[{ name: variantSelected?.equipmentvariant?.value || '' }]}
                   onChange={(v) => v && updateVariantSelectedWithColor(v)}
-                  label={t('pages.product.transactional.options.color.label')}
+                  label={t('pages.product.transactional.options.equipmentvariant.label')}
                 />
               )}
               <div>
