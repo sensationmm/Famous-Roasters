@@ -1,0 +1,7 @@
+query getAllCategories {
+  __type(name: "Category") {
+    enumValues {
+      name
+    }
+  }
+}
