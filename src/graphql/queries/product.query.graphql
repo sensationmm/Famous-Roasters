@@ -86,7 +86,7 @@ query product($id: ID) {
         grind_type: metafield(namespace: "my_fields", key: "grind_type") {
           value
         }
-        color: metafield(namespace: "my_fields", key: "color") {
+        equipmentvariant: metafield(namespace: "my_fields", key: "equipmentvariant") {
           value
         }
       }

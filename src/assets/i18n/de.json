@@ -930,8 +930,8 @@
           "packageSize": {
             "label": "Größe/Menge"
           },
-          "color": {
-            "label": "Farbe"
+          "equipmentvariant": {
+            "label": "Ausführung"
           },
           "quantity": {
             "label": "Anzahl"

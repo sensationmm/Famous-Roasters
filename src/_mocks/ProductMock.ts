@@ -234,7 +234,7 @@ export const AccessoryMockDataBaseWithVariant: ProductCustom = {
         package_size: {
           value: '300g',
         },
-        color: {
+        equipmentvariant: {
           value: '',
         },
         grind_type: {
@@ -333,7 +333,7 @@ export const ProductMockData: ProductCustom = {
         package_size: {
           value: '',
         },
-        color: {
+        equipmentvariant: {
           value: '',
         },
       },
@@ -427,7 +427,7 @@ export const ProductMockDataWithCustomMetadata: ProductCustom = {
         package_size: {
           value: '250g',
         },
-        color: {
+        equipmentvariant: {
           value: '',
         },
       },
@@ -439,7 +439,7 @@ export const ProductMockDataWithCustomMetadata: ProductCustom = {
         package_size: {
           value: '250g',
         },
-        color: {
+        equipmentvariant: {
           value: '',
         },
       },
@@ -451,7 +451,7 @@ export const ProductMockDataWithCustomMetadata: ProductCustom = {
         package_size: {
           value: '1000g',
         },
-        color: {
+        equipmentvariant: {
           value: '',
         },
       },
@@ -463,7 +463,7 @@ export const ProductMockDataWithCustomMetadata: ProductCustom = {
         package_size: {
           value: '1000g',
         },
-        color: {
+        equipmentvariant: {
           value: '',
         },
       },
