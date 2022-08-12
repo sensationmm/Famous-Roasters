@@ -4,6 +4,7 @@ import React from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { MemoryRouter } from 'react-router-dom'
 import {
+  CatalogueMockAccessories,
   CatalogueMocks,
   CatalogueMocksFilters,
   CatalogueMocksPagination,
@@ -47,6 +48,26 @@ describe('Catalogue view', () => {
       >
         <I18nextProvider i18n={i18n}>
           <MemoryRouter initialEntries={['/catalogue']}>
+            <Catalogue />
+          </MemoryRouter>
+        </I18nextProvider>
+      </MockedProvider>,
+    )
+    await act(async (): Promise<void> => {
+      await new Promise((resolve) => setTimeout(resolve, 500))
+    })
+    expect(container).toMatchSnapshot()
+  })
+
+  it('Renders correctly for a successful call for accessories', async () => {
+    const { container } = render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
+        mocks={[mockFilterAttributes, mockFilterAttributes, CatalogueMockAccessories]}
+        addTypename={false}
+      >
+        <I18nextProvider i18n={i18n}>
+          <MemoryRouter initialEntries={['/catalogue?isAccessory=true']}>
             <Catalogue />
           </MemoryRouter>
         </I18nextProvider>

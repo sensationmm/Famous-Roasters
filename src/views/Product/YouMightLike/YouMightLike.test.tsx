@@ -3,7 +3,7 @@ import { render, waitFor } from '@testing-library/react'
 import React from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { MemoryRouter } from 'react-router-dom'
-import { CatalogueMockAccessories, CatalogueMockRandom } from 'src/_mocks'
+import { CatalogueMockAccessoriesYouMightLike, CatalogueMockRandom } from 'src/_mocks'
 import { i18n } from 'src/config'
 
 import { YouMightLike } from '.'
@@ -27,7 +27,7 @@ describe('Find accessories partial view', () => {
     const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
-        mocks={[CatalogueMockAccessories, CatalogueMockRandom]}
+        mocks={[CatalogueMockAccessoriesYouMightLike, CatalogueMockRandom]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -45,7 +45,7 @@ describe('Find accessories partial view', () => {
     const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
-        mocks={[CatalogueMockAccessories, CatalogueMockRandom]}
+        mocks={[CatalogueMockAccessoriesYouMightLike, CatalogueMockRandom]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
@@ -63,7 +63,7 @@ describe('Find accessories partial view', () => {
     const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
-        mocks={[CatalogueMockAccessories]}
+        mocks={[CatalogueMockAccessoriesYouMightLike]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>

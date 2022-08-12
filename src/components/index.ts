@@ -44,6 +44,7 @@ import { Notification } from './Notification'
 import { OrderTile } from './OrderTile'
 import { OriginProductionSpecs } from './OriginProductionSpecs'
 import { ProductTile } from './ProductTile'
+import { ProductTileLoader } from './ProductTile/ProductTileLoader'
 import { QuantitySelect } from './QuantitySelect'
 import { StickyBottomNavigation } from './StickyBottomNavigation'
 import { TabsNavigation } from './TabsNavigation'
@@ -107,6 +108,7 @@ export { Notification as Notification }
 export { OrderTile as OrderTile }
 export { OriginProductionSpecs as OriginProductionSpecs }
 export { ProductTile as ProductTile }
+export { ProductTileLoader }
 export { StickyBottomNavigation as StickyBottomNavigation }
 export { QuantitySelect as QuantitySelect }
 export { TabsNavigation as TabsNavigation }

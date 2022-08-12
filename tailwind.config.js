@@ -60,6 +60,18 @@ module.exports = {
             md: '641px',
             xl: '1025px',
         },
+        extend: {
+          keyframes: {
+            swipe: {
+              '0%': { left: 0 },
+              '50%': { left: '100%' } ,
+              '100%': { left: '100%' } 
+            }
+          },
+          animation: {
+            swipe: 'swipe 3s ease-in-out infinite'
+          }
+        }
     },
     plugins: [
         require('@tailwindcss/aspect-ratio'),

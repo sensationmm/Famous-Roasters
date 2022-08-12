@@ -6,7 +6,7 @@ import { MemoryRouter } from 'react-router-dom'
 import {
   CartAddLinesMock,
   CartMock,
-  CatalogueMockAccessories,
+  CatalogueMockAccessoriesYouMightLike,
   CatalogueMockRandom,
   CatalogueMockSimilar,
   ProductMock,
@@ -276,7 +276,7 @@ describe('Product view', () => {
     const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
-        mocks={[ProductMockAccessory, CatalogueMockRandom, CatalogueMockAccessories]}
+        mocks={[ProductMockAccessory, CatalogueMockRandom, CatalogueMockAccessoriesYouMightLike]}
         addTypename={false}
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>

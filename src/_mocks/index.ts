@@ -10,6 +10,7 @@ import {
 } from './CartMock'
 import {
   CatalogueMockAccessories,
+  CatalogueMockAccessoriesYouMightLike,
   CatalogueMockError,
   CatalogueMockMissingData,
   CatalogueMockRandom,
@@ -51,6 +52,7 @@ export { CartMock as CartMock }
 export { CartMockData as CartMockData }
 export { CartMockError as CartMockError }
 export { CatalogueMockAccessories as CatalogueMockAccessories }
+export { CatalogueMockAccessoriesYouMightLike }
 export { CatalogueMocks as CatalogueMocks }
 export { CatalogueMocksFilters as CatalogueMocksFilters }
 export { CatalogueMocksPagination as CatalogueMocksPagination }

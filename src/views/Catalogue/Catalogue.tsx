@@ -14,8 +14,8 @@ import {
   Layout,
   Listbox,
   ListBoxItem,
-  Loader,
   ProductTile,
+  ProductTileLoader,
   TabsNavigation,
   TagSwatch,
   TagType,
@@ -244,8 +244,18 @@ export const Catalogue: React.FC = () => {
 
   const fetchProducts = useCallback(
     (queryVars: QueryProductsVariables) => {
+      const filters =
+        activeTab === 'accessories'
+          ? {
+              ...queryVars.filters,
+              productType: 'Accessories',
+            }
+          : queryVars.filters
       getProducts({
-        variables: queryVars,
+        variables: {
+          ...queryVars,
+          filters: filters,
+        },
       }).catch((err) => {
         throw new Error('Error fetching catalogue', err)
       })
@@ -344,7 +354,7 @@ export const Catalogue: React.FC = () => {
         }
         hasTranslatedValues={false}
         translationPrefix={`pages.catalogue.filters.${key}`}
-        value={filtersToShow.filterValuesSelected?.map((fv) => ({ name: fv }))}
+        value={filtersToShow?.filterValuesSelected?.map((fv) => ({ name: fv }))}
         multiple={key !== 'coffeeType'}
         hasNoneItem={key === 'coffeeType' || key === 'accessoryType'}
         resetOnNoneClick={key === 'coffeeType' || key === 'accessoryType'}
@@ -376,6 +386,19 @@ export const Catalogue: React.FC = () => {
         selected={v && v.filterValuesSelected && v.filterValuesSelected[0] === 'true' ? true : false}
         toggleSelected={(value) => onUpdateFilterCheckbox(value, key)}
       />
+    )
+  }
+
+  const renderLoader = () => {
+    return (
+      <>
+        <div className="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mb-16 pb-8 border-b border-coreUI-border ">
+          {[...Array(6)].map((_, count) => (
+            <ProductTileLoader key={`loader-${count}`} />
+          ))}
+        </div>
+        <div className="h-2" />
+      </>
     )
   }
 
@@ -411,8 +434,8 @@ export const Catalogue: React.FC = () => {
               />
             )}
           </div>
-          {['1', '2', '3'].map((fillBlock) => (
-            <div key={`fill-block-${fillBlock}`} className="hidden md:block md:w-1/4" />
+          {[...Array(3)].map((_, count) => (
+            <div key={`fill-block-${count}`} className="hidden md:block md:w-1/4" />
           ))}
           <div className="w-1/2 md:w-1/4 md:mt-4">
             <Listbox
@@ -424,24 +447,31 @@ export const Catalogue: React.FC = () => {
             />
           </div>
         </div>
-        <div className="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-          {productNodes?.map((node, i: number) => {
-            const id = getSimplifiedProductId(node.id)
-            return (
-              <Link to={`/product/${id}`} key={`product-tile-link-${i}`}>
-                <ProductTile key={`title-${i}`} showFrom={true} productNode={node} />
-              </Link>
-            )
-          })}
-        </div>
-        <div className="mb-8 mt-8">
-          <Pagination
-            hasNextPage={pageInfo?.hasNextPage || false}
-            hasPreviousPage={pageInfo?.hasPreviousPage || false}
-            next={handleNextClicked}
-            previous={handlePreviousClicked}
-          />
-        </div>
+
+        {!data || !filterAttributesData || !filters.length || queryFilterParams === undefined ? (
+          renderLoader()
+        ) : (
+          <>
+            <div className="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+              {productNodes?.map((node, i: number) => {
+                const id = getSimplifiedProductId(node.id)
+                return (
+                  <Link to={`/product/${id}`} key={`product-tile-link-${i}`}>
+                    <ProductTile key={`title-${i}`} showFrom={true} productNode={node} />
+                  </Link>
+                )
+              })}
+            </div>
+            <div className="mb-8 mt-8">
+              <Pagination
+                hasNextPage={pageInfo?.hasNextPage || false}
+                hasPreviousPage={pageInfo?.hasPreviousPage || false}
+                next={handleNextClicked}
+                previous={handlePreviousClicked}
+              />
+            </div>
+          </>
+        )}
       </>
     )
   }
@@ -450,24 +480,31 @@ export const Catalogue: React.FC = () => {
     return (
       <>
         <div className="mt-4">{renderListboxFilter('accessoryType', false)}</div>
-        <div className="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-          {productNodes?.map((node, i: number) => {
-            const id = getSimplifiedProductId(node.id)
-            return (
-              <Link to={`/product/${id}`} key={`product-tile-link-${i}`}>
-                <ProductTile key={`title-${i}`} showFrom={true} productNode={node} showType="category" />
-              </Link>
-            )
-          })}
-        </div>
-        <div className="mb-8 mt-8">
-          <Pagination
-            hasNextPage={pageInfo?.hasNextPage || false}
-            hasPreviousPage={pageInfo?.hasPreviousPage || false}
-            next={handleNextClicked}
-            previous={handlePreviousClicked}
-          />
-        </div>
+
+        {!data || !filterAttributesData || !filters.length || queryFilterParams === undefined ? (
+          renderLoader()
+        ) : (
+          <>
+            <div className="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+              {productNodes?.map((node, i: number) => {
+                const id = getSimplifiedProductId(node.id)
+                return (
+                  <Link to={`/product/${id}`} key={`product-tile-link-${i}`}>
+                    <ProductTile key={`title-${i}`} showFrom={true} productNode={node} showType="category" />
+                  </Link>
+                )
+              })}
+            </div>
+            <div className="mb-8 mt-8">
+              <Pagination
+                hasNextPage={pageInfo?.hasNextPage || false}
+                hasPreviousPage={pageInfo?.hasPreviousPage || false}
+                next={handleNextClicked}
+                previous={handlePreviousClicked}
+              />
+            </div>
+          </>
+        )}
       </>
     )
   }
@@ -476,14 +513,6 @@ export const Catalogue: React.FC = () => {
     // console.log('error', error)
     if (error !== undefined || !pageInfo) {
       return <ErrorPrompt promptAction={() => history.go(0)} />
-    }
-
-    if (!data || !filterAttributesData || !filters.length || queryFilterParams === undefined) {
-      return (
-        <div className="flex h-64 mb-32 justify-center items-center">
-          <Loader />
-        </div>
-      )
     }
 
     return activeTab === 'discover' ? renderDiscoverProducts() : renderAccessories()
