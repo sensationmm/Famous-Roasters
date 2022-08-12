@@ -44,10 +44,9 @@ export const Blog: React.FC<BlogProps> = ({ locale }) => {
   }
 
   if (data) {
-    // console.log(JSON.stringify(data.brewingMethods[0], null, 2))
     const blogNotFound = data.brewingMethods.length === 0
 
-    console.log({ blogNotFound })
+    if (blogNotFound) return <ErrorPrompt promptAction={() => history.go(0)} />
   }
 
   return (
@@ -87,7 +86,7 @@ export const Blog: React.FC<BlogProps> = ({ locale }) => {
               />
             </>
           ) : (
-            <p>404 - blog not found</p>
+            <ErrorPrompt promptAction={() => history.go(0)} />
           )}
         </div>
       </main>
