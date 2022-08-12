@@ -1,3 +1,19 @@
+# [1.41.0](https://github.com/Famous-Roasters/frontend/compare/v1.40.0...v1.41.0) (2022-08-12)
+
+
+### Features
+
+* **blog:** add a custom formatter for blog ([a3d1d60](https://github.com/Famous-Roasters/frontend/commit/a3d1d60aaf986fd12882fef8caab1fb0fa0c5a17))
+* **blog:** add graphql query ([0fa1204](https://github.com/Famous-Roasters/frontend/commit/0fa1204e0a347d35e165827fbbb699134f997924))
+* **blog:** add new routes ([3bd514a](https://github.com/Famous-Roasters/frontend/commit/3bd514a705f2e47038538a5d542e7ff1fd29cbea))
+* **blog:** add react helmet package ([b3a2299](https://github.com/Famous-Roasters/frontend/commit/b3a2299b806bc3f2bb32cd0e6df7f42e1a6f7a92))
+* **blog:** add read time util ([530c220](https://github.com/Famous-Roasters/frontend/commit/530c2203a7d1d823605889c9f7d1312b6f43bb06))
+* **blog:** add routes and initial page ([3725a84](https://github.com/Famous-Roasters/frontend/commit/3725a84fc09af1fcba22ba7c5c8e621c7491ded2))
+* **blog:** blog page view ([8c40dca](https://github.com/Famous-Roasters/frontend/commit/8c40dca5a0d67bdff9e987bf086bb90388db72c6))
+* **blog:** update link hrefs to absolute ([845572f](https://github.com/Famous-Roasters/frontend/commit/845572fe308f8ab396747709790c30ad53a7b625))
+* **blog:** update query with title ([436b113](https://github.com/Famous-Roasters/frontend/commit/436b113f434f4fb4b83f2f3f189272e2f8f07854))
+* **blog:** update styling and basic 404 ([528b706](https://github.com/Famous-Roasters/frontend/commit/528b706535ecd32c1a4d327a4aceb9994e678dbb))
+
 # [1.40.0](https://github.com/Famous-Roasters/frontend/compare/v1.39.0...v1.40.0) (2022-08-12)
 
 
