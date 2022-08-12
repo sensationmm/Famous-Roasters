@@ -57,6 +57,13 @@ describe('Catalogue helper', () => {
           filterValuesSelected: [],
         },
         {
+          key: 'accessoryType',
+          isOpen: false,
+          filterType: 'enum',
+          filterValues: ['Filters', 'Refills'],
+          filterValuesSelected: [],
+        },
+        {
           key: 'decaf',
           isOpen: false,
           filterType: 'enum',
@@ -109,6 +116,7 @@ describe('Catalogue helper', () => {
           // @ts-ignore
           FilterAttributesMock.result.data.filterDictionaries,
           ['Filter'],
+          ['Refills'],
           ['true'],
           ['Arabica'],
           ['Cycle Roasters'],
@@ -123,6 +131,13 @@ describe('Catalogue helper', () => {
           filterType: 'enum',
           filterValues: ['Espresso', 'Filter'],
           filterValuesSelected: ['Filter'],
+        },
+        {
+          key: 'accessoryType',
+          isOpen: false,
+          filterType: 'enum',
+          filterValues: ['Filters', 'Refills'],
+          filterValuesSelected: ['Refills'],
         },
         {
           key: 'decaf',

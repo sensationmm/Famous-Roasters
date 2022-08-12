@@ -6,6 +6,7 @@ interface QueryFilterResult {
   queryFilter: object[]
   vendor: string[]
   coffeeType: string[]
+  accessoryType: string[]
   decaf: string[]
   beanType: string[]
   origin: string[]
@@ -22,6 +23,7 @@ export const getQueryFilter = (fData: FilterResponse, f: FilterData[]): QueryFil
   const queryFilter: object[] = []
   const vendor: string[] = []
   const coffeeType: string[] = []
+  const accessoryType: string[] = []
   const decaf: string[] = []
   const beanType: string[] = []
   const origin: string[] = []
@@ -41,6 +43,14 @@ export const getQueryFilter = (fData: FilterResponse, f: FilterData[]): QueryFil
             coffeeType.push(filterValue)
             queryFilter.push({
               productMetafield: { namespace: 'my_fields', key: 'coffee_type', value: `${filterValue}` },
+            })
+          })
+          break
+        case 'accessoryType':
+          filter.filterValuesSelected.forEach((filterValue) => {
+            accessoryType.push(filterValue)
+            queryFilter.push({
+              productMetafield: { namespace: 'my_fields', key: 'accessoryType', value: `${filterValue}` },
             })
           })
           break
@@ -89,12 +99,13 @@ export const getQueryFilter = (fData: FilterResponse, f: FilterData[]): QueryFil
     }
   })
 
-  return { queryFilter, vendor, coffeeType, decaf, beanType, origin, packageSize, aroma }
+  return { queryFilter, vendor, coffeeType, accessoryType, decaf, beanType, origin, packageSize, aroma }
 }
 
 export const getFilterData = (
   filterInput: FilterResponse,
   coffeeType?: string[],
+  accessoryType?: string[],
   decaf?: string[],
   beanType?: string[],
   vendor?: string[],
@@ -117,6 +128,13 @@ export const getFilterData = (
       filterType: 'enum',
       filterValues: filterInput.coffeeTypes,
       filterValuesSelected: coffeeType ? coffeeType : [],
+    },
+    {
+      key: 'accessoryType',
+      isOpen: false,
+      filterType: 'enum',
+      filterValues: filterInput.accessoryTypes,
+      filterValuesSelected: accessoryType ? accessoryType : [],
     },
     {
       key: 'decaf',

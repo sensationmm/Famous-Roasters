@@ -1,5 +1,7 @@
 import { ApolloClient, ApolloLink, createHttpLink, from, InMemoryCache, NormalizedCacheObject } from '@apollo/client'
 import { setContext } from '@apollo/client/link/context'
+import { fromUnixTime, isFuture } from 'date-fns/esm'
+import jwtDecode, { JwtPayload } from 'jwt-decode'
 
 export const adminClient = (): ApolloClient<NormalizedCacheObject> => {
   return new ApolloClient({
@@ -55,10 +57,13 @@ const authLink = setContext((_, { headers }) => {
   // get the authentication token from local storage if it exists
   const token = localStorage.getItem('authToken')
   // return the headers to the context so httpLink can read them
+
+  const tokenValid = token && isFuture(fromUnixTime((jwtDecode(token) as JwtPayload)?.exp as number))
+
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : '',
+      authorization: tokenValid ? `Bearer ${token}` : '',
     },
   }
 })

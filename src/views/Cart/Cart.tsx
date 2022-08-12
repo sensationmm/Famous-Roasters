@@ -142,20 +142,22 @@ export const Cart: React.FC = () => {
                       >
                         {formatPrice(priceV2.amount, priceV2.currencyCode)}
                       </Typography>
-                      {selectedOptions[0] && selectedOptions[0].value !== 'Default Title' && (
-                        <Typography
-                          type={TypographyType.Paragraph}
-                          size={TypographySize.Base}
-                          className="text-coreUI-text-secondary ml-1"
-                        >
-                          (
-                          {formatPrice(
-                            ((parseFloat(priceV2.amount) * 1000) / parseFloat(selectedOptions[0].value)).toString(),
-                            'EUR',
-                          )}
-                          /kg)
-                        </Typography>
-                      )}
+                      {selectedOptions[0] &&
+                        selectedOptions[0].value !== 'Default Title' &&
+                        selectedOptions[0].name === 'Gewicht' && (
+                          <Typography
+                            type={TypographyType.Paragraph}
+                            size={TypographySize.Base}
+                            className="text-coreUI-text-secondary ml-1"
+                          >
+                            (
+                            {formatPrice(
+                              ((parseFloat(priceV2.amount) * 1000) / parseFloat(selectedOptions[0].value)).toString(),
+                              'EUR',
+                            )}
+                            /kg)
+                          </Typography>
+                        )}
                     </div>
                     <span className="md:hidden" />
                     <div className="mt-1.5 md:w-full md:flex md:justify-end">

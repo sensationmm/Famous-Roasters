@@ -49,6 +49,7 @@ export interface ProductMetaInteger {
 export interface ProductVariantCustom extends ProductVariant {
   grind_type?: ProductMeta
   package_size: ProductMeta
+  color?: ProductMeta
   availableForSale: boolean
 }
 
@@ -59,6 +60,7 @@ export interface ProductVariantConnectionCustom extends ProductVariantConnection
 export interface ProductCustom extends ProductType {
   extraDescription?: ProductMeta
   coffee_type?: ProductMeta
+  accessory_type?: ProductMeta
   bean_type?: ProductMeta
   aroma?: ProductMeta
   flavourNotes?: ProductMeta
@@ -135,6 +137,7 @@ export const Product: React.FC = () => {
     productType,
     vendor,
     coffee_type,
+    accessory_type,
     aroma,
     flavourNotes,
     origin,
@@ -165,6 +168,7 @@ export const Product: React.FC = () => {
 
   useEffect(() => {
     variantSelected &&
+      variantSelected.package_size &&
       (variantSelected.grind_type
         ? setPackageSizes(packageSizesValues(variantSelected.grind_type.value))
         : setPackageSizes(packageSizesValues()))
@@ -190,7 +194,7 @@ export const Product: React.FC = () => {
     const updatedSelected =
       variants &&
       variants.nodes.find(
-        (x) => x.grind_type?.value === v[0].name && x.package_size.value === availableSizesForGrindType[0].name,
+        (x) => x.grind_type?.value === v[0].name && x.package_size?.value === availableSizesForGrindType[0].name,
       )
     updatedSelected && setVariantSelected(updatedSelected)
   }
@@ -198,9 +202,14 @@ export const Product: React.FC = () => {
   const updateVariantSelectedWithPackage = (v: ListBoxItem[]) => {
     const check = (x: ProductVariantCustom) =>
       variantSelected.grind_type
-        ? x.package_size.value === v[0].name && x.grind_type?.value === variantSelected.grind_type.value
-        : x.package_size.value === v[0].name
+        ? x.package_size?.value === v[0].name && x.grind_type?.value === variantSelected.grind_type.value
+        : x.package_size?.value === v[0].name
     const updatedSelected = variants && variants.nodes.find((x) => check(x))
+    updatedSelected && setVariantSelected(updatedSelected)
+  }
+
+  const updateVariantSelectedWithColor = (v: ListBoxItem[]) => {
+    const updatedSelected = variants && variants.nodes.find((x) => x.color?.value === v[0].name)
     updatedSelected && setVariantSelected(updatedSelected)
   }
 
@@ -219,8 +228,15 @@ export const Product: React.FC = () => {
       new Set(
         variants.nodes
           .filter((variant) => (grindType ? variant.grind_type?.value === grindType : true))
-          .map((variant) => ({ name: variant.package_size.value, disabled: variant.availableForSale !== true })),
-      ),
+          .map((variant) => ({ name: variant.package_size?.value, disabled: variant.availableForSale !== true })),
+      ) || [],
+    ).map((x) => x) || []
+
+  const colorValues = () =>
+    Array.from(
+      new Set(
+        variants.nodes.map((variant) => ({ name: variant.color?.value, disabled: variant.availableForSale !== true })),
+      ) || [],
     ).map((x) => x) || []
 
   const backToDetails = () => {
@@ -248,13 +264,14 @@ export const Product: React.FC = () => {
                 className="text-coreUI-text-tertiary"
               >
                 (
-                {formatPrice(
-                  (
-                    (parseFloat(variantSelected?.price) * 1000) /
-                    parseFloat(variantSelected?.package_size?.value)
-                  ).toString(),
-                  'EUR',
-                )}
+                {variantSelected?.package_size &&
+                  formatPrice(
+                    (
+                      (parseFloat(variantSelected?.price) * 1000) /
+                      parseFloat(variantSelected?.package_size?.value)
+                    ).toString(),
+                    'EUR',
+                  )}
                 /kg)
               </Typography>
             </>
@@ -367,7 +384,7 @@ export const Product: React.FC = () => {
               size={TypographySize.Small}
               className="text-coreUI-text-secondary"
             >
-              {coffee_type ? `${vendor} | ${coffee_type.value}` : vendor}
+              {isAccessory ? accessory_type?.value || '' : coffee_type ? `${vendor} | ${coffee_type.value}` : vendor}
             </Typography>
           </div>
           {/* Title */}
@@ -430,10 +447,21 @@ export const Product: React.FC = () => {
                   hasTranslatedValues={false}
                   translationPrefix="pages.product.transactional.options.packageSize"
                   multiple={false}
-                  value={[{ name: variantSelected?.package_size?.value }]}
+                  value={[{ name: variantSelected?.package_size?.value || '' }]}
                   onChange={(v) => v && updateVariantSelectedWithPackage(v)}
                   label={t('pages.product.transactional.options.packageSize.label')}
                   itemDisabledMsg={t('pages.product.transactional.outOfStock')}
+                />
+              )}
+              {variants && variants.nodes[0].color && (
+                <Listbox
+                  items={colorValues() as ListBoxItem[]}
+                  hasTranslatedValues={false}
+                  translationPrefix="pages.product.transactional.options.color"
+                  multiple={false}
+                  value={[{ name: variantSelected?.color?.value || '' }]}
+                  onChange={(v) => v && updateVariantSelectedWithColor(v)}
+                  label={t('pages.product.transactional.options.color.label')}
                 />
               )}
               <div>

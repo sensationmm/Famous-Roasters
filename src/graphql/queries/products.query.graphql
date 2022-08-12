@@ -41,6 +41,9 @@ query products(
         coffee_type: metafield(namespace: "my_fields", key: "coffee_type") {
           value
         }
+        accessory_type: metafield(namespace: "my_fields", key: "accessory_type") {
+          value
+        }
         bean_type: metafield(namespace: "my_fields", key: "bean_type") {
           value
         }

@@ -1,13 +1,7 @@
 import { ApolloError } from '@apollo/client'
 import { useLazyQuery } from '@apollo/client/react/hooks'
 import { ChevronRightIcon } from '@heroicons/react/solid'
-import {
-  Collection,
-  Maybe,
-  Product as ProductType,
-  ProductConnection,
-  Scalars,
-} from '@shopify/hydrogen/dist/esnext/storefront-api-types'
+import { Collection, Maybe, ProductConnection, Scalars } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
 import React, { useCallback, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -29,31 +23,11 @@ import {
   TypographySize,
 } from 'src/components'
 import { Pagination } from 'src/components/Pagination'
-import { famousRoastersClient as frClient, shopifyCoffeeCollection } from 'src/config'
+import { famousRoastersClient as frClient, shopifyAccessoryCollection, shopifyCoffeeCollection } from 'src/config'
 import { getSimplifiedProductId } from 'src/utils/formatters'
 
+import { ProductCustom } from '../Product'
 import { getFilterData, getQueryFilter, sortParamsToListBoxItem } from '.'
-
-interface ProductMeta {
-  value: string
-}
-
-interface ProductMetaInteger {
-  value: number
-}
-
-interface ProductCustom extends ProductType {
-  coffee_type: ProductMeta
-  bean_type: ProductMeta
-  aroma: ProductMeta
-  flavourNotes: ProductMeta
-  sweetness: ProductMetaInteger
-  body: ProductMetaInteger
-  bitterness: ProductMetaInteger
-  acidity: ProductMetaInteger
-  pricePerKg: ProductMeta
-  origin: ProductMeta
-}
 
 interface ProductConnectionCustom extends ProductConnection {
   nodes: Array<ProductCustom>
@@ -103,6 +77,9 @@ const tabsData: TabsDataItem[] = [
   // disabled for now
   // { key: 'forYou', translationKey: 'pages.catalogue.tabs.forYou' },
   { key: 'discover', translationKey: 'pages.catalogue.tabs.discover' },
+  // TODO: restore when accessories go live
+  // { key: 'coffee', translationKey: 'pages.catalogue.tabs.coffee' },
+  // { key: 'accessories', translationKey: 'pages.catalogue.tabs.accessories' },
 ]
 
 const sortByItems: ListBoxItem[] = [{ name: 'priceAsc' }, { name: 'priceDesc' }, { name: 'newDesc' }]
@@ -120,6 +97,7 @@ export type FilterResponse = {
   aromas: Array<string>
   beanTypes: Array<string>
   coffeeTypes: Array<string>
+  accessoryTypes: Array<string>
   origins: Array<string>
   packageSizes: Array<string>
   vendors: Array<string>
@@ -127,7 +105,9 @@ export type FilterResponse = {
 
 export const Catalogue: React.FC = () => {
   const { t } = useTranslation()
-  const [activeTab, setActiveTab] = useState<string>('discover')
+  const [searchParams, setSearchParams] = useSearchParams()
+  // TODO: remove bypass when accessories go live
+  const [activeTab, setActiveTab] = useState<string>(searchParams.get('isAccessory') ? 'accessories' : 'discover')
   const [sortValue, setSortValue] = useState<ListBoxItem[]>()
   const [sortParams, setSortParams] = useState<SortParams>()
   const [filters, setFilters] = useState<FilterData[]>([])
@@ -135,7 +115,6 @@ export const Catalogue: React.FC = () => {
   const [queryFilterParams, setQueryFilterParams] = useState<QueryFilterParams>()
   const [paginationParams, setPaginationParams] = useState<PaginationParams>(paginationParamsInitialValue)
   const [queryProductsVariables, setQueryProductsVariables] = useState<QueryProductsVariables>()
-  const [searchParams, setSearchParams] = useSearchParams()
   const GET_PRODUCTS = loader('src/graphql/queries/products.query.graphql')
   const GET_FILTER_ATTRIBUTES = loader('src/graphql/queries/filterAttributes.query.graphql')
 
@@ -279,7 +258,7 @@ export const Catalogue: React.FC = () => {
       const sortKey = searchParams.get('sortKey')
       const reverseParam = searchParams.get('reverse')
       const queryVars: QueryProductsVariables = {
-        collectionId: shopifyCoffeeCollection,
+        collectionId: activeTab === 'accessories' ? shopifyAccessoryCollection : shopifyCoffeeCollection,
         first: paginationParams?.first,
         last: paginationParams?.last,
         before: paginationParams?.before,
@@ -293,7 +272,7 @@ export const Catalogue: React.FC = () => {
         fetchProducts(queryVars)
       }
     }
-  }, [searchParams, queryFilterParams, paginationParams])
+  }, [searchParams, queryFilterParams, paginationParams, activeTab])
 
   if (filterAttributesError) {
     return <ErrorPrompt promptAction={() => history.go(0)} />
@@ -356,15 +335,21 @@ export const Catalogue: React.FC = () => {
     const filtersToShow = filters.filter((filter) => filter.key === key)[0]
     return (
       <Listbox
-        items={filtersToShow?.filterValues?.map((x) => ({ name: x })) || []}
-        hasTranslatedValues={hasTranslatedValues}
+        items={
+          filtersToShow?.filterValues
+            ?.map((x) => ({
+              name: hasTranslatedValues ? t(`pages.catalogue.filters.${key}.values.${x}`) : x,
+            }))
+            .sort((a, b) => (key !== 'packageSize' ? (a.name > b.name ? 1 : -1) : 1)) || []
+        }
+        hasTranslatedValues={false}
         translationPrefix={`pages.catalogue.filters.${key}`}
         value={filtersToShow.filterValuesSelected?.map((fv) => ({ name: fv }))}
         multiple={key !== 'coffeeType'}
-        hasNoneItem={key === 'coffeeType'}
-        resetOnNoneClick={key === 'coffeeType'}
+        hasNoneItem={key === 'coffeeType' || key === 'accessoryType'}
+        resetOnNoneClick={key === 'coffeeType' || key === 'accessoryType'}
         onChange={(v) => onUpdateFiltersDesktop(v, key)}
-        big={key === 'coffeeType'}
+        big={key === 'coffeeType' || key === 'accessoryType'}
         hasSpacerAfterItem={hasSpacerAfterItem}
         swatches={
           key === 'aroma'
@@ -394,28 +379,7 @@ export const Catalogue: React.FC = () => {
     )
   }
 
-  const renderForYouProducts = () => {
-    return (
-      <div className="flex justify-center my-20">
-        <Typography>{t('error.unavailable.text')}</Typography>
-      </div>
-    )
-  }
-
   const renderDiscoverProducts = () => {
-    // console.log('error', error)
-    if (error !== undefined || !pageInfo) {
-      return <ErrorPrompt promptAction={() => history.go(0)} />
-    }
-
-    if (!data || !filterAttributesData || !filters.length || queryFilterParams === undefined) {
-      return (
-        <div className="flex h-64 mb-32 justify-center items-center">
-          <Loader />
-        </div>
-      )
-    }
-
     return (
       <>
         <div className="mt-4">{renderListboxFilter('coffeeType', false)}</div>
@@ -482,6 +446,49 @@ export const Catalogue: React.FC = () => {
     )
   }
 
+  const renderAccessories = () => {
+    return (
+      <>
+        <div className="mt-4">{renderListboxFilter('accessoryType', false)}</div>
+        <div className="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+          {productNodes?.map((node, i: number) => {
+            const id = getSimplifiedProductId(node.id)
+            return (
+              <Link to={`/product/${id}`} key={`product-tile-link-${i}`}>
+                <ProductTile key={`title-${i}`} showFrom={true} productNode={node} showType="category" />
+              </Link>
+            )
+          })}
+        </div>
+        <div className="mb-8 mt-8">
+          <Pagination
+            hasNextPage={pageInfo?.hasNextPage || false}
+            hasPreviousPage={pageInfo?.hasPreviousPage || false}
+            next={handleNextClicked}
+            previous={handlePreviousClicked}
+          />
+        </div>
+      </>
+    )
+  }
+
+  const renderContent = () => {
+    // console.log('error', error)
+    if (error !== undefined || !pageInfo) {
+      return <ErrorPrompt promptAction={() => history.go(0)} />
+    }
+
+    if (!data || !filterAttributesData || !filters.length || queryFilterParams === undefined) {
+      return (
+        <div className="flex h-64 mb-32 justify-center items-center">
+          <Loader />
+        </div>
+      )
+    }
+
+    return activeTab === 'discover' ? renderDiscoverProducts() : renderAccessories()
+  }
+
   return (
     <Layout>
       <main className="flex flex-grow w-full items-start justify-center bg-white mt-4">
@@ -491,7 +498,7 @@ export const Catalogue: React.FC = () => {
             initialActiveTabKey="discover"
             setParentActiveTab={(k: string) => setActiveTab(k)}
           />
-          {activeTab === 'discover' ? renderDiscoverProducts() : renderForYouProducts()}
+          {renderContent()}
         </div>
       </main>
     </Layout>

@@ -363,7 +363,7 @@ export const CatalogueMockFilter3 = {
       after: null,
       sortKey: undefined,
       reverse: undefined,
-      filters: [{ productMetafield: { namespace: 'my_fields', key: 'origin', value: 'BR' } }],
+      filters: [{ productMetafield: { namespace: 'my_fields', key: 'origin', value: 'Brasilien' } }],
     },
   },
 }
@@ -486,6 +486,23 @@ export const CatalogueMockFilter10 = {
   },
 }
 
+export const CatalogueMockFilter11 = {
+  ...CatalogueMock1,
+  request: {
+    ...CatalogueMock1.request,
+    variables: {
+      ...CatalogueMock1.request.variables,
+      first: 6,
+      last: null,
+      before: null,
+      after: null,
+      sortKey: undefined,
+      reverse: undefined,
+      filters: [{ productMetafield: { namespace: 'my_fields', key: 'accessory_type', value: 'Refills' } }],
+    },
+  },
+}
+
 export const CatalogueMocksFilters = [
   CatalogueMockFilter1,
   CatalogueMockFilter2,
@@ -497,6 +514,7 @@ export const CatalogueMocksFilters = [
   CatalogueMockFilter8,
   CatalogueMockFilter9,
   CatalogueMockFilter10,
+  CatalogueMockFilter11,
 ]
 
 export const CatalogueMocksPagination = [CatalogueMock6, CatalogueMock7, CatalogueMock8]

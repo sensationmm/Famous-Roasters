@@ -1,9 +1,5 @@
 import { useQuery } from '@apollo/client/react/hooks'
-import {
-  Collection,
-  Product as ProductType,
-  ProductConnection,
-} from '@shopify/hydrogen/dist/esnext/storefront-api-types'
+import { Collection, ProductConnection } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
 import React from 'react'
 import { Link } from 'react-router-dom'
@@ -12,26 +8,7 @@ import { shopifyAccessoryCollection, shopifyCoffeeCollection } from 'src/config'
 import useBreakpoint from 'src/hooks/useBreakpoint'
 import { getSimplifiedProductId } from 'src/utils/formatters'
 
-interface ProductMeta {
-  value: string
-}
-
-interface ProductMetaInteger {
-  value: number
-}
-
-interface ProductCustom extends ProductType {
-  coffee_type: ProductMeta
-  bean_type: ProductMeta
-  aroma: ProductMeta
-  flavourNotes: ProductMeta
-  sweetness: ProductMetaInteger
-  body: ProductMetaInteger
-  bitterness: ProductMetaInteger
-  acidity: ProductMetaInteger
-  pricePerKg: ProductMeta
-  origin: ProductMeta
-}
+import { ProductCustom } from '../Product'
 
 interface ProductConnectionCustom extends ProductConnection {
   nodes: Array<ProductCustom>
