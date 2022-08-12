@@ -1,5 +1,6 @@
 import { Auth } from './Auth'
 import { Blog } from './Blog'
+import { CategoryList } from './Blog'
 import { Cart } from './Cart'
 import { Catalogue } from './Catalogue'
 import { Error } from './Error'
@@ -12,6 +13,7 @@ export { Auth as Auth }
 export { Blog as Blog }
 export { Cart as Cart }
 export { Catalogue as Catalogue }
+export { CategoryList as CategoryList }
 export { FeaturedProduct as FeaturedProduct }
 export { Error as Error }
 export { Home as Home }

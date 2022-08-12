@@ -9,6 +9,7 @@ import {
   Blog,
   Cart,
   Catalogue,
+  CategoryList,
   Error,
   FeaturedProduct,
   Home,
@@ -40,6 +41,8 @@ const App = () => {
               <Route path="/" element={<Home />} />
               {isBlog && (
                 <>
+                  <Route path="/en/" element={<CategoryList locale="de_en" />} />
+                  <Route path="/de/" element={<CategoryList locale="de_de" />} />
                   <Route
                     path="/en/coffee-knowledge/:slug"
                     element={
