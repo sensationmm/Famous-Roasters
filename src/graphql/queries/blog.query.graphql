@@ -1,0 +1,18 @@
+query blog($slug: String!, $locale: Locale!) {
+  brewingMethods(where: {slug: $slug}, locales: [$locale]) {
+    id
+    locale
+    title
+    seoTitle
+    seoMetaDescription
+    content {
+      html
+      text
+    }
+    slug
+    createdBy {
+      name
+      picture
+    }
+  }
+}

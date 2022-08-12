@@ -37,10 +37,12 @@ interface NavigationData {
   pagesMobile: NavigationDataItem[]
 }
 
+const domainShop = process.env.REACT_APP_DOMAIN_SHOP || '' // '//shop.60beans.de'
+
 const navigationData: NavigationData = {
-  pagesPrimary: [{ key: 'tasteFinder', href: '/taste-finder' }],
+  pagesPrimary: [{ key: 'tasteFinder', href: `${domainShop}/taste-finder` }],
   pagesSecondary: [{ key: 'about', href: '//www.60beans.de/uber-uns' }],
-  pagesMobile: [{ key: 'profile', href: '/profile' }],
+  pagesMobile: [{ key: 'profile', href: `${domainShop}/profile` }],
 }
 
 export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps) => {
@@ -186,7 +188,7 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
                   ))}
                 </div>
 
-                <Link to={'/profile'} className="hidden xl:block ml-4">
+                <Link to={`${domainShop}/profile`} className="hidden xl:block ml-4">
                   <Icon name={IconName.Profile} />
                 </Link>
 
@@ -215,7 +217,7 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
                     <Button
                       emphasis={ButtonEmphasis.Secondary}
                       size={ButtonSize.sm}
-                      onClick={() => navigate('/catalogue')}
+                      onClick={() => navigate(`${domainShop}/catalogue`)}
                       data-testid="button-shop"
                     >
                       {t(`pages.catalogue.navigation`)}
