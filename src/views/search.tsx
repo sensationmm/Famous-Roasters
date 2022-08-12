@@ -8,14 +8,16 @@ import {
   Configure,
   Hits,
   InstantSearch,
-  Pagination,
-  RefinementList,
   SearchBox,
+  SortBy,
+  usePagination,
+  UsePaginationProps,
   useRefinementList,
   UseRefinementListProps,
 } from 'react-instantsearch-hooks-web'
 import { Link } from 'react-router-dom'
 import { Checkbox, Tag, TagType, Typography, TypographySize, TypographyType } from 'src/components'
+import { Pagination } from 'src/components/Pagination'
 import { formatPrice } from 'src/utils'
 
 const searchClient = algoliasearch('UJO1LDXRBG', 'ae9617f85b12371cbdfbe18d4c727fcc')
@@ -70,7 +72,7 @@ const Hit = ({ hit }: { hit: RawHit }) => {
           </div>
         </div>
 
-        <div className="flex flex-col w-full justify-start">
+        <div className="flex flex-col w-full justify-start pl-4">
           <Typography
             as="div"
             type={TypographyType.Label}
@@ -160,20 +162,7 @@ interface ListboxFilterProps extends UseRefinementListProps {
 }
 
 const ListboxFilter = (props: ListboxFilterProps) => {
-  const {
-    items,
-    hasExhaustiveItems,
-    createURL,
-    refine,
-    sendEvent,
-    searchForItems,
-    isFromSearch,
-    canRefine,
-    canToggleShowMore,
-    isShowingMore,
-    toggleShowMore,
-  } = useRefinementList(props)
-
+  const { items, refine } = useRefinementList(props)
   const { t } = useTranslation()
   const { attribute, translationPrefix } = props
   const activeItems = items.filter((item) => item.isRefined)
@@ -289,46 +278,89 @@ const CheckboxFilter = (props: UseRefinementListProps) => {
   )
 }
 
+const MyPagination = (props: UsePaginationProps) => {
+  const { currentRefinement, isFirstPage, isLastPage, refine } = usePagination(props)
+  return (
+    <Pagination
+      hasPreviousPage={!isFirstPage}
+      hasNextPage={!isLastPage}
+      previous={() => refine(currentRefinement - 1)}
+      next={() => refine(currentRefinement + 1)}
+    />
+  )
+}
+
 const Search: React.FC = () => {
   return (
-    <InstantSearch indexName="shopify_products" searchClient={searchClient} routing={true}>
-      <Configure distinct={true} hitsPerPage={12} />
+    <InstantSearch indexName="products" searchClient={searchClient} routing={true}>
+      <Configure
+        distinct={true}
+        hitsPerPage={6}
+        facetFilters={['product_type:-Accessories', 'product_type:-Equipment']}
+      />
 
-      <div className="flex flex-row space-x-4">
-        <div>
-          <CheckboxFilter attribute="meta.my_fields.decaf" />
-        </div>
+      <div className="flex flex-row justify-end my-4">
+        <SearchBox
+          placeholder="Search"
+          classNames={{
+            input: 'rounded-full border-2 border-gray-50 px-4 py-1',
+            submitIcon: '-ml-6',
+            resetIcon: 'hidden',
+            reset: 'hidden',
+          }}
+        />
+      </div>
 
-        <div>
-          <ListboxFilter attribute="meta.my_fields.coffee_type" sortBy={['name:asc']} />
-        </div>
+      <div>
+        <div className="flex flex-row justify-end space-between space-x-4">
+          <div className="flex flex-row justify-start my-4">
+            <CheckboxFilter attribute="meta.my_fields.decaf" />
+          </div>
 
-        <div>
-          <ListboxFilter attribute="meta.my_fields.aroma" sortBy={['name:asc']} />
-        </div>
+          <div>
+            <ListboxFilter attribute="meta.my_fields.coffee_type" sortBy={['name:asc']} />
+          </div>
 
-        <div>
-          <ListboxFilter attribute="meta.my_fields.bean_type" sortBy={['name:asc']} />
-        </div>
+          <div>
+            <ListboxFilter attribute="meta.my_fields.aroma" sortBy={['name:asc']} />
+          </div>
 
-        <div>
-          <ListboxFilter
-            attribute="meta.my_fields.origin"
-            sortBy={['name:asc']}
-            translationPrefix="pages.catalogue.filters.origin.values"
-          />
-        </div>
+          <div>
+            <ListboxFilter attribute="meta.my_fields.bean_type" sortBy={['name:asc']} />
+          </div>
 
-        <div>
-          <ListboxFilter attribute="vendor" sortBy={['name:asc']} />
+          <div>
+            <ListboxFilter
+              attribute="meta.my_fields.origin"
+              sortBy={['name:asc']}
+              translationPrefix="pages.catalogue.filters.origin.values"
+            />
+          </div>
+
+          <div>
+            <ListboxFilter attribute="vendor" sortBy={['name:asc']} />
+          </div>
         </div>
       </div>
-      <SearchBox
-        placeholder="Search"
-        classNames={{ input: 'rounded-full border-2 border-gray-50 px-4 py-1', submitIcon: '-ml-6' }}
+
+      <SortBy
+        items={[
+          { label: 'Standard', value: 'products' },
+          { label: 'Preis aufsteigend', value: 'products_price_asc' },
+          { label: 'Preis absteigend', value: 'products_price_desc' },
+          { label: 'Neue zuerst', value: 'products_updated_at_desc' },
+        ]}
+        classNames={{
+          root: 'flex flex-row justify-end',
+          select: 'rounded-full border border-coreUI-text-tertiary px-4 py-2 bg-white ',
+        }}
       />
-      <Hits hitComponent={Hit} classNames={{ list: 'grid gap-2 grid-cols-3 md:grid-cols-2 xl:grid-cols-3' }} />
-      <Pagination />
+
+      <Hits
+        hitComponent={Hit}
+        classNames={{ root: 'mb-8', list: 'grid gap-2 grid-cols-3 md:grid-cols-2 xl:grid-cols-3' }}
+      />
+      <MyPagination />
     </InstantSearch>
   )
 }
