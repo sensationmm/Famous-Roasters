@@ -1,3 +1,10 @@
+# [1.42.0](https://github.com/Famous-Roasters/frontend/compare/v1.41.0...v1.42.0) (2022-08-12)
+
+
+### Features
+
+* **catalog:** accessories catalog page ([98de11f](https://github.com/Famous-Roasters/frontend/commit/98de11f3e7e1470b2a176e8e63bf3f85bc998164))
+
 # [1.41.0](https://github.com/Famous-Roasters/frontend/compare/v1.40.0...v1.41.0) (2022-08-12)
 
 
