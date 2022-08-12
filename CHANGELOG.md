@@ -1,3 +1,10 @@
+## [1.42.1](https://github.com/Famous-Roasters/frontend/compare/v1.42.0...v1.42.1) (2022-08-12)
+
+
+### Bug Fixes
+
+* **product:** accessories vraiant setup ([cfb6fb8](https://github.com/Famous-Roasters/frontend/commit/cfb6fb8cd5a6e85a38eb49af2d6b230c1bc72e34))
+
 # [1.42.0](https://github.com/Famous-Roasters/frontend/compare/v1.41.0...v1.42.0) (2022-08-12)
 
 
