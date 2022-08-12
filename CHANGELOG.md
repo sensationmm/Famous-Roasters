@@ -1,3 +1,10 @@
+# [1.40.0](https://github.com/Famous-Roasters/frontend/compare/v1.39.0...v1.40.0) (2022-08-12)
+
+
+### Features
+
+* **blog:** create a folder to store the webflow script ([9b24d07](https://github.com/Famous-Roasters/frontend/commit/9b24d077f5188e2db24a0c9299f0fc8dddae5b68))
+
 # [1.39.0](https://github.com/Famous-Roasters/frontend/compare/v1.38.0...v1.39.0) (2022-08-10)
 
 
