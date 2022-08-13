@@ -1,3 +1,10 @@
+## [1.42.2](https://github.com/Famous-Roasters/frontend/compare/v1.42.1...v1.42.2) (2022-08-13)
+
+
+### Bug Fixes
+
+* **UI:** remove comma from greeting ([d033344](https://github.com/Famous-Roasters/frontend/commit/d03334489b75f3dc621f6acad0418c30498c3949))
+
 ## [1.42.1](https://github.com/Famous-Roasters/frontend/compare/v1.42.0...v1.42.1) (2022-08-12)
 
 
