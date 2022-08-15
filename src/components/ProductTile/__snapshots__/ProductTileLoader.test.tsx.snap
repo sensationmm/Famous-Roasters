@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductTileLoader component Renders correctly 1`] = `
+<div>
+  <div
+    class="relative flex pt-8 md:px-6"
+  >
+    <div
+      class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+    >
+      <div
+        class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+      >
+        <div
+          class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-col w-full justify-center pl-4"
+    >
+      <div
+        class="flex"
+      >
+        <div
+          class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-5"
+        />
+        <div
+          class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-14"
+        />
+        <div
+          class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-10"
+        />
+      </div>
+      <div
+        class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-20"
+      />
+      <div
+        class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-24"
+      />
+      <div
+        class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-12"
+      />
+      <div
+        class="flex"
+      >
+        <div
+          class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-8"
+        />
+        <div
+          class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-14"
+        />
+      </div>
+    </div>
+    <div
+      class="absolute block left-20 w-3 h-full bg-gradient-to-r from-transparent via-white/70 to-transparent animate-swipe"
+    />
+  </div>
+</div>
+`;

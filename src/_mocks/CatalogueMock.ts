@@ -290,6 +290,38 @@ export const CatalogueMockAccessories = {
     query: GET_PRODUCTS,
     variables: {
       collectionId: 'gid://shopify/Collection/479115477258',
+      first: 6,
+      last: null,
+      before: null,
+      after: null,
+      sortKey: undefined,
+      reverse: undefined,
+      filters: { productType: 'Accessories' },
+    },
+  },
+  result: {
+    data: {
+      collection: {
+        id: 'abcdef',
+        products: {
+          nodes: [...ProductNodes],
+          pageInfo: {
+            hasNextPage: true,
+            hasPreviousPage: false,
+            startCursor: '1',
+            endCursor: '2',
+          },
+        },
+      },
+    },
+  },
+}
+
+export const CatalogueMockAccessoriesYouMightLike = {
+  request: {
+    query: GET_PRODUCTS,
+    variables: {
+      collectionId: 'gid://shopify/Collection/479115477258',
       first: 10,
       last: null,
       before: null,
