@@ -25,7 +25,6 @@ import {
 } from 'src/components'
 import { useAuth } from 'src/config/cognito'
 const USER_PROFILE = loader('src/graphql/queries/userProfile.query.graphql')
-import { OrderMock } from 'src/_mocks'
 import { formatDate, formatPrice } from 'src/utils'
 
 interface TasteFinderProfile extends TasteProfileProps {
@@ -48,7 +47,8 @@ export type OrderVariant = {
       id: string
     }
     image: {
-      url: string
+      url?: string
+      src?: string
     }
     quantity: number
     variant: {
@@ -84,7 +84,7 @@ export const Profile: React.FC = () => {
   const navigate = useNavigate()
   const [userName, setUserName] = useState<string>()
   const [userProfile, setUserProfile] = useState<UserProfile>()
-  const [lastOrder] = useState<Order>(OrderMock.result.data.order)
+  const [lastOrder, setLastOrder] = useState<Order>()
   const [getUserProfile] = useLazyQuery(USER_PROFILE)
 
   useEffect(() => {
@@ -101,13 +101,15 @@ export const Profile: React.FC = () => {
           .catch(() => signOut())
 
         const token = localStorage.getItem('authToken')
-        fetch('https://api.staging.60beans.io/proxy/orders', {
+        fetch(process.env.REACT_APP_FAMOUS_ROASTERS_ORDERS_ENDPOINT as string, {
           headers: {
             authorization: token ? `Bearer ${token}` : '',
           },
         })
           .then((response) => response.json())
-          .then((data) => console.log('orders', data))
+          .then((data) => {
+            setLastOrder(data.orders.edges[0].node)
+          })
       })
       .catch(() => {
         navigate('/login')
@@ -132,6 +134,7 @@ export const Profile: React.FC = () => {
 
     return classNames.join(' ')
   }
+
   return (
     <Layout navigationTheme={NavigationTheme.Home}>
       <main className="flex flex-col flex-grow w-full items-start bg-white mt-4y">
