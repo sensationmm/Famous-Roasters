@@ -23,6 +23,18 @@ describe('Order Tile component', () => {
     expect(container).toMatchSnapshot()
   })
 
+  it('Renders correctly for multi item', async () => {
+    const tile = OrderMock.result.data.orders.edges[0].node.lineItems.edges[0].node
+    tile.quantity = 2
+    const { container } = render(
+      <I18nextProvider i18n={i18n} data-testId="">
+        <OrderTile productId={'111111'} node={tile} />
+      </I18nextProvider>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
+
   it('handles click', async () => {
     const mockUseNavigate = jest.spyOn(ReactRouterDom, 'useNavigate')
     render(<OrderTile productId={'111111'} node={OrderMock.result.data.orders.edges[0].node.lineItems.edges[0].node} />)

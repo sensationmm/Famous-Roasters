@@ -30,7 +30,7 @@ export const FeaturedProduct: React.FC = () => {
   const { id } = useParams()
   const { t } = useTranslation()
   const GET_PRODUCT = loader('src/graphql/queries/product.query.graphql')
-  const [tasteFinderDataJSON] = useLocalStorage('tasteFinder', '')
+  const [tasteFinderDataJSON, setTasteFinderLocalStorage] = useLocalStorage('tasteFinder', '')
   const tasteFinderData = tasteFinderDataJSON && JSON.parse(tasteFinderDataJSON)
 
   useEffect(() => {
@@ -46,6 +46,13 @@ export const FeaturedProduct: React.FC = () => {
   })
 
   const { aroma, images, title, whyThisCoffee } = data?.product || {}
+
+  useEffect(() => {
+    if (tasteFinderDataJSON && aroma?.value) {
+      const saveAroma = [...tasteFinderData, { name: 'aroma', value: aroma?.value }]
+      setTasteFinderLocalStorage(JSON.stringify(saveAroma))
+    }
+  }, [aroma])
 
   const tasteProfileResults: TasteProfileProps = {
     acidity: tasteFinderDataJSON
@@ -67,6 +74,7 @@ export const FeaturedProduct: React.FC = () => {
   }
 
   if (error) {
+    // console.log('error', error)
     return <ErrorPrompt promptAction={() => history.go(0)} />
   }
 
