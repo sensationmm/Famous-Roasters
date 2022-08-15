@@ -45,7 +45,7 @@ export const CategoryList: React.FC<CategoryListProps> = () => {
   return (
     <Layout navigationTheme={NavigationTheme.Home}>
       <div className="flex-grow flex w-full flex-col">
-        <div className="hero w-full h-[624px] bg-brand-grey-whisper">
+        <div className="hero w-full h-[624px] md:h-[428px] xl:h-[624px] bg-brand-grey-whisper">
           <div className="flex flex-col md:flex-row w-full h-full max-w-5xl mx-auto pt-20">
             <div className="px-6 md:w-1/2">
               <Typography
