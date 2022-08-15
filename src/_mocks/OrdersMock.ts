@@ -32,61 +32,73 @@ export const OrderMock = {
   },
   result: {
     data: {
-      order: {
-        id: 'gid://shopify/Order/5104381690122',
-        name: '#131140',
-        createdAt: '2022-07-26T10:06:15Z',
-        displayFulfillmentStatus: 'FULFILLED',
-        displayFinancialStatus: 'PAID',
-        totalPriceSet: {
-          shopMoney: {
-            amount: '17.1',
-            currencyCode: 'EUR',
+      orders: {
+        edges: [
+          {
+            node: {
+              id: 'gid://shopify/Order/5128174895370',
+              name: '#131197',
+              createdAt: '2022-08-11T13:37:56Z',
+              displayFulfillmentStatus: 'FULFILLED',
+              displayFinancialStatus: 'PAID',
+              totalPriceSet: {
+                shopMoney: {
+                  amount: '3.9',
+                  currencyCode: 'EUR',
+                },
+              },
+              discountCode: 'BCG_DV',
+              lineItems: {
+                edges: [
+                  {
+                    node: {
+                      id: 'gid://shopify/LineItem/12770454372618',
+                      title: 'Cycle Blend',
+                      image: {
+                        src: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/specialty-coffee-espresso-cycle-blend-cycle-roasters-lubeck_20copy.webp?v=1655307920',
+                      },
+                      quantity: 1,
+                      product: {
+                        id: 'gid://shopify/Product/7655228899544',
+                      },
+                      variant: {
+                        id: 'gid://shopify/ProductVariant/43655916421386',
+                        title: '250g / Ganze Bohne',
+                        price: '7.20',
+                        weight: 250.0,
+                        product: {
+                          id: 'gid://shopify/Product/7655228899544',
+                        },
+                      },
+                    },
+                  },
+                  {
+                    node: {
+                      id: 'gid://shopify/LineItem/12766730879242',
+                      title: 'Santiago',
+                      image: {
+                        src: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/SANTIAGO_Filter.webp?v=1657875982',
+                      },
+                      quantity: 1,
+                      product: {
+                        id: 'gid://shopify/Product/7659914100952',
+                      },
+                      variant: {
+                        id: 'gid://shopify/ProductVariant/43655917502730',
+                        title: '250g / Ganze Bohne',
+                        price: '9.50',
+                        weight: 0.3,
+                        product: {
+                          id: 'gid://shopify/Product/7659914100952',
+                        },
+                      },
+                    },
+                  },
+                ],
+              },
+            },
           },
-        },
-        discountCode: 'BCGDV',
-        lineItems: {
-          edges: [
-            {
-              node: {
-                id: 'gid://shopify/LineItem/12718816166154',
-                title: 'Wild At Heart',
-                product: {
-                  id: 'gid://shopify/Product/7659880087768',
-                },
-                image: {
-                  url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/19grams_Wild_At_Heart_3782237a-8643-42da-93d4-15849d5c0d4d_20copy.webp?v=1655308036',
-                },
-                quantity: 1,
-                variant: {
-                  id: 'gid://shopify/ProductVariant/42737539481816',
-                  title: '250g / ganze Bohne',
-                  price: '11.90',
-                  weight: 250,
-                },
-              },
-            },
-            {
-              node: {
-                id: 'gid://shopify/LineItem/12718816198922',
-                title: 'Chakra Warmi',
-                product: {
-                  id: 'gid://shopify/Product/7974309363978',
-                },
-                image: {
-                  url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/CHAKRA-WARMI_Square-scaled.webp?v=1657545324',
-                },
-                quantity: 2,
-                variant: {
-                  id: 'gid://shopify/ProductVariant/43608366481674',
-                  title: 'Default Title',
-                  price: '14.50',
-                  weight: 270,
-                },
-              },
-            },
-          ],
-        },
+        ],
       },
     },
   },

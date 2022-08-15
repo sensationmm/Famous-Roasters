@@ -12,7 +12,7 @@ export const OrderTile: React.FC<OrderTileProps> = ({
   productId,
   node: {
     title,
-    image: { url },
+    image: { src },
     quantity,
     variant: { title: variantTitle, price, weight },
   },
@@ -26,7 +26,7 @@ export const OrderTile: React.FC<OrderTileProps> = ({
     >
       <div className="flex justify-center items-center shrink-0 self-center relative w-32 h-32">
         <div className="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32">
-          <img src={url} alt={title} className="w-28 max-h-28" />
+          <img src={src} alt={title} className="w-28 max-h-28" />
         </div>
       </div>
       <div className={'pl-4'}>
