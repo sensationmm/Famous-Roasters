@@ -1,3 +1,19 @@
+# [1.43.0](https://github.com/Famous-Roasters/frontend/compare/v1.42.2...v1.43.0) (2022-08-15)
+
+
+### Bug Fixes
+
+* **featured:** failed test ([882085f](https://github.com/Famous-Roasters/frontend/commit/882085f53eb7d776d6ca309a097d2db05512d35e))
+* **featured:** hook order ([b548f71](https://github.com/Famous-Roasters/frontend/commit/b548f7103054cad89ec765790da1be10b6234ccc))
+* **profile:** code duplication ([086b3cf](https://github.com/Famous-Roasters/frontend/commit/086b3cfd079f2067ec358b2cceead3473aad206b))
+* **signup:** save aroma if taste finder data exists ([f504919](https://github.com/Famous-Roasters/frontend/commit/f504919d1226733c583223b6651a973d330913d3))
+
+
+### Features
+
+* **catalogue:** placeholder loader ([a07a2d2](https://github.com/Famous-Roasters/frontend/commit/a07a2d2f8754a89e0723e17db5cd30f40b79e6b4))
+* **profile:** last order data ([f2576c3](https://github.com/Famous-Roasters/frontend/commit/f2576c39af9e4639cfda80fadc303d046323d4ac))
+
 ## [1.42.2](https://github.com/Famous-Roasters/frontend/compare/v1.42.1...v1.42.2) (2022-08-13)
 
 
