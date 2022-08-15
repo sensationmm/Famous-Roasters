@@ -74,28 +74,6 @@ export const OrderMock = {
                   },
                   {
                     node: {
-                      id: 'gid://shopify/LineItem/12770405515530',
-                      title: 'Cycle Blend',
-                      image: {
-                        src: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/specialty-coffee-espresso-cycle-blend-cycle-roasters-lubeck_20copy.webp?v=1655307920',
-                      },
-                      quantity: 1,
-                      product: {
-                        id: 'gid://shopify/Product/7655228899544',
-                      },
-                      variant: {
-                        id: 'gid://shopify/ProductVariant/43655916421386',
-                        title: '250g / Ganze Bohne',
-                        price: '7.20',
-                        weight: 250.0,
-                        product: {
-                          id: 'gid://shopify/Product/7655228899544',
-                        },
-                      },
-                    },
-                  },
-                  {
-                    node: {
                       id: 'gid://shopify/LineItem/12766730879242',
                       title: 'Santiago',
                       image: {
