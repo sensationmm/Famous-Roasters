@@ -12,7 +12,6 @@ import {
   TypographySize,
   TypographyType,
 } from 'src/components'
-import useBreakpoint from 'src/hooks/useBreakpoint'
 
 interface CategoryListProps {
   locale: string
