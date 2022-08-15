@@ -23,7 +23,6 @@ export const CategoryList: React.FC<CategoryListProps> = () => {
   const { loading, error, data } = useQuery(GET_BLOG_CATEGORYLIST)
 
   if (error) {
-    console.log(error)
     return <ErrorPrompt promptAction={() => history.go(0)} />
   }
 
@@ -36,7 +35,6 @@ export const CategoryList: React.FC<CategoryListProps> = () => {
   }
 
   if (data) {
-    console.log(data)
     const noCategoryListFound = data.categoryList.length === 0
 
     if (noCategoryListFound) return <ErrorPrompt promptAction={() => history.go(0)} />
