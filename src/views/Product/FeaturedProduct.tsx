@@ -48,7 +48,7 @@ export const FeaturedProduct: React.FC = () => {
   useEffect(() => {
     if (
       tasteFinderDataJSON &&
-      JSON.parse(tasteFinderDataJSON).find((p: TasteFinderField) => p.name === 'aroma').length === 0 &&
+      JSON.parse(tasteFinderDataJSON).find((p: TasteFinderField) => p.name === 'aroma')?.length === 0 &&
       aroma?.value
     ) {
       const saveAroma = [...tasteFinderData, { name: 'aroma', value: aroma?.value }]
