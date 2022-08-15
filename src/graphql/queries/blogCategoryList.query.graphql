@@ -1,7 +1,0 @@
-query getAllCategories {
-  __type(name: "CategoryEnum") {
-    enumValues {
-      name
-    }
-  }
-}
