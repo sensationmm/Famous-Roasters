@@ -29,7 +29,7 @@ export type CoffeeAroma =
 
 interface MyAromaProps extends React.HTMLAttributes<HTMLElement> {
   aroma: CoffeeAroma
-  tasteProfileResults: TasteProfileProps
+  tasteProfileResults?: TasteProfileProps
   showInfo?: boolean
   isProfile?: boolean
   showGuide?: boolean
@@ -49,7 +49,7 @@ export const MyAroma: React.FC<MyAromaProps> = ({
   const { t } = useTranslation()
   const aromaKey = getAromaKey(aroma)
 
-  if (!aroma || !tasteProfileResults) {
+  if (!aroma) {
     return null
   }
 
@@ -112,7 +112,7 @@ export const MyAroma: React.FC<MyAromaProps> = ({
             </Typography>
           </div>
         )}
-        {showGuide && (
+        {showGuide && tasteProfileResults && (
           <Guide
             screenKey="tasteResults"
             listGuideItems={4}
