@@ -108,8 +108,10 @@ export const Profile: React.FC = () => {
         })
           .then((response) => response.json())
           .then((data) => {
+            console.log('data', data.orders.edges[0].node)
             setLastOrder(data.orders.edges[0].node)
           })
+          .catch(console.log)
       })
       .catch(() => {
         navigate('/login')
