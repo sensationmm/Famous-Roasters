@@ -39,6 +39,12 @@ export class AuthSignIn extends SignIn {
     }
   }
 
+  componentDidMount(): void {
+    if (this.props.authState === 'forgotPassword') {
+      this.changeState('signIn')
+    }
+  }
+
   signInUser = async (params: SignInParams): Promise<void> => {
     const client = famousRoastersClient()
     await Auth.signIn(params.email, params.password)
@@ -118,7 +124,6 @@ export class AuthSignIn extends SignIn {
       </div>
     )
   }
-
   render(): JSX.Element {
     return this.props.authState === 'signIn' || this.props.authState === 'signInError' ? (
       <div className="my-8 mx-6 md:my-12 md:mx-0">
