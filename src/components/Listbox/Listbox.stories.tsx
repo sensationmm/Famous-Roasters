@@ -16,7 +16,11 @@ const Template: ComponentStory<typeof Listbox> = (args) => (
 
 export const Default = Template.bind({})
 Default.args = {
-  items: [{ name: 'priceAsc' }, { name: 'priceDesc' }, { name: 'newDesc' }],
+  items: [
+    { name: 'priceAsc', value: 'priceAsc' },
+    { name: 'priceDesc', value: 'priceDesc' },
+    { name: 'newDesc', value: 'newDesc' },
+  ],
   translationPrefix: 'pages.catalogue.filters.sort',
   hasNoneItem: true,
 }

@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Tag, TagType, Typography, TypographySize, TypographyType } from 'src/components'
 import { formatPrice } from 'src/utils'
 import { ProductCustom } from 'src/views/Product'
+
+import { ProductTileLoaderImage } from './ProductTileLoader'
 
 interface ProductTileProps extends React.HTMLAttributes<HTMLElement> {
   productNode: ProductCustom
@@ -34,6 +36,7 @@ export const ProductTile: React.FC<ProductTileProps> = ({
     totalInventory,
   } = productNode
   const { t } = useTranslation()
+  const [imageLoaded, setImageLoaded] = useState(false)
 
   const getOuterContainerClasses = () => {
     const classNames: string[] = []
@@ -63,6 +66,7 @@ export const ProductTile: React.FC<ProductTileProps> = ({
 
   return (
     <div className={getOuterContainerClasses()}>
+      <img src={imgSrc} alt={title} className="hidden" onLoad={() => setImageLoaded(true)} />
       {showImage && (
         <div className="flex justify-center items-center shrink-0 self-center relative w-32 h-32">
           <div className="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32">
@@ -71,6 +75,11 @@ export const ProductTile: React.FC<ProductTileProps> = ({
               <Tag type={TagType.Decaf} value="Decaf" small={true} className="absolute top-2 left-0" />
             )}
           </div>
+        </div>
+      )}
+      {showImage && !imageLoaded && (
+        <div className="absolute">
+          <ProductTileLoaderImage />
         </div>
       )}
       <div className={getTextDataContainerClasses()}>

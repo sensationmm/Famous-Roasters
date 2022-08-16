@@ -171,6 +171,8 @@ export const Product: React.FC = () => {
       variantSelected.package_size &&
       (variantSelected.grind_type
         ? setPackageSizes(packageSizesValues(variantSelected.grind_type.value))
+        : variantSelected.equipmentvariant
+        ? setPackageSizes(packageSizesValues(undefined, variantSelected.equipmentvariant.value))
         : setPackageSizes(packageSizesValues()))
   }, [variantSelected])
 
@@ -208,7 +210,7 @@ export const Product: React.FC = () => {
     updatedSelected && setVariantSelected(updatedSelected)
   }
 
-  const updateVariantSelectedWithColor = (v: ListBoxItem[]) => {
+  const updateVariantSelectedWithEquipmentVariant = (v: ListBoxItem[]) => {
     const updatedSelected = variants && variants.nodes.find((x) => x.equipmentvariant?.value === v[0].name)
     updatedSelected && setVariantSelected(updatedSelected)
   }
@@ -218,17 +220,23 @@ export const Product: React.FC = () => {
     const availableGrindTypes =
       Array.from(new Set(variants.nodes.map((variant) => variant.grind_type?.value))).map((x) => ({
         name: x,
+        value: x,
       })) || []
     !packageSizes && setPackageSizes(packageSizesValues(availableGrindTypes[0].name))
     return availableGrindTypes
   }
 
-  const packageSizesValues = (grindType?: string) =>
+  const packageSizesValues = (grindType?: string, variantType?: string) =>
     Array.from(
       new Set(
         variants.nodes
           .filter((variant) => (grindType ? variant.grind_type?.value === grindType : true))
-          .map((variant) => ({ name: variant.package_size?.value, disabled: variant.availableForSale !== true })),
+          .filter((variant) => (variantType ? variant.equipmentvariant?.value === variantType : true))
+          .map((variant) => ({
+            name: variant.package_size?.value,
+            value: variant.package_size?.value,
+            disabled: variant.availableForSale !== true,
+          })),
       ) || [],
     ).map((x) => x) || []
 
@@ -237,6 +245,7 @@ export const Product: React.FC = () => {
       new Set(
         variants.nodes.map((variant) => ({
           name: variant.equipmentvariant?.value,
+          value: variant.equipmentvariant?.value,
           disabled: variant.availableForSale !== true,
         })),
       ) || [],
@@ -430,13 +439,18 @@ export const Product: React.FC = () => {
           {/* Transactional section */}
           <div className="pt-4">
             <div>
-              {variants && variants.nodes[0].grind_type && (
+              {variants && variants.nodes.length > 1 && variants.nodes[0].grind_type && grindTypeValues().length > 1 && (
                 <Listbox
                   items={grindTypeValues() as ListBoxItem[]}
                   hasTranslatedValues={false}
                   translationPrefix="pages.product.transactional.options.grindType"
                   multiple={false}
-                  value={[{ name: variantSelected?.grind_type?.value || '' }]}
+                  value={[
+                    {
+                      name: variantSelected?.grind_type?.value || '',
+                      value: variantSelected?.grind_type?.value || '',
+                    },
+                  ]}
                   onChange={(v) => v && updateVariantSelectedWithGrind(v)}
                   label={t('pages.product.transactional.options.grindType.label')}
                   addOn={<GrindsInfo />}
@@ -444,29 +458,42 @@ export const Product: React.FC = () => {
               )}
             </div>
             <div className="grid gap-6 grid-cols-2 mt-4">
-              {variants && variants.nodes[0].package_size && (
+              {variants && variants.nodes.length > 1 && variants.nodes[0].package_size && packageSizes.length > 1 && (
                 <Listbox
                   items={packageSizes}
                   hasTranslatedValues={false}
                   translationPrefix="pages.product.transactional.options.packageSize"
                   multiple={false}
-                  value={[{ name: variantSelected?.package_size?.value || '' }]}
+                  value={[
+                    {
+                      name: variantSelected?.package_size?.value || '',
+                      value: variantSelected?.package_size?.value || '',
+                    },
+                  ]}
                   onChange={(v) => v && updateVariantSelectedWithPackage(v)}
                   label={t('pages.product.transactional.options.packageSize.label')}
                   itemDisabledMsg={t('pages.product.transactional.outOfStock')}
                 />
               )}
-              {variants && variants.nodes[0].equipmentvariant && (
-                <Listbox
-                  items={variantValues() as ListBoxItem[]}
-                  hasTranslatedValues={false}
-                  translationPrefix="pages.product.transactional.options.equipmentvariant"
-                  multiple={false}
-                  value={[{ name: variantSelected?.equipmentvariant?.value || '' }]}
-                  onChange={(v) => v && updateVariantSelectedWithColor(v)}
-                  label={t('pages.product.transactional.options.equipmentvariant.label')}
-                />
-              )}
+              {variants &&
+                variants.nodes.length > 1 &&
+                variants.nodes[0].equipmentvariant &&
+                variantValues().length > 1 && (
+                  <Listbox
+                    items={variantValues() as ListBoxItem[]}
+                    hasTranslatedValues={false}
+                    translationPrefix="pages.product.transactional.options.equipmentvariant"
+                    multiple={false}
+                    value={[
+                      {
+                        name: variantSelected?.equipmentvariant?.value || '',
+                        value: variantSelected?.equipmentvariant?.value || '',
+                      },
+                    ]}
+                    onChange={(v) => v && updateVariantSelectedWithEquipmentVariant(v)}
+                    label={t('pages.product.transactional.options.equipmentvariant.label')}
+                  />
+                )}
               <div>
                 <QuantitySelect
                   min={1}

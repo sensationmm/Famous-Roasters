@@ -5,7 +5,11 @@ import { i18n } from 'src/config'
 
 import { Listbox, ListBoxItem } from '.'
 
-const items: ListBoxItem[] = [{ name: 'option1' }, { name: 'option2' }, { name: 'option3' }]
+const items: ListBoxItem[] = [
+  { name: 'option1', value: 'option1' },
+  { name: 'option2', value: 'option2' },
+  { name: 'option3', value: 'option3' },
+]
 
 global.alert = jest.fn()
 
@@ -36,7 +40,7 @@ describe('Listbox component', () => {
         <Listbox
           items={items}
           translationPrefix="pages.catalogue.filters.sort"
-          value={[{ name: 'option1' }]}
+          value={[{ name: 'option1', value: 'option1' }]}
           hasTranslatedValues={false}
         />
       </I18nextProvider>,
@@ -146,7 +150,7 @@ describe('Listbox component', () => {
           items={items}
           multiple={true}
           hasNoneItem={false}
-          value={[{ name: 'option1' }]}
+          value={[{ name: 'option1', value: 'option1' }]}
           hasTranslatedValues={false}
           onChange={(v) => alert(v)}
           translationPrefix="pages.catalogue.filters.sort"
@@ -177,7 +181,11 @@ describe('Listbox component', () => {
     const { container } = render(
       <I18nextProvider i18n={i18n}>
         <Listbox
-          items={[{ name: 'option1', disabled: true }, { name: 'option2' }, { name: 'option3' }]}
+          items={[
+            { name: 'option1', value: 'option1', disabled: true },
+            { name: 'option2', value: 'option2' },
+            { name: 'option3', value: 'option3' },
+          ]}
           translationPrefix="pages.catalogue.filters.sort"
         />
       </I18nextProvider>,
@@ -190,8 +198,12 @@ describe('Listbox component', () => {
     const { container } = render(
       <I18nextProvider i18n={i18n}>
         <Listbox
-          items={[{ name: 'option1', disabled: true }, { name: 'option2' }, { name: 'option3' }]}
-          value={[{ name: 'option1', disabled: true }]}
+          items={[
+            { name: 'option1', value: 'option1', disabled: true },
+            { name: 'option2', value: 'option2' },
+            { name: 'option3', value: 'option3' },
+          ]}
+          value={[{ name: 'option1', value: 'option1', disabled: true }]}
           translationPrefix="pages.catalogue.filters.sort"
         />
       </I18nextProvider>,

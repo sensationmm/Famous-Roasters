@@ -11,6 +11,11 @@ exports[`Find accessories partial view Renders correctly for a successful call 1
       <div
         class="flex pt-8 md:px-6"
       >
+        <img
+          alt="Espresso Raritäten Set"
+          class="hidden"
+          src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+        />
         <div
           class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
         >
@@ -30,6 +35,21 @@ exports[`Find accessories partial view Renders correctly for a successful call 1
               >
                 Decaf
               </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute"
+        >
+          <div
+            class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+          >
+            <div
+              class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+            >
+              <div
+                class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+              />
             </div>
           </div>
         </div>
@@ -81,6 +101,11 @@ exports[`Find accessories partial view Renders correctly for a successful call 1
       <div
         class="flex pt-8 md:px-6"
       >
+        <img
+          alt="Espresso Raritäten Set"
+          class="hidden"
+          src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+        />
         <div
           class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
         >
@@ -100,6 +125,21 @@ exports[`Find accessories partial view Renders correctly for a successful call 1
               >
                 Decaf
               </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute"
+        >
+          <div
+            class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+          >
+            <div
+              class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+            >
+              <div
+                class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+              />
             </div>
           </div>
         </div>
@@ -151,6 +191,11 @@ exports[`Find accessories partial view Renders correctly for a successful call 1
       <div
         class="flex pt-8 md:px-6"
       >
+        <img
+          alt="Espresso Raritäten Set"
+          class="hidden"
+          src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+        />
         <div
           class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
         >
@@ -170,6 +215,21 @@ exports[`Find accessories partial view Renders correctly for a successful call 1
               >
                 Decaf
               </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute"
+        >
+          <div
+            class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+          >
+            <div
+              class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+            >
+              <div
+                class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+              />
             </div>
           </div>
         </div>
@@ -221,6 +281,11 @@ exports[`Find accessories partial view Renders correctly for a successful call 1
       <div
         class="flex pt-8 md:px-6"
       >
+        <img
+          alt="Espresso Raritäten Set"
+          class="hidden"
+          src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+        />
         <div
           class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
         >
@@ -240,6 +305,21 @@ exports[`Find accessories partial view Renders correctly for a successful call 1
               >
                 Decaf
               </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute"
+        >
+          <div
+            class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+          >
+            <div
+              class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+            >
+              <div
+                class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+              />
             </div>
           </div>
         </div>
@@ -291,6 +371,11 @@ exports[`Find accessories partial view Renders correctly for a successful call 1
       <div
         class="flex pt-8 md:px-6"
       >
+        <img
+          alt="Espresso Raritäten Set"
+          class="hidden"
+          src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+        />
         <div
           class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
         >
@@ -310,6 +395,21 @@ exports[`Find accessories partial view Renders correctly for a successful call 1
               >
                 Decaf
               </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute"
+        >
+          <div
+            class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+          >
+            <div
+              class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+            >
+              <div
+                class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+              />
             </div>
           </div>
         </div>
@@ -361,6 +461,11 @@ exports[`Find accessories partial view Renders correctly for a successful call 1
       <div
         class="flex pt-8 md:px-6"
       >
+        <img
+          alt="Espresso Raritäten Set"
+          class="hidden"
+          src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+        />
         <div
           class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
         >
@@ -380,6 +485,21 @@ exports[`Find accessories partial view Renders correctly for a successful call 1
               >
                 Decaf
               </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute"
+        >
+          <div
+            class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+          >
+            <div
+              class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+            >
+              <div
+                class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+              />
             </div>
           </div>
         </div>
@@ -440,6 +560,11 @@ exports[`Find accessories partial view Renders correctly for a successful call n
       <div
         class="flex pt-8 md:px-6"
       >
+        <img
+          alt="Espresso Raritäten Set"
+          class="hidden"
+          src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+        />
         <div
           class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
         >
@@ -459,6 +584,21 @@ exports[`Find accessories partial view Renders correctly for a successful call n
               >
                 Decaf
               </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute"
+        >
+          <div
+            class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+          >
+            <div
+              class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+            >
+              <div
+                class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+              />
             </div>
           </div>
         </div>
@@ -510,6 +650,11 @@ exports[`Find accessories partial view Renders correctly for a successful call n
       <div
         class="flex pt-8 md:px-6"
       >
+        <img
+          alt="Espresso Raritäten Set"
+          class="hidden"
+          src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+        />
         <div
           class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
         >
@@ -529,6 +674,21 @@ exports[`Find accessories partial view Renders correctly for a successful call n
               >
                 Decaf
               </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute"
+        >
+          <div
+            class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+          >
+            <div
+              class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+            >
+              <div
+                class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+              />
             </div>
           </div>
         </div>
@@ -580,6 +740,11 @@ exports[`Find accessories partial view Renders correctly for a successful call n
       <div
         class="flex pt-8 md:px-6"
       >
+        <img
+          alt="Espresso Raritäten Set"
+          class="hidden"
+          src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+        />
         <div
           class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
         >
@@ -599,6 +764,21 @@ exports[`Find accessories partial view Renders correctly for a successful call n
               >
                 Decaf
               </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute"
+        >
+          <div
+            class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+          >
+            <div
+              class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+            >
+              <div
+                class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+              />
             </div>
           </div>
         </div>

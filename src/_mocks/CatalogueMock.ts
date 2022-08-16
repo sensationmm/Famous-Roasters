@@ -296,7 +296,6 @@ export const CatalogueMockAccessories = {
       after: null,
       sortKey: undefined,
       reverse: undefined,
-      filters: { productType: 'Accessories' },
     },
   },
   result: {
@@ -328,7 +327,6 @@ export const CatalogueMockAccessoriesYouMightLike = {
       after: null,
       sortKey: undefined,
       reverse: undefined,
-      filters: { productType: 'Accessories' },
     },
   },
   result: {
@@ -395,7 +393,7 @@ export const CatalogueMockFilter3 = {
       after: null,
       sortKey: undefined,
       reverse: undefined,
-      filters: [{ productMetafield: { namespace: 'my_fields', key: 'origin', value: 'Brasilien' } }],
+      filters: [{ productMetafield: { namespace: 'my_fields', key: 'origin', value: 'BR' } }],
     },
   },
 }
