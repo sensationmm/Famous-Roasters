@@ -1,3 +1,10 @@
+## [1.43.6](https://github.com/Famous-Roasters/frontend/compare/v1.43.5...v1.43.6) (2022-08-16)
+
+
+### Bug Fixes
+
+* **profile:** try correct data object ([223f9f8](https://github.com/Famous-Roasters/frontend/commit/223f9f87f7b689396fc0838d791e3e74591ab32c))
+
 ## [1.43.5](https://github.com/Famous-Roasters/frontend/compare/v1.43.4...v1.43.5) (2022-08-16)
 
 
