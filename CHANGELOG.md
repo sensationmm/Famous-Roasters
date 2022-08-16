@@ -1,3 +1,10 @@
+## [1.43.4](https://github.com/Famous-Roasters/frontend/compare/v1.43.3...v1.43.4) (2022-08-16)
+
+
+### Bug Fixes
+
+* **profile:** check why last order not loading ([7b8ca52](https://github.com/Famous-Roasters/frontend/commit/7b8ca529efaafb8109676cd291a51acab4aee5a4))
+
 ## [1.43.3](https://github.com/Famous-Roasters/frontend/compare/v1.43.2...v1.43.3) (2022-08-16)
 
 
