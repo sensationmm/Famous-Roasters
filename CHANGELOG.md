@@ -1,3 +1,10 @@
+## [1.43.2](https://github.com/Famous-Roasters/frontend/compare/v1.43.1...v1.43.2) (2022-08-16)
+
+
+### Bug Fixes
+
+* **auth:** forgot password back state ([#167](https://github.com/Famous-Roasters/frontend/issues/167)) ([a953b15](https://github.com/Famous-Roasters/frontend/commit/a953b15be26e001d5088d5667a8602a8904caddd))
+
 ## [1.43.1](https://github.com/Famous-Roasters/frontend/compare/v1.43.0...v1.43.1) (2022-08-16)
 
 
