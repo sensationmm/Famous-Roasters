@@ -107,9 +107,9 @@ export const Profile: React.FC = () => {
           },
         })
           .then((response) => response.json())
-          .then((data) => {
-            console.log('data', data)
-            setLastOrder(data.orders.edges[0].node)
+          .then((res) => {
+            console.log('data', res.data)
+            setLastOrder(res.data.orders.edges[0].node)
           })
           .catch(console.log)
       })
