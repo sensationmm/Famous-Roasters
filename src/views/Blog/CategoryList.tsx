@@ -14,13 +14,13 @@ import {
 } from 'src/components'
 
 interface CategoryListProps {
-  locale: string
+  locale?: string
 }
 
 export const CategoryList: React.FC<CategoryListProps> = () => {
-  const GET_BLOG_CATEGORYLIST = loader('src/graphql/queries/blogCategoryListDetails.query.graphql')
+  const GET_BLOG_CATEGORY_LIST = loader('src/graphql/queries/blogCategoryListDetails.query.graphql')
 
-  const { loading, error, data } = useQuery(GET_BLOG_CATEGORYLIST)
+  const { loading, error, data } = useQuery(GET_BLOG_CATEGORY_LIST)
 
   if (error) {
     return <ErrorPrompt promptAction={() => history.go(0)} />
