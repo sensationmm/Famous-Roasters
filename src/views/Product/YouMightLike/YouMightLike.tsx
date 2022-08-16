@@ -55,7 +55,6 @@ export const YouMightLike: React.FC<YouMightLikeProps> = ({ productId }: YouMigh
       after: null,
       sortKey: undefined,
       reverse: undefined,
-      filters: { productType: 'Accessories' },
     },
   })
 

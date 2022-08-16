@@ -5,6 +5,11 @@ exports[`Product Tile component Renders as expected for missing attributes 1`] =
   <div
     class="flex pt-8 md:px-6"
   >
+    <img
+      alt="Espresso Raritäten Set"
+      class="hidden"
+      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+    />
     <div
       class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
     >
@@ -16,6 +21,21 @@ exports[`Product Tile component Renders as expected for missing attributes 1`] =
           class="w-28 max-h-28"
           src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
         />
+      </div>
+    </div>
+    <div
+      class="absolute"
+    >
+      <div
+        class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+      >
+        <div
+          class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+        >
+          <div
+            class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+          />
+        </div>
       </div>
     </div>
     <div
@@ -64,6 +84,11 @@ exports[`Product Tile component Renders as expected for out of stock featured it
   <div
     class=""
   >
+    <img
+      alt="Espresso Raritäten Set"
+      class="hidden"
+      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+    />
     <div
       class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
     >
@@ -75,6 +100,21 @@ exports[`Product Tile component Renders as expected for out of stock featured it
           class="w-28 max-h-28"
           src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
         />
+      </div>
+    </div>
+    <div
+      class="absolute"
+    >
+      <div
+        class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+      >
+        <div
+          class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+        >
+          <div
+            class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+          />
+        </div>
       </div>
     </div>
     <div
@@ -132,6 +172,11 @@ exports[`Product Tile component Renders as expected for out of stock item 1`] = 
   <div
     class="flex pt-8 md:px-6"
   >
+    <img
+      alt="Espresso Raritäten Set"
+      class="hidden"
+      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+    />
     <div
       class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
     >
@@ -143,6 +188,21 @@ exports[`Product Tile component Renders as expected for out of stock item 1`] = 
           class="w-28 max-h-28"
           src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
         />
+      </div>
+    </div>
+    <div
+      class="absolute"
+    >
+      <div
+        class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+      >
+        <div
+          class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+        >
+          <div
+            class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+          />
+        </div>
       </div>
     </div>
     <div
@@ -200,6 +260,11 @@ exports[`Product Tile component Renders as expected with type category 1`] = `
   <div
     class=""
   >
+    <img
+      alt="Espresso Raritäten Set"
+      class="hidden"
+      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+    />
     <div
       class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
     >
@@ -211,6 +276,21 @@ exports[`Product Tile component Renders as expected with type category 1`] = `
           class="w-28 max-h-28"
           src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
         />
+      </div>
+    </div>
+    <div
+      class="absolute"
+    >
+      <div
+        class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+      >
+        <div
+          class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+        >
+          <div
+            class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+          />
+        </div>
       </div>
     </div>
     <div
@@ -266,6 +346,11 @@ exports[`Product Tile component Renders correctly 1`] = `
   <div
     class="flex pt-8 md:px-6"
   >
+    <img
+      alt="Espresso Raritäten Set"
+      class="hidden"
+      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+    />
     <div
       class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
     >
@@ -277,6 +362,21 @@ exports[`Product Tile component Renders correctly 1`] = `
           class="w-28 max-h-28"
           src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
         />
+      </div>
+    </div>
+    <div
+      class="absolute"
+    >
+      <div
+        class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+      >
+        <div
+          class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+        >
+          <div
+            class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+          />
+        </div>
       </div>
     </div>
     <div
@@ -329,6 +429,11 @@ exports[`Product Tile component Renders featured correctly 1`] = `
   <div
     class=""
   >
+    <img
+      alt="Espresso Raritäten Set"
+      class="hidden"
+      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+    />
     <div
       class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
     >
@@ -340,6 +445,21 @@ exports[`Product Tile component Renders featured correctly 1`] = `
           class="w-28 max-h-28"
           src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
         />
+      </div>
+    </div>
+    <div
+      class="absolute"
+    >
+      <div
+        class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+      >
+        <div
+          class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+        >
+          <div
+            class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+          />
+        </div>
       </div>
     </div>
     <div

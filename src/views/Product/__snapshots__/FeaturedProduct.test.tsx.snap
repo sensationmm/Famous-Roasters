@@ -328,6 +328,11 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <div
                 class="p-0"
               >
+                <img
+                  alt="Espresso Raritäten Set"
+                  class="hidden"
+                  src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+                />
                 <div
                   class="flex flex-col w-full justify-start"
                 >
@@ -942,6 +947,11 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <div
                 class="p-0"
               >
+                <img
+                  alt="Espresso Raritäten Set"
+                  class="hidden"
+                  src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+                />
                 <div
                   class="flex flex-col w-full justify-start"
                 >
@@ -1556,6 +1566,11 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <div
                 class="p-0"
               >
+                <img
+                  alt="Espresso Raritäten Set"
+                  class="hidden"
+                  src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+                />
                 <div
                   class="flex flex-col w-full justify-start"
                 >
@@ -2170,6 +2185,11 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <div
                 class="p-0"
               >
+                <img
+                  alt="Espresso Raritäten Set"
+                  class="hidden"
+                  src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+                />
                 <div
                   class="flex flex-col w-full justify-start"
                 >
@@ -2784,6 +2804,11 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <div
                 class="p-0"
               >
+                <img
+                  alt="Espresso Raritäten Set"
+                  class="hidden"
+                  src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+                />
                 <div
                   class="flex flex-col w-full justify-start"
                 >
@@ -3275,6 +3300,11 @@ exports[`Featured product view Renders correctly for a successful call without a
               <div
                 class="p-0"
               >
+                <img
+                  alt="Espresso Raritäten Set"
+                  class="hidden"
+                  src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+                />
                 <div
                   class="flex flex-col w-full justify-start"
                 >
@@ -3889,6 +3919,11 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
               <div
                 class="p-0"
               >
+                <img
+                  alt="Espresso Raritäten Set"
+                  class="hidden"
+                  src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+                />
                 <div
                   class="flex flex-col w-full justify-start"
                 >
@@ -4528,6 +4563,11 @@ exports[`Featured product view renders as expected if no taste finder data exist
               <div
                 class="p-0"
               >
+                <img
+                  alt="Espresso Raritäten Set"
+                  class="hidden"
+                  src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+                />
                 <div
                   class="flex flex-col w-full justify-start"
                 >

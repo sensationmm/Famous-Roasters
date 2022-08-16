@@ -76,13 +76,16 @@ interface QueryProductsVariables {
 const tabsData: TabsDataItem[] = [
   // disabled for now
   // { key: 'forYou', translationKey: 'pages.catalogue.tabs.forYou' },
-  { key: 'discover', translationKey: 'pages.catalogue.tabs.discover' },
-  // TODO: restore when accessories go live
-  // { key: 'coffee', translationKey: 'pages.catalogue.tabs.coffee' },
-  // { key: 'accessories', translationKey: 'pages.catalogue.tabs.accessories' },
+  // { key: 'discover', translationKey: 'pages.catalogue.tabs.discover' },
+  { key: 'coffee', translationKey: 'pages.catalogue.tabs.coffee' },
+  { key: 'accessories', translationKey: 'pages.catalogue.tabs.accessories' },
 ]
 
-const sortByItems: ListBoxItem[] = [{ name: 'priceAsc' }, { name: 'priceDesc' }, { name: 'newDesc' }]
+const sortByItems: ListBoxItem[] = [
+  { name: 'priceAsc', value: 'priceAsc' },
+  { name: 'priceDesc', value: 'priceDesc' },
+  { name: 'newDesc', value: 'newDesc' },
+]
 
 const totalItemsPerPage = 6
 
@@ -106,8 +109,7 @@ export type FilterResponse = {
 export const Catalogue: React.FC = () => {
   const { t } = useTranslation()
   const [searchParams, setSearchParams] = useSearchParams()
-  // TODO: remove bypass when accessories go live
-  const [activeTab, setActiveTab] = useState<string>(searchParams.get('isAccessory') ? 'accessories' : 'discover')
+  const [activeTab, setActiveTab] = useState<string>(searchParams.get('isAccessory') ? 'accessories' : 'coffee')
   const [sortValue, setSortValue] = useState<ListBoxItem[]>()
   const [sortParams, setSortParams] = useState<SortParams>()
   const [filters, setFilters] = useState<FilterData[]>([])
@@ -130,7 +132,7 @@ export const Catalogue: React.FC = () => {
     const origin = searchParams.get('origin')?.split('|')
     const packageSize = searchParams.get('packageSize')?.split('|')
     const aroma = searchParams.get('aroma')?.split('|')
-    return getFilterData(filterInput, coffeeType, decaf, beanType, vendor, origin, packageSize, aroma)
+    return getFilterData(filterInput, [], coffeeType, decaf, beanType, vendor, origin, packageSize, aroma)
   }
 
   const processFilterValues = (fData: FilterResponse, f: FilterData[]) => {
@@ -238,24 +240,22 @@ export const Catalogue: React.FC = () => {
 
   useEffect(() => {
     setPaginationParams(paginationParamsInitialValue)
-  }, [queryFilterParams, sortParams])
+  }, [queryFilterParams, sortParams, activeTab])
+
+  useEffect(() => {
+    setSearchParams([])
+    filterAttributesData && getFilterData(filterAttributesData)
+  }, [activeTab])
 
   const [getProducts, { error, data }] = useLazyQuery<CollectionQuery>(GET_PRODUCTS)
 
   const fetchProducts = useCallback(
     (queryVars: QueryProductsVariables) => {
-      const filters =
-        activeTab === 'accessories'
-          ? {
-              ...queryVars.filters,
-              productType: 'Accessories',
-            }
-          : queryVars.filters
+      if (activeTab === 'accessories') {
+        delete queryVars.filters
+      }
       getProducts({
-        variables: {
-          ...queryVars,
-          filters: filters,
-        },
+        variables: queryVars,
       }).catch((err) => {
         throw new Error('Error fetching catalogue', err)
       })
@@ -328,7 +328,8 @@ export const Catalogue: React.FC = () => {
         ...original,
         key: original?.key || '',
         isOpen: original?.isOpen || false,
-        filterValuesSelected: items?.map((x: { name: string }) => x.name).filter((fv) => fv != 'none') || [],
+        filterValuesSelected:
+          items?.map((x: { name: string; value: string }) => x.value).filter((fv) => fv != 'none') || [],
       }
       return [...rest, actual]
     }
@@ -337,7 +338,7 @@ export const Catalogue: React.FC = () => {
 
   const onUpdateFilterCheckbox = (value: boolean, key: string) => {
     const valueAsString = value.toString()
-    const items = valueAsString === 'true' ? [{ name: 'true' }] : []
+    const items = valueAsString === 'true' ? [{ name: 'true', value: 'true' }] : []
     onUpdateFiltersDesktop(items, key)
   }
 
@@ -349,12 +350,16 @@ export const Catalogue: React.FC = () => {
           filtersToShow?.filterValues
             ?.map((x) => ({
               name: hasTranslatedValues ? t(`pages.catalogue.filters.${key}.values.${x}`) : x,
+              value: x,
             }))
             .sort((a, b) => (key !== 'packageSize' ? (a.name > b.name ? 1 : -1) : 1)) || []
         }
         hasTranslatedValues={false}
         translationPrefix={`pages.catalogue.filters.${key}`}
-        value={filtersToShow?.filterValuesSelected?.map((fv) => ({ name: fv }))}
+        value={filtersToShow?.filterValuesSelected?.map((fv) => ({
+          name: hasTranslatedValues ? t(`pages.catalogue.filters.${key}.values.${fv}`) : fv,
+          value: fv,
+        }))}
         multiple={key !== 'coffeeType'}
         hasNoneItem={key === 'coffeeType' || key === 'accessoryType'}
         resetOnNoneClick={key === 'coffeeType' || key === 'accessoryType'}
@@ -515,7 +520,7 @@ export const Catalogue: React.FC = () => {
       return <ErrorPrompt promptAction={() => history.go(0)} />
     }
 
-    return activeTab === 'discover' ? renderDiscoverProducts() : renderAccessories()
+    return activeTab === 'coffee' ? renderDiscoverProducts() : renderAccessories()
   }
 
   return (
@@ -524,7 +529,7 @@ export const Catalogue: React.FC = () => {
         <div className="w-full max-w-7xl mx-auto px-6 xl:px-8">
           <TabsNavigation
             tabsData={tabsData}
-            initialActiveTabKey="discover"
+            initialActiveTabKey={searchParams.get('isAccessory') ? 'accessories' : 'coffee'}
             setParentActiveTab={(k: string) => setActiveTab(k)}
           />
           {renderContent()}

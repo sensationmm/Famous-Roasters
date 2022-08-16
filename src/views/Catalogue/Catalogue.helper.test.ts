@@ -8,6 +8,7 @@ describe('Catalogue helper', () => {
       expect(sortParamsToListBoxItem({ sortKey: 'PRICE' })).toEqual([
         {
           name: 'priceAsc',
+          value: 'priceAsc',
         },
       ])
     })
@@ -16,6 +17,7 @@ describe('Catalogue helper', () => {
       expect(sortParamsToListBoxItem({ sortKey: 'PRICE', reverse: true })).toEqual([
         {
           name: 'priceDesc',
+          value: 'priceDesc',
         },
       ])
     })
@@ -24,6 +26,7 @@ describe('Catalogue helper', () => {
       expect(sortParamsToListBoxItem({ sortKey: 'CREATED' })).toEqual([
         {
           name: 'newDesc',
+          value: 'newDesc',
         },
       ])
     })

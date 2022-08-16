@@ -188,12 +188,14 @@ export const sortParamsToListBoxItem = (sortParamsValue: SortParams): ListBoxIte
       return [
         {
           name: sortParamsValue.reverse ? 'priceDesc' : 'priceAsc',
+          value: sortParamsValue.reverse ? 'priceDesc' : 'priceAsc',
         },
       ]
     case 'CREATED':
       return [
         {
           name: 'newDesc',
+          value: 'newDesc',
         },
       ]
     default:

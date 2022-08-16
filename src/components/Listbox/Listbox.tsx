@@ -6,6 +6,7 @@ import { Typography, TypographySize, TypographyType } from 'src/components'
 
 export interface ListBoxItem {
   name: string
+  value: string
   disabled?: boolean
 }
 
@@ -43,7 +44,7 @@ export const Listbox: React.FC<ListboxProps> = ({
   itemDisabledMsg = 'Unavailable',
   ...props
 }: ListboxProps) => {
-  const noneItem: ListBoxItem = { name: 'none' }
+  const noneItem: ListBoxItem = { name: 'none', value: 'none' }
 
   const activeInitialValue = (): ListBoxItem[] => {
     if (resetOnNoneClick && value?.length === 0) return [noneItem]
@@ -70,14 +71,14 @@ export const Listbox: React.FC<ListboxProps> = ({
         ? t(`${translationPrefix}.label`) + ` (${appliedFiltersCount})`
         : t(`${translationPrefix}.label`)
     }
-    if (hasNoneItem && activeItems[0] && activeItems[0]?.name === noneItem.name) {
+    if (hasNoneItem && activeItems[0] && activeItems[0]?.value === noneItem.value) {
       return t(`${translationPrefix}.label`)
     }
     if (hasTranslatedValues && activeItems[0]) {
-      return t(`${translationPrefix}.values.${activeItems[0]?.name}`)
+      return t(`${translationPrefix}.values.${activeItems[0]?.value}`)
     }
     if (activeItems[0]) {
-      return activeItems[0].name
+      return activeItems[0].value
     }
     return t(`${translationPrefix}.label`)
   }
@@ -85,8 +86,8 @@ export const Listbox: React.FC<ListboxProps> = ({
   const onChangeHandler = (s: ListBoxItem | ListBoxItem[]) => {
     if (Array.isArray(s)) {
       const last = s[s.length - 1]
-      const isRemove = s.findIndex((x) => x.name === last.name) !== s.length - 1
-      const next = isRemove ? s.filter((x) => x.name !== last.name) : s
+      const isRemove = s.findIndex((x) => x.value === last.value) !== s.length - 1
+      const next = isRemove ? s.filter((x) => x.value !== last.value) : s
       setActiveItems(next)
       onChange && onChange(next)
     } else {
@@ -125,7 +126,7 @@ export const Listbox: React.FC<ListboxProps> = ({
     }
 
     const classNames = ['block', 'truncate']
-    if (items.find((i) => i.name === activeItems[0]?.name)?.disabled) {
+    if (items.find((i) => i.value === activeItems[0]?.value)?.disabled) {
       classNames.push('text-brand-grey-bombay')
     }
 
@@ -190,7 +191,7 @@ export const Listbox: React.FC<ListboxProps> = ({
                       {({ selected }) => {
                         const isSelected =
                           selected ||
-                          activeItems?.find((activeItem) => activeItem.name === option.name && !option.disabled)
+                          activeItems?.find((activeItem) => activeItem.value === option.value && !option.disabled)
 
                         return (
                           <>
@@ -217,7 +218,7 @@ export const Listbox: React.FC<ListboxProps> = ({
                         )
                       }}
                     </HUIListbox.Option>
-                    {hasSpacerAfterItem && hasSpacerAfterItem.indexOf(option.name) !== -1 && (
+                    {hasSpacerAfterItem && hasSpacerAfterItem.indexOf(option.value) !== -1 && (
                       <li className="select-none relative py-2 pl-8 pr-4 bg-transparent">--</li>
                     )}
                   </div>
