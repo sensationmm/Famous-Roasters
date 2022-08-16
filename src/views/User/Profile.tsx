@@ -108,7 +108,7 @@ export const Profile: React.FC = () => {
         })
           .then((response) => response.json())
           .then((data) => {
-            console.log('data', data.orders.edges[0].node)
+            console.log('data', data)
             setLastOrder(data.orders.edges[0].node)
           })
           .catch(console.log)
@@ -157,12 +157,6 @@ export const Profile: React.FC = () => {
                 <div className="flex items-center justify-center pt-6 mt-6 border-t border-brand-grey-bombay md:pt-0 md:mt-0 md:border-0">
                   <MyAroma
                     aroma={userProfile.aroma}
-                    tasteProfileResults={{
-                      sweetness: userProfile?.tasteFinderProfile.sweetness,
-                      acidity: userProfile?.tasteFinderProfile.acidity,
-                      bitterness: userProfile?.tasteFinderProfile.bitterness,
-                      body: userProfile?.tasteFinderProfile.body,
-                    }}
                     name={t('pages.featuredProduct.yourCoffeeType.my')}
                     headingAs="h2"
                     isProfile
