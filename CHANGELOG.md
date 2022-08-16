@@ -1,3 +1,10 @@
+## [1.43.3](https://github.com/Famous-Roasters/frontend/compare/v1.43.2...v1.43.3) (2022-08-16)
+
+
+### Bug Fixes
+
+* **catalogue:** action product amends ([d36b682](https://github.com/Famous-Roasters/frontend/commit/d36b682980b5e783a5ef7db5b70f0c7f9df9ec1c))
+
 ## [1.43.2](https://github.com/Famous-Roasters/frontend/compare/v1.43.1...v1.43.2) (2022-08-16)
 
 
