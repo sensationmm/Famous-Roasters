@@ -1,3 +1,11 @@
+## [1.43.5](https://github.com/Famous-Roasters/frontend/compare/v1.43.4...v1.43.5) (2022-08-16)
+
+
+### Bug Fixes
+
+* **profile:** aroma bug ([34239e1](https://github.com/Famous-Roasters/frontend/commit/34239e1bb7e7c65a57aa7227fb2ce5a8c8ed3ae9))
+* **profile:** data object ([8ff8587](https://github.com/Famous-Roasters/frontend/commit/8ff8587d272ce902b1e12122f9248b02a060adf6))
+
 ## [1.43.4](https://github.com/Famous-Roasters/frontend/compare/v1.43.3...v1.43.4) (2022-08-16)
 
 
