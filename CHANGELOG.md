@@ -1,3 +1,10 @@
+## [1.43.1](https://github.com/Famous-Roasters/frontend/compare/v1.43.0...v1.43.1) (2022-08-16)
+
+
+### Bug Fixes
+
+* **ci:** add REACT_APP_FAMOUS_ROASTERS_ORDERS_ENDPOINT env var for staging + production ([0ba9761](https://github.com/Famous-Roasters/frontend/commit/0ba976143af50bb0cacb48ba66ddc6d3259b082f))
+
 # [1.43.0](https://github.com/Famous-Roasters/frontend/compare/v1.42.2...v1.43.0) (2022-08-15)
 
 
