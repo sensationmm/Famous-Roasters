@@ -520,6 +520,9 @@ exports[`Blog Category List View Renders correctly when results found 1`] = `
               <span
                 class="text-sm leading-5"
               >
+                von 
+                60beans user 2
+                 · 
                 3
                  min reading time
               </span>
@@ -574,6 +577,9 @@ exports[`Blog Category List View Renders correctly when results found 1`] = `
               <span
                 class="text-sm leading-5"
               >
+                von 
+                60beans user 1
+                 · 
                 3
                  min reading time
               </span>
@@ -628,6 +634,9 @@ exports[`Blog Category List View Renders correctly when results found 1`] = `
               <span
                 class="text-sm leading-5"
               >
+                von 
+                60beans user 1
+                 · 
                 3
                  min reading time
               </span>

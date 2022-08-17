@@ -12,6 +12,9 @@ query getBlogListByCategory($category: CategoryEnum) {
     thumbnail {
       url
     }
+    updatedBy {
+      name
+    }
     tags
   }
   category(where: { name: $category }) {

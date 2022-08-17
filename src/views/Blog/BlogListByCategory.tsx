@@ -77,6 +77,7 @@ export const BlogListByCategory: React.FC<CategoryListProps> = () => {
                 content: { text: string }
                 slug: string
                 thumbnail: { url: string }
+                updatedBy: { name: string }
               }) => {
                 return (
                   <div key={blog.title} className="py-6 border-b border-coreUI-border w-full">
@@ -109,7 +110,7 @@ export const BlogListByCategory: React.FC<CategoryListProps> = () => {
                       <div className="flex flex-col text-coreUI-text-tertiary mb-6">
                         {blog.postType === 'article' && (
                           <Typography size={TypographySize.Small} type={TypographyType.Paragraph}>
-                            {readTimeCalculator(blog.content.text)} min reading time
+                            von {blog.updatedBy.name} &middot; {readTimeCalculator(blog.content.text)} min reading time
                           </Typography>
                         )}
                       </div>

@@ -24,6 +24,9 @@ export const BlogListByCategoryMock = {
             __typename: 'Asset',
             url: 'https://media.graphassets.com/q6XrYJTlQVapNl047XNr',
           },
+          updatedBy: {
+            name: '60beans user 2',
+          },
           tags: ['Text'],
         },
         {
@@ -39,6 +42,9 @@ export const BlogListByCategoryMock = {
           thumbnail: {
             __typename: 'Asset',
             url: 'https://media.graphassets.com/aihzocmnSumexnThr6JE',
+          },
+          updatedBy: {
+            name: '60beans user 1',
           },
           tags: [],
         },
@@ -56,6 +62,9 @@ export const BlogListByCategoryMock = {
             __typename: 'Asset',
             url: 'https://media.graphassets.com/l3bWMvc8RSuRTeBei0z8',
           },
+          updatedBy: {
+            name: '60beans user 1',
+          },
           tags: [],
         },
         {
@@ -71,6 +80,9 @@ export const BlogListByCategoryMock = {
           thumbnail: {
             __typename: 'Asset',
             url: 'https://media.graphassets.com/l3bWMvc8RSuRTeBei0z8',
+          },
+          updatedBy: {
+            name: '60beans',
           },
           tags: ['ColdDrip', 'Aeropress', 'Siebtraeger', 'SpecialityCoffee'],
         },
