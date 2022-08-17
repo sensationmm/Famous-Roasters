@@ -19,10 +19,10 @@ interface BlogProps {
 }
 
 export const Blog: React.FC<BlogProps> = ({ locale }) => {
-  const { slug } = useParams()
+  const { category, slug } = useParams()
   const GET_BLOG = loader('src/graphql/queries/blog.query.graphql')
 
-  const blogCategory = locale === 'de_de' ? 'Kaffeewissen' : 'Coffee knowledge' // HACK: temporarily hardcoded this to get the category until we have something in the CMS schema
+  // const blogCategory = locale === 'de_de' ? 'Kaffeewissen' : 'Coffee knowledge' // HACK: temporarily hardcoded this to get the category until we have something in the CMS schema
 
   const { loading, error, data } = useQuery(GET_BLOG, {
     variables: {
@@ -73,7 +73,8 @@ export const Blog: React.FC<BlogProps> = ({ locale }) => {
                     {data?.brewingMethods[0]?.createdBy.name}
                   </Typography>
                   <Typography size={TypographySize.Small} type={TypographyType.Paragraph}>
-                    {blogCategory} &middot; {readTimeCalculator(data.brewingMethods[0].content.text)} min read
+                    <span className="capitalize">{category}</span> &middot;{' '}
+                    {readTimeCalculator(data.brewingMethods[0].content.text)} min read
                   </Typography>
                 </div>
               </div>
