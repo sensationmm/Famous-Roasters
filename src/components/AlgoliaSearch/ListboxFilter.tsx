@@ -6,6 +6,11 @@ import { useTranslation } from 'react-i18next'
 import { useRefinementList, UseRefinementListProps } from 'react-instantsearch-hooks-web'
 import { Typography, TypographySize } from 'src/components'
 
+function getDifference<T>(arr1: Array<T>, arr2: Array<T>) {
+  const added = arr1.filter((item) => !arr2.includes(item))
+  const removed = arr2.filter((item) => !arr1.includes(item))
+  return added.length > 0 ? added[0] : removed[0]
+}
 interface ListboxFilterProps extends UseRefinementListProps {
   translationPrefix?: string
 }
@@ -38,12 +43,6 @@ const ListboxFilter = (props: ListboxFilterProps) => {
         {renderIcon()}
       </HUIListbox.Button>
     )
-  }
-
-  const getDifference = (arr1: any[], arr2: any[]) => {
-    const added = arr1.filter((item) => !arr2.includes(item))
-    const removed = arr2.filter((item) => !arr1.includes(item))
-    return added.length > 0 ? added[0] : removed[0]
   }
 
   const onChangeHandler = (newItems: RefinementListItem[]) => {
