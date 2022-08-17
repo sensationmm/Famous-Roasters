@@ -19,10 +19,10 @@ interface CategoryListProps {
   locale?: string
 }
 
-export const BlogListByCategory: React.FC<CategoryListProps> = ({ locale = 'de_de' }) => {
+export const BlogListByCategory: React.FC<CategoryListProps> = () => {
   const { category } = useParams()
   const { t } = useTranslation()
-  const GET_BLOG_BY_CATEGORY_LIST = loader('src/graphql/queries/blogByCategoryList.query.graphql')
+  const GET_BLOG_BY_CATEGORY_LIST = loader('src/graphql/queries/blogListByCategory.query.graphql')
 
   const { loading, error, data } = useQuery(GET_BLOG_BY_CATEGORY_LIST, {
     variables: {
@@ -40,14 +40,6 @@ export const BlogListByCategory: React.FC<CategoryListProps> = ({ locale = 'de_d
         <Loader />
       </div>
     )
-  }
-
-  if (data) {
-    console.log(data)
-
-    const noBlogsFound = data.brewingMethods.length === 0
-
-    // if (noBlogsFound) return <ErrorPrompt promptAction={() => history.go(0)} />
   }
 
   return (

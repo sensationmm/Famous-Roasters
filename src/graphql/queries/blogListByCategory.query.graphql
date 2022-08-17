@@ -1,4 +1,4 @@
-query getBlogByCategory($category: CategoryEnum) {
+query getBlogListByCategory($category: CategoryEnum) {
   brewingMethods(where: { category: $category }) {
     title
     postType
