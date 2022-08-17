@@ -124,11 +124,9 @@ export const Product: React.FC = () => {
     }
   }, [])
 
-  if (!id) return null
-
   const { loading, error, data } = useQuery<ProductQuery>(GET_PRODUCT, {
     variables: {
-      id: getAPIProductId(id),
+      id: getAPIProductId(id || ''),
     },
   })
 
@@ -567,9 +565,9 @@ export const Product: React.FC = () => {
         case 'meetTheRoaster':
           return vendor_description?.value && vendor_image?.value ? renderProductBlockContentMeetTheRoaster() : null
         case 'findSimilar':
-          return aroma ? <FindSimilar aroma={aroma.value} productId={id} /> : null
+          return aroma ? <FindSimilar aroma={aroma.value} productId={id as string} /> : null
         case 'youMightLike':
-          return <YouMightLike productId={id} />
+          return <YouMightLike productId={id as string} />
         case 'aboutProduct':
           return extraDescription?.value
         default:
@@ -608,7 +606,7 @@ export const Product: React.FC = () => {
       <main className="flex flex-col w-full items-start justify-center bg-white mt-4 mb-4">
         <div className="w-full max-w-7xl mx-auto px-6 xl:px-8">{renderProductMainBlock()}</div>
         {renderMobileStickyCTABlock()}
-        <div className="w-full max-w-7xl mx-auto px-6 xl:px-8">{renderProductCollapsableBlocks()}</div>
+        <div className="w-full max-w-7xl mx-auto px-6 xl:px-8">{id && renderProductCollapsableBlocks()}</div>
       </main>
     </Layout>
   )

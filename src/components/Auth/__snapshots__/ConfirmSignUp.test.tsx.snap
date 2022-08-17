@@ -94,7 +94,7 @@ exports[`ConfirmSignUp custom auth component Renders correctly 1`] = `
         class="w-full mt-8"
       >
         <button
-          class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-md font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+          class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-md font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary pointer-events-none opacity-70"
           data-testid="submit"
           disabled=""
           role="button"
@@ -274,7 +274,7 @@ exports[`ConfirmSignUp custom auth component The new registration code request w
         class="w-full mt-8"
       >
         <button
-          class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-md font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+          class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-md font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary pointer-events-none opacity-70"
           data-testid="submit"
           disabled=""
           role="button"

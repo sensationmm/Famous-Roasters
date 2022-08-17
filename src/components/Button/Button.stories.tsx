@@ -15,6 +15,7 @@ Default.args = {
   emphasis: Emphasis.Primary,
   children: 'Button',
   hasArrow: false,
+  disabled: false,
 }
 
 export const Primary = Template.bind({})
@@ -22,6 +23,7 @@ Primary.args = {
   emphasis: Emphasis.Primary,
   children: 'Button',
   hasArrow: false,
+  disabled: false,
 }
 
 export const Secondary = Template.bind({})
@@ -29,6 +31,7 @@ Secondary.args = {
   emphasis: Emphasis.Secondary,
   children: 'Button',
   hasArrow: false,
+  disabled: false,
 }
 
 export const Tertiary = Template.bind({})
@@ -37,4 +40,5 @@ Tertiary.args = {
   children: 'Button',
   hasArrow: false,
   center: false,
+  disabled: false,
 }

@@ -3,7 +3,7 @@
 exports[`Circle component Renders correctly 1`] = `
 <div>
   <div
-    class="inline-flex rounded-full w-6 h-6 md:w-8 md:h-8 xl:w-12 xl:h-12 bg-brand-grey-bombay"
+    class="inline-flex rounded-full w-6 h-6 bg-brand-grey-bombay"
   />
 </div>
 `;

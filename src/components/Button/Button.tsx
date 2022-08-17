@@ -22,6 +22,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   hasArrow?: boolean
   center?: boolean
   arrowOverride?: IconName
+  disabled?: boolean
 }
 
 const getButtonClassNames = (
@@ -29,6 +30,7 @@ const getButtonClassNames = (
   size: Size,
   hasArrow: boolean,
   center: boolean,
+  disabled: boolean,
 ): Record<string, string> => {
   const classNames: string[] = ['relative', 'inline-flex', 'flex-row', 'items-center', 'rounded-full', 'border-2']
   if (center) {
@@ -105,6 +107,11 @@ const getButtonClassNames = (
       arrow.push('fill-brand-black', 'text-brand-black', 'stroke-brand-black')
       break
   }
+  if (disabled) {
+    classNames.push('pointer-events-none', 'opacity-70')
+    icon.push('pointer-events-none')
+    arrow.push('pointer-events-none')
+  }
   return { button: classNames.join(' '), icon: icon.join(' '), arrow: arrow.join(' ') }
 }
 
@@ -117,11 +124,17 @@ export const Button: React.FC<ButtonProps> = ({
   children,
   className,
   arrowOverride,
+  disabled = false,
   ...props
 }: ButtonProps) => {
-  const classes = getButtonClassNames(emphasis, size, hasArrow, center)
+  const classes = getButtonClassNames(emphasis, size, hasArrow, center, disabled)
   return (
-    <button className={className ? `${className} ${classes.button}` : classes.button} {...props} role="button">
+    <button
+      className={className ? `${className} ${classes.button}` : classes.button}
+      {...props}
+      disabled={disabled}
+      role="button"
+    >
       {icon && (
         <Icon
           name={icon}
