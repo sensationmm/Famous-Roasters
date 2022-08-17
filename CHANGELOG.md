@@ -1,3 +1,12 @@
+# [1.44.0](https://github.com/Famous-Roasters/frontend/compare/v1.43.6...v1.44.0) (2022-08-17)
+
+
+### Features
+
+* **blog:** add category list view and route ([fa8cbba](https://github.com/Famous-Roasters/frontend/commit/fa8cbba2b2172d984b7aa0e8f9980cb0e1c02d52))
+* **blog:** add the query to get all Categories ([6535876](https://github.com/Famous-Roasters/frontend/commit/65358767341940a7857e02d9b1f9090aa1d3823b))
+* **blog:** create a category list page ([f7387d4](https://github.com/Famous-Roasters/frontend/commit/f7387d4d5f47941da8808929505920c9071be9ad))
+
 ## [1.43.6](https://github.com/Famous-Roasters/frontend/compare/v1.43.5...v1.43.6) (2022-08-16)
 
 
