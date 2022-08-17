@@ -43,26 +43,25 @@ const Search: React.FC = () => {
 
           {/* Filters desktop */}
           <div className="hidden md:flex gap-x-4">
-            <ListboxFilter attribute="meta.my_fields.coffee_type" sortBy={['name:asc']} />
-            <ListboxFilter attribute="meta.my_fields.aroma" sortBy={['name:asc']} />
-            <ListboxFilter attribute="meta.my_fields.bean_type" sortBy={['name:asc']} />
+            <ListboxFilter attribute="meta.my_fields.coffee_type" />
+            <ListboxFilter attribute="meta.my_fields.aroma" />
+            <ListboxFilter attribute="meta.my_fields.bean_type" />
             <ListboxFilter
               attribute="meta.my_fields.origin"
-              sortBy={['name:asc']}
               translationPrefix="pages.catalogue.filters.origin.values"
             />
-            <ListboxFilter attribute="vendor" sortBy={['name:asc']} />
+            <ListboxFilter attribute="vendor" />
           </div>
 
           {/* Filters mobile */}
           <div className="w-1/2 md:hidden">
             <FiltersMenuMobile
-              attributes={[
-                'meta.my_fields.coffee_type',
-                'meta.my_fields.aroma',
-                'meta.my_fields.bean_type',
-                'meta.my_fields.origin',
-                'vendor',
+              filters={[
+                { attribute: 'meta.my_fields.coffee_type' },
+                { attribute: 'meta.my_fields.aroma' },
+                { attribute: 'meta.my_fields.bean_type' },
+                { attribute: 'meta.my_fields.origin', translationPrefix: 'pages.catalogue.filters.origin.values' },
+                { attribute: 'vendor' },
               ]}
             />
           </div>

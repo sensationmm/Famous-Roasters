@@ -16,7 +16,7 @@ interface ListboxFilterProps extends UseRefinementListProps {
 }
 
 const ListboxFilter = (props: ListboxFilterProps) => {
-  const { items, refine } = useRefinementList(props)
+  const { items, refine } = useRefinementList({ sortBy: ['name:asc'], ...props })
   const { t } = useTranslation()
   const { attribute, translationPrefix } = props
   const activeItems = items.filter((item) => item.isRefined)

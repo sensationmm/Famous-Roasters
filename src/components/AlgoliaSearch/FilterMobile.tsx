@@ -16,29 +16,28 @@ import {
   TypographyType,
 } from 'src/components'
 
-export interface FilterData {
-  key: string
-  isOpen: boolean
-  filterType?: 'enum'
-  filterValues?: string[]
-  filterValuesSelected?: string[]
-  i18nValues?: boolean
-}
-
 interface FilterMobileProps {
   attribute: string
+  translationPrefix?: string
   show: boolean
   back: () => void
 }
 
-export const FilterMobile: React.FC<FilterMobileProps> = ({ attribute, show, back }: FilterMobileProps) => {
+export const FilterMobile: React.FC<FilterMobileProps> = ({
+  attribute,
+  translationPrefix,
+  show,
+  back,
+}: FilterMobileProps) => {
   const { t } = useTranslation()
   const { items, refine } = useRefinementList({ attribute, sortBy: ['name:asc'] })
   const { refine: clearRefinements } = useClearRefinements({ includedAttributes: [attribute] })
   const selectedItems = items.filter((item) => item.isRefined)
 
   const renderItem = (value: string, flex: boolean) => (
-    <Typography className={flex ? 'inline-flex' : ''}>{value}</Typography>
+    <Typography className={flex ? 'inline-flex' : ''}>
+      {translationPrefix ? t(`${translationPrefix}.${value}`) : value}
+    </Typography>
   )
 
   return (
@@ -106,7 +105,7 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({ attribute, show, bac
                       <span className="inline-flex items-center">
                         <CheckIcon className="w-5 h-5 mr-2 text-brand-green-club" aria-hidden="true" />
                         {attribute !== 'meta.my_fields.aroma' ? (
-                          renderItem(item.label, false)
+                          renderItem(item.value, false)
                         ) : (
                           <Tag data-testid="filter-selected-tag" type={TagType.Aroma} value={item.value} />
                         )}
@@ -116,7 +115,7 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({ attribute, show, bac
                         {attribute === 'meta.my_fields.aroma' && (
                           <TagSwatch data-testid="filter-option-tagSwatch" type={TagType.Aroma} value={item.value} />
                         )}
-                        {renderItem(item.label, true)}
+                        {renderItem(item.value, true)}
                       </span>
                     )}
                   </div>

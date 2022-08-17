@@ -9,10 +9,13 @@ import { Button, ButtonEmphasis, ButtonSize, Typography, TypographySize, Typogra
 import { FilterMobile } from './FilterMobile'
 
 interface FiltersMenuMobileProps {
-  attributes: string[]
+  filters: Array<{
+    attribute: string
+    translationPrefix?: string
+  }>
 }
 
-export const FiltersMenuMobile: React.FC<FiltersMenuMobileProps> = ({ attributes }: FiltersMenuMobileProps) => {
+export const FiltersMenuMobile: React.FC<FiltersMenuMobileProps> = ({ filters }: FiltersMenuMobileProps) => {
   const [open, setOpen] = useState(false)
   const { t } = useTranslation()
   const { items } = useCurrentRefinements()
@@ -32,8 +35,13 @@ export const FiltersMenuMobile: React.FC<FiltersMenuMobileProps> = ({ attributes
     <>
       <Transition.Root show={open} unmount={false} as={Fragment}>
         <Dialog as="div" className="fixed inset-0 flex z-40" onClose={setOpen} unmount={false}>
-          {attributes.map((attribute) => (
-            <FilterMobile attribute={attribute} show={attribute === currentFilter} back={() => closeFilter()} />
+          {filters.map(({ attribute, translationPrefix }) => (
+            <FilterMobile
+              attribute={attribute}
+              translationPrefix={translationPrefix}
+              show={attribute === currentFilter}
+              back={() => closeFilter()}
+            />
           ))}
           <Transition.Child
             as={Fragment}
@@ -87,7 +95,7 @@ export const FiltersMenuMobile: React.FC<FiltersMenuMobileProps> = ({ attributes
               </div>
 
               <div className="border-t border-coreUI-text-tertiary overflow-auto grow">
-                {attributes.map((attribute) => {
+                {filters.map(({ attribute }) => {
                   const filter = items.find((item) => item.attribute === attribute)
                   return (
                     <div
