@@ -128,7 +128,7 @@ export const BlogListByCategory: React.FC<CategoryListProps> = () => {
               },
             )
           ) : (
-            <Typography as="p" size={TypographySize.Base} type={TypographyType.Paragraph}>
+            <Typography as="p" size={TypographySize.Base} type={TypographyType.Paragraph} className="my-6 md:my-0">
               {t('pages.blog.noPostsFound')}
             </Typography>
           )}
