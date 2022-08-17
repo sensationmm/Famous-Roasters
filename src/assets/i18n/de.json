@@ -430,6 +430,9 @@
       "title": "Warenkorb"
     },
     "catalogue": {
+      "search": {
+        "placeholder": "Finde deine Kaffees oder Röster"
+      },
       "filters": {
         "meta": {
           "my_fields": {

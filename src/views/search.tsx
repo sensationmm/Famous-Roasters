@@ -171,9 +171,9 @@ const ListboxFilter = (props: ListboxFilterProps) => {
   const renderButton = (open: boolean) => {
     const renderIcon = () => {
       if (open) {
-        return <ChevronUpIcon className="-mr-1 ml-2 h-6 w-6" aria-hidden="true" />
+        return <ChevronUpIcon className="-mr-1 ml-2 mt-1 h-4 w-4" aria-hidden="true" />
       }
-      return <ChevronDownIcon className="-mr-1 ml-2 h-6 w-6" aria-hidden="true" />
+      return <ChevronDownIcon className="-mr-1 ml-2 mt-1 h-4 w-4" aria-hidden="true" />
     }
 
     const classNames = ['block', 'truncate']
@@ -291,6 +291,7 @@ const MyPagination = (props: UsePaginationProps) => {
 }
 
 const Search: React.FC = () => {
+  const { t } = useTranslation()
   return (
     <InstantSearch indexName="products" searchClient={searchClient} routing={true}>
       <Configure
@@ -299,11 +300,11 @@ const Search: React.FC = () => {
         facetFilters={['product_type:-Accessories', 'product_type:-Equipment']}
       />
 
-      <div className="flex flex-row justify-end my-4">
+      <div className="flex flex-row justify-end my-3">
         <SearchBox
-          placeholder="Search"
+          placeholder={t('pages.catalogue.search.placeholder')}
           classNames={{
-            input: 'rounded-full border-2 border-gray-50 px-4 py-1',
+            input: 'rounded-full border border-coreUI-text-tertiary px-4 py-2 w-96',
             submitIcon: '-ml-6',
             resetIcon: 'hidden',
             reset: 'hidden',
@@ -313,7 +314,7 @@ const Search: React.FC = () => {
 
       <div>
         <div className="flex flex-row justify-end space-between space-x-4">
-          <div className="flex flex-row justify-start my-4">
+          <div className="my-3 w-full">
             <CheckboxFilter attribute="meta.my_fields.decaf" />
           </div>
 
@@ -351,7 +352,7 @@ const Search: React.FC = () => {
           { label: 'Neue zuerst', value: 'products_updated_at_desc' },
         ]}
         classNames={{
-          root: 'flex flex-row justify-end',
+          root: 'flex flex-row justify-end mt-1',
           select: 'rounded-full border border-coreUI-text-tertiary px-4 py-2 bg-white ',
         }}
       />
