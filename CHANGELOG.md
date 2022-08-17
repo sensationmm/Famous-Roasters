@@ -1,3 +1,10 @@
+# [1.45.0](https://github.com/Famous-Roasters/frontend/compare/v1.44.0...v1.45.0) (2022-08-17)
+
+
+### Features
+
+* **profile:** final last order ([fbc6182](https://github.com/Famous-Roasters/frontend/commit/fbc61821cf9ba6d22f7209dc14cf3dc32e3e415c))
+
 # [1.44.0](https://github.com/Famous-Roasters/frontend/compare/v1.43.6...v1.44.0) (2022-08-17)
 
 
