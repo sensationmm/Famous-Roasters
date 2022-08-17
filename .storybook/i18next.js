@@ -1,7 +1,7 @@
 import {initReactI18next} from 'react-i18next';
 import i18n from 'i18next';
 
-const ns = ['common'];
+const ns = ['translation'];
 const supportedLngs = ['de'];
 
 i18n.use(initReactI18next)
@@ -9,14 +9,14 @@ i18n.use(initReactI18next)
         //debug: true,
         lng: 'de',
         fallbackLng: 'de',
+        ns,
+        defaultNS: 'translation',
         interpolation: {
             escapeValue: false,
         },
         react: {
           useSuspense: false,
         },
-        defaultNS: 'common',
-        ns,
         supportedLngs,
     });
 
