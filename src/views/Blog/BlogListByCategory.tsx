@@ -41,7 +41,6 @@ export const BlogListByCategory: React.FC<CategoryListProps> = () => {
       </div>
     )
   }
-
   return (
     <Layout navigationTheme={NavigationTheme.Home}>
       <div className="flex-grow flex w-full flex-col">
