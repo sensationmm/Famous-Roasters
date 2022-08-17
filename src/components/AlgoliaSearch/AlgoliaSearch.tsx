@@ -83,7 +83,7 @@ const Search: React.FC = () => {
 
       <Hits
         hitComponent={Hit}
-        classNames={{ root: 'mb-8', list: 'grid gap-2 grid-cols-3 md:grid-cols-2 xl:grid-cols-3' }}
+        classNames={{ root: 'mb-8', list: 'grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3' }}
       />
       <Pagination />
     </InstantSearch>
