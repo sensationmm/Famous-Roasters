@@ -409,7 +409,8 @@
       "title": "Blog",
       "learnMore": "Mehr Erfahren",
       "goToArticle": "Zum Artikel",
-      "goToVideo": "Zum Video"
+      "goToVideo": "Zum Video",
+      "noPostsFound": "Keine Artikel gefunden"
     },
     "cart": {
       "ctaCheckout": "Zur Kasse",

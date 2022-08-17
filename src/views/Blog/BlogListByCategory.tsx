@@ -43,7 +43,7 @@ export const BlogListByCategory: React.FC<CategoryListProps> = ({ locale = 'de_d
   }
 
   if (data) {
-    // console.log(data)
+    console.log(data)
 
     const noBlogsFound = data.brewingMethods.length === 0
 
@@ -136,7 +136,9 @@ export const BlogListByCategory: React.FC<CategoryListProps> = ({ locale = 'de_d
               },
             )
           ) : (
-            <p>No blogs found in the category</p>
+            <Typography as="p" size={TypographySize.Base} type={TypographyType.Paragraph}>
+              {t('pages.blog.noPostsFound')}
+            </Typography>
           )}
         </div>
       </div>

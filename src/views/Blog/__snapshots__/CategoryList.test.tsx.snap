@@ -152,18 +152,18 @@ exports[`Blog Category List View Renders correctly 1`] = `
             class="px-6 md:w-1/2"
           >
             <h1
-              class="text-[38px] xl:text-[80px] font-semibold font-syne mb-6 text-5xl leading-none"
+              class="text-[38px] lg:text-[80px] font-semibold font-syne mb-6 text-5xl leading-none"
             >
               Unsere Blog
             </h1>
             <p
-              class="xl:text-2xl xl:font-semibold mb-8 text-base leading-6"
+              class="xl:text-2xl lg:font-semibold mb-8 text-base leading-6"
             >
               Entdecke mit uns die Welt des Specialty Coffee. Die besten Zubereitungsmethoden, spannende Geschichten aus der Kaffeeszene als auch die neuesten Trends findest du in unserem Blog.
             </p>
           </div>
           <div
-            class="md:px-6 md:w-1/2 h-full grid justify-items-end content-center md:content-end md:pb-12 overflow-hidden justify-content-center align-items-center"
+            class="md:px-6 md:w-1/2 h-full grid justify-items-end content-end md:pb-12 overflow-hidden justify-content-center align-items-center"
           >
             <img
               class="w-full md:w-auto"
@@ -178,35 +178,34 @@ exports[`Blog Category List View Renders correctly 1`] = `
         <div
           class="py-6 border-b border-coreUI-border w-full"
         >
-          <h4
-            class="font-syne mb-4 text-3xl leading-10 font-semibold tracking-tight"
-          >
-            Kaffeewissen
-          </h4>
-          <div
-            class="text-coreUI-text-secondary mb-6"
-          >
-            <span
-              class="text-sm leading-5"
-            >
-              #
-              Nachhaltigkeit
-               
-            </span>
-            <span
-              class="text-sm leading-5"
-            >
-              #
-              SpecialityCoffee
-               
-            </span>
-          </div>
           <a
-            class="underline underline-offset-8"
             href="/Kaffeewissen"
           >
+            <h4
+              class="font-syne mb-4 text-3xl leading-10 font-semibold tracking-tight"
+            >
+              Kaffeewissen
+            </h4>
+            <div
+              class="text-coreUI-text-secondary mb-6"
+            >
+              <span
+                class="text-sm leading-5"
+              >
+                #
+                Nachhaltigkeit
+                 
+              </span>
+              <span
+                class="text-sm leading-5"
+              >
+                #
+                SpecialityCoffee
+                 
+              </span>
+            </div>
             <span
-              class="text-sm leading-5 font-semibold"
+              class="underline underline-offset-8 text-sm leading-5 font-semibold"
             >
               Mehr Erfahren
             </span>
@@ -215,35 +214,34 @@ exports[`Blog Category List View Renders correctly 1`] = `
         <div
           class="py-6 border-b border-coreUI-border w-full"
         >
-          <h4
-            class="font-syne mb-4 text-3xl leading-10 font-semibold tracking-tight"
-          >
-            Kaffeeequipment
-          </h4>
-          <div
-            class="text-coreUI-text-secondary mb-6"
-          >
-            <span
-              class="text-sm leading-5"
-            >
-              #
-              Handfiltervergleich
-               
-            </span>
-            <span
-              class="text-sm leading-5"
-            >
-              #
-              Grundausstattung
-               
-            </span>
-          </div>
           <a
-            class="underline underline-offset-8"
             href="/Kaffeeequipment"
           >
+            <h4
+              class="font-syne mb-4 text-3xl leading-10 font-semibold tracking-tight"
+            >
+              Kaffeeequipment
+            </h4>
+            <div
+              class="text-coreUI-text-secondary mb-6"
+            >
+              <span
+                class="text-sm leading-5"
+              >
+                #
+                Handfiltervergleich
+                 
+              </span>
+              <span
+                class="text-sm leading-5"
+              >
+                #
+                Grundausstattung
+                 
+              </span>
+            </div>
             <span
-              class="text-sm leading-5 font-semibold"
+              class="underline underline-offset-8 text-sm leading-5 font-semibold"
             >
               Mehr Erfahren
             </span>
@@ -252,35 +250,34 @@ exports[`Blog Category List View Renders correctly 1`] = `
         <div
           class="py-6 border-b border-coreUI-border w-full"
         >
-          <h4
-            class="font-syne mb-4 text-3xl leading-10 font-semibold tracking-tight"
-          >
-            Kaffeetrends
-          </h4>
-          <div
-            class="text-coreUI-text-secondary mb-6"
-          >
-            <span
-              class="text-sm leading-5"
-            >
-              #
-              Gadgets
-               
-            </span>
-            <span
-              class="text-sm leading-5"
-            >
-              #
-              Roestungen
-               
-            </span>
-          </div>
           <a
-            class="underline underline-offset-8"
             href="/Kaffeetrends"
           >
+            <h4
+              class="font-syne mb-4 text-3xl leading-10 font-semibold tracking-tight"
+            >
+              Kaffeetrends
+            </h4>
+            <div
+              class="text-coreUI-text-secondary mb-6"
+            >
+              <span
+                class="text-sm leading-5"
+              >
+                #
+                Gadgets
+                 
+              </span>
+              <span
+                class="text-sm leading-5"
+              >
+                #
+                Roestungen
+                 
+              </span>
+            </div>
             <span
-              class="text-sm leading-5 font-semibold"
+              class="underline underline-offset-8 text-sm leading-5 font-semibold"
             >
               Mehr Erfahren
             </span>
@@ -289,42 +286,41 @@ exports[`Blog Category List View Renders correctly 1`] = `
         <div
           class="py-6 border-b border-coreUI-border w-full"
         >
-          <h4
-            class="font-syne mb-4 text-3xl leading-10 font-semibold tracking-tight"
-          >
-            Zubereitungstipps
-          </h4>
-          <div
-            class="text-coreUI-text-secondary mb-6"
-          >
-            <span
-              class="text-sm leading-5"
-            >
-              #
-              Aeropress
-               
-            </span>
-            <span
-              class="text-sm leading-5"
-            >
-              #
-              Siebtraeger
-               
-            </span>
-            <span
-              class="text-sm leading-5"
-            >
-              #
-              ColdDrip
-               
-            </span>
-          </div>
           <a
-            class="underline underline-offset-8"
             href="/Zubereitungstipps"
           >
+            <h4
+              class="font-syne mb-4 text-3xl leading-10 font-semibold tracking-tight"
+            >
+              Zubereitungstipps
+            </h4>
+            <div
+              class="text-coreUI-text-secondary mb-6"
+            >
+              <span
+                class="text-sm leading-5"
+              >
+                #
+                Aeropress
+                 
+              </span>
+              <span
+                class="text-sm leading-5"
+              >
+                #
+                Siebtraeger
+                 
+              </span>
+              <span
+                class="text-sm leading-5"
+              >
+                #
+                ColdDrip
+                 
+              </span>
+            </div>
             <span
-              class="text-sm leading-5 font-semibold"
+              class="underline underline-offset-8 text-sm leading-5 font-semibold"
             >
               Mehr Erfahren
             </span>
