@@ -406,9 +406,11 @@
     },
     "blog": {
       "navigation": "Blog",
-      "title": "Blog"
+      "title": "Blog",
+      "learnMore": "Mehr Erfahren",
+      "goToArticle": "Zum Artikel",
+      "goToVideo": "Zum Video"
     },
-
     "cart": {
       "ctaCheckout": "Zur Kasse",
       "ctaContinue": "Weiter einkaufen",
