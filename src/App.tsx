@@ -7,6 +7,7 @@ import { famousRoastersClient, hygraphClient, i18n, storeFrontClient } from 'src
 import {
   Auth,
   Blog,
+  BlogListByCategory,
   Cart,
   Catalogue,
   CategoryList,
@@ -59,7 +60,24 @@ const App = () => {
                   />
 
                   <Route
-                    path="/en/coffee-knowledge/:slug"
+                    path="/en/:category"
+                    element={
+                      <ApolloProvider client={hygraphClient()}>
+                        <BlogListByCategory locale="de_en" />
+                      </ApolloProvider>
+                    }
+                  />
+                  <Route
+                    path="/de/:category"
+                    element={
+                      <ApolloProvider client={hygraphClient()}>
+                        <BlogListByCategory locale="de_de" />
+                      </ApolloProvider>
+                    }
+                  />
+
+                  <Route
+                    path="/en/:category/:slug"
                     element={
                       <ApolloProvider client={hygraphClient()}>
                         <Blog locale="de_en" />
@@ -67,7 +85,7 @@ const App = () => {
                     }
                   />
                   <Route
-                    path="/de/kaffeewissen/:slug"
+                    path="/de/:category/:slug"
                     element={
                       <ApolloProvider client={hygraphClient()}>
                         <Blog locale="de_de" />
