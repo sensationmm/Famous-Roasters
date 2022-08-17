@@ -1,0 +1,21 @@
+query getBlogByCategory($category: CategoryEnum) {
+  brewingMethods(where: { category: $category }) {
+    title
+    postType
+    content {
+      text
+    }
+    slug
+    localizations(locales: de_de) {
+      id
+    }
+    thumbnail {
+      url
+    }
+    tags
+  }
+  category(where: { name: $category }) {
+    summary
+    tags
+  }
+}
