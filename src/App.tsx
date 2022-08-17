@@ -9,6 +9,7 @@ import {
   Blog,
   Cart,
   Catalogue,
+  CategoryList,
   Error,
   FeaturedProduct,
   Home,
@@ -40,6 +41,23 @@ const App = () => {
               <Route path="/" element={<Home />} />
               {isBlog && (
                 <>
+                  <Route
+                    path="/en/"
+                    element={
+                      <ApolloProvider client={hygraphClient()}>
+                        <CategoryList locale="de_en" />
+                      </ApolloProvider>
+                    }
+                  />
+                  <Route
+                    path="/de/"
+                    element={
+                      <ApolloProvider client={hygraphClient()}>
+                        <CategoryList locale="de_de" />
+                      </ApolloProvider>
+                    }
+                  />
+
                   <Route
                     path="/en/coffee-knowledge/:slug"
                     element={

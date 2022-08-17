@@ -1,3 +1,4 @@
+import { BlogCategoryListMock, BlogCategoryListMockError } from './BlogCategoryMock'
 import {
   CartAddLinesMock,
   CartCreateMock,
@@ -77,3 +78,5 @@ export { TasteFinderMockFilter as TasteFinderMockFilter }
 export { TasteFinderMockQueryEspresso as TasteFinderMockQueryEspresso }
 export { TasteFinderMockQueryFilter as TasteFinderMockQueryFilter }
 export { UserProfileMock as UserProfileMock }
+export { BlogCategoryListMock as BlogCategoryListMock }
+export { BlogCategoryListMockError as BlogCategoryListMockError }
