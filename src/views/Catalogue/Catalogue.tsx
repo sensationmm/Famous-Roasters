@@ -27,6 +27,7 @@ import { famousRoastersClient as frClient, shopifyAccessoryCollection, shopifyCo
 import { getSimplifiedProductId } from 'src/utils/formatters'
 
 import { ProductCustom } from '../Product'
+import Search from '../search'
 import { getFilterData, getQueryFilter, sortParamsToListBoxItem } from '.'
 
 interface ProductConnectionCustom extends ProductConnection {
@@ -522,7 +523,7 @@ export const Catalogue: React.FC = () => {
       return <ErrorPrompt promptAction={() => history.go(0)} />
     }
 
-    return activeTab === 'coffee' ? renderDiscoverProducts() : renderAccessories()
+    return activeTab === 'coffee' ? <Search /> : renderAccessories()
   }
 
   return (
