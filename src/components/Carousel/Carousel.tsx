@@ -47,10 +47,10 @@ export const Carousel: React.FC<CarouselProps> = ({ images = [], slides, tile = 
         }}
         breakpoints={{
           640: {
-            slidesPerView: !tile ? 1 : content.length < 2 ? content.length : 2,
+            slidesPerView: !tile ? 1 : 2,
           },
           1024: {
-            slidesPerView: !tile ? 1 : content.length < 3 ? content.length : 3,
+            slidesPerView: !tile ? 1 : 3,
           },
         }}
       >

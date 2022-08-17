@@ -29,7 +29,7 @@ export const OrderTile: React.FC<OrderTileProps> = ({
           <img src={src} alt={title} className="w-28 max-h-28" />
         </div>
       </div>
-      <div className={'pl-4'}>
+      <div className={'pl-4 flex flex-col justify-center'}>
         <Typography as="div" type={TypographyType.Label} size={TypographySize.Base}>
           {quantity !== 1 ? `${quantity} x ${title}` : title}
         </Typography>

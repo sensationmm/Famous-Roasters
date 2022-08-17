@@ -3,7 +3,7 @@ import { render, screen, waitFor } from '@testing-library/react'
 import Amplify from 'aws-amplify'
 import React from 'react'
 import { I18nextProvider } from 'react-i18next'
-import ReactRouterDom from 'react-router-dom'
+import ReactRouterDom, { LinkProps } from 'react-router-dom'
 import { OrderMock, OrdersMock, UserProfileMock } from 'src/_mocks'
 import { i18n } from 'src/config'
 import { awsconfig } from 'src/config/cognito/auth.hook'
@@ -15,9 +15,9 @@ jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
   useNavigate: () => mockUseNavigate,
   useHref: jest.fn,
-  Link: (props: any) => {
+  Link: (props: LinkProps) => {
     return (
-      <a className={props.class} href={props.to}>
+      <a className={props.className} href={props.to as string}>
         {props.children}
       </a>
     )
@@ -69,7 +69,7 @@ describe('Profile view', () => {
     expect(fetchSpy).toHaveBeenCalledTimes(1)
   })
 
-  it.each(['orders', 'account', 'taste-profile', 'my-coffee'])('handles click on profile %s', async (btn) => {
+  it('handles click on profile taste-profile', async () => {
     jest.mock('@apollo/client/react/hooks', () => ({
       ...jest.requireActual('@apollo/client/react/hooks'),
       useLazyQuery: () => [{}],
@@ -83,9 +83,9 @@ describe('Profile view', () => {
         <Profile />
       </MockedProvider>,
     )
-    const button = await screen.findByTestId(`button-${btn}`)
+    const button = await screen.findByTestId(`button-taste-profile`)
     button.click()
-    expect(mockUseNavigate).toHaveBeenCalledWith(`/profile/${btn}`)
+    expect(mockUseNavigate).toHaveBeenCalledWith(`/taste-finder?step=bearbeiten`)
   })
 
   it.each(['vendor=Nomad', 'origin=BU'])('handles click on catalogue %s', async (btn) => {

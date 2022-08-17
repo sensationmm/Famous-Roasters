@@ -70,11 +70,15 @@ export const MyAroma: React.FC<MyAromaProps> = ({
 
   const MyName = name || t('pages.featuredProduct.yourCoffeeType.namePlaceholder')
 
+  const artworkWidth = isProfile ? 'w-52 ' : 'w-52 md:w-64 xl:w-80'
+  const artworkDimensions = isProfile ? 'w-32 h-32' : 'w-40 h-40 md:w-52 md:h-52 xl:w-64 xl:h-64'
+  const containerDimensions = isProfile ? 'w-80 h-44' : 'w-52 h-40 md:w-64 md:h-52 xl:w-80 xl:h-64'
+
   return (
     <div className={`grid grid-cols-1 ${!isProfile ? 'md:grid-cols-2' : ''} items-end`}>
-      <div className={`relative w-52 h-40 mx-auto ${!isProfile ? 'md:order-2' : ''} md:w-64 md:h-52 xl:w-80 xl:h-64`}>
-        <div className="w-40 h-40 top-0 left-6 absolute rounded-full bg-brand-grey-whisper md:w-52 md:h-52 xl:w-64 xl:h-64" />
-        <img src={getArtworkSrc()} alt={aroma} className="absolute w-52 top-5 md:w-64 xl:w-80" />
+      <div className={`relative flex justify-center mx-auto ${!isProfile ? 'md:order-2' : ''} ${containerDimensions}`}>
+        <div className={`top-0 left-auto absolute rounded-full bg-brand-grey-whisper ${artworkDimensions}`} />
+        <img src={getArtworkSrc()} alt={aroma} className={`absolute top-5 ${artworkWidth}`} />
       </div>
       <div className={!isProfile ? `md:order-1` : ''}>
         <div className={`flex ${isProfile ? 'flex-col-reverse' : 'flex-col'}`}>
@@ -84,21 +88,26 @@ export const MyAroma: React.FC<MyAromaProps> = ({
             }`}
           >
             <Circle
-              type={CircleType.Aroma}
+              type={!isProfile ? CircleType.Aroma : CircleType.AromaSmall}
               value={aroma}
               className={`flex-shrink-0 mr-2 ${!isProfile ? 'md:mr-0' : ''}`}
             />
             <Typography
               as={headingAs}
-              type={TypographyType.Heading}
-              size={TypographySize.Small}
-              className={`font-syne ${!isProfile ? 'md:mt-2' : ''} md:text-3xl xl:text-4xl md:leading-10 xl:leading-10`}
+              type={!isProfile ? TypographyType.Heading : TypographyType.Label}
+              size={!isProfile ? TypographySize.Small : TypographySize.Large}
+              className={`font-syne ${
+                !isProfile ? 'md:mt-2 md:text-3xl xl:text-4xl md:leading-10 xl:leading-10' : ''
+              } `}
             >
               {aroma}
             </Typography>
           </div>
           <div className={`flex items-center justify-center mt-2 ${!isProfile ? 'md:justify-start' : ''}`}>
-            <Typography className="text-coreUI-text-secondary">
+            <Typography
+              className="text-coreUI-text-secondary"
+              size={!isProfile ? TypographySize.Base : TypographySize.Small}
+            >
               {isProfile
                 ? t('pages.featuredProduct.yourCoffeeType.profileTitle')
                 : t('pages.featuredProduct.yourCoffeeType.title', { name: MyName })}

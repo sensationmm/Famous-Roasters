@@ -20,7 +20,7 @@ exports[`Order Tile component Renders correctly 1`] = `
       </div>
     </div>
     <div
-      class="pl-4"
+      class="pl-4 flex flex-col justify-center"
     >
       <div
         class="text-base leading-6 font-semibold"
@@ -73,7 +73,7 @@ exports[`Order Tile component Renders correctly for multi item 1`] = `
       </div>
     </div>
     <div
-      class="pl-4"
+      class="pl-4 flex flex-col justify-center"
     >
       <div
         class="text-base leading-6 font-semibold"
