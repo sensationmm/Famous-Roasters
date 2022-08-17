@@ -8,7 +8,10 @@ import Hit from 'src/components/AlgoliaSearch/Hit'
 import ListboxFilter from './ListboxFilter'
 import Pagination from './Pagination'
 
-const searchClient = algoliasearch('UJO1LDXRBG', 'ae9617f85b12371cbdfbe18d4c727fcc')
+const searchClient = algoliasearch(
+  process.env.REACT_APP_ALGOLIA_APP_ID || 'UJO1LDXRBG',
+  process.env.REACT_APP_ALGOLIA_API_KEY || 'ae9617f85b12371cbdfbe18d4c727fcc',
+)
 
 const Search: React.FC = () => {
   const { t } = useTranslation()
