@@ -1,10 +1,10 @@
 import algoliasearch from 'algoliasearch'
 import { useTranslation } from 'react-i18next'
 import { Configure, Hits, InstantSearch, SearchBox, SortBy } from 'react-instantsearch-hooks-web'
-import { FiltersMenuMobile } from 'src/components'
 import CheckboxFilter from 'src/components/AlgoliaSearch/CheckboxFilter'
 import Hit from 'src/components/AlgoliaSearch/Hit'
 
+import { FiltersMenuMobile } from './FiltersMenuMobile'
 import ListboxFilter from './ListboxFilter'
 import Pagination from './Pagination'
 
@@ -18,7 +18,7 @@ const Search: React.FC = () => {
   return (
     <InstantSearch indexName="products" searchClient={searchClient} routing={true}>
       <Configure
-        distinct={true}
+        distinct={true} // show products, not variants
         hitsPerPage={6}
         facetFilters={['product_type:-Accessories', 'product_type:-Equipment']}
       />
@@ -57,11 +57,13 @@ const Search: React.FC = () => {
           {/* Filters mobile */}
           <div className="w-1/2 md:hidden">
             <FiltersMenuMobile
-              initialFilters={[]}
-              onUpdateFilters={() => {
-                console.log()
-              }}
-              hasSpacerAfterItem={[{ filterKey: 'beanType', filterValue: 'Arabica, Robusta' }]}
+              attributes={[
+                'meta.my_fields.coffee_type',
+                'meta.my_fields.aroma',
+                'meta.my_fields.bean_type',
+                'meta.my_fields.origin',
+                'vendor',
+              ]}
             />
           </div>
         </div>
