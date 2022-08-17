@@ -26,8 +26,8 @@ import { Pagination } from 'src/components/Pagination'
 import { famousRoastersClient as frClient, shopifyAccessoryCollection, shopifyCoffeeCollection } from 'src/config'
 import { getSimplifiedProductId } from 'src/utils/formatters'
 
+import Search from '../../components/AlgoliaSearch/AlgoliaSearch'
 import { ProductCustom } from '../Product'
-import Search from '../search'
 import { getFilterData, getQueryFilter, sortParamsToListBoxItem } from '.'
 
 interface ProductConnectionCustom extends ProductConnection {
