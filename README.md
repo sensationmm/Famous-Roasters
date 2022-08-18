@@ -242,4 +242,4 @@ Env files on GitHub Actions are set under [Organisation secrets](https://github.
 ### Questions?
 For more details or technical questions, please reach out! Made with love by BCGDV.
 
-Contact: [Juan Minnocci](mailto:juan.minnocci@bcgdv.com)
+Contact: [60beans ENG](mailto:hello@60beans.com)
