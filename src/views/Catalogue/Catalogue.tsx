@@ -1,16 +1,13 @@
 import { ApolloError } from '@apollo/client'
 import { useLazyQuery } from '@apollo/client/react/hooks'
-import { ChevronRightIcon } from '@heroicons/react/solid'
 import { Collection, Maybe, ProductConnection, Scalars } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
 import React, { useCallback, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, URLSearchParamsInit, useSearchParams } from 'react-router-dom'
 import {
-  Checkbox,
   ErrorPrompt,
   FilterData,
-  FiltersMenuMobile,
   Layout,
   Listbox,
   ListBoxItem,
@@ -19,8 +16,6 @@ import {
   TabsNavigation,
   TagSwatch,
   TagType,
-  Typography,
-  TypographySize,
 } from 'src/components'
 import { Pagination } from 'src/components/Pagination'
 import { famousRoastersClient as frClient, shopifyAccessoryCollection, shopifyCoffeeCollection } from 'src/config'
@@ -80,12 +75,6 @@ const tabsData: TabsDataItem[] = [
   // { key: 'discover', translationKey: 'pages.catalogue.tabs.discover' },
   { key: 'coffee', translationKey: 'pages.catalogue.tabs.coffee' },
   { key: 'accessories', translationKey: 'pages.catalogue.tabs.accessories' },
-]
-
-const sortByItems: ListBoxItem[] = [
-  { name: 'priceAsc', value: 'priceAsc' },
-  { name: 'priceDesc', value: 'priceDesc' },
-  { name: 'newDesc', value: 'newDesc' },
 ]
 
 const totalItemsPerPage = 6
@@ -316,11 +305,6 @@ export const Catalogue: React.FC = () => {
     })
   }
 
-  const onUpdateFiltersMobile = (f: FilterData[]) => {
-    const allFilters = [filters.filter((fil) => fil.key === 'coffeeType')[0], ...f]
-    filterAttributesData && processFilterValues(filterAttributesData, allFilters)
-  }
-
   const onUpdateFiltersDesktop = (items: ListBoxItem[] | undefined, key: string) => {
     const updatedFilters = (): FilterData[] => {
       const rest = filters.filter((filter) => filter.key !== key)
@@ -336,12 +320,6 @@ export const Catalogue: React.FC = () => {
       return [...rest, actual]
     }
     filterAttributesData && processFilterValues(filterAttributesData, updatedFilters())
-  }
-
-  const onUpdateFilterCheckbox = (value: boolean, key: string) => {
-    const valueAsString = value.toString()
-    const items = valueAsString === 'true' ? [{ name: 'true', value: 'true' }] : []
-    onUpdateFiltersDesktop(items, key)
   }
 
   const renderListboxFilter = (key: string, hasTranslatedValues: boolean, hasSpacerAfterItem?: string[]) => {
@@ -384,18 +362,6 @@ export const Catalogue: React.FC = () => {
     )
   }
 
-  const renderCheckboxFilter = (key: string) => {
-    const v = filters.filter((filter) => filter.key === key)[0]
-    return (
-      <Checkbox
-        name={key}
-        text={t(`pages.catalogue.filters.${key}`)}
-        selected={v && v.filterValuesSelected && v.filterValuesSelected[0] === 'true' ? true : false}
-        toggleSelected={(value) => onUpdateFilterCheckbox(value, key)}
-      />
-    )
-  }
-
   const renderLoader = () => {
     return (
       <>
@@ -405,80 +371,6 @@ export const Catalogue: React.FC = () => {
           ))}
         </div>
         <div className="h-2" />
-      </>
-    )
-  }
-
-  const renderDiscoverProducts = () => {
-    return (
-      <>
-        <div className="mt-4">{renderListboxFilter('coffeeType', false)}</div>
-        <div className="my-4 md:w-1/4">{renderCheckboxFilter('decaf')}</div>
-        <div className="hidden md:flex gap-x-4">
-          <div className="md:w-1/4">{renderListboxFilter('aroma', false)}</div>
-          <div className="md:w-1/4">{renderListboxFilter('beanType', false)}</div>
-          <div className="md:w-1/4">{renderListboxFilter('origin', true)}</div>
-          <div className="md:w-1/4">{renderListboxFilter('vendor', false)}</div>
-          <div className="md:w-1/4">{renderListboxFilter('packageSize', false)}</div>
-        </div>
-        <div className="flex gap-x-4 justify-end">
-          <div className="w-1/2 md:hidden">
-            {!filterAttributesData || filterAttributesLoading ? (
-              <div
-                className="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
-                data-testid="button-filters-menu-open-loading"
-              >
-                <Typography size={TypographySize.Base} className="block truncate">
-                  {t(`pages.catalogue.filters.common.filtersMenu.filter`)}
-                </Typography>
-                <ChevronRightIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
-              </div>
-            ) : (
-              <FiltersMenuMobile
-                initialFilters={filters.filter((f) => f.key !== 'coffeeType' && f.key !== 'decaf')}
-                onUpdateFilters={(f: FilterData[]) => onUpdateFiltersMobile(f)}
-                hasSpacerAfterItem={[{ filterKey: 'beanType', filterValue: 'Arabica, Robusta' }]}
-              />
-            )}
-          </div>
-          {[...Array(3)].map((_, count) => (
-            <div key={`fill-block-${count}`} className="hidden md:block md:w-1/4" />
-          ))}
-          <div className="w-1/2 md:w-1/4 md:mt-4">
-            <Listbox
-              items={sortByItems}
-              hasNoneItem={true}
-              translationPrefix="pages.catalogue.filters.sort"
-              value={sortValue ? [sortValue[0]] : undefined}
-              onChange={setSortValue}
-            />
-          </div>
-        </div>
-
-        {!data || !filterAttributesData || !filters.length || queryFilterParams === undefined ? (
-          renderLoader()
-        ) : (
-          <>
-            <div className="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-              {productNodes?.map((node, i: number) => {
-                const id = getSimplifiedProductId(node.id)
-                return (
-                  <Link to={`/product/${id}`} key={`product-tile-link-${i}`}>
-                    <ProductTile key={`title-${i}`} showFrom={true} productNode={node} />
-                  </Link>
-                )
-              })}
-            </div>
-            <div className="mb-8 mt-8">
-              <Pagination
-                hasNextPage={pageInfo?.hasNextPage || false}
-                hasPreviousPage={pageInfo?.hasPreviousPage || false}
-                next={handleNextClicked}
-                previous={handlePreviousClicked}
-              />
-            </div>
-          </>
-        )}
       </>
     )
   }
