@@ -18,6 +18,11 @@ interface CategoryListProps {
   locale?: string
 }
 
+type Category = {
+  name: string
+  tags: Array<string>
+}
+
 export const CategoryList: React.FC<CategoryListProps> = () => {
   const { t } = useTranslation()
   const GET_BLOG_CATEGORY_LIST = loader('src/graphql/queries/blogCategoryListDetails.query.graphql')
@@ -72,20 +77,21 @@ export const CategoryList: React.FC<CategoryListProps> = () => {
           </div>
         </div>
         <div className="grid gap-x-8 gap-y-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full max-w-5xl mx-auto px-6 xl:px-8 md:my-8">
-          {data.categoryList.map((category: { name: string; summary: string; tags: Array<string> }) => {
+          {data.categoryList.map((category: Category) => {
+            const { name, tags } = category
             return (
-              <div key={category.name} className="py-6 border-b border-coreUI-border w-full">
-                <Link to={`${category.name}`}>
+              <div key={name} className="py-6 border-b border-coreUI-border w-full">
+                <Link to={`${name}`}>
                   <Typography
                     as="h4"
                     type={TypographyType.Heading}
                     size={TypographySize.Base}
                     className="font-syne mb-4"
                   >
-                    {category.name}
+                    {name}
                   </Typography>
                   <div className="text-coreUI-text-secondary mb-6">
-                    {category.tags.map((tag) => {
+                    {tags.map((tag) => {
                       return (
                         <Typography as="span" type={TypographyType.Paragraph} size={TypographySize.Small} key={tag}>
                           #{tag}{' '}
