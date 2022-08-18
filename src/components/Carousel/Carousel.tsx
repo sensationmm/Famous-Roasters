@@ -58,7 +58,7 @@ export const Carousel: React.FC<CarouselProps> = ({ images = [], slides, tile = 
           return (
             <SwiperSlide
               key={`carousel-image-${idx}`}
-              className={`flex justify-center ${isImages && 'bg-brand-grey-whisper'}`}
+              className={`flex w-full justify-center ${isImages && 'bg-brand-grey-whisper'}`}
             >
               {images.length > 0 ? (
                 <img src={(slide as Image).url} alt={`carousel-image-${idx}`} />

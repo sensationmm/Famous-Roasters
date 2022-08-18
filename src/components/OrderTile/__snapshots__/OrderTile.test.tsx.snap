@@ -3,7 +3,7 @@
 exports[`Order Tile component Renders correctly 1`] = `
 <div>
   <div
-    class="flex pt-8 md:px-6"
+    class="flex pt-8 w-full"
     data-testid="wrapper"
   >
     <div
@@ -56,7 +56,7 @@ exports[`Order Tile component Renders correctly 1`] = `
 exports[`Order Tile component Renders correctly for multi item 1`] = `
 <div>
   <div
-    class="flex pt-8 md:px-6"
+    class="flex pt-8 w-full"
     data-testid="wrapper"
   >
     <div
