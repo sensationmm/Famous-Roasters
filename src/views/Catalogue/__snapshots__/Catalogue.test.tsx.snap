@@ -2516,9 +2516,12 @@ exports[`Catalogue view Renders correctly for a successful call for accessories 
         <div
           class="mb-2 md:mb-0 md:mr-2"
         >
-          <button
-            class="flex w-full flex-row items-start cursor-pointer disabled:opacity-20 disabled:cursor-not-allowed"
-            data-testid="checkbox"
+          <svg
+            fill="none"
+            height="157"
+            viewBox="0 0 400 400"
+            width="157"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <circle
               cx="200"
