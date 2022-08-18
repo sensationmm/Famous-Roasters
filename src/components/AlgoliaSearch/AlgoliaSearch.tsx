@@ -70,10 +70,10 @@ const Search: React.FC = () => {
 
       <SortBy
         items={[
-          { label: 'Standard', value: 'products' },
-          { label: 'Preis aufsteigend', value: 'products_price_asc' },
-          { label: 'Preis absteigend', value: 'products_price_desc' },
-          { label: 'Neue zuerst', value: 'products_updated_at_desc' },
+          { label: t('pages.catalogue.filters.sort.values.none'), value: 'products' },
+          { label: t('pages.catalogue.filters.sort.values.priceAsc'), value: 'products_price_asc' },
+          { label: t('pages.catalogue.filters.sort.values.priceDesc'), value: 'products_price_desc' },
+          { label: t('pages.catalogue.filters.sort.values.newDesc'), value: 'products_updated_at_desc' },
         ]}
         classNames={{
           root: 'flex flex-row justify-end mt-1',
