@@ -12,6 +12,7 @@ type RawHit = {
   product_image: string
   vendor: string
   inventory_quantity: number
+  variants_inventory_count: number
   meta: {
     my_fields?: {
       decaf: string
@@ -25,12 +26,10 @@ type RawHit = {
 }
 
 const Hit = ({ hit }: { hit: RawHit }) => {
-  // console.log(hit)
   const { t } = useTranslation()
   const featured = false
   const showFrom = true
-  const { id, image, title, vendor, inventory_quantity: totalInventory, variants_min_price, variants_max_price } = hit
-  // const { origin, decaf, coffee_type, price_per_kg } = hit.meta.my_fields
+  const { id, image, title, vendor, variants_inventory_count: totalInventory, variants_min_price } = hit
   const origin = hit.meta.my_fields?.origin
   const decaf = hit.meta.my_fields?.decaf
   const coffee_type = hit.meta.my_fields?.coffee_type
