@@ -9,8 +9,8 @@ import ListboxFilter from './ListboxFilter'
 import Pagination from './Pagination'
 
 const searchClient = algoliasearch(
-  process.env.REACT_APP_ALGOLIA_APP_ID || 'UJO1LDXRBG',
-  process.env.REACT_APP_ALGOLIA_API_KEY || 'ae9617f85b12371cbdfbe18d4c727fcc',
+  process.env.REACT_APP_ALGOLIA_APP_ID || '',
+  process.env.REACT_APP_ALGOLIA_API_KEY || '',
 )
 
 const Search: React.FC = () => {
