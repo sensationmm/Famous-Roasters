@@ -8,17 +8,6 @@ import { i18n } from 'src/config'
 
 import { CategoryList } from '.'
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-delete window.history
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-window.history = { go: jest.fn() }
-
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'), // use actual for all non-hook parts
-}))
-
 describe('Blog Category List View', () => {
   it('Renders correctly', async () => {
     const { container } = render(
