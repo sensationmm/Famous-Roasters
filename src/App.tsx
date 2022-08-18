@@ -32,6 +32,31 @@ const App = () => {
     setIsBlog(host.split('.').includes('blog'))
   }, [])
 
+  if (isBlog) {
+    return (
+      <ApolloProvider client={hygraphClient()}>
+        <I18nextProvider i18n={i18n}>
+          <BrowserRouter>
+            <ScrollToTop />
+            <Routes>
+              <Route path="/en/" element={<CategoryList locale="de_en" />} />
+              <Route path="/de/" element={<CategoryList locale="de_de" />} />
+
+              <Route path="/en/:category" element={<BlogListByCategory locale="de_en" />} />
+              <Route path="/de/:category" element={<BlogListByCategory locale="de_de" />} />
+
+              <Route path="/en/:category/:slug" element={<Blog locale="de_en" />} />
+              <Route path="/de/:category/:slug" element={<Blog locale="de_de" />} />
+
+              <Route path="/" element={<Navigate to="/de/" replace />} />
+              <Route path="*" element={<Navigate to="/de/" replace />} />
+            </Routes>
+          </BrowserRouter>
+        </I18nextProvider>
+      </ApolloProvider>
+    )
+  }
+
   return (
     <ApolloProvider client={storeFrontClient()}>
       <CartProvider>
@@ -39,62 +64,6 @@ const App = () => {
           <BrowserRouter>
             <ScrollToTop />
             <Routes>
-              {isBlog && (
-                <>
-                  <Route
-                    path="/en/"
-                    element={
-                      <ApolloProvider client={hygraphClient()}>
-                        <CategoryList locale="de_en" />
-                      </ApolloProvider>
-                    }
-                  />
-                  <Route
-                    path="/de/"
-                    element={
-                      <ApolloProvider client={hygraphClient()}>
-                        <CategoryList locale="de_de" />
-                      </ApolloProvider>
-                    }
-                  />
-
-                  <Route
-                    path="/en/:category"
-                    element={
-                      <ApolloProvider client={hygraphClient()}>
-                        <BlogListByCategory locale="de_en" />
-                      </ApolloProvider>
-                    }
-                  />
-                  <Route
-                    path="/de/:category"
-                    element={
-                      <ApolloProvider client={hygraphClient()}>
-                        <BlogListByCategory locale="de_de" />
-                      </ApolloProvider>
-                    }
-                  />
-
-                  <Route
-                    path="/en/:category/:slug"
-                    element={
-                      <ApolloProvider client={hygraphClient()}>
-                        <Blog locale="de_en" />
-                      </ApolloProvider>
-                    }
-                  />
-                  <Route
-                    path="/de/:category/:slug"
-                    element={
-                      <ApolloProvider client={hygraphClient()}>
-                        <Blog locale="de_de" />
-                      </ApolloProvider>
-                    }
-                  />
-                  <Route path="/" element={<Navigate to="/de/" replace />} />
-                  <Route path="*" element={<Navigate to="/de/" replace />} />
-                </>
-              )}
               <Route path="/" element={<Home />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/catalogue" element={<Catalogue />} />
