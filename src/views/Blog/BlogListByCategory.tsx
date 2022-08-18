@@ -67,8 +67,8 @@ export const BlogListByCategory: React.FC<CategoryListProps> = () => {
           </div>
         </div>
         <div className="grid gap-x-8 gap-y-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full max-w-5xl mx-auto px-6 xl:px-8 md:my-8">
-          {data.brewingMethods.length !== 0 ? (
-            data.brewingMethods.map(
+          {data.standardBlogPosts.length !== 0 ? (
+            data.standardBlogPosts.map(
               (blog: {
                 title: string
                 postType: string

@@ -9,9 +9,9 @@ export const BlogListByCategoryMock = {
   },
   result: {
     data: {
-      brewingMethods: [
+      standardBlogPosts: [
         {
-          __typename: 'BrewingMethod',
+          __typename: 'standardBlogPost',
           title: 'Full Immersion Zubereitung mit der French Press.',
           postType: 'article',
           content: {
@@ -30,7 +30,7 @@ export const BlogListByCategoryMock = {
           tags: ['Text'],
         },
         {
-          __typename: 'BrewingMethod',
+          __typename: 'standardBlogPost',
           title: 'Die Kunst der Kaffee-Extraktion.',
           postType: 'article',
           content: {
@@ -49,7 +49,7 @@ export const BlogListByCategoryMock = {
           tags: [],
         },
         {
-          __typename: 'BrewingMethod',
+          __typename: 'standardBlogPost',
           title: 'In aller Munde: Spezialitätenkaffee oder Specialty Coffee.',
           postType: 'article',
           content: {
@@ -68,7 +68,7 @@ export const BlogListByCategoryMock = {
           tags: [],
         },
         {
-          __typename: 'BrewingMethod',
+          __typename: 'standardBlogPost',
           title: 'Test Video',
           postType: 'video',
           content: {
@@ -102,7 +102,7 @@ export const BlogListByCategoryEmptyMock = {
   },
   result: {
     data: {
-      brewingMethods: [],
+      standardBlogPosts: [],
       category: {
         __typename: 'Category',
         summary: 'Werde zum Kaffee-Nerd. Unsere Experten erklären alles: Von Aroma bis Zubereitungsmethode.',

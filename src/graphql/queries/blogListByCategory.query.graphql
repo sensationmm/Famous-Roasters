@@ -1,5 +1,5 @@
 query getBlogListByCategory($category: CategoryEnum) {
-  brewingMethods(where: { category: $category }) {
+  standardBlogPosts(where: { category: $category }) {
     title
     postType
     content {
