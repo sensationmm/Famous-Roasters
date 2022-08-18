@@ -59,7 +59,7 @@ export const CategoryList: React.FC<CategoryListProps> = () => {
                 size={TypographySize.Large}
                 className="text-[38px] lg:text-[80px] font-semibold font-syne mb-6"
               >
-                Unsere Blog
+                {t('pages.blog.ourBlog')}
               </Typography>
               <Typography
                 as="p"
@@ -67,8 +67,7 @@ export const CategoryList: React.FC<CategoryListProps> = () => {
                 size={TypographySize.Base}
                 className="xl:text-2xl lg:font-semibold mb-8"
               >
-                Entdecke mit uns die Welt des Specialty Coffee. Die besten Zubereitungsmethoden, spannende Geschichten
-                aus der Kaffeeszene als auch die neuesten Trends findest du in unserem Blog.
+                {t('pages.blog.blogSummary')}
               </Typography>
             </div>
             <div className="md:px-6 md:w-1/2 h-full grid justify-items-end content-end md:pb-12 overflow-hidden justify-content-center align-items-center">
