@@ -963,7 +963,8 @@
       },
       "sections": {
         "discover": {
-          "title":"Für dich zu entdecken"
+          "title": "Kaffeewissen für dich",
+          "cta": "Produkte erkunden"
         },
         "lastOrder":{
           "title": "Deine letzte Bestellung",
@@ -973,13 +974,18 @@
           "orderDate": "Bestelldatum",
           "paymentStatus": "Zahlungsstatus",
           "orderStatus": "Bestellstatus",
+          "infoTitle": "Warum soll ich den Kaffee bewerten?",
+          "infoText": "Dein Feedback hilft uns, dir auch in Zukunft passende Kaffees vorzuschlagen. ",
           "buttonOrderPage": "Zu den Bestelldetails",
-          "buttonOrderAgain": "Nochmal bestellen"
+          "buttonOrderAgain": "Nochmal bestellen",
+          "productSuggestionTitle": "Mehr Produkte für dich",
+          "productSuggestionText": "Genieße deinen Lieblingskaffee in vollen Zügen – entdecke dafür unseren Kaffeezubehör.",
+          "productSuggestionCTA": "Zum Kaffeezubehör "
         }
       },
       "title": "Profil",
       "greeting": "Hallo",
-      "intro": "Willkommen in deiner privaten Kaffeeecke, in der du deine Bestellungen, Profil und Konto verwalten kannst."
+      "intro": "Willkommen in deiner privaten Kaffeeecke. Hier kannst du dein Geschmacksprofil, deine Bestellungen als auch Kontodaten einsehen."
     },
     "tasteFinder": {
       "navigation": "Tastefinder",

@@ -37,7 +37,7 @@ interface CollectionCustom extends Collection {
   products: ProductConnectionCustom
 }
 
-interface CollectionQuery {
+export interface CollectionQuery {
   collection: CollectionCustom
 }
 

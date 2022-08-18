@@ -1,6 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Apollo client Renders correctly 1`] = `
+exports[`Apollo clients Renders famousRoastersClient correctly 1`] = `
+<div>
+  <span />
+</div>
+`;
+
+exports[`Apollo clients Renders hygraphClient correctly 1`] = `
+<div>
+  <span />
+</div>
+`;
+
+exports[`Apollo clients Renders storefrontClient correctly 1`] = `
 <div>
   <span />
 </div>

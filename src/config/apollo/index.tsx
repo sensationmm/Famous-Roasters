@@ -3,29 +3,6 @@ import { setContext } from '@apollo/client/link/context'
 import { fromUnixTime, isFuture } from 'date-fns/esm'
 import jwtDecode, { JwtPayload } from 'jwt-decode'
 
-export const adminClient = (): ApolloClient<NormalizedCacheObject> => {
-  return new ApolloClient({
-    cache: new InMemoryCache({
-      typePolicies: {
-        Collection: {
-          keyFields: ['id'],
-        },
-      },
-    }),
-
-    link: from([
-      createHttpLink({
-        uri: process.env.REACT_APP_SHOPIFY_ADMIN_GRAPHQL_ENDPOINT,
-        headers: {
-          'X-Shopify-Access-Token': process.env.REACT_APP_SHOPIFY_ADMIN_ACCESS_TOKEN,
-          Accept: 'application/graphql',
-        },
-        fetch,
-      }) as unknown as ApolloLink,
-    ]),
-  })
-}
-
 export const storeFrontClient = (): ApolloClient<NormalizedCacheObject> => {
   return new ApolloClient({
     cache: new InMemoryCache({

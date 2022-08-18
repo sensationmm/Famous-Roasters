@@ -1,5 +1,6 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import React from 'react'
+import { IconName } from 'src/components'
 
 import { Button, ButtonEmphasis, ButtonSize } from '.'
 
@@ -75,6 +76,116 @@ describe('Button component', () => {
   it('Renders correctly with extra classes', async () => {
     const { container } = render(
       <Button className="anotherClass" onClick={() => alert('click')}>
+        CTA
+      </Button>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
+
+  it('renders center', async () => {
+    const { container } = render(
+      <Button className="anotherClass" onClick={() => alert('click')} center>
+        CTA
+      </Button>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
+
+  it('renders disabled', async () => {
+    const { container } = render(
+      <Button className="anotherClass" onClick={() => alert('click')} disabled>
+        CTA
+      </Button>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
+
+  it('renders with arrow', async () => {
+    const { container } = render(
+      <Button className="anotherClass" onClick={() => alert('click')} hasArrow>
+        CTA
+      </Button>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
+
+  it('renders with arrow xs', async () => {
+    const { container } = render(
+      <Button size={ButtonSize.xs} className="anotherClass" onClick={() => alert('click')} hasArrow>
+        CTA
+      </Button>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
+
+  it('renders with arrow sm', async () => {
+    const { container } = render(
+      <Button size={ButtonSize.sm} className="anotherClass" onClick={() => alert('click')} hasArrow>
+        CTA
+      </Button>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
+
+  it('renders with arrow md', async () => {
+    const { container } = render(
+      <Button size={ButtonSize.md} className="anotherClass" onClick={() => alert('click')} hasArrow>
+        CTA
+      </Button>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
+
+  it('renders with arrow lg', async () => {
+    const { container } = render(
+      <Button size={ButtonSize.lg} className="anotherClass" onClick={() => alert('click')} hasArrow>
+        CTA
+      </Button>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
+
+  it('renders with arrow xl', async () => {
+    const { container } = render(
+      <Button size={ButtonSize.xl} className="anotherClass" onClick={() => alert('click')} hasArrow>
+        CTA
+      </Button>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
+
+  it('renders with icon', async () => {
+    const { container } = render(
+      <Button className="anotherClass" onClick={() => alert('click')} icon={IconName.Account}>
+        CTA
+      </Button>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
+
+  it('renders with icon small', async () => {
+    const { container } = render(
+      <Button size={ButtonSize.xs} className="anotherClass" onClick={() => alert('click')} icon={IconName.Account}>
+        CTA
+      </Button>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
+
+  it('renders fullWidth', async () => {
+    const { container } = render(
+      <Button className="anotherClass" onClick={() => alert('click')} fullWidth>
         CTA
       </Button>,
     )
