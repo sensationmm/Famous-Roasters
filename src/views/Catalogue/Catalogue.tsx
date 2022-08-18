@@ -112,7 +112,7 @@ export const Catalogue: React.FC = () => {
 
   const famousRoastersClient = frClient()
 
-  let filterAttributesLoading: boolean, filterAttributesError: ApolloError | undefined
+  let filterAttributesError: ApolloError | undefined
 
   const filtersData = (filterInput: FilterResponse): FilterData[] => {
     const coffeeType = searchParams.get('coffeeType')?.split('|')
@@ -171,8 +171,7 @@ export const Catalogue: React.FC = () => {
           query: GET_FILTER_ATTRIBUTES,
         })
         .then((res) => {
-          const { loading, error, data } = res
-          filterAttributesLoading = loading
+          const { error, data } = res
           filterAttributesError = error
           setFilterAttributesData(data.filterDictionaries)
           data.filterDictionaries && processFilterValues(data.filterDictionaries, filtersData(data.filterDictionaries))
