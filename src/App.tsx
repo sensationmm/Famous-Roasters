@@ -1,7 +1,7 @@
 import { ApolloProvider } from '@apollo/client'
 import React, { useLayoutEffect, useState } from 'react'
 import { I18nextProvider } from 'react-i18next'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { CartProvider } from 'src/components'
 import { famousRoastersClient, hygraphClient, i18n, storeFrontClient } from 'src/config'
 import {
@@ -39,7 +39,6 @@ const App = () => {
           <BrowserRouter>
             <ScrollToTop />
             <Routes>
-              <Route path="/" element={<Home />} />
               {isBlog && (
                 <>
                   <Route
@@ -92,8 +91,11 @@ const App = () => {
                       </ApolloProvider>
                     }
                   />
+                  <Route path="/" element={<Navigate to="/de/" replace />} />
+                  <Route path="*" element={<Navigate to="/de/" replace />} />
                 </>
               )}
+              <Route path="/" element={<Home />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/catalogue" element={<Catalogue />} />
               <Route path="/product/:id" element={<Product />} />
