@@ -28,7 +28,6 @@ import { shopifyAccessoryCollection, storeFrontClient } from 'src/config'
 import { useAuth } from 'src/config/cognito'
 import useBreakpoint from 'src/hooks/useBreakpoint'
 const USER_PROFILE = loader('src/graphql/queries/userProfile.query.graphql')
-import { OrderMock } from 'src/_mocks'
 import { formatDate, formatPrice, getSimplifiedProductId } from 'src/utils'
 
 import { CollectionQuery } from '../Catalogue'
@@ -92,7 +91,7 @@ export const Profile: React.FC = () => {
   const breakpoint = useBreakpoint()
   const [userName, setUserName] = useState<string>()
   const [userProfile, setUserProfile] = useState<UserProfile>()
-  const [lastOrder, setLastOrder] = useState<Order>(OrderMock.result.data.orders.edges[0].node)
+  const [lastOrder, setLastOrder] = useState<Order>()
   const [ordersLoading, setOrdersLoading] = useState<boolean>(false)
   const [getUserProfile] = useLazyQuery(USER_PROFILE)
   const GET_PRODUCTS = loader('src/graphql/queries/products.query.graphql')
