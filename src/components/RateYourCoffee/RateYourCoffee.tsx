@@ -99,11 +99,19 @@ export const RateYourCoffee: React.FC<RateYourCoffeeProps> = ({ productOrderTile
             value={comment}
             setValue={setComment}
             limit={500}
+            placeholder={t('pages.rate.commentPlaceholder')}
           />
         </div>
 
         <div className="w-full flex">
-          <Button emphasis={ButtonEmphasis.Secondary} fullWidth center onClick={submitRating} disabled={!rating}>
+          <Button
+            data-testid="btn-submit-rating"
+            emphasis={ButtonEmphasis.Secondary}
+            fullWidth
+            center
+            onClick={submitRating}
+            disabled={!rating}
+          >
             {t('pages.rate.submit')}
           </Button>
         </div>
@@ -128,7 +136,7 @@ export const RateYourCoffee: React.FC<RateYourCoffeeProps> = ({ productOrderTile
       onClick()
     }
     return (
-      <Button emphasis={ButtonEmphasis.Tertiary} fullWidth center onClick={onClose}>
+      <Button data-testid="custom-close-btn" emphasis={ButtonEmphasis.Tertiary} fullWidth center onClick={onClose}>
         {t('pages.rate.doneCTA')}
       </Button>
     )

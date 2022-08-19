@@ -1125,7 +1125,8 @@
       "info": "Bewerte von 1 bis 5, wie gut du den Kaffee fandest.",
       "submit": "Bewertung absenden",
       "doneCTA": "Zurück zum Profil",
-      "confirmation": "Danke für dein Feedback!"
+      "confirmation": "Danke für dein Feedback!",
+      "commentPlaceholder": "Deine Meinung in wenigen Sätzen (optional)."
     }
   },
   "shopify": {
