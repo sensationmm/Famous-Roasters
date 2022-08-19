@@ -102,9 +102,11 @@ export const RateYourCoffee: React.FC<RateYourCoffeeProps> = ({ productOrderTile
           />
         </div>
 
-        <Button emphasis={ButtonEmphasis.Secondary} fullWidth center onClick={submitRating} disabled={!rating}>
-          {t('pages.rate.submit')}
-        </Button>
+        <div className="w-full flex">
+          <Button emphasis={ButtonEmphasis.Secondary} fullWidth center onClick={submitRating} disabled={!rating}>
+            {t('pages.rate.submit')}
+          </Button>
+        </div>
       </div>
     )
   }

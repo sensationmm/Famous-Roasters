@@ -485,7 +485,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
                   href="/product/7655228866776"
                 >
                   <div
-                    class="flex pt-8 md:px-6"
+                    class="flex pt-8"
                   >
                     <img
                       alt="Espresso Raritäten Set"
@@ -575,7 +575,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
                   href="/product/7655228866776"
                 >
                   <div
-                    class="flex pt-8 md:px-6"
+                    class="flex pt-8"
                   >
                     <img
                       alt="Espresso Raritäten Set"
@@ -665,7 +665,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
                   href="/product/7655228866776"
                 >
                   <div
-                    class="flex pt-8 md:px-6"
+                    class="flex pt-8"
                   >
                     <img
                       alt="Espresso Raritäten Set"

@@ -324,95 +324,6 @@ exports[`Profile view Renders correctly 1`] = `
         class="w-full border-b border-brand-grey-bombay"
       >
         <div
-          class="w-full max-w-7xl mx-auto px-6 xl:px-8 py-8 pb-0"
-        >
-          <h2
-            class="mb-3 text-2xl leading-8 font-semibold"
-          >
-            Deine letzte Bestellung
-          </h2>
-          <div
-            class="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-6"
-          >
-            <div>
-              <label
-                class="font-bold text-sm leading-5"
-              >
-                Bestellnummer
-              </label>
-              <br />
-              <span
-                class="text-sm leading-5"
-              >
-                #131197
-              </span>
-            </div>
-            <div>
-              <label
-                class="font-bold text-sm leading-5"
-              >
-                Summe
-              </label>
-              <br />
-              <span
-                class="text-sm leading-5"
-              >
-                3,90 €
-              </span>
-            </div>
-            <div>
-              <label
-                class="font-bold text-sm leading-5"
-              >
-                Bestelldatum
-              </label>
-              <br />
-              <span
-                class="text-sm leading-5"
-              >
-                Th, 11.08.2022
-              </span>
-            </div>
-            <div>
-              <label
-                class="font-bold text-sm leading-5"
-              >
-                Zahlungsstatus
-              </label>
-              <br />
-              <span
-                class="text-sm leading-5"
-              >
-                Bezahlt
-              </span>
-            </div>
-            <div>
-              <label
-                class="font-bold text-sm leading-5"
-              >
-                Bestellstatus
-              </label>
-              <br />
-              <span
-                class="text-sm leading-5"
-              >
-                Geliefert
-              </span>
-            </div>
-          </div>
-          <div
-            class="pt-2 pb-8"
-          >
-            <div>
-              Carousel here
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="w-full border-b border-brand-grey-bombay"
-      >
-        <div
           class="w-full max-w-7xl mx-auto px-6 xl:px-8 py-8"
         >
           <h2
@@ -432,7 +343,7 @@ exports[`Profile view Renders correctly 1`] = `
               href="/product/7655228866776"
             >
               <div
-                class="flex pt-8 md:px-6"
+                class="flex pt-8"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -522,7 +433,7 @@ exports[`Profile view Renders correctly 1`] = `
               href="/product/7655228866776"
             >
               <div
-                class="flex pt-8 md:px-6"
+                class="flex pt-8"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -612,7 +523,7 @@ exports[`Profile view Renders correctly 1`] = `
               href="/product/7655228866776"
             >
               <div
-                class="flex pt-8 md:px-6"
+                class="flex pt-8"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -703,7 +614,7 @@ exports[`Profile view Renders correctly 1`] = `
             class="flex justify-center pt-14"
           >
             <button
-              class="relative inline-flex flex-row items-center rounded-full border-2 justify-center w-full px-4 py-2 text-base font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black w-full md:max-w-xs"
+              class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-4 py-2 text-base font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black w-full md:max-w-xs md:mx-auto"
               role="button"
             >
               Zum Kaffeezubehör 

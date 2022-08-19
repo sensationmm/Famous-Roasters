@@ -38,9 +38,6 @@ const getButtonClassNames = (
   if (center || fullWidth) {
     classNames.push('justify-center')
   }
-  if (fullWidth) {
-    classNames.push('w-full')
-  }
   const icon: string[] = []
   const arrow: string[] = []
 
@@ -118,7 +115,7 @@ const getButtonClassNames = (
     arrow.push('pointer-events-none')
   }
   if (fullWidth) {
-    classNames.push('w-full md:max-w-xs')
+    classNames.push('w-full md:max-w-xs md:mx-auto')
   }
   return { button: classNames.join(' '), icon: icon.join(' '), arrow: arrow.join(' ') }
 }

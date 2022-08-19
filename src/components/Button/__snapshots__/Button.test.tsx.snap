@@ -114,7 +114,7 @@ exports[`Button component renders disabled 1`] = `
 exports[`Button component renders fullWidth 1`] = `
 <div>
   <button
-    class="anotherClass relative inline-flex flex-row items-center rounded-full border-2 justify-center w-full px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary w-full md:max-w-xs"
+    class="anotherClass relative inline-flex flex-row items-center rounded-full border-2 justify-center px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary w-full md:max-w-xs md:mx-auto"
     role="button"
   >
     CTA

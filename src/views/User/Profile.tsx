@@ -13,6 +13,7 @@ import {
   Carousel,
   CoffeeAroma,
   IconName,
+  InfoBox,
   Layout,
   Loader,
   MyAroma,
@@ -309,6 +310,13 @@ export const Profile: React.FC = () => {
                     {t(`shopify.deliveryStatus.${lastOrder.displayFulfillmentStatus}`)}
                   </Typography>
                 </div>
+              </div>
+
+              <div className="mt-8">
+                <InfoBox
+                  title={t('pages.profile.sections.lastOrder.infoTitle')}
+                  text={t('pages.profile.sections.lastOrder.infoText')}
+                />
               </div>
 
               <div className="pt-2 pb-8">
