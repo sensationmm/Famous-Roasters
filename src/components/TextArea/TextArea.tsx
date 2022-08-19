@@ -8,10 +8,10 @@ type TextAreaProps = {
   value: string
   setValue: (val: string) => void
   limit?: number
+  placeholder?: string
 }
-//sdfsdf
 export const TextArea: React.FC<TextAreaProps> = forwardRef(
-  ({ id, rows = 5, value, setValue, limit = 0 }: TextAreaProps, ref) => {
+  ({ id, rows = 5, value, setValue, limit = 0, placeholder }: TextAreaProps, ref) => {
     const [charCount, setCharCount] = useState(0)
 
     const setFormattedContent = (text: string) => {
@@ -38,6 +38,7 @@ export const TextArea: React.FC<TextAreaProps> = forwardRef(
           onChange={(event) => setFormattedContent(event.target.value)}
           className="w-full resize-none focus:ring-0 focus:outline-0"
           value={value}
+          placeholder={placeholder}
         />
         {limit !== 0 && (
           <Typography

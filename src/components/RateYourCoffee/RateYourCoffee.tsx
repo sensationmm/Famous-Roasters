@@ -99,6 +99,7 @@ export const RateYourCoffee: React.FC<RateYourCoffeeProps> = ({ productOrderTile
             value={comment}
             setValue={setComment}
             limit={500}
+            placeholder={t('pages.rate.commentPlaceholder')}
           />
         </div>
 
