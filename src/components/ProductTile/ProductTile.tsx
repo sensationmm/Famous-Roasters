@@ -42,7 +42,7 @@ export const ProductTile: React.FC<ProductTileProps> = ({
     const classNames: string[] = []
     className?.split(' ').map((c) => classNames.push(c))
     if (!featured) {
-      classNames.push('flex', 'pt-8', 'md:px-6')
+      classNames.push('flex', 'pt-8')
     }
     return classNames.join(' ')
   }

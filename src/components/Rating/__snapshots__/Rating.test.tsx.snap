@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rating component Renders correctly 1`] = `
+<div>
+  <div>
+    <div
+      class="grid grid-cols-[repeat(5,_50px)] gap-6"
+    >
+      <div
+        class="flex flex-col justify-center items-center"
+        data-testid="rating-1"
+      >
+        <span
+          class="font-normal text-coreUI-text-secondary mb-3 flex flex-col justify-center h-6 text-center text-xs leading-4 font-semibold"
+        >
+          Gar nicht gut
+        </span>
+        <button
+          class="block w-11 h-11 rounded-full bg-coreUI-background-images font-bold cursor-pointer transition-all"
+          id="rating-1"
+        >
+          1
+        </button>
+      </div>
+      <div
+        class="flex flex-col justify-center items-center"
+        data-testid="rating-2"
+      >
+        <span
+          class="font-normal text-coreUI-text-secondary mb-3 flex flex-col justify-center h-6 text-center text-xs leading-4 font-semibold"
+        >
+          Nicht gut
+        </span>
+        <button
+          class="block w-11 h-11 rounded-full bg-coreUI-background-images font-bold cursor-pointer transition-all"
+          id="rating-2"
+        >
+          2
+        </button>
+      </div>
+      <div
+        class="flex flex-col justify-center items-center"
+        data-testid="rating-3"
+      >
+        <span
+          class="font-normal text-coreUI-text-secondary mb-3 flex flex-col justify-center h-6 text-center text-xs leading-4 font-semibold"
+        >
+          Ok
+        </span>
+        <button
+          class="block w-11 h-11 rounded-full bg-coreUI-background-images font-bold cursor-pointer transition-all"
+          id="rating-3"
+        >
+          3
+        </button>
+      </div>
+      <div
+        class="flex flex-col justify-center items-center"
+        data-testid="rating-4"
+      >
+        <span
+          class="font-normal text-coreUI-text-secondary mb-3 flex flex-col justify-center h-6 text-center text-xs leading-4 font-semibold"
+        >
+          Gut
+        </span>
+        <button
+          class="block w-11 h-11 rounded-full bg-coreUI-background-images font-bold cursor-pointer transition-all"
+          id="rating-4"
+        >
+          4
+        </button>
+      </div>
+      <div
+        class="flex flex-col justify-center items-center"
+        data-testid="rating-5"
+      >
+        <span
+          class="font-normal text-coreUI-text-secondary mb-3 flex flex-col justify-center h-6 text-center text-xs leading-4 font-semibold"
+        >
+          Sehr gut
+        </span>
+        <button
+          class="block w-11 h-11 rounded-full bg-primary font-bold cursor-pointer transition-all"
+          id="rating-5"
+        >
+          5
+        </button>
+      </div>
+    </div>
+    <span
+      class="block font-normal text-coreUI-text-secondary pt-4 text-xs leading-4"
+    >
+      Bewerte von 1 bis 5, wie gut du den Kaffee fandest.
+    </span>
+  </div>
+</div>
+`;

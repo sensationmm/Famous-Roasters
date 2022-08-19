@@ -3,7 +3,7 @@
 exports[`Product Tile component Renders as expected for missing attributes 1`] = `
 <div>
   <div
-    class="flex pt-8 md:px-6"
+    class="flex pt-8"
   >
     <img
       alt="Espresso Raritäten Set"
@@ -170,7 +170,7 @@ exports[`Product Tile component Renders as expected for out of stock featured it
 exports[`Product Tile component Renders as expected for out of stock item 1`] = `
 <div>
   <div
-    class="flex pt-8 md:px-6"
+    class="flex pt-8"
   >
     <img
       alt="Espresso Raritäten Set"
@@ -344,7 +344,7 @@ exports[`Product Tile component Renders as expected with type category 1`] = `
 exports[`Product Tile component Renders correctly 1`] = `
 <div>
   <div
-    class="flex pt-8 md:px-6"
+    class="flex pt-8"
   >
     <img
       alt="Espresso Raritäten Set"

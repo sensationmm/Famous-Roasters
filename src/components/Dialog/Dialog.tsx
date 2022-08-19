@@ -5,12 +5,22 @@ import { Typography, TypographySize, TypographyType } from 'src/components'
 
 interface DialogProps extends React.HTMLAttributes<HTMLElement> {
   trigger: React.ReactElement
-  title: string
+  title?: string
   overline?: string
   body: ReactNode
+  closeButton?: (onclick: () => void) => void
+  showCloseButton?: boolean
 }
 
-export const Dialog: React.FC<DialogProps> = ({ trigger, title, overline, body, className }) => {
+export const Dialog: React.FC<DialogProps> = ({
+  trigger,
+  title,
+  overline,
+  body,
+  className,
+  closeButton,
+  showCloseButton = false,
+}) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const closeDialog = () => setIsOpen(false)
@@ -49,29 +59,34 @@ export const Dialog: React.FC<DialogProps> = ({ trigger, title, overline, body, 
                 leaveTo="opacity-0 scale-95"
               >
                 <HeadlessUIDialog.Panel className="w-full max-w-lg transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                  <div className="flex justify-between justify-end">
-                    <span />
-                    {overline ? (
-                      <Typography
-                        type={TypographyType.Paragraph}
-                        size={TypographySize.Large}
-                        className="text-coreUI-text-secondary"
-                      >
-                        {overline}
-                      </Typography>
-                    ) : (
+                  <>
+                    <div className="flex justify-between justify-end">
                       <span />
+                      {overline ? (
+                        <Typography
+                          type={TypographyType.Paragraph}
+                          size={TypographySize.Large}
+                          className="text-coreUI-text-secondary"
+                        >
+                          {overline}
+                        </Typography>
+                      ) : (
+                        <span />
+                      )}
+                      <button onClick={closeDialog} data-testid="dialog-dismiss">
+                        <XIcon className="w-6 h-6" />
+                      </button>
+                    </div>
+                    {title && (
+                      <div className="flex justify-center mt-6">
+                        <Typography as="h3" type={TypographyType.Heading} size={TypographySize.Small}>
+                          {title}
+                        </Typography>
+                      </div>
                     )}
-                    <button onClick={closeDialog} data-testid="dialog-dismiss">
-                      <XIcon className="w-6 h-6" />
-                    </button>
-                  </div>
-                  <div className="flex justify-center mt-6">
-                    <Typography as="h3" type={TypographyType.Label} size={TypographySize.Large}>
-                      {title}
-                    </Typography>
-                  </div>
-                  <div className="mt-4">{body}</div>
+                    <div className="mt-4">{body}</div>
+                    {closeButton && showCloseButton && closeButton(closeDialog)}
+                  </>
                 </HeadlessUIDialog.Panel>
               </Transition.Child>
             </div>

@@ -175,21 +175,22 @@ export const Catalogue: React.FC = () => {
     setSortParams(updatedSortParams)
     setSortValue(sortParamsToListBoxItem(updatedSortParams))
 
-    famousRoastersClient
-      .query({
-        query: GET_FILTER_ATTRIBUTES,
-      })
-      .then((res) => {
-        const { loading, error, data } = res
-        filterAttributesLoading = loading
-        filterAttributesError = error
-        setFilterAttributesData(data.filterDictionaries)
-        data.filterDictionaries && processFilterValues(data.filterDictionaries, filtersData(data.filterDictionaries))
-      })
-      .catch((err) => {
-        filterAttributesError = error
-        throw new Error('Error fetching filter attributes', err)
-      })
+    activeTab !== 'accessories' &&
+      famousRoastersClient
+        .query({
+          query: GET_FILTER_ATTRIBUTES,
+        })
+        .then((res) => {
+          const { loading, error, data } = res
+          filterAttributesLoading = loading
+          filterAttributesError = error
+          setFilterAttributesData(data.filterDictionaries)
+          data.filterDictionaries && processFilterValues(data.filterDictionaries, filtersData(data.filterDictionaries))
+        })
+        .catch((err) => {
+          filterAttributesError = err
+          throw new Error('Error fetching filter attributes', err)
+        })
   }, [])
 
   useEffect(() => {
@@ -247,7 +248,7 @@ export const Catalogue: React.FC = () => {
     filterAttributesData && getFilterData(filterAttributesData)
   }, [activeTab])
 
-  const [getProducts, { error, data }] = useLazyQuery<CollectionQuery>(GET_PRODUCTS)
+  const [getProducts, { error: errorCatalogue, data }] = useLazyQuery<CollectionQuery>(GET_PRODUCTS)
 
   const fetchProducts = useCallback(
     (queryVars: QueryProductsVariables) => {
@@ -516,7 +517,8 @@ export const Catalogue: React.FC = () => {
 
   const renderContent = () => {
     // console.log('error', error)
-    if (error !== undefined || !pageInfo) {
+    if (errorCatalogue !== undefined || !pageInfo) {
+      console.log('renderContent', errorCatalogue?.networkError)
       return <ErrorPrompt promptAction={() => history.go(0)} />
     }
 

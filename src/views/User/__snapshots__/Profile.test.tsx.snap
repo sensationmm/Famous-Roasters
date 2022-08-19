@@ -343,7 +343,7 @@ exports[`Profile view Renders correctly 1`] = `
               href="/product/7655228866776"
             >
               <div
-                class="flex pt-8 md:px-6"
+                class="flex pt-8"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -433,7 +433,7 @@ exports[`Profile view Renders correctly 1`] = `
               href="/product/7655228866776"
             >
               <div
-                class="flex pt-8 md:px-6"
+                class="flex pt-8"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -523,7 +523,7 @@ exports[`Profile view Renders correctly 1`] = `
               href="/product/7655228866776"
             >
               <div
-                class="flex pt-8 md:px-6"
+                class="flex pt-8"
               >
                 <img
                   alt="Espresso Raritäten Set"
@@ -614,7 +614,7 @@ exports[`Profile view Renders correctly 1`] = `
             class="flex justify-center pt-14"
           >
             <button
-              class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-4 py-2 text-base font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black w-full md:max-w-xs"
+              class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-4 py-2 text-base font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black w-full md:max-w-xs md:mx-auto"
               role="button"
             >
               Zum Kaffeezubehör 

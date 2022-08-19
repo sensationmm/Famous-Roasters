@@ -115,7 +115,7 @@ const getButtonClassNames = (
     arrow.push('pointer-events-none')
   }
   if (fullWidth) {
-    classNames.push('w-full md:max-w-xs')
+    classNames.push('w-full md:max-w-xs md:mx-auto')
   }
   return { button: classNames.join(' '), icon: icon.join(' '), arrow: arrow.join(' ') }
 }

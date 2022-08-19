@@ -584,7 +584,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             href="/product/7655228866776"
           >
             <div
-              class="flex pt-8 md:px-6"
+              class="flex pt-8"
             >
               <img
                 alt="Espresso Raritäten Set"
@@ -675,7 +675,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             href="/product/7655228866776"
           >
             <div
-              class="flex pt-8 md:px-6"
+              class="flex pt-8"
             >
               <img
                 alt="Espresso Raritäten Set"
@@ -766,7 +766,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             href="/product/7655228866776"
           >
             <div
-              class="flex pt-8 md:px-6"
+              class="flex pt-8"
             >
               <img
                 alt="Espresso Raritäten Set"
@@ -857,7 +857,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             href="/product/7655228866776"
           >
             <div
-              class="flex pt-8 md:px-6"
+              class="flex pt-8"
             >
               <img
                 alt="Espresso Raritäten Set"
@@ -948,7 +948,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             href="/product/7655228866776"
           >
             <div
-              class="flex pt-8 md:px-6"
+              class="flex pt-8"
             >
               <img
                 alt="Espresso Raritäten Set"
@@ -1039,7 +1039,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             href="/product/7655228866776"
           >
             <div
-              class="flex pt-8 md:px-6"
+              class="flex pt-8"
             >
               <img
                 alt="Espresso Raritäten Set"
@@ -1130,7 +1130,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             href="/product/7655228866776"
           >
             <div
-              class="flex pt-8 md:px-6"
+              class="flex pt-8"
             >
               <img
                 alt="Espresso Raritäten Set"
@@ -1221,7 +1221,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             href="/product/7655228866776"
           >
             <div
-              class="flex pt-8 md:px-6"
+              class="flex pt-8"
             >
               <img
                 alt="Espresso Raritäten Set"
@@ -1312,7 +1312,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             href="/product/7655228866776"
           >
             <div
-              class="flex pt-8 md:px-6"
+              class="flex pt-8"
             >
               <img
                 alt="Espresso Raritäten Set"
@@ -1403,7 +1403,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             href="/product/7655228866776"
           >
             <div
-              class="flex pt-8 md:px-6"
+              class="flex pt-8"
             >
               <img
                 alt="Espresso Raritäten Set"
@@ -1494,7 +1494,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             href="/product/7655228866776"
           >
             <div
-              class="flex pt-8 md:px-6"
+              class="flex pt-8"
             >
               <img
                 alt="Espresso Raritäten Set"
@@ -1585,7 +1585,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             href="/product/7655228866776"
           >
             <div
-              class="flex pt-8 md:px-6"
+              class="flex pt-8"
             >
               <img
                 alt="Espresso Raritäten Set"
@@ -2068,25 +2068,379 @@ exports[`Catalogue view Renders correctly for a successful call for accessories 
           </button>
         </div>
         <div
-          class="p-4 border border-coreUI-border bg-white"
+          class="mt-4"
         >
           <div
-            class="text-center text-base leading-6"
+            class="w-auto min-w-fit max-w-xs relative"
           >
-            Ein Fehler ist aufgetreten
-          </div>
-          <div
-            class="mt-4 flex justify-center"
-          >
-            <button
-              class="relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
-              data-testid="button-prompt"
-              role="button"
+            <div
+              class="grid grid-cols-2 items-end"
             >
-              Erneut versuchen
+              <div />
+              <div
+                class="justify-self-end"
+              />
+            </div>
+            <button
+              aria-expanded="false"
+              aria-haspopup="true"
+              class="inline-flex justify-between py-2 pr-1 border-b-2 border-brand-black text-left bg-white cursor-default"
+              data-testid="button-listbox"
+              id="headlessui-listbox-button-:r7:"
+              type="button"
+            >
+              <span
+                class="block truncate text-xl leading-7 font-semibold"
+              >
+                Alle Kategorien (1)
+              </span>
+              <svg
+                aria-hidden="true"
+                class="-mr-1 ml-2 h-6 w-6 self-center"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"
+                />
+              </svg>
             </button>
           </div>
         </div>
+        <div
+          class="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mb-16 pb-8 border-b border-coreUI-border "
+        >
+          <div
+            class="relative flex pt-8 md:px-6"
+          >
+            <div
+              class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+            >
+              <div
+                class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+              >
+                <div
+                  class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+                />
+              </div>
+            </div>
+            <div
+              class="flex flex-col w-full justify-center pl-4"
+            >
+              <div
+                class="flex"
+              >
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-5"
+                />
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-14"
+                />
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-10"
+                />
+              </div>
+              <div
+                class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-20"
+              />
+              <div
+                class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-24"
+              />
+              <div
+                class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-12"
+              />
+              <div
+                class="flex"
+              >
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-8"
+                />
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-14"
+                />
+              </div>
+            </div>
+            <div
+              class="absolute block left-20 w-3 h-full bg-gradient-to-r from-transparent via-white/70 to-transparent animate-swipe"
+            />
+          </div>
+          <div
+            class="relative flex pt-8 md:px-6"
+          >
+            <div
+              class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+            >
+              <div
+                class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+              >
+                <div
+                  class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+                />
+              </div>
+            </div>
+            <div
+              class="flex flex-col w-full justify-center pl-4"
+            >
+              <div
+                class="flex"
+              >
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-5"
+                />
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-14"
+                />
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-10"
+                />
+              </div>
+              <div
+                class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-20"
+              />
+              <div
+                class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-24"
+              />
+              <div
+                class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-12"
+              />
+              <div
+                class="flex"
+              >
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-8"
+                />
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-14"
+                />
+              </div>
+            </div>
+            <div
+              class="absolute block left-20 w-3 h-full bg-gradient-to-r from-transparent via-white/70 to-transparent animate-swipe"
+            />
+          </div>
+          <div
+            class="relative flex pt-8 md:px-6"
+          >
+            <div
+              class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+            >
+              <div
+                class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+              >
+                <div
+                  class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+                />
+              </div>
+            </div>
+            <div
+              class="flex flex-col w-full justify-center pl-4"
+            >
+              <div
+                class="flex"
+              >
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-5"
+                />
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-14"
+                />
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-10"
+                />
+              </div>
+              <div
+                class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-20"
+              />
+              <div
+                class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-24"
+              />
+              <div
+                class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-12"
+              />
+              <div
+                class="flex"
+              >
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-8"
+                />
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-14"
+                />
+              </div>
+            </div>
+            <div
+              class="absolute block left-20 w-3 h-full bg-gradient-to-r from-transparent via-white/70 to-transparent animate-swipe"
+            />
+          </div>
+          <div
+            class="relative flex pt-8 md:px-6"
+          >
+            <div
+              class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+            >
+              <div
+                class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+              >
+                <div
+                  class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+                />
+              </div>
+            </div>
+            <div
+              class="flex flex-col w-full justify-center pl-4"
+            >
+              <div
+                class="flex"
+              >
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-5"
+                />
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-14"
+                />
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-10"
+                />
+              </div>
+              <div
+                class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-20"
+              />
+              <div
+                class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-24"
+              />
+              <div
+                class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-12"
+              />
+              <div
+                class="flex"
+              >
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-8"
+                />
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-14"
+                />
+              </div>
+            </div>
+            <div
+              class="absolute block left-20 w-3 h-full bg-gradient-to-r from-transparent via-white/70 to-transparent animate-swipe"
+            />
+          </div>
+          <div
+            class="relative flex pt-8 md:px-6"
+          >
+            <div
+              class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+            >
+              <div
+                class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+              >
+                <div
+                  class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+                />
+              </div>
+            </div>
+            <div
+              class="flex flex-col w-full justify-center pl-4"
+            >
+              <div
+                class="flex"
+              >
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-5"
+                />
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-14"
+                />
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-10"
+                />
+              </div>
+              <div
+                class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-20"
+              />
+              <div
+                class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-24"
+              />
+              <div
+                class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-12"
+              />
+              <div
+                class="flex"
+              >
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-8"
+                />
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-14"
+                />
+              </div>
+            </div>
+            <div
+              class="absolute block left-20 w-3 h-full bg-gradient-to-r from-transparent via-white/70 to-transparent animate-swipe"
+            />
+          </div>
+          <div
+            class="relative flex pt-8 md:px-6"
+          >
+            <div
+              class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+            >
+              <div
+                class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+              >
+                <div
+                  class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+                />
+              </div>
+            </div>
+            <div
+              class="flex flex-col w-full justify-center pl-4"
+            >
+              <div
+                class="flex"
+              >
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-5"
+                />
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-14"
+                />
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-10"
+                />
+              </div>
+              <div
+                class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-20"
+              />
+              <div
+                class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-24"
+              />
+              <div
+                class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-12"
+              />
+              <div
+                class="flex"
+              >
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-8"
+                />
+                <div
+                  class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-14"
+                />
+              </div>
+            </div>
+            <div
+              class="absolute block left-20 w-3 h-full bg-gradient-to-r from-transparent via-white/70 to-transparent animate-swipe"
+            />
+          </div>
+        </div>
+        <div
+          class="h-2"
+        />
       </div>
     </main>
     <footer
@@ -2806,7 +3160,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
             href="/product/7655228866776"
           >
             <div
-              class="flex pt-8 md:px-6"
+              class="flex pt-8"
             >
               <img
                 alt="Espresso Raritäten Set"
@@ -2897,7 +3251,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
             href="/product/7655228866776"
           >
             <div
-              class="flex pt-8 md:px-6"
+              class="flex pt-8"
             >
               <img
                 alt="Espresso Raritäten Set"
@@ -2988,7 +3342,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
             href="/product/7655228866776"
           >
             <div
-              class="flex pt-8 md:px-6"
+              class="flex pt-8"
             >
               <img
                 alt="Espresso Raritäten Set"
@@ -3079,7 +3433,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
             href="/product/7655228866776"
           >
             <div
-              class="flex pt-8 md:px-6"
+              class="flex pt-8"
             >
               <img
                 alt="Espresso Raritäten Set"
@@ -3170,7 +3524,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
             href="/product/7655228866776"
           >
             <div
-              class="flex pt-8 md:px-6"
+              class="flex pt-8"
             >
               <img
                 alt="Espresso Raritäten Set"
@@ -3261,7 +3615,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
             href="/product/7655228866776"
           >
             <div
-              class="flex pt-8 md:px-6"
+              class="flex pt-8"
             >
               <img
                 alt="Espresso Raritäten Set"
@@ -3352,7 +3706,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
             href="/product/7655228866776"
           >
             <div
-              class="flex pt-8 md:px-6"
+              class="flex pt-8"
             >
               <img
                 alt="Espresso Raritäten Set"
@@ -3443,7 +3797,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
             href="/product/7655228866776"
           >
             <div
-              class="flex pt-8 md:px-6"
+              class="flex pt-8"
             >
               <img
                 alt="Espresso Raritäten Set"
@@ -3534,7 +3888,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
             href="/product/7655228866776"
           >
             <div
-              class="flex pt-8 md:px-6"
+              class="flex pt-8"
             >
               <img
                 alt="Espresso Raritäten Set"
@@ -3625,7 +3979,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
             href="/product/7655228866776"
           >
             <div
-              class="flex pt-8 md:px-6"
+              class="flex pt-8"
             >
               <img
                 alt="Espresso Raritäten Set"
@@ -3716,7 +4070,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
             href="/product/7655228866776"
           >
             <div
-              class="flex pt-8 md:px-6"
+              class="flex pt-8"
             >
               <img
                 alt="Espresso Raritäten Set"
@@ -3807,7 +4161,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
             href="/product/7655228866776"
           >
             <div
-              class="flex pt-8 md:px-6"
+              class="flex pt-8"
             >
               <img
                 alt="Espresso Raritäten Set"

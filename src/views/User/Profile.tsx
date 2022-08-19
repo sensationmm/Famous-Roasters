@@ -261,7 +261,7 @@ export const Profile: React.FC = () => {
 
         {lastOrder && (
           <div className={containerStyle}>
-            <div className={sectionStyle}>
+            <div className={`${sectionStyle} pb-0`}>
               <Typography as="h2" type={TypographyType.Heading} size={TypographySize.Small} className="mb-3">
                 {t('pages.profile.sections.lastOrder.title')}
               </Typography>
@@ -322,7 +322,7 @@ export const Profile: React.FC = () => {
               <div className="pt-2 pb-8">
                 <Carousel
                   slides={lastOrder.lineItems.edges.map((item) => (
-                    <OrderTile node={item.node} productId={item.node.product.id} />
+                    <OrderTile node={item.node} productId={item.node.product.id} showRate />
                   ))}
                   tile
                 />

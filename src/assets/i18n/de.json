@@ -1110,6 +1110,22 @@
           "title": "Wie sollen wir dich nennen?"
         }
       }
+    },
+    "rate": {
+      "rateCoffee": "Kaffee bewerten",
+      "howWasIt": "Wie war dein Kaffee?",
+      "intro": "Dein Feedback hilft uns, dir auch in Zukunft passende Kaffees vorzuschlagen. ",
+      "scale": {
+        "1": "Gar nicht gut",
+        "2": "Nicht gut",
+        "3": "Ok",
+        "4": "Gut",
+        "5": "Sehr gut"
+      },
+      "info": "Bewerte von 1 bis 5, wie gut du den Kaffee fandest.",
+      "submit": "Bewertung absenden",
+      "doneCTA": "Zurück zum Profil",
+      "confirmation": "Danke für dein Feedback!"
     }
   },
   "shopify": {
