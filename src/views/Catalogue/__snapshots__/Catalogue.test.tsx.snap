@@ -2092,7 +2092,7 @@ exports[`Catalogue view Renders correctly for a successful call for accessories 
               <span
                 class="block truncate text-xl leading-7 font-semibold"
               >
-                Alle Kategorien
+                Alle Kategorien (1)
               </span>
               <svg
                 aria-hidden="true"
