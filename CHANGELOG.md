@@ -1,3 +1,19 @@
+# [1.47.0](https://github.com/Famous-Roasters/frontend/compare/v1.46.1...v1.47.0) (2022-08-19)
+
+
+### Bug Fixes
+
+* **catalogue:** accessory filter bug ([3d4ad8a](https://github.com/Famous-Roasters/frontend/commit/3d4ad8ae32802abbcce48955abbf60974ab95d16))
+* **profile:** merge conflict bugs ([f15884d](https://github.com/Famous-Roasters/frontend/commit/f15884d2d94f4a2e7a653cb4964324830ad8d4b3))
+* **profile:** stray mock data ([af721e9](https://github.com/Famous-Roasters/frontend/commit/af721e9a70574bc2366134c15e24b19cfbd7000d))
+* **storybook:** i18next not loading ([4752fc5](https://github.com/Famous-Roasters/frontend/commit/4752fc5fc131f669c45af5e95fa87353c48e6feb))
+
+
+### Features
+
+* **product rating:** add rating modal ([451da37](https://github.com/Famous-Roasters/frontend/commit/451da371a0fe1300773e343ebc764ca012ae72e7))
+* **rating:** rating component ([0090d22](https://github.com/Famous-Roasters/frontend/commit/0090d22a4eb959f9650b36c99c6f1c946744a027))
+
 ## [1.46.1](https://github.com/Famous-Roasters/frontend/compare/v1.46.0...v1.46.1) (2022-08-19)
 
 # [1.46.0](https://github.com/Famous-Roasters/frontend/compare/v1.45.0...v1.46.0) (2022-08-19)
