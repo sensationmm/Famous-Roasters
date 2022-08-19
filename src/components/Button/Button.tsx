@@ -23,6 +23,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   center?: boolean
   arrowOverride?: IconName
   disabled?: boolean
+  fullWidth?: boolean
 }
 
 const getButtonClassNames = (
@@ -31,10 +32,14 @@ const getButtonClassNames = (
   hasArrow: boolean,
   center: boolean,
   disabled: boolean,
+  fullWidth: boolean,
 ): Record<string, string> => {
   const classNames: string[] = ['relative', 'inline-flex', 'flex-row', 'items-center', 'rounded-full', 'border-2']
   if (center) {
     classNames.push('justify-center')
+  }
+  if (fullWidth) {
+    classNames.push('w-full')
   }
   const icon: string[] = []
   const arrow: string[] = []
@@ -125,9 +130,10 @@ export const Button: React.FC<ButtonProps> = ({
   className,
   arrowOverride,
   disabled = false,
+  fullWidth = false,
   ...props
 }: ButtonProps) => {
-  const classes = getButtonClassNames(emphasis, size, hasArrow, center, disabled)
+  const classes = getButtonClassNames(emphasis, size, hasArrow, center, disabled, fullWidth)
   return (
     <button
       className={className ? `${className} ${classes.button}` : classes.button}

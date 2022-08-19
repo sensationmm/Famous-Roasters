@@ -6,8 +6,8 @@ type Scale = {
   value: number
   label: string
 }
-type RatingProps = {
-  value: Scale['value']
+export type RatingProps = {
+  value: Scale['value'] | undefined
   setValue: (val: Scale['value']) => void
 }
 

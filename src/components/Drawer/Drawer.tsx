@@ -5,11 +5,20 @@ import { Typography, TypographySize, TypographyType } from 'src/components'
 
 interface DialogProps extends React.HTMLAttributes<HTMLElement> {
   trigger: React.ReactElement
-  title: string
+  title?: string
   body: ReactNode
+  closeButton?: (onclick: () => void) => React.ReactElement
+  showCloseButton?: boolean
 }
 
-export const Drawer: React.FC<DialogProps> = ({ trigger, title, body, className }) => {
+export const Drawer: React.FC<DialogProps> = ({
+  trigger,
+  title,
+  body,
+  className,
+  closeButton,
+  showCloseButton = false,
+}) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const closeDrawer = () => setIsOpen(false)
@@ -46,26 +55,33 @@ export const Drawer: React.FC<DialogProps> = ({ trigger, title, body, className 
             leaveTo="-translate-x-full"
           >
             <div className="relative w-full bg-white shadow-xl pb-12 flex flex-col overflow-y-auto">
-              <div className="px-5 mt-0.5 py-4 flex justify-between border-b border-coreUI-background-images">
-                <button
-                  type="button"
-                  className="-m-2 p-2 rounded-md inline-flex items-center justify-center text-gray-400"
-                  onClick={closeDrawer}
-                  data-testid="drawer-dismiss"
-                >
-                  <span className="sr-only">close</span>
-                  <ChevronLeftIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
-                <Typography
-                  type={TypographyType.Paragraph}
-                  size={TypographySize.Large}
-                  className="text-coreUI-text-secondary py-0.5"
-                >
-                  {title}
-                </Typography>
-                <span />
-              </div>
-              {body}
+              <>
+                <div className="min-h-[90vh]">
+                  <div className="px-5 mt-0.5 py-4 flex justify-between border-b border-coreUI-background-images">
+                    <button
+                      type="button"
+                      className="-m-2 p-2 rounded-md inline-flex items-center justify-center text-gray-400"
+                      onClick={closeDrawer}
+                      data-testid="drawer-dismiss"
+                    >
+                      <span className="sr-only">close</span>
+                      <ChevronLeftIcon className="h-6 w-6" aria-hidden="true" />
+                    </button>
+                    {title && (
+                      <Typography
+                        type={TypographyType.Paragraph}
+                        size={TypographySize.Large}
+                        className="text-coreUI-text-secondary py-0.5"
+                      >
+                        {title}
+                      </Typography>
+                    )}
+                    <span />
+                  </div>
+                  {body}
+                </div>
+                {closeButton && showCloseButton && <div className="px-5">{closeButton(closeDrawer)}</div>}
+              </>
             </div>
           </Transition.Child>
         </Dialog>

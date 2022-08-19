@@ -1,0 +1,5 @@
+query rateProduct($productID: String!, $rating: Int!, $comment: String) {
+  rateProduct(productShopifyId: $productID, rating: $rating, comment: $comment) {
+    id
+  }
+}

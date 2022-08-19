@@ -25,6 +25,7 @@ import {
 } from 'src/components'
 import { useAuth } from 'src/config/cognito'
 const USER_PROFILE = loader('src/graphql/queries/userProfile.query.graphql')
+import { OrderMock } from 'src/_mocks'
 import { formatDate, formatPrice } from 'src/utils'
 
 interface TasteFinderProfile extends TasteProfileProps {
@@ -84,7 +85,7 @@ export const Profile: React.FC = () => {
   const navigate = useNavigate()
   const [userName, setUserName] = useState<string>()
   const [userProfile, setUserProfile] = useState<UserProfile>()
-  const [lastOrder, setLastOrder] = useState<Order>()
+  const [lastOrder, setLastOrder] = useState<Order>(OrderMock.result.data.orders.edges[0].node)
   const [ordersLoading, setOrdersLoading] = useState<boolean>(false)
   const [getUserProfile] = useLazyQuery(USER_PROFILE)
 
@@ -218,7 +219,7 @@ export const Profile: React.FC = () => {
 
         {lastOrder && (
           <div className={containerStyle}>
-            <div className={sectionStyle}>
+            <div className={`${sectionStyle} pb-0`}>
               <Typography as="h2" type={TypographyType.Heading} size={TypographySize.Small} className="mb-3">
                 {t('pages.profile.sections.lastOrder.title')}
               </Typography>
@@ -269,10 +270,10 @@ export const Profile: React.FC = () => {
                 </div>
               </div>
 
-              <div className="pt-2 pb-8">
+              <div className="pt-2">
                 <Carousel
                   slides={lastOrder.lineItems.edges.map((item) => (
-                    <OrderTile node={item.node} productId={item.node.product.id} />
+                    <OrderTile node={item.node} productId={item.node.product.id} showRate />
                   ))}
                   tile
                 />

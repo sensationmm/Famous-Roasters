@@ -41,15 +41,19 @@ import { Loader } from './Loader'
 import { CoffeeAroma, MyAroma } from './MyAroma'
 import { Navigation, NavigationTheme } from './Navigation'
 import { Notification } from './Notification'
+import type { OrderTileProps } from './OrderTile'
 import { OrderTile } from './OrderTile'
 import { OriginProductionSpecs } from './OriginProductionSpecs'
 import { ProductTile } from './ProductTile'
 import { ProductTileLoader } from './ProductTile/ProductTileLoader'
 import { QuantitySelect } from './QuantitySelect'
+import type { RatingProps } from './Rating'
+import { Rating } from './Rating'
 import { StickyBottomNavigation } from './StickyBottomNavigation'
 import { TabsNavigation } from './TabsNavigation'
 import { Tag, TagSwatch, TagType } from './Tag'
 import { TasteProfile, TasteProfileProps } from './TasteProfile'
+import { TextArea } from './TextArea'
 import { Typography, TypographySize, TypographyType } from './Typography'
 
 export { AuthCognitoErrors as AuthCognitoErrors }
@@ -106,9 +110,12 @@ export { Navigation as Navigation }
 export { NavigationTheme as NavigationTheme }
 export { Notification as Notification }
 export { OrderTile as OrderTile }
+export { OrderTileProps }
 export { OriginProductionSpecs as OriginProductionSpecs }
 export { ProductTile as ProductTile }
 export { ProductTileLoader }
+export { Rating }
+export type { RatingProps }
 export { StickyBottomNavigation as StickyBottomNavigation }
 export { QuantitySelect as QuantitySelect }
 export { TabsNavigation as TabsNavigation }
@@ -118,6 +125,7 @@ export { TagType as TagType }
 export type { TasteInfoEntry as TasteInfoEntry }
 export { TasteProfile as TasteProfile }
 export type { TasteProfileProps as TasteProfileProps }
+export { TextArea }
 export { Typography as Typography }
 export { TypographyType as TypographyType }
 export { TypographySize as TypographySize }
