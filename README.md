@@ -153,18 +153,6 @@ Builds storybook as a static build application.
 
 Deploy runner for storybook.
 
-### Searching & Filtering the Catalogue
-
-Searching and filtering is implemented with [Algolia](https://algolia.com), a search-as-a-service provider. Credentials are in 1Password.
-
-Shopify and Algolia are integrated via the [Algolia Search and Discovery app](https://famousroasters.myshopify.com/admin/apps/algolia-search), and any product changes are automatically mirrored to the indices in Algolia.
-
-There are [4 indices](https://www.algolia.com/apps/UJO1LDXRBG/indices) at the moment: A main index called `products`, and 3 replicas called `products_price_asc`, `products_price_desc`, and `products_recently_ordered_count_desc` that are sorted replicas of `products`.
-
-Many filters operate on Shopify metafields, which can be exposed as facets in Algolia. You can see all facets for the main index [here](https://www.algolia.com/apps/UJO1LDXRBG/explorer/configuration/products/facets). If, for some reason, the metafields disappear from the list of facets (which would result in broken/empty filter UIs), they can be manually re-added there. This has happened before when triggering a re-indexing from Shopify. The format for these facet attributes follows this pattern: `"meta.my_fields.aroma"`.
-
-The filter UIs are implemented using the [React InstantSearch Hooks API](https://www.algolia.com/doc/api-reference/widgets/react-hooks/), a collection of React components and hooks to build customized search UIs.
-
 <!-- Create React App -->
 
 ### Create React App
@@ -241,6 +229,18 @@ This app includes [Storybook](https://storybook.js.org/docs/react/get-started/in
 i18n is handled by [i18next](https://www.i18next.com/). As of today, the only available language is german - `de`.
 
 The configs for i18next can be found at `src/config/i18n/i18n.ts` and the language json files at `src/assets/i18n`.
+
+### Searching & Filtering the Catalogue
+
+Searching and filtering is implemented with [Algolia](https://algolia.com), a search-as-a-service provider. Credentials are in 1Password.
+
+Shopify and Algolia are integrated via the [Algolia Search and Discovery app](https://famousroasters.myshopify.com/admin/apps/algolia-search), and any product changes are automatically mirrored to the indices in Algolia.
+
+There are [4 indices](https://www.algolia.com/apps/UJO1LDXRBG/indices) at the moment: A main index called `products`, and 3 replicas called `products_price_asc`, `products_price_desc`, and `products_recently_ordered_count_desc` that are sorted replicas of `products`.
+
+Many filters operate on Shopify metafields, which can be exposed as facets in Algolia. You can see all facets for the main index [here](https://www.algolia.com/apps/UJO1LDXRBG/explorer/configuration/products/facets). If, for some reason, the metafields disappear from the list of facets (which would result in broken/empty filter UIs), they can be manually re-added there. This has happened before when triggering a re-indexing from Shopify, and the problem [has been acknowledged by Algolia](https://discourse.algolia.com/t/shopify-metafields-disappear-from-facet-list-after-reindexing/15947/2). The format for these facet attributes follows this pattern: `"meta.my_fields.aroma"`.
+
+The filter UIs are implemented using the [React InstantSearch Hooks API](https://www.algolia.com/doc/api-reference/widgets/react-hooks/), a collection of React components and hooks to build customized search UIs.
 
 <!-- Commiting code -->
 
