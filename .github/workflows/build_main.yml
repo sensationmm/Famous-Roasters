@@ -54,7 +54,7 @@ jobs:
           yarn lint
 
       - name: Unit Tests
-        run: yarn run test:ci
+        run: yarn run test:ci -u
 
       - uses: actions/upload-artifact@master
         with:
@@ -64,7 +64,7 @@ jobs:
       - name: Build & Package
         run: yarn run build && npx semantic-release --debug
         env:
-          REACT_APP_DOMAIN_SHOP: '//staging.shop.60beans.com/'
+          REACT_APP_DOMAIN_SHOP: ${{ secrets.REACT_APP_DOMAIN_SHOP_STAGING }}
           REACT_APP_HYGRAPH_CONTENT_GRAPHQL_ENDPOINT: ${{ secrets.REACT_APP_HYGRAPH_CONTENT_GRAPHQL_ENDPOINT}}
           REACT_APP_SHOPIFY_ADMIN_GRAPHQL_ENDPOINT: ${{ secrets.REACT_APP_SHOPIFY_ADMIN_GRAPHQL_ENDPOINT}}
           REACT_APP_SHOPIFY_ADMIN_ACCESS_TOKEN: ${{ secrets.REACT_APP_SHOPIFY_ADMIN_ACCESS_TOKEN}}
@@ -203,7 +203,7 @@ jobs:
           yarn lint
 
       - name: Unit Tests
-        run: yarn run test:ci
+        run: yarn run test:ci -u
 
       - uses: actions/upload-artifact@master
         with:
@@ -213,7 +213,7 @@ jobs:
       - name: Build & Package
         run: yarn run build
         env:
-          REACT_APP_DOMAIN_SHOP: '//shop.60beans.com/'
+          REACT_APP_DOMAIN_SHOP: ${{ secrets.REACT_APP_DOMAIN_SHOP_PRODUCTION }}
           REACT_APP_SHOPIFY_ADMIN_GRAPHQL_ENDPOINT: ${{ secrets.REACT_APP_SHOPIFY_ADMIN_GRAPHQL_ENDPOINT}}
           REACT_APP_SHOPIFY_ADMIN_ACCESS_TOKEN: ${{ secrets.REACT_APP_SHOPIFY_ADMIN_ACCESS_TOKEN}}
           REACT_APP_SHOPIFY_STOREFRONT_GRAPHQL_ENDPOINT: ${{ secrets.REACT_APP_SHOPIFY_STOREFRONT_GRAPHQL_ENDPOINT }}
