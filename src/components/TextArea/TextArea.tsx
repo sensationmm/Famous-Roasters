@@ -9,7 +9,7 @@ type TextAreaProps = {
   setValue: (val: string) => void
   limit?: number
 }
-
+//sdfsdf
 export const TextArea: React.FC<TextAreaProps> = forwardRef(
   ({ id, rows = 5, value, setValue, limit = 0 }: TextAreaProps, ref) => {
     const [charCount, setCharCount] = useState(0)
@@ -31,6 +31,7 @@ export const TextArea: React.FC<TextAreaProps> = forwardRef(
     return (
       <div className="border border-coreUI-text-secondary p-2">
         <textarea
+          data-testid="component-textarea"
           id={id}
           ref={ref}
           rows={rows}
