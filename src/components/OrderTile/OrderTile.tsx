@@ -26,7 +26,7 @@ export const OrderTile: React.FC<OrderTileProps> = ({ ...props }) => {
   } = props
 
   return (
-    <div data-testid="wrapper" className={'flex pt-8 md:px-6'}>
+    <div data-testid="wrapper" className={'flex pt-8 md:px-6 w-full'}>
       <div
         className="flex justify-center items-center shrink-0 self-center relative w-32 h-32 cursor-pointer"
         onClick={() => navigate(`/product/${getSimplifiedProductId(productId)}`)}

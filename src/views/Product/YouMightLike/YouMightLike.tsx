@@ -1,5 +1,4 @@
 import { useQuery } from '@apollo/client/react/hooks'
-import { Collection, ProductConnection } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
 import React from 'react'
 import { Link } from 'react-router-dom'
@@ -7,20 +6,7 @@ import { ErrorPrompt, Loader, ProductTile } from 'src/components'
 import { shopifyAccessoryCollection, shopifyCoffeeCollection } from 'src/config'
 import useBreakpoint from 'src/hooks/useBreakpoint'
 import { getSimplifiedProductId } from 'src/utils/formatters'
-
-import { ProductCustom } from '../Product'
-
-interface ProductConnectionCustom extends ProductConnection {
-  nodes: Array<ProductCustom>
-}
-
-interface CollectionCustom extends Collection {
-  products: ProductConnectionCustom
-}
-
-interface CollectionQuery {
-  collection: CollectionCustom
-}
+import { CollectionQuery } from 'src/views/Catalogue'
 
 interface YouMightLikeProps {
   productId: string

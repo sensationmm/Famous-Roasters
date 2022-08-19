@@ -18,15 +18,21 @@ import {
   MyAroma,
   NavigationTheme,
   OrderTile,
+  ProductTile,
   TasteProfileProps,
   Typography,
   TypographySize,
   TypographyType,
 } from 'src/components'
+import { shopifyAccessoryCollection, storeFrontClient } from 'src/config'
 import { useAuth } from 'src/config/cognito'
+import useBreakpoint from 'src/hooks/useBreakpoint'
 const USER_PROFILE = loader('src/graphql/queries/userProfile.query.graphql')
 import { OrderMock } from 'src/_mocks'
-import { formatDate, formatPrice } from 'src/utils'
+import { formatDate, formatPrice, getSimplifiedProductId } from 'src/utils'
+
+import { CollectionQuery } from '../Catalogue'
+import { ProductCustom } from '../Product'
 
 interface TasteFinderProfile extends TasteProfileProps {
   coffeeType: string
@@ -83,14 +89,21 @@ export const Profile: React.FC = () => {
   const [user] = useAuth()
   const { t } = useTranslation()
   const navigate = useNavigate()
+  const breakpoint = useBreakpoint()
   const [userName, setUserName] = useState<string>()
   const [userProfile, setUserProfile] = useState<UserProfile>()
   const [lastOrder, setLastOrder] = useState<Order>(OrderMock.result.data.orders.edges[0].node)
   const [ordersLoading, setOrdersLoading] = useState<boolean>(false)
   const [getUserProfile] = useLazyQuery(USER_PROFILE)
+  const GET_PRODUCTS = loader('src/graphql/queries/products.query.graphql')
+  const shopifyClient = storeFrontClient()
+  const [accessories, setAccessories] = useState<ProductCustom[]>([])
+  const [loadingAccessories, setLoadingAccessories] = useState<boolean>(true)
 
   useEffect(() => {
     document.title = `${t('brand.name')} | ${t('pages.profile.title')}`
+
+    accessories.length === 0 && fetchAccessories()
   }, [])
 
   useEffect(() => {
@@ -127,6 +140,36 @@ export const Profile: React.FC = () => {
       })
   }, [user?.isValid])
 
+  const fetchAccessories = async () => {
+    shopifyClient
+      .query({
+        query: GET_PRODUCTS,
+        variables: {
+          collectionId: shopifyAccessoryCollection,
+          first: 10,
+          last: null,
+          before: null,
+          after: null,
+          sortKey: undefined,
+          reverse: undefined,
+        },
+      })
+      .then((res) => {
+        const { data } = res
+        setLoadingAccessories(false)
+        const nodes = ((data as CollectionQuery)?.collection?.products?.nodes || [])
+          .slice()
+          .filter((node) => node.totalInventory && node.totalInventory > 0)
+          .sort(() => Math.random() - 0.5)
+
+        setAccessories(nodes)
+      })
+      .catch((err) => {
+        console.log(err.networkError)
+        throw new Error('Error fetching accessories', err)
+      })
+  }
+
   const signOut = async () => {
     await Auth.signOut().catch((err) => new Error(err))
     navigate('/login')
@@ -135,7 +178,6 @@ export const Profile: React.FC = () => {
   }
 
   const containerStyle = 'w-full border-b border-brand-grey-bombay'
-
   const sectionStyle = 'w-full max-w-7xl mx-auto px-6 xl:px-8 py-8'
 
   return (
@@ -153,7 +195,7 @@ export const Profile: React.FC = () => {
                     className="font-syne mb-3"
                   >
                     {t('pages.profile.greeting')}{' '}
-                    {userName || t('pages.featuredProduct.yourCoffeeType.namePlaceholder')}
+                    {userName || t('pages.featuredProduct.yourCoffeeType.namePlaceholder')},
                   </Typography>
                   <Typography as="p" size={TypographySize.Base}>
                     {t('pages.profile.intro')}
@@ -270,7 +312,7 @@ export const Profile: React.FC = () => {
                 </div>
               </div>
 
-              <div className="pt-2">
+              <div className="pt-2 pb-8">
                 <Carousel
                   slides={lastOrder.lineItems.edges.map((item) => (
                     <OrderTile node={item.node} productId={item.node.product.id} showRate />
@@ -281,19 +323,60 @@ export const Profile: React.FC = () => {
             </div>
           </div>
         )}
+
+        {loadingAccessories && (
+          <div className={containerStyle}>
+            <div className={`${sectionStyle}`}>
+              <Loader />
+            </div>
+          </div>
+        )}
+
+        {accessories.length > 0 && (
+          <div className={containerStyle}>
+            <div className={sectionStyle}>
+              <Typography as="h2" type={TypographyType.Heading} size={TypographySize.Small} className="mb-3">
+                {t('pages.profile.sections.lastOrder.productSuggestionTitle')}
+              </Typography>
+              <Typography as="p" size={TypographySize.Base} className="mb-3">
+                {t('pages.profile.sections.lastOrder.productSuggestionText')}
+              </Typography>
+              <div className="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+                {accessories.slice(0, breakpoint === 'lg' ? 3 : 2).map((node: ProductCustom, i: number) => {
+                  const id = getSimplifiedProductId(node.id)
+                  return (
+                    <Link to={`/product/${id}`} key={`product-tile-link-${i}`}>
+                      <ProductTile key={`title-${i}`} productNode={node} />
+                    </Link>
+                  )
+                })}
+              </div>
+              <div className="flex justify-center pt-14">
+                <Button
+                  emphasis={ButtonEmphasis.Tertiary}
+                  onClick={() => navigate('/catalogue?isAccessory=true')}
+                  fullWidth
+                >
+                  {t('pages.profile.sections.lastOrder.productSuggestionCTA')}
+                </Button>
+              </div>
+            </div>
+          </div>
+        )}
+
         <div className={containerStyle}>
           <div className={`${sectionStyle} pb-14`}>
-            <Typography as="h2" type={TypographyType.Heading} size={TypographySize.Tiny}>
+            <Typography as="h2" type={TypographyType.Heading} size={TypographySize.Small}>
               {t('pages.profile.sections.discover.title')}
             </Typography>
 
             {/* TODO: make this content dynamic from CMS */}
             <div className="grid w-full md:grid-cols-2">
-              <div className="grid grid-cols-2 gap-4 px-3 py-6 border-b border-brand-grey-bombay md:max-w-sm md:border-0">
+              <div className="grid grid-cols-2 gap-4 px-0 py-6 border-b border-brand-grey-bombay md:max-w-sm md:border-0">
                 <Link to={'/catalogue?vendor=Nomad'}>
                   <img src={CoffeeTaste} className="w-full" />
                 </Link>
-                <div>
+                <div className="flex flex-col justify-center">
                   <Typography as="p" className="mb-4">
                     NOMAD Coffee is our latetest roaster in the catalog!
                   </Typography>
@@ -305,7 +388,7 @@ export const Profile: React.FC = () => {
                     arrowOverride={IconName.ArrowRight}
                     onClick={() => navigate('/catalogue?vendor=Nomad')}
                   >
-                    Explore products
+                    {t('pages.profile.sections.discover.cta')}
                   </Button>
                 </div>
               </div>
@@ -314,7 +397,7 @@ export const Profile: React.FC = () => {
                 <Link to={'/catalogue?origin=BU'}>
                   <img src={Myanmar} className="w-full" />
                 </Link>
-                <div>
+                <div className="flex flex-col justify-center">
                   <Typography as="p" className="mb-4">
                     Discover new complex origins: Myanmar!
                   </Typography>
@@ -326,7 +409,7 @@ export const Profile: React.FC = () => {
                     arrowOverride={IconName.ArrowRight}
                     onClick={() => navigate('/catalogue?origin=BU')}
                   >
-                    Explore products
+                    {t('pages.profile.sections.discover.cta')}
                   </Button>
                 </div>
               </div>

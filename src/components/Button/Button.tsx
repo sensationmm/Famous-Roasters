@@ -35,7 +35,7 @@ const getButtonClassNames = (
   fullWidth: boolean,
 ): Record<string, string> => {
   const classNames: string[] = ['relative', 'inline-flex', 'flex-row', 'items-center', 'rounded-full', 'border-2']
-  if (center) {
+  if (center || fullWidth) {
     classNames.push('justify-center')
   }
   if (fullWidth) {
@@ -116,6 +116,9 @@ const getButtonClassNames = (
     classNames.push('pointer-events-none', 'opacity-70')
     icon.push('pointer-events-none')
     arrow.push('pointer-events-none')
+  }
+  if (fullWidth) {
+    classNames.push('w-full md:max-w-xs')
   }
   return { button: classNames.join(' '), icon: icon.join(' '), arrow: arrow.join(' ') }
 }

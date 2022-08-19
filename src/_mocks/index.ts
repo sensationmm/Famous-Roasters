@@ -1,5 +1,10 @@
 import { BlogCategoryListMock, BlogCategoryListMockError } from './BlogCategoryMock'
 import {
+  BlogListByCategoryEmptyMock,
+  BlogListByCategoryMock,
+  BlogListByCategoryMockError,
+} from './BlogListByCategoryMock'
+import {
   CartAddLinesMock,
   CartCreateMock,
   CartLinesRemoveMock,
@@ -80,3 +85,6 @@ export { TasteFinderMockQueryFilter as TasteFinderMockQueryFilter }
 export { UserProfileMock as UserProfileMock }
 export { BlogCategoryListMock as BlogCategoryListMock }
 export { BlogCategoryListMockError as BlogCategoryListMockError }
+export { BlogListByCategoryMock as BlogListByCategoryMock }
+export { BlogListByCategoryEmptyMock as BlogListByCategoryEmptyMock }
+export { BlogListByCategoryMockError as BlogListByCategoryMockError }

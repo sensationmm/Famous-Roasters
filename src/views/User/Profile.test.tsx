@@ -4,7 +4,12 @@ import Amplify from 'aws-amplify'
 import React from 'react'
 import { I18nextProvider } from 'react-i18next'
 import ReactRouterDom, { LinkProps } from 'react-router-dom'
-import { OrderMock, OrdersMock, UserProfileMock } from 'src/_mocks'
+import {
+  CatalogueMockAccessoriesYouMightLike as mockCatalogueAccessories,
+  OrderMock,
+  OrdersMock,
+  UserProfileMock,
+} from 'src/_mocks'
 import { i18n } from 'src/config'
 import { awsconfig } from 'src/config/cognito/auth.hook'
 
@@ -49,6 +54,13 @@ jest.mock('src/components/Carousel/Carousel', () => ({
   },
 }))
 
+jest.mock('src/config', () => ({
+  ...jest.requireActual('src/config'),
+  storeFrontClient: () => ({
+    query: () => Promise.resolve({ data: mockCatalogueAccessories.result.data, loading: false, error: null }),
+  }),
+}))
+
 describe('Profile view', () => {
   it('Renders correctly', async () => {
     const { container } = render(
@@ -64,7 +76,7 @@ describe('Profile view', () => {
         </I18nextProvider>
       </MockedProvider>,
     )
-    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    await waitFor(() => new Promise((res) => setTimeout(res, 500)))
     expect(container).toMatchSnapshot()
     expect(fetchSpy).toHaveBeenCalledTimes(1)
   })
@@ -83,6 +95,7 @@ describe('Profile view', () => {
         <Profile />
       </MockedProvider>,
     )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
     const button = await screen.findByTestId(`button-taste-profile`)
     button.click()
     expect(mockUseNavigate).toHaveBeenCalledWith(`/taste-finder?step=bearbeiten`)
@@ -102,6 +115,7 @@ describe('Profile view', () => {
         <Profile />
       </MockedProvider>,
     )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
     const button = await screen.findByTestId(`button-${btn}`)
     button.click()
     expect(mockUseNavigate).toHaveBeenCalledWith(`/catalogue?${btn}`)

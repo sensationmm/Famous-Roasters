@@ -34,6 +34,7 @@ import { Guide, GuideType, TasteInfoEntry } from './Guide'
 import { Icon, IconName, IconSize } from './Icon'
 import { IconCheckbox } from './IconCheckbox'
 import { ImageCheckbox } from './ImageCheckbox'
+import { InfoBox } from './InfoBox'
 import { Input, InputMode } from './Input'
 import { Layout } from './Layout'
 import { Listbox, ListBoxItem } from './Listbox'
@@ -99,6 +100,7 @@ export { IconName as IconName }
 export { IconSize as IconSize }
 export { IconCheckbox as IconCheckbox }
 export { ImageCheckbox as ImageCheckbox }
+export { InfoBox }
 export { Input as Input }
 export { InputMode as InputMode }
 export { Layout as Layout }

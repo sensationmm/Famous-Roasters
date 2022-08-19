@@ -13,22 +13,20 @@ export const BlogCategoryListMock = {
         {
           __typename: 'Category',
           name: 'Kaffeewissen',
-          summary:
-            'Lever up your coffee-culture. Our expert will touch different topics: beans types, origins, cupping and many more...',
+          summary: 'Werde zum Kaffee-Nerd. Unsere Experten erklären alles: Von Aroma bis Zubereitungsmethode.',
           tags: ['Nachhaltigkeit', 'SpecialityCoffee'],
         },
         {
           __typename: 'Category',
           name: 'Kaffeeequipment',
           summary:
-            'Here our coffee experts test and review different equipment. They aim to cover from basic to more niche equipment.',
+            'Unsere Experten testen und bewerten das beste Kaffeeequipment. Wir wollen sicherstellen, dass du die beste Hardware für einen exzellenten Kaffee hast.',
           tags: ['Handfiltervergleich', 'Grundausstattung'],
         },
         {
           __typename: 'Category',
           name: 'Kaffeetrends',
-          summary:
-            'Here our coffee experts test and review different equipment. They aim to cover from basic to more niche equipment.',
+          summary: 'Die aktuellsten Trends über die Kaffeewelt.',
           tags: ['Gadgets', 'Roestungen'],
         },
         {

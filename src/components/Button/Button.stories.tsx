@@ -16,6 +16,7 @@ Default.args = {
   children: 'Button',
   hasArrow: false,
   disabled: false,
+  fullWidth: false,
 }
 
 export const Primary = Template.bind({})
@@ -24,6 +25,7 @@ Primary.args = {
   children: 'Button',
   hasArrow: false,
   disabled: false,
+  fullWidth: false,
 }
 
 export const Secondary = Template.bind({})
@@ -32,6 +34,7 @@ Secondary.args = {
   children: 'Button',
   hasArrow: false,
   disabled: false,
+  fullWidth: false,
 }
 
 export const Tertiary = Template.bind({})
@@ -41,4 +44,5 @@ Tertiary.args = {
   hasArrow: false,
   center: false,
   disabled: false,
+  fullWidth: false,
 }
