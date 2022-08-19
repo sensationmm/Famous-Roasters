@@ -1,3 +1,24 @@
+# [1.46.0](https://github.com/Famous-Roasters/frontend/compare/v1.45.0...v1.46.0) (2022-08-19)
+
+
+### Bug Fixes
+
+* **blog:** wrong weight of font was being loaded ([02a912f](https://github.com/Famous-Roasters/frontend/commit/02a912f0d0ac23a1a97b2a30cadf63e1d0d403ac))
+* **ci:** make sure to update snapshots with `-u` flag ([8a2c09c](https://github.com/Famous-Roasters/frontend/commit/8a2c09ce44d3802378023430d4ed9a0ae29a3bd9))
+* **ci:** purge snapshots ([39e56bf](https://github.com/Famous-Roasters/frontend/commit/39e56bf9cd76cc17982b52e5f93fc65c5b8413b3))
+* **ci:** update changelog ([#175](https://github.com/Famous-Roasters/frontend/issues/175)) ([1bb0c6e](https://github.com/Famous-Roasters/frontend/commit/1bb0c6e1e79f6b04474c8d21b666530d0b778bba))
+* **ci:** update tag version ([36c15f5](https://github.com/Famous-Roasters/frontend/commit/36c15f5ebbef08e225c0cb0871bbb9e8a37ef534))
+* **doc:** update README ([cb58688](https://github.com/Famous-Roasters/frontend/commit/cb586883bd7345fdc4585e0e5bd6f7adac2ddc8f))
+* **profile:** design amends ([436d8fc](https://github.com/Famous-Roasters/frontend/commit/436d8fce6c66ea6ec1f44b2a394a9028c855c0cc))
+
+
+### Features
+
+* **blog:** add new blog list by category view ([a4afee1](https://github.com/Famous-Roasters/frontend/commit/a4afee14fc84680588b96d4224879c6bac0d2111))
+* **blog:** add new query for blogs by category ([8673ab0](https://github.com/Famous-Roasters/frontend/commit/8673ab09d00648c79358598f3e2fbf0f91015cc0))
+* **blog:** add new routes ([ce69c11](https://github.com/Famous-Roasters/frontend/commit/ce69c11630eab6ec2cd9ccc25c3e60d1669c5ee2))
+* **blog:** add new translations for UI copy ([6655d53](https://github.com/Famous-Roasters/frontend/commit/6655d53d9b97ad7fffb06395ab1211e4257ba7bc))
+
 # [1.45.0](https://github.com/Famous-Roasters/frontend/compare/v1.44.0...v1.45.0) (2022-08-17)
 
 
