@@ -62,7 +62,7 @@ jobs:
           path: coverage
 
       - name: Build & Package
-        run: yarn run build && npx semantic-release
+        run: yarn run build && npx semantic-release --debug
         env:
           REACT_APP_DOMAIN_SHOP: ${{ secrets.REACT_APP_DOMAIN_SHOP_STAGING }}
           REACT_APP_HYGRAPH_CONTENT_GRAPHQL_ENDPOINT: ${{ secrets.REACT_APP_HYGRAPH_CONTENT_GRAPHQL_ENDPOINT}}
