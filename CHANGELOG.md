@@ -1,3 +1,15 @@
+# [1.48.0](https://github.com/Famous-Roasters/frontend/compare/v1.47.0...v1.48.0) (2022-08-20)
+
+
+### Bug Fixes
+
+* **rating:** increase test coverage ([d880861](https://github.com/Famous-Roasters/frontend/commit/d880861c4a13b6ff4d6c32b9d72b6e266558767c))
+
+
+### Features
+
+* **rating:** add missing comment placeholder ([ef561a4](https://github.com/Famous-Roasters/frontend/commit/ef561a4a934ba7f58a18216451423d9182d95eec))
+
 # [1.47.0](https://github.com/Famous-Roasters/frontend/compare/v1.46.1...v1.47.0) (2022-08-19)
 
 
