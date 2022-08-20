@@ -293,9 +293,9 @@ exports[`Button component renders with icon 1`] = `
     <svg
       class="mr-4 fill-brand-black text-brand-black stroke-brand-black fill-brand-black stroke-brand-black"
       fill="inherit"
-      height="24"
+      height="25"
       viewBox="0 0 30 30"
-      width="24"
+      width="25"
     >
       <path
         clip-rule="evenodd"

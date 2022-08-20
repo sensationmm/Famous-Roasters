@@ -9,14 +9,14 @@ exports[`Featured product view Renders correctly for a successful call with arom
       class="bg-white z-10"
     >
       <header
-        class="relative bg-white"
+        class="relative bg-brand-black"
       >
         <nav
           aria-label="Top"
           class="max-w-7xl mx-auto px-4 md:px-6 xl:px-8"
         >
           <div
-            class="h-16 mt-0.5 flex items-center justify-between border-b border-brand-grey-whisper"
+            class="h-16 flex items-center justify-between border-b border-brand-black"
           >
             <div
               class="flex-1 flex items-center xl:hidden"
@@ -52,16 +52,26 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="hidden xl:flex-1 xl:block xl:self-stretch"
             >
               <div
-                class="h-full flex space-x-8"
+                class="h-full flex space-x-10"
               >
                 <a
-                  class="flex items-center text-gray-700 hover:text-gray-800"
-                  href="/taste-finder"
+                  class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                  href="//www.60beans.de/uber-uns"
                 >
                   <span
                     class="uppercase text-sm leading-5"
                   >
-                    Tastefinder
+                    Über uns
+                  </span>
+                </a>
+                <a
+                  class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                  href="//blog.60beans.com"
+                >
+                  <span
+                    class="uppercase text-sm leading-5"
+                  >
+                    Blog
                   </span>
                 </a>
               </div>
@@ -78,7 +88,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <img
                 alt="60beans"
                 class="h-6"
-                src="60beans-black.svg"
+                src="60beans-light.svg"
               />
             </a>
             <div
@@ -91,31 +101,31 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   class="hidden h-full xl:flex space-x-8 justify-end"
                 >
                   <a
-                    class="flex items-center text-gray-700 hover:text-gray-800"
-                    href="//www.60beans.de/uber-uns"
+                    class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                    href="/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
                     >
-                      Über uns
+                      Tastefinder
                     </span>
                   </a>
                 </div>
                 <a
-                  class="hidden xl:block ml-4"
+                  class="hidden xl:block ml-10"
                   href="/profile"
                 >
                   <svg
                     class="undefined fill-brand-black stroke-brand-black"
                     fill="inherit"
-                    height="24"
-                    viewBox="0 0 33 31"
-                    width="24"
+                    height="25"
+                    viewBox="0 0 24 24"
+                    width="25"
                   >
                     <path
                       clip-rule="evenodd"
-                      d="M16.3,1.1C8.2,1.1,1.6,7.6,1.6,15.5S8.2,30,16.3,30c8.1,0,14.8-6.5,14.8-14.5S24.4,1.1,16.3,1.1z M16.2,8.9 c2.1,0,3.8,1.7,3.8,3.8c0,2-1.8,3.8-3.8,3.8c-2.1,0-3.9-1.7-3.9-3.8C12.4,10.6,14.1,8.9,16.2,8.9z M16.3,18.5c3.9,0,7.5,2.4,8.9,6.1 c-2.5,2.3-5.5,3.5-8.9,3.5c-3.4,0-6.5-1.2-8.9-3.5C8.8,20.9,12.3,18.5,16.3,18.5z M22.1,12.7c0-3.2-2.6-5.7-5.8-5.7 s-5.9,2.6-5.9,5.7c0,1.7,0.8,3.4,2.2,4.4c-2.9,1-5.3,3-6.6,5.8c-1.5-2-2.4-4.5-2.5-7.3v-0.1C3.5,8.6,9.2,3,16.2,3S29,8.6,29,15.5 c0,2.7-0.9,5.2-2.5,7.3c-1.3-2.7-3.7-4.8-6.6-5.8C21.3,16,22.1,14.5,22.1,12.7z"
-                      fill="inherit"
+                      d="M16 8.66663C16 10.8766 14.21 12.6666 12 12.6666C9.79 12.6666 8 10.8766 8 8.66663C8 6.45663 9.79 4.66663 12 4.66663C14.21 4.66663 16 6.45663 16 8.66663ZM4 18.6666C4 16.0066 9.33 14.6666 12 14.6666C14.67 14.6666 20 16.0066 20 18.6666V20.6666H4V18.6666Z"
+                      fill="#FFFFFF"
                       fill-rule="evenodd"
                       stroke="none"
                       stroke-width="none"
@@ -123,38 +133,49 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   </svg>
                 </a>
                 <div
-                  class="ml-4 flow-root xl:ml-6"
+                  class="ml-4 flow-root xl:ml-10"
                 >
                   <a
                     class="group -m-2 p-2 flex items-center"
                     href="/cart"
                     id="toCart"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <div
+                      class="static flex-shrink-0 relative"
                     >
-                      <path
-                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <span
-                      class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800"
-                    >
-                      1
-                    </span>
-                    <span
-                      class="sr-only"
-                    >
-                      items in cart, view bag
-                    </span>
+                      <svg
+                        class="undefined fill-brand-black stroke-brand-black"
+                        fill="inherit"
+                        height="25"
+                        viewBox="0 0 24 24"
+                        width="25"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M0 0.75C0 0.335786 0.335786 0 0.75 0H2.75C3.10751 0 3.41532 0.252345 3.48544 0.602913L3.76485 2H18.75C19.0099 2 19.2513 2.13459 19.388 2.3557C19.5246 2.57681 19.5371 2.85292 19.4208 3.08541L15.4208 11.0854C15.2938 11.3395 15.0341 11.5 14.75 11.5H5.06066L2.98744 13.5732C2.82995 13.7307 2.94149 14 3.16421 14H4.75H14.75C16.2688 14 17.5 15.2312 17.5 16.75C17.5 18.2688 16.2688 19.5 14.75 19.5C13.2312 19.5 12 18.2688 12 16.75C12 16.2999 12.1081 15.875 12.2999 15.5H7.20015C7.39186 15.875 7.5 16.2999 7.5 16.75C7.5 18.2688 6.26878 19.5 4.75 19.5C3.23122 19.5 2 18.2688 2 16.75C2 16.2296 2.14453 15.743 2.39564 15.3281C1.38299 14.8385 1.02537 13.414 1.92678 12.5126L3.93585 10.5035L2.41456 2.89709L2.13515 1.5H0.75C0.335786 1.5 0 1.16421 0 0.75ZM5.36485 10H14.2865L17.5365 3.5H4.06485L5.36485 10ZM4.75 15.5C4.05964 15.5 3.5 16.0596 3.5 16.75C3.5 17.4404 4.05964 18 4.75 18C5.44036 18 6 17.4404 6 16.75C6 16.0596 5.44036 15.5 4.75 15.5ZM14.75 15.5C14.0596 15.5 13.5 16.0596 13.5 16.75C13.5 17.4404 14.0596 18 14.75 18C15.4404 18 16 17.4404 16 16.75C16 16.0596 15.4404 15.5 14.75 15.5Z"
+                          fill="#FFFFFF"
+                          fill-rule="evenodd"
+                          stroke="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                      <span
+                        class="absolute top-3 left-3.5 h-4 w-4 z-10 bg-white rounded-full"
+                      >
+                        <div
+                          class="absolute top-0 left-1 z-15 text-coreUI-text-primary text-xs leading-4 font-semibold"
+                        >
+                          1
+                        </div>
+                      </span>
+                      <span
+                        class="sr-only"
+                      >
+                        items in cart, view bag
+                      </span>
+                    </div>
                   </a>
                 </div>
               </div>
@@ -628,14 +649,14 @@ exports[`Featured product view Renders correctly for a successful call with arom
       class="bg-white z-10"
     >
       <header
-        class="relative bg-white"
+        class="relative bg-brand-black"
       >
         <nav
           aria-label="Top"
           class="max-w-7xl mx-auto px-4 md:px-6 xl:px-8"
         >
           <div
-            class="h-16 mt-0.5 flex items-center justify-between border-b border-brand-grey-whisper"
+            class="h-16 flex items-center justify-between border-b border-brand-black"
           >
             <div
               class="flex-1 flex items-center xl:hidden"
@@ -671,16 +692,26 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="hidden xl:flex-1 xl:block xl:self-stretch"
             >
               <div
-                class="h-full flex space-x-8"
+                class="h-full flex space-x-10"
               >
                 <a
-                  class="flex items-center text-gray-700 hover:text-gray-800"
-                  href="/taste-finder"
+                  class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                  href="//www.60beans.de/uber-uns"
                 >
                   <span
                     class="uppercase text-sm leading-5"
                   >
-                    Tastefinder
+                    Über uns
+                  </span>
+                </a>
+                <a
+                  class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                  href="//blog.60beans.com"
+                >
+                  <span
+                    class="uppercase text-sm leading-5"
+                  >
+                    Blog
                   </span>
                 </a>
               </div>
@@ -697,7 +728,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <img
                 alt="60beans"
                 class="h-6"
-                src="60beans-black.svg"
+                src="60beans-light.svg"
               />
             </a>
             <div
@@ -710,31 +741,31 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   class="hidden h-full xl:flex space-x-8 justify-end"
                 >
                   <a
-                    class="flex items-center text-gray-700 hover:text-gray-800"
-                    href="//www.60beans.de/uber-uns"
+                    class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                    href="/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
                     >
-                      Über uns
+                      Tastefinder
                     </span>
                   </a>
                 </div>
                 <a
-                  class="hidden xl:block ml-4"
+                  class="hidden xl:block ml-10"
                   href="/profile"
                 >
                   <svg
                     class="undefined fill-brand-black stroke-brand-black"
                     fill="inherit"
-                    height="24"
-                    viewBox="0 0 33 31"
-                    width="24"
+                    height="25"
+                    viewBox="0 0 24 24"
+                    width="25"
                   >
                     <path
                       clip-rule="evenodd"
-                      d="M16.3,1.1C8.2,1.1,1.6,7.6,1.6,15.5S8.2,30,16.3,30c8.1,0,14.8-6.5,14.8-14.5S24.4,1.1,16.3,1.1z M16.2,8.9 c2.1,0,3.8,1.7,3.8,3.8c0,2-1.8,3.8-3.8,3.8c-2.1,0-3.9-1.7-3.9-3.8C12.4,10.6,14.1,8.9,16.2,8.9z M16.3,18.5c3.9,0,7.5,2.4,8.9,6.1 c-2.5,2.3-5.5,3.5-8.9,3.5c-3.4,0-6.5-1.2-8.9-3.5C8.8,20.9,12.3,18.5,16.3,18.5z M22.1,12.7c0-3.2-2.6-5.7-5.8-5.7 s-5.9,2.6-5.9,5.7c0,1.7,0.8,3.4,2.2,4.4c-2.9,1-5.3,3-6.6,5.8c-1.5-2-2.4-4.5-2.5-7.3v-0.1C3.5,8.6,9.2,3,16.2,3S29,8.6,29,15.5 c0,2.7-0.9,5.2-2.5,7.3c-1.3-2.7-3.7-4.8-6.6-5.8C21.3,16,22.1,14.5,22.1,12.7z"
-                      fill="inherit"
+                      d="M16 8.66663C16 10.8766 14.21 12.6666 12 12.6666C9.79 12.6666 8 10.8766 8 8.66663C8 6.45663 9.79 4.66663 12 4.66663C14.21 4.66663 16 6.45663 16 8.66663ZM4 18.6666C4 16.0066 9.33 14.6666 12 14.6666C14.67 14.6666 20 16.0066 20 18.6666V20.6666H4V18.6666Z"
+                      fill="#FFFFFF"
                       fill-rule="evenodd"
                       stroke="none"
                       stroke-width="none"
@@ -742,38 +773,49 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   </svg>
                 </a>
                 <div
-                  class="ml-4 flow-root xl:ml-6"
+                  class="ml-4 flow-root xl:ml-10"
                 >
                   <a
                     class="group -m-2 p-2 flex items-center"
                     href="/cart"
                     id="toCart"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <div
+                      class="static flex-shrink-0 relative"
                     >
-                      <path
-                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <span
-                      class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800"
-                    >
-                      1
-                    </span>
-                    <span
-                      class="sr-only"
-                    >
-                      items in cart, view bag
-                    </span>
+                      <svg
+                        class="undefined fill-brand-black stroke-brand-black"
+                        fill="inherit"
+                        height="25"
+                        viewBox="0 0 24 24"
+                        width="25"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M0 0.75C0 0.335786 0.335786 0 0.75 0H2.75C3.10751 0 3.41532 0.252345 3.48544 0.602913L3.76485 2H18.75C19.0099 2 19.2513 2.13459 19.388 2.3557C19.5246 2.57681 19.5371 2.85292 19.4208 3.08541L15.4208 11.0854C15.2938 11.3395 15.0341 11.5 14.75 11.5H5.06066L2.98744 13.5732C2.82995 13.7307 2.94149 14 3.16421 14H4.75H14.75C16.2688 14 17.5 15.2312 17.5 16.75C17.5 18.2688 16.2688 19.5 14.75 19.5C13.2312 19.5 12 18.2688 12 16.75C12 16.2999 12.1081 15.875 12.2999 15.5H7.20015C7.39186 15.875 7.5 16.2999 7.5 16.75C7.5 18.2688 6.26878 19.5 4.75 19.5C3.23122 19.5 2 18.2688 2 16.75C2 16.2296 2.14453 15.743 2.39564 15.3281C1.38299 14.8385 1.02537 13.414 1.92678 12.5126L3.93585 10.5035L2.41456 2.89709L2.13515 1.5H0.75C0.335786 1.5 0 1.16421 0 0.75ZM5.36485 10H14.2865L17.5365 3.5H4.06485L5.36485 10ZM4.75 15.5C4.05964 15.5 3.5 16.0596 3.5 16.75C3.5 17.4404 4.05964 18 4.75 18C5.44036 18 6 17.4404 6 16.75C6 16.0596 5.44036 15.5 4.75 15.5ZM14.75 15.5C14.0596 15.5 13.5 16.0596 13.5 16.75C13.5 17.4404 14.0596 18 14.75 18C15.4404 18 16 17.4404 16 16.75C16 16.0596 15.4404 15.5 14.75 15.5Z"
+                          fill="#FFFFFF"
+                          fill-rule="evenodd"
+                          stroke="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                      <span
+                        class="absolute top-3 left-3.5 h-4 w-4 z-10 bg-white rounded-full"
+                      >
+                        <div
+                          class="absolute top-0 left-1 z-15 text-coreUI-text-primary text-xs leading-4 font-semibold"
+                        >
+                          1
+                        </div>
+                      </span>
+                      <span
+                        class="sr-only"
+                      >
+                        items in cart, view bag
+                      </span>
+                    </div>
                   </a>
                 </div>
               </div>
@@ -1247,14 +1289,14 @@ exports[`Featured product view Renders correctly for a successful call with arom
       class="bg-white z-10"
     >
       <header
-        class="relative bg-white"
+        class="relative bg-brand-black"
       >
         <nav
           aria-label="Top"
           class="max-w-7xl mx-auto px-4 md:px-6 xl:px-8"
         >
           <div
-            class="h-16 mt-0.5 flex items-center justify-between border-b border-brand-grey-whisper"
+            class="h-16 flex items-center justify-between border-b border-brand-black"
           >
             <div
               class="flex-1 flex items-center xl:hidden"
@@ -1290,16 +1332,26 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="hidden xl:flex-1 xl:block xl:self-stretch"
             >
               <div
-                class="h-full flex space-x-8"
+                class="h-full flex space-x-10"
               >
                 <a
-                  class="flex items-center text-gray-700 hover:text-gray-800"
-                  href="/taste-finder"
+                  class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                  href="//www.60beans.de/uber-uns"
                 >
                   <span
                     class="uppercase text-sm leading-5"
                   >
-                    Tastefinder
+                    Über uns
+                  </span>
+                </a>
+                <a
+                  class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                  href="//blog.60beans.com"
+                >
+                  <span
+                    class="uppercase text-sm leading-5"
+                  >
+                    Blog
                   </span>
                 </a>
               </div>
@@ -1316,7 +1368,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <img
                 alt="60beans"
                 class="h-6"
-                src="60beans-black.svg"
+                src="60beans-light.svg"
               />
             </a>
             <div
@@ -1329,31 +1381,31 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   class="hidden h-full xl:flex space-x-8 justify-end"
                 >
                   <a
-                    class="flex items-center text-gray-700 hover:text-gray-800"
-                    href="//www.60beans.de/uber-uns"
+                    class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                    href="/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
                     >
-                      Über uns
+                      Tastefinder
                     </span>
                   </a>
                 </div>
                 <a
-                  class="hidden xl:block ml-4"
+                  class="hidden xl:block ml-10"
                   href="/profile"
                 >
                   <svg
                     class="undefined fill-brand-black stroke-brand-black"
                     fill="inherit"
-                    height="24"
-                    viewBox="0 0 33 31"
-                    width="24"
+                    height="25"
+                    viewBox="0 0 24 24"
+                    width="25"
                   >
                     <path
                       clip-rule="evenodd"
-                      d="M16.3,1.1C8.2,1.1,1.6,7.6,1.6,15.5S8.2,30,16.3,30c8.1,0,14.8-6.5,14.8-14.5S24.4,1.1,16.3,1.1z M16.2,8.9 c2.1,0,3.8,1.7,3.8,3.8c0,2-1.8,3.8-3.8,3.8c-2.1,0-3.9-1.7-3.9-3.8C12.4,10.6,14.1,8.9,16.2,8.9z M16.3,18.5c3.9,0,7.5,2.4,8.9,6.1 c-2.5,2.3-5.5,3.5-8.9,3.5c-3.4,0-6.5-1.2-8.9-3.5C8.8,20.9,12.3,18.5,16.3,18.5z M22.1,12.7c0-3.2-2.6-5.7-5.8-5.7 s-5.9,2.6-5.9,5.7c0,1.7,0.8,3.4,2.2,4.4c-2.9,1-5.3,3-6.6,5.8c-1.5-2-2.4-4.5-2.5-7.3v-0.1C3.5,8.6,9.2,3,16.2,3S29,8.6,29,15.5 c0,2.7-0.9,5.2-2.5,7.3c-1.3-2.7-3.7-4.8-6.6-5.8C21.3,16,22.1,14.5,22.1,12.7z"
-                      fill="inherit"
+                      d="M16 8.66663C16 10.8766 14.21 12.6666 12 12.6666C9.79 12.6666 8 10.8766 8 8.66663C8 6.45663 9.79 4.66663 12 4.66663C14.21 4.66663 16 6.45663 16 8.66663ZM4 18.6666C4 16.0066 9.33 14.6666 12 14.6666C14.67 14.6666 20 16.0066 20 18.6666V20.6666H4V18.6666Z"
+                      fill="#FFFFFF"
                       fill-rule="evenodd"
                       stroke="none"
                       stroke-width="none"
@@ -1361,38 +1413,49 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   </svg>
                 </a>
                 <div
-                  class="ml-4 flow-root xl:ml-6"
+                  class="ml-4 flow-root xl:ml-10"
                 >
                   <a
                     class="group -m-2 p-2 flex items-center"
                     href="/cart"
                     id="toCart"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <div
+                      class="static flex-shrink-0 relative"
                     >
-                      <path
-                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <span
-                      class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800"
-                    >
-                      1
-                    </span>
-                    <span
-                      class="sr-only"
-                    >
-                      items in cart, view bag
-                    </span>
+                      <svg
+                        class="undefined fill-brand-black stroke-brand-black"
+                        fill="inherit"
+                        height="25"
+                        viewBox="0 0 24 24"
+                        width="25"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M0 0.75C0 0.335786 0.335786 0 0.75 0H2.75C3.10751 0 3.41532 0.252345 3.48544 0.602913L3.76485 2H18.75C19.0099 2 19.2513 2.13459 19.388 2.3557C19.5246 2.57681 19.5371 2.85292 19.4208 3.08541L15.4208 11.0854C15.2938 11.3395 15.0341 11.5 14.75 11.5H5.06066L2.98744 13.5732C2.82995 13.7307 2.94149 14 3.16421 14H4.75H14.75C16.2688 14 17.5 15.2312 17.5 16.75C17.5 18.2688 16.2688 19.5 14.75 19.5C13.2312 19.5 12 18.2688 12 16.75C12 16.2999 12.1081 15.875 12.2999 15.5H7.20015C7.39186 15.875 7.5 16.2999 7.5 16.75C7.5 18.2688 6.26878 19.5 4.75 19.5C3.23122 19.5 2 18.2688 2 16.75C2 16.2296 2.14453 15.743 2.39564 15.3281C1.38299 14.8385 1.02537 13.414 1.92678 12.5126L3.93585 10.5035L2.41456 2.89709L2.13515 1.5H0.75C0.335786 1.5 0 1.16421 0 0.75ZM5.36485 10H14.2865L17.5365 3.5H4.06485L5.36485 10ZM4.75 15.5C4.05964 15.5 3.5 16.0596 3.5 16.75C3.5 17.4404 4.05964 18 4.75 18C5.44036 18 6 17.4404 6 16.75C6 16.0596 5.44036 15.5 4.75 15.5ZM14.75 15.5C14.0596 15.5 13.5 16.0596 13.5 16.75C13.5 17.4404 14.0596 18 14.75 18C15.4404 18 16 17.4404 16 16.75C16 16.0596 15.4404 15.5 14.75 15.5Z"
+                          fill="#FFFFFF"
+                          fill-rule="evenodd"
+                          stroke="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                      <span
+                        class="absolute top-3 left-3.5 h-4 w-4 z-10 bg-white rounded-full"
+                      >
+                        <div
+                          class="absolute top-0 left-1 z-15 text-coreUI-text-primary text-xs leading-4 font-semibold"
+                        >
+                          1
+                        </div>
+                      </span>
+                      <span
+                        class="sr-only"
+                      >
+                        items in cart, view bag
+                      </span>
+                    </div>
                   </a>
                 </div>
               </div>
@@ -1866,14 +1929,14 @@ exports[`Featured product view Renders correctly for a successful call with arom
       class="bg-white z-10"
     >
       <header
-        class="relative bg-white"
+        class="relative bg-brand-black"
       >
         <nav
           aria-label="Top"
           class="max-w-7xl mx-auto px-4 md:px-6 xl:px-8"
         >
           <div
-            class="h-16 mt-0.5 flex items-center justify-between border-b border-brand-grey-whisper"
+            class="h-16 flex items-center justify-between border-b border-brand-black"
           >
             <div
               class="flex-1 flex items-center xl:hidden"
@@ -1909,16 +1972,26 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="hidden xl:flex-1 xl:block xl:self-stretch"
             >
               <div
-                class="h-full flex space-x-8"
+                class="h-full flex space-x-10"
               >
                 <a
-                  class="flex items-center text-gray-700 hover:text-gray-800"
-                  href="/taste-finder"
+                  class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                  href="//www.60beans.de/uber-uns"
                 >
                   <span
                     class="uppercase text-sm leading-5"
                   >
-                    Tastefinder
+                    Über uns
+                  </span>
+                </a>
+                <a
+                  class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                  href="//blog.60beans.com"
+                >
+                  <span
+                    class="uppercase text-sm leading-5"
+                  >
+                    Blog
                   </span>
                 </a>
               </div>
@@ -1935,7 +2008,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <img
                 alt="60beans"
                 class="h-6"
-                src="60beans-black.svg"
+                src="60beans-light.svg"
               />
             </a>
             <div
@@ -1948,31 +2021,31 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   class="hidden h-full xl:flex space-x-8 justify-end"
                 >
                   <a
-                    class="flex items-center text-gray-700 hover:text-gray-800"
-                    href="//www.60beans.de/uber-uns"
+                    class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                    href="/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
                     >
-                      Über uns
+                      Tastefinder
                     </span>
                   </a>
                 </div>
                 <a
-                  class="hidden xl:block ml-4"
+                  class="hidden xl:block ml-10"
                   href="/profile"
                 >
                   <svg
                     class="undefined fill-brand-black stroke-brand-black"
                     fill="inherit"
-                    height="24"
-                    viewBox="0 0 33 31"
-                    width="24"
+                    height="25"
+                    viewBox="0 0 24 24"
+                    width="25"
                   >
                     <path
                       clip-rule="evenodd"
-                      d="M16.3,1.1C8.2,1.1,1.6,7.6,1.6,15.5S8.2,30,16.3,30c8.1,0,14.8-6.5,14.8-14.5S24.4,1.1,16.3,1.1z M16.2,8.9 c2.1,0,3.8,1.7,3.8,3.8c0,2-1.8,3.8-3.8,3.8c-2.1,0-3.9-1.7-3.9-3.8C12.4,10.6,14.1,8.9,16.2,8.9z M16.3,18.5c3.9,0,7.5,2.4,8.9,6.1 c-2.5,2.3-5.5,3.5-8.9,3.5c-3.4,0-6.5-1.2-8.9-3.5C8.8,20.9,12.3,18.5,16.3,18.5z M22.1,12.7c0-3.2-2.6-5.7-5.8-5.7 s-5.9,2.6-5.9,5.7c0,1.7,0.8,3.4,2.2,4.4c-2.9,1-5.3,3-6.6,5.8c-1.5-2-2.4-4.5-2.5-7.3v-0.1C3.5,8.6,9.2,3,16.2,3S29,8.6,29,15.5 c0,2.7-0.9,5.2-2.5,7.3c-1.3-2.7-3.7-4.8-6.6-5.8C21.3,16,22.1,14.5,22.1,12.7z"
-                      fill="inherit"
+                      d="M16 8.66663C16 10.8766 14.21 12.6666 12 12.6666C9.79 12.6666 8 10.8766 8 8.66663C8 6.45663 9.79 4.66663 12 4.66663C14.21 4.66663 16 6.45663 16 8.66663ZM4 18.6666C4 16.0066 9.33 14.6666 12 14.6666C14.67 14.6666 20 16.0066 20 18.6666V20.6666H4V18.6666Z"
+                      fill="#FFFFFF"
                       fill-rule="evenodd"
                       stroke="none"
                       stroke-width="none"
@@ -1980,38 +2053,49 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   </svg>
                 </a>
                 <div
-                  class="ml-4 flow-root xl:ml-6"
+                  class="ml-4 flow-root xl:ml-10"
                 >
                   <a
                     class="group -m-2 p-2 flex items-center"
                     href="/cart"
                     id="toCart"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <div
+                      class="static flex-shrink-0 relative"
                     >
-                      <path
-                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <span
-                      class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800"
-                    >
-                      1
-                    </span>
-                    <span
-                      class="sr-only"
-                    >
-                      items in cart, view bag
-                    </span>
+                      <svg
+                        class="undefined fill-brand-black stroke-brand-black"
+                        fill="inherit"
+                        height="25"
+                        viewBox="0 0 24 24"
+                        width="25"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M0 0.75C0 0.335786 0.335786 0 0.75 0H2.75C3.10751 0 3.41532 0.252345 3.48544 0.602913L3.76485 2H18.75C19.0099 2 19.2513 2.13459 19.388 2.3557C19.5246 2.57681 19.5371 2.85292 19.4208 3.08541L15.4208 11.0854C15.2938 11.3395 15.0341 11.5 14.75 11.5H5.06066L2.98744 13.5732C2.82995 13.7307 2.94149 14 3.16421 14H4.75H14.75C16.2688 14 17.5 15.2312 17.5 16.75C17.5 18.2688 16.2688 19.5 14.75 19.5C13.2312 19.5 12 18.2688 12 16.75C12 16.2999 12.1081 15.875 12.2999 15.5H7.20015C7.39186 15.875 7.5 16.2999 7.5 16.75C7.5 18.2688 6.26878 19.5 4.75 19.5C3.23122 19.5 2 18.2688 2 16.75C2 16.2296 2.14453 15.743 2.39564 15.3281C1.38299 14.8385 1.02537 13.414 1.92678 12.5126L3.93585 10.5035L2.41456 2.89709L2.13515 1.5H0.75C0.335786 1.5 0 1.16421 0 0.75ZM5.36485 10H14.2865L17.5365 3.5H4.06485L5.36485 10ZM4.75 15.5C4.05964 15.5 3.5 16.0596 3.5 16.75C3.5 17.4404 4.05964 18 4.75 18C5.44036 18 6 17.4404 6 16.75C6 16.0596 5.44036 15.5 4.75 15.5ZM14.75 15.5C14.0596 15.5 13.5 16.0596 13.5 16.75C13.5 17.4404 14.0596 18 14.75 18C15.4404 18 16 17.4404 16 16.75C16 16.0596 15.4404 15.5 14.75 15.5Z"
+                          fill="#FFFFFF"
+                          fill-rule="evenodd"
+                          stroke="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                      <span
+                        class="absolute top-3 left-3.5 h-4 w-4 z-10 bg-white rounded-full"
+                      >
+                        <div
+                          class="absolute top-0 left-1 z-15 text-coreUI-text-primary text-xs leading-4 font-semibold"
+                        >
+                          1
+                        </div>
+                      </span>
+                      <span
+                        class="sr-only"
+                      >
+                        items in cart, view bag
+                      </span>
+                    </div>
                   </a>
                 </div>
               </div>
@@ -2485,14 +2569,14 @@ exports[`Featured product view Renders correctly for a successful call with arom
       class="bg-white z-10"
     >
       <header
-        class="relative bg-white"
+        class="relative bg-brand-black"
       >
         <nav
           aria-label="Top"
           class="max-w-7xl mx-auto px-4 md:px-6 xl:px-8"
         >
           <div
-            class="h-16 mt-0.5 flex items-center justify-between border-b border-brand-grey-whisper"
+            class="h-16 flex items-center justify-between border-b border-brand-black"
           >
             <div
               class="flex-1 flex items-center xl:hidden"
@@ -2528,16 +2612,26 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="hidden xl:flex-1 xl:block xl:self-stretch"
             >
               <div
-                class="h-full flex space-x-8"
+                class="h-full flex space-x-10"
               >
                 <a
-                  class="flex items-center text-gray-700 hover:text-gray-800"
-                  href="/taste-finder"
+                  class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                  href="//www.60beans.de/uber-uns"
                 >
                   <span
                     class="uppercase text-sm leading-5"
                   >
-                    Tastefinder
+                    Über uns
+                  </span>
+                </a>
+                <a
+                  class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                  href="//blog.60beans.com"
+                >
+                  <span
+                    class="uppercase text-sm leading-5"
+                  >
+                    Blog
                   </span>
                 </a>
               </div>
@@ -2554,7 +2648,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <img
                 alt="60beans"
                 class="h-6"
-                src="60beans-black.svg"
+                src="60beans-light.svg"
               />
             </a>
             <div
@@ -2567,31 +2661,31 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   class="hidden h-full xl:flex space-x-8 justify-end"
                 >
                   <a
-                    class="flex items-center text-gray-700 hover:text-gray-800"
-                    href="//www.60beans.de/uber-uns"
+                    class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                    href="/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
                     >
-                      Über uns
+                      Tastefinder
                     </span>
                   </a>
                 </div>
                 <a
-                  class="hidden xl:block ml-4"
+                  class="hidden xl:block ml-10"
                   href="/profile"
                 >
                   <svg
                     class="undefined fill-brand-black stroke-brand-black"
                     fill="inherit"
-                    height="24"
-                    viewBox="0 0 33 31"
-                    width="24"
+                    height="25"
+                    viewBox="0 0 24 24"
+                    width="25"
                   >
                     <path
                       clip-rule="evenodd"
-                      d="M16.3,1.1C8.2,1.1,1.6,7.6,1.6,15.5S8.2,30,16.3,30c8.1,0,14.8-6.5,14.8-14.5S24.4,1.1,16.3,1.1z M16.2,8.9 c2.1,0,3.8,1.7,3.8,3.8c0,2-1.8,3.8-3.8,3.8c-2.1,0-3.9-1.7-3.9-3.8C12.4,10.6,14.1,8.9,16.2,8.9z M16.3,18.5c3.9,0,7.5,2.4,8.9,6.1 c-2.5,2.3-5.5,3.5-8.9,3.5c-3.4,0-6.5-1.2-8.9-3.5C8.8,20.9,12.3,18.5,16.3,18.5z M22.1,12.7c0-3.2-2.6-5.7-5.8-5.7 s-5.9,2.6-5.9,5.7c0,1.7,0.8,3.4,2.2,4.4c-2.9,1-5.3,3-6.6,5.8c-1.5-2-2.4-4.5-2.5-7.3v-0.1C3.5,8.6,9.2,3,16.2,3S29,8.6,29,15.5 c0,2.7-0.9,5.2-2.5,7.3c-1.3-2.7-3.7-4.8-6.6-5.8C21.3,16,22.1,14.5,22.1,12.7z"
-                      fill="inherit"
+                      d="M16 8.66663C16 10.8766 14.21 12.6666 12 12.6666C9.79 12.6666 8 10.8766 8 8.66663C8 6.45663 9.79 4.66663 12 4.66663C14.21 4.66663 16 6.45663 16 8.66663ZM4 18.6666C4 16.0066 9.33 14.6666 12 14.6666C14.67 14.6666 20 16.0066 20 18.6666V20.6666H4V18.6666Z"
+                      fill="#FFFFFF"
                       fill-rule="evenodd"
                       stroke="none"
                       stroke-width="none"
@@ -2599,38 +2693,49 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   </svg>
                 </a>
                 <div
-                  class="ml-4 flow-root xl:ml-6"
+                  class="ml-4 flow-root xl:ml-10"
                 >
                   <a
                     class="group -m-2 p-2 flex items-center"
                     href="/cart"
                     id="toCart"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <div
+                      class="static flex-shrink-0 relative"
                     >
-                      <path
-                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <span
-                      class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800"
-                    >
-                      1
-                    </span>
-                    <span
-                      class="sr-only"
-                    >
-                      items in cart, view bag
-                    </span>
+                      <svg
+                        class="undefined fill-brand-black stroke-brand-black"
+                        fill="inherit"
+                        height="25"
+                        viewBox="0 0 24 24"
+                        width="25"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M0 0.75C0 0.335786 0.335786 0 0.75 0H2.75C3.10751 0 3.41532 0.252345 3.48544 0.602913L3.76485 2H18.75C19.0099 2 19.2513 2.13459 19.388 2.3557C19.5246 2.57681 19.5371 2.85292 19.4208 3.08541L15.4208 11.0854C15.2938 11.3395 15.0341 11.5 14.75 11.5H5.06066L2.98744 13.5732C2.82995 13.7307 2.94149 14 3.16421 14H4.75H14.75C16.2688 14 17.5 15.2312 17.5 16.75C17.5 18.2688 16.2688 19.5 14.75 19.5C13.2312 19.5 12 18.2688 12 16.75C12 16.2999 12.1081 15.875 12.2999 15.5H7.20015C7.39186 15.875 7.5 16.2999 7.5 16.75C7.5 18.2688 6.26878 19.5 4.75 19.5C3.23122 19.5 2 18.2688 2 16.75C2 16.2296 2.14453 15.743 2.39564 15.3281C1.38299 14.8385 1.02537 13.414 1.92678 12.5126L3.93585 10.5035L2.41456 2.89709L2.13515 1.5H0.75C0.335786 1.5 0 1.16421 0 0.75ZM5.36485 10H14.2865L17.5365 3.5H4.06485L5.36485 10ZM4.75 15.5C4.05964 15.5 3.5 16.0596 3.5 16.75C3.5 17.4404 4.05964 18 4.75 18C5.44036 18 6 17.4404 6 16.75C6 16.0596 5.44036 15.5 4.75 15.5ZM14.75 15.5C14.0596 15.5 13.5 16.0596 13.5 16.75C13.5 17.4404 14.0596 18 14.75 18C15.4404 18 16 17.4404 16 16.75C16 16.0596 15.4404 15.5 14.75 15.5Z"
+                          fill="#FFFFFF"
+                          fill-rule="evenodd"
+                          stroke="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                      <span
+                        class="absolute top-3 left-3.5 h-4 w-4 z-10 bg-white rounded-full"
+                      >
+                        <div
+                          class="absolute top-0 left-1 z-15 text-coreUI-text-primary text-xs leading-4 font-semibold"
+                        >
+                          1
+                        </div>
+                      </span>
+                      <span
+                        class="sr-only"
+                      >
+                        items in cart, view bag
+                      </span>
+                    </div>
                   </a>
                 </div>
               </div>
@@ -3104,14 +3209,14 @@ exports[`Featured product view Renders correctly for a successful call without a
       class="bg-white z-10"
     >
       <header
-        class="relative bg-white"
+        class="relative bg-brand-black"
       >
         <nav
           aria-label="Top"
           class="max-w-7xl mx-auto px-4 md:px-6 xl:px-8"
         >
           <div
-            class="h-16 mt-0.5 flex items-center justify-between border-b border-brand-grey-whisper"
+            class="h-16 flex items-center justify-between border-b border-brand-black"
           >
             <div
               class="flex-1 flex items-center xl:hidden"
@@ -3147,16 +3252,26 @@ exports[`Featured product view Renders correctly for a successful call without a
               class="hidden xl:flex-1 xl:block xl:self-stretch"
             >
               <div
-                class="h-full flex space-x-8"
+                class="h-full flex space-x-10"
               >
                 <a
-                  class="flex items-center text-gray-700 hover:text-gray-800"
-                  href="/taste-finder"
+                  class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                  href="//www.60beans.de/uber-uns"
                 >
                   <span
                     class="uppercase text-sm leading-5"
                   >
-                    Tastefinder
+                    Über uns
+                  </span>
+                </a>
+                <a
+                  class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                  href="//blog.60beans.com"
+                >
+                  <span
+                    class="uppercase text-sm leading-5"
+                  >
+                    Blog
                   </span>
                 </a>
               </div>
@@ -3173,7 +3288,7 @@ exports[`Featured product view Renders correctly for a successful call without a
               <img
                 alt="60beans"
                 class="h-6"
-                src="60beans-black.svg"
+                src="60beans-light.svg"
               />
             </a>
             <div
@@ -3186,31 +3301,31 @@ exports[`Featured product view Renders correctly for a successful call without a
                   class="hidden h-full xl:flex space-x-8 justify-end"
                 >
                   <a
-                    class="flex items-center text-gray-700 hover:text-gray-800"
-                    href="//www.60beans.de/uber-uns"
+                    class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                    href="/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
                     >
-                      Über uns
+                      Tastefinder
                     </span>
                   </a>
                 </div>
                 <a
-                  class="hidden xl:block ml-4"
+                  class="hidden xl:block ml-10"
                   href="/profile"
                 >
                   <svg
                     class="undefined fill-brand-black stroke-brand-black"
                     fill="inherit"
-                    height="24"
-                    viewBox="0 0 33 31"
-                    width="24"
+                    height="25"
+                    viewBox="0 0 24 24"
+                    width="25"
                   >
                     <path
                       clip-rule="evenodd"
-                      d="M16.3,1.1C8.2,1.1,1.6,7.6,1.6,15.5S8.2,30,16.3,30c8.1,0,14.8-6.5,14.8-14.5S24.4,1.1,16.3,1.1z M16.2,8.9 c2.1,0,3.8,1.7,3.8,3.8c0,2-1.8,3.8-3.8,3.8c-2.1,0-3.9-1.7-3.9-3.8C12.4,10.6,14.1,8.9,16.2,8.9z M16.3,18.5c3.9,0,7.5,2.4,8.9,6.1 c-2.5,2.3-5.5,3.5-8.9,3.5c-3.4,0-6.5-1.2-8.9-3.5C8.8,20.9,12.3,18.5,16.3,18.5z M22.1,12.7c0-3.2-2.6-5.7-5.8-5.7 s-5.9,2.6-5.9,5.7c0,1.7,0.8,3.4,2.2,4.4c-2.9,1-5.3,3-6.6,5.8c-1.5-2-2.4-4.5-2.5-7.3v-0.1C3.5,8.6,9.2,3,16.2,3S29,8.6,29,15.5 c0,2.7-0.9,5.2-2.5,7.3c-1.3-2.7-3.7-4.8-6.6-5.8C21.3,16,22.1,14.5,22.1,12.7z"
-                      fill="inherit"
+                      d="M16 8.66663C16 10.8766 14.21 12.6666 12 12.6666C9.79 12.6666 8 10.8766 8 8.66663C8 6.45663 9.79 4.66663 12 4.66663C14.21 4.66663 16 6.45663 16 8.66663ZM4 18.6666C4 16.0066 9.33 14.6666 12 14.6666C14.67 14.6666 20 16.0066 20 18.6666V20.6666H4V18.6666Z"
+                      fill="#FFFFFF"
                       fill-rule="evenodd"
                       stroke="none"
                       stroke-width="none"
@@ -3218,38 +3333,49 @@ exports[`Featured product view Renders correctly for a successful call without a
                   </svg>
                 </a>
                 <div
-                  class="ml-4 flow-root xl:ml-6"
+                  class="ml-4 flow-root xl:ml-10"
                 >
                   <a
                     class="group -m-2 p-2 flex items-center"
                     href="/cart"
                     id="toCart"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <div
+                      class="static flex-shrink-0 relative"
                     >
-                      <path
-                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <span
-                      class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800"
-                    >
-                      1
-                    </span>
-                    <span
-                      class="sr-only"
-                    >
-                      items in cart, view bag
-                    </span>
+                      <svg
+                        class="undefined fill-brand-black stroke-brand-black"
+                        fill="inherit"
+                        height="25"
+                        viewBox="0 0 24 24"
+                        width="25"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M0 0.75C0 0.335786 0.335786 0 0.75 0H2.75C3.10751 0 3.41532 0.252345 3.48544 0.602913L3.76485 2H18.75C19.0099 2 19.2513 2.13459 19.388 2.3557C19.5246 2.57681 19.5371 2.85292 19.4208 3.08541L15.4208 11.0854C15.2938 11.3395 15.0341 11.5 14.75 11.5H5.06066L2.98744 13.5732C2.82995 13.7307 2.94149 14 3.16421 14H4.75H14.75C16.2688 14 17.5 15.2312 17.5 16.75C17.5 18.2688 16.2688 19.5 14.75 19.5C13.2312 19.5 12 18.2688 12 16.75C12 16.2999 12.1081 15.875 12.2999 15.5H7.20015C7.39186 15.875 7.5 16.2999 7.5 16.75C7.5 18.2688 6.26878 19.5 4.75 19.5C3.23122 19.5 2 18.2688 2 16.75C2 16.2296 2.14453 15.743 2.39564 15.3281C1.38299 14.8385 1.02537 13.414 1.92678 12.5126L3.93585 10.5035L2.41456 2.89709L2.13515 1.5H0.75C0.335786 1.5 0 1.16421 0 0.75ZM5.36485 10H14.2865L17.5365 3.5H4.06485L5.36485 10ZM4.75 15.5C4.05964 15.5 3.5 16.0596 3.5 16.75C3.5 17.4404 4.05964 18 4.75 18C5.44036 18 6 17.4404 6 16.75C6 16.0596 5.44036 15.5 4.75 15.5ZM14.75 15.5C14.0596 15.5 13.5 16.0596 13.5 16.75C13.5 17.4404 14.0596 18 14.75 18C15.4404 18 16 17.4404 16 16.75C16 16.0596 15.4404 15.5 14.75 15.5Z"
+                          fill="#FFFFFF"
+                          fill-rule="evenodd"
+                          stroke="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                      <span
+                        class="absolute top-3 left-3.5 h-4 w-4 z-10 bg-white rounded-full"
+                      >
+                        <div
+                          class="absolute top-0 left-1 z-15 text-coreUI-text-primary text-xs leading-4 font-semibold"
+                        >
+                          1
+                        </div>
+                      </span>
+                      <span
+                        class="sr-only"
+                      >
+                        items in cart, view bag
+                      </span>
+                    </div>
                   </a>
                 </div>
               </div>
@@ -3600,14 +3726,14 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
       class="bg-white z-10"
     >
       <header
-        class="relative bg-white"
+        class="relative bg-brand-black"
       >
         <nav
           aria-label="Top"
           class="max-w-7xl mx-auto px-4 md:px-6 xl:px-8"
         >
           <div
-            class="h-16 mt-0.5 flex items-center justify-between border-b border-brand-grey-whisper"
+            class="h-16 flex items-center justify-between border-b border-brand-black"
           >
             <div
               class="flex-1 flex items-center xl:hidden"
@@ -3643,16 +3769,26 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
               class="hidden xl:flex-1 xl:block xl:self-stretch"
             >
               <div
-                class="h-full flex space-x-8"
+                class="h-full flex space-x-10"
               >
                 <a
-                  class="flex items-center text-gray-700 hover:text-gray-800"
-                  href="/taste-finder"
+                  class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                  href="//www.60beans.de/uber-uns"
                 >
                   <span
                     class="uppercase text-sm leading-5"
                   >
-                    Tastefinder
+                    Über uns
+                  </span>
+                </a>
+                <a
+                  class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                  href="//blog.60beans.com"
+                >
+                  <span
+                    class="uppercase text-sm leading-5"
+                  >
+                    Blog
                   </span>
                 </a>
               </div>
@@ -3669,7 +3805,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
               <img
                 alt="60beans"
                 class="h-6"
-                src="60beans-black.svg"
+                src="60beans-light.svg"
               />
             </a>
             <div
@@ -3682,31 +3818,31 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
                   class="hidden h-full xl:flex space-x-8 justify-end"
                 >
                   <a
-                    class="flex items-center text-gray-700 hover:text-gray-800"
-                    href="//www.60beans.de/uber-uns"
+                    class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                    href="/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
                     >
-                      Über uns
+                      Tastefinder
                     </span>
                   </a>
                 </div>
                 <a
-                  class="hidden xl:block ml-4"
+                  class="hidden xl:block ml-10"
                   href="/profile"
                 >
                   <svg
                     class="undefined fill-brand-black stroke-brand-black"
                     fill="inherit"
-                    height="24"
-                    viewBox="0 0 33 31"
-                    width="24"
+                    height="25"
+                    viewBox="0 0 24 24"
+                    width="25"
                   >
                     <path
                       clip-rule="evenodd"
-                      d="M16.3,1.1C8.2,1.1,1.6,7.6,1.6,15.5S8.2,30,16.3,30c8.1,0,14.8-6.5,14.8-14.5S24.4,1.1,16.3,1.1z M16.2,8.9 c2.1,0,3.8,1.7,3.8,3.8c0,2-1.8,3.8-3.8,3.8c-2.1,0-3.9-1.7-3.9-3.8C12.4,10.6,14.1,8.9,16.2,8.9z M16.3,18.5c3.9,0,7.5,2.4,8.9,6.1 c-2.5,2.3-5.5,3.5-8.9,3.5c-3.4,0-6.5-1.2-8.9-3.5C8.8,20.9,12.3,18.5,16.3,18.5z M22.1,12.7c0-3.2-2.6-5.7-5.8-5.7 s-5.9,2.6-5.9,5.7c0,1.7,0.8,3.4,2.2,4.4c-2.9,1-5.3,3-6.6,5.8c-1.5-2-2.4-4.5-2.5-7.3v-0.1C3.5,8.6,9.2,3,16.2,3S29,8.6,29,15.5 c0,2.7-0.9,5.2-2.5,7.3c-1.3-2.7-3.7-4.8-6.6-5.8C21.3,16,22.1,14.5,22.1,12.7z"
-                      fill="inherit"
+                      d="M16 8.66663C16 10.8766 14.21 12.6666 12 12.6666C9.79 12.6666 8 10.8766 8 8.66663C8 6.45663 9.79 4.66663 12 4.66663C14.21 4.66663 16 6.45663 16 8.66663ZM4 18.6666C4 16.0066 9.33 14.6666 12 14.6666C14.67 14.6666 20 16.0066 20 18.6666V20.6666H4V18.6666Z"
+                      fill="#FFFFFF"
                       fill-rule="evenodd"
                       stroke="none"
                       stroke-width="none"
@@ -3714,38 +3850,49 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
                   </svg>
                 </a>
                 <div
-                  class="ml-4 flow-root xl:ml-6"
+                  class="ml-4 flow-root xl:ml-10"
                 >
                   <a
                     class="group -m-2 p-2 flex items-center"
                     href="/cart"
                     id="toCart"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <div
+                      class="static flex-shrink-0 relative"
                     >
-                      <path
-                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <span
-                      class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800"
-                    >
-                      1
-                    </span>
-                    <span
-                      class="sr-only"
-                    >
-                      items in cart, view bag
-                    </span>
+                      <svg
+                        class="undefined fill-brand-black stroke-brand-black"
+                        fill="inherit"
+                        height="25"
+                        viewBox="0 0 24 24"
+                        width="25"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M0 0.75C0 0.335786 0.335786 0 0.75 0H2.75C3.10751 0 3.41532 0.252345 3.48544 0.602913L3.76485 2H18.75C19.0099 2 19.2513 2.13459 19.388 2.3557C19.5246 2.57681 19.5371 2.85292 19.4208 3.08541L15.4208 11.0854C15.2938 11.3395 15.0341 11.5 14.75 11.5H5.06066L2.98744 13.5732C2.82995 13.7307 2.94149 14 3.16421 14H4.75H14.75C16.2688 14 17.5 15.2312 17.5 16.75C17.5 18.2688 16.2688 19.5 14.75 19.5C13.2312 19.5 12 18.2688 12 16.75C12 16.2999 12.1081 15.875 12.2999 15.5H7.20015C7.39186 15.875 7.5 16.2999 7.5 16.75C7.5 18.2688 6.26878 19.5 4.75 19.5C3.23122 19.5 2 18.2688 2 16.75C2 16.2296 2.14453 15.743 2.39564 15.3281C1.38299 14.8385 1.02537 13.414 1.92678 12.5126L3.93585 10.5035L2.41456 2.89709L2.13515 1.5H0.75C0.335786 1.5 0 1.16421 0 0.75ZM5.36485 10H14.2865L17.5365 3.5H4.06485L5.36485 10ZM4.75 15.5C4.05964 15.5 3.5 16.0596 3.5 16.75C3.5 17.4404 4.05964 18 4.75 18C5.44036 18 6 17.4404 6 16.75C6 16.0596 5.44036 15.5 4.75 15.5ZM14.75 15.5C14.0596 15.5 13.5 16.0596 13.5 16.75C13.5 17.4404 14.0596 18 14.75 18C15.4404 18 16 17.4404 16 16.75C16 16.0596 15.4404 15.5 14.75 15.5Z"
+                          fill="#FFFFFF"
+                          fill-rule="evenodd"
+                          stroke="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                      <span
+                        class="absolute top-3 left-3.5 h-4 w-4 z-10 bg-white rounded-full"
+                      >
+                        <div
+                          class="absolute top-0 left-1 z-15 text-coreUI-text-primary text-xs leading-4 font-semibold"
+                        >
+                          1
+                        </div>
+                      </span>
+                      <span
+                        class="sr-only"
+                      >
+                        items in cart, view bag
+                      </span>
+                    </div>
                   </a>
                 </div>
               </div>
@@ -4244,14 +4391,14 @@ exports[`Featured product view renders as expected if no taste finder data exist
       class="bg-white z-10"
     >
       <header
-        class="relative bg-white"
+        class="relative bg-brand-black"
       >
         <nav
           aria-label="Top"
           class="max-w-7xl mx-auto px-4 md:px-6 xl:px-8"
         >
           <div
-            class="h-16 mt-0.5 flex items-center justify-between border-b border-brand-grey-whisper"
+            class="h-16 flex items-center justify-between border-b border-brand-black"
           >
             <div
               class="flex-1 flex items-center xl:hidden"
@@ -4287,16 +4434,26 @@ exports[`Featured product view renders as expected if no taste finder data exist
               class="hidden xl:flex-1 xl:block xl:self-stretch"
             >
               <div
-                class="h-full flex space-x-8"
+                class="h-full flex space-x-10"
               >
                 <a
-                  class="flex items-center text-gray-700 hover:text-gray-800"
-                  href="/taste-finder"
+                  class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                  href="//www.60beans.de/uber-uns"
                 >
                   <span
                     class="uppercase text-sm leading-5"
                   >
-                    Tastefinder
+                    Über uns
+                  </span>
+                </a>
+                <a
+                  class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                  href="//blog.60beans.com"
+                >
+                  <span
+                    class="uppercase text-sm leading-5"
+                  >
+                    Blog
                   </span>
                 </a>
               </div>
@@ -4313,7 +4470,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
               <img
                 alt="60beans"
                 class="h-6"
-                src="60beans-black.svg"
+                src="60beans-light.svg"
               />
             </a>
             <div
@@ -4326,31 +4483,31 @@ exports[`Featured product view renders as expected if no taste finder data exist
                   class="hidden h-full xl:flex space-x-8 justify-end"
                 >
                   <a
-                    class="flex items-center text-gray-700 hover:text-gray-800"
-                    href="//www.60beans.de/uber-uns"
+                    class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                    href="/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
                     >
-                      Über uns
+                      Tastefinder
                     </span>
                   </a>
                 </div>
                 <a
-                  class="hidden xl:block ml-4"
+                  class="hidden xl:block ml-10"
                   href="/profile"
                 >
                   <svg
                     class="undefined fill-brand-black stroke-brand-black"
                     fill="inherit"
-                    height="24"
-                    viewBox="0 0 33 31"
-                    width="24"
+                    height="25"
+                    viewBox="0 0 24 24"
+                    width="25"
                   >
                     <path
                       clip-rule="evenodd"
-                      d="M16.3,1.1C8.2,1.1,1.6,7.6,1.6,15.5S8.2,30,16.3,30c8.1,0,14.8-6.5,14.8-14.5S24.4,1.1,16.3,1.1z M16.2,8.9 c2.1,0,3.8,1.7,3.8,3.8c0,2-1.8,3.8-3.8,3.8c-2.1,0-3.9-1.7-3.9-3.8C12.4,10.6,14.1,8.9,16.2,8.9z M16.3,18.5c3.9,0,7.5,2.4,8.9,6.1 c-2.5,2.3-5.5,3.5-8.9,3.5c-3.4,0-6.5-1.2-8.9-3.5C8.8,20.9,12.3,18.5,16.3,18.5z M22.1,12.7c0-3.2-2.6-5.7-5.8-5.7 s-5.9,2.6-5.9,5.7c0,1.7,0.8,3.4,2.2,4.4c-2.9,1-5.3,3-6.6,5.8c-1.5-2-2.4-4.5-2.5-7.3v-0.1C3.5,8.6,9.2,3,16.2,3S29,8.6,29,15.5 c0,2.7-0.9,5.2-2.5,7.3c-1.3-2.7-3.7-4.8-6.6-5.8C21.3,16,22.1,14.5,22.1,12.7z"
-                      fill="inherit"
+                      d="M16 8.66663C16 10.8766 14.21 12.6666 12 12.6666C9.79 12.6666 8 10.8766 8 8.66663C8 6.45663 9.79 4.66663 12 4.66663C14.21 4.66663 16 6.45663 16 8.66663ZM4 18.6666C4 16.0066 9.33 14.6666 12 14.6666C14.67 14.6666 20 16.0066 20 18.6666V20.6666H4V18.6666Z"
+                      fill="#FFFFFF"
                       fill-rule="evenodd"
                       stroke="none"
                       stroke-width="none"
@@ -4358,38 +4515,49 @@ exports[`Featured product view renders as expected if no taste finder data exist
                   </svg>
                 </a>
                 <div
-                  class="ml-4 flow-root xl:ml-6"
+                  class="ml-4 flow-root xl:ml-10"
                 >
                   <a
                     class="group -m-2 p-2 flex items-center"
                     href="/cart"
                     id="toCart"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <div
+                      class="static flex-shrink-0 relative"
                     >
-                      <path
-                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <span
-                      class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800"
-                    >
-                      1
-                    </span>
-                    <span
-                      class="sr-only"
-                    >
-                      items in cart, view bag
-                    </span>
+                      <svg
+                        class="undefined fill-brand-black stroke-brand-black"
+                        fill="inherit"
+                        height="25"
+                        viewBox="0 0 24 24"
+                        width="25"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M0 0.75C0 0.335786 0.335786 0 0.75 0H2.75C3.10751 0 3.41532 0.252345 3.48544 0.602913L3.76485 2H18.75C19.0099 2 19.2513 2.13459 19.388 2.3557C19.5246 2.57681 19.5371 2.85292 19.4208 3.08541L15.4208 11.0854C15.2938 11.3395 15.0341 11.5 14.75 11.5H5.06066L2.98744 13.5732C2.82995 13.7307 2.94149 14 3.16421 14H4.75H14.75C16.2688 14 17.5 15.2312 17.5 16.75C17.5 18.2688 16.2688 19.5 14.75 19.5C13.2312 19.5 12 18.2688 12 16.75C12 16.2999 12.1081 15.875 12.2999 15.5H7.20015C7.39186 15.875 7.5 16.2999 7.5 16.75C7.5 18.2688 6.26878 19.5 4.75 19.5C3.23122 19.5 2 18.2688 2 16.75C2 16.2296 2.14453 15.743 2.39564 15.3281C1.38299 14.8385 1.02537 13.414 1.92678 12.5126L3.93585 10.5035L2.41456 2.89709L2.13515 1.5H0.75C0.335786 1.5 0 1.16421 0 0.75ZM5.36485 10H14.2865L17.5365 3.5H4.06485L5.36485 10ZM4.75 15.5C4.05964 15.5 3.5 16.0596 3.5 16.75C3.5 17.4404 4.05964 18 4.75 18C5.44036 18 6 17.4404 6 16.75C6 16.0596 5.44036 15.5 4.75 15.5ZM14.75 15.5C14.0596 15.5 13.5 16.0596 13.5 16.75C13.5 17.4404 14.0596 18 14.75 18C15.4404 18 16 17.4404 16 16.75C16 16.0596 15.4404 15.5 14.75 15.5Z"
+                          fill="#FFFFFF"
+                          fill-rule="evenodd"
+                          stroke="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                      <span
+                        class="absolute top-3 left-3.5 h-4 w-4 z-10 bg-white rounded-full"
+                      >
+                        <div
+                          class="absolute top-0 left-1 z-15 text-coreUI-text-primary text-xs leading-4 font-semibold"
+                        >
+                          1
+                        </div>
+                      </span>
+                      <span
+                        class="sr-only"
+                      >
+                        items in cart, view bag
+                      </span>
+                    </div>
                   </a>
                 </div>
               </div>

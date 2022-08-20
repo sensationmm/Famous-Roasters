@@ -1,9 +1,9 @@
 import { Dialog, Transition } from '@headlessui/react'
-import { MenuIcon, ShoppingBagIcon, XIcon } from '@heroicons/react/outline'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import React, { Fragment, useContext, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useNavigate } from 'react-router-dom'
-import LogoBlack from 'src/assets/images/logo/60beans-black.svg'
+import LogoLight from 'src/assets/images/logo/60beans-light.svg'
 import {
   Button,
   ButtonEmphasis,
@@ -38,10 +38,14 @@ interface NavigationData {
 }
 
 const domainShop = process.env.REACT_APP_DOMAIN_SHOP || '' // '//shop.60beans.de'
+const domainBlog = process.env.REACT_APP_DOMAIN_BLOG || '' // '//blog.60beans.com'
 
 const navigationData: NavigationData = {
-  pagesPrimary: [{ key: 'tasteFinder', href: `${domainShop}/taste-finder` }],
-  pagesSecondary: [{ key: 'about', href: '//www.60beans.de/uber-uns' }],
+  pagesPrimary: [
+    { key: 'about', href: '//www.60beans.de/uber-uns' },
+    { key: 'blog', href: domainBlog },
+  ],
+  pagesSecondary: [{ key: 'tasteFinder', href: `${domainShop}/taste-finder` }],
   pagesMobile: [{ key: 'profile', href: `${domainShop}/profile` }],
 }
 
@@ -81,6 +85,30 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
     ))
 
   const itemsInCart = () => (cartSize ? cartSize : 0)
+  const CartItemsLabel = (size: number) => {
+    if (size < 10) {
+      return (
+        <Typography
+          as="div"
+          type={TypographyType.Label}
+          size={TypographySize.Tiny}
+          className="absolute top-0 left-1 z-15 text-coreUI-text-primary"
+        >
+          {size}
+        </Typography>
+      )
+    }
+    return (
+      <Typography
+        as="div"
+        type={TypographyType.Label}
+        size={TypographySize.Tiny}
+        className="absolute top-0 left-0.5 z-15 tracking-tighter text-coreUI-text-primary"
+      >
+        {size}
+      </Typography>
+    )
+  }
 
   return (
     <div className="bg-white z-10">
@@ -131,9 +159,9 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
         </Dialog>
       </Transition.Root>
 
-      <header className="relative bg-white">
+      <header className="relative bg-brand-black">
         <nav aria-label="Top" className="max-w-7xl mx-auto px-4 md:px-6 xl:px-8">
-          <div className="h-16 mt-0.5 flex items-center justify-between border-b border-brand-grey-whisper">
+          <div className="h-16 flex items-center justify-between border-b border-brand-black">
             <div className="flex-1 flex items-center xl:hidden">
               <button
                 type="button"
@@ -148,9 +176,13 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
 
             {/* Desktop menu primary pages */}
             <div className="hidden xl:flex-1 xl:block xl:self-stretch">
-              <div className="h-full flex space-x-8">
+              <div className="h-full flex space-x-10">
                 {navigationData.pagesPrimary.map((page) => (
-                  <Link key={page.key} to={page.href} className="flex items-center text-gray-700 hover:text-gray-800">
+                  <Link
+                    key={page.key}
+                    to={page.href}
+                    className="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                  >
                     <Typography
                       as="span"
                       type={TypographyType.Paragraph}
@@ -167,7 +199,7 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
             {/* Logo */}
             <Link to="//www.60beans.de" className="flex h-full items-center pl-2 pr-2">
               <span className="sr-only">{t('brand.name')}</span>
-              <img src={LogoBlack} alt={t('brand.name')} className="h-6" />
+              <img src={LogoLight} alt={t('brand.name')} className="h-6" />
             </Link>
 
             <div className="flex-1 flow-root flex h-full items-center">
@@ -175,7 +207,11 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
                 {/* Desktop menu secondary pages */}
                 <div className="hidden h-full xl:flex space-x-8 justify-end">
                   {navigationData.pagesSecondary.map((page) => (
-                    <Link key={page.key} to={page.href} className="flex items-center text-gray-700 hover:text-gray-800">
+                    <Link
+                      key={page.key}
+                      to={page.href}
+                      className="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                    >
                       <Typography
                         as="span"
                         type={TypographyType.Paragraph}
@@ -188,23 +224,22 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
                   ))}
                 </div>
 
-                <Link to={`${domainShop}/profile`} className="hidden xl:block ml-4">
+                <Link to={`${domainShop}/profile`} className="hidden xl:block ml-10">
                   <Icon name={IconName.Profile} />
                 </Link>
 
                 {/* Cart */}
-                <div className="ml-4 flow-root xl:ml-6">
+                <div className="ml-4 flow-root xl:ml-10">
                   {theme === NavigationTheme.Shop ? (
                     <>
                       <Link id="toCart" to="/cart" className="group -m-2 p-2 flex items-center">
-                        <ShoppingBagIcon
-                          className="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
-                          aria-hidden="true"
-                        />
-                        <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">
-                          {itemsInCart()}
-                        </span>
-                        <span className="sr-only">items in cart, view bag</span>
+                        <div className="static flex-shrink-0 relative">
+                          <Icon name={IconName.Cart} aria-hidden="true" />
+                          <span className="absolute top-3 left-3.5 h-4 w-4 z-10 bg-white rounded-full">
+                            {CartItemsLabel(itemsInCart())}
+                          </span>
+                          <span className="sr-only">items in cart, view bag</span>
+                        </div>
                       </Link>
                       {showAddedToCart && (
                         <Notification
@@ -215,7 +250,7 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
                     </>
                   ) : (
                     <Button
-                      emphasis={ButtonEmphasis.Secondary}
+                      emphasis={ButtonEmphasis.Primary}
                       size={ButtonSize.sm}
                       onClick={() => navigate(`${domainShop}/catalogue`)}
                       data-testid="button-shop"

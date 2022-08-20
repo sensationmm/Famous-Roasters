@@ -57,6 +57,7 @@ jobs:
         run: yarn run test:ci -u
         env:
           REACT_APP_DOMAIN_SHOP: ${{ secrets.REACT_APP_DOMAIN_SHOP_STAGING }}
+          REACT_APP_DOMAIN_BLOG: ${{ secrets.REACT_APP_DOMAIN_BLOG_STAGING }}
 
       - uses: actions/upload-artifact@master
         with:
@@ -67,6 +68,7 @@ jobs:
         run: yarn run build && npx semantic-release --debug
         env:
           REACT_APP_DOMAIN_SHOP: ${{ secrets.REACT_APP_DOMAIN_SHOP_STAGING }}
+          REACT_APP_DOMAIN_BLOG: ${{ secrets.REACT_APP_DOMAIN_BLOG_STAGING }}
           REACT_APP_HYGRAPH_CONTENT_GRAPHQL_ENDPOINT: ${{ secrets.REACT_APP_HYGRAPH_CONTENT_GRAPHQL_ENDPOINT}}
           REACT_APP_SHOPIFY_ADMIN_GRAPHQL_ENDPOINT: ${{ secrets.REACT_APP_SHOPIFY_ADMIN_GRAPHQL_ENDPOINT}}
           REACT_APP_SHOPIFY_ADMIN_ACCESS_TOKEN: ${{ secrets.REACT_APP_SHOPIFY_ADMIN_ACCESS_TOKEN}}
@@ -208,6 +210,7 @@ jobs:
         run: yarn run test:ci -u
         env:
           REACT_APP_DOMAIN_SHOP: ${{ secrets.REACT_APP_DOMAIN_SHOP_PRODUCTION }}
+          REACT_APP_DOMAIN_BLOG: ${{ secrets.REACT_APP_DOMAIN_BLOG_PRODUCTION }}
 
       - uses: actions/upload-artifact@master
         with:
@@ -218,6 +221,7 @@ jobs:
         run: yarn run build
         env:
           REACT_APP_DOMAIN_SHOP: ${{ secrets.REACT_APP_DOMAIN_SHOP_PRODUCTION }}
+          REACT_APP_DOMAIN_BLOG: ${{ secrets.REACT_APP_DOMAIN_BLOG_PRODUCTION }}
           REACT_APP_HYGRAPH_CONTENT_GRAPHQL_ENDPOINT: ${{ secrets.REACT_APP_HYGRAPH_CONTENT_GRAPHQL_ENDPOINT}}
           REACT_APP_SHOPIFY_ADMIN_GRAPHQL_ENDPOINT: ${{ secrets.REACT_APP_SHOPIFY_ADMIN_GRAPHQL_ENDPOINT}}
           REACT_APP_SHOPIFY_ADMIN_ACCESS_TOKEN: ${{ secrets.REACT_APP_SHOPIFY_ADMIN_ACCESS_TOKEN}}

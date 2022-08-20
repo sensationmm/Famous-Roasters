@@ -99,9 +99,9 @@ exports[`Adventurous partial view Renders correctly 1`] = `
               <svg
                 class="undefined fill-brand-black stroke-brand-black"
                 fill="inherit"
-                height="24"
+                height="25"
                 viewBox="0 0 16 16"
-                width="24"
+                width="25"
               >
                 <path
                   clip-rule="evenodd"
@@ -151,9 +151,9 @@ exports[`Adventurous partial view Renders correctly 1`] = `
               <svg
                 class="undefined fill-brand-black stroke-brand-black"
                 fill="inherit"
-                height="24"
+                height="25"
                 viewBox="0 0 16 16"
-                width="24"
+                width="25"
               >
                 <path
                   clip-rule="evenodd"

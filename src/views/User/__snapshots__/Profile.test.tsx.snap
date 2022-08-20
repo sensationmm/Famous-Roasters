@@ -9,14 +9,14 @@ exports[`Profile view Renders correctly 1`] = `
       class="bg-white z-10"
     >
       <header
-        class="relative bg-white"
+        class="relative bg-brand-black"
       >
         <nav
           aria-label="Top"
           class="max-w-7xl mx-auto px-4 md:px-6 xl:px-8"
         >
           <div
-            class="h-16 mt-0.5 flex items-center justify-between border-b border-brand-grey-whisper"
+            class="h-16 flex items-center justify-between border-b border-brand-black"
           >
             <div
               class="flex-1 flex items-center xl:hidden"
@@ -52,16 +52,26 @@ exports[`Profile view Renders correctly 1`] = `
               class="hidden xl:flex-1 xl:block xl:self-stretch"
             >
               <div
-                class="h-full flex space-x-8"
+                class="h-full flex space-x-10"
               >
                 <a
-                  class="flex items-center text-gray-700 hover:text-gray-800"
-                  href="/taste-finder"
+                  class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                  href="//www.60beans.de/uber-uns"
                 >
                   <span
                     class="uppercase text-sm leading-5"
                   >
-                    Tastefinder
+                    Über uns
+                  </span>
+                </a>
+                <a
+                  class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                  href="//blog.60beans.com"
+                >
+                  <span
+                    class="uppercase text-sm leading-5"
+                  >
+                    Blog
                   </span>
                 </a>
               </div>
@@ -78,7 +88,7 @@ exports[`Profile view Renders correctly 1`] = `
               <img
                 alt="60beans"
                 class="h-6"
-                src="60beans-black.svg"
+                src="60beans-light.svg"
               />
             </a>
             <div
@@ -91,31 +101,31 @@ exports[`Profile view Renders correctly 1`] = `
                   class="hidden h-full xl:flex space-x-8 justify-end"
                 >
                   <a
-                    class="flex items-center text-gray-700 hover:text-gray-800"
-                    href="//www.60beans.de/uber-uns"
+                    class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                    href="/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
                     >
-                      Über uns
+                      Tastefinder
                     </span>
                   </a>
                 </div>
                 <a
-                  class="hidden xl:block ml-4"
+                  class="hidden xl:block ml-10"
                   href="/profile"
                 >
                   <svg
                     class="undefined fill-brand-black stroke-brand-black"
                     fill="inherit"
-                    height="24"
-                    viewBox="0 0 33 31"
-                    width="24"
+                    height="25"
+                    viewBox="0 0 24 24"
+                    width="25"
                   >
                     <path
                       clip-rule="evenodd"
-                      d="M16.3,1.1C8.2,1.1,1.6,7.6,1.6,15.5S8.2,30,16.3,30c8.1,0,14.8-6.5,14.8-14.5S24.4,1.1,16.3,1.1z M16.2,8.9 c2.1,0,3.8,1.7,3.8,3.8c0,2-1.8,3.8-3.8,3.8c-2.1,0-3.9-1.7-3.9-3.8C12.4,10.6,14.1,8.9,16.2,8.9z M16.3,18.5c3.9,0,7.5,2.4,8.9,6.1 c-2.5,2.3-5.5,3.5-8.9,3.5c-3.4,0-6.5-1.2-8.9-3.5C8.8,20.9,12.3,18.5,16.3,18.5z M22.1,12.7c0-3.2-2.6-5.7-5.8-5.7 s-5.9,2.6-5.9,5.7c0,1.7,0.8,3.4,2.2,4.4c-2.9,1-5.3,3-6.6,5.8c-1.5-2-2.4-4.5-2.5-7.3v-0.1C3.5,8.6,9.2,3,16.2,3S29,8.6,29,15.5 c0,2.7-0.9,5.2-2.5,7.3c-1.3-2.7-3.7-4.8-6.6-5.8C21.3,16,22.1,14.5,22.1,12.7z"
-                      fill="inherit"
+                      d="M16 8.66663C16 10.8766 14.21 12.6666 12 12.6666C9.79 12.6666 8 10.8766 8 8.66663C8 6.45663 9.79 4.66663 12 4.66663C14.21 4.66663 16 6.45663 16 8.66663ZM4 18.6666C4 16.0066 9.33 14.6666 12 14.6666C14.67 14.6666 20 16.0066 20 18.6666V20.6666H4V18.6666Z"
+                      fill="#FFFFFF"
                       fill-rule="evenodd"
                       stroke="none"
                       stroke-width="none"
@@ -123,10 +133,10 @@ exports[`Profile view Renders correctly 1`] = `
                   </svg>
                 </a>
                 <div
-                  class="ml-4 flow-root xl:ml-6"
+                  class="ml-4 flow-root xl:ml-10"
                 >
                   <button
-                    class="relative inline-flex flex-row items-center rounded-full border-2 px-3 py-2 text-sm font-semibold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
+                    class="relative inline-flex flex-row items-center rounded-full border-2 px-3 py-2 text-sm font-semibold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
                     data-testid="button-shop"
                     role="button"
                   >
@@ -146,22 +156,27 @@ exports[`Profile view Renders correctly 1`] = `
         class="w-full border-b border-brand-grey-bombay"
       >
         <div
-          class="w-full max-w-7xl mx-auto px-6 xl:px-8 py-8 md:grid md:grid-cols-2 md:gap-20"
+          class="w-full max-w-7xl mx-auto px-6 xl:px-8 py-8 "
         >
-          <div>
-            <h1
-              class="font-syne mb-3 text-3xl leading-10 font-semibold tracking-tight"
+          <div
+            class="flex justify-center"
+          >
+            <svg
+              class="w-8 h-8 text-brand-grey-mine animate-spin fill-brand-grey-bombay"
+              fill="none"
+              role="status"
+              viewBox="0 0 100 101"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              Hallo
-               
-              asdd
-              ,
-            </h1>
-            <p
-              class="text-base leading-6"
-            >
-              Willkommen in deiner privaten Kaffeeecke. Hier kannst du dein Geschmacksprofil, deine Bestellungen als auch Kontodaten einsehen.
-            </p>
+              <path
+                d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                fill="currentColor"
+              />
+              <path
+                d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                fill="currentFill"
+              />
+            </svg>
           </div>
         </div>
       </div>
@@ -180,9 +195,9 @@ exports[`Profile view Renders correctly 1`] = `
             <svg
               class="mr-4 fill-brand-black text-brand-black stroke-brand-black pointer-events-none fill-brand-black stroke-brand-black"
               fill="inherit"
-              height="24"
+              height="25"
               viewBox="0 0 31 28"
-              width="24"
+              width="25"
             >
               <path
                 clip-rule="evenodd"
@@ -220,9 +235,9 @@ exports[`Profile view Renders correctly 1`] = `
             <svg
               class="mr-4 fill-brand-black text-brand-black stroke-brand-black pointer-events-none fill-brand-black stroke-brand-black"
               fill="inherit"
-              height="24"
+              height="25"
               viewBox="0 0 30 30"
-              width="24"
+              width="25"
             >
               <path
                 clip-rule="evenodd"
@@ -259,9 +274,9 @@ exports[`Profile view Renders correctly 1`] = `
             <svg
               class="mr-4 fill-brand-black text-brand-black stroke-brand-black fill-brand-black stroke-brand-black"
               fill="inherit"
-              height="24"
+              height="25"
               viewBox="-1 0 24 24"
-              width="24"
+              width="25"
             >
               <path
                 clip-rule="evenodd"
