@@ -1,3 +1,10 @@
+# [1.49.0](https://github.com/Famous-Roasters/frontend/compare/v1.48.0...v1.49.0) (2022-08-20)
+
+
+### Features
+
+* **nav:** update top menu layout ([#179](https://github.com/Famous-Roasters/frontend/issues/179)) ([c747f32](https://github.com/Famous-Roasters/frontend/commit/c747f32eb94ef8ef57a4de6235c8a5331d7f3e10))
+
 # [1.48.0](https://github.com/Famous-Roasters/frontend/compare/v1.47.0...v1.48.0) (2022-08-20)
 
 
