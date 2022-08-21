@@ -1,3 +1,10 @@
+# [1.50.0](https://github.com/Famous-Roasters/frontend/compare/v1.49.0...v1.50.0) (2022-08-21)
+
+
+### Features
+
+* **nav:** update profile + cart icons ([2eb2b80](https://github.com/Famous-Roasters/frontend/commit/2eb2b80c4f49af4dc19dfe5cd5fa7e104413aa5f))
+
 # [1.49.0](https://github.com/Famous-Roasters/frontend/compare/v1.48.0...v1.49.0) (2022-08-20)
 
 
