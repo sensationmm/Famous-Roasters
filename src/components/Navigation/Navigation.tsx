@@ -103,7 +103,7 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
         as="div"
         type={TypographyType.Label}
         size={TypographySize.Tiny}
-        className="absolute top-0 left-0.5 z-15 tracking-tighter text-coreUI-text-primary"
+        className="absolute top-0 left-0.5 z-15 tracking-tightest text-coreUI-text-primary"
       >
         {size}
       </Typography>
@@ -235,7 +235,7 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
                       <Link id="toCart" to="/cart" className="group -m-2 p-2 flex items-center">
                         <div className="static flex-shrink-0 relative">
                           <Icon name={IconName.Cart} aria-hidden="true" />
-                          <span className="absolute top-3 left-3.5 h-4 w-4 z-10 bg-white rounded-full">
+                          <span className="absolute top-3 left-4 h-4 w-4 z-10 bg-white rounded-full">
                             {CartItemsLabel(itemsInCart())}
                           </span>
                           <span className="sr-only">items in cart, view bag</span>

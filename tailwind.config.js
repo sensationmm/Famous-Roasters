@@ -56,6 +56,9 @@ module.exports = {
             'sans': ['Open Sans', 'sans-serif'],
             'syne': ['Syne'],
         },
+        letterSpacing :{
+            'tightest': '-.12em',
+        },
         screens: {
             md: '641px',
             lg: '769px',
