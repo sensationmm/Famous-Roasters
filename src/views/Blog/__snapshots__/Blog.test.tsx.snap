@@ -78,7 +78,7 @@ exports[`Blog Category List View Renders correctly 1`] = `
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
-              href="//www.60beans.de"
+              href="//www.60beans.com"
             >
               <span
                 class="sr-only"
