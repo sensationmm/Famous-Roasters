@@ -6,6 +6,9 @@ const GET_BLOG_BY_CATEGORY_LIST = loader('src/graphql/queries/blogListByCategory
 export const BlogListByCategoryMock = {
   request: {
     query: GET_BLOG_BY_CATEGORY_LIST,
+    variables: {
+      category: 'Kaffeewissen',
+    },
   },
   result: {
     data: {
@@ -99,6 +102,9 @@ export const BlogListByCategoryMock = {
 export const BlogListByCategoryEmptyMock = {
   request: {
     query: GET_BLOG_BY_CATEGORY_LIST,
+    variables: {
+      category: 'Kaffeewissen',
+    },
   },
   result: {
     data: {
@@ -115,6 +121,9 @@ export const BlogListByCategoryEmptyMock = {
 export const BlogListByCategoryMockError = {
   request: {
     query: GET_BLOG_BY_CATEGORY_LIST,
+    variables: {
+      category: 'Kaffeewissen',
+    },
   },
   result: {
     errors: [new GraphQLError('Error!')],

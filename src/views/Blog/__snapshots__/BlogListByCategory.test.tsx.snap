@@ -173,7 +173,9 @@ exports[`Blog Category List View Renders correctly when no results found 1`] = `
           >
             <h1
               class="text-[38px] lg:text-[80px] font-semibold font-syne mb-6 text-5xl leading-none"
-            />
+            >
+              Kaffeewissen
+            </h1>
             <p
               class="lg:text-2xl lg:font-semibold text-base leading-6"
             >
@@ -498,7 +500,9 @@ exports[`Blog Category List View Renders correctly when results found 1`] = `
           >
             <h1
               class="text-[38px] lg:text-[80px] font-semibold font-syne mb-6 text-5xl leading-none"
-            />
+            >
+              Kaffeewissen
+            </h1>
             <p
               class="lg:text-2xl lg:font-semibold text-base leading-6"
             >
