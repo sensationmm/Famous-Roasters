@@ -89,7 +89,7 @@ export const BlogListByCategory: React.FC<CategoryListProps> = () => {
                           <img src={PlayVideoIcon} className="w-10 h-10" />
                         </div>
                       )}
-                      <img src={thumbnail.url} className="w-full h-full" />
+                      <img src={thumbnail.url} className="w-full" />
                     </div>
                     <Typography
                       as="h2"
