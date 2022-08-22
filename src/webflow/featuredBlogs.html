@@ -59,7 +59,7 @@
     blogs.forEach((blog) => {
       const blogClone = blogTemplate.cloneNode(true)
       blogClone.querySelector('.blog-teaser__title').innerText = blog.title
-      blogClone.href = `${BLOG_URL}${blog.slug}`
+      blogClone.href = `${BLOG_URL}${blog.category}/${blog.slug}`
       blogClone.querySelector('.blog-teaser__img').src = blog.thumbnail ? blog.thumbnail.url : PLACEHOLDER_IMAGE
       blogClone.querySelector('.blog-teaser__category').innerText = blog.category
       blogWrapper.appendChild(blogClone)
