@@ -441,9 +441,9 @@
           }
         },
         "coffeeType": {
-          "label": "Alle Zubereitungsmethoden",
+          "label": "Alle Kaffees",
           "values": {
-            "none": "Alle Zubereitungsmethoden"
+            "none": "Alle Kaffees"
           }
         },
         "common": {

@@ -257,7 +257,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
               <span
                 class="block truncate text-xl leading-7 font-semibold"
               >
-                Alle Zubereitungsmethoden
+                Alle Kaffees
               </span>
               <svg
                 aria-hidden="true"
@@ -2897,7 +2897,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
               <span
                 class="block truncate text-xl leading-7 font-semibold"
               >
-                Alle Zubereitungsmethoden
+                Alle Kaffees
               </span>
               <svg
                 aria-hidden="true"
