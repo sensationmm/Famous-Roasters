@@ -112,7 +112,7 @@ exports[`Blog Category List View Renders correctly when no results found 1`] = `
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="/taste-finder"
+                    href="//shop.60beans.com/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -123,7 +123,7 @@ exports[`Blog Category List View Renders correctly when no results found 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="/profile"
+                  href="//shop.60beans.com/profile"
                 >
                   <svg
                     class="undefined fill-brand-black stroke-brand-black"
@@ -239,7 +239,7 @@ exports[`Blog Category List View Renders correctly when no results found 1`] = `
               class="mt-0"
             >
               <a
-                href="/catalogue"
+                href="//shop.60beans.com/catalogue"
               >
                 Shop
               </a>
@@ -248,7 +248,7 @@ exports[`Blog Category List View Renders correctly when no results found 1`] = `
               class="mt-6"
             >
               <a
-                href="/taste-finder"
+                href="//shop.60beans.com/taste-finder"
               >
                 Tastefinder
               </a>
@@ -437,7 +437,7 @@ exports[`Blog Category List View Renders correctly when results found 1`] = `
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="/taste-finder"
+                    href="//shop.60beans.com/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -448,7 +448,7 @@ exports[`Blog Category List View Renders correctly when results found 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="/profile"
+                  href="//shop.60beans.com/profile"
                 >
                   <svg
                     class="undefined fill-brand-black stroke-brand-black"
@@ -520,7 +520,7 @@ exports[`Blog Category List View Renders correctly when results found 1`] = `
               class="relative h-52 grid content-center overflow-hidden mb-4"
             >
               <img
-                class="w-full h-full"
+                class="w-full"
                 src="https://media.graphassets.com/q6XrYJTlQVapNl047XNr"
               />
             </div>
@@ -584,7 +584,7 @@ exports[`Blog Category List View Renders correctly when results found 1`] = `
               class="relative h-52 grid content-center overflow-hidden mb-4"
             >
               <img
-                class="w-full h-full"
+                class="w-full"
                 src="https://media.graphassets.com/aihzocmnSumexnThr6JE"
               />
             </div>
@@ -641,7 +641,7 @@ exports[`Blog Category List View Renders correctly when results found 1`] = `
               class="relative h-52 grid content-center overflow-hidden mb-4"
             >
               <img
-                class="w-full h-full"
+                class="w-full"
                 src="https://media.graphassets.com/l3bWMvc8RSuRTeBei0z8"
               />
             </div>
@@ -706,7 +706,7 @@ exports[`Blog Category List View Renders correctly when results found 1`] = `
                 />
               </div>
               <img
-                class="w-full h-full"
+                class="w-full"
                 src="https://media.graphassets.com/l3bWMvc8RSuRTeBei0z8"
               />
             </div>
@@ -813,7 +813,7 @@ exports[`Blog Category List View Renders correctly when results found 1`] = `
               class="mt-0"
             >
               <a
-                href="/catalogue"
+                href="//shop.60beans.com/catalogue"
               >
                 Shop
               </a>
@@ -822,7 +822,7 @@ exports[`Blog Category List View Renders correctly when results found 1`] = `
               class="mt-6"
             >
               <a
-                href="/taste-finder"
+                href="//shop.60beans.com/taste-finder"
               >
                 Tastefinder
               </a>
