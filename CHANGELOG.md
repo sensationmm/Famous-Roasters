@@ -1,3 +1,10 @@
+# [1.51.0](https://github.com/Famous-Roasters/frontend/compare/v1.50.0...v1.51.0) (2022-08-22)
+
+
+### Features
+
+* **nav:** add `Unsere Röster` item to top navigation ([021aaa3](https://github.com/Famous-Roasters/frontend/commit/021aaa3e66e8340a96912c9b00170513d2525e8d))
+
 # [1.50.0](https://github.com/Famous-Roasters/frontend/compare/v1.49.0...v1.50.0) (2022-08-21)
 
 
