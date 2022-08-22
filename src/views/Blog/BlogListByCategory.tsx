@@ -55,7 +55,7 @@ export const BlogListByCategory: React.FC<CategoryListProps> = () => {
   return (
     <>
       <Helmet>
-        <title>{`{category} | ${t('brand.name')}`}</title>
+        <title>{`${category} | ${t('brand.name')}`}</title>
       </Helmet>
 
       <Layout navigationTheme={NavigationTheme.Home}>
