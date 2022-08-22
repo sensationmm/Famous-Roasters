@@ -15,10 +15,10 @@ import {
 import { parseHtmlSafely, readTimeCalculator } from 'src/utils'
 
 interface BlogProps {
-  locale: string
+  locale?: string
 }
 
-export const Blog: React.FC<BlogProps> = ({ locale }) => {
+export const Blog: React.FC<BlogProps> = ({ locale = 'de_de' }) => {
   const { category, slug } = useParams()
   const GET_BLOG = loader('src/graphql/queries/blog.query.graphql')
 

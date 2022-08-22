@@ -3,47 +3,29 @@ import { render, waitFor } from '@testing-library/react'
 import React from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { MemoryRouter } from 'react-router-dom'
-import { BlogListByCategoryEmptyMock, BlogListByCategoryMock, BlogListByCategoryMockError } from 'src/_mocks'
+import { BlogMock, BlogMockError } from 'src/_mocks'
 import { i18n } from 'src/config'
 
-import { BlogListByCategory } from '.'
+import { Blog } from '.'
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'), // use actual for all non-hook parts
   useParams: () => ({
+    slug: 'frenchpress',
     category: 'Kaffeewissen',
   }),
 }))
-
 describe('Blog Category List View', () => {
-  it('Renders correctly when results found', async () => {
+  it('Renders correctly', async () => {
     const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
-        mocks={[BlogListByCategoryMock, BlogListByCategoryMockError]}
+        mocks={[BlogMock, BlogMockError]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
           <MemoryRouter>
-            <BlogListByCategory />
-          </MemoryRouter>
-        </I18nextProvider>
-      </MockedProvider>,
-    )
-    await waitFor(() => new Promise((res) => setTimeout(res, 500)))
-    expect(container).toMatchSnapshot()
-  })
-
-  it('Renders correctly when no results found', async () => {
-    const { container } = render(
-      <MockedProvider
-        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
-        mocks={[BlogListByCategoryEmptyMock, BlogListByCategoryMockError]}
-        addTypename={false}
-      >
-        <I18nextProvider i18n={i18n}>
-          <MemoryRouter>
-            <BlogListByCategory />
+            <Blog locale="de_de" />
           </MemoryRouter>
         </I18nextProvider>
       </MockedProvider>,
@@ -56,12 +38,12 @@ describe('Blog Category List View', () => {
     const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
-        mocks={[BlogListByCategoryMockError]}
+        mocks={[BlogMockError]}
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
           <MemoryRouter>
-            <BlogListByCategory />
+            <Blog />
           </MemoryRouter>
         </I18nextProvider>
       </MockedProvider>,

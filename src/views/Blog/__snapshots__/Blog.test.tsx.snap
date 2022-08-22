@@ -22,7 +22,7 @@ exports[`Blog Category List View Renders correctly 1`] = `
               class="flex-1 flex items-center xl:hidden"
             >
               <button
-                class="-ml-2 bg-brand-black p-2 rounded-md text-gray-400"
+                class="-ml-2 bg-white p-2 rounded-md text-gray-400"
                 data-testid="button-open"
                 type="button"
               >
@@ -32,19 +32,18 @@ exports[`Blog Category List View Renders correctly 1`] = `
                   Open menu
                 </span>
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
-                  fill="inherit"
-                  height="24"
+                  aria-hidden="true"
+                  class="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
                   viewBox="0 0 24 24"
-                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    clip-rule="evenodd"
-                    d="M3.17188 5H20.0156C20.1102 5 20.1875 5.07734 20.1875 5.17188V6.375C20.1875 6.46953 20.1102 6.54688 20.0156 6.54688H3.17188C3.07734 6.54688 3 6.46953 3 6.375V5.17188C3 5.07734 3.07734 5 3.17188 5ZM3.17188 11.5469H20.0156C20.1102 11.5469 20.1875 11.6242 20.1875 11.7188V12.9219C20.1875 13.0164 20.1102 13.0938 20.0156 13.0938H3.17188C3.07734 13.0938 3 13.0164 3 12.9219V11.7188C3 11.6242 3.07734 11.5469 3.17188 11.5469ZM20.0156 18.0938H3.17188C3.07734 18.0938 3 18.1711 3 18.2656V19.4688C3 19.5633 3.07734 19.6406 3.17188 19.6406H20.0156C20.1102 19.6406 20.1875 19.5633 20.1875 19.4688V18.2656C20.1875 18.1711 20.1102 18.0938 20.0156 18.0938Z"
-                    fill="#FFFFFF"
-                    fill-rule="evenodd"
-                    stroke="#FFFFFF"
-                    stroke-width="0.25"
+                    d="M4 6h16M4 12h16M4 18h16"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
                   />
                 </svg>
               </button>
@@ -57,7 +56,7 @@ exports[`Blog Category List View Renders correctly 1`] = `
               >
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/uber-uns"
+                  href="//www.60beans.de/uber-uns"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -67,17 +66,7 @@ exports[`Blog Category List View Renders correctly 1`] = `
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/roesterei"
-                >
-                  <span
-                    class="uppercase text-sm leading-5"
-                  >
-                    Unsere Röster
-                  </span>
-                </a>
-                <a
-                  class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//blog.60beans.com"
+                  href="/"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -160,195 +149,90 @@ exports[`Blog Category List View Renders correctly 1`] = `
         </nav>
       </header>
     </div>
-    <div
+    <main
       class="flex-grow flex w-full flex-col"
     >
       <div
-        class="hero w-full h-[624px] md:h-[428px] xl:h-[624px] bg-brand-grey-whisper"
+        class="w-full max-w-7xl mx-auto px-6 xl:px-8 my-8 "
       >
+        <h1
+          class="font-syne text-3xl leading-10 font-semibold tracking-tight"
+        >
+          Full Immersion Zubereitung mit der French Press.
+        </h1>
         <div
-          class="flex flex-col md:flex-row w-full h-full max-w-5xl mx-auto pt-20"
+          class="flex items-center py-6 border-b border-coreUI-border"
         >
           <div
-            class="px-6 md:w-1/2"
-          >
-            <h1
-              class="text-[38px] lg:text-[80px] font-semibold font-syne mb-6 text-5xl leading-none"
-            >
-              Unser Blog
-            </h1>
-            <p
-              class="xl:text-2xl lg:font-semibold mb-8 text-base leading-6"
-            >
-              Entdecke mit uns die Welt des Specialty Coffee. Die besten Zubereitungsmethoden, spannende Geschichten aus der Kaffeeszene als auch die neuesten Trends findest du in unserem Blog.
-            </p>
-          </div>
-          <div
-            class="md:px-6 md:w-1/2 h-full grid justify-items-end content-end md:pb-12 overflow-hidden justify-content-center align-items-center"
+            class="w-8 h-8 mr-3"
           >
             <img
-              class="w-full md:w-auto"
-              src="Kalle_Rösterei_12.png"
+              class="rounded-full"
+              src="https://media.graphassets.com/resize=h:600,w:600,f:crop/security=policy:eyJleHBpcnkiOjE4MTQ5MTM4MjYsInBhdGgiOiIvNDVlM2I2Y2UtM2UzZC00NDk2LWI1MWYtNTgxNzg5YzUzNjAwLyIsImNvbnRhaW5lciI6ImNvbW1vbi1maWxlc3RhY2stYWU2NTM5OSIsImNhbGwiOlsicmVhZCIsImNvbnZlcnQiXSwibWF4U2l6ZSI6MTAyNDAwMDB9,signature:cb1281076efd063dce0358a0a768eb6ff6fdcaf4d0951125b3e3defa418c2235/oKUQM1Y6Sfa6cgtGDpsU"
             />
           </div>
+          <div
+            class="flex flex-col text-coreUI-text-secondary"
+          >
+            <span
+              class="text-sm leading-5"
+            >
+              60beans
+            </span>
+            <span
+              class="text-sm leading-5"
+            >
+              <span
+                class="capitalize"
+              >
+                Kaffeewissen
+              </span>
+               ·
+               
+              3
+               min read
+            </span>
+          </div>
+        </div>
+        <div
+          class="mt-8"
+        >
+          <h4
+            class="mb-4 text-lg leading-7 font-semibold"
+          >
+            Kaffee brühen in einer Pressstempelkanne.
+          </h4>
+          <p
+            class="mb-4"
+          >
+            In der Studentenbude zeugt sie von zahlreichen Einsätzen. Auf dem Regal der großbürgerlichen Villa funkelt die Designerversion. Sie zieht sich durch alle Bevölkerungsgruppen, fast jeder kennt sie, viele haben eine oder mehrere zu Hause. Die ikonische Kanne gibt es in den verschiedensten Materialien. Besonders beliebt sind Modell aus Glas oder Edelstahl. Die French Press, oder auch Pressstempelkanne gehört zu den populärsten Arten der Kaffeezubereitung. Und das aus vielerlei Gründen. Einer der wichtigsten ist die Tatsache, dass sie zu den Full Immersion Kaffeebereitern zählt. Was heißt das? Bei der Extraktion ist der beliebig grob gemahlene Kaffee durchgehend mit heißem Wasser in Kontakt und wird erst danach gefiltert. Das Metallsieb, das als Filter dient, belässt die im Kaffee enthaltenen Fette und Öle. Im Vergleich zu anderen Methoden der Kaffeezubereitung verleiht dies dem Getränk einen vollmundigeren Geschmack und mehr Körper. Und das schmeckt man bei jeder Tasse. Wer also seinen Kaffee so am liebsten mag, dem sei die French Press wärmstens empfohlen. Einfach mal ausprobieren!
+          </p>
+          <h4
+            class="mb-4 text-lg leading-7 font-semibold"
+          >
+            Kaffee mit mittlerem Mahlgrad einfüllen, warten, pressen – und genießen. 
+          </h4>
+          <p
+            class="mb-4"
+          >
+            Was die French Press außerdem so überzeugend macht, ist ihre unkomplizierte Handhabung. Nach nur wenigen Handgriffen steht dem puren Kaffeegenuss nichts mehr im Wege. Für die Zubereitung eures Kaffees in der French Press empfiehlt sich ein mittlerer bis grober Mahlgrad, am besten frisch gemahlen. Die Wassertemperatur sollte ca. 96 Grad betragen. Doch das nur als Anhaltspunkt, denn Ihr könnt ganz problemlos herumexperimentieren. So werden beispielsweise 60 Gramm gemahlener Kaffee für die 1-Liter-Stempelkanne empfohlen. Aber auch das ist eurem persönlichen Geschmack überlassen. Wer seinen Kaffee intensiver mag, nimmt etwas mehr Kaffee. Nun einfach die French Press mit der gewünschten Menge frisch gemahlenem Kaffee befüllen, anschließend mit heißem Wasser übergießen und mit kreisenden Bewegungen vorsichtig umrühren. Den Kaffee je nach gewünschter Stärke zwischen 3 und 5 Minuten ziehen lassen, nun noch das Sieb vorsichtig herunterdrücken. Weil es sich um eine manuelle Methode handelt, könnt Ihr mehr Kontrolle über Wassertemperatur und Extraktionszeit sowie die Menge des gemahlenen Kaffees ausüben. Dadurch habt Ihr die Möglichkeit, zu beeinflussen, wie euer Kaffee am Ende schmeckt. Einmal French Press-Fan, werdet Ihr im Laufe der Zeit eure ganz eigene Art der Zubereitung und den perfekten Kaffee dazu entdecken. 
+          </p>
+          <h4
+            class="mb-4 text-lg leading-7 font-semibold"
+          >
+            Kaffeegenuss in seiner praktischsten Form.
+          </h4>
+          <p
+            class="mb-4"
+          >
+            Ihr möchtet auch im Urlaub nicht auf das besondere Tässchen am Morgen verzichten? Wie gut, dass die Pressstempelkanne zu den unkompliziertesten Kaffeebereitern gehört und Ihr sie überall hin mitnehmen könnt. Und sollte sie doch einmal kaputt oder verloren gehen, kostet das auch nicht die Welt. Hauptsache, Ihr macht beim Geschmack keinerlei Abstriche!
+          </p>
+          <p
+            class="mb-4"
+          />
         </div>
       </div>
-      <div
-        class="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full max-w-5xl mx-auto px-6 xl:px-8 md:my-8"
-      >
-        <div
-          class="px-4 py-6 border-b border-coreUI-border w-full hover:bg-coreUI-background-images"
-        >
-          <a
-            href="/Kaffeewissen"
-          >
-            <h4
-              class="font-syne mb-4 text-3xl leading-10 font-semibold tracking-tight"
-            >
-              Kaffeewissen
-            </h4>
-            <div
-              class="text-coreUI-text-secondary mb-6"
-            >
-              <span
-                class="text-sm leading-5"
-              >
-                #
-                Nachhaltigkeit
-                 
-              </span>
-              <span
-                class="text-sm leading-5"
-              >
-                #
-                SpecialityCoffee
-                 
-              </span>
-            </div>
-            <span
-              class="underline underline-offset-8 text-sm leading-5 font-semibold"
-            >
-              Mehr Erfahren
-            </span>
-          </a>
-        </div>
-        <div
-          class="px-4 py-6 border-b border-coreUI-border w-full hover:bg-coreUI-background-images"
-        >
-          <a
-            href="/Kaffeeequipment"
-          >
-            <h4
-              class="font-syne mb-4 text-3xl leading-10 font-semibold tracking-tight"
-            >
-              Kaffeeequipment
-            </h4>
-            <div
-              class="text-coreUI-text-secondary mb-6"
-            >
-              <span
-                class="text-sm leading-5"
-              >
-                #
-                Handfiltervergleich
-                 
-              </span>
-              <span
-                class="text-sm leading-5"
-              >
-                #
-                Grundausstattung
-                 
-              </span>
-            </div>
-            <span
-              class="underline underline-offset-8 text-sm leading-5 font-semibold"
-            >
-              Mehr Erfahren
-            </span>
-          </a>
-        </div>
-        <div
-          class="px-4 py-6 border-b border-coreUI-border w-full hover:bg-coreUI-background-images"
-        >
-          <a
-            href="/Kaffeetrends"
-          >
-            <h4
-              class="font-syne mb-4 text-3xl leading-10 font-semibold tracking-tight"
-            >
-              Kaffeetrends
-            </h4>
-            <div
-              class="text-coreUI-text-secondary mb-6"
-            >
-              <span
-                class="text-sm leading-5"
-              >
-                #
-                Gadgets
-                 
-              </span>
-              <span
-                class="text-sm leading-5"
-              >
-                #
-                Roestungen
-                 
-              </span>
-            </div>
-            <span
-              class="underline underline-offset-8 text-sm leading-5 font-semibold"
-            >
-              Mehr Erfahren
-            </span>
-          </a>
-        </div>
-        <div
-          class="px-4 py-6 border-b border-coreUI-border w-full hover:bg-coreUI-background-images"
-        >
-          <a
-            href="/Zubereitungstipps"
-          >
-            <h4
-              class="font-syne mb-4 text-3xl leading-10 font-semibold tracking-tight"
-            >
-              Zubereitungstipps
-            </h4>
-            <div
-              class="text-coreUI-text-secondary mb-6"
-            >
-              <span
-                class="text-sm leading-5"
-              >
-                #
-                Aeropress
-                 
-              </span>
-              <span
-                class="text-sm leading-5"
-              >
-                #
-                Siebtraeger
-                 
-              </span>
-              <span
-                class="text-sm leading-5"
-              >
-                #
-                ColdDrip
-                 
-              </span>
-            </div>
-            <span
-              class="underline underline-offset-8 text-sm leading-5 font-semibold"
-            >
-              Mehr Erfahren
-            </span>
-          </a>
-        </div>
-      </div>
-    </div>
+    </main>
     <footer
       class="bg-brand-black text-base text-white py-10 z-30"
     >
