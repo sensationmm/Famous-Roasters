@@ -22,7 +22,7 @@ exports[`Error view Renders correctly 1`] = `
               class="flex-1 flex items-center xl:hidden"
             >
               <button
-                class="-ml-2 bg-white p-2 rounded-md text-gray-400"
+                class="-ml-2 bg-brand-black p-2 rounded-md text-gray-400"
                 data-testid="button-open"
                 type="button"
               >
@@ -32,18 +32,19 @@ exports[`Error view Renders correctly 1`] = `
                   Open menu
                 </span>
                 <svg
-                  aria-hidden="true"
-                  class="h-6 w-6"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
+                  class="undefined fill-brand-black stroke-brand-black"
+                  fill="inherit"
+                  height="24"
                   viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
                 >
                   <path
-                    d="M4 6h16M4 12h16M4 18h16"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    clip-rule="evenodd"
+                    d="M3.17188 5H20.0156C20.1102 5 20.1875 5.07734 20.1875 5.17188V6.375C20.1875 6.46953 20.1102 6.54688 20.0156 6.54688H3.17188C3.07734 6.54688 3 6.46953 3 6.375V5.17188C3 5.07734 3.07734 5 3.17188 5ZM3.17188 11.5469H20.0156C20.1102 11.5469 20.1875 11.6242 20.1875 11.7188V12.9219C20.1875 13.0164 20.1102 13.0938 20.0156 13.0938H3.17188C3.07734 13.0938 3 13.0164 3 12.9219V11.7188C3 11.6242 3.07734 11.5469 3.17188 11.5469ZM20.0156 18.0938H3.17188C3.07734 18.0938 3 18.1711 3 18.2656V19.4688C3 19.5633 3.07734 19.6406 3.17188 19.6406H20.0156C20.1102 19.6406 20.1875 19.5633 20.1875 19.4688V18.2656C20.1875 18.1711 20.1102 18.0938 20.0156 18.0938Z"
+                    fill="#FFFFFF"
+                    fill-rule="evenodd"
+                    stroke="#FFFFFF"
+                    stroke-width="0.25"
                   />
                 </svg>
               </button>
@@ -56,7 +57,7 @@ exports[`Error view Renders correctly 1`] = `
               >
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.de/uber-uns"
+                  href="//www.60beans.com/uber-uns"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -66,7 +67,7 @@ exports[`Error view Renders correctly 1`] = `
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.de/roesterei"
+                  href="//www.60beans.com/roesterei"
                 >
                   <span
                     class="uppercase text-sm leading-5"

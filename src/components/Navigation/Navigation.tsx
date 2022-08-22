@@ -1,5 +1,5 @@
 import { Dialog, Transition } from '@headlessui/react'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { XIcon } from '@heroicons/react/outline'
 import React, { Fragment, useContext, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useNavigate } from 'react-router-dom'
@@ -37,13 +37,13 @@ interface NavigationData {
   pagesMobile: NavigationDataItem[]
 }
 
-const domainShop = process.env.REACT_APP_DOMAIN_SHOP || '' // '//shop.60beans.de'
+const domainShop = process.env.REACT_APP_DOMAIN_SHOP || '' // '//shop.60beans.com'
 const domainBlog = process.env.REACT_APP_DOMAIN_BLOG || '' // '//blog.60beans.com'
 
 const navigationData: NavigationData = {
   pagesPrimary: [
-    { key: 'about', href: '//www.60beans.de/uber-uns' },
-    { key: 'ourRoasters', href: '//www.60beans.de/roesterei' },
+    { key: 'about', href: '//www.60beans.com/uber-uns' },
+    { key: 'ourRoasters', href: '//www.60beans.com/roesterei' },
     { key: 'blog', href: domainBlog },
   ],
   pagesSecondary: [{ key: 'tasteFinder', href: `${domainShop}/taste-finder` }],
@@ -166,12 +166,12 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
             <div className="flex-1 flex items-center xl:hidden">
               <button
                 type="button"
-                className="-ml-2 bg-white p-2 rounded-md text-gray-400"
+                className="-ml-2 bg-brand-black p-2 rounded-md text-gray-400"
                 onClick={() => setOpen(true)}
                 data-testid="button-open"
               >
                 <span className="sr-only">Open menu</span>
-                <MenuIcon className="h-6 w-6" aria-hidden="true" />
+                <Icon name={IconName.BurgerMenu} aria-hidden="true" />
               </button>
             </div>
 
