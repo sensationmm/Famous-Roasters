@@ -661,7 +661,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col w-full justify-start pl-4"
+                class="flex flex-col w-full justify-center pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -752,7 +752,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col w-full justify-start pl-4"
+                class="flex flex-col w-full justify-center pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -843,7 +843,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col w-full justify-start pl-4"
+                class="flex flex-col w-full justify-center pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -934,7 +934,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col w-full justify-start pl-4"
+                class="flex flex-col w-full justify-center pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -1025,7 +1025,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col w-full justify-start pl-4"
+                class="flex flex-col w-full justify-center pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -1116,7 +1116,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col w-full justify-start pl-4"
+                class="flex flex-col w-full justify-center pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -1207,7 +1207,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col w-full justify-start pl-4"
+                class="flex flex-col w-full justify-center pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -1298,7 +1298,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col w-full justify-start pl-4"
+                class="flex flex-col w-full justify-center pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -1389,7 +1389,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col w-full justify-start pl-4"
+                class="flex flex-col w-full justify-center pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -1480,7 +1480,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col w-full justify-start pl-4"
+                class="flex flex-col w-full justify-center pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -1571,7 +1571,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col w-full justify-start pl-4"
+                class="flex flex-col w-full justify-center pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -1662,7 +1662,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col w-full justify-start pl-4"
+                class="flex flex-col w-full justify-center pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -3301,7 +3301,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 </div>
               </div>
               <div
-                class="flex flex-col w-full justify-start pl-4"
+                class="flex flex-col w-full justify-center pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -3392,7 +3392,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 </div>
               </div>
               <div
-                class="flex flex-col w-full justify-start pl-4"
+                class="flex flex-col w-full justify-center pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -3483,7 +3483,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 </div>
               </div>
               <div
-                class="flex flex-col w-full justify-start pl-4"
+                class="flex flex-col w-full justify-center pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -3574,7 +3574,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 </div>
               </div>
               <div
-                class="flex flex-col w-full justify-start pl-4"
+                class="flex flex-col w-full justify-center pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -3665,7 +3665,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 </div>
               </div>
               <div
-                class="flex flex-col w-full justify-start pl-4"
+                class="flex flex-col w-full justify-center pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -3756,7 +3756,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 </div>
               </div>
               <div
-                class="flex flex-col w-full justify-start pl-4"
+                class="flex flex-col w-full justify-center pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -3847,7 +3847,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 </div>
               </div>
               <div
-                class="flex flex-col w-full justify-start pl-4"
+                class="flex flex-col w-full justify-center pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -3938,7 +3938,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 </div>
               </div>
               <div
-                class="flex flex-col w-full justify-start pl-4"
+                class="flex flex-col w-full justify-center pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -4029,7 +4029,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 </div>
               </div>
               <div
-                class="flex flex-col w-full justify-start pl-4"
+                class="flex flex-col w-full justify-center pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -4120,7 +4120,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 </div>
               </div>
               <div
-                class="flex flex-col w-full justify-start pl-4"
+                class="flex flex-col w-full justify-center pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -4211,7 +4211,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 </div>
               </div>
               <div
-                class="flex flex-col w-full justify-start pl-4"
+                class="flex flex-col w-full justify-center pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"
@@ -4302,7 +4302,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 </div>
               </div>
               <div
-                class="flex flex-col w-full justify-start pl-4"
+                class="flex flex-col w-full justify-center pl-4"
               >
                 <div
                   class="text-base leading-6 font-semibold"

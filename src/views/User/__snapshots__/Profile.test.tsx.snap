@@ -409,7 +409,7 @@ exports[`Profile view Renders correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="flex flex-col w-full justify-start pl-4"
+                  class="flex flex-col w-full justify-center pl-4"
                 >
                   <div
                     class="text-base leading-6 font-semibold"
@@ -499,7 +499,7 @@ exports[`Profile view Renders correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="flex flex-col w-full justify-start pl-4"
+                  class="flex flex-col w-full justify-center pl-4"
                 >
                   <div
                     class="text-base leading-6 font-semibold"
@@ -589,7 +589,7 @@ exports[`Profile view Renders correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="flex flex-col w-full justify-start pl-4"
+                  class="flex flex-col w-full justify-center pl-4"
                 >
                   <div
                     class="text-base leading-6 font-semibold"
@@ -658,7 +658,7 @@ exports[`Profile view Renders correctly 1`] = `
             class="grid w-full md:grid-cols-2"
           >
             <div
-              class="grid grid-cols-2 gap-4 px-0 py-6 border-b border-brand-grey-bombay md:max-w-sm md:border-0"
+              class="grid grid-cols-2 grid-cols-[150px_1fr] gap-4 px-0 py-6 border-b border-brand-grey-bombay md:max-w-sm md:border-0"
             >
               <a
                 href="/catalogue?vendor=Nomad"
@@ -704,7 +704,7 @@ exports[`Profile view Renders correctly 1`] = `
               </div>
             </div>
             <div
-              class="grid grid-cols-2 gap-4 px-3 py-6 md:max-w-sm"
+              class="grid grid-cols-2 grid-cols-[150px_1fr] gap-4 px-3 py-6 md:max-w-sm"
             >
               <a
                 href="/catalogue?origin=BU"
