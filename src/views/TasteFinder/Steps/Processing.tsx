@@ -4,6 +4,7 @@ import { loader } from 'graphql.macro'
 import Lottie from 'lottie-react'
 import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useNavigate } from 'react-router-dom'
 import aeropressAni from 'src/assets/images/lottieAnimations/aeropress.json'
 import { Typography, TypographySize, TypographyType } from 'src/components'
 import { useAuth } from 'src/config/cognito'
@@ -26,6 +27,7 @@ export const Processing: React.FC<TasteFinderFieldHandlerProps> = ({
 }: TasteFinderFieldHandlerProps) => {
   const { t } = useTranslation()
   const [user] = useAuth()
+  const navigate = useNavigate()
 
   useEffect(() => {
     Auth.currentAuthenticatedUser()
@@ -92,7 +94,11 @@ export const Processing: React.FC<TasteFinderFieldHandlerProps> = ({
   }
 
   useEffect(() => {
-    getRecommendation()
+    if (currentData.length > 0) {
+      getRecommendation()
+    } else {
+      navigate('/taste-finder')
+    }
   }, [])
 
   return (
