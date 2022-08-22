@@ -379,7 +379,7 @@ export const Profile: React.FC = () => {
 
             {/* TODO: make this content dynamic from CMS */}
             <div className="grid w-full md:grid-cols-2">
-              <div className="grid grid-cols-2 gap-4 px-0 py-6 border-b border-brand-grey-bombay md:max-w-sm md:border-0">
+              <div className="grid grid-cols-2 grid-cols-[150px_1fr] gap-4 px-0 py-6 border-b border-brand-grey-bombay md:max-w-sm md:border-0">
                 <Link to={'/catalogue?vendor=Nomad'}>
                   <img src={CoffeeTaste} className="w-full" />
                 </Link>
@@ -400,7 +400,7 @@ export const Profile: React.FC = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4 px-3 py-6 md:max-w-sm">
+              <div className="grid grid-cols-2 grid-cols-[150px_1fr] gap-4 px-3 py-6 md:max-w-sm">
                 <Link to={'/catalogue?origin=BU'}>
                   <img src={Myanmar} className="w-full" />
                 </Link>

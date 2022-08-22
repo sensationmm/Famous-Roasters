@@ -9,7 +9,6 @@ import {
   ButtonSize,
   Dialog,
   Drawer,
-  IconName,
   Loader,
   OrderTileProps,
   ProductTile,
@@ -146,7 +145,7 @@ export const RateYourCoffee: React.FC<RateYourCoffeeProps> = ({ productOrderTile
     <>
       <Drawer
         trigger={
-          <Button emphasis={ButtonEmphasis.Tertiary} size={ButtonSize.xs} hasArrow arrowOverride={IconName.ArrowRight}>
+          <Button emphasis={ButtonEmphasis.Tertiary} size={ButtonSize.xs}>
             {t('pages.rate.rateCoffee')}
           </Button>
         }
@@ -169,7 +168,7 @@ export const RateYourCoffee: React.FC<RateYourCoffeeProps> = ({ productOrderTile
       />
       <Dialog
         trigger={
-          <Button emphasis={ButtonEmphasis.Tertiary} size={ButtonSize.xs} hasArrow arrowOverride={IconName.ArrowRight}>
+          <Button emphasis={ButtonEmphasis.Tertiary} size={ButtonSize.xs}>
             {t('pages.rate.rateCoffee')}
           </Button>
         }

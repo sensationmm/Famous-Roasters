@@ -48,7 +48,7 @@ export const ProductTile: React.FC<ProductTileProps> = ({
   }
 
   const getTextDataContainerClasses = () => {
-    const classNames: string[] = ['flex', 'flex-col', 'w-full', 'justify-start']
+    const classNames: string[] = ['flex', 'flex-col', 'w-full', 'justify-center']
     if (!featured) {
       classNames.push('pl-4')
     }
