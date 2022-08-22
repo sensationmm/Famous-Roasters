@@ -1,3 +1,12 @@
+## [1.52.1](https://github.com/Famous-Roasters/frontend/compare/v1.52.0...v1.52.1) (2022-08-22)
+
+
+### Bug Fixes
+
+* **blog:** blog list category error ([883ea7f](https://github.com/Famous-Roasters/frontend/commit/883ea7ff5ae4627bb405382b8bf881b733b1d2d8))
+* **blog:** blog titles displying error ([77ba6c7](https://github.com/Famous-Roasters/frontend/commit/77ba6c781102d005394bbb87135dbe4b929024d4))
+* **blog:** firefox squished thumbnails ([2bd03bb](https://github.com/Famous-Roasters/frontend/commit/2bd03bb1521278256f19c15b8b252d12de8537fc))
+
 # [1.52.0](https://github.com/Famous-Roasters/frontend/compare/v1.51.1...v1.52.0) (2022-08-22)
 
 
