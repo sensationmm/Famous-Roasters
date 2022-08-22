@@ -66,6 +66,16 @@ exports[`Blog Category List View Renders correctly 1`] = `
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                  href="//www.60beans.de/roesterei"
+                >
+                  <span
+                    class="uppercase text-sm leading-5"
+                  >
+                    Unsere Röster
+                  </span>
+                </a>
+                <a
+                  class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
                   href="//blog.60beans.com"
                 >
                   <span
@@ -118,9 +128,9 @@ exports[`Blog Category List View Renders correctly 1`] = `
                   <svg
                     class="undefined fill-brand-black stroke-brand-black"
                     fill="inherit"
-                    height="25"
-                    viewBox="0 0 24 24"
-                    width="25"
+                    height="24"
+                    viewBox="0 0 24 25"
+                    width="24"
                   >
                     <path
                       clip-rule="evenodd"
@@ -164,7 +174,7 @@ exports[`Blog Category List View Renders correctly 1`] = `
             <h1
               class="text-[38px] lg:text-[80px] font-semibold font-syne mb-6 text-5xl leading-none"
             >
-              Unsere Blog
+              Unser Blog
             </h1>
             <p
               class="xl:text-2xl lg:font-semibold mb-8 text-base leading-6"

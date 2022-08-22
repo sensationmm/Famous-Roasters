@@ -43,6 +43,7 @@ const domainBlog = process.env.REACT_APP_DOMAIN_BLOG || '' // '//blog.60beans.co
 const navigationData: NavigationData = {
   pagesPrimary: [
     { key: 'about', href: '//www.60beans.de/uber-uns' },
+    { key: 'ourRoasters', href: '//www.60beans.de/roesterei' },
     { key: 'blog', href: domainBlog },
   ],
   pagesSecondary: [{ key: 'tasteFinder', href: `${domainShop}/taste-finder` }],

@@ -10,9 +10,9 @@ exports[`ImageCheckbox component Renders correctly 1`] = `
       <svg
         class="undefined fill-brand-black stroke-brand-black"
         fill="inherit"
-        height="25"
+        height="24"
         viewBox="0 0 16 16"
-        width="25"
+        width="24"
       >
         <path
           clip-rule="evenodd"
@@ -63,9 +63,9 @@ exports[`ImageCheckbox component Renders correctly for selected 1`] = `
       <svg
         class="undefined fill-brand-black stroke-brand-black"
         fill="inherit"
-        height="25"
+        height="24"
         viewBox="0 0 16 16"
-        width="25"
+        width="24"
       >
         <path
           clip-rule="evenodd"

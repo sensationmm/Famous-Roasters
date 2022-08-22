@@ -66,6 +66,16 @@ exports[`Taste Finder view Renders correctly 1`] = `
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                  href="//www.60beans.de/roesterei"
+                >
+                  <span
+                    class="uppercase text-sm leading-5"
+                  >
+                    Unsere Röster
+                  </span>
+                </a>
+                <a
+                  class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
                   href="//blog.60beans.com"
                 >
                   <span
@@ -118,9 +128,9 @@ exports[`Taste Finder view Renders correctly 1`] = `
                   <svg
                     class="undefined fill-brand-black stroke-brand-black"
                     fill="inherit"
-                    height="25"
-                    viewBox="0 0 24 24"
-                    width="25"
+                    height="24"
+                    viewBox="0 0 24 25"
+                    width="24"
                   >
                     <path
                       clip-rule="evenodd"

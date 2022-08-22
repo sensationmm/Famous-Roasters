@@ -8,9 +8,9 @@ exports[`InfoBox component Renders correctly 1`] = `
     <svg
       class="undefined fill-brand-black stroke-brand-black"
       fill="inherit"
-      height="25"
+      height="24"
       viewBox="0 0 20 21"
-      width="25"
+      width="24"
     >
       <path
         clip-rule="evenodd"
@@ -49,9 +49,9 @@ exports[`InfoBox component Renders correctly without text 1`] = `
     <svg
       class="undefined fill-brand-black stroke-brand-black"
       fill="inherit"
-      height="25"
+      height="24"
       viewBox="0 0 20 21"
-      width="25"
+      width="24"
     >
       <path
         clip-rule="evenodd"
