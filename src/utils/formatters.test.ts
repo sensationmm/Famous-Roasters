@@ -2,7 +2,7 @@ import { formatDate, formatPrice, getAPIProductId, getAromaKey, getSimplifiedPro
 
 describe('Formatter utils', () => {
   it('Format date works', () => {
-    expect(formatDate('2022-07-26T10:06:15Z')).toEqual('Tu, 26.07.2022')
+    expect(formatDate('2022-07-26T10:06:15Z')).toEqual('Di, 26.07.2022')
   })
 
   it('Format price works', () => {
