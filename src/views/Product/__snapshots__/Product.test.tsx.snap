@@ -22,7 +22,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
               class="flex-1 flex items-center xl:hidden"
             >
               <button
-                class="-ml-2 bg-white p-2 rounded-md text-gray-400"
+                class="-ml-2 bg-brand-black p-2 rounded-md text-gray-400"
                 data-testid="button-open"
                 type="button"
               >
@@ -32,18 +32,19 @@ exports[`Product view Renders correctly for a accessories 1`] = `
                   Open menu
                 </span>
                 <svg
-                  aria-hidden="true"
-                  class="h-6 w-6"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
+                  class="undefined fill-brand-black stroke-brand-black"
+                  fill="inherit"
+                  height="24"
                   viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
                 >
                   <path
-                    d="M4 6h16M4 12h16M4 18h16"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    clip-rule="evenodd"
+                    d="M3.17188 5H20.0156C20.1102 5 20.1875 5.07734 20.1875 5.17188V6.375C20.1875 6.46953 20.1102 6.54688 20.0156 6.54688H3.17188C3.07734 6.54688 3 6.46953 3 6.375V5.17188C3 5.07734 3.07734 5 3.17188 5ZM3.17188 11.5469H20.0156C20.1102 11.5469 20.1875 11.6242 20.1875 11.7188V12.9219C20.1875 13.0164 20.1102 13.0938 20.0156 13.0938H3.17188C3.07734 13.0938 3 13.0164 3 12.9219V11.7188C3 11.6242 3.07734 11.5469 3.17188 11.5469ZM20.0156 18.0938H3.17188C3.07734 18.0938 3 18.1711 3 18.2656V19.4688C3 19.5633 3.07734 19.6406 3.17188 19.6406H20.0156C20.1102 19.6406 20.1875 19.5633 20.1875 19.4688V18.2656C20.1875 18.1711 20.1102 18.0938 20.0156 18.0938Z"
+                    fill="#FFFFFF"
+                    fill-rule="evenodd"
+                    stroke="#FFFFFF"
+                    stroke-width="0.25"
                   />
                 </svg>
               </button>
@@ -56,7 +57,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
               >
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.de/uber-uns"
+                  href="//www.60beans.com/uber-uns"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -66,7 +67,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.de/roesterei"
+                  href="//www.60beans.com/roesterei"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -496,11 +497,11 @@ exports[`Product view Renders correctly for a accessories 1`] = `
             class="border-t border-coreUI-border mx-auto w-full py-4"
           >
             <button
-              aria-controls="headlessui-disclosure-panel-:r2d:"
+              aria-controls="headlessui-disclosure-panel-:r2e:"
               class="flex w-full justify-between py-2 text-left"
               data-testid="button-disclosure-toggle"
               disabled=""
-              id="headlessui-disclosure-button-:r2c:"
+              id="headlessui-disclosure-button-:r2d:"
               type="button"
             >
               <span
@@ -511,11 +512,101 @@ exports[`Product view Renders correctly for a accessories 1`] = `
             </button>
             <div
               class="py-2"
-              id="headlessui-disclosure-panel-:r2d:"
+              id="headlessui-disclosure-panel-:r2e:"
             >
               <div
                 class="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
               >
+                <a
+                  href="/product/7655228866776"
+                >
+                  <div
+                    class="flex pt-8"
+                  >
+                    <img
+                      alt="Espresso Raritäten Set"
+                      class="hidden"
+                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+                    />
+                    <div
+                      class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+                    >
+                      <div
+                        class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+                      >
+                        <img
+                          alt="Espresso Raritäten Set"
+                          class="w-28 max-h-28"
+                          src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
+                        />
+                        <div
+                          class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                        >
+                          <span
+                            class="text-xs leading-4"
+                          >
+                            Decaf
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute"
+                    >
+                      <div
+                        class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+                      >
+                        <div
+                          class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+                        >
+                          <div
+                            class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex flex-col w-full justify-start pl-4"
+                    >
+                      <div
+                        class="text-base leading-6 font-semibold"
+                      >
+                        Espresso Raritäten Set
+                      </div>
+                      <div
+                        class="text-coreUI-text-secondary text-base leading-6"
+                      >
+                        60beans
+                      </div>
+                      <div
+                        class="text-coreUI-text-secondary text-base leading-6"
+                      >
+                        Kolumbien
+                      </div>
+                      <div
+                        class="text-coreUI-text-secondary text-base leading-6"
+                      >
+                        Filter
+                      </div>
+                      <div
+                        class="flex items-baseline"
+                      >
+                        <span
+                          class="mr-1 text-base leading-6 font-semibold"
+                        >
+                          19,99 €
+                        </span>
+                        <span
+                          class="text-coreUI-text-secondary text-xs leading-4"
+                        >
+                          (
+                          10,00 €
+                          /kg)
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
                 <a
                   href="/product/7655228866776"
                 >
@@ -857,7 +948,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               class="flex-1 flex items-center xl:hidden"
             >
               <button
-                class="-ml-2 bg-white p-2 rounded-md text-gray-400"
+                class="-ml-2 bg-brand-black p-2 rounded-md text-gray-400"
                 data-testid="button-open"
                 type="button"
               >
@@ -867,18 +958,19 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                   Open menu
                 </span>
                 <svg
-                  aria-hidden="true"
-                  class="h-6 w-6"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
+                  class="undefined fill-brand-black stroke-brand-black"
+                  fill="inherit"
+                  height="24"
                   viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
                 >
                   <path
-                    d="M4 6h16M4 12h16M4 18h16"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    clip-rule="evenodd"
+                    d="M3.17188 5H20.0156C20.1102 5 20.1875 5.07734 20.1875 5.17188V6.375C20.1875 6.46953 20.1102 6.54688 20.0156 6.54688H3.17188C3.07734 6.54688 3 6.46953 3 6.375V5.17188C3 5.07734 3.07734 5 3.17188 5ZM3.17188 11.5469H20.0156C20.1102 11.5469 20.1875 11.6242 20.1875 11.7188V12.9219C20.1875 13.0164 20.1102 13.0938 20.0156 13.0938H3.17188C3.07734 13.0938 3 13.0164 3 12.9219V11.7188C3 11.6242 3.07734 11.5469 3.17188 11.5469ZM20.0156 18.0938H3.17188C3.07734 18.0938 3 18.1711 3 18.2656V19.4688C3 19.5633 3.07734 19.6406 3.17188 19.6406H20.0156C20.1102 19.6406 20.1875 19.5633 20.1875 19.4688V18.2656C20.1875 18.1711 20.1102 18.0938 20.0156 18.0938Z"
+                    fill="#FFFFFF"
+                    fill-rule="evenodd"
+                    stroke="#FFFFFF"
+                    stroke-width="0.25"
                   />
                 </svg>
               </button>
@@ -891,7 +983,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               >
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.de/uber-uns"
+                  href="//www.60beans.com/uber-uns"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -901,7 +993,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.de/roesterei"
+                  href="//www.60beans.com/roesterei"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -2469,7 +2561,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
               class="flex-1 flex items-center xl:hidden"
             >
               <button
-                class="-ml-2 bg-white p-2 rounded-md text-gray-400"
+                class="-ml-2 bg-brand-black p-2 rounded-md text-gray-400"
                 data-testid="button-open"
                 type="button"
               >
@@ -2479,18 +2571,19 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                   Open menu
                 </span>
                 <svg
-                  aria-hidden="true"
-                  class="h-6 w-6"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
+                  class="undefined fill-brand-black stroke-brand-black"
+                  fill="inherit"
+                  height="24"
                   viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
                 >
                   <path
-                    d="M4 6h16M4 12h16M4 18h16"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    clip-rule="evenodd"
+                    d="M3.17188 5H20.0156C20.1102 5 20.1875 5.07734 20.1875 5.17188V6.375C20.1875 6.46953 20.1102 6.54688 20.0156 6.54688H3.17188C3.07734 6.54688 3 6.46953 3 6.375V5.17188C3 5.07734 3.07734 5 3.17188 5ZM3.17188 11.5469H20.0156C20.1102 11.5469 20.1875 11.6242 20.1875 11.7188V12.9219C20.1875 13.0164 20.1102 13.0938 20.0156 13.0938H3.17188C3.07734 13.0938 3 13.0164 3 12.9219V11.7188C3 11.6242 3.07734 11.5469 3.17188 11.5469ZM20.0156 18.0938H3.17188C3.07734 18.0938 3 18.1711 3 18.2656V19.4688C3 19.5633 3.07734 19.6406 3.17188 19.6406H20.0156C20.1102 19.6406 20.1875 19.5633 20.1875 19.4688V18.2656C20.1875 18.1711 20.1102 18.0938 20.0156 18.0938Z"
+                    fill="#FFFFFF"
+                    fill-rule="evenodd"
+                    stroke="#FFFFFF"
+                    stroke-width="0.25"
                   />
                 </svg>
               </button>
@@ -2503,7 +2596,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
               >
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.de/uber-uns"
+                  href="//www.60beans.com/uber-uns"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -2513,7 +2606,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.de/roesterei"
+                  href="//www.60beans.com/roesterei"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -3209,6 +3302,51 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
               <div
                 class="grid gap-6 grid-cols-2 mt-4"
               >
+                <div
+                  class="w-full relative"
+                >
+                  <div
+                    class="grid grid-cols-2 items-end"
+                  >
+                    <div>
+                      <label
+                        class="flex text-coreUI-text-secondary uppercase mb-1 text-xs leading-4"
+                      >
+                        Größe/Menge
+                      </label>
+                    </div>
+                    <div
+                      class="justify-self-end"
+                    />
+                  </div>
+                  <button
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
+                    data-testid="button-listbox"
+                    id="headlessui-listbox-button-:re:"
+                    type="button"
+                  >
+                    <span
+                      class="block truncate text-base leading-6"
+                    >
+                      250g
+                    </span>
+                    <svg
+                      aria-hidden="true"
+                      class="-mr-1 ml-2 h-6 w-6"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
                 <div
                   class="w-full relative"
                 >
