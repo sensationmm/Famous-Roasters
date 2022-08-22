@@ -1,5 +1,6 @@
 import { GraphQLError } from 'graphql'
 import { loader } from 'graphql.macro'
+import { shopifyAccessoryCollection, shopifyCoffeeCollection } from 'src/config'
 
 import { ProductMockDataWithCustomMetadata } from './ProductMock'
 const GET_PRODUCTS = loader('src/graphql/queries/products.query.graphql')
@@ -21,7 +22,7 @@ const CatalogueMock1 = {
   request: {
     query: GET_PRODUCTS,
     variables: {
-      collectionId: 'gid://shopify/Collection/386655387864',
+      collectionId: shopifyCoffeeCollection,
       first: 6,
       last: null,
       before: null,
@@ -121,7 +122,7 @@ const CatalogueMock6 = {
   request: {
     query: GET_PRODUCTS,
     variables: {
-      collectionId: 'gid://shopify/Collection/386655387864',
+      collectionId: shopifyCoffeeCollection,
       first: 6,
       last: null,
       before: null,
@@ -153,7 +154,7 @@ const CatalogueMock7 = {
   request: {
     query: GET_PRODUCTS,
     variables: {
-      collectionId: 'gid://shopify/Collection/386655387864',
+      collectionId: shopifyCoffeeCollection,
       first: 6,
       last: null,
       before: null,
@@ -185,7 +186,7 @@ const CatalogueMock8 = {
   request: {
     query: GET_PRODUCTS,
     variables: {
-      collectionId: 'gid://shopify/Collection/386655387864',
+      collectionId: shopifyCoffeeCollection,
       first: null,
       last: 6,
       before: '2',
@@ -226,7 +227,7 @@ export const CatalogueMockSimilar = {
   request: {
     query: GET_PRODUCTS,
     variables: {
-      collectionId: 'gid://shopify/Collection/386655387864',
+      collectionId: shopifyCoffeeCollection,
       first: 4,
       last: null,
       before: null,
@@ -258,7 +259,7 @@ export const CatalogueMockRandom = {
   request: {
     query: GET_PRODUCTS,
     variables: {
-      collectionId: 'gid://shopify/Collection/386655387864',
+      collectionId: shopifyCoffeeCollection,
       first: 10,
       last: null,
       before: null,
@@ -289,7 +290,7 @@ export const CatalogueMockAccessories = {
   request: {
     query: GET_PRODUCTS,
     variables: {
-      collectionId: 'gid://shopify/Collection/479115477258',
+      collectionId: shopifyAccessoryCollection,
       first: 6,
       last: null,
       before: null,
@@ -320,7 +321,7 @@ export const CatalogueMockAccessoriesYouMightLike = {
   request: {
     query: GET_PRODUCTS,
     variables: {
-      collectionId: 'gid://shopify/Collection/479115477258',
+      collectionId: shopifyAccessoryCollection,
       first: 10,
       last: null,
       before: null,
@@ -553,7 +554,7 @@ export const CatalogueMockError = {
   request: {
     query: GET_PRODUCTS,
     variables: {
-      collectionId: 'gid://shopify/Collection/386655387864',
+      collectionId: shopifyCoffeeCollection,
       first: 6,
       last: null,
       before: null,
@@ -572,7 +573,7 @@ export const CatalogueMockMissingData = {
   request: {
     query: GET_PRODUCTS,
     variables: {
-      collectionId: 'gid://shopify/Collection/386655387864',
+      collectionId: shopifyCoffeeCollection,
       first: 6,
       last: null,
       before: null,
