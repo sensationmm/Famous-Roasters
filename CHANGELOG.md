@@ -1,3 +1,11 @@
+# [1.52.0](https://github.com/Famous-Roasters/frontend/compare/v1.51.1...v1.52.0) (2022-08-22)
+
+
+### Features
+
+* **catalogue:** update collection ids ([6f6acc3](https://github.com/Famous-Roasters/frontend/commit/6f6acc331607797902f31b9f2601e44c638c9c80))
+* **catalog:** update mock collection refs ([87908d8](https://github.com/Famous-Roasters/frontend/commit/87908d87a6a4d8590187e2b7dfa9c21f97b2b875))
+
 ## [1.51.1](https://github.com/Famous-Roasters/frontend/compare/v1.51.0...v1.51.1) (2022-08-22)
 
 # [1.51.0](https://github.com/Famous-Roasters/frontend/compare/v1.50.0...v1.51.0) (2022-08-22)
