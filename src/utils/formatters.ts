@@ -1,7 +1,8 @@
 import { format } from 'date-fns'
+import { de } from 'date-fns/locale'
 
 export const formatDate = (date: string) => {
-  return format(new Date(date), 'EEEEEE, dd.MM.yyyy')
+  return format(new Date(date), 'EEEEEE, dd.MM.yyyy', { locale: de })
 }
 
 export const formatPrice = (amount: string, currency: string) =>
