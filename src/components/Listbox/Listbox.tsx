@@ -41,7 +41,7 @@ export const Listbox: React.FC<ListboxProps> = ({
   big = false,
   hasSpacerAfterItem = undefined,
   swatches = undefined,
-  itemDisabledMsg = 'Unavailable',
+  itemDisabledMsg,
   ...props
 }: ListboxProps) => {
   const noneItem: ListBoxItem = { name: 'none', value: 'none' }
@@ -205,7 +205,7 @@ export const Listbox: React.FC<ListboxProps> = ({
 
                               {option.disabled && (
                                 <span className="inline pl-2 text-xs leading-6 text-negative font-normal">
-                                  {itemDisabledMsg}
+                                  {itemDisabledMsg || t('pages.product.transactional.outOfStock')}
                                 </span>
                               )}
                             </span>
