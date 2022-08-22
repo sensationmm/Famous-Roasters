@@ -82,12 +82,15 @@ export const BlogListByCategory: React.FC<CategoryListProps> = () => {
               </div>
             </div>
           </div>
-          <div className="grid gap-x-8 gap-y-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full max-w-5xl mx-auto px-6 xl:px-8 md:my-8">
+          <div className="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full max-w-5xl mx-auto px-6 xl:px-8 md:my-8">
             {data.standardBlogPosts.length !== 0 ? (
               data.standardBlogPosts.map((blog: StandardBlogPosts) => {
                 const { title, slug, postType, thumbnail, tags, updatedBy, content } = blog
                 return (
-                  <div key={title} className="py-6 border-b border-coreUI-border w-full">
+                  <div
+                    key={title}
+                    className="p-4 border-b border-coreUI-border w-full hover:bg-coreUI-background-images"
+                  >
                     <Link to={`${slug}`}>
                       <div className="relative h-52 grid content-center overflow-hidden mb-4">
                         {postType === 'video' && (
@@ -115,9 +118,13 @@ export const BlogListByCategory: React.FC<CategoryListProps> = () => {
                         })}
                       </div>
                       <div className="flex flex-col text-coreUI-text-tertiary mb-6">
-                        {postType === 'article' && (
+                        {postType === 'article' ? (
                           <Typography size={TypographySize.Small} type={TypographyType.Paragraph}>
                             von {updatedBy.name} &middot; {readTimeCalculator(content.text)} min reading time
+                          </Typography>
+                        ) : (
+                          <Typography size={TypographySize.Small} type={TypographyType.Paragraph}>
+                            von {updatedBy.name}
                           </Typography>
                         )}
                       </div>

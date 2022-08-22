@@ -81,11 +81,14 @@ export const CategoryList: React.FC<CategoryListProps> = () => {
               </div>
             </div>
           </div>
-          <div className="grid gap-x-8 gap-y-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full max-w-5xl mx-auto px-6 xl:px-8 md:my-8">
+          <div className="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full max-w-5xl mx-auto px-6 xl:px-8 md:my-8">
             {data.categoryList.map((category: Category) => {
               const { name, tags } = category
               return (
-                <div key={name} className="py-6 border-b border-coreUI-border w-full">
+                <div
+                  key={name}
+                  className="px-4 py-6 border-b border-coreUI-border w-full hover:bg-coreUI-background-images"
+                >
                   <Link to={`${name}`}>
                     <Typography
                       as="h4"

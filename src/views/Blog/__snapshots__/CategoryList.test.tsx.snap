@@ -112,7 +112,7 @@ exports[`Blog Category List View Renders correctly 1`] = `
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="//shop.60beans.com/taste-finder"
+                    href="/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -123,7 +123,7 @@ exports[`Blog Category List View Renders correctly 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//shop.60beans.com/profile"
+                  href="/profile"
                 >
                   <svg
                     class="undefined fill-brand-black stroke-brand-black"
@@ -193,10 +193,10 @@ exports[`Blog Category List View Renders correctly 1`] = `
         </div>
       </div>
       <div
-        class="grid gap-x-8 gap-y-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full max-w-5xl mx-auto px-6 xl:px-8 md:my-8"
+        class="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full max-w-5xl mx-auto px-6 xl:px-8 md:my-8"
       >
         <div
-          class="py-6 border-b border-coreUI-border w-full"
+          class="px-4 py-6 border-b border-coreUI-border w-full hover:bg-coreUI-background-images"
         >
           <a
             href="/Kaffeewissen"
@@ -232,7 +232,7 @@ exports[`Blog Category List View Renders correctly 1`] = `
           </a>
         </div>
         <div
-          class="py-6 border-b border-coreUI-border w-full"
+          class="px-4 py-6 border-b border-coreUI-border w-full hover:bg-coreUI-background-images"
         >
           <a
             href="/Kaffeeequipment"
@@ -268,7 +268,7 @@ exports[`Blog Category List View Renders correctly 1`] = `
           </a>
         </div>
         <div
-          class="py-6 border-b border-coreUI-border w-full"
+          class="px-4 py-6 border-b border-coreUI-border w-full hover:bg-coreUI-background-images"
         >
           <a
             href="/Kaffeetrends"
@@ -304,7 +304,7 @@ exports[`Blog Category List View Renders correctly 1`] = `
           </a>
         </div>
         <div
-          class="py-6 border-b border-coreUI-border w-full"
+          class="px-4 py-6 border-b border-coreUI-border w-full hover:bg-coreUI-background-images"
         >
           <a
             href="/Zubereitungstipps"
@@ -395,7 +395,7 @@ exports[`Blog Category List View Renders correctly 1`] = `
               class="mt-0"
             >
               <a
-                href="//shop.60beans.com/catalogue"
+                href="/catalogue"
               >
                 Shop
               </a>
@@ -404,7 +404,7 @@ exports[`Blog Category List View Renders correctly 1`] = `
               class="mt-6"
             >
               <a
-                href="//shop.60beans.com/taste-finder"
+                href="/taste-finder"
               >
                 Tastefinder
               </a>
