@@ -274,7 +274,7 @@
     "adventurous":{
       "items": {
         "0": {
-          "text": "Du magst Kaffees mit einem leichten Körper und einem flüssigen Mundgefühl.",
+          "text": "Du weißt, was du magst und möchtest lieber bei vertrauten Geschmäckern bleiben.",
           "title": "Ich bleibe bei dem, was ich kenne"
         },
         "1": {
@@ -283,7 +283,7 @@
         }
       },
       "overline": "Erklärung",
-      "text": "Unsere Kaffeeexperten nutzen diese Frage, um herauszufinden, wie offen für Neues du bist.",
+      "text": "Unsere Kaffeeexperten nutzen diese Frage, um herauszufinden, wie offen du für Neues  bist.",
       "title": "Warum wir dich das fragen?",
       "trigger": "Warum wir dich das fragen?"
     },
