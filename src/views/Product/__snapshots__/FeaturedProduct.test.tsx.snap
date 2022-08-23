@@ -606,6 +606,27 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 Impressum
               </a>
             </li>
+            <li
+              class="mt-6"
+            >
+              <div
+                class="trustpilot-widget"
+                data-businessunit-id="62c454f8cb03c9a2269fadb6"
+                data-locale="de-DE"
+                data-style-height="150px"
+                data-style-width="100%"
+                data-template-id="53aa8807dec7e10d38f59f32"
+                data-theme="dark"
+              >
+                <a
+                  href="https://de.trustpilot.com/review/60beans.com"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  Trustpilot
+                </a>
+              </div>
+            </li>
           </ul>
         </div>
         <div
@@ -1256,6 +1277,27 @@ exports[`Featured product view Renders correctly for a successful call with arom
               >
                 Impressum
               </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <div
+                class="trustpilot-widget"
+                data-businessunit-id="62c454f8cb03c9a2269fadb6"
+                data-locale="de-DE"
+                data-style-height="150px"
+                data-style-width="100%"
+                data-template-id="53aa8807dec7e10d38f59f32"
+                data-theme="dark"
+              >
+                <a
+                  href="https://de.trustpilot.com/review/60beans.com"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  Trustpilot
+                </a>
+              </div>
             </li>
           </ul>
         </div>
@@ -1908,6 +1950,27 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 Impressum
               </a>
             </li>
+            <li
+              class="mt-6"
+            >
+              <div
+                class="trustpilot-widget"
+                data-businessunit-id="62c454f8cb03c9a2269fadb6"
+                data-locale="de-DE"
+                data-style-height="150px"
+                data-style-width="100%"
+                data-template-id="53aa8807dec7e10d38f59f32"
+                data-theme="dark"
+              >
+                <a
+                  href="https://de.trustpilot.com/review/60beans.com"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  Trustpilot
+                </a>
+              </div>
+            </li>
           </ul>
         </div>
         <div
@@ -2558,6 +2621,27 @@ exports[`Featured product view Renders correctly for a successful call with arom
               >
                 Impressum
               </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <div
+                class="trustpilot-widget"
+                data-businessunit-id="62c454f8cb03c9a2269fadb6"
+                data-locale="de-DE"
+                data-style-height="150px"
+                data-style-width="100%"
+                data-template-id="53aa8807dec7e10d38f59f32"
+                data-theme="dark"
+              >
+                <a
+                  href="https://de.trustpilot.com/review/60beans.com"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  Trustpilot
+                </a>
+              </div>
             </li>
           </ul>
         </div>
@@ -3210,6 +3294,27 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 Impressum
               </a>
             </li>
+            <li
+              class="mt-6"
+            >
+              <div
+                class="trustpilot-widget"
+                data-businessunit-id="62c454f8cb03c9a2269fadb6"
+                data-locale="de-DE"
+                data-style-height="150px"
+                data-style-width="100%"
+                data-template-id="53aa8807dec7e10d38f59f32"
+                data-theme="dark"
+              >
+                <a
+                  href="https://de.trustpilot.com/review/60beans.com"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  Trustpilot
+                </a>
+              </div>
+            </li>
           </ul>
         </div>
         <div
@@ -3737,6 +3842,27 @@ exports[`Featured product view Renders correctly for a successful call without a
               >
                 Impressum
               </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <div
+                class="trustpilot-widget"
+                data-businessunit-id="62c454f8cb03c9a2269fadb6"
+                data-locale="de-DE"
+                data-style-height="150px"
+                data-style-width="100%"
+                data-template-id="53aa8807dec7e10d38f59f32"
+                data-theme="dark"
+              >
+                <a
+                  href="https://de.trustpilot.com/review/60beans.com"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  Trustpilot
+                </a>
+              </div>
             </li>
           </ul>
         </div>
@@ -4388,6 +4514,27 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
               >
                 Impressum
               </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <div
+                class="trustpilot-widget"
+                data-businessunit-id="62c454f8cb03c9a2269fadb6"
+                data-locale="de-DE"
+                data-style-height="150px"
+                data-style-width="100%"
+                data-template-id="53aa8807dec7e10d38f59f32"
+                data-theme="dark"
+              >
+                <a
+                  href="https://de.trustpilot.com/review/60beans.com"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  Trustpilot
+                </a>
+              </div>
             </li>
           </ul>
         </div>
@@ -5051,6 +5198,27 @@ exports[`Featured product view renders as expected if no taste finder data exist
               >
                 Impressum
               </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <div
+                class="trustpilot-widget"
+                data-businessunit-id="62c454f8cb03c9a2269fadb6"
+                data-locale="de-DE"
+                data-style-height="150px"
+                data-style-width="100%"
+                data-template-id="53aa8807dec7e10d38f59f32"
+                data-theme="dark"
+              >
+                <a
+                  href="https://de.trustpilot.com/review/60beans.com"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  Trustpilot
+                </a>
+              </div>
             </li>
           </ul>
         </div>

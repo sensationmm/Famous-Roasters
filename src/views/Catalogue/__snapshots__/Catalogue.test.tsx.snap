@@ -1770,7 +1770,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
       class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
-        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
+        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start px-8 xl:px-10"
       >
         <div
           class="mb-2 md:mb-0 md:mr-2"
@@ -1803,7 +1803,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
         </div>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 mx-auto px-12 xl:px-14"
+        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 px-12 xl:px-14"
       >
         <div
           class="order-2 md:order-1"
@@ -1854,6 +1854,27 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 Impressum
               </a>
             </li>
+            <li
+              class="mt-6"
+            >
+              <div
+                class="trustpilot-widget"
+                data-businessunit-id="62c454f8cb03c9a2269fadb6"
+                data-locale="de-DE"
+                data-style-height="150px"
+                data-style-width="100%"
+                data-template-id="53aa8807dec7e10d38f59f32"
+                data-theme="dark"
+              >
+                <a
+                  href="https://de.trustpilot.com/review/60beans.com"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  Trustpilot
+                </a>
+              </div>
+            </li>
           </ul>
         </div>
         <div
@@ -1880,7 +1901,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
         </div>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto text-center mt-10 mx-auto px-12 xl:px-14"
+        class="w-full max-w-7xl mx-auto text-center mt-10 px-12 xl:px-14"
       >
         <span
           class="text-center text-base leading-6"
@@ -2594,6 +2615,27 @@ exports[`Catalogue view Renders correctly for a successful call for accessories 
               >
                 Impressum
               </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <div
+                class="trustpilot-widget"
+                data-businessunit-id="62c454f8cb03c9a2269fadb6"
+                data-locale="de-DE"
+                data-style-height="150px"
+                data-style-width="100%"
+                data-template-id="53aa8807dec7e10d38f59f32"
+                data-theme="dark"
+              >
+                <a
+                  href="https://de.trustpilot.com/review/60beans.com"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  Trustpilot
+                </a>
+              </div>
             </li>
           </ul>
         </div>
@@ -4410,7 +4452,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
       class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
-        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
+        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start px-8 xl:px-10"
       >
         <div
           class="mb-2 md:mb-0 md:mr-2"
@@ -4443,7 +4485,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
         </div>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 mx-auto px-12 xl:px-14"
+        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 px-12 xl:px-14"
       >
         <div
           class="order-2 md:order-1"
@@ -4494,6 +4536,27 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 Impressum
               </a>
             </li>
+            <li
+              class="mt-6"
+            >
+              <div
+                class="trustpilot-widget"
+                data-businessunit-id="62c454f8cb03c9a2269fadb6"
+                data-locale="de-DE"
+                data-style-height="150px"
+                data-style-width="100%"
+                data-template-id="53aa8807dec7e10d38f59f32"
+                data-theme="dark"
+              >
+                <a
+                  href="https://de.trustpilot.com/review/60beans.com"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  Trustpilot
+                </a>
+              </div>
+            </li>
           </ul>
         </div>
         <div
@@ -4520,7 +4583,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
         </div>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto text-center mt-10 mx-auto px-12 xl:px-14"
+        class="w-full max-w-7xl mx-auto text-center mt-10 px-12 xl:px-14"
       >
         <span
           class="text-center text-base leading-6"
