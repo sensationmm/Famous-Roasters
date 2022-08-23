@@ -366,7 +366,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
                 <div
-                  class="flex flex-col w-full justify-start"
+                  class="flex flex-col w-full justify-center"
                 >
                   <div
                     class="text-xl leading-7 font-semibold"
@@ -1017,7 +1017,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
                 <div
-                  class="flex flex-col w-full justify-start"
+                  class="flex flex-col w-full justify-center"
                 >
                   <div
                     class="text-xl leading-7 font-semibold"
@@ -1668,7 +1668,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
                 <div
-                  class="flex flex-col w-full justify-start"
+                  class="flex flex-col w-full justify-center"
                 >
                   <div
                     class="text-xl leading-7 font-semibold"
@@ -2319,7 +2319,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
                 <div
-                  class="flex flex-col w-full justify-start"
+                  class="flex flex-col w-full justify-center"
                 >
                   <div
                     class="text-xl leading-7 font-semibold"
@@ -2970,7 +2970,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
                 <div
-                  class="flex flex-col w-full justify-start"
+                  class="flex flex-col w-full justify-center"
                 >
                   <div
                     class="text-xl leading-7 font-semibold"
@@ -3498,7 +3498,7 @@ exports[`Featured product view Renders correctly for a successful call without a
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
                 <div
-                  class="flex flex-col w-full justify-start"
+                  class="flex flex-col w-full justify-center"
                 >
                   <div
                     class="text-xl leading-7 font-semibold"
@@ -4149,7 +4149,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
                 <div
-                  class="flex flex-col w-full justify-start"
+                  class="flex flex-col w-full justify-center"
                 >
                   <div
                     class="text-xl leading-7 font-semibold"
@@ -4825,7 +4825,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
                   src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153"
                 />
                 <div
-                  class="flex flex-col w-full justify-start"
+                  class="flex flex-col w-full justify-center"
                 >
                   <div
                     class="text-xl leading-7 font-semibold"

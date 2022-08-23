@@ -470,7 +470,6 @@ export const Product: React.FC = () => {
                   ]}
                   onChange={(v) => v && updateVariantSelectedWithPackage(v)}
                   label={t('pages.product.transactional.options.packageSize.label')}
-                  itemDisabledMsg={t('pages.product.transactional.outOfStock')}
                 />
               )}
               {variants &&

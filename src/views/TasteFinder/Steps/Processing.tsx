@@ -92,7 +92,11 @@ export const Processing: React.FC<TasteFinderFieldHandlerProps> = ({
   }
 
   useEffect(() => {
-    getRecommendation()
+    if (currentData.length > 0) {
+      getRecommendation()
+    } else {
+      window.location.pathname = '/taste-finder'
+    }
   }, [])
 
   return (

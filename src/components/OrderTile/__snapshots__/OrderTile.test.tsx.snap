@@ -56,58 +56,22 @@ exports[`Order Tile component Renders correctly 1`] = `
         class="flex md:hidden"
       >
         <button
-          class="relative inline-flex flex-row items-center rounded-full border-2 pl-3 pr-8 py-2 text-xs font-semibold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
+          class="relative inline-flex flex-row items-center rounded-full border-2 px-3 py-2 text-xs font-semibold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
           data-testid="drawer-trigger"
           role="button"
         >
           Kaffee bewerten
-          <svg
-            class="absolute right-2 fill-brand-black text-brand-black stroke-brand-black fill-brand-black stroke-brand-black"
-            fill="inherit"
-            height="14"
-            viewBox="0 0 15 13"
-            width="14"
-          >
-            <path
-              clip-rule="evenodd"
-              d="M8.83333 1.83301L13.5 6.49967M13.5 6.49967L8.83333 11.1663M13.5 6.49967L1.5 6.49967"
-              fill="inherit"
-              fill-rule="evenodd"
-              stroke="inherit"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-            />
-          </svg>
         </button>
       </div>
       <div
         class="hidden md:flex"
       >
         <button
-          class="relative inline-flex flex-row items-center rounded-full border-2 pl-3 pr-8 py-2 text-xs font-semibold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
+          class="relative inline-flex flex-row items-center rounded-full border-2 px-3 py-2 text-xs font-semibold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
           data-testid="dialog-trigger"
           role="button"
         >
           Kaffee bewerten
-          <svg
-            class="absolute right-2 fill-brand-black text-brand-black stroke-brand-black fill-brand-black stroke-brand-black"
-            fill="inherit"
-            height="14"
-            viewBox="0 0 15 13"
-            width="14"
-          >
-            <path
-              clip-rule="evenodd"
-              d="M8.83333 1.83301L13.5 6.49967M13.5 6.49967L8.83333 11.1663M13.5 6.49967L1.5 6.49967"
-              fill="inherit"
-              fill-rule="evenodd"
-              stroke="inherit"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-            />
-          </svg>
         </button>
       </div>
     </div>
