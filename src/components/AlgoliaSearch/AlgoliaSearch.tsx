@@ -7,6 +7,7 @@ import Hit from 'src/components/AlgoliaSearch/Hit'
 import { FiltersMenuMobile } from './FiltersMenuMobile'
 import ListboxFilter from './ListboxFilter'
 import Pagination from './Pagination'
+import SingleSelectFilter from './SingleSelectFilter'
 
 const searchClient = algoliasearch(
   process.env.REACT_APP_ALGOLIA_APP_ID || '',
@@ -23,8 +24,8 @@ const Search: React.FC = () => {
         facetFilters={['product_type:-Accessories', 'product_type:-Equipment']}
       />
 
-      <div className="flex flex-row justify-between mt-4">
-        <ListboxFilter attribute="meta.my_fields.coffee_type" />
+      <div className="flex flex-row justify-between mt-6">
+        <SingleSelectFilter attribute="meta.my_fields.coffee_type" />
         <SearchBox
           placeholder={t('pages.catalogue.search.placeholder')}
           classNames={{
