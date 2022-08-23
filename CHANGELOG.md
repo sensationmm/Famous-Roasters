@@ -1,3 +1,41 @@
+# [1.53.0](https://github.com/Famous-Roasters/frontend/compare/v1.52.1...v1.53.0) (2022-08-23)
+
+
+### Bug Fixes
+
+* **catalogue:** update snapshots ([8216dd7](https://github.com/Famous-Roasters/frontend/commit/8216dd77ef794147f7b82d442c3efa19af1b412f))
+* **serch:** fix typo to fix responsiveness ([4cfad0e](https://github.com/Famous-Roasters/frontend/commit/4cfad0e2de74ae2228e7f3995f795b024e54a77d))
+
+
+### Features
+
+* **catalogue:** add algolia instantsearch prototype ([9541e58](https://github.com/Famous-Roasters/frontend/commit/9541e58acd11d50b0085f77a967dcee363946556))
+* **search:** add documentation ([bbb24be](https://github.com/Famous-Roasters/frontend/commit/bbb24be03ae4c28ea32def6bb513590e6aaec4e1))
+* **search:** add env vars to Github workflow, remove hardcoded defaults ([17d39ef](https://github.com/Famous-Roasters/frontend/commit/17d39efa1afd8ac600d9920e5e08b88875306764))
+* **search:** add env vars to prod build job ([472bce4](https://github.com/Famous-Roasters/frontend/commit/472bce4e1eea90f151ad0d7650e95a60a66f8caf))
+* **search:** add sorting controls and filter out accessories ([52e4efd](https://github.com/Famous-Roasters/frontend/commit/52e4efd5b8b452b336fdba9cadf9575fe8928623))
+* **search:** coffee type cleanup ([e0ac3d1](https://github.com/Famous-Roasters/frontend/commit/e0ac3d11a64de75903fe5a55386903ec9ba40ba3))
+* **search:** deactivate outdated catalogue tests ([0835944](https://github.com/Famous-Roasters/frontend/commit/0835944e350ee15d57ff42f60a0d5a70d64a9c8f))
+* **search:** disable individual catalogue tests ([8d48713](https://github.com/Famous-Roasters/frontend/commit/8d487137fb31666c608503ea27c316fe77b51d55))
+* **search:** extract env variables ([2275ac1](https://github.com/Famous-Roasters/frontend/commit/2275ac11d80fe7951de1ad2db1f1f04fc40932b7))
+* **search:** fix linter error ([d6074b5](https://github.com/Famous-Roasters/frontend/commit/d6074b5d31463e1468072f9c6abd1bed726526e8))
+* **search:** fix out-of-stock calculation ([63c8cfd](https://github.com/Famous-Roasters/frontend/commit/63c8cfdedc7c050c78ff4cc6774f3e9b884752bc))
+* **search:** fix spacing ([1feab6b](https://github.com/Famous-Roasters/frontend/commit/1feab6b6436c181da6a78eadb4f4a326d3bdadc0))
+* **search:** fix typescript error ([9f060ed](https://github.com/Famous-Roasters/frontend/commit/9f060ed88c7c1b23436bbce35719727ceee68f5f))
+* **search:** implement mobile filters menu ([2092768](https://github.com/Famous-Roasters/frontend/commit/209276893c0c7ddd1b820ea313b4b317c03255f5))
+* **search:** implement single select filter ([9771d60](https://github.com/Famous-Roasters/frontend/commit/9771d60684bca48258b5681d1334bcec2b2aaa15))
+* **search:** increase limit for facet values ([d5e491c](https://github.com/Famous-Roasters/frontend/commit/d5e491c5b8751bc17324076c0f571206f16f5e18))
+* **search:** insert new search on catalogue page ([f0a4246](https://github.com/Famous-Roasters/frontend/commit/f0a4246e08b103c6c45a66608bc356dd3eb286cd))
+* **search:** layout and styling ([580ad03](https://github.com/Famous-Roasters/frontend/commit/580ad03bac3b3d93438b778aaa06bd79a809e5e4))
+* **search:** layout fixes ([fcc0596](https://github.com/Famous-Roasters/frontend/commit/fcc05969df5696c7667ce309022eafffbc022651))
+* **search:** move search section in readme ([e17c383](https://github.com/Famous-Roasters/frontend/commit/e17c383637d318000643856a97b5818ecb78f03e))
+* **search:** remove unused code ([999298d](https://github.com/Famous-Roasters/frontend/commit/999298d35c6906ab98c0967d4d5333d058cb0daf))
+* **search:** reorganize files and components ([195ae72](https://github.com/Famous-Roasters/frontend/commit/195ae72d551443994e235021d7235a5c5acaa70d))
+* **search:** translate origin values on mobile ([1f01231](https://github.com/Famous-Roasters/frontend/commit/1f0123135ebcffa9ecce0500858993e1c88943ef))
+* **search:** translate sorting options ([be81b08](https://github.com/Famous-Roasters/frontend/commit/be81b08fdb5db5692af27a3c4e22e428a0a62155))
+* **search:** update readme with facet configuration info ([d3aa24d](https://github.com/Famous-Roasters/frontend/commit/d3aa24d8468f3224d5aedfc18c3113c6e001b3e6))
+* **search:** update snapshot ([046579a](https://github.com/Famous-Roasters/frontend/commit/046579ad177b9e54a3492435ad860354a190ccb9))
+
 ## [1.52.1](https://github.com/Famous-Roasters/frontend/compare/v1.52.0...v1.52.1) (2022-08-22)
 
 
