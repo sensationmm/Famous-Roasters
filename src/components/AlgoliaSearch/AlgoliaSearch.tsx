@@ -21,6 +21,7 @@ const Search: React.FC = () => {
       <Configure
         distinct={true} // show products, not variants
         hitsPerPage={6}
+        maxValuesPerFacet={100}
         facetFilters={['product_type:-Accessories', 'product_type:-Equipment']}
       />
 
