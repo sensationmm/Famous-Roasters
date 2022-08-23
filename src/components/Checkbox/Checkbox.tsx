@@ -7,6 +7,7 @@ interface IconCheckboxProps extends React.HTMLAttributes<HTMLElement> {
   small?: boolean
   selected: boolean
   toggleSelected: (selected: boolean) => void
+  disabled?: boolean
   dataTestId?: string
 }
 
@@ -14,14 +15,16 @@ export const Checkbox: React.FC<IconCheckboxProps> = ({
   text,
   selected,
   small = false,
+  disabled = false,
   toggleSelected,
   dataTestId = 'checkbox',
 }: IconCheckboxProps) => {
   return (
     <button
-      className={`flex w-full flex-row items-start cursor-pointer`}
+      className={`flex w-full flex-row items-start cursor-pointer disabled:opacity-20 disabled:cursor-not-allowed`}
       data-testid={dataTestId}
       onClick={() => toggleSelected(!selected)}
+      disabled={disabled}
     >
       <div>
         <Icon name={selected ? IconName.CheckboxChecked : IconName.CheckboxUnchecked} size={IconSize.md} />

@@ -6,7 +6,7 @@ exports[`Auth form checkbox custom auth component Renders correctly 1`] = `
     method="POST"
   >
     <button
-      class="flex w-full flex-row items-start cursor-pointer"
+      class="flex w-full flex-row items-start cursor-pointer disabled:opacity-20 disabled:cursor-not-allowed"
       data-testid="checkbox"
     >
       <div>

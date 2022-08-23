@@ -279,7 +279,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
           class="my-4 md:w-1/4"
         >
           <button
-            class="flex w-full flex-row items-start cursor-pointer"
+            class="flex w-full flex-row items-start cursor-pointer disabled:opacity-20 disabled:cursor-not-allowed"
             data-testid="checkbox"
           >
             <div>
@@ -464,7 +464,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 <span
                   class="block truncate text-base leading-6"
                 >
-                  Rösterei
+                  pages.catalogue.filters.vendor.label
                 </span>
                 <svg
                   aria-hidden="true"
@@ -3104,7 +3104,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 <span
                   class="block truncate text-base leading-6"
                 >
-                  Rösterei
+                  pages.catalogue.filters.vendor.label
                 </span>
                 <svg
                   aria-hidden="true"

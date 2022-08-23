@@ -4,13 +4,16 @@ export const formatDate = (date: string) => {
   return format(new Date(date), 'EEEEEE, dd.MM.yyyy')
 }
 
-export const formatPrice = (amount: string, currency: string) =>
-  Intl.NumberFormat('de-DE', {
+export const formatPrice = (amount: string | number, currency = 'EUR') => {
+  const parsedAmount = typeof amount === 'string' ? parseFloat(amount) : amount
+
+  return Intl.NumberFormat('de-DE', {
     style: 'currency',
     currency: currency,
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
-  }).format(parseFloat(amount))
+  }).format(parsedAmount)
+}
 
 export const getSimplifiedProductId = (id: string) => id.split('gid://shopify/Product/')[1]
 
