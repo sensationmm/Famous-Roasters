@@ -295,11 +295,11 @@
         },
         "1": {
           "text": "Du magst Kaffees mit einer ausgeglichenen Bitternote.",
-          "title": "Schokolade mit hohem Kakaoanteil (<70%)"
+          "title": "Dunkle Schokolade"
         },
         "2": {
           "text": "Du magst Kaffees mit einer starken Bitternote.",
-          "title": "Dunkle Schokolade"
+          "title": "Sehr Dunkle Schokolade mit (70%+)"
         }
       },
       "overline": "Erklärung",
@@ -1031,7 +1031,7 @@
             },
             "option3": {
               "selectedText": "Intensive Bitternote",
-              "text": "Sehr dunkle Zartbitter-schokolade (70% +)"
+              "text": "Sehr Dunkle Schokolade (70%+)"
             }
           },
           "text": "Stell dir vor, dass verschiedene Sorten Schokolade vor dir auf dem Tisch liegen. Für welche würdest du dich entscheiden?"
