@@ -1,3 +1,17 @@
+## [1.53.1](https://github.com/Famous-Roasters/frontend/compare/v1.53.0...v1.53.1) (2022-08-23)
+
+
+### Bug Fixes
+
+* **profile:** design amends ([3a55ef4](https://github.com/Famous-Roasters/frontend/commit/3a55ef4416a5e443ab45f2f2ae67b774a7d3a45b))
+* **profile:** design amends snapshots ([cc1ba1b](https://github.com/Famous-Roasters/frontend/commit/cc1ba1bf220b6879b7aa904ec5929bc0399bce76))
+* **wb-314:** translation change ([2cff10f](https://github.com/Famous-Roasters/frontend/commit/2cff10f282e96eed9955381782e2ed8839551264))
+* **wb-340:** unavailable transalation ([bc10d24](https://github.com/Famous-Roasters/frontend/commit/bc10d24a4f69e708a327a522cd33cae2e2095610))
+* **wb-358:** date string i18n ([1b08370](https://github.com/Famous-Roasters/frontend/commit/1b0837094cf86e6c81b511a7c69b8e5c60d8df24))
+* **wb-358:** test failure ([0abebc5](https://github.com/Famous-Roasters/frontend/commit/0abebc5ab922cdf4b3c453182327ad877aafc68a))
+* **wb-359:** fix taste finder entry point if no data ([4fcd652](https://github.com/Famous-Roasters/frontend/commit/4fcd652af549eb412e03b4306fd7ee9f58ff01b2))
+* **wb-359:** test failure change approach ([59ddf52](https://github.com/Famous-Roasters/frontend/commit/59ddf52497614251993ccd66e7e44d7ea8fbf29b))
+
 # [1.53.0](https://github.com/Famous-Roasters/frontend/compare/v1.52.1...v1.53.0) (2022-08-23)
 
 
