@@ -26,7 +26,10 @@ const Search: React.FC = () => {
       />
 
       <div className="flex flex-row justify-between mt-6">
-        <SingleSelectFilter attribute="meta.my_fields.coffee_type" />
+        <SingleSelectFilter
+          attribute="meta.my_fields.coffee_type"
+          defaultText={t('pages.catalogue.filters.meta.my_fields.coffee_type')}
+        />
         <SearchBox
           placeholder={t('pages.catalogue.search.placeholder')}
           classNames={{
