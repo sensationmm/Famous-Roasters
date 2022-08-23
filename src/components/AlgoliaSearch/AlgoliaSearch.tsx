@@ -23,7 +23,8 @@ const Search: React.FC = () => {
         facetFilters={['product_type:-Accessories', 'product_type:-Equipment']}
       />
 
-      <div className="flex flex-row justify-end my-3">
+      <div className="flex flex-row justify-between mt-4">
+        <ListboxFilter attribute="meta.my_fields.coffee_type" />
         <SearchBox
           placeholder={t('pages.catalogue.search.placeholder')}
           classNames={{
@@ -35,36 +36,30 @@ const Search: React.FC = () => {
         />
       </div>
 
-      <div>
-        <div className="flex flex-row justify-end space-between space-x-4">
-          <div className="my-3 w-full">
-            <CheckboxFilter attribute="meta.my_fields.decaf" />
-          </div>
+      <div className="flex flex-row justify-end space-between space-x-4 my-3">
+        <div className="my-3 w-full">
+          <CheckboxFilter attribute="meta.my_fields.decaf" />
+        </div>
 
-          {/* Filters desktop */}
-          <div className="hidden md:flex gap-x-4">
-            <ListboxFilter attribute="meta.my_fields.coffee_type" />
-            <ListboxFilter attribute="meta.my_fields.aroma" />
-            <ListboxFilter attribute="meta.my_fields.bean_type" />
-            <ListboxFilter
-              attribute="meta.my_fields.origin"
-              translationPrefix="pages.catalogue.filters.origin.values"
-            />
-            <ListboxFilter attribute="vendor" />
-          </div>
+        {/* Filters desktop */}
+        <div className="hidden md:flex gap-x-4">
+          <ListboxFilter attribute="meta.my_fields.aroma" />
+          <ListboxFilter attribute="meta.my_fields.bean_type" />
+          <ListboxFilter attribute="meta.my_fields.origin" translationPrefix="pages.catalogue.filters.origin.values" />
+          <ListboxFilter attribute="vendor" />
+        </div>
 
-          {/* Filters mobile */}
-          <div className="w-1/2 md:hidden">
-            <FiltersMenuMobile
-              filters={[
-                { attribute: 'meta.my_fields.coffee_type' },
-                { attribute: 'meta.my_fields.aroma' },
-                { attribute: 'meta.my_fields.bean_type' },
-                { attribute: 'meta.my_fields.origin', translationPrefix: 'pages.catalogue.filters.origin.values' },
-                { attribute: 'vendor' },
-              ]}
-            />
-          </div>
+        {/* Filters mobile */}
+        <div className="w-1/2 md:hidden">
+          <FiltersMenuMobile
+            filters={[
+              { attribute: 'meta.my_fields.coffee_type' },
+              { attribute: 'meta.my_fields.aroma' },
+              { attribute: 'meta.my_fields.bean_type' },
+              { attribute: 'meta.my_fields.origin', translationPrefix: 'pages.catalogue.filters.origin.values' },
+              { attribute: 'vendor' },
+            ]}
+          />
         </div>
       </div>
 
@@ -76,7 +71,7 @@ const Search: React.FC = () => {
           { label: t('pages.catalogue.filters.sort.values.newDesc'), value: 'products_updated_at_desc' },
         ]}
         classNames={{
-          root: 'flex flex-row justify-end mt-1',
+          root: 'flex flex-row justify-end',
           select: 'rounded-full border border-coreUI-text-tertiary px-4 py-2 bg-white ',
         }}
       />
