@@ -16,10 +16,9 @@ interface ListboxFilterProps extends UseRefinementListProps {
   showSwatches?: boolean
 }
 
-const ListboxFilter = (props: ListboxFilterProps) => {
-  const { items, refine } = useRefinementList({ sortBy: ['name:asc'], limit: 100, ...props })
+const ListboxFilter = ({ attribute, translationPrefix, showSwatches }: ListboxFilterProps) => {
+  const { items, refine } = useRefinementList({ sortBy: ['name:asc'], limit: 100, attribute })
   const { t } = useTranslation()
-  const { attribute, translationPrefix, showSwatches } = props
   const activeItems = items.filter((item) => item.isRefined)
   const filterName = t(`pages.catalogue.filters.${attribute}`)
 
@@ -52,7 +51,7 @@ const ListboxFilter = (props: ListboxFilterProps) => {
   }
 
   return (
-    <div className={'w-auto min-w-fit max-w-xs relative'} {...props}>
+    <div className={'w-auto min-w-fit max-w-xs relative'}>
       <HUIListbox value={activeItems} onChange={onChangeHandler} multiple={true}>
         {({ open }) => (
           <>
