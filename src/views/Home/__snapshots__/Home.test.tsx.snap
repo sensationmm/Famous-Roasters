@@ -77,7 +77,7 @@ exports[`Home view Renders correctly 1`] = `
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//blog.60beans.com"
+                  href="/"
                 >
                   <span
                     class="uppercase text-sm leading-5"

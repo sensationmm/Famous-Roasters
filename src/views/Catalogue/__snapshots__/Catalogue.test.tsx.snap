@@ -77,7 +77,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//blog.60beans.com"
+                  href="/"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -89,7 +89,7 @@ exports[`Catalogue view Renders correctly for a successful call 1`] = `
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
-              href="//www.60beans.de"
+              href="//www.60beans.com"
             >
               <span
                 class="sr-only"
@@ -1976,7 +1976,7 @@ exports[`Catalogue view Renders correctly for a successful call for accessories 
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//blog.60beans.com"
+                  href="/"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -2717,7 +2717,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//blog.60beans.com"
+                  href="/"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -2729,7 +2729,7 @@ exports[`Catalogue view Renders correctly for a successful call with params in t
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
-              href="//www.60beans.de"
+              href="//www.60beans.com"
             >
               <span
                 class="sr-only"
