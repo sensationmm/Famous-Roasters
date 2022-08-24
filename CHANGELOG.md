@@ -1,3 +1,10 @@
+## [1.54.1](https://github.com/Famous-Roasters/frontend/compare/v1.54.0...v1.54.1) (2022-08-24)
+
+
+### Bug Fixes
+
+* **tastefinder:** update copy as requested ([1b53899](https://github.com/Famous-Roasters/frontend/commit/1b53899b6de900a45ddce9c62f826a8a50c1601e))
+
 # [1.54.0](https://github.com/Famous-Roasters/frontend/compare/v1.53.2...v1.54.0) (2022-08-24)
 
 
