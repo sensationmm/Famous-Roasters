@@ -15,7 +15,7 @@ type RawHit = {
   variants_inventory_count: number
   meta: {
     my_fields?: {
-      decaf: string
+      decaf: boolean
       origin: string[]
       coffee_type: string
       price_per_kg: number
@@ -48,9 +48,7 @@ const Hit = ({ hit }: { hit: RawHit }) => {
         <div className="flex justify-center items-center shrink-0 self-center relative w-32 h-32">
           <div className="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32">
             <img src={image} alt={title} className="w-28 max-h-28" />
-            {decaf && decaf === 'true' && (
-              <Tag type={TagType.Decaf} value="Decaf" small={true} className="absolute top-2 left-0" />
-            )}
+            {decaf && <Tag type={TagType.Decaf} value="Decaf" small={true} className="absolute top-2 left-0" />}
           </div>
         </div>
 
