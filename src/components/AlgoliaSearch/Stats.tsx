@@ -5,7 +5,6 @@ const Stats: React.FC = () => {
   const search = useInstantSearch()
   const { t } = useTranslation()
 
-  console.log(search)
   const {
     results: { nbHits },
   } = search
