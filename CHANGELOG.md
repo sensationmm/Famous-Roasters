@@ -1,3 +1,10 @@
+## [1.54.5](https://github.com/Famous-Roasters/frontend/compare/v1.54.4...v1.54.5) (2022-08-24)
+
+
+### Bug Fixes
+
+* **search:** fix stats component ([a3175d1](https://github.com/Famous-Roasters/frontend/commit/a3175d1d648c9083316cda828bec5fb506062b41))
+
 ## [1.54.4](https://github.com/Famous-Roasters/frontend/compare/v1.54.3...v1.54.4) (2022-08-24)
 
 
