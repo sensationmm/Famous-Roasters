@@ -1,3 +1,10 @@
+## [1.54.2](https://github.com/Famous-Roasters/frontend/compare/v1.54.1...v1.54.2) (2022-08-24)
+
+
+### Bug Fixes
+
+* **pdp:** restore grind type drop down even if only one option ([1e19ebf](https://github.com/Famous-Roasters/frontend/commit/1e19ebfca772079dd00d44151793e7728a170827))
+
 ## [1.54.1](https://github.com/Famous-Roasters/frontend/compare/v1.54.0...v1.54.1) (2022-08-24)
 
 
