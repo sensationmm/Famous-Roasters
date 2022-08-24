@@ -238,7 +238,11 @@ Shopify and Algolia are integrated via the [Algolia Search and Discovery app](ht
 
 There are [4 indices](https://www.algolia.com/apps/UJO1LDXRBG/indices) at the moment: A main index called `products`, and 3 replicas called `products_price_asc`, `products_price_desc`, and `products_recently_ordered_count_desc` that are sorted replicas of `products`.
 
-Many filters operate on Shopify metafields, which can be exposed as facets in Algolia. You can see all facets for the main index [here](https://www.algolia.com/apps/UJO1LDXRBG/explorer/configuration/products/facets). If, for some reason, the metafields disappear from the list of facets (which would result in broken/empty filter UIs), they can be manually re-added there. This has happened before when triggering a re-indexing from Shopify, and the problem [has been acknowledged by Algolia](https://discourse.algolia.com/t/shopify-metafields-disappear-from-facet-list-after-reindexing/15947/2). The format for these facet attributes follows this pattern: `"meta.my_fields.aroma"`.
+Many filters operate on Shopify metafields, which can be exposed as facets in Algolia. You can see all facets for the main index [here](https://www.algolia.com/apps/UJO1LDXRBG/explorer/configuration/products/facets). If, for some reason, the metafields disappear from the list of facets (which would result in broken/empty filter UIs), they can be restored by running
+
+`$ yarn node scripts/configureAlgoliaFacets.js` on the command line.
+
+This has happened before when triggering a re-indexing from Shopify, and the problem [has been acknowledged by Algolia](https://discourse.algolia.com/t/shopify-metafields-disappear-from-facet-list-after-reindexing/15947/2). The format for these facet attributes follows this pattern: `"meta.my_fields.aroma"`.
 
 In the Algolia Shopify app, the metafields must be configured like this:
 
@@ -251,18 +255,18 @@ The filter UIs are implemented using the [React InstantSearch Hooks API](https:/
 
 The complete list of facets is:
 
+- vendor
 - meta.my_fields.coffee_type
 - meta.my_fields.bean_type
 - meta.my_fields.aroma
-- meta.my_fields.decaf
+- meta.my_fields.decaf (type: boolean)
 - meta.my_fields.origin (type: string_array)
-- meta.my_fields.product_type
-- vendor
-
+- meta.my_fields.price_per_kg (type: number)
 - meta.my_fields.acidity (for the "Aroma" group) (type: number)
 - meta.my_fields.bitterness (for the "Aroma" group) (type: number)
 - meta.my_fields.sweetness (for the "Aroma" group) (type: number)
 - meta.my_fields.body (for the "Aroma" group) (type: number)
+- meta.my_fields.publishedToFrontend (type: boolean)
 
 <!-- Commiting code -->
 

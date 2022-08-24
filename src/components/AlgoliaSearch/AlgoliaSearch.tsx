@@ -8,6 +8,7 @@ import { FiltersMenuMobile } from './FiltersMenuMobile'
 import ListboxFilter from './ListboxFilter'
 import Pagination from './Pagination'
 import SingleSelectFilter from './SingleSelectFilter'
+import Stats from './Stats'
 
 const searchClient = algoliasearch(
   process.env.REACT_APP_ALGOLIA_APP_ID || '',
@@ -16,16 +17,17 @@ const searchClient = algoliasearch(
 
 const Search: React.FC = () => {
   const { t } = useTranslation()
+
   return (
     <InstantSearch indexName="products" searchClient={searchClient} routing={true}>
       <Configure
         distinct={true} // show products, not variants
-        hitsPerPage={6}
+        hitsPerPage={12}
         maxValuesPerFacet={100}
-        facetFilters={['product_type:-Accessories', 'product_type:-Equipment']}
+        facetFilters={['collections:coffee', 'meta.my_fields.publishedToFrontend:true']}
       />
 
-      <div className="flex flex-row justify-between mt-6 mb-4">
+      <div className="md:flex justify-between mt-6 mb-4">
         <SingleSelectFilter
           attribute="meta.my_fields.coffee_type"
           defaultText={t('pages.catalogue.filters.meta.my_fields.coffee_type')}
@@ -33,7 +35,7 @@ const Search: React.FC = () => {
         <SearchBox
           placeholder={t('pages.catalogue.search.placeholder')}
           classNames={{
-            input: 'rounded-full border border-coreUI-text-tertiary px-4 py-2 w-96',
+            input: 'rounded-full border border-coreUI-text-tertiary px-4 py-2 w-full md:w-96 mt-3',
             submitIcon: '-ml-6',
             resetIcon: 'hidden',
             reset: 'hidden',
@@ -48,7 +50,7 @@ const Search: React.FC = () => {
 
         {/* Filters desktop */}
         <div className="hidden md:flex gap-x-4">
-          <ListboxFilter attribute="meta.my_fields.aroma" />
+          <ListboxFilter attribute="meta.my_fields.aroma" showSwatches />
           <ListboxFilter attribute="meta.my_fields.bean_type" />
           <ListboxFilter attribute="meta.my_fields.origin" translationPrefix="pages.catalogue.filters.origin.values" />
           <ListboxFilter attribute="vendor" />
@@ -59,7 +61,7 @@ const Search: React.FC = () => {
           <FiltersMenuMobile
             filters={[
               { attribute: 'meta.my_fields.coffee_type' },
-              { attribute: 'meta.my_fields.aroma' },
+              { attribute: 'meta.my_fields.aroma', showSwatches: true },
               { attribute: 'meta.my_fields.bean_type' },
               { attribute: 'meta.my_fields.origin', translationPrefix: 'pages.catalogue.filters.origin.values' },
               { attribute: 'vendor' },
@@ -76,11 +78,12 @@ const Search: React.FC = () => {
           { label: t('pages.catalogue.filters.sort.values.newDesc'), value: 'products_updated_at_desc' },
         ]}
         classNames={{
-          root: 'flex flex-row justify-end',
-          select: 'rounded-full border border-coreUI-text-tertiary px-4 py-2 bg-white ',
+          root: 'flex flex-row justify-end chevron',
+          select: 'rounded-full border border-coreUI-text-tertiary px-4 py-2 bg-white h-10 w-48',
         }}
       />
 
+      <Stats />
       <Hits
         hitComponent={Hit}
         classNames={{ root: 'mb-8', list: 'grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3' }}

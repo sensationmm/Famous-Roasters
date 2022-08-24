@@ -21,6 +21,7 @@ interface FilterMobileProps {
   translationPrefix?: string
   show: boolean
   back: () => void
+  showSwatches?: boolean
 }
 
 export const FilterMobile: React.FC<FilterMobileProps> = ({
@@ -28,6 +29,7 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({
   translationPrefix,
   show,
   back,
+  showSwatches,
 }: FilterMobileProps) => {
   const { t } = useTranslation()
   const { items, refine } = useRefinementList({ attribute, sortBy: ['name:asc'] })
@@ -112,7 +114,7 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({
                       </span>
                     ) : (
                       <span className="inline-flex items-left">
-                        {attribute === 'meta.my_fields.aroma' && (
+                        {showSwatches && (
                           <TagSwatch data-testid="filter-option-tagSwatch" type={TagType.Aroma} value={item.value} />
                         )}
                         {renderItem(item.value, true)}
