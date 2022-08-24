@@ -1,3 +1,28 @@
+# [1.54.0](https://github.com/Famous-Roasters/frontend/compare/v1.53.2...v1.54.0) (2022-08-24)
+
+
+### Features
+
+* **search:** add page numbers to pagination ([628a0cb](https://github.com/Famous-Roasters/frontend/commit/628a0cbd0f4f979203bb88d7a9af0adcf7425a5e))
+* **search:** add script to configure Algolia index ([b431134](https://github.com/Famous-Roasters/frontend/commit/b431134b786b48b34c505303b391e554ec526303))
+* **search:** add test for Hit component ([ab8ceba](https://github.com/Famous-Roasters/frontend/commit/ab8cebacdfef9e57c92bcbbfe47530fb467d5813))
+* **search:** adjust search bar width on mobile ([5bf9529](https://github.com/Famous-Roasters/frontend/commit/5bf952923a1a14eb67d1039651e452d9056164db))
+* **search:** cleanup ([7895378](https://github.com/Famous-Roasters/frontend/commit/7895378569211f686150f7948cd3550a83580a07))
+* **search:** fix behavior of single select filter ([4cf5bfd](https://github.com/Famous-Roasters/frontend/commit/4cf5bfd55644b9d2696c465fea5d6c8964088c8f))
+* **search:** fix decaf label ([f3f6470](https://github.com/Famous-Roasters/frontend/commit/f3f6470dba11c65a2edcca15d65190f0e340c626))
+* **search:** fix dropdown background color on mobile ([5631b73](https://github.com/Famous-Roasters/frontend/commit/5631b730a2be9cca9401b1957bb40c46aab8fa8c))
+* **search:** fix select down chevron ([27704f8](https://github.com/Famous-Roasters/frontend/commit/27704f8f3ee7cff4ff21357f865d2264242aa341))
+* **search:** fix single value filter ([6ce9233](https://github.com/Famous-Roasters/frontend/commit/6ce923368f8ab0a497ced0f09dcab55d987f6f40))
+* **search:** fix sorting dropdown height on mobile ([f284576](https://github.com/Famous-Roasters/frontend/commit/f2845761702f24f5b987d3d5714686b959c1cf95))
+* **search:** increase nr of results and add stats above hits section ([62acc73](https://github.com/Famous-Roasters/frontend/commit/62acc7308c24f6a603af4f63bbbe6e207de33b3b))
+* **search:** make decaf flag more robust ([fdd3079](https://github.com/Famous-Roasters/frontend/commit/fdd3079cfd8702a86547f6e7253667aaa347e04d))
+* **search:** make search bar full-width on mobile ([1118edc](https://github.com/Famous-Roasters/frontend/commit/1118edcc87ec10a1c76a93c716befb36ef9ef37d))
+* **search:** only retrieve products with publishedToFrontend set to true ([2902b15](https://github.com/Famous-Roasters/frontend/commit/2902b15df5e5b8fd5cce64cc1ab09b8b1f8674a3))
+* **search:** restore color swatches for aroma filter ([bfeabf4](https://github.com/Famous-Roasters/frontend/commit/bfeabf4bd71bd8db215385a37c2246912d81254e))
+* **search:** update default value copy for main filter ([0b0c70c](https://github.com/Famous-Roasters/frontend/commit/0b0c70cf92d9a4000ac308b85609f4d300a1a406))
+* **search:** update mechanism to filter by collection ([3275d59](https://github.com/Famous-Roasters/frontend/commit/3275d592fd43bbb8c20b0b6dfadfaba233ed4ff2))
+* **search:** update readme ([b02cffc](https://github.com/Famous-Roasters/frontend/commit/b02cffc8f5bf5a1831deeeefbd95250a283725cf))
+
 ## [1.53.2](https://github.com/Famous-Roasters/frontend/compare/v1.53.1...v1.53.2) (2022-08-24)
 
 ## [1.53.1](https://github.com/Famous-Roasters/frontend/compare/v1.53.0...v1.53.1) (2022-08-23)
