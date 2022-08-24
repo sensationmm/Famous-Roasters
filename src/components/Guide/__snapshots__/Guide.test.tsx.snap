@@ -31,7 +31,7 @@ exports[`ChocolateInfo component Renders correctly 1`] = `
           class="flex border-b-2 mb-1 text-sm leading-5"
           style="border-bottom-width: 1px;"
         >
-          Warum wir dich das fragen?
+          Was hat das mit Kaffee zu tun?
         </span>
       </div>
     </button>
@@ -65,7 +65,7 @@ exports[`ChocolateInfo component Renders correctly 1`] = `
           class="flex border-b-2 mb-1 text-sm leading-5"
           style="border-bottom-width: 1px;"
         >
-          Warum wir dich das fragen?
+          Was hat das mit Kaffee zu tun?
         </span>
       </div>
     </button>

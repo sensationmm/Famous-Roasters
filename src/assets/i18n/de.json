@@ -268,8 +268,8 @@
       },
       "overline": "Erklärung",
       "text": "Unsere Kaffeeexperten nutzen den Vergleich mit Obst und Früchten, um herauszufinden, wie sauer dein Kaffee sein darf.",
-      "title": "Warum wir dich das fragen?",
-      "trigger": "Warum wir dich das fragen?"
+      "title": "Was hat das mit Kaffee zu tun?",
+      "trigger": "Was hat das mit Kaffee zu tun?"
     },
     "adventurous": {
       "items": {
@@ -304,8 +304,8 @@
       },
       "overline": "Erklärung",
       "text": "Unsere Kaffeeexperten nutzen den Vergleich mit Schokolade, um herauszufinden, wie bitter dein Kaffee sein darf.",
-      "title": "Warum wir dich das fragen?",
-      "trigger": "Warum wir dich das fragen?"
+      "title": "Was hat das mit Kaffee zu tun?",
+      "trigger": "Was hat das mit Kaffee zu tun?"
     },
     "body": {
       "items": {
@@ -324,8 +324,8 @@
       },
       "overline": "Erklärung",
       "text": "Unsere Kaffeeexperten nutzen deine Zubereitungspräferenz, um herauszufinden, wie der Körper bzw. das Mundgefühl deines Kaffees sein soll.",
-      "title": "Warum wir dich das fragen?",
-      "trigger": "Warum wir dich das fragen?"
+      "title": "Was hat das mit Kaffee zu tun?",
+      "trigger": "Was hat das mit Kaffee zu tun?"
     },
     "grindType": {
       "overline": "Erklärung",
@@ -351,8 +351,8 @@
       },
       "overline": "Erklärung",
       "text": "Unsere Kaffeeexperten nutzen den Vergleich mit Süßspeisen, um herauszufinden, wie süß dein Kaffee sein darf.",
-      "title": "Warum wir dich das fragen?",
-      "trigger": "Warum wir dich das fragen?"
+      "title": "Was hat das mit Kaffee zu tun?",
+      "trigger": "Was hat das mit Kaffee zu tun?"
     },
     "tasteResults": {
       "items": {
