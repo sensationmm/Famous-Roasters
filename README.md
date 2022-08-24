@@ -251,14 +251,13 @@ The filter UIs are implemented using the [React InstantSearch Hooks API](https:/
 
 The complete list of facets is:
 
+- vendor
 - meta.my_fields.coffee_type
 - meta.my_fields.bean_type
 - meta.my_fields.aroma
 - meta.my_fields.decaf
 - meta.my_fields.origin (type: string_array)
-- meta.my_fields.product_type
-- vendor
-
+- meta.my_fields.price_per_kg (type: number)
 - meta.my_fields.acidity (for the "Aroma" group) (type: number)
 - meta.my_fields.bitterness (for the "Aroma" group) (type: number)
 - meta.my_fields.sweetness (for the "Aroma" group) (type: number)
