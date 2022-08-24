@@ -35,7 +35,7 @@ export const FiltersMenuMobile: React.FC<FiltersMenuMobileProps> = ({ filters }:
   return (
     <>
       <Transition.Root show={open} unmount={false} as={Fragment}>
-        <Dialog as="div" className="fixed inset-0 flex z-40" onClose={setOpen} unmount={false}>
+        <Dialog as="div" className="fixed inset-0 flex z-40" open={open} onClose={() => setOpen(false)} unmount={false}>
           {filters.map(({ attribute, translationPrefix, showSwatches }) => (
             <FilterMobile
               key={attribute}
