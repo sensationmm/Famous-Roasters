@@ -77,7 +77,7 @@ const Search: React.FC = () => {
         ]}
         classNames={{
           root: 'flex flex-row justify-end',
-          select: 'rounded-full border border-coreUI-text-tertiary px-4 py-2 bg-white ',
+          select: 'rounded-full border border-coreUI-text-tertiary px-4 py-2 bg-white h-10',
         }}
       />
 
