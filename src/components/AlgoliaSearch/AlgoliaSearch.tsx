@@ -22,7 +22,7 @@ const Search: React.FC = () => {
         distinct={true} // show products, not variants
         hitsPerPage={6}
         maxValuesPerFacet={100}
-        facetFilters={['product_type:-Accessories', 'product_type:-Equipment']}
+        facetFilters={['collections:coffee']}
       />
 
       <div className="md:flex justify-between mt-6 mb-4">
