@@ -25,7 +25,7 @@ const Search: React.FC = () => {
         facetFilters={['product_type:-Accessories', 'product_type:-Equipment']}
       />
 
-      <div className="flex flex-row justify-between mt-6 mb-4">
+      <div className="md:flex justify-between mt-6 mb-4">
         <SingleSelectFilter
           attribute="meta.my_fields.coffee_type"
           defaultText={t('pages.catalogue.filters.meta.my_fields.coffee_type')}
@@ -33,7 +33,7 @@ const Search: React.FC = () => {
         <SearchBox
           placeholder={t('pages.catalogue.search.placeholder')}
           classNames={{
-            input: 'rounded-full border border-coreUI-text-tertiary px-4 py-2 w-48 md:w-96',
+            input: 'rounded-full border border-coreUI-text-tertiary px-4 py-2 w-full md:w-96 mt-3',
             submitIcon: '-ml-6',
             resetIcon: 'hidden',
             reset: 'hidden',
