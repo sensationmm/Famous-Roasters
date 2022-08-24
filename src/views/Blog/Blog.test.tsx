@@ -15,7 +15,7 @@ jest.mock('react-router-dom', () => ({
     category: 'Kaffeewissen',
   }),
 }))
-describe('Blog Category List View', () => {
+describe('Blog View', () => {
   it('Renders correctly', async () => {
     const { container } = render(
       <MockedProvider

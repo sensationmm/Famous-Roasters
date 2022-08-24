@@ -113,7 +113,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="/taste-finder"
+                    href="//shop.60beans.com/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -124,7 +124,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="/profile"
+                  href="//shop.60beans.com/profile"
                 >
                   <svg
                     class="undefined fill-brand-black stroke-brand-black"
@@ -566,7 +566,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex flex-col w-full justify-start pl-4"
+                      class="flex flex-col w-full justify-center pl-4"
                     >
                       <div
                         class="text-base leading-6 font-semibold"
@@ -656,7 +656,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex flex-col w-full justify-start pl-4"
+                      class="flex flex-col w-full justify-center pl-4"
                     >
                       <div
                         class="text-base leading-6 font-semibold"
@@ -746,7 +746,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex flex-col w-full justify-start pl-4"
+                      class="flex flex-col w-full justify-center pl-4"
                     >
                       <div
                         class="text-base leading-6 font-semibold"
@@ -797,7 +797,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
       class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
-        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
+        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start px-8 xl:px-10"
       >
         <div
           class="mb-2 md:mb-0 md:mr-2"
@@ -830,7 +830,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
         </div>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 mx-auto px-12 xl:px-14"
+        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 px-12 xl:px-14"
       >
         <div
           class="order-2 md:order-1"
@@ -840,7 +840,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
               class="mt-0"
             >
               <a
-                href="/catalogue"
+                href="//shop.60beans.com/catalogue"
               >
                 Shop
               </a>
@@ -849,7 +849,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
               class="mt-6"
             >
               <a
-                href="/taste-finder"
+                href="//shop.60beans.com/taste-finder"
               >
                 Tastefinder
               </a>
@@ -907,7 +907,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
         </div>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto text-center mt-10 mx-auto px-12 xl:px-14"
+        class="w-full max-w-7xl mx-auto text-center mt-10 px-12 xl:px-14"
       >
         <span
           class="text-center text-base leading-6"
@@ -1039,7 +1039,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="/taste-finder"
+                    href="//shop.60beans.com/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -1050,7 +1050,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="/profile"
+                  href="//shop.60beans.com/profile"
                 >
                   <svg
                     class="undefined fill-brand-black stroke-brand-black"
@@ -2434,7 +2434,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
       class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
-        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
+        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start px-8 xl:px-10"
       >
         <div
           class="mb-2 md:mb-0 md:mr-2"
@@ -2467,7 +2467,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
         </div>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 mx-auto px-12 xl:px-14"
+        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 px-12 xl:px-14"
       >
         <div
           class="order-2 md:order-1"
@@ -2477,7 +2477,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               class="mt-0"
             >
               <a
-                href="/catalogue"
+                href="//shop.60beans.com/catalogue"
               >
                 Shop
               </a>
@@ -2486,7 +2486,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               class="mt-6"
             >
               <a
-                href="/taste-finder"
+                href="//shop.60beans.com/taste-finder"
               >
                 Tastefinder
               </a>
@@ -2544,7 +2544,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
         </div>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto text-center mt-10 mx-auto px-12 xl:px-14"
+        class="w-full max-w-7xl mx-auto text-center mt-10 px-12 xl:px-14"
       >
         <span
           class="text-center text-base leading-6"
@@ -2676,7 +2676,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="/taste-finder"
+                    href="//shop.60beans.com/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -2687,7 +2687,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="/profile"
+                  href="//shop.60beans.com/profile"
                 >
                   <svg
                     class="undefined fill-brand-black stroke-brand-black"
@@ -4032,7 +4032,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
       class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
-        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
+        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start px-8 xl:px-10"
       >
         <div
           class="mb-2 md:mb-0 md:mr-2"
@@ -4065,7 +4065,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
         </div>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 mx-auto px-12 xl:px-14"
+        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 px-12 xl:px-14"
       >
         <div
           class="order-2 md:order-1"
@@ -4075,7 +4075,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
               class="mt-0"
             >
               <a
-                href="/catalogue"
+                href="//shop.60beans.com/catalogue"
               >
                 Shop
               </a>
@@ -4084,7 +4084,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
               class="mt-6"
             >
               <a
-                href="/taste-finder"
+                href="//shop.60beans.com/taste-finder"
               >
                 Tastefinder
               </a>
@@ -4142,7 +4142,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
         </div>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto text-center mt-10 mx-auto px-12 xl:px-14"
+        class="w-full max-w-7xl mx-auto text-center mt-10 px-12 xl:px-14"
       >
         <span
           class="text-center text-base leading-6"

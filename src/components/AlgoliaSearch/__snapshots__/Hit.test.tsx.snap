@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hit component Renders correctly 1`] = `
+<div>
+  <a
+    href="/product/gid://shopify/Product/7655228866776"
+  >
+    <div
+      class="flex pt-8 md:px-6"
+    >
+      <div
+        class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+      >
+        <div
+          class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+        >
+          <img
+            alt="Espresso Raritäten Set"
+            class="w-28 max-h-28"
+            src="https://example.com/image"
+          />
+        </div>
+      </div>
+      <div
+        class="flex flex-col w-full justify-start pl-4"
+      >
+        <div
+          class="text-base leading-6 font-semibold"
+        >
+          Espresso Raritäten Set
+        </div>
+        <div
+          class="flex flex-col w-full justify-start text-base leading-6"
+        >
+          19grams
+        </div>
+        <div
+          class="text-coreUI-text-secondary text-base leading-6"
+        >
+          Brasilien, 
+          Kolumbien
+        </div>
+        <div
+          class="text-coreUI-text-secondary text-base leading-6"
+        >
+          Filter
+        </div>
+        <div
+          class="flex items-baseline"
+        >
+          <span
+            class="mr-1 text-base leading-6 font-semibold"
+          >
+            ab 
+            5,00 €
+          </span>
+          <span
+            class="text-coreUI-text-secondary text-xs leading-4"
+          >
+            (
+            10,00 €
+            /kg)
+          </span>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+`;

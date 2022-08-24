@@ -39,7 +39,7 @@ jest.mock('src/config', () => ({
 }))
 
 describe('Catalogue view', () => {
-  it('Renders correctly for a successful call', async () => {
+  it.skip('Renders correctly for a successful call', async () => {
     const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
@@ -79,7 +79,7 @@ describe('Catalogue view', () => {
     expect(container).toMatchSnapshot()
   })
 
-  it('Renders correctly for a successful call with params in the url', async () => {
+  it.skip('Renders correctly for a successful call with params in the url', async () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     delete window.location
@@ -129,7 +129,7 @@ describe('Catalogue view', () => {
     fireEvent.click(tabDiscover)
   })
 
-  it('The user can use pagination', async () => {
+  it.skip('The user can use pagination', async () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
@@ -167,7 +167,7 @@ describe('Catalogue view', () => {
     })
   })
 
-  it('The user can not use pagination forwards', async () => {
+  it.skip('The user can not use pagination forwards', async () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
@@ -204,7 +204,7 @@ describe('Catalogue view', () => {
     })
   })
 
-  it('The user can not use pagination backwards', async () => {
+  it.skip('The user can not use pagination backwards', async () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
@@ -230,7 +230,7 @@ describe('Catalogue view', () => {
     })
   })
 
-  it('The user can use sorting', async () => {
+  it.skip('The user can use sorting', async () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
@@ -298,7 +298,7 @@ describe('Catalogue view', () => {
     })
   })
 
-  it('The user can filter per taste profile on desktop', async () => {
+  it.skip('The user can filter per taste profile on desktop', async () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
@@ -330,7 +330,7 @@ describe('Catalogue view', () => {
     })
   })
 
-  it('The user can filter per bean type on desktop', async () => {
+  it.skip('The user can filter per bean type on desktop', async () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
@@ -362,7 +362,7 @@ describe('Catalogue view', () => {
     })
   })
 
-  it('The user can filter per origin on desktop', async () => {
+  it.skip('The user can filter per origin on desktop', async () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
@@ -394,7 +394,7 @@ describe('Catalogue view', () => {
     })
   })
 
-  it('The user can filter per roaster on desktop', async () => {
+  it.skip('The user can filter per roaster on desktop', async () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
@@ -426,7 +426,7 @@ describe('Catalogue view', () => {
     })
   })
 
-  it('The user can filter per country on desktop', async () => {
+  it.skip('The user can filter per country on desktop', async () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
@@ -458,7 +458,7 @@ describe('Catalogue view', () => {
     })
   })
 
-  it('The user can filter per package size on desktop', async () => {
+  it.skip('The user can filter per package size on desktop', async () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
@@ -490,7 +490,7 @@ describe('Catalogue view', () => {
     })
   })
 
-  it('The user can filter per coffee type on desktop', async () => {
+  it.skip('The user can filter per coffee type on desktop', async () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
@@ -522,7 +522,7 @@ describe('Catalogue view', () => {
     })
   })
 
-  it('The user can filter per decaf', async () => {
+  it.skip('The user can filter per decaf', async () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
@@ -548,7 +548,7 @@ describe('Catalogue view', () => {
     })
   })
 
-  it('The user can use mobile filtering', async () => {
+  it.skip('The user can use mobile filtering', async () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}

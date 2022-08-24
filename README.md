@@ -1,8 +1,9 @@
-
 # 60beans - Frontend
 
-<!-- Status -->  
+<!-- Status -->
+
 ## Status
+
 [![Test and Build](https://github.com/Famous-Roasters/frontend/actions/workflows/build.yml/badge.svg)](https://github.com/Famous-Roasters/frontend/actions/workflows/build.yml)
 [![Test, Build and Deploy](https://github.com/Famous-Roasters/frontend/actions/workflows/build_main.yml/badge.svg)](https://github.com/Famous-Roasters/frontend/actions/workflows/build_main.yml)
 
@@ -16,18 +17,22 @@
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=Famous-Roasters_frontend&metric=sqale_index&token=d444da0936f388e6ec530f34ff77f9005eb8805d)](https://sonarcloud.io/summary/new_code?id=Famous-Roasters_frontend)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=Famous-Roasters_frontend&metric=vulnerabilities&token=d444da0936f388e6ec530f34ff77f9005eb8805d)](https://sonarcloud.io/summary/new_code?id=Famous-Roasters_frontend)
 
-___
+---
 
-<!-- Environments -->  
+<!-- Environments -->
+
 ## Environments
+
 - [App - Production](https://shop.60beans.com/)
 - [App - Staging](https://staging.shop.60beans.com/)
 - [Storybook - Staging](https://storybook.staging.60beans.io/)
 
-___
+---
 
-<!-- Documentation -->  
+<!-- Documentation -->
+
 ## Documentation
+
 <ol>  
   <li><a href="#about">About</a></li>  
   <li><a href="#getting-started">Getting started</a></li>
@@ -44,17 +49,18 @@ ___
   <li><a href="#semantic-release">Semantic Release</a></li>  
   <li><a href="#deployment">Deployment</a></li>
   <li><a href="#questions">Questions?</a></li>
-</ol>  
+</ol>
 
+<!-- About -->
 
-
-
-<!-- About -->  
 ### About
+
 This frontend app for 60beans is written in TypeScript, using Create React App, Tailwind CSS and Tailwind UI, Storybook and i18next.
 
-<!-- Getting Started -->  
+<!-- Getting Started -->
+
 ### Getting Started
+
 1. Make sure you have [Node](https://nodejs.org/) `^14.18.1` and [Yarn](https://yarnpkg.com/) `^1.22.17` running in your machine.
 2. Execute `yarn` to resolve dependencies.
 3. Make sure you have an .env file (please <a href="#env-file">check the env file section</a>)
@@ -64,8 +70,10 @@ For handling node versioning it is recommended to have node setup using [nvm](ht
 
 For more info on getting started, please read the <a href="#scripts">Scripts</a> section.
 
-<!-- Env File -->  
+<!-- Env File -->
+
 ### Env File
+
 1. Pick the `.env.example` of the root project and rename it into `.env` or just create it (note `.env` is gitignored and so it should remain)
 2. Go to 1Password (ask for credentials) and search for "Frontend .env (dev + staging)"
 3. Copy the credentials into the file
@@ -73,148 +81,221 @@ For more info on getting started, please read the <a href="#scripts">Scripts</a>
 
 Env files on GitHub Actions are set under [Organisation secrets](https://github.com/organizations/Famous-Roasters/settings/secrets/actions)
 
-<!-- Scripts -->  
+<!-- Scripts -->
+
 ### Scripts
 
 #### `yarn start`
+
 Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits.
 You will also see any lint errors in the console.
 
 #### `yarn build`
+
 Builds the app for production to the `build` folder.
 It correctly bundles React in production mode and optimises the build for the best performance. The build is minified and the filenames include the hashes.
 Your app is ready to be deployed! See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 #### `yarn serve`
+
 Serves the production build.
 
 #### `yarn test`
-Launches the (unit/snapshot) test runner in the interactive watch mode.  See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+Launches the (unit/snapshot) test runner in the interactive watch mode. See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 #### `yarn test:watch`
+
 Launches the (unit/snapshot) test runner scoping only the not commited changes.
 
 #### `yarn test:watchAll`
+
 Launches the (unit/snapshot) test runner scoping all the project files.
 
 #### `yarn test:ci`
+
 Launches the (unit/snapshot) test runner in CI mode.
 
 #### `yarn test:fix`
+
 Launches the (unit/snapshot) test runner in CI mode and attempts to fix automatically any failing snapshot.
 
 #### `yarn lint`
+
 Runs linter. Lint configuration can be found at `.eslintrc` and `.eslintignore`.
 
 #### `yarn lint:fix`
+
 Runs linter and attempts to fix linting issues.
 
 #### `yarn prettier`
+
 Runs prettifier.
 
 #### `yarn prettier:write`
+
 Runs prettifier and attempts to fix pretty issues.
 
 #### `yarn postinstall`
+
 (Post)installs Husky, pre-commit and pre-push hooks. See config in `.husky` folder.
 
 #### `yarn storybook`
+
 Compiles and runs storybook in dev mode.
 
 #### `yarn build-storybook`
+
 Builds storybook as a static build application.
 
 #### `yarn deploy-storybook`
+
 Deploy runner for storybook.
 
-<!-- Create React App -->  
+<!-- Create React App -->
+
 ### Create React App
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-<!-- Structure Overview -->  
+<!-- Structure Overview -->
+
 ### Structure Overview
-```  
-/                                     # root folder  
+
+```
+/                                     # root folder
 ├── .github                           # github actions workflows (yml), PR template
-├── .husky                            # pre-commit and pre-push actions  
-├── .storybook                        # storybook configuration files 
+├── .husky                            # pre-commit and pre-push actions
+├── .storybook                        # storybook configuration files
 ├── public                            # static public files
-├── src                               # repo source files  
+├── src                               # repo source files
 │   ├── _mocks                        # mock objects (tests)
-│   ├── assets                        # source code assets  
+│   ├── assets                        # source code assets
 │   │   ├── i18n                      # translations json files
 │   │   └── images                    # images used (webp, png, svg)
-│   ├── components                    # components folder  
-│   │   ├── ...    
-│   │   ├── <Component>  
-│   │   │   ├── __snapshots__         # generated snapshots  
-│   │   │   ├── <Component>.test.tsx  # component test file  
-│   │   │   ├── <Component>.tsx       # component source code  
+│   ├── components                    # components folder
+│   │   ├── ...
+│   │   ├── <Component>
+│   │   │   ├── __snapshots__         # generated snapshots
+│   │   │   ├── <Component>.test.tsx  # component test file
+│   │   │   ├── <Component>.tsx       # component source code
 │   │   │   └── index.ts              # module named exports
-│   │   └── ...  
-│   ├── config                        # i18n config  
+│   │   └── ...
+│   ├── config                        # i18n config
 │   ├── docs                          # documentation
 │   │   └── storybook                 # storybook docs
-│   ├── utils                         # utilities and helpers  
-│   ├── views                         # pages/views  
-│   │   ├── ...  
-│   │   ├── <Page>  
-│   │   │   ├── __snapshots__         # generated snapshots  
-│   │   │   ├── <Page>.test.tsx       # page test file  
-│   │   │   ├── <Page>.tsx            # page source code  
+│   ├── utils                         # utilities and helpers
+│   ├── views                         # pages/views
+│   │   ├── ...
+│   │   ├── <Page>
+│   │   │   ├── __snapshots__         # generated snapshots
+│   │   │   ├── <Page>.test.tsx       # page test file
+│   │   │   ├── <Page>.tsx            # page source code
 │   │   │   └── index.ts              # module named exports
-│   │   └── ...  
+│   │   └── ...
 │   ├── App.tsx                       # root app file, outer routing
 │   └── index.css                     # css including tailwind binding
-├── .commitlintrc.js                  # commitlint config  
-├── .eslintignore                     # ignores for eslint  
-├── .eslintrc                         # eslint config  
-├── .gitignore                        # gitignore  
-├── .prettierignore                   # ignores for code prettier  
-├── .prettierrc                       # code prettier config  
-├── .releaserc                        # semantic release config  
-├── package.json                      # package file  
-├── README.md                         # this file  
-├── tailwind.config.js                # tailwind config  
-├── tsconfig.json                     # typescript config  
+├── .commitlintrc.js                  # commitlint config
+├── .eslintignore                     # ignores for eslint
+├── .eslintrc                         # eslint config
+├── .gitignore                        # gitignore
+├── .prettierignore                   # ignores for code prettier
+├── .prettierrc                       # code prettier config
+├── .releaserc                        # semantic release config
+├── package.json                      # package file
+├── README.md                         # this file
+├── tailwind.config.js                # tailwind config
+├── tsconfig.json                     # typescript config
 └── yarn.lock                         # lock file
-```  
+```
 
-<!-- Tailwind -->  
+<!-- Tailwind -->
+
 ### Tailwind CSS and Tailwind UI
+
 This application uses [Tailwind CSS](https://tailwindcss.com/) framework and [Tailwind UI](https://tailwindui.com/) as UI references, [HeadlessUI](https://headlessui.dev/) as accessible UI components library and the icon library [Hero Icons](https://heroicons.com/).
 
-<!-- Storybook -->  
+<!-- Storybook -->
+
 ### Storybook
+
 This app includes [Storybook](https://storybook.js.org/docs/react/get-started/introduction) to support building the UI, document it and facilitate the hand-by-hand work between engineers and designers. All the configuration can be found in `.storybook` folder, including `postcss`, `tailwind` and `i18next` plugins.
 
-<!-- i18n -->  
+<!-- i18n -->
+
 ### i18n
+
 i18n is handled by [i18next](https://www.i18next.com/). As of today, the only available language is german - `de`.
 
 The configs for i18next can be found at `src/config/i18n/i18n.ts` and the language json files at `src/assets/i18n`.
 
-<!-- Commiting code -->  
+### Searching & Filtering the Catalogue
+
+Searching and filtering is implemented with [Algolia](https://algolia.com), a search-as-a-service provider. Credentials are in 1Password.
+
+Shopify and Algolia are integrated via the [Algolia Search and Discovery app](https://famousroasters.myshopify.com/admin/apps/algolia-search), and any product changes are automatically mirrored to the indices in Algolia.
+
+There are [4 indices](https://www.algolia.com/apps/UJO1LDXRBG/indices) at the moment: A main index called `products`, and 3 replicas called `products_price_asc`, `products_price_desc`, and `products_recently_ordered_count_desc` that are sorted replicas of `products`.
+
+Many filters operate on Shopify metafields, which can be exposed as facets in Algolia. You can see all facets for the main index [here](https://www.algolia.com/apps/UJO1LDXRBG/explorer/configuration/products/facets). If, for some reason, the metafields disappear from the list of facets (which would result in broken/empty filter UIs), they can be restored by running
+
+`$ yarn node scripts/configureAlgoliaFacets.js` on the command line.
+
+This has happened before when triggering a re-indexing from Shopify, and the problem [has been acknowledged by Algolia](https://discourse.algolia.com/t/shopify-metafields-disappear-from-facet-list-after-reindexing/15947/2). The format for these facet attributes follows this pattern: `"meta.my_fields.aroma"`.
+
+In the Algolia Shopify app, the metafields must be configured like this:
+
+- Title: `Origin` (this field isn't used)
+- Namespace: `my_fields`
+- Key: `origin`
+- Use as facet: `Yes`
+
+The filter UIs are implemented using the [React InstantSearch Hooks API](https://www.algolia.com/doc/api-reference/widgets/react-hooks/), a collection of React components and hooks to build customized search UIs.
+
+The complete list of facets is:
+
+- vendor
+- meta.my_fields.coffee_type
+- meta.my_fields.bean_type
+- meta.my_fields.aroma
+- meta.my_fields.decaf (type: boolean)
+- meta.my_fields.origin (type: string_array)
+- meta.my_fields.price_per_kg (type: number)
+- meta.my_fields.acidity (for the "Aroma" group) (type: number)
+- meta.my_fields.bitterness (for the "Aroma" group) (type: number)
+- meta.my_fields.sweetness (for the "Aroma" group) (type: number)
+- meta.my_fields.body (for the "Aroma" group) (type: number)
+- meta.my_fields.publishedToFrontend (type: boolean)
+
+<!-- Commiting code -->
+
 ### Commiting code
+
 When commiting code, this repository is following [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/). There is a precommit hook triggered following the commitlint configuration set at `.commitlintrc.json`.
 
 These commit patterns are enabling later on a correct semantic release integration.
 
-<!-- Unit tests -->  
+<!-- Unit tests -->
+
 ### Unit tests
+
 Each new file must have at least a snapshot test. Snapshots are generated on build and compared against the stored snapshots. Tests are written using [Jest](https://jestjs.io/) and [React-Testing-Library](https://testing-library.com/docs/react-testing-library/intro/)
 
-<!-- GitHub -->  
+<!-- GitHub -->
+
 ### GitHub Actions
-GitHub workflows is our solution for CI/CD and the config can be found at `.github/workflows`.  There are as of today two workflows:
+
+GitHub workflows is our solution for CI/CD and the config can be found at `.github/workflows`. There are as of today two workflows:
 
 #### `test-and-build`
+
 - Executes for any branch except of `main`
 - Environment name: `test`
 - Tasks: installs dependencies, executes lint, executes prettier, executes unit tests with coverage, builds and packages.
 
 #### `test-build-deploy`
+
 - Executes only for `main` branch (typically after a PR merge)
 - Environments: `staging` and `prod`
 - Tasks: all the tasks done by `test-and-build` plus:
@@ -226,11 +307,15 @@ GitHub workflows is our solution for CI/CD and the config can be found at `.gith
   - deploy app (prod) to AWS S3
 
 <!-- Deployment -->
+
 ### Semantic release
+
 This setup includes [semantic-release](https://github.com/semantic-release/semantic-release) to enable automate versioning and changelog generation on script-based already integrated on GitHub actions.
 
-<!-- Deployment -->  
+<!-- Deployment -->
+
 ### Deployment
+
 Deployment to staging is configured automatically for the `main` branch. For details, check the [GitHub Actions](#github-actions) section above.
 The deployed app (production) can be found [here](https://shop.60beans.com/).
 The deployed app (staging) can be found [here](https://staging.shop.60beans.com/).
@@ -238,8 +323,10 @@ The deployed storybook (staging) can be found [here](https://storybook.staging.6
 
 Env files on GitHub Actions are set under [Organisation secrets](https://github.com/organizations/Famous-Roasters/settings/secrets/actions)
 
-<!-- Questions? -->  
+<!-- Questions? -->
+
 ### Questions?
+
 For more details or technical questions, please reach out! Made with love by BCGDV.
 
 Contact: [60beans ENG](mailto:hello@60beans.com)

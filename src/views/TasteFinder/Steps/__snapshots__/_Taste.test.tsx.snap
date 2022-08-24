@@ -42,7 +42,7 @@ exports[`Taste screen dynamic partial view Handles correctly icon type without i
               class="flex border-b-2 mb-1 text-sm leading-5"
               style="border-bottom-width: 1px;"
             >
-              Warum wir dich das fragen?
+              Was hat das mit Kaffee zu tun?
             </span>
           </div>
         </button>
@@ -76,7 +76,7 @@ exports[`Taste screen dynamic partial view Handles correctly icon type without i
               class="flex border-b-2 mb-1 text-sm leading-5"
               style="border-bottom-width: 1px;"
             >
-              Warum wir dich das fragen?
+              Was hat das mit Kaffee zu tun?
             </span>
           </div>
         </button>
@@ -232,7 +232,7 @@ exports[`Taste screen dynamic partial view Handles correctly image type without 
               class="flex border-b-2 mb-1 text-sm leading-5"
               style="border-bottom-width: 1px;"
             >
-              Warum wir dich das fragen?
+              Was hat das mit Kaffee zu tun?
             </span>
           </div>
         </button>
@@ -266,7 +266,7 @@ exports[`Taste screen dynamic partial view Handles correctly image type without 
               class="flex border-b-2 mb-1 text-sm leading-5"
               style="border-bottom-width: 1px;"
             >
-              Warum wir dich das fragen?
+              Was hat das mit Kaffee zu tun?
             </span>
           </div>
         </button>
@@ -325,7 +325,7 @@ exports[`Taste screen dynamic partial view Handles null selectedText 1`] = `
               class="flex border-b-2 mb-1 text-sm leading-5"
               style="border-bottom-width: 1px;"
             >
-              Warum wir dich das fragen?
+              Was hat das mit Kaffee zu tun?
             </span>
           </div>
         </button>
@@ -359,7 +359,7 @@ exports[`Taste screen dynamic partial view Handles null selectedText 1`] = `
               class="flex border-b-2 mb-1 text-sm leading-5"
               style="border-bottom-width: 1px;"
             >
-              Warum wir dich das fragen?
+              Was hat das mit Kaffee zu tun?
             </span>
           </div>
         </button>
@@ -513,7 +513,7 @@ exports[`Taste screen dynamic partial view Renders correctly 1`] = `
               class="flex border-b-2 mb-1 text-sm leading-5"
               style="border-bottom-width: 1px;"
             >
-              Warum wir dich das fragen?
+              Was hat das mit Kaffee zu tun?
             </span>
           </div>
         </button>
@@ -547,7 +547,7 @@ exports[`Taste screen dynamic partial view Renders correctly 1`] = `
               class="flex border-b-2 mb-1 text-sm leading-5"
               style="border-bottom-width: 1px;"
             >
-              Warum wir dich das fragen?
+              Was hat das mit Kaffee zu tun?
             </span>
           </div>
         </button>

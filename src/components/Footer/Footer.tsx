@@ -8,7 +8,7 @@ interface FooterLink {
   href: string
 }
 
-const domainShop = process.env.REACT_APP_DOMAIN_SHOP || '' // '//shop.60beans.de'
+const domainShop = process.env.REACT_APP_DOMAIN_SHOP || ''
 
 const footerLinks: FooterLink[] = [
   { key: 'catalogue', href: `${domainShop}/catalogue` },
@@ -32,7 +32,7 @@ export const Footer: React.FC = () => {
 
   return (
     <footer className="bg-brand-black text-base text-white py-10 z-30">
-      <div className="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10">
+      <div className="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start px-8 xl:px-10">
         <div className="mb-2 md:mb-0 md:mr-2">
           <Badge />
         </div>
@@ -40,7 +40,7 @@ export const Footer: React.FC = () => {
           {t('footer.slogan.text')}
         </Typography>
       </div>
-      <div className="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 mx-auto px-12 xl:px-14">
+      <div className="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 px-12 xl:px-14">
         <div className="order-2 md:order-1">
           {/* Links */}
           <ul>
@@ -113,7 +113,7 @@ export const Footer: React.FC = () => {
           </div>*/}
         </div>
       </div>
-      <div className="w-full max-w-7xl mx-auto text-center mt-10 mx-auto px-12 xl:px-14">
+      <div className="w-full max-w-7xl mx-auto text-center mt-10 px-12 xl:px-14">
         <Typography type={TypographyType.Paragraph} className="text-center">
           {t('brand.copyright', { year: new Date().getFullYear() })}
         </Typography>
