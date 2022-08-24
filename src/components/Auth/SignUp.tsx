@@ -42,7 +42,7 @@ export class AuthSignUp extends SignUp {
   signUpUser = async (params: SignUpParams): Promise<void> => {
     const tasteFinderLocalStorage = localStorage.getItem('tasteFinder') || ''
     const tasteFinderJSON = JSON.parse(JSON.parse(tasteFinderLocalStorage))
-    const savedAroma = tasteFinderJSON.find((p: TasteFinderField) => p.name === 'aroma').value
+    const savedAroma = tasteFinderJSON.find((p: TasteFinderField) => p.name === 'aroma')?.value || ''
     await Auth.signUp({
       username: params.email,
       password: params.password,
@@ -50,7 +50,7 @@ export class AuthSignUp extends SignUp {
         'custom:tos_consent': this.inputs['confirmTos'],
         'custom:first_name': params.firstName,
         'custom:newsletter_signup': this.inputs['newsletterSignup'] || 'false',
-        'custom:aroma': savedAroma || '',
+        'custom:aroma': savedAroma,
       },
     })
       .then(() => this.changeState('confirmSignUp', { username: params.email }))
