@@ -38,6 +38,7 @@ body > div > div > main {
   height: 100%;
 }
 
+/* Large dropdown without down chevron */
 select.nochevron {
   margin: 0;      
   -webkit-box-sizing: border-box;
@@ -49,4 +50,27 @@ select.nochevron {
 
 select.nochevron:focus {
   outline: none
+}
+
+/* Custom dropdown down arrows */
+.chevron {
+  position: relative;
+}
+
+.chevron select {
+  margin: 0;      
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.chevron::after {
+  content: "\2303";
+  font-size: 20px;
+  position: absolute; 
+  top: .4rem; 
+  right: 1rem;
+  transform: rotate(180deg)
 }

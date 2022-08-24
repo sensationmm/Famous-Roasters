@@ -76,8 +76,8 @@ const Search: React.FC = () => {
           { label: t('pages.catalogue.filters.sort.values.newDesc'), value: 'products_updated_at_desc' },
         ]}
         classNames={{
-          root: 'flex flex-row justify-end',
-          select: 'rounded-full border border-coreUI-text-tertiary px-4 py-2 bg-white h-10',
+          root: 'flex flex-row justify-end chevron',
+          select: 'rounded-full border border-coreUI-text-tertiary px-4 py-2 bg-white h-10 w-48',
         }}
       />
 
