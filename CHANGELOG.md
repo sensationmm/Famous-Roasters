@@ -1,3 +1,10 @@
+## [1.54.3](https://github.com/Famous-Roasters/frontend/compare/v1.54.2...v1.54.3) (2022-08-24)
+
+
+### Bug Fixes
+
+* **frontend:** update snaps ([e4f91a0](https://github.com/Famous-Roasters/frontend/commit/e4f91a02d0f6b8904650040b0c94d73e8469cb75))
+
 ## [1.54.2](https://github.com/Famous-Roasters/frontend/compare/v1.54.1...v1.54.2) (2022-08-24)
 
 
