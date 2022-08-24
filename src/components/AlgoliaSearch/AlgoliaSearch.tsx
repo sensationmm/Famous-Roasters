@@ -33,7 +33,7 @@ const Search: React.FC = () => {
         <SearchBox
           placeholder={t('pages.catalogue.search.placeholder')}
           classNames={{
-            input: 'rounded-full border border-coreUI-text-tertiary px-4 py-2 w-96',
+            input: 'rounded-full border border-coreUI-text-tertiary px-4 py-2 w-48 md:w-96',
             submitIcon: '-ml-6',
             resetIcon: 'hidden',
             reset: 'hidden',
