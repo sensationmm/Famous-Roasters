@@ -14,14 +14,15 @@ const SingleSelectFilter = (props: FilterProps) => {
     <span>
       <select
         onChange={(e) => {
+          const value = e.target.value
           clearRefinements()
-          refine(e.target.value)
+          value.length && refine(e.target.value)
         }}
         className="nochevron text-xl leading-7 font-semibold border-b-2 minimal pb-2 pr-7 bg-white"
       >
         <option value="">{defaultText}</option>
         {items.map((item) => (
-          <option key={item.value} selected={item.isRefined}>
+          <option key={item.value} defaultValue={item.value}>
             {item.value}
           </option>
         ))}
