@@ -510,7 +510,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   role="button"
                   type="button"
                 >
-                  Mehr Kaffeesorten entdecken
+                  Mehr Kaffees entdecken
                 </button>
               </a>
             </div>
@@ -1182,7 +1182,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   role="button"
                   type="button"
                 >
-                  Mehr Kaffeesorten entdecken
+                  Mehr Kaffees entdecken
                 </button>
               </a>
             </div>
@@ -1854,7 +1854,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   role="button"
                   type="button"
                 >
-                  Mehr Kaffeesorten entdecken
+                  Mehr Kaffees entdecken
                 </button>
               </a>
             </div>
@@ -2526,7 +2526,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   role="button"
                   type="button"
                 >
-                  Mehr Kaffeesorten entdecken
+                  Mehr Kaffees entdecken
                 </button>
               </a>
             </div>
@@ -3198,7 +3198,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   role="button"
                   type="button"
                 >
-                  Mehr Kaffeesorten entdecken
+                  Mehr Kaffees entdecken
                 </button>
               </a>
             </div>
@@ -3747,7 +3747,7 @@ exports[`Featured product view Renders correctly for a successful call without a
                   role="button"
                   type="button"
                 >
-                  Mehr Kaffeesorten entdecken
+                  Mehr Kaffees entdecken
                 </button>
               </a>
             </div>
@@ -4419,7 +4419,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
                   role="button"
                   type="button"
                 >
-                  Mehr Kaffeesorten entdecken
+                  Mehr Kaffees entdecken
                 </button>
               </a>
             </div>
@@ -5103,7 +5103,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
                   role="button"
                   type="button"
                 >
-                  Mehr Kaffeesorten entdecken
+                  Mehr Kaffees entdecken
                 </button>
               </a>
             </div>
