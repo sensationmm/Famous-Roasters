@@ -1,3 +1,10 @@
+## [1.54.4](https://github.com/Famous-Roasters/frontend/compare/v1.54.3...v1.54.4) (2022-08-24)
+
+
+### Bug Fixes
+
+* **signup:** fixed stored aroma check bug ([88a04c8](https://github.com/Famous-Roasters/frontend/commit/88a04c8db39e49ff2eb38856fee4e7309df60fe9))
+
 ## [1.54.3](https://github.com/Famous-Roasters/frontend/compare/v1.54.2...v1.54.3) (2022-08-24)
 
 
