@@ -89,7 +89,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
-              href="//www.60beans.de"
+              href="//www.60beans.com"
             >
               <span
                 class="sr-only"
@@ -113,7 +113,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="/taste-finder"
+                    href="//shop.60beans.com/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -124,7 +124,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="/profile"
+                  href="//shop.60beans.com/profile"
                 >
                   <svg
                     class="undefined fill-brand-black stroke-brand-black"
@@ -522,7 +522,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
       class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
-        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
+        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start px-8 xl:px-10"
       >
         <div
           class="mb-2 md:mb-0 md:mr-2"
@@ -555,7 +555,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
         </div>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 mx-auto px-12 xl:px-14"
+        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 px-12 xl:px-14"
       >
         <div
           class="order-2 md:order-1"
@@ -565,7 +565,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mt-0"
             >
               <a
-                href="/catalogue"
+                href="//shop.60beans.com/catalogue"
               >
                 Shop
               </a>
@@ -574,7 +574,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mt-6"
             >
               <a
-                href="/taste-finder"
+                href="//shop.60beans.com/taste-finder"
               >
                 Tastefinder
               </a>
@@ -632,7 +632,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
         </div>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto text-center mt-10 mx-auto px-12 xl:px-14"
+        class="w-full max-w-7xl mx-auto text-center mt-10 px-12 xl:px-14"
       >
         <span
           class="text-center text-base leading-6"
@@ -740,7 +740,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
-              href="//www.60beans.de"
+              href="//www.60beans.com"
             >
               <span
                 class="sr-only"
@@ -764,7 +764,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="/taste-finder"
+                    href="//shop.60beans.com/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -775,7 +775,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="/profile"
+                  href="//shop.60beans.com/profile"
                 >
                   <svg
                     class="undefined fill-brand-black stroke-brand-black"
@@ -1173,7 +1173,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
       class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
-        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
+        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start px-8 xl:px-10"
       >
         <div
           class="mb-2 md:mb-0 md:mr-2"
@@ -1206,7 +1206,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
         </div>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 mx-auto px-12 xl:px-14"
+        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 px-12 xl:px-14"
       >
         <div
           class="order-2 md:order-1"
@@ -1216,7 +1216,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mt-0"
             >
               <a
-                href="/catalogue"
+                href="//shop.60beans.com/catalogue"
               >
                 Shop
               </a>
@@ -1225,7 +1225,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mt-6"
             >
               <a
-                href="/taste-finder"
+                href="//shop.60beans.com/taste-finder"
               >
                 Tastefinder
               </a>
@@ -1283,7 +1283,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
         </div>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto text-center mt-10 mx-auto px-12 xl:px-14"
+        class="w-full max-w-7xl mx-auto text-center mt-10 px-12 xl:px-14"
       >
         <span
           class="text-center text-base leading-6"
@@ -1391,7 +1391,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
-              href="//www.60beans.de"
+              href="//www.60beans.com"
             >
               <span
                 class="sr-only"
@@ -1415,7 +1415,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="/taste-finder"
+                    href="//shop.60beans.com/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -1426,7 +1426,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="/profile"
+                  href="//shop.60beans.com/profile"
                 >
                   <svg
                     class="undefined fill-brand-black stroke-brand-black"
@@ -1824,7 +1824,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
       class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
-        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
+        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start px-8 xl:px-10"
       >
         <div
           class="mb-2 md:mb-0 md:mr-2"
@@ -1857,7 +1857,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
         </div>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 mx-auto px-12 xl:px-14"
+        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 px-12 xl:px-14"
       >
         <div
           class="order-2 md:order-1"
@@ -1867,7 +1867,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mt-0"
             >
               <a
-                href="/catalogue"
+                href="//shop.60beans.com/catalogue"
               >
                 Shop
               </a>
@@ -1876,7 +1876,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mt-6"
             >
               <a
-                href="/taste-finder"
+                href="//shop.60beans.com/taste-finder"
               >
                 Tastefinder
               </a>
@@ -1934,7 +1934,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
         </div>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto text-center mt-10 mx-auto px-12 xl:px-14"
+        class="w-full max-w-7xl mx-auto text-center mt-10 px-12 xl:px-14"
       >
         <span
           class="text-center text-base leading-6"
@@ -2042,7 +2042,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
-              href="//www.60beans.de"
+              href="//www.60beans.com"
             >
               <span
                 class="sr-only"
@@ -2066,7 +2066,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="/taste-finder"
+                    href="//shop.60beans.com/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -2077,7 +2077,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="/profile"
+                  href="//shop.60beans.com/profile"
                 >
                   <svg
                     class="undefined fill-brand-black stroke-brand-black"
@@ -2475,7 +2475,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
       class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
-        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
+        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start px-8 xl:px-10"
       >
         <div
           class="mb-2 md:mb-0 md:mr-2"
@@ -2508,7 +2508,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
         </div>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 mx-auto px-12 xl:px-14"
+        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 px-12 xl:px-14"
       >
         <div
           class="order-2 md:order-1"
@@ -2518,7 +2518,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mt-0"
             >
               <a
-                href="/catalogue"
+                href="//shop.60beans.com/catalogue"
               >
                 Shop
               </a>
@@ -2527,7 +2527,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mt-6"
             >
               <a
-                href="/taste-finder"
+                href="//shop.60beans.com/taste-finder"
               >
                 Tastefinder
               </a>
@@ -2585,7 +2585,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
         </div>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto text-center mt-10 mx-auto px-12 xl:px-14"
+        class="w-full max-w-7xl mx-auto text-center mt-10 px-12 xl:px-14"
       >
         <span
           class="text-center text-base leading-6"
@@ -2693,7 +2693,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
-              href="//www.60beans.de"
+              href="//www.60beans.com"
             >
               <span
                 class="sr-only"
@@ -2717,7 +2717,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="/taste-finder"
+                    href="//shop.60beans.com/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -2728,7 +2728,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="/profile"
+                  href="//shop.60beans.com/profile"
                 >
                   <svg
                     class="undefined fill-brand-black stroke-brand-black"
@@ -3126,7 +3126,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
       class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
-        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
+        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start px-8 xl:px-10"
       >
         <div
           class="mb-2 md:mb-0 md:mr-2"
@@ -3159,7 +3159,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
         </div>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 mx-auto px-12 xl:px-14"
+        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 px-12 xl:px-14"
       >
         <div
           class="order-2 md:order-1"
@@ -3169,7 +3169,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mt-0"
             >
               <a
-                href="/catalogue"
+                href="//shop.60beans.com/catalogue"
               >
                 Shop
               </a>
@@ -3178,7 +3178,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mt-6"
             >
               <a
-                href="/taste-finder"
+                href="//shop.60beans.com/taste-finder"
               >
                 Tastefinder
               </a>
@@ -3236,7 +3236,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
         </div>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto text-center mt-10 mx-auto px-12 xl:px-14"
+        class="w-full max-w-7xl mx-auto text-center mt-10 px-12 xl:px-14"
       >
         <span
           class="text-center text-base leading-6"
@@ -3344,7 +3344,7 @@ exports[`Featured product view Renders correctly for a successful call without a
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
-              href="//www.60beans.de"
+              href="//www.60beans.com"
             >
               <span
                 class="sr-only"
@@ -3368,7 +3368,7 @@ exports[`Featured product view Renders correctly for a successful call without a
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="/taste-finder"
+                    href="//shop.60beans.com/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -3379,7 +3379,7 @@ exports[`Featured product view Renders correctly for a successful call without a
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="/profile"
+                  href="//shop.60beans.com/profile"
                 >
                   <svg
                     class="undefined fill-brand-black stroke-brand-black"
@@ -3654,7 +3654,7 @@ exports[`Featured product view Renders correctly for a successful call without a
       class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
-        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
+        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start px-8 xl:px-10"
       >
         <div
           class="mb-2 md:mb-0 md:mr-2"
@@ -3687,7 +3687,7 @@ exports[`Featured product view Renders correctly for a successful call without a
         </div>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 mx-auto px-12 xl:px-14"
+        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 px-12 xl:px-14"
       >
         <div
           class="order-2 md:order-1"
@@ -3697,7 +3697,7 @@ exports[`Featured product view Renders correctly for a successful call without a
               class="mt-0"
             >
               <a
-                href="/catalogue"
+                href="//shop.60beans.com/catalogue"
               >
                 Shop
               </a>
@@ -3706,7 +3706,7 @@ exports[`Featured product view Renders correctly for a successful call without a
               class="mt-6"
             >
               <a
-                href="/taste-finder"
+                href="//shop.60beans.com/taste-finder"
               >
                 Tastefinder
               </a>
@@ -3764,7 +3764,7 @@ exports[`Featured product view Renders correctly for a successful call without a
         </div>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto text-center mt-10 mx-auto px-12 xl:px-14"
+        class="w-full max-w-7xl mx-auto text-center mt-10 px-12 xl:px-14"
       >
         <span
           class="text-center text-base leading-6"
@@ -3872,7 +3872,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
-              href="//www.60beans.de"
+              href="//www.60beans.com"
             >
               <span
                 class="sr-only"
@@ -3896,7 +3896,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="/taste-finder"
+                    href="//shop.60beans.com/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -3907,7 +3907,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="/profile"
+                  href="//shop.60beans.com/profile"
                 >
                   <svg
                     class="undefined fill-brand-black stroke-brand-black"
@@ -4305,7 +4305,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
       class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
-        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
+        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start px-8 xl:px-10"
       >
         <div
           class="mb-2 md:mb-0 md:mr-2"
@@ -4338,7 +4338,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
         </div>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 mx-auto px-12 xl:px-14"
+        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 px-12 xl:px-14"
       >
         <div
           class="order-2 md:order-1"
@@ -4348,7 +4348,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
               class="mt-0"
             >
               <a
-                href="/catalogue"
+                href="//shop.60beans.com/catalogue"
               >
                 Shop
               </a>
@@ -4357,7 +4357,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
               class="mt-6"
             >
               <a
-                href="/taste-finder"
+                href="//shop.60beans.com/taste-finder"
               >
                 Tastefinder
               </a>
@@ -4415,7 +4415,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
         </div>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto text-center mt-10 mx-auto px-12 xl:px-14"
+        class="w-full max-w-7xl mx-auto text-center mt-10 px-12 xl:px-14"
       >
         <span
           class="text-center text-base leading-6"
@@ -4548,7 +4548,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
-              href="//www.60beans.de"
+              href="//www.60beans.com"
             >
               <span
                 class="sr-only"
@@ -4572,7 +4572,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="/taste-finder"
+                    href="//shop.60beans.com/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -4583,7 +4583,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="/profile"
+                  href="//shop.60beans.com/profile"
                 >
                   <svg
                     class="undefined fill-brand-black stroke-brand-black"
@@ -4968,7 +4968,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
       class="bg-brand-black text-base text-white py-10 z-30"
     >
       <div
-        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
+        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start px-8 xl:px-10"
       >
         <div
           class="mb-2 md:mb-0 md:mr-2"
@@ -5001,7 +5001,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
         </div>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 mx-auto px-12 xl:px-14"
+        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 px-12 xl:px-14"
       >
         <div
           class="order-2 md:order-1"
@@ -5011,7 +5011,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
               class="mt-0"
             >
               <a
-                href="/catalogue"
+                href="//shop.60beans.com/catalogue"
               >
                 Shop
               </a>
@@ -5020,7 +5020,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
               class="mt-6"
             >
               <a
-                href="/taste-finder"
+                href="//shop.60beans.com/taste-finder"
               >
                 Tastefinder
               </a>
@@ -5078,7 +5078,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
         </div>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto text-center mt-10 mx-auto px-12 xl:px-14"
+        class="w-full max-w-7xl mx-auto text-center mt-10 px-12 xl:px-14"
       >
         <span
           class="text-center text-base leading-6"
