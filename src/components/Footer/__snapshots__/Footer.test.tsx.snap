@@ -6,7 +6,7 @@ exports[`Footer component Renders correctly 1`] = `
     class="bg-brand-black text-base text-white py-10 z-30"
   >
     <div
-      class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start mx-auto px-8 xl:px-10"
+      class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start px-8 xl:px-10"
     >
       <div
         class="mb-2 md:mb-0 md:mr-2"
@@ -39,7 +39,7 @@ exports[`Footer component Renders correctly 1`] = `
       </div>
     </div>
     <div
-      class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 mx-auto px-12 xl:px-14"
+      class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 px-12 xl:px-14"
     >
       <div
         class="order-2 md:order-1"
@@ -49,7 +49,7 @@ exports[`Footer component Renders correctly 1`] = `
             class="mt-0"
           >
             <a
-              href="/catalogue"
+              href="//shop.60beans.com/catalogue"
             >
               Shop
             </a>
@@ -58,7 +58,7 @@ exports[`Footer component Renders correctly 1`] = `
             class="mt-6"
           >
             <a
-              href="/taste-finder"
+              href="//shop.60beans.com/taste-finder"
             >
               Tastefinder
             </a>
@@ -116,7 +116,7 @@ exports[`Footer component Renders correctly 1`] = `
       </div>
     </div>
     <div
-      class="w-full max-w-7xl mx-auto text-center mt-10 mx-auto px-12 xl:px-14"
+      class="w-full max-w-7xl mx-auto text-center mt-10 px-12 xl:px-14"
     >
       <span
         class="text-center text-base leading-6"
