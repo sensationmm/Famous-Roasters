@@ -4,7 +4,7 @@ import { RefinementListItem } from 'instantsearch.js/es/connectors/refinement-li
 import { Fragment } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useRefinementList, UseRefinementListProps } from 'react-instantsearch-hooks-web'
-import { Typography, TypographySize } from 'src/components'
+import { TagSwatch, TagType, Typography, TypographySize } from 'src/components'
 
 function getDifference<T>(arr1: Array<T>, arr2: Array<T>) {
   const added = arr1.filter((item) => !arr2.includes(item))
@@ -13,12 +13,13 @@ function getDifference<T>(arr1: Array<T>, arr2: Array<T>) {
 }
 interface ListboxFilterProps extends UseRefinementListProps {
   translationPrefix?: string
+  showSwatches?: boolean
 }
 
 const ListboxFilter = (props: ListboxFilterProps) => {
   const { items, refine } = useRefinementList({ sortBy: ['name:asc'], limit: 100, ...props })
   const { t } = useTranslation()
-  const { attribute, translationPrefix } = props
+  const { attribute, translationPrefix, showSwatches } = props
   const activeItems = items.filter((item) => item.isRefined)
   const filterName = t(`pages.catalogue.filters.${attribute}`)
 
@@ -83,6 +84,13 @@ const ListboxFilter = (props: ListboxFilterProps) => {
                                 option.isRefined ? 'font-semibold' : 'font-normal'
                               } `}
                             >
+                              {showSwatches && (
+                                <TagSwatch
+                                  data-testid="filter-option-tagSwatch"
+                                  type={TagType.Aroma}
+                                  value={option.value}
+                                />
+                              )}
                               {translationPrefix ? t(`${translationPrefix}.${option.value}`) : option.value}
                             </span>
                             {option.isRefined ? (

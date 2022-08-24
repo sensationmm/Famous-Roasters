@@ -48,7 +48,7 @@ const Search: React.FC = () => {
 
         {/* Filters desktop */}
         <div className="hidden md:flex gap-x-4">
-          <ListboxFilter attribute="meta.my_fields.aroma" />
+          <ListboxFilter attribute="meta.my_fields.aroma" showSwatches />
           <ListboxFilter attribute="meta.my_fields.bean_type" />
           <ListboxFilter attribute="meta.my_fields.origin" translationPrefix="pages.catalogue.filters.origin.values" />
           <ListboxFilter attribute="vendor" />
@@ -59,7 +59,7 @@ const Search: React.FC = () => {
           <FiltersMenuMobile
             filters={[
               { attribute: 'meta.my_fields.coffee_type' },
-              { attribute: 'meta.my_fields.aroma' },
+              { attribute: 'meta.my_fields.aroma', showSwatches: true },
               { attribute: 'meta.my_fields.bean_type' },
               { attribute: 'meta.my_fields.origin', translationPrefix: 'pages.catalogue.filters.origin.values' },
               { attribute: 'vendor' },
