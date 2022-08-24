@@ -2150,7 +2150,7 @@ exports[`Catalogue view Renders correctly for a successful call for accessories 
               aria-haspopup="true"
               class="inline-flex justify-between py-2 pr-1 border-b-2 border-brand-black text-left bg-white cursor-default"
               data-testid="button-listbox"
-              id="headlessui-listbox-button-:r7:"
+              id="headlessui-listbox-button-:r0:"
               type="button"
             >
               <span
