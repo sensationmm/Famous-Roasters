@@ -60,7 +60,6 @@ const Search: React.FC = () => {
         <div className="w-1/2 md:hidden">
           <FiltersMenuMobile
             filters={[
-              { attribute: 'meta.my_fields.coffee_type' },
               { attribute: 'meta.my_fields.aroma', showSwatches: true },
               { attribute: 'meta.my_fields.bean_type' },
               { attribute: 'meta.my_fields.origin', translationPrefix: 'pages.catalogue.filters.origin.values' },
