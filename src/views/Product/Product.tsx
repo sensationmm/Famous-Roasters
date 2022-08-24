@@ -437,7 +437,7 @@ export const Product: React.FC = () => {
           {/* Transactional section */}
           <div className="pt-4">
             <div>
-              {variants && variants.nodes.length > 1 && variants.nodes[0].grind_type && grindTypeValues().length > 1 && (
+              {variants && variants.nodes.length > 1 && variants.nodes[0].grind_type && (
                 <Listbox
                   items={grindTypeValues() as ListBoxItem[]}
                   hasTranslatedValues={false}
