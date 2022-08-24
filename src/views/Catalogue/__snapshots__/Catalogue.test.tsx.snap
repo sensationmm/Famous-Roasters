@@ -1976,7 +1976,7 @@ exports[`Catalogue view Renders correctly for a successful call for accessories 
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="/"
+                  href="//blog.60beans.com"
                 >
                   <span
                     class="uppercase text-sm leading-5"
