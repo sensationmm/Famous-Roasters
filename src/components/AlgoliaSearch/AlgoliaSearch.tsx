@@ -8,6 +8,7 @@ import { FiltersMenuMobile } from './FiltersMenuMobile'
 import ListboxFilter from './ListboxFilter'
 import Pagination from './Pagination'
 import SingleSelectFilter from './SingleSelectFilter'
+import Stats from './Stats'
 
 const searchClient = algoliasearch(
   process.env.REACT_APP_ALGOLIA_APP_ID || '',
@@ -16,11 +17,12 @@ const searchClient = algoliasearch(
 
 const Search: React.FC = () => {
   const { t } = useTranslation()
+
   return (
     <InstantSearch indexName="products" searchClient={searchClient} routing={true}>
       <Configure
         distinct={true} // show products, not variants
-        hitsPerPage={6}
+        hitsPerPage={12}
         maxValuesPerFacet={100}
         facetFilters={['collections:coffee', 'meta.my_fields.publishedToFrontend:true']}
       />
@@ -81,6 +83,7 @@ const Search: React.FC = () => {
         }}
       />
 
+      <Stats />
       <Hits
         hitComponent={Hit}
         classNames={{ root: 'mb-8', list: 'grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3' }}
