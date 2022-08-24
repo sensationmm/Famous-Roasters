@@ -17,7 +17,7 @@ const SingleSelectFilter = (props: FilterProps) => {
           clearRefinements()
           refine(e.target.value)
         }}
-        className="nochevron text-xl leading-7 font-semibold border-b-2 minimal pb-2 pr-7"
+        className="nochevron text-xl leading-7 font-semibold border-b-2 minimal pb-2 pr-7 bg-white"
       >
         <option value="">{defaultText}</option>
         {items.map((item) => (
