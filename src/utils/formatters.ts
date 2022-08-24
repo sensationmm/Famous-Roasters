@@ -16,9 +16,10 @@ export const formatPrice = (amount: string | number, currency = 'EUR') => {
   }).format(parsedAmount)
 }
 
-export const getSimplifiedProductId = (id: string) => id.split('gid://shopify/Product/')[1]
+export type ShopifyAPIType = 'Product' | 'Order' | 'Collection'
+export const getSimplifiedId = (id: string, type: ShopifyAPIType = 'Product') => id.split(`gid://shopify/${type}/`)[1]
 
-export const getAPIProductId = (id: string) => `gid://shopify/Product/${id}`
+export const getAPIId = (id: string, type: ShopifyAPIType = 'Product') => `gid://shopify/${type}/${id}`
 
 export const getAromaKey = (aroma: string) => {
   switch (aroma) {

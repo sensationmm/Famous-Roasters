@@ -18,7 +18,7 @@ import {
   TypographySize,
   TypographyType,
 } from 'src/components'
-import { formatPrice, getSimplifiedProductId } from 'src/utils'
+import { formatPrice, getSimplifiedId } from 'src/utils'
 
 export const Cart: React.FC = () => {
   const { t } = useTranslation()
@@ -109,7 +109,7 @@ export const Cart: React.FC = () => {
                 >
                   <div className="flex justify-center items-center shrink-0 self-start relative w-32 h-32 mr-4">
                     <Link
-                      to={`/product/${getSimplifiedProductId(productId)}`}
+                      to={`/product/${getSimplifiedId(productId)}`}
                       className="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
                     >
                       <img src={image?.url} alt={product.title} className="w-28 max-h-28" />

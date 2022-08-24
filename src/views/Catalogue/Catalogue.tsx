@@ -19,7 +19,7 @@ import {
 } from 'src/components'
 import { Pagination } from 'src/components/Pagination'
 import { famousRoastersClient as frClient, shopifyAccessoryCollection, shopifyCoffeeCollection } from 'src/config'
-import { getSimplifiedProductId } from 'src/utils/formatters'
+import { getSimplifiedId } from 'src/utils/formatters'
 
 import Search from '../../components/AlgoliaSearch/AlgoliaSearch'
 import { ProductCustom } from '../Product'
@@ -385,7 +385,7 @@ export const Catalogue: React.FC = () => {
           <>
             <div className="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
               {productNodes?.map((node, i: number) => {
-                const id = getSimplifiedProductId(node.id)
+                const id = getSimplifiedId(node.id)
                 return (
                   <Link to={`/product/${id}`} key={`product-tile-link-${i}`}>
                     <ProductTile key={`title-${i}`} showFrom={true} productNode={node} showType="category" />

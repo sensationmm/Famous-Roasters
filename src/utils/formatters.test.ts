@@ -1,4 +1,4 @@
-import { formatDate, formatPrice, getAPIProductId, getAromaKey, getSimplifiedProductId } from '.'
+import { formatDate, formatPrice, getAPIId, getAromaKey, getSimplifiedId } from '.'
 
 describe('Formatter utils', () => {
   it('Format date works', () => {
@@ -10,11 +10,27 @@ describe('Formatter utils', () => {
   })
 
   it('Simplified product id works', () => {
-    expect(getSimplifiedProductId('gid://shopify/Product/7655228866776')).toEqual('7655228866776')
+    expect(getSimplifiedId('gid://shopify/Product/7655228866776')).toEqual('7655228866776')
+  })
+
+  it('Simplified order id works', () => {
+    expect(getSimplifiedId('gid://shopify/Order/7655228866776', 'Order')).toEqual('7655228866776')
+  })
+
+  it('Simplified collection id works', () => {
+    expect(getSimplifiedId('gid://shopify/Collection/7655228866776', 'Collection')).toEqual('7655228866776')
   })
 
   it('API product id works', () => {
-    expect(getAPIProductId('7655228866776')).toEqual('gid://shopify/Product/7655228866776')
+    expect(getAPIId('7655228866776')).toEqual('gid://shopify/Product/7655228866776')
+  })
+
+  it('API order id works', () => {
+    expect(getAPIId('7655228866776', 'Order')).toEqual('gid://shopify/Order/7655228866776')
+  })
+
+  it('API collection id works', () => {
+    expect(getAPIId('7655228866776', 'Collection')).toEqual('gid://shopify/Collection/7655228866776')
   })
 
   it('Get aroma key works', () => {

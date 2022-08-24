@@ -5,7 +5,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { ErrorPrompt, Loader, ProductTile } from 'src/components'
 import { shopifyCoffeeCollection } from 'src/config'
-import { getSimplifiedProductId } from 'src/utils/formatters'
+import { getSimplifiedId } from 'src/utils/formatters'
 
 import { ProductCustom } from '../Product'
 
@@ -45,7 +45,7 @@ export const FindSimilar: React.FC<FindSimilarProps> = ({ aroma, productId }: Fi
   })
 
   const productNodes = data?.collection?.products.nodes
-    .filter((node) => getSimplifiedProductId(node.id) !== productId)
+    .filter((node) => getSimplifiedId(node.id) !== productId)
     .slice(0, 3)
 
   const pageInfo = data?.collection?.products.pageInfo || {
@@ -70,7 +70,7 @@ export const FindSimilar: React.FC<FindSimilarProps> = ({ aroma, productId }: Fi
   return (
     <div className="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
       {productNodes?.map((node, i: number) => {
-        const id = getSimplifiedProductId(node.id)
+        const id = getSimplifiedId(node.id)
         return (
           <Link to={`/product/${id}`} key={`product-tile-link-${i}`}>
             <ProductTile key={`title-${i}`} productNode={node} />

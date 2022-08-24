@@ -1,14 +1,14 @@
 import { toRoundedValueInRealScale, toValueInHumanScale } from './attributeScaleUtils'
-import { formatDate, formatPrice, getAPIProductId, getAromaKey, getSimplifiedProductId } from './formatters'
+import { formatDate, formatPrice, getAPIId, getAromaKey, getSimplifiedId } from './formatters'
 import { formatBlogHtmlElement, formatHtmlElement, isAllowedHtmlElement, parseHtmlSafely } from './htmlContentParser'
 import { useLocalStorage } from './localStorage'
 import { readTimeCalculator } from './readTimeCalculator'
 
 export { formatDate as formatDate }
 export { formatPrice as formatPrice }
-export { getAPIProductId as getAPIProductId }
+export { getAPIId as getAPIId }
 export { getAromaKey as getAromaKey }
-export { getSimplifiedProductId as getSimplifiedProductId }
+export { getSimplifiedId as getSimplifiedId }
 export { useLocalStorage as useLocalStorage }
 export { parseHtmlSafely as parseHtmlSafely }
 export { formatBlogHtmlElement as formatBlogHtmlElement }

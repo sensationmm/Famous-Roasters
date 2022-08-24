@@ -4,7 +4,7 @@ import { act } from 'react-dom/test-utils'
 import { I18nextProvider } from 'react-i18next'
 import { OrderMock as MockOrder } from 'src/_mocks'
 import { i18n } from 'src/config'
-import { getSimplifiedProductId } from 'src/utils'
+import { getSimplifiedId } from 'src/utils'
 
 import { RateYourCoffee } from '.'
 
@@ -89,7 +89,7 @@ describe('RateYourCoffee component', () => {
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
     expect(mockQuery).toHaveBeenCalledWith({
       variables: {
-        productID: getSimplifiedProductId(productId),
+        productID: getSimplifiedId(productId),
         rating: 3,
         comment: '',
       },
@@ -138,7 +138,7 @@ describe('RateYourCoffee component', () => {
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
     expect(mockQuery).toHaveBeenCalledWith({
       variables: {
-        productID: getSimplifiedProductId(productId),
+        productID: getSimplifiedId(productId),
         rating: 3,
         comment: 'comment goes here',
       },

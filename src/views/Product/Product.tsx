@@ -33,7 +33,7 @@ import {
   TypographySize,
   TypographyType,
 } from 'src/components'
-import { formatPrice, getAPIProductId, parseHtmlSafely } from 'src/utils'
+import { formatPrice, getAPIId, parseHtmlSafely } from 'src/utils'
 
 import { FindSimilar } from './FindSimilar'
 import { YouMightLike } from './YouMightLike'
@@ -126,7 +126,7 @@ export const Product: React.FC = () => {
 
   const { loading, error, data } = useQuery<ProductQuery>(GET_PRODUCT, {
     variables: {
-      id: getAPIProductId(id || ''),
+      id: getAPIId(id || ''),
     },
   })
 

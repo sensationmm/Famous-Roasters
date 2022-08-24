@@ -21,7 +21,7 @@ import {
   TypographySize,
   TypographyType,
 } from 'src/components'
-import { getAPIProductId, toRoundedValueInRealScale, useLocalStorage } from 'src/utils'
+import { getAPIId, toRoundedValueInRealScale, useLocalStorage } from 'src/utils'
 
 import { TasteFinderField } from '../TasteFinder'
 import { ProductQuery } from '.'
@@ -39,7 +39,7 @@ export const FeaturedProduct: React.FC = () => {
 
   const { loading, error, data } = useQuery<ProductQuery>(GET_PRODUCT, {
     variables: {
-      id: getAPIProductId(id || ''),
+      id: getAPIId(id || ''),
     },
   })
 
