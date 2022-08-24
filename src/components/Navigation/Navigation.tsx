@@ -37,8 +37,8 @@ interface NavigationData {
   pagesMobile: NavigationDataItem[]
 }
 
-const domainShop = process.env.REACT_APP_DOMAIN_SHOP || '' // '//shop.60beans.com'
-const domainBlog = process.env.REACT_APP_DOMAIN_BLOG || '' // '//blog.60beans.com'
+const domainShop = process.env.REACT_APP_DOMAIN_SHOP || ''
+const domainBlog = process.env.REACT_APP_DOMAIN_BLOG || ''
 
 const navigationData: NavigationData = {
   pagesPrimary: [
