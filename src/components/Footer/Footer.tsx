@@ -3,6 +3,8 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { Badge, Typography, TypographySize, TypographyType } from 'src/components'
 
+import { TrustPilot } from './TrustPilot'
+
 interface FooterLink {
   key: string
   href: string
@@ -49,6 +51,9 @@ export const Footer: React.FC = () => {
                 <Link to={footerItem.href}>{t(`pages.${footerItem.key}.navigation`)}</Link>
               </li>
             ))}
+            <li className="mt-6">
+              <TrustPilot />
+            </li>
           </ul>
         </div>
         <div className="order-1 md:order-2">
