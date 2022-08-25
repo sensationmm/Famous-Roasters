@@ -1,3 +1,10 @@
+## [1.54.6](https://github.com/Famous-Roasters/frontend/compare/v1.54.5...v1.54.6) (2022-08-25)
+
+
+### Bug Fixes
+
+* **search:** fix broken scrolling ([60c1170](https://github.com/Famous-Roasters/frontend/commit/60c11705fc5d6e1260a56f2a6f337d0c4a52af35))
+
 ## [1.54.5](https://github.com/Famous-Roasters/frontend/compare/v1.54.4...v1.54.5) (2022-08-24)
 
 
