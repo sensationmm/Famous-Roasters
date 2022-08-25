@@ -32,7 +32,7 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({
   showSwatches,
 }: FilterMobileProps) => {
   const { t } = useTranslation()
-  const { items, refine } = useRefinementList({ attribute, sortBy: ['name:asc'] })
+  const { items, refine } = useRefinementList({ attribute, sortBy: ['name:asc'], limit: 100 })
   const { refine: clearRefinements } = useClearRefinements({ includedAttributes: [attribute] })
   const selectedItems = items.filter((item) => item.isRefined)
 
