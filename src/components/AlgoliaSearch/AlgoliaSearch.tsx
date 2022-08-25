@@ -27,13 +27,15 @@ const Search: React.FC = () => {
         facetFilters={['collections:coffee', 'meta.my_fields.publishedToFrontend:true']}
       />
 
+      {/* Top row: Method, Decaf (mobile), Query */}
       <div className="md:flex gap-x-4 mt-6 mb-4">
         <SingleSelectFilter
           attribute="meta.my_fields.coffee_type"
           defaultText={t('pages.catalogue.filters.meta.my_fields.coffee_type')}
         />
 
-        <div className="my-4 md:my-2 md:ml-6">
+        {/* Decaf filter (mobile) */}
+        <div className="my-4 md:hidden">
           <CheckboxFilter attribute="meta.my_fields.decaf" />
         </div>
 
@@ -49,7 +51,28 @@ const Search: React.FC = () => {
         />
       </div>
 
-      <div className="flex flex-row  gap-x-4 my-2">
+      {/* Middle row: Filters (desktop) */}
+      <div className="hidden md:flex">
+        <div className="flex flex-row gap-x-4 justify-end w-full">
+          {/* Decaf filter (desktop) */}
+          <div className="mr-auto mt-2">
+            <CheckboxFilter attribute="meta.my_fields.decaf" />
+          </div>
+
+          {/* Filter dropdowns (desktop) */}
+          <ListboxFilter attribute="meta.my_fields.aroma" showSwatches />
+          <ListboxFilter attribute="meta.my_fields.bean_type" />
+          <ListboxFilter attribute="meta.my_fields.origin" translationPrefix="pages.catalogue.filters.origin.values" />
+          <ListboxFilter attribute="vendor" />
+        </div>
+      </div>
+
+      {/* Bottom row: Stats (desktop), Filters (mobile), Sorting*/}
+      <div className="flex flex-row space-between gap-x-4 my-4">
+        <div className="hidden md:flex w-1/2">
+          <Stats />
+        </div>
+
         {/* Filters mobile */}
         <div className="w-1/2 md:hidden">
           <FiltersMenuMobile
@@ -60,14 +83,6 @@ const Search: React.FC = () => {
               { attribute: 'vendor' },
             ]}
           />
-        </div>
-
-        {/* Filters desktop */}
-        <div className="hidden md:flex gap-x-4">
-          <ListboxFilter attribute="meta.my_fields.aroma" showSwatches />
-          <ListboxFilter attribute="meta.my_fields.bean_type" />
-          <ListboxFilter attribute="meta.my_fields.origin" translationPrefix="pages.catalogue.filters.origin.values" />
-          <ListboxFilter attribute="vendor" />
         </div>
 
         <div className="w-1/2 flex flex-row justify-end">
@@ -86,7 +101,10 @@ const Search: React.FC = () => {
         </div>
       </div>
 
-      <Stats />
+      <div className="md:hidden">
+        <Stats />
+      </div>
+
       <Hits
         hitComponent={Hit}
         classNames={{ root: 'mb-8', list: 'grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3' }}
