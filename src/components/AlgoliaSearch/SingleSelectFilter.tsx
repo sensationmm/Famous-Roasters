@@ -11,7 +11,7 @@ const SingleSelectFilter = (props: FilterProps) => {
   const { defaultText } = props
 
   return (
-    <span>
+    <div>
       <select
         onChange={(e) => {
           const value = e.target.value
@@ -28,7 +28,7 @@ const SingleSelectFilter = (props: FilterProps) => {
         ))}
       </select>
       <ChevronDownIcon className="-ml-5 -mt-1 h-6 w-6 inline" aria-hidden="true" />
-    </span>
+    </div>
   )
 }
 

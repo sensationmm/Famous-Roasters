@@ -27,15 +27,21 @@ const Search: React.FC = () => {
         facetFilters={['collections:coffee', 'meta.my_fields.publishedToFrontend:true']}
       />
 
-      <div className="md:flex justify-between mt-6 mb-4">
+      <div className="md:flex gap-x-4 mt-6 mb-4">
         <SingleSelectFilter
           attribute="meta.my_fields.coffee_type"
           defaultText={t('pages.catalogue.filters.meta.my_fields.coffee_type')}
         />
+
+        <div className="my-4 md:my-2 md:ml-6">
+          <CheckboxFilter attribute="meta.my_fields.decaf" />
+        </div>
+
         <SearchBox
           placeholder={t('pages.catalogue.search.placeholder')}
           classNames={{
-            input: 'rounded-full border border-coreUI-text-tertiary px-4 py-2 w-full md:w-96 mt-3',
+            root: 'ml-auto',
+            input: 'rounded-full border border-coreUI-text-tertiary px-4 py-2 w-full md:w-96 ',
             submitIcon: '-ml-6',
             resetIcon: 'hidden',
             reset: 'hidden',
@@ -43,19 +49,7 @@ const Search: React.FC = () => {
         />
       </div>
 
-      <div className="flex flex-row justify-end space-between space-x-4 my-2">
-        <div className="my-3 w-full">
-          <CheckboxFilter attribute="meta.my_fields.decaf" />
-        </div>
-
-        {/* Filters desktop */}
-        <div className="hidden md:flex gap-x-4">
-          <ListboxFilter attribute="meta.my_fields.aroma" showSwatches />
-          <ListboxFilter attribute="meta.my_fields.bean_type" />
-          <ListboxFilter attribute="meta.my_fields.origin" translationPrefix="pages.catalogue.filters.origin.values" />
-          <ListboxFilter attribute="vendor" />
-        </div>
-
+      <div className="flex flex-row  gap-x-4 my-2">
         {/* Filters mobile */}
         <div className="w-1/2 md:hidden">
           <FiltersMenuMobile
@@ -67,20 +61,30 @@ const Search: React.FC = () => {
             ]}
           />
         </div>
-      </div>
 
-      <SortBy
-        items={[
-          { label: t('pages.catalogue.filters.sort.values.none'), value: 'products' },
-          { label: t('pages.catalogue.filters.sort.values.priceAsc'), value: 'products_price_asc' },
-          { label: t('pages.catalogue.filters.sort.values.priceDesc'), value: 'products_price_desc' },
-          { label: t('pages.catalogue.filters.sort.values.newDesc'), value: 'products_updated_at_desc' },
-        ]}
-        classNames={{
-          root: 'flex flex-row justify-end chevron',
-          select: 'rounded-full border border-coreUI-text-tertiary px-4 py-2 bg-white h-10 w-48',
-        }}
-      />
+        {/* Filters desktop */}
+        <div className="hidden md:flex gap-x-4">
+          <ListboxFilter attribute="meta.my_fields.aroma" showSwatches />
+          <ListboxFilter attribute="meta.my_fields.bean_type" />
+          <ListboxFilter attribute="meta.my_fields.origin" translationPrefix="pages.catalogue.filters.origin.values" />
+          <ListboxFilter attribute="vendor" />
+        </div>
+
+        <div className="w-1/2 flex flex-row justify-end">
+          <SortBy
+            items={[
+              { label: t('pages.catalogue.filters.sort.values.none'), value: 'products' },
+              { label: t('pages.catalogue.filters.sort.values.priceAsc'), value: 'products_price_asc' },
+              { label: t('pages.catalogue.filters.sort.values.priceDesc'), value: 'products_price_desc' },
+              { label: t('pages.catalogue.filters.sort.values.newDesc'), value: 'products_updated_at_desc' },
+            ]}
+            classNames={{
+              root: 'chevron w-full md:w-48',
+              select: 'rounded-full border border-coreUI-text-tertiary px-4 py-2 bg-white w-full',
+            }}
+          />
+        </div>
+      </div>
 
       <Stats />
       <Hits
