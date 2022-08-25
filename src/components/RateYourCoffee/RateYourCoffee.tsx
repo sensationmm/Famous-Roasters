@@ -20,7 +20,7 @@ import {
   TypographyType,
 } from 'src/components'
 import { storeFrontClient } from 'src/config'
-import { getSimplifiedProductId } from 'src/utils'
+import { getSimplifiedId } from 'src/utils'
 import { ProductCustom } from 'src/views/Product'
 
 const RATE_PRODUCT = loader('src/graphql/queries/rateProduct.query.graphql')
@@ -73,7 +73,7 @@ export const RateYourCoffee: React.FC<RateYourCoffeeProps> = ({ productOrderTile
 
   const submitRating = async () => {
     rateProduct({
-      variables: { productID: getSimplifiedProductId(productOrderTile.productId), rating: rating, comment: comment },
+      variables: { productID: getSimplifiedId(productOrderTile.productId), rating: rating, comment: comment },
     }).then(() => {
       setComplete(true)
     })

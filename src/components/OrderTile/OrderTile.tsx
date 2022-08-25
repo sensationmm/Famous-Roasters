@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Typography, TypographySize, TypographyType } from 'src/components'
-import { formatPrice, getSimplifiedProductId } from 'src/utils'
+import { formatPrice, getSimplifiedId } from 'src/utils'
 import { OrderVariant } from 'src/views'
 
 import { RateYourCoffee } from '../RateYourCoffee'
@@ -29,14 +29,14 @@ export const OrderTile: React.FC<OrderTileProps> = ({ ...props }) => {
     <div data-testid="wrapper" className={'flex pt-8 w-full'}>
       <div
         className="flex justify-center items-center shrink-0 self-center relative w-32 h-32 cursor-pointer"
-        onClick={() => navigate(`/product/${getSimplifiedProductId(productId)}`)}
+        onClick={() => navigate(`/product/${getSimplifiedId(productId)}`)}
       >
         <div className="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32">
           <img src={src} alt={title} className="w-28 max-h-28" />
         </div>
       </div>
       <div className={'pl-4 flex flex-col justify-center'}>
-        <div className="mb-2 cursor-pointer" onClick={() => navigate(`/product/${getSimplifiedProductId(productId)}`)}>
+        <div className="mb-2 cursor-pointer" onClick={() => navigate(`/product/${getSimplifiedId(productId)}`)}>
           <Typography as="div" type={TypographyType.Label} size={TypographySize.Base}>
             {quantity !== 1 ? `${quantity} x ${title}` : title}
           </Typography>

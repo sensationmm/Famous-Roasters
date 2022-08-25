@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { ErrorPrompt, Loader, ProductTile } from 'src/components'
 import { shopifyAccessoryCollection, shopifyCoffeeCollection } from 'src/config'
 import useBreakpoint from 'src/hooks/useBreakpoint'
-import { getSimplifiedProductId } from 'src/utils/formatters'
+import { getSimplifiedId } from 'src/utils/formatters'
 import { CollectionQuery } from 'src/views/Catalogue'
 
 interface YouMightLikeProps {
@@ -49,7 +49,7 @@ export const YouMightLike: React.FC<YouMightLikeProps> = ({ productId }: YouMigh
     .slice(0, breakpoint === 'lg' ? 3 : 2)
   const resultsAccessories = [...(data2?.collection?.products?.nodes || [])]
     .sort(() => Math.random() - 0.5)
-    .filter((node) => getSimplifiedProductId(node.id) !== productId)
+    .filter((node) => getSimplifiedId(node.id) !== productId)
     .slice(0, breakpoint === 'lg' ? 3 : 2)
   const productNodes = resultsCoffee.concat(resultsAccessories).sort(() => Math.random() - 0.5)
 
@@ -75,7 +75,7 @@ export const YouMightLike: React.FC<YouMightLikeProps> = ({ productId }: YouMigh
   return (
     <div className="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
       {productNodes?.map((node, i: number) => {
-        const id = getSimplifiedProductId(node.id)
+        const id = getSimplifiedId(node.id)
         return (
           <Link to={`/product/${id}`} key={`product-tile-link-${i}`}>
             <ProductTile key={`title-${i}`} productNode={node} />

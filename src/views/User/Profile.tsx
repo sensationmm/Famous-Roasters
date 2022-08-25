@@ -29,7 +29,7 @@ import { shopifyAccessoryCollection, storeFrontClient } from 'src/config'
 import { useAuth } from 'src/config/cognito'
 import useBreakpoint from 'src/hooks/useBreakpoint'
 const USER_PROFILE = loader('src/graphql/queries/userProfile.query.graphql')
-import { formatDate, formatPrice, getSimplifiedProductId } from 'src/utils'
+import { formatDate, formatPrice, getSimplifiedId } from 'src/utils'
 
 import { CollectionQuery } from '../Catalogue'
 import { ProductCustom } from '../Product'
@@ -350,7 +350,7 @@ export const Profile: React.FC = () => {
               </Typography>
               <div className="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
                 {accessories.slice(0, breakpoint === 'lg' ? 3 : 2).map((node: ProductCustom, i: number) => {
-                  const id = getSimplifiedProductId(node.id)
+                  const id = getSimplifiedId(node.id)
                   return (
                     <Link to={`/product/${id}`} key={`product-tile-link-${i}`}>
                       <ProductTile key={`title-${i}`} productNode={node} />
