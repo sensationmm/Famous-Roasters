@@ -1,3 +1,16 @@
+# [1.55.0](https://github.com/Famous-Roasters/frontend/compare/v1.54.7...v1.55.0) (2022-08-25)
+
+
+### Features
+
+* **search:** add pluralization in stats component ([0d38b1c](https://github.com/Famous-Roasters/frontend/commit/0d38b1c9224d4fd14c7259185501878b012a9b3e))
+* **search:** fix mobile/desktop layout of filters ([b6c351b](https://github.com/Famous-Roasters/frontend/commit/b6c351bd03b2f8fdf6681723d07c5d052fed9e41))
+* **search:** increase limit of facet values on mobile ([3419edb](https://github.com/Famous-Roasters/frontend/commit/3419edb5e156e013d7b37a91717d6104fe8585ed))
+* **search:** remove main filter from mobile menu ([a73b2b0](https://github.com/Famous-Roasters/frontend/commit/a73b2b0460f832a3054d7e6750fbcd4ed7286af4))
+* **search:** remove redundant sorting option ([51d6eca](https://github.com/Famous-Roasters/frontend/commit/51d6eca4cc22848d7f7fb54641946db69f6adba6))
+* **search:** remove warning ([63ce00d](https://github.com/Famous-Roasters/frontend/commit/63ce00dde11406c55627aeea28a8f786bb065859))
+* **search:** revise mobile/desktop layout ([da5eb3a](https://github.com/Famous-Roasters/frontend/commit/da5eb3a6087d2e0887d32060bdf7c33903f4429e))
+
 ## [1.54.7](https://github.com/Famous-Roasters/frontend/compare/v1.54.6...v1.54.7) (2022-08-25)
 
 ## [1.54.6](https://github.com/Famous-Roasters/frontend/compare/v1.54.5...v1.54.6) (2022-08-25)
