@@ -1,3 +1,10 @@
+## [1.56.1](https://github.com/Famous-Roasters/frontend/compare/v1.56.0...v1.56.1) (2022-08-25)
+
+
+### Bug Fixes
+
+* **sign in:** debug sign in error ([4a0cb11](https://github.com/Famous-Roasters/frontend/commit/4a0cb11abb6b8a8918af8bab613e2d8572ac183b))
+
 # [1.56.0](https://github.com/Famous-Roasters/frontend/compare/v1.55.0...v1.56.0) (2022-08-25)
 
 
