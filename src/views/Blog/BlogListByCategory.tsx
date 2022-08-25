@@ -123,15 +123,15 @@ export const BlogListByCategory: React.FC<CategoryListProps> = () => {
                         <div className="flex flex-col text-coreUI-text-tertiary mb-6">
                           {postType === 'article' ? (
                             <Typography size={TypographySize.Small} type={TypographyType.Paragraph}>
-                              von {updatedBy.name} &middot; {readTimeCalculator(content.text)} min reading time
+                              {t('pages.blog.from')} {updatedBy.name} &middot; {readTimeCalculator(content.text)}{' '}
+                              {t('pages.blog.minReadingTime')}
                             </Typography>
                           ) : (
                             <Typography size={TypographySize.Small} type={TypographyType.Paragraph}>
-                              von {updatedBy.name}
+                              {t('pages.blog.from')} {updatedBy.name}
                             </Typography>
                           )}
                         </div>
-
                         <Typography
                           as="span"
                           type={TypographyType.Label}
