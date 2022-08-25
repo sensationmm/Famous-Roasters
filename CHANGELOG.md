@@ -1,3 +1,16 @@
+# [1.56.0](https://github.com/Famous-Roasters/frontend/compare/v1.55.0...v1.56.0) (2022-08-25)
+
+
+### Bug Fixes
+
+* **input:** updated snaps ([acb28ab](https://github.com/Famous-Roasters/frontend/commit/acb28abd484091481d4dadcd352dbd8d2df1cced))
+
+
+### Features
+
+* **formatters:** extended api id formatters ([761a113](https://github.com/Famous-Roasters/frontend/commit/761a1137fc9eae375cca4e4adf2b746628407540))
+* **input:** added input small and icon variants ([3e6f650](https://github.com/Famous-Roasters/frontend/commit/3e6f65049ecf834a29cf3581a174f4a79ac70f00))
+
 # [1.55.0](https://github.com/Famous-Roasters/frontend/compare/v1.54.7...v1.55.0) (2022-08-25)
 
 
