@@ -82,61 +82,65 @@ export const BlogListByCategory: React.FC<CategoryListProps> = () => {
               </div>
             </div>
           </div>
-          <div className="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full max-w-5xl mx-auto px-6 xl:px-8 md:my-8">
+          <div className="columns-1 md:columns-2 xl:columns-3 w-full max-w-5xl mx-auto px-6 xl:px-8 md:my-8">
             {data.standardBlogPosts.length !== 0 ? (
               data.standardBlogPosts.map((blog: StandardBlogPosts) => {
                 const { title, slug, postType, thumbnail, tags, updatedBy, content } = blog
                 return (
-                  <div
-                    key={title}
-                    className="p-4 border-b border-coreUI-border w-full hover:bg-coreUI-background-images"
-                  >
+                  <div key={title} className="p-4 w-full hover:bg-coreUI-background-images break-inside-avoid-column">
                     <Link to={`${slug}`}>
-                      <div className="relative h-52 grid content-center overflow-hidden mb-4">
-                        {postType === 'video' && (
-                          <div className="absolute flex justify-center items-center w-full h-full">
-                            <img src={PlayVideoIcon} className="w-10 h-10" />
-                          </div>
-                        )}
-                        <img src={thumbnail.url} className="w-full" />
-                      </div>
-                      <Typography
-                        as="h2"
-                        type={TypographyType.Heading}
-                        size={TypographySize.Base}
-                        className="font-syne mb-4"
-                      >
-                        {title}
-                      </Typography>
-                      <div className="text-coreUI-text-secondary">
-                        {[...new Set([...data.category.tags, ...tags])].map((tag: string) => {
-                          return (
-                            <Typography as="span" type={TypographyType.Paragraph} size={TypographySize.Small} key={tag}>
-                              #{tag}{' '}
+                      <div className="border-b border-coreUI-border pb-8">
+                        <div className="relative h-52 grid content-center overflow-hidden mb-4">
+                          {postType === 'video' && (
+                            <div className="absolute flex justify-center items-center w-full h-full">
+                              <img src={PlayVideoIcon} className="w-10 h-10" />
+                            </div>
+                          )}
+                          <img src={thumbnail.url} className="w-full" />
+                        </div>
+                        <Typography
+                          as="h2"
+                          type={TypographyType.Heading}
+                          size={TypographySize.Base}
+                          className="font-syne mb-4 text-[32px] -tracking-[.02em]"
+                        >
+                          {title}
+                        </Typography>
+                        <div className="text-coreUI-text-secondary">
+                          {[...new Set([...data.category.tags, ...tags])].map((tag: string) => {
+                            return (
+                              <Typography
+                                as="span"
+                                type={TypographyType.Paragraph}
+                                size={TypographySize.Small}
+                                key={tag}
+                              >
+                                #{tag}{' '}
+                              </Typography>
+                            )
+                          })}
+                        </div>
+                        <div className="flex flex-col text-coreUI-text-tertiary mb-6">
+                          {postType === 'article' ? (
+                            <Typography size={TypographySize.Small} type={TypographyType.Paragraph}>
+                              von {updatedBy.name} &middot; {readTimeCalculator(content.text)} min reading time
                             </Typography>
-                          )
-                        })}
-                      </div>
-                      <div className="flex flex-col text-coreUI-text-tertiary mb-6">
-                        {postType === 'article' ? (
-                          <Typography size={TypographySize.Small} type={TypographyType.Paragraph}>
-                            von {updatedBy.name} &middot; {readTimeCalculator(content.text)} min reading time
-                          </Typography>
-                        ) : (
-                          <Typography size={TypographySize.Small} type={TypographyType.Paragraph}>
-                            von {updatedBy.name}
-                          </Typography>
-                        )}
-                      </div>
+                          ) : (
+                            <Typography size={TypographySize.Small} type={TypographyType.Paragraph}>
+                              von {updatedBy.name}
+                            </Typography>
+                          )}
+                        </div>
 
-                      <Typography
-                        as="span"
-                        type={TypographyType.Label}
-                        size={TypographySize.Small}
-                        className="underline underline-offset-8"
-                      >
-                        {postType === 'video' ? t('pages.blog.goToVideo') : t('pages.blog.goToArticle')}
-                      </Typography>
+                        <Typography
+                          as="span"
+                          type={TypographyType.Label}
+                          size={TypographySize.Small}
+                          className="underline underline-offset-8"
+                        >
+                          {postType === 'video' ? t('pages.blog.goToVideo') : t('pages.blog.goToArticle')}
+                        </Typography>
+                      </div>
                     </Link>
                   </div>
                 )
