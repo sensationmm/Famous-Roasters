@@ -43,6 +43,7 @@ const Search: React.FC = () => {
           placeholder={t('pages.catalogue.search.placeholder')}
           classNames={{
             root: 'ml-auto',
+            loadingIndicator: 'hidden',
             input: 'rounded-full border border-coreUI-text-tertiary px-4 py-2 w-full md:w-96 ',
             submitIcon: '-ml-6',
             resetIcon: 'hidden',
@@ -91,7 +92,6 @@ const Search: React.FC = () => {
               { label: t('pages.catalogue.filters.sort.values.none'), value: 'products' },
               { label: t('pages.catalogue.filters.sort.values.priceAsc'), value: 'products_price_asc' },
               { label: t('pages.catalogue.filters.sort.values.priceDesc'), value: 'products_price_desc' },
-              { label: t('pages.catalogue.filters.sort.values.newDesc'), value: 'products_updated_at_desc' },
             ]}
             classNames={{
               root: 'chevron w-full md:w-48',
