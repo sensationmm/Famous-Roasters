@@ -11,6 +11,7 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   mode?: Mode
   icon?: IconName
   isSmall?: boolean
+  classNameWrapper?: string
 }
 
 const getLabelTextClassNames = (mode: Mode): string => {
@@ -57,10 +58,10 @@ const getInputClassNames = (mode: Mode, isSmall: InputProps['isSmall'], icon: bo
 
 export const Input: React.FC<InputProps> = React.forwardRef(
   (
-    { labelText, mode = Mode.normal, icon, isSmall = false, className, ...props }: InputProps,
+    { labelText, mode = Mode.normal, icon, isSmall = false, className, classNameWrapper, ...props }: InputProps,
     ref: Ref<HTMLInputElement>,
   ) => (
-    <label className="relative">
+    <label className={`${classNameWrapper ? `${classNameWrapper} ` : ''}relative`}>
       <span className={getLabelTextClassNames(mode)}>
         <Typography size={TypographySize.Small}>{labelText}</Typography>
       </span>

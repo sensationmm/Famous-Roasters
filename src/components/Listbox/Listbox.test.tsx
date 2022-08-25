@@ -24,6 +24,22 @@ describe('Listbox component', () => {
     expect(container).toMatchSnapshot()
   })
 
+  it('Renders correctly for small variant', async () => {
+    const { container } = render(
+      <I18nextProvider i18n={i18n}>
+        <Listbox items={items} translationPrefix="pages.catalogue.filters.sort" isSmall />
+      </I18nextProvider>,
+    )
+
+    await waitFor(async () => {
+      const button = await screen.findByTestId('button-listbox')
+      expect(button).toBeInTheDocument()
+      fireEvent.click(button)
+    })
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
+
   it('Renders correctly with none item', async () => {
     const { container } = render(
       <I18nextProvider i18n={i18n}>
@@ -77,6 +93,46 @@ describe('Listbox component', () => {
           hasNoneItem={true}
           onChange={(v) => alert(v)}
           translationPrefix="pages.catalogue.filters.sort"
+        />
+      </I18nextProvider>,
+    )
+    const button = await screen.findByTestId('button-listbox')
+    expect(button).toBeInTheDocument()
+    fireEvent.click(button)
+    await waitFor(() => {
+      const option = screen.getByTestId('option-0')
+      expect(option).toBeInTheDocument()
+      fireEvent.click(option)
+    })
+    fireEvent.click(button)
+    await waitFor(() => {
+      const option = screen.getByTestId('option-1')
+      expect(option).toBeInTheDocument()
+      fireEvent.click(option)
+    })
+    fireEvent.click(button)
+    await waitFor(() => {
+      const option = screen.getByTestId('option-2')
+      expect(option).toBeInTheDocument()
+      fireEvent.click(option)
+    })
+    fireEvent.click(button)
+    await waitFor(() => {
+      const option = screen.getByTestId('option-3')
+      expect(option).toBeInTheDocument()
+      fireEvent.click(option)
+    })
+  })
+
+  it('Every option can be clicked on big variant', async () => {
+    render(
+      <I18nextProvider i18n={i18n}>
+        <Listbox
+          items={items}
+          hasNoneItem={true}
+          onChange={(v) => alert(v)}
+          translationPrefix="pages.catalogue.filters.sort"
+          big
         />
       </I18nextProvider>,
     )

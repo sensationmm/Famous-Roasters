@@ -23,4 +23,5 @@ Default.args = {
   ],
   translationPrefix: 'pages.catalogue.filters.sort',
   hasNoneItem: true,
+  isSmall: false,
 }

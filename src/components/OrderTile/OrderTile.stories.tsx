@@ -13,5 +13,9 @@ const Template: ComponentStory<typeof OrderTile> = (args) => <OrderTile {...args
 
 export const Default = Template.bind({})
 Default.args = {
+  productId: '123456',
   node: OrderMock.result.data.orders.edges[0].node.lineItems.edges[0].node,
+  showRate: false,
+  isSmall: false,
+  showPrice: true,
 }
