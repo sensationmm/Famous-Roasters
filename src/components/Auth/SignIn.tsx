@@ -47,8 +47,10 @@ export class AuthSignIn extends SignIn {
 
   signInUser = async (params: SignInParams): Promise<void> => {
     const client = famousRoastersClient()
+    console.log('signInUser', params)
     await Auth.signIn(params.email, params.password)
       .then((res) => {
+        console.log('signIn then', res)
         client
           .query({
             query: SIGN_UP,
@@ -56,13 +58,18 @@ export class AuthSignIn extends SignIn {
               accessToken: res.signInUserSession.accessToken.jwtToken,
             },
           })
-          .then(() => {
+          .then((res2) => {
+            console.log('client signUp then', res2)
             this.changeState('signedIn', params.email)
             window.localStorage.setItem('authToken', res.signInUserSession.accessToken.jwtToken)
             window.location.reload()
           })
+          .catch((error) => {
+            console.log('client signUp error', error)
+          })
       })
       .catch((error) => {
+        console.log('signIn error', error)
         if (
           error.toString().indexOf('UserNotFoundException') !== -1 ||
           error.toString().indexOf('NotAuthorizedException') !== -1

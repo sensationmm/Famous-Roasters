@@ -107,13 +107,21 @@ export const Profile: React.FC = () => {
   }, [])
 
   useEffect(() => {
+    console.log('useEffect', user?.isValid)
     Auth.currentAuthenticatedUser()
       .then((u) => {
+        console.log('currentAuthenticatedUser then', u)
         setUserName(u.attributes['custom:first_name'])
 
         getUserProfile()
-          .then((res) => setUserProfile(res.data.userProfile))
-          .catch(() => signOut())
+          .then((res) => {
+            console.log('getUserProfile then', res)
+            setUserProfile(res.data.userProfile)
+          })
+          .catch((err) => {
+            console.log('getUserProfile error', err)
+            signOut()
+          })
 
         setOrdersLoading(true)
         const token = localStorage.getItem('authToken')
