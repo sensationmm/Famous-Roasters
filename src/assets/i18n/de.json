@@ -432,7 +432,8 @@
     "catalogue": {
       "search": {
         "placeholder": "Finde deine Kaffees oder Röster",
-        "stats": "Wir haben <span class='font-bold'>{{nbHits}} Produkte</span> gefunden"
+        "stats_one": "Wir haben <span class='font-bold'>{{count}} Produkt</span> gefunden.",
+        "stats_other": "Wir haben <span class='font-bold'>{{count}} Produkte</span> gefunden."
       },
       "filters": {
         "meta": {

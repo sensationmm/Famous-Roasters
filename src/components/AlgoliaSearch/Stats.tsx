@@ -5,13 +5,13 @@ const Stats: React.FC = () => {
   const search = useInstantSearch()
   const { t } = useTranslation()
 
-  const nbHits = search?.results?.nbHits
+  const count = search?.results?.nbHits
 
-  return nbHits ? (
+  return count ? (
     <div
       className="mt-4"
       dangerouslySetInnerHTML={{
-        __html: t('pages.catalogue.search.stats', { nbHits, interpolation: { escapeValue: false } }),
+        __html: t('pages.catalogue.search.stats', { count, interpolation: { escapeValue: false } }),
       }}
     />
   ) : null
