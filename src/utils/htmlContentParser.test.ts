@@ -27,7 +27,9 @@ describe('HTML content parser utils', () => {
   it('formatBlogHtmlElement processes paragraphs', () => {
     const element = document.createElement('p')
     element.innerHTML = 'hello world'
-    expect(formatBlogHtmlElement(element).outerHTML).toEqual('<p class="text-lg leading-7 mb-4">hello world</p>')
+    expect(formatBlogHtmlElement(element).outerHTML).toEqual(
+      '<p class="text-lg md:text-[20px] -tracking-[.02em] leading-7 mb-6">hello world</p>',
+    )
   })
 
   it('formatHtmlElement processes headlines', () => {
@@ -42,7 +44,7 @@ describe('HTML content parser utils', () => {
     const element = document.createElement('h1')
     element.innerHTML = 'hello world'
     expect(formatBlogHtmlElement(element).outerHTML).toEqual(
-      '<h1 class="mb-4 text-2xl leading-8 font-semibold font-syne">hello world</h1>',
+      '<h1 class="mb-8 text-[24px] md:text-[32px] -tracking-[.02em] leading-8 md:leading-9 font-semibold font-syne">hello world</h1>',
     )
   })
 
@@ -84,7 +86,7 @@ describe('HTML content parser utils', () => {
   it('parseHtmlSafely with custom formatter works', () => {
     const htmlString = "<h1>Title</h1><script src='verymaliciouscode.js'></script><p>Paragraph</p>"
     expect(parseHtmlSafely(htmlString, formatBlogHtmlElement)).toEqual(
-      '<h1 class="mb-4 text-2xl leading-8 font-semibold font-syne">Title</h1><p class="text-lg leading-7 mb-4">Paragraph</p>',
+      '<h1 class="mb-8 text-[24px] md:text-[32px] -tracking-[.02em] leading-8 md:leading-9 font-semibold font-syne">Title</h1><p class="text-lg md:text-[20px] -tracking-[.02em] leading-7 mb-6">Paragraph</p>',
     )
   })
 })
