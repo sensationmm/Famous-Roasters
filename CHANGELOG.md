@@ -1,3 +1,10 @@
+# [1.60.0](https://github.com/Famous-Roasters/frontend/compare/v1.59.0...v1.60.0) (2022-08-26)
+
+
+### Features
+
+* **profile:** content and layout changes ([bb07be1](https://github.com/Famous-Roasters/frontend/commit/bb07be1f2e7514b12ff56427f0b331211bb8a228))
+
 # [1.59.0](https://github.com/Famous-Roasters/frontend/compare/v1.58.0...v1.59.0) (2022-08-26)
 
 
