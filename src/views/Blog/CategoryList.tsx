@@ -87,7 +87,7 @@ export const CategoryList: React.FC<CategoryListProps> = () => {
               return (
                 <div
                   key={name}
-                  className="px-4 py-6 border-b border-coreUI-border w-full hover:bg-coreUI-background-images"
+                  className="px-4 py-6 border-b border-coreUI-border w-full hover:bg-coreUI-background-images duration-500"
                 >
                   <Link to={`${name}`}>
                     <Typography

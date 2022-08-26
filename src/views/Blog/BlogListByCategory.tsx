@@ -87,7 +87,10 @@ export const BlogListByCategory: React.FC<CategoryListProps> = () => {
               data.standardBlogPosts.map((blog: StandardBlogPosts) => {
                 const { title, slug, postType, thumbnail, tags, updatedBy, content } = blog
                 return (
-                  <div key={title} className="p-4 w-full hover:bg-coreUI-background-images break-inside-avoid-column">
+                  <div
+                    key={title}
+                    className="p-4 w-full hover:bg-coreUI-background-images break-inside-avoid-column duration-500"
+                  >
                     <Link to={`${slug}`}>
                       <div className="border-b border-coreUI-border pb-8">
                         <div className="relative h-52 grid content-center overflow-hidden mb-4">

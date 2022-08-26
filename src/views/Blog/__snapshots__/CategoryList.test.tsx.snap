@@ -197,7 +197,7 @@ exports[`Blog Category List View Renders correctly 1`] = `
         class="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full max-w-5xl mx-auto px-6 xl:px-8 md:my-8"
       >
         <div
-          class="px-4 py-6 border-b border-coreUI-border w-full hover:bg-coreUI-background-images"
+          class="px-4 py-6 border-b border-coreUI-border w-full hover:bg-coreUI-background-images duration-500"
         >
           <a
             href="/Kaffeewissen"
@@ -233,7 +233,7 @@ exports[`Blog Category List View Renders correctly 1`] = `
           </a>
         </div>
         <div
-          class="px-4 py-6 border-b border-coreUI-border w-full hover:bg-coreUI-background-images"
+          class="px-4 py-6 border-b border-coreUI-border w-full hover:bg-coreUI-background-images duration-500"
         >
           <a
             href="/Kaffeeequipment"
@@ -269,7 +269,7 @@ exports[`Blog Category List View Renders correctly 1`] = `
           </a>
         </div>
         <div
-          class="px-4 py-6 border-b border-coreUI-border w-full hover:bg-coreUI-background-images"
+          class="px-4 py-6 border-b border-coreUI-border w-full hover:bg-coreUI-background-images duration-500"
         >
           <a
             href="/Kaffeetrends"
@@ -305,7 +305,7 @@ exports[`Blog Category List View Renders correctly 1`] = `
           </a>
         </div>
         <div
-          class="px-4 py-6 border-b border-coreUI-border w-full hover:bg-coreUI-background-images"
+          class="px-4 py-6 border-b border-coreUI-border w-full hover:bg-coreUI-background-images duration-500"
         >
           <a
             href="/Zubereitungstipps"
