@@ -5,6 +5,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { CartProvider } from 'src/components'
 import { famousRoastersClient, hygraphClient, i18n, storeFrontClient } from 'src/config'
 import {
+  Account,
   Auth,
   Blog,
   BlogListByCategory,
@@ -16,7 +17,6 @@ import {
   Orders,
   Product,
   Profile,
-  ProfileSub,
   TasteFinder,
 } from 'src/views'
 
@@ -99,7 +99,7 @@ const App = () => {
                   </ApolloProvider>
                 }
               />
-              <Route path="/profile/:slug" element={<ProfileSub />} />
+              <Route path="/account" element={<Account />} />
               <Route path="*" element={<Error />} />
             </Routes>
           </BrowserRouter>

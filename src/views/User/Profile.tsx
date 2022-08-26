@@ -204,8 +204,7 @@ export const Profile: React.FC = () => {
               emphasis={ButtonEmphasis.Tertiary}
               icon={IconName.Account}
               hasArrow
-              onClick={() => navigate('/profile/account')}
-              disabled
+              onClick={() => navigate('/account')}
             >
               {t('pages.profile.links.account')}
             </Button>

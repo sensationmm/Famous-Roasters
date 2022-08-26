@@ -189,12 +189,12 @@ exports[`Orders view Renders correctly 1`] = `
             <h1
               class="mb-4 text-2xl leading-8 font-semibold"
             >
-              Your Orders
+              Deine Bestellungen
             </h1>
             <p
               class="text-base leading-6"
             >
-              Find all information you need about your orders in one place
+              Hier findest du alle Informationen über deine Bestellungen.
             </p>
           </div>
           <div
@@ -766,6 +766,27 @@ exports[`Orders view Renders correctly 1`] = `
                 Impressum
               </a>
             </li>
+            <li
+              class="mt-6"
+            >
+              <div
+                class="trustpilot-widget"
+                data-businessunit-id="62c454f8cb03c9a2269fadb6"
+                data-locale="de-DE"
+                data-style-height="150px"
+                data-style-width="100%"
+                data-template-id="53aa8807dec7e10d38f59f32"
+                data-theme="dark"
+              >
+                <a
+                  href="https://de.trustpilot.com/review/60beans.com"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  Trustpilot
+                </a>
+              </div>
+            </li>
           </ul>
         </div>
         <div
@@ -986,12 +1007,12 @@ exports[`Orders view Renders correctly with no orders 1`] = `
             <h1
               class="mb-4 text-2xl leading-8 font-semibold"
             >
-              Your Orders
+              Deine Bestellungen
             </h1>
             <p
               class="text-base leading-6"
             >
-              Find all information you need about your orders in one place
+              Hier findest du alle Informationen über deine Bestellungen.
             </p>
           </div>
           <div
@@ -1081,7 +1102,7 @@ exports[`Orders view Renders correctly with no orders 1`] = `
           <span
             class="text-base leading-6"
           >
-            You have no past orders
+            Du hast noch keine Bestellungen.
           </span>
         </div>
       </div>
@@ -1173,6 +1194,27 @@ exports[`Orders view Renders correctly with no orders 1`] = `
               >
                 Impressum
               </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <div
+                class="trustpilot-widget"
+                data-businessunit-id="62c454f8cb03c9a2269fadb6"
+                data-locale="de-DE"
+                data-style-height="150px"
+                data-style-width="100%"
+                data-template-id="53aa8807dec7e10d38f59f32"
+                data-theme="dark"
+              >
+                <a
+                  href="https://de.trustpilot.com/review/60beans.com"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  Trustpilot
+                </a>
+              </div>
             </li>
           </ul>
         </div>
@@ -1394,12 +1436,12 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
             <h1
               class="mb-4 text-2xl leading-8 font-semibold"
             >
-              Your Orders
+              Deine Bestellungen
             </h1>
             <p
               class="text-base leading-6"
             >
-              Find all information you need about your orders in one place
+              Hier findest du alle Informationen über deine Bestellungen.
             </p>
           </div>
           <div
@@ -1489,7 +1531,7 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
           <span
             class="text-base leading-6"
           >
-            You have no past orders with Order ID containing 12345
+            Du hast keine Bestellungen, die auf deine Suche passen.
           </span>
         </div>
       </div>
@@ -1581,6 +1623,27 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
               >
                 Impressum
               </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <div
+                class="trustpilot-widget"
+                data-businessunit-id="62c454f8cb03c9a2269fadb6"
+                data-locale="de-DE"
+                data-style-height="150px"
+                data-style-width="100%"
+                data-template-id="53aa8807dec7e10d38f59f32"
+                data-theme="dark"
+              >
+                <a
+                  href="https://de.trustpilot.com/review/60beans.com"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  Trustpilot
+                </a>
+              </div>
             </li>
           </ul>
         </div>
@@ -1802,12 +1865,12 @@ exports[`Orders view sets filter value 1`] = `
             <h1
               class="mb-4 text-2xl leading-8 font-semibold"
             >
-              Your Orders
+              Deine Bestellungen
             </h1>
             <p
               class="text-base leading-6"
             >
-              Find all information you need about your orders in one place
+              Hier findest du alle Informationen über deine Bestellungen.
             </p>
           </div>
           <div
@@ -2379,6 +2442,27 @@ exports[`Orders view sets filter value 1`] = `
                 Impressum
               </a>
             </li>
+            <li
+              class="mt-6"
+            >
+              <div
+                class="trustpilot-widget"
+                data-businessunit-id="62c454f8cb03c9a2269fadb6"
+                data-locale="de-DE"
+                data-style-height="150px"
+                data-style-width="100%"
+                data-template-id="53aa8807dec7e10d38f59f32"
+                data-theme="dark"
+              >
+                <a
+                  href="https://de.trustpilot.com/review/60beans.com"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  Trustpilot
+                </a>
+              </div>
+            </li>
           </ul>
         </div>
         <div
@@ -2599,12 +2683,12 @@ exports[`Orders view sets sort newest first 1`] = `
             <h1
               class="mb-4 text-2xl leading-8 font-semibold"
             >
-              Your Orders
+              Deine Bestellungen
             </h1>
             <p
               class="text-base leading-6"
             >
-              Find all information you need about your orders in one place
+              Hier findest du alle Informationen über deine Bestellungen.
             </p>
           </div>
           <div
@@ -3176,6 +3260,27 @@ exports[`Orders view sets sort newest first 1`] = `
                 Impressum
               </a>
             </li>
+            <li
+              class="mt-6"
+            >
+              <div
+                class="trustpilot-widget"
+                data-businessunit-id="62c454f8cb03c9a2269fadb6"
+                data-locale="de-DE"
+                data-style-height="150px"
+                data-style-width="100%"
+                data-template-id="53aa8807dec7e10d38f59f32"
+                data-theme="dark"
+              >
+                <a
+                  href="https://de.trustpilot.com/review/60beans.com"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  Trustpilot
+                </a>
+              </div>
+            </li>
           </ul>
         </div>
         <div
@@ -3396,12 +3501,12 @@ exports[`Orders view sets sort oldest first 1`] = `
             <h1
               class="mb-4 text-2xl leading-8 font-semibold"
             >
-              Your Orders
+              Deine Bestellungen
             </h1>
             <p
               class="text-base leading-6"
             >
-              Find all information you need about your orders in one place
+              Hier findest du alle Informationen über deine Bestellungen.
             </p>
           </div>
           <div
@@ -3972,6 +4077,27 @@ exports[`Orders view sets sort oldest first 1`] = `
               >
                 Impressum
               </a>
+            </li>
+            <li
+              class="mt-6"
+            >
+              <div
+                class="trustpilot-widget"
+                data-businessunit-id="62c454f8cb03c9a2269fadb6"
+                data-locale="de-DE"
+                data-style-height="150px"
+                data-style-width="100%"
+                data-template-id="53aa8807dec7e10d38f59f32"
+                data-theme="dark"
+              >
+                <a
+                  href="https://de.trustpilot.com/review/60beans.com"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  Trustpilot
+                </a>
+              </div>
             </li>
           </ul>
         </div>

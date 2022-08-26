@@ -409,7 +409,8 @@
     },
     "account": {
       "navigation": "Konto",
-      "title": "Konto"
+      "title": "Konto",
+      "intro": "Hier kannst du dich ausloggen."
     },
     "blog": {
       "navigation": "Blog",
@@ -1130,10 +1131,10 @@
       }
     },
     "orders": {
-      "title": "Your Orders",
-      "intro": "Find all information you need about your orders in one place",
-      "noOrdersText": "You have no past orders",
-      "noOrdersTextFiltered": "You have no past orders with Order ID containing "
+      "title": "Deine Bestellungen",
+      "intro": "Hier findest du alle Informationen über deine Bestellungen.",
+      "noOrdersText": "Du hast noch keine Bestellungen.",
+      "noOrdersTextFiltered": "Du hast keine Bestellungen, die auf deine Suche passen."
     },
     "rate": {
       "rateCoffee": "Kaffee bewerten",
