@@ -440,7 +440,8 @@
     },
     "catalogue": {
       "search": {
-        "placeholder": "Finde deine Kaffees oder Röster",
+        "placeholderCoffee": "Finde deine Kaffees oder Röster",
+        "placeholderAccessories": "Finde Zubehör",
         "stats_one": "Wir haben <span class='font-bold'>{{count}} Produkt</span> gefunden.",
         "stats_other": "Wir haben <span class='font-bold'>{{count}} Produkte</span> gefunden."
       },
@@ -451,7 +452,8 @@
             "aroma": "Geschmacksprofil",
             "bean_type": "Bohnensorte",
             "origin": "Ursprung",
-            "coffee_type": "Alle Kaffees"
+            "coffee_type": "Alle Kaffees",
+            "accessory_type": "Alle Kategorien"
           }
         },
         "beanType": {

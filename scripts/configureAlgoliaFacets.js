@@ -15,7 +15,8 @@ const attributesForFaceting = [
   'meta.my_fields.bitterness',
   'meta.my_fields.sweetness',
   'meta.my_fields.body',
-  'meta.my_fields.publishedToFrontend'
+  'meta.my_fields.publishedToFrontend',
+  'meta.my_fields.accessory_type'
 ]
 
 const client = algoliasearch(process.env.REACT_APP_ALGOLIA_APP_ID, process.env.ALGOLIA_ADMIN_API_KEY)

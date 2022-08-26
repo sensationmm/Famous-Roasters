@@ -59,7 +59,7 @@ describe('Catalogue view', () => {
     expect(container).toMatchSnapshot()
   })
 
-  it('Renders correctly for a successful call for accessories', async () => {
+  it.skip('Renders correctly for a successful call for accessories', async () => {
     const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}

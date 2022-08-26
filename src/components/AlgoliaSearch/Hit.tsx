@@ -23,12 +23,13 @@ type RawHit = {
   }
   variants_min_price: number
   variants_max_price: number
+  variants_count: number
 }
 
 const Hit = ({ hit }: { hit: RawHit }) => {
   const { t } = useTranslation()
   const featured = false
-  const showFrom = true
+  const showFrom = hit.variants_count > 1
   const { id, image, title, vendor, variants_inventory_count: totalInventory, variants_min_price } = hit
   const origin = hit.meta.my_fields?.origin
   const decaf = hit.meta.my_fields?.decaf

@@ -10,6 +10,9 @@ const SingleSelectFilter = (props: FilterProps) => {
   const { refine: clearRefinements } = useClearRefinements()
   const { defaultText } = props
 
+  const currentItem = items.filter((item) => item.isRefined)[0]
+  const currentValue = currentItem?.value || ''
+
   return (
     <div>
       <select
@@ -19,6 +22,7 @@ const SingleSelectFilter = (props: FilterProps) => {
           value.length && refine(e.target.value)
         }}
         className="nochevron text-xl leading-7 font-semibold border-b-2 minimal pb-2 pr-7 bg-white"
+        value={currentValue}
       >
         <option value="">{defaultText}</option>
         {items.map((item) => (

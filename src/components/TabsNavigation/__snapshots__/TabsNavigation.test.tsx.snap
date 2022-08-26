@@ -6,32 +6,28 @@ exports[`Tabs Navigation component Renders correctly 1`] = `
     class="flex"
     role="tablist"
   >
-    <button
-      aria-selected="true"
+    <a
       class="mr-6"
       data-testid="tab-forYou"
-      role="tab"
-      type="button"
+      href="/catalogue/forYou"
     >
       <span
-        class="text-brand-black font-semibold border-b-2 pb-1.5 text-sm leading-5"
+        class="text-coreUI-text-secondary hover:text-coreUI-text-primary pb-1.5 text-sm leading-5"
       >
         Für Dich
       </span>
-    </button>
-    <button
-      aria-selected="false"
+    </a>
+    <a
       class="mr-6"
       data-testid="tab-discover"
-      role="tab"
-      type="button"
+      href="/catalogue/discover"
     >
       <span
         class="text-coreUI-text-secondary hover:text-coreUI-text-primary pb-1.5 text-sm leading-5"
       >
         Entdecken
       </span>
-    </button>
+    </a>
   </div>
 </div>
 `;

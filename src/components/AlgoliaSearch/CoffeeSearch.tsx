@@ -15,7 +15,7 @@ const searchClient = algoliasearch(
   process.env.REACT_APP_ALGOLIA_API_KEY || '',
 )
 
-const Search: React.FC = () => {
+const CoffeeSearch: React.FC = () => {
   const { t } = useTranslation()
 
   return (
@@ -40,7 +40,7 @@ const Search: React.FC = () => {
         </div>
 
         <SearchBox
-          placeholder={t('pages.catalogue.search.placeholder')}
+          placeholder={t('pages.catalogue.search.placeholderCoffee')}
           classNames={{
             root: 'ml-auto',
             loadingIndicator: 'hidden',
@@ -114,4 +114,4 @@ const Search: React.FC = () => {
   )
 }
 
-export default Search
+export default CoffeeSearch

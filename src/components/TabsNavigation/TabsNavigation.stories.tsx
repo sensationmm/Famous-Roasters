@@ -16,6 +16,4 @@ Default.args = {
     { key: 'forYou', translationKey: 'pages.catalogue.tabs.forYou' },
     { key: 'discover', translationKey: 'pages.catalogue.tabs.discover' },
   ],
-  initialActiveTabKey: 'discover',
-  setParentActiveTab: () => null,
 }

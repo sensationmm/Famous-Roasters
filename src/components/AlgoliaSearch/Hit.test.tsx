@@ -21,6 +21,7 @@ describe('Hit component', () => {
               vendor: '19grams',
               variants_min_price: 5,
               variants_max_price: 10,
+              variants_count: 10,
               meta: {
                 my_fields: {
                   decaf: false,
