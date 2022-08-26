@@ -1,3 +1,11 @@
+# [1.59.0](https://github.com/Famous-Roasters/frontend/compare/v1.58.0...v1.59.0) (2022-08-26)
+
+
+### Features
+
+* **product:** show grind type even if only single variant ([bdf065f](https://github.com/Famous-Roasters/frontend/commit/bdf065f7811a794ded3dd8552460525aa06124b7))
+* **trustpilot:** updated snaps ([5238e77](https://github.com/Famous-Roasters/frontend/commit/5238e77eae7edf9012cee88ac71e2be574edb4f9))
+
 # [1.58.0](https://github.com/Famous-Roasters/frontend/compare/v1.57.3...v1.58.0) (2022-08-26)
 
 
