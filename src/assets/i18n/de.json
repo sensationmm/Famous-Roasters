@@ -991,7 +991,8 @@
       "sections": {
         "discover": {
           "title": "Kaffeewissen für dich",
-          "cta": "Produkte erkunden"
+          "cta": "Produkte erkunden",
+          "ctaBlog": "Mehr entdecken"
         },
         "lastOrder": {
           "title": "Deine letzte Bestellung",

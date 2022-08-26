@@ -101,7 +101,7 @@ describe('Profile view', () => {
     expect(mockUseNavigate).toHaveBeenCalledWith(`/taste-finder?step=bearbeiten`)
   })
 
-  it.each(['vendor=Nomad', 'origin=BU'])('handles click on catalogue %s', async (btn) => {
+  it.each(['vendor=Nomad', 'origin=ET'])('handles click on catalogue %s', async (btn) => {
     jest.mock('@apollo/client/react/hooks', () => ({
       ...jest.requireActual('@apollo/client/react/hooks'),
       useLazyQuery: () => [{}],
@@ -119,6 +119,26 @@ describe('Profile view', () => {
     const button = await screen.findByTestId(`button-${btn}`)
     button.click()
     expect(mockUseNavigate).toHaveBeenCalledWith(`/catalogue?${btn}`)
+  })
+
+  it('handles click on blog button', async () => {
+    jest.mock('@apollo/client/react/hooks', () => ({
+      ...jest.requireActual('@apollo/client/react/hooks'),
+      useLazyQuery: () => [{}],
+    }))
+    render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
+        mocks={[UserProfileMock, OrdersMock]}
+        addTypename={false}
+      >
+        <Profile />
+      </MockedProvider>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    const button = await screen.findByTestId(`button-blog`)
+    button.click()
+    expect(mockUseNavigate).toHaveBeenCalledWith(`${process.env.REACT_APP_DOMAIN_BLOG}/de/Zubereitungstipps`)
   })
 
   afterAll(() => {

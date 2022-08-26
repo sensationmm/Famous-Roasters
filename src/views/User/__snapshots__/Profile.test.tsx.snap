@@ -346,6 +346,74 @@ exports[`Profile view Renders correctly 1`] = `
         <div
           class="w-full max-w-7xl mx-auto px-6 xl:px-8 py-8"
         >
+          <div
+            class="grid w-full md:grid-cols-2"
+          >
+            <div
+              class="grid grid-cols-2 grid-cols-[150px_1fr] gap-4 px-0 border-b border-brand-grey-bombay md:max-w-sm md:border-0"
+            >
+              <a
+                href="/catalogue?vendor=Nomad"
+              >
+                <img
+                  class="w-full"
+                  src="nomad-coffee.png"
+                />
+              </a>
+              <div
+                class="flex flex-col justify-center"
+              >
+                <p
+                  class="mb-4 text-base leading-6"
+                >
+                  Neu bei 60beans: Nomad Coffee aus Barcelona!
+                </p>
+                <button
+                  class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-3 py-2 text-xs font-semibold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
+                  data-testid="button-vendor=Nomad"
+                  role="button"
+                >
+                  Produkte erkunden
+                </button>
+              </div>
+            </div>
+            <div
+              class="grid grid-cols-2 grid-cols-[150px_1fr] gap-4 px-3 md:max-w-sm"
+            >
+              <a
+                href="/catalogue?origin=ET"
+              >
+                <img
+                  class="w-full"
+                  src="ethiopian-coffee.png"
+                />
+              </a>
+              <div
+                class="flex flex-col justify-center"
+              >
+                <p
+                  class="mb-4 text-base leading-6"
+                >
+                  Entdecke den Kaffee Äthiopiens!
+                </p>
+                <button
+                  class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-3 py-2 text-xs font-semibold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
+                  data-testid="button-origin=ET"
+                  role="button"
+                >
+                  Produkte erkunden
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-full border-b border-brand-grey-bombay"
+      >
+        <div
+          class="w-full max-w-7xl mx-auto px-6 xl:px-8 py-8"
+        >
           <h2
             class="mb-3 text-2xl leading-8 font-semibold"
           >
@@ -660,11 +728,11 @@ exports[`Profile view Renders correctly 1`] = `
               class="grid grid-cols-2 grid-cols-[150px_1fr] gap-4 px-0 py-6 border-b border-brand-grey-bombay md:max-w-sm md:border-0"
             >
               <a
-                href="/catalogue?vendor=Nomad"
+                href="//blog.60beans.com/de/Zubereitungstipps"
               >
                 <img
                   class="w-full"
-                  src="coffee-taste.png"
+                  src="coffee-knowledge.png"
                 />
               </a>
               <div
@@ -673,78 +741,14 @@ exports[`Profile view Renders correctly 1`] = `
                 <p
                   class="mb-4 text-base leading-6"
                 >
-                  NOMAD Coffee is our latetest roaster in the catalog!
+                  Entdecke weitere Zubereitungstipps im 60beans Blog.
                 </p>
                 <button
-                  class="relative inline-flex flex-row items-center rounded-full border-2 pl-3 pr-8 py-2 text-xs font-semibold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
-                  data-testid="button-vendor=Nomad"
+                  class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-3 py-2 text-xs font-semibold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
+                  data-testid="button-blog"
                   role="button"
                 >
-                  Produkte erkunden
-                  <svg
-                    class="absolute right-2 !fill-white !text-white !stroke-white fill-brand-black stroke-brand-black"
-                    fill="inherit"
-                    height="14"
-                    viewBox="0 0 15 13"
-                    width="14"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M8.83333 1.83301L13.5 6.49967M13.5 6.49967L8.83333 11.1663M13.5 6.49967L1.5 6.49967"
-                      fill="inherit"
-                      fill-rule="evenodd"
-                      stroke="inherit"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div
-              class="grid grid-cols-2 grid-cols-[150px_1fr] gap-4 px-3 py-6 md:max-w-sm"
-            >
-              <a
-                href="/catalogue?origin=BU"
-              >
-                <img
-                  class="w-full"
-                  src="myanmar.png"
-                />
-              </a>
-              <div
-                class="flex flex-col justify-center"
-              >
-                <p
-                  class="mb-4 text-base leading-6"
-                >
-                  Discover new complex origins: Myanmar!
-                </p>
-                <button
-                  class="relative inline-flex flex-row items-center rounded-full border-2 pl-3 pr-8 py-2 text-xs font-semibold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
-                  data-testid="button-origin=BU"
-                  role="button"
-                >
-                  Produkte erkunden
-                  <svg
-                    class="absolute right-2 !fill-white !text-white !stroke-white fill-brand-black stroke-brand-black"
-                    fill="inherit"
-                    height="14"
-                    viewBox="0 0 15 13"
-                    width="14"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M8.83333 1.83301L13.5 6.49967M13.5 6.49967L8.83333 11.1663M13.5 6.49967L1.5 6.49967"
-                      fill="inherit"
-                      fill-rule="evenodd"
-                      stroke="inherit"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                  Mehr entdecken
                 </button>
               </div>
             </div>
