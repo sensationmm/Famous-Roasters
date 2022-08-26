@@ -164,10 +164,10 @@ exports[`Blog View Renders correctly 1`] = `
       class="flex-grow flex w-full flex-col"
     >
       <div
-        class="w-full max-w-7xl mx-auto px-6 xl:px-8 my-8 "
+        class="w-full max-w-[688px] mx-auto px-6 xl:px-8 my-8 "
       >
         <h1
-          class="font-syne text-3xl leading-10 font-semibold tracking-tight"
+          class="font-syne text-[32px] -tracking-[.02em] text-3xl leading-10 font-semibold tracking-tight"
         >
           Full Immersion Zubereitung mit der French Press.
         </h1>
@@ -208,38 +208,38 @@ exports[`Blog View Renders correctly 1`] = `
         <div
           class="mt-8"
         >
-          <h4
-            class="mb-4 text-lg leading-7 font-semibold"
+          <h2
+            class="mb-8 text-[24px] md:text-[32px] -tracking-[.02em] leading-8 md:leading-9 font-semibold font-syne"
           >
             Kaffee brühen in einer Pressstempelkanne.
-          </h4>
+          </h2>
           <p
-            class="mb-4"
+            class="text-lg md:text-[20px] -tracking-[.02em] leading-7 mb-6"
           >
             In der Studentenbude zeugt sie von zahlreichen Einsätzen. Auf dem Regal der großbürgerlichen Villa funkelt die Designerversion. Sie zieht sich durch alle Bevölkerungsgruppen, fast jeder kennt sie, viele haben eine oder mehrere zu Hause. Die ikonische Kanne gibt es in den verschiedensten Materialien. Besonders beliebt sind Modell aus Glas oder Edelstahl. Die French Press, oder auch Pressstempelkanne gehört zu den populärsten Arten der Kaffeezubereitung. Und das aus vielerlei Gründen. Einer der wichtigsten ist die Tatsache, dass sie zu den Full Immersion Kaffeebereitern zählt. Was heißt das? Bei der Extraktion ist der beliebig grob gemahlene Kaffee durchgehend mit heißem Wasser in Kontakt und wird erst danach gefiltert. Das Metallsieb, das als Filter dient, belässt die im Kaffee enthaltenen Fette und Öle. Im Vergleich zu anderen Methoden der Kaffeezubereitung verleiht dies dem Getränk einen vollmundigeren Geschmack und mehr Körper. Und das schmeckt man bei jeder Tasse. Wer also seinen Kaffee so am liebsten mag, dem sei die French Press wärmstens empfohlen. Einfach mal ausprobieren!
           </p>
-          <h4
-            class="mb-4 text-lg leading-7 font-semibold"
+          <h2
+            class="mb-8 text-[24px] md:text-[32px] -tracking-[.02em] leading-8 md:leading-9 font-semibold font-syne"
           >
             Kaffee mit mittlerem Mahlgrad einfüllen, warten, pressen – und genießen. 
-          </h4>
+          </h2>
           <p
-            class="mb-4"
+            class="text-lg md:text-[20px] -tracking-[.02em] leading-7 mb-6"
           >
             Was die French Press außerdem so überzeugend macht, ist ihre unkomplizierte Handhabung. Nach nur wenigen Handgriffen steht dem puren Kaffeegenuss nichts mehr im Wege. Für die Zubereitung eures Kaffees in der French Press empfiehlt sich ein mittlerer bis grober Mahlgrad, am besten frisch gemahlen. Die Wassertemperatur sollte ca. 96 Grad betragen. Doch das nur als Anhaltspunkt, denn Ihr könnt ganz problemlos herumexperimentieren. So werden beispielsweise 60 Gramm gemahlener Kaffee für die 1-Liter-Stempelkanne empfohlen. Aber auch das ist eurem persönlichen Geschmack überlassen. Wer seinen Kaffee intensiver mag, nimmt etwas mehr Kaffee. Nun einfach die French Press mit der gewünschten Menge frisch gemahlenem Kaffee befüllen, anschließend mit heißem Wasser übergießen und mit kreisenden Bewegungen vorsichtig umrühren. Den Kaffee je nach gewünschter Stärke zwischen 3 und 5 Minuten ziehen lassen, nun noch das Sieb vorsichtig herunterdrücken. Weil es sich um eine manuelle Methode handelt, könnt Ihr mehr Kontrolle über Wassertemperatur und Extraktionszeit sowie die Menge des gemahlenen Kaffees ausüben. Dadurch habt Ihr die Möglichkeit, zu beeinflussen, wie euer Kaffee am Ende schmeckt. Einmal French Press-Fan, werdet Ihr im Laufe der Zeit eure ganz eigene Art der Zubereitung und den perfekten Kaffee dazu entdecken. 
           </p>
-          <h4
-            class="mb-4 text-lg leading-7 font-semibold"
+          <h2
+            class="mb-8 text-[24px] md:text-[32px] -tracking-[.02em] leading-8 md:leading-9 font-semibold font-syne"
           >
             Kaffeegenuss in seiner praktischsten Form.
-          </h4>
+          </h2>
           <p
-            class="mb-4"
+            class="text-lg md:text-[20px] -tracking-[.02em] leading-7 mb-6"
           >
             Ihr möchtet auch im Urlaub nicht auf das besondere Tässchen am Morgen verzichten? Wie gut, dass die Pressstempelkanne zu den unkompliziertesten Kaffeebereitern gehört und Ihr sie überall hin mitnehmen könnt. Und sollte sie doch einmal kaputt oder verloren gehen, kostet das auch nicht die Welt. Hauptsache, Ihr macht beim Geschmack keinerlei Abstriche!
           </p>
           <p
-            class="mb-4"
+            class="text-lg md:text-[20px] -tracking-[.02em] leading-7 mb-6"
           />
         </div>
       </div>

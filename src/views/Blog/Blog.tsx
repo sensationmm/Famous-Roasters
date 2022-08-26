@@ -12,7 +12,7 @@ import {
   TypographySize,
   TypographyType,
 } from 'src/components'
-import { parseHtmlSafely, readTimeCalculator } from 'src/utils'
+import { formatBlogHtmlElement, parseHtmlSafely, readTimeCalculator } from 'src/utils'
 
 interface BlogProps {
   locale?: string
@@ -50,7 +50,7 @@ export const Blog: React.FC<BlogProps> = ({ locale = 'de_de' }) => {
   return (
     <Layout navigationTheme={NavigationTheme.Home}>
       <main className="flex-grow flex w-full flex-col">
-        <div className="w-full max-w-7xl mx-auto px-6 xl:px-8 my-8 ">
+        <div className="w-full max-w-[688px] mx-auto px-6 xl:px-8 my-8 ">
           {data.standardBlogPosts.length !== 0 ? (
             <>
               <Helmet>
@@ -58,7 +58,12 @@ export const Blog: React.FC<BlogProps> = ({ locale = 'de_de' }) => {
                 <meta name="description" content={data.standardBlogPosts[0].seoMetaDescription} />
               </Helmet>
 
-              <Typography as="h1" type={TypographyType.Heading} size={TypographySize.Base} className="font-syne">
+              <Typography
+                as="h1"
+                type={TypographyType.Heading}
+                size={TypographySize.Base}
+                className="font-syne text-[32px] -tracking-[.02em]"
+              >
                 {data.standardBlogPosts[0].title}
               </Typography>
 
@@ -80,7 +85,7 @@ export const Blog: React.FC<BlogProps> = ({ locale = 'de_de' }) => {
               <div
                 className="mt-8"
                 dangerouslySetInnerHTML={{
-                  __html: parseHtmlSafely(data.standardBlogPosts[0].content.html),
+                  __html: parseHtmlSafely(data.standardBlogPosts[0].content.html, formatBlogHtmlElement),
                 }}
               />
             </>
