@@ -1,3 +1,10 @@
+# [1.61.0](https://github.com/Famous-Roasters/frontend/compare/v1.60.0...v1.61.0) (2022-08-26)
+
+
+### Features
+
+* **signup:** trigger validation onBlur instead of onChange ([8ee11cf](https://github.com/Famous-Roasters/frontend/commit/8ee11cfa22b945671d775e1bd912391c11945417))
+
 # [1.60.0](https://github.com/Famous-Roasters/frontend/compare/v1.59.0...v1.60.0) (2022-08-26)
 
 
