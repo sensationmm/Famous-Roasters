@@ -45,16 +45,27 @@ export const formatBlogHtmlElement = (el: Element) => {
     case 'H4':
     case 'H5':
     case 'H6': {
-      el.setAttribute('class', 'mb-4 text-2xl leading-8 font-semibold font-syne')
+      el.setAttribute(
+        'class',
+        'mb-8 text-[24px] md:text-[32px] -tracking-[.02em] leading-8 md:leading-9 font-semibold font-syne',
+      )
       return el
     }
-    case 'P':
-      el.setAttribute('class', 'text-lg leading-7 mb-4')
+    case 'P': {
+      el.setAttribute('class', 'text-lg md:text-[20px] -tracking-[.02em] leading-7 mb-6')
       return el
+    }
     case 'IFRAME': {
       const containerEl = document.createElement('div')
       containerEl.setAttribute('class', 'video-container mb-4')
       containerEl.append(el)
+      return containerEl
+    }
+    case 'IMG': {
+      const containerEl = document.createElement('div')
+      containerEl.setAttribute('class', 'flex justify-center h-[304px] md:h-[352px] my-[48px] overflow-hidden')
+      containerEl.append(el)
+      el.setAttribute('class', 'object-cover min-w-full min-h-full')
       return containerEl
     }
     default:
