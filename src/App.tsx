@@ -13,7 +13,6 @@ import {
   CategoryList,
   Error,
   FeaturedProduct,
-  Home,
   Orders,
   Product,
   Profile,
@@ -65,7 +64,7 @@ const App = () => {
           <BrowserRouter>
             <ScrollToTop />
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Catalogue />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/catalogue" element={<Catalogue />} />
               <Route path="/product/:id" element={<Product />} />

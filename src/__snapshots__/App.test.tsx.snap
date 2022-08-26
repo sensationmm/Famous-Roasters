@@ -146,13 +146,48 @@ exports[`App Renders correctly 1`] = `
                 <div
                   class="ml-4 flow-root xl:ml-10"
                 >
-                  <button
-                    class="relative inline-flex flex-row items-center rounded-full border-2 px-3 py-2 text-sm font-semibold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
-                    data-testid="button-shop"
-                    role="button"
+                  <a
+                    class="group -m-2 p-2 flex items-center"
+                    href="/cart"
+                    id="toCart"
                   >
-                    Shop
-                  </button>
+                    <div
+                      class="static flex-shrink-0 relative"
+                    >
+                      <svg
+                        class="undefined fill-brand-black stroke-brand-black"
+                        fill="inherit"
+                        height="24"
+                        viewBox="0 0 24 25"
+                        width="24"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M3 3.66663H5L5.4 5.66663M7 13.6666H17L21 5.66663H5.4M7 13.6666L5.4 5.66663M7 13.6666L4.70711 15.9595C4.07714 16.5895 4.52331 17.6666 5.41421 17.6666H17M17 17.6666C15.8954 17.6666 15 18.5621 15 19.6666C15 20.7712 15.8954 21.6666 17 21.6666C18.1046 21.6666 19 20.7712 19 19.6666C19 18.5621 18.1046 17.6666 17 17.6666ZM9 19.6666C9 20.7712 8.10457 21.6666 7 21.6666C5.89543 21.6666 5 20.7712 5 19.6666C5 18.5621 5.89543 17.6666 7 17.6666C8.10457 17.6666 9 18.5621 9 19.6666Z"
+                          fill="none"
+                          fill-rule="evenodd"
+                          stroke="#FFFFFF"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                      <span
+                        class="absolute top-3 left-4 h-4 w-4 z-10 bg-white rounded-full"
+                      >
+                        <div
+                          class="absolute top-0 left-1 z-15 text-coreUI-text-primary text-xs leading-4 font-semibold"
+                        >
+                          0
+                        </div>
+                      </span>
+                      <span
+                        class="sr-only"
+                      >
+                        items in cart, view bag
+                      </span>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -161,19 +196,518 @@ exports[`App Renders correctly 1`] = `
       </header>
     </div>
     <main
-      class="flex-grow flex items-center justify-center bg-brand-grey-whisper"
+      class="flex flex-grow w-full items-start justify-center bg-white mt-4"
     >
-      <div>
-        <img
-          alt="60beans"
-          class="h-16"
-          src="60beans-black.svg"
+      <div
+        class="w-full max-w-7xl mx-auto px-6 xl:px-8"
+      >
+        <div
+          class="flex"
+          role="tablist"
+        >
+          <button
+            aria-selected="true"
+            class="mr-6"
+            data-testid="tab-coffee"
+            role="tab"
+            type="button"
+          >
+            <span
+              class="text-brand-black font-semibold border-b-2 pb-1.5 text-sm leading-5"
+            >
+              Kaffee
+            </span>
+          </button>
+          <button
+            aria-selected="false"
+            class="mr-6"
+            data-testid="tab-accessories"
+            role="tab"
+            type="button"
+          >
+            <span
+              class="text-coreUI-text-secondary hover:text-coreUI-text-primary pb-1.5 text-sm leading-5"
+            >
+              Zubehör
+            </span>
+          </button>
+        </div>
+        <div
+          class="md:flex gap-x-4 mt-6 mb-4"
+        >
+          <div>
+            <select
+              class="nochevron text-xl leading-7 font-semibold border-b-2 minimal pb-2 pr-7 bg-white"
+            >
+              <option
+                value=""
+              >
+                Alle Kaffees
+              </option>
+            </select>
+            <svg
+              aria-hidden="true"
+              class="-ml-5 -mt-1 h-6 w-6 inline"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 9l-7 7-7-7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div
+            class="my-4 md:hidden"
+          >
+            <button
+              class="flex w-full flex-row items-start cursor-pointer disabled:opacity-20 disabled:cursor-not-allowed"
+              data-testid="checkbox"
+              disabled=""
+            >
+              <div>
+                <svg
+                  class="undefined fill-brand-black stroke-brand-black"
+                  fill="inherit"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M19 22H5c-1.7 0-3-1.3-3-3V5c0-1.7 1.3-3 3-3h14c1.7 0 3 1.3 3 3v14c0 1.7-1.3 3-3 3zM5 4c-.6 0-1 .4-1 1v14c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V5c0-.6-.4-1-1-1H5z"
+                    fill="inherit"
+                    fill-rule="evenodd"
+                    stroke="inherit"
+                    stroke-width="0.25"
+                  />
+                </svg>
+              </div>
+              <div
+                class="flex grow text-left pl-2 text-base leading-6"
+              >
+                Nur Entkoffeiniert
+              </div>
+            </button>
+          </div>
+          <div
+            class="ais-SearchBox ml-auto"
+          >
+            <form
+              action=""
+              class="ais-SearchBox-form"
+              novalidate=""
+            >
+              <input
+                autocapitalize="off"
+                autocomplete="off"
+                autocorrect="off"
+                class="ais-SearchBox-input rounded-full border border-coreUI-text-tertiary px-4 py-2 w-full md:w-96 "
+                maxlength="512"
+                placeholder="Finde deine Kaffees oder Röster"
+                spellcheck="false"
+                type="search"
+                value=""
+              />
+              <button
+                class="ais-SearchBox-submit"
+                title="Submit the search query."
+                type="submit"
+              >
+                <svg
+                  class="ais-SearchBox-submitIcon -ml-6"
+                  height="10"
+                  viewBox="0 0 40 40"
+                  width="10"
+                >
+                  <path
+                    d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z"
+                  />
+                </svg>
+              </button>
+              <button
+                class="ais-SearchBox-reset hidden"
+                hidden=""
+                title="Clear the search query."
+                type="reset"
+              >
+                <svg
+                  class="ais-SearchBox-resetIcon hidden"
+                  height="10"
+                  viewBox="0 0 20 20"
+                  width="10"
+                >
+                  <path
+                    d="M8.114 10L.944 2.83 0 1.885 1.886 0l.943.943L10 8.113l7.17-7.17.944-.943L20 1.886l-.943.943-7.17 7.17 7.17 7.17.943.944L18.114 20l-.943-.943-7.17-7.17-7.17 7.17-.944.943L0 18.114l.943-.943L8.113 10z"
+                  />
+                </svg>
+              </button>
+              <span
+                class="ais-SearchBox-loadingIndicator hidden"
+                hidden=""
+              >
+                <svg
+                  class="ais-SearchBox-loadingIcon"
+                  height="16"
+                  stroke="#444"
+                  viewBox="0 0 38 38"
+                  width="16"
+                >
+                  <g
+                    fill="none"
+                    fill-rule="evenodd"
+                  >
+                    <g
+                      stroke-width="2"
+                      transform="translate(1 1)"
+                    >
+                      <circle
+                        cx="18"
+                        cy="18"
+                        r="18"
+                        stroke-opacity=".5"
+                      />
+                      <path
+                        d="M36 18c0-9.94-8.06-18-18-18"
+                      >
+                        <animatetransform
+                          attributeName="transform"
+                          dur="1s"
+                          from="0 18 18"
+                          repeatCount="indefinite"
+                          to="360 18 18"
+                          type="rotate"
+                        />
+                      </path>
+                    </g>
+                  </g>
+                </svg>
+              </span>
+            </form>
+          </div>
+        </div>
+        <div
+          class="hidden md:flex"
+        >
+          <div
+            class="flex flex-row gap-x-4 justify-end w-full"
+          >
+            <div
+              class="mr-auto mt-2"
+            >
+              <button
+                class="flex w-full flex-row items-start cursor-pointer disabled:opacity-20 disabled:cursor-not-allowed"
+                data-testid="checkbox"
+                disabled=""
+              >
+                <div>
+                  <svg
+                    class="undefined fill-brand-black stroke-brand-black"
+                    fill="inherit"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M19 22H5c-1.7 0-3-1.3-3-3V5c0-1.7 1.3-3 3-3h14c1.7 0 3 1.3 3 3v14c0 1.7-1.3 3-3 3zM5 4c-.6 0-1 .4-1 1v14c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V5c0-.6-.4-1-1-1H5z"
+                      fill="inherit"
+                      fill-rule="evenodd"
+                      stroke="inherit"
+                      stroke-width="0.25"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="flex grow text-left pl-2 text-base leading-6"
+                >
+                  Nur Entkoffeiniert
+                </div>
+              </button>
+            </div>
+            <div
+              class="w-auto min-w-fit max-w-xs relative"
+            >
+              <div
+                class="grid grid-cols-2 items-end"
+              />
+              <button
+                aria-expanded="false"
+                aria-haspopup="true"
+                class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
+                data-testid="button-listbox"
+                id="headlessui-listbox-button-:r0:"
+                type="button"
+              >
+                <span
+                  class="block truncate text-base leading-6"
+                >
+                  Geschmacksprofil
+                   
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="-mr-1 ml-2 mt-1 h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19 9l-7 7-7-7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="w-auto min-w-fit max-w-xs relative"
+            >
+              <div
+                class="grid grid-cols-2 items-end"
+              />
+              <button
+                aria-expanded="false"
+                aria-haspopup="true"
+                class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
+                data-testid="button-listbox"
+                id="headlessui-listbox-button-:r1:"
+                type="button"
+              >
+                <span
+                  class="block truncate text-base leading-6"
+                >
+                  Bohnensorte
+                   
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="-mr-1 ml-2 mt-1 h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19 9l-7 7-7-7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="w-auto min-w-fit max-w-xs relative"
+            >
+              <div
+                class="grid grid-cols-2 items-end"
+              />
+              <button
+                aria-expanded="false"
+                aria-haspopup="true"
+                class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
+                data-testid="button-listbox"
+                id="headlessui-listbox-button-:r2:"
+                type="button"
+              >
+                <span
+                  class="block truncate text-base leading-6"
+                >
+                  Ursprung
+                   
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="-mr-1 ml-2 mt-1 h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19 9l-7 7-7-7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="w-auto min-w-fit max-w-xs relative"
+            >
+              <div
+                class="grid grid-cols-2 items-end"
+              />
+              <button
+                aria-expanded="false"
+                aria-haspopup="true"
+                class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
+                data-testid="button-listbox"
+                id="headlessui-listbox-button-:r3:"
+                type="button"
+              >
+                <span
+                  class="block truncate text-base leading-6"
+                >
+                  Rösterei
+                   
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="-mr-1 ml-2 mt-1 h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19 9l-7 7-7-7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-row space-between gap-x-4 my-4"
+        >
+          <div
+            class="hidden md:flex w-1/2"
+          />
+          <div
+            class="w-1/2 md:hidden"
+          >
+            <button
+              class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
+              data-testid="button-filters-menu-open"
+            >
+              <span
+                class="block truncate text-base leading-6"
+              >
+                Filter
+              </span>
+              <svg
+                aria-hidden="true"
+                class="-mr-1 ml-2 h-5 w-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="w-1/2 flex flex-row justify-end"
+          >
+            <div
+              class="ais-SortBy chevron w-full md:w-48"
+            >
+              <select
+                class="ais-SortBy-select rounded-full border border-coreUI-text-tertiary px-4 py-2 bg-white w-full"
+              >
+                <option
+                  class="ais-SortBy-option"
+                  value="products"
+                >
+                  Neue zuerst
+                </option>
+                <option
+                  class="ais-SortBy-option"
+                  value="products_price_asc"
+                >
+                  Preis aufsteigend
+                </option>
+                <option
+                  class="ais-SortBy-option"
+                  value="products_price_desc"
+                >
+                  Preis absteigend
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div
+          class="md:hidden"
         />
         <div
-          class="text-center text-lg leading-7"
+          class="ais-Hits mb-8 ais-Hits--empty"
         >
-          Home
+          <ol
+            class="ais-Hits-list grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
+          />
         </div>
+        <nav
+          class="border-t border-coreUI-border flex items-center justify-between mb-8"
+        >
+          <div
+            class="flex-1 flex justify-end mr-2"
+          >
+            <button
+              class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center font-bold text-coreUI-text-tertiary"
+              data-testid="pagination-previous"
+              disabled=""
+            >
+              <svg
+                aria-hidden="true"
+                class="mr-1.5 h-5 w-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="cursor-pointer w-12 h-10 pt-3.5 text-center font-bold text-coreUI-text-tertiary border-t-2  text-coreUI-text-primary border-black"
+          >
+            1
+          </div>
+          <div
+            class="flex-1 flex justify-start -mt-0.5 ml-2"
+          >
+            <button
+              class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center font-bold text-coreUI-text-tertiary"
+              data-testid="pagination-next"
+              disabled=""
+            >
+              <svg
+                aria-hidden="true"
+                class="ml-1.5 h-5 w-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+        </nav>
       </div>
     </main>
     <footer
