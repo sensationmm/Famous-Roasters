@@ -218,7 +218,14 @@
   },
   "cta": {
     "next": "Weiter",
-    "prev": "Zurück"
+    "prev": "Zurück",
+    "filters" : {
+      "label": "Sortieren nach...",
+      "values": {
+        "newest": "Latest order",
+        "oldest": "Oldest order"
+      }
+    }
   },
   "error": {
     "generic": {
@@ -1123,6 +1130,12 @@
           "title": "Wie sollen wir dich nennen?"
         }
       }
+    },
+    "orders": {
+      "title": "Your Orders",
+      "intro": "Find all information you need about your orders in one place",
+      "noOrdersText": "You have no past orders",
+      "noOrdersTextFiltered": "You have no past orders with Order ID containing "
     },
     "rate": {
       "rateCoffee": "Kaffee bewerten",

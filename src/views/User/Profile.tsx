@@ -33,6 +33,7 @@ import { formatDate, formatPrice, getSimplifiedId } from 'src/utils'
 
 import { CollectionQuery } from '../Catalogue'
 import { ProductCustom } from '../Product'
+import { Order } from './Orders'
 
 interface TasteFinderProfile extends TasteProfileProps {
   coffeeType: string
@@ -44,45 +45,6 @@ interface UserProfile {
   newsletterSignup: boolean
   tasteFinderProfile: TasteFinderProfile
   aroma: CoffeeAroma
-}
-
-export type OrderVariant = {
-  node: {
-    id: string
-    title: string
-    product: {
-      id: string
-    }
-    image: {
-      url?: string
-      src?: string
-    }
-    quantity: number
-    variant: {
-      id: string
-      title: string
-      price: string
-      weight: number
-    }
-  }
-}
-
-type Order = {
-  id: string
-  name: string
-  createdAt: string
-  displayFulfillmentStatus: string
-  displayFinancialStatus: string
-  totalPriceSet: {
-    shopMoney: {
-      amount: string
-      currencyCode: string
-    }
-  }
-  discountCode: string
-  lineItems: {
-    edges: OrderVariant[]
-  }
 }
 
 export const Profile: React.FC = () => {
@@ -232,7 +194,7 @@ export const Profile: React.FC = () => {
               emphasis={ButtonEmphasis.Tertiary}
               icon={IconName.Orders}
               hasArrow
-              onClick={() => navigate('/profile/orders')}
+              onClick={() => navigate('/orders')}
               disabled
             >
               {t('pages.profile.links.orders')}

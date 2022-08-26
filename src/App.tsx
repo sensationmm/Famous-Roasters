@@ -14,6 +14,7 @@ import {
   Error,
   FeaturedProduct,
   Home,
+  Orders,
   Product,
   Profile,
   ProfileSub,
@@ -87,6 +88,14 @@ const App = () => {
                 element={
                   <ApolloProvider client={famousRoastersClient()}>
                     <Profile />
+                  </ApolloProvider>
+                }
+              />
+              <Route
+                path="/orders"
+                element={
+                  <ApolloProvider client={famousRoastersClient()}>
+                    <Orders />
                   </ApolloProvider>
                 }
               />

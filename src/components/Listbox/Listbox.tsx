@@ -25,6 +25,9 @@ interface ListboxProps {
   hasSpacerAfterItem?: string[]
   swatches?: JSX.Element[]
   itemDisabledMsg?: string
+  className?: string
+  isSmall?: boolean
+  borderColor?: string
 }
 
 export const Listbox: React.FC<ListboxProps> = ({
@@ -42,6 +45,9 @@ export const Listbox: React.FC<ListboxProps> = ({
   hasSpacerAfterItem = undefined,
   swatches = undefined,
   itemDisabledMsg,
+  className,
+  isSmall = false,
+  borderColor = 'border-coreUI-text-tertiary',
   ...props
 }: ListboxProps) => {
   const noneItem: ListBoxItem = { name: 'none', value: 'none' }
@@ -142,10 +148,15 @@ export const Listbox: React.FC<ListboxProps> = ({
       </HUIListbox.Button>
     ) : (
       <HUIListbox.Button
-        className="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
+        className={`inline-flex justify-between w-full ${
+          !isSmall ? 'px-4 py-2' : 'px-3 py-0.5'
+        } text-left bg-white rounded-full border ${borderColor} cursor-default`}
         data-testid="button-listbox"
       >
-        <Typography size={TypographySize.Base} className={classNames.join(' ')}>
+        <Typography
+          size={!isSmall ? TypographySize.Base : TypographySize.Small}
+          className={`${classNames.join(' ')}${isSmall ? ' pt-0.5' : ''}`}
+        >
           {selectedOption()}
         </Typography>
         {renderIcon()}
@@ -161,7 +172,14 @@ export const Listbox: React.FC<ListboxProps> = ({
   }
 
   return (
-    <div className={big ? 'w-auto min-w-fit max-w-xs relative' : 'w-full relative'} {...props}>
+    <div
+      className={
+        big
+          ? `${className ? `${className} ` : ''}w-auto min-w-fit max-w-xs relative`
+          : `${className ? `${className} ` : ''}w-full relative`
+      }
+      {...props}
+    >
       <HUIListbox value={activeItems} onChange={onChangeHandler} multiple={multiple}>
         {({ open }) => (
           <>
@@ -184,7 +202,7 @@ export const Listbox: React.FC<ListboxProps> = ({
                       className={({ active }) =>
                         `cursor-pointer select-none relative py-2 pl-8 pr-4 ${
                           active ? 'bg-brand-grey-whisper' : 'bg-transparent'
-                        }`
+                        } ${isSmall ? 'text-sm' : ''}`
                       }
                       value={option}
                     >

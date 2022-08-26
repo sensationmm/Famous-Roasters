@@ -75,16 +75,16 @@ export const FeaturedProduct: React.FC = () => {
       : 0,
   }
 
-  if (error || !data?.product) {
-    return <ErrorPrompt promptAction={() => history.go(0)} />
-  }
-
-  if (loading || !images) {
+  if (loading) {
     return (
       <div className="flex h-64 mb-32 justify-center items-center">
         <Loader />
       </div>
     )
+  }
+
+  if (error || !data?.product) {
+    return <ErrorPrompt promptAction={() => history.go(0)} />
   }
 
   const getMatchScore = () => {
@@ -150,7 +150,7 @@ export const FeaturedProduct: React.FC = () => {
         <div className="grid grid-cols-2 gap-0 mt-8 md:gap-4">
           <Link to={`/product/${id}`} className="flex justify-center items-start md:row-start-1 md:row-end-3">
             <div className="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-3/4 shrink-0 grow-0">
-              <img src={images.nodes[0].url} alt={title} className="w-full w-3/4 h-auto shrink-0 grow-0" />
+              <img src={images?.nodes[0].url} alt={title} className="w-full w-3/4 h-auto shrink-0 grow-0" />
             </div>
           </Link>
           {data?.product && (

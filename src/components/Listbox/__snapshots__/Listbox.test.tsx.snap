@@ -44,6 +44,105 @@ exports[`Listbox component Renders correctly 1`] = `
 </div>
 `;
 
+exports[`Listbox component Renders correctly for small variant 1`] = `
+<div>
+  <div
+    class="w-full relative"
+  >
+    <div
+      class="grid grid-cols-2 items-end"
+    >
+      <div />
+      <div
+        class="justify-self-end"
+      />
+    </div>
+    <button
+      aria-controls="headlessui-listbox-options-:r3:"
+      aria-expanded="true"
+      aria-haspopup="true"
+      class="inline-flex justify-between w-full px-3 py-0.5 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
+      data-testid="button-listbox"
+      id="headlessui-listbox-button-:r1:"
+      type="button"
+    >
+      <span
+        class="block truncate pt-0.5 text-sm leading-5"
+      >
+        Sortieren nach...
+      </span>
+      <svg
+        aria-hidden="true"
+        class="-mr-1 ml-2 h-6 w-6"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </button>
+    <ul
+      aria-labelledby="headlessui-listbox-button-:r1:"
+      aria-orientation="vertical"
+      class="absolute z-10 min-w-full mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 border border-coreUI-background-images focus:outline-none"
+      id="headlessui-listbox-options-:r3:"
+      role="listbox"
+      tabindex="0"
+    >
+      <div>
+        <li
+          class="cursor-pointer select-none relative py-2 pl-8 pr-4 bg-transparent text-sm"
+          data-testid="option-0"
+          id="headlessui-listbox-option-:r4:"
+          role="option"
+          tabindex="-1"
+        >
+          <span
+            class="block truncate flex align-middle font-normal undefined"
+          >
+            pages.catalogue.filters.sort.values.option1
+          </span>
+        </li>
+      </div>
+      <div>
+        <li
+          class="cursor-pointer select-none relative py-2 pl-8 pr-4 bg-transparent text-sm"
+          data-testid="option-1"
+          id="headlessui-listbox-option-:r5:"
+          role="option"
+          tabindex="-1"
+        >
+          <span
+            class="block truncate flex align-middle font-normal undefined"
+          >
+            pages.catalogue.filters.sort.values.option2
+          </span>
+        </li>
+      </div>
+      <div>
+        <li
+          class="cursor-pointer select-none relative py-2 pl-8 pr-4 bg-transparent text-sm"
+          data-testid="option-2"
+          id="headlessui-listbox-option-:r6:"
+          role="option"
+          tabindex="-1"
+        >
+          <span
+            class="block truncate flex align-middle font-normal undefined"
+          >
+            pages.catalogue.filters.sort.values.option3
+          </span>
+        </li>
+      </div>
+    </ul>
+  </div>
+</div>
+`;
+
 exports[`Listbox component Renders correctly multiple 1`] = `
 <div>
   <div
@@ -62,7 +161,7 @@ exports[`Listbox component Renders correctly multiple 1`] = `
       aria-haspopup="true"
       class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
       data-testid="button-listbox"
-      id="headlessui-listbox-button-:r4:"
+      id="headlessui-listbox-button-:ra:"
       type="button"
     >
       <span
@@ -106,7 +205,7 @@ exports[`Listbox component Renders correctly with initial value 1`] = `
       aria-haspopup="true"
       class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
       data-testid="button-listbox"
-      id="headlessui-listbox-button-:r3:"
+      id="headlessui-listbox-button-:r9:"
       type="button"
     >
       <span
@@ -150,7 +249,7 @@ exports[`Listbox component Renders correctly with no translated values 1`] = `
       aria-haspopup="true"
       class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
       data-testid="button-listbox"
-      id="headlessui-listbox-button-:r2:"
+      id="headlessui-listbox-button-:r8:"
       type="button"
     >
       <span
@@ -194,7 +293,7 @@ exports[`Listbox component Renders correctly with none item 1`] = `
       aria-haspopup="true"
       class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
       data-testid="button-listbox"
-      id="headlessui-listbox-button-:r1:"
+      id="headlessui-listbox-button-:r7:"
       type="button"
     >
       <span
@@ -238,7 +337,7 @@ exports[`Listbox component Renders with disabled items correctly 1`] = `
       aria-haspopup="true"
       class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
       data-testid="button-listbox"
-      id="headlessui-listbox-button-:rq:"
+      id="headlessui-listbox-button-:r17:"
       type="button"
     >
       <span
@@ -282,7 +381,7 @@ exports[`Listbox component Renders with selected disabled items correctly 1`] = 
       aria-haspopup="true"
       class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
       data-testid="button-listbox"
-      id="headlessui-listbox-button-:rr:"
+      id="headlessui-listbox-button-:r18:"
       type="button"
     >
       <span
@@ -326,7 +425,7 @@ exports[`Listbox component Renders with spacing items correctly 1`] = `
       aria-haspopup="true"
       class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
       data-testid="button-listbox"
-      id="headlessui-listbox-button-:rp:"
+      id="headlessui-listbox-button-:r16:"
       type="button"
     >
       <span

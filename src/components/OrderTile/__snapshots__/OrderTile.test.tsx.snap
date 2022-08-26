@@ -8,6 +8,7 @@ exports[`Order Tile component Renders correctly 1`] = `
   >
     <div
       class="flex justify-center items-center shrink-0 self-center relative w-32 h-32 cursor-pointer"
+      data-testid="image"
     >
       <div
         class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
@@ -24,6 +25,7 @@ exports[`Order Tile component Renders correctly 1`] = `
     >
       <div
         class="mb-2 cursor-pointer"
+        data-testid="tile"
       >
         <div
           class="text-base leading-6 font-semibold"
@@ -87,6 +89,7 @@ exports[`Order Tile component Renders correctly for multi item 1`] = `
   >
     <div
       class="flex justify-center items-center shrink-0 self-center relative w-32 h-32 cursor-pointer"
+      data-testid="image"
     >
       <div
         class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
@@ -103,6 +106,7 @@ exports[`Order Tile component Renders correctly for multi item 1`] = `
     >
       <div
         class="mb-2 cursor-pointer"
+        data-testid="tile"
       >
         <div
           class="text-base leading-6 font-semibold"
@@ -136,7 +140,88 @@ exports[`Order Tile component Renders correctly for multi item 1`] = `
 </div>
 `;
 
-exports[`Order Tile component Renders correctly without rate button 1`] = `
+exports[`Order Tile component Renders correctly for small variant 1`] = `
+<div>
+  <div
+    class="flex pt-4 w-full"
+    data-testid="wrapper"
+  >
+    <div
+      class="flex justify-center items-center shrink-0 self-center relative w-16 h-16 cursor-pointer"
+      data-testid="image"
+    >
+      <div
+        class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
+      >
+        <img
+          alt="Cycle Blend"
+          class="w-14 max-h-14"
+          src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/specialty-coffee-espresso-cycle-blend-cycle-roasters-lubeck_20copy.webp?v=1655307920"
+        />
+      </div>
+    </div>
+    <div
+      class="pl-4 flex flex-col justify-center"
+    >
+      <div
+        class="mb-2 cursor-pointer"
+        data-testid="tile"
+      >
+        <div
+          class="text-sm leading-5 font-semibold"
+        >
+          Cycle Blend
+        </div>
+        <div
+          class="text-coreUI-text-secondary text-sm leading-5"
+        >
+          250g / Ganze Bohne
+        </div>
+        <div
+          class="flex items-baseline"
+        >
+          <span
+            class="mr-1 text-base leading-6 font-semibold"
+          >
+            7,20 €
+          </span>
+          <span
+            class="text-coreUI-text-secondary text-xs leading-4"
+          >
+            (
+            28,80 €
+            /kg)
+          </span>
+        </div>
+      </div>
+      <div
+        class="flex md:hidden"
+      >
+        <button
+          class="relative inline-flex flex-row items-center rounded-full border-2 px-3 py-2 text-xs font-semibold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
+          data-testid="drawer-trigger"
+          role="button"
+        >
+          Kaffee bewerten
+        </button>
+      </div>
+      <div
+        class="hidden md:flex"
+      >
+        <button
+          class="relative inline-flex flex-row items-center rounded-full border-2 px-3 py-2 text-xs font-semibold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
+          data-testid="dialog-trigger"
+          role="button"
+        >
+          Kaffee bewerten
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Order Tile component Renders correctly without price 1`] = `
 <div>
   <div
     class="flex pt-8 w-full"
@@ -144,6 +229,7 @@ exports[`Order Tile component Renders correctly without rate button 1`] = `
   >
     <div
       class="flex justify-center items-center shrink-0 self-center relative w-32 h-32 cursor-pointer"
+      data-testid="image"
     >
       <div
         class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
@@ -160,6 +246,50 @@ exports[`Order Tile component Renders correctly without rate button 1`] = `
     >
       <div
         class="mb-2 cursor-pointer"
+        data-testid="tile"
+      >
+        <div
+          class="text-base leading-6 font-semibold"
+        >
+          Cycle Blend
+        </div>
+        <div
+          class="text-coreUI-text-secondary text-base leading-6"
+        >
+          250g / Ganze Bohne
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Order Tile component Renders correctly without rate button 1`] = `
+<div>
+  <div
+    class="flex pt-8 w-full"
+    data-testid="wrapper"
+  >
+    <div
+      class="flex justify-center items-center shrink-0 self-center relative w-32 h-32 cursor-pointer"
+      data-testid="image"
+    >
+      <div
+        class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+      >
+        <img
+          alt="Cycle Blend"
+          class="w-28 max-h-28"
+          src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/specialty-coffee-espresso-cycle-blend-cycle-roasters-lubeck_20copy.webp?v=1655307920"
+        />
+      </div>
+    </div>
+    <div
+      class="pl-4 flex flex-col justify-center"
+    >
+      <div
+        class="mb-2 cursor-pointer"
+        data-testid="tile"
       >
         <div
           class="text-base leading-6 font-semibold"

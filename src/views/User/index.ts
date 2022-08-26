@@ -1,6 +1,9 @@
-import { OrderVariant, Profile } from './Profile'
+import { Order, Orders, OrderVariant } from './Orders'
+import { Profile } from './Profile'
 import { ProfileSub } from './ProfileSub'
 
-export type { OrderVariant as OrderVariant }
+export type { Order }
+export { Orders }
+export type { OrderVariant }
 export { Profile as Profile }
 export { ProfileSub as ProfileSub }
