@@ -177,7 +177,7 @@ export const Orders: React.FC = () => {
             >
               {ordersToShow.length === 0 ? (
                 filterOrderId !== '' ? (
-                  <Typography>{`${t('pages.orders.noOrdersTextFiltered')}${filterOrderId}`}</Typography>
+                  <Typography>{t('pages.orders.noOrdersTextFiltered')}</Typography>
                 ) : (
                   <Typography>{t('pages.orders.noOrdersText')}</Typography>
                 )
