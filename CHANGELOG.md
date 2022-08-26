@@ -1,3 +1,10 @@
+# [1.58.0](https://github.com/Famous-Roasters/frontend/compare/v1.57.3...v1.58.0) (2022-08-26)
+
+
+### Features
+
+* **account:** add logout function ([bb5f3de](https://github.com/Famous-Roasters/frontend/commit/bb5f3debccdf157e19095b314e391012c9e49ca2))
+
 ## [1.57.3](https://github.com/Famous-Roasters/frontend/compare/v1.57.2...v1.57.3) (2022-08-26)
 
 ## [1.57.2](https://github.com/Famous-Roasters/frontend/compare/v1.57.1...v1.57.2) (2022-08-26)
