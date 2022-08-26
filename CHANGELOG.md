@@ -1,3 +1,10 @@
+## [1.56.2](https://github.com/Famous-Roasters/frontend/compare/v1.56.1...v1.56.2) (2022-08-26)
+
+
+### Bug Fixes
+
+* **blog:** change columns to masonry, update css ([b135dc8](https://github.com/Famous-Roasters/frontend/commit/b135dc87e34ac4961faef89a76e67f36bf8f31be))
+
 ## [1.56.1](https://github.com/Famous-Roasters/frontend/compare/v1.56.0...v1.56.1) (2022-08-25)
 
 
