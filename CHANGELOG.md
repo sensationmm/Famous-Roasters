@@ -1,3 +1,15 @@
+# [1.57.0](https://github.com/Famous-Roasters/frontend/compare/v1.56.2...v1.57.0) (2022-08-26)
+
+
+### Bug Fixes
+
+* **tastefinder:** typo ([b32c040](https://github.com/Famous-Roasters/frontend/commit/b32c040fb3cee696f82f17a0bf044b95c92e0c2a))
+
+
+### Features
+
+* **orders:** orders screen ([8b740e1](https://github.com/Famous-Roasters/frontend/commit/8b740e10c90fb01c8e96b421ac50d832225badb5))
+
 ## [1.56.2](https://github.com/Famous-Roasters/frontend/compare/v1.56.1...v1.56.2) (2022-08-26)
 
 
