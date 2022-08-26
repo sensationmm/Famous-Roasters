@@ -245,141 +245,256 @@ exports[`Blog View Renders correctly 1`] = `
       </div>
     </main>
     <footer
-      class="bg-brand-black text-base text-white py-10 z-30"
+      class="bg-brand-black text-base text-white px-5 lg:px-10 py-12 lg:py-20 z-30"
     >
       <div
-        class="w-full max-w-7xl mx-auto mb-10 flex flex-col md:flex-row md:items-center justify-start px-8 xl:px-10"
+        class="w-full max-w-7xl mx-auto mb-8 md:mb-12 lg:mb-16 flex flex-col md:flex-row md:items-center justify-start"
       >
-        <div
-          class="mb-2 md:mb-0 md:mr-2"
+        <a
+          href="//www.60beans.com"
         >
-          <svg
-            fill="none"
-            height="157"
-            viewBox="0 0 400 400"
-            width="157"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            class="sr-only"
           >
-            <circle
-              cx="200"
-              cy="200"
-              fill="#D4FF81"
-              r="200"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M266 225.882C266 267.294 243.14 288 214.739 288C196.728 288 183.336 279.488 177.332 266.604V285.239H136V112H177.332V182.86C184.259 171.357 196.728 161.694 214.97 161.694C243.14 161.694 266 182.86 266 224.042V225.882ZM231.006 225.964C231.006 240.559 219.132 252.391 204.483 252.391C189.835 252.391 177.96 240.559 177.96 225.964C177.96 211.369 189.835 199.538 204.483 199.538C219.132 199.538 231.006 211.369 231.006 225.964ZM251 156C263.15 156 273 146.15 273 134C273 121.85 263.15 112 251 112C238.85 112 229 121.85 229 134C229 146.15 238.85 156 251 156Z"
-              fill="#212121"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </div>
-        <div
-          class="px-4 text-5xl leading-none"
-        >
-          Guten Kaffee besser finden.
-        </div>
+            60beans
+          </span>
+          <img
+            alt="60beans"
+            class="h-6"
+            src="60beans-light.svg"
+          />
+        </a>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto grid gap-2 gap-y-10 grid-cols-1 md:grid-cols-2 px-12 xl:px-14"
+        class="w-full max-w-7xl mx-auto flex flex-col xl:flex-row justify-between"
       >
         <div
-          class="order-2 md:order-1"
+          class="grid grid-cols-1 sm:grid-cols-3 gap-4 grow"
         >
-          <ul>
+          <ul
+            class="mb-14"
+          >
             <li
-              class="mt-0"
+              class="mb-4"
             >
               <a
                 href="//shop.60beans.com/catalogue"
+                target="_self"
               >
                 Shop
               </a>
             </li>
             <li
-              class="mt-6"
+              class="mb-4"
             >
               <a
                 href="//shop.60beans.com/taste-finder"
+                target="_self"
               >
                 Tastefinder
               </a>
             </li>
             <li
-              class="mt-6"
+              class="mb-4"
             >
               <a
-                href="//www.60beans.de/uber-uns"
+                href="//www.linkedin.com/jobs/search/?currentJobId=3196130257&f_C=86587560&geoId=92000000"
+                target="_blank"
+              >
+                Karriere bei 60beans
+              </a>
+            </li>
+          </ul>
+          <ul
+            class="mb-14"
+          >
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/uber-uns"
+                target="_self"
               >
                 Über uns
               </a>
             </li>
             <li
-              class="mt-6"
+              class="mb-4"
             >
               <a
-                href="//www.notion.so/Datenschutzhinweise-ad5b45261a964166a74883d2770e28ea"
+                href="//www.60beans.com/roesterei"
+                target="_self"
               >
-                Datenschutz-Bestimmungen
+                Unsere Röster
               </a>
             </li>
             <li
-              class="mt-6"
+              class="mb-4"
             >
               <a
-                href="//slender-petunia-c3c.notion.site/Imprint-33b18fd9e469471ab768eef8155da968"
+                href="//blog.60beans.com"
+                target="_self"
+              >
+                Blog
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/warum-60beans"
+                target="_self"
+              >
+                Für Kaffeeröster
+              </a>
+            </li>
+          </ul>
+          <ul
+            class="mb-14"
+          >
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/datenschutz"
+                target="_self"
+              >
+                Datenschutz
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/impressum"
+                target="_self"
               >
                 Impressum
               </a>
             </li>
             <li
-              class="mt-6"
+              class="mb-4"
             >
-              <div
-                class="trustpilot-widget"
-                data-businessunit-id="62c454f8cb03c9a2269fadb6"
-                data-locale="de-DE"
-                data-style-height="150px"
-                data-style-width="100%"
-                data-template-id="53aa8807dec7e10d38f59f32"
-                data-theme="dark"
+              <a
+                href="//www.60beans.com/legal/cookie-policy"
+                target="_self"
               >
-                <a
-                  href="https://de.trustpilot.com/review/60beans.com"
-                  rel="noopener"
-                  target="_blank"
-                >
-                  Trustpilot
-                </a>
-              </div>
+                Cookie Policy
+              </a>
             </li>
           </ul>
         </div>
         <div
-          class="order-1 md:order-2"
+          class="mb-16 xl:px-20"
         >
-          <div>
-            <div>
-              <span
-                class="font-syne text-3xl leading-10 font-semibold tracking-tight"
-              >
-                Kundensupport
-              </span>
-            </div>
-            <div
-              class="mt-6"
+          <p
+            class="mb-4 text-base leading-6"
+          >
+            Follow us
+          </p>
+          <ul
+            class="flex text-brand-grey-whisper"
+          >
+            <li
+              class="mr-3 hover:text-brand-grey-bombay"
             >
-              <span
-                class="text-lg leading-7"
+              <a
+                href="//www.facebook.com/60beans.shop"
+                target="_blank"
               >
-                Fragen? Kommentare? Bedenken? Oder möchtest du uns einfach ein paar schöne Worte senden? Bitte klicke einfach unten rechts auf die Sprechblasen. Unser Team steht dir dort gerne zur Verfügung.
-              </span>
-            </div>
+                <svg
+                  class="undefined fill-brand-black stroke-brand-black"
+                  fill="inherit"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M16.5 6H13.5C12.9477 6 12.5 6.44772 12.5 7V10H16.5C16.6137 9.99748 16.7216 10.0504 16.7892 10.1419C16.8568 10.2334 16.8758 10.352 16.84 10.46L16.1 12.66C16.0318 12.8619 15.8431 12.9984 15.63 13H12.5V20.5C12.5 20.7761 12.2761 21 12 21H9.5C9.22386 21 9 20.7761 9 20.5V13H7.5C7.22386 13 7 12.7761 7 12.5V10.5C7 10.2239 7.22386 10 7.5 10H9V7C9 4.79086 10.7909 3 13 3H16.5C16.7761 3 17 3.22386 17 3.5V5.5C17 5.77614 16.7761 6 16.5 6Z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    stroke="none"
+                    stroke-width="none"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li
+              class="mr-3 hover:text-brand-grey-bombay"
+            >
+              <a
+                href="//www.instagram.com/60beans/"
+                target="_blank"
+              >
+                <svg
+                  class="undefined fill-brand-black stroke-brand-black"
+                  fill="inherit"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M16 3H8C5.23858 3 3 5.23858 3 8V16C3 18.7614 5.23858 21 8 21H16C18.7614 21 21 18.7614 21 16V8C21 5.23858 18.7614 3 16 3ZM19.25 16C19.2445 17.7926 17.7926 19.2445 16 19.25H8C6.20735 19.2445 4.75549 17.7926 4.75 16V8C4.75549 6.20735 6.20735 4.75549 8 4.75H16C17.7926 4.75549 19.2445 6.20735 19.25 8V16ZM16.75 8.25C17.3023 8.25 17.75 7.80228 17.75 7.25C17.75 6.69772 17.3023 6.25 16.75 6.25C16.1977 6.25 15.75 6.69772 15.75 7.25C15.75 7.80228 16.1977 8.25 16.75 8.25ZM12 7.5C9.51472 7.5 7.5 9.51472 7.5 12C7.5 14.4853 9.51472 16.5 12 16.5C14.4853 16.5 16.5 14.4853 16.5 12C16.5027 10.8057 16.0294 9.65957 15.1849 8.81508C14.3404 7.97059 13.1943 7.49734 12 7.5ZM9.25 12C9.25 13.5188 10.4812 14.75 12 14.75C13.5188 14.75 14.75 13.5188 14.75 12C14.75 10.4812 13.5188 9.25 12 9.25C10.4812 9.25 9.25 10.4812 9.25 12Z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    stroke="none"
+                    stroke-width="none"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li
+              class="mr-3 hover:text-brand-grey-bombay"
+            >
+              <a
+                href="//www.linkedin.com/company/86587560/"
+                target="_blank"
+              >
+                <svg
+                  class="undefined fill-brand-black stroke-brand-black"
+                  fill="inherit"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3ZM8 18C8.27614 18 8.5 17.7761 8.5 17.5V10.5C8.5 10.2239 8.27614 10 8 10H6.5C6.22386 10 6 10.2239 6 10.5V17.5C6 17.7761 6.22386 18 6.5 18H8ZM7.25 9C6.42157 9 5.75 8.32843 5.75 7.5C5.75 6.67157 6.42157 6 7.25 6C8.07843 6 8.75 6.67157 8.75 7.5C8.75 8.32843 8.07843 9 7.25 9ZM17.5 18C17.7761 18 18 17.7761 18 17.5V12.9C18.0325 11.3108 16.8576 9.95452 15.28 9.76C14.177 9.65925 13.1083 10.1744 12.5 11.1V10.5C12.5 10.2239 12.2761 10 12 10H10.5C10.2239 10 10 10.2239 10 10.5V17.5C10 17.7761 10.2239 18 10.5 18H12C12.2761 18 12.5 17.7761 12.5 17.5V13.75C12.5 12.9216 13.1716 12.25 14 12.25C14.8284 12.25 15.5 12.9216 15.5 13.75V17.5C15.5 17.7761 15.7239 18 16 18H17.5Z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    stroke="none"
+                    stroke-width="none"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="mb-14"
+        >
+          <div
+            class="trustpilot-widget -ml-5"
+            data-businessunit-id="62c454f8cb03c9a2269fadb6"
+            data-locale="de-DE"
+            data-style-height="150px"
+            data-template-id="53aa8807dec7e10d38f59f32"
+            data-theme="dark"
+          >
+            <a
+              href="https://de.trustpilot.com/review/60beans.com"
+              rel="noopener"
+              target="_blank"
+            >
+              Trustpilot
+            </a>
           </div>
         </div>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto text-center mt-10 px-12 xl:px-14"
+        class="w-full max-w-7xl mx-auto text-center px-2 mb-1 xl:px-10"
       >
         <span
           class="text-center text-base leading-6"
@@ -390,7 +505,7 @@ exports[`Blog View Renders correctly 1`] = `
         <span
           class="text-center text-base leading-6"
         >
-          Hergestellt mit ❤️ in Berlin.
+          Mit ❤️ aus Berlin.
         </span>
       </div>
     </footer>

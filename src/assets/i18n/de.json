@@ -214,7 +214,7 @@
   "brand": {
     "copyright": "© {{year}} 60beans. Alle Rechte vorbehalten.",
     "name": "60beans",
-    "withLove": "Hergestellt mit ❤️ in Berlin."
+    "withLove": "Mit ❤️ aus Berlin."
   },
   "cta": {
     "next": "Weiter",
@@ -792,6 +792,10 @@
       "navigation": "Kontakt",
       "title": "Kontakt"
     },
+    "cookiePolicy": {
+      "navigation": "Cookie Policy",
+      "title": "Cookie Policy"
+    },
     "error": {
       "navigation": "Fehler",
       "title": "Fehler"
@@ -830,21 +834,25 @@
         "profileTitle": "Dein Kaffeetype"
       }
     },
+    "forCoffeeRoasters": {
+      "navigation": "Für Kaffeeröster",
+      "title": "Für Kaffeeröster"
+    },
     "imprint": {
       "navigation": "Impressum",
       "title": "Impressum"
     },
     "jobs": {
-      "navigation": "Jobs",
-      "title": "Jobs"
+      "navigation": "Karriere bei 60beans",
+      "title": "Karriere bei 60beans"
     },
     "ourRoasters": {
       "navigation": "Unsere Röster",
       "title": "Unsere Röster"
     },
     "privacy": {
-      "navigation": "Datenschutz-Bestimmungen",
-      "title": "Datenschutz-Bestimmungen"
+      "navigation": "Datenschutz",
+      "title": "Datenschutz"
     },
     "press": {
       "navigation": "Presse",

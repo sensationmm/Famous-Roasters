@@ -60,6 +60,7 @@ module.exports = {
             'tightest': '-.12em',
         },
         screens: {
+            sm: '480px',
             md: '641px',
             lg: '769px',
             xl: '1025px',
