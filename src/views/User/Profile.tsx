@@ -4,8 +4,9 @@ import { loader } from 'graphql.macro'
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useNavigate } from 'react-router-dom'
-import CoffeeTaste from 'src/assets/images/profile/coffee-taste.png'
-import Myanmar from 'src/assets/images/profile/myanmar.png'
+import CoffeeKnowledge from 'src/assets/images/profile/coffee-knowledge.png'
+import EthopianCoffee from 'src/assets/images/profile/ethiopian-coffee.png'
+import NomadCoffee from 'src/assets/images/profile/nomad-coffee.png'
 import {
   Button,
   ButtonEmphasis,
@@ -308,6 +309,53 @@ export const Profile: React.FC = () => {
           </div>
         )}
 
+        <div className={containerStyle}>
+          <div className={`${sectionStyle}`}>
+            {/* TODO: make this content dynamic from CMS */}
+            <div className="grid w-full md:grid-cols-2">
+              <div className="grid grid-cols-2 grid-cols-[150px_1fr] gap-4 px-0 border-b border-brand-grey-bombay md:max-w-sm md:border-0">
+                <Link to={'/catalogue?vendor=Nomad'}>
+                  <img src={NomadCoffee} className="w-full" />
+                </Link>
+                <div className="flex flex-col justify-center">
+                  <Typography as="p" className="mb-4">
+                    Neu bei 60beans: Nomad Coffee aus Barcelona!
+                  </Typography>
+                  <Button
+                    data-testid="button-vendor=Nomad"
+                    emphasis={ButtonEmphasis.Secondary}
+                    size={ButtonSize.xs}
+                    onClick={() => navigate('/catalogue?vendor=Nomad')}
+                    center
+                  >
+                    {t('pages.profile.sections.discover.cta')}
+                  </Button>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 grid-cols-[150px_1fr] gap-4 px-3 md:max-w-sm">
+                <Link to={'/catalogue?origin=ET'}>
+                  <img src={EthopianCoffee} className="w-full" />
+                </Link>
+                <div className="flex flex-col justify-center">
+                  <Typography as="p" className="mb-4">
+                    Entdecke den Kaffee Äthiopiens!
+                  </Typography>
+                  <Button
+                    data-testid="button-origin=ET"
+                    emphasis={ButtonEmphasis.Secondary}
+                    size={ButtonSize.xs}
+                    onClick={() => navigate('/catalogue?origin=ET')}
+                    center
+                  >
+                    {t('pages.profile.sections.discover.cta')}
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {accessories.length > 0 && (
           <div className={containerStyle}>
             <div className={sectionStyle}>
@@ -349,43 +397,21 @@ export const Profile: React.FC = () => {
             {/* TODO: make this content dynamic from CMS */}
             <div className="grid w-full md:grid-cols-2">
               <div className="grid grid-cols-2 grid-cols-[150px_1fr] gap-4 px-0 py-6 border-b border-brand-grey-bombay md:max-w-sm md:border-0">
-                <Link to={'/catalogue?vendor=Nomad'}>
-                  <img src={CoffeeTaste} className="w-full" />
+                <Link to={`${process.env.REACT_APP_DOMAIN_BLOG}/de/Zubereitungstipps`}>
+                  <img src={CoffeeKnowledge} className="w-full" />
                 </Link>
                 <div className="flex flex-col justify-center">
                   <Typography as="p" className="mb-4">
-                    NOMAD Coffee is our latetest roaster in the catalog!
+                    Entdecke weitere Zubereitungstipps im 60beans Blog.
                   </Typography>
                   <Button
-                    data-testid="button-vendor=Nomad"
+                    data-testid="button-blog"
                     emphasis={ButtonEmphasis.Secondary}
                     size={ButtonSize.xs}
-                    hasArrow
-                    arrowOverride={IconName.ArrowRight}
-                    onClick={() => navigate('/catalogue?vendor=Nomad')}
+                    onClick={() => navigate(`${process.env.REACT_APP_DOMAIN_BLOG}/de/Zubereitungstipps`)}
+                    center
                   >
-                    {t('pages.profile.sections.discover.cta')}
-                  </Button>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-2 grid-cols-[150px_1fr] gap-4 px-3 py-6 md:max-w-sm">
-                <Link to={'/catalogue?origin=BU'}>
-                  <img src={Myanmar} className="w-full" />
-                </Link>
-                <div className="flex flex-col justify-center">
-                  <Typography as="p" className="mb-4">
-                    Discover new complex origins: Myanmar!
-                  </Typography>
-                  <Button
-                    data-testid="button-origin=BU"
-                    emphasis={ButtonEmphasis.Secondary}
-                    size={ButtonSize.xs}
-                    hasArrow
-                    arrowOverride={IconName.ArrowRight}
-                    onClick={() => navigate('/catalogue?origin=BU')}
-                  >
-                    {t('pages.profile.sections.discover.cta')}
+                    {t('pages.profile.sections.discover.ctaBlog')}
                   </Button>
                 </div>
               </div>
