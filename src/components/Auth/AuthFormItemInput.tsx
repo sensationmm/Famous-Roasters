@@ -34,7 +34,7 @@ export const AuthFormItemInput: React.FC<AuthFormItemInputProps> = ({
   }
   return (
     <>
-      <Field name={name} rules={rules} initialValue={value} onMetaChange={handleChange}>
+      <Field name={name} rules={rules} initialValue={value} onMetaChange={handleChange} validateTrigger="onBlur">
         <Input
           labelText={label}
           type={type}
