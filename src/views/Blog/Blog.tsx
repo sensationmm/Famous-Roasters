@@ -2,6 +2,7 @@ import { useQuery } from '@apollo/client/react/hooks'
 import { loader } from 'graphql.macro'
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router-dom'
 import {
   ErrorPrompt,
@@ -19,6 +20,7 @@ interface BlogProps {
 }
 
 export const Blog: React.FC<BlogProps> = ({ locale = 'de_de' }) => {
+  const { t } = useTranslation()
   const { category, slug } = useParams()
   const GET_BLOG = loader('src/graphql/queries/blog.query.graphql')
 
@@ -77,7 +79,7 @@ export const Blog: React.FC<BlogProps> = ({ locale = 'de_de' }) => {
                   </Typography>
                   <Typography size={TypographySize.Small} type={TypographyType.Paragraph}>
                     <span className="capitalize">{category}</span> &middot;{' '}
-                    {readTimeCalculator(data.standardBlogPosts[0].content.text)} min read
+                    {readTimeCalculator(data.standardBlogPosts[0].content.text)} {t('pages.blog.minReadingTime')}
                   </Typography>
                 </div>
               </div>

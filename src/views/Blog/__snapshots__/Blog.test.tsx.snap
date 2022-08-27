@@ -200,8 +200,9 @@ exports[`Blog View Renders correctly 1`] = `
               </span>
                ·
                
-              3
-               min read
+              2
+               
+              min Lesezeit
             </span>
           </div>
         </div>
