@@ -193,13 +193,12 @@ exports[`Profile view Renders correctly 1`] = `
           class="w-full max-w-7xl mx-auto px-6 xl:px-8 py-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3"
         >
           <button
-            class="relative inline-flex flex-row items-center rounded-full border-2 pl-4 pr-8 py-2 text-base font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black pointer-events-none opacity-70"
+            class="relative inline-flex flex-row items-center rounded-full border-2 pl-4 pr-8 py-2 text-base font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
             data-testid="button-orders"
-            disabled=""
             role="button"
           >
             <svg
-              class="mr-4 fill-brand-black text-brand-black stroke-brand-black pointer-events-none fill-brand-black stroke-brand-black"
+              class="mr-4 fill-brand-black text-brand-black stroke-brand-black fill-brand-black stroke-brand-black"
               fill="inherit"
               height="24"
               viewBox="0 0 31 28"
@@ -216,7 +215,7 @@ exports[`Profile view Renders correctly 1`] = `
             </svg>
             Bestellungen
             <svg
-              class="absolute right-2 fill-brand-black text-brand-black stroke-brand-black pointer-events-none fill-brand-black stroke-brand-black"
+              class="absolute right-2 fill-brand-black text-brand-black stroke-brand-black fill-brand-black stroke-brand-black"
               fill="inherit"
               height="14"
               viewBox="0 0 9 16"

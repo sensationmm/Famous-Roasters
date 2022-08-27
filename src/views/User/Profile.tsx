@@ -196,7 +196,6 @@ export const Profile: React.FC = () => {
               icon={IconName.Orders}
               hasArrow
               onClick={() => navigate('/orders')}
-              disabled
             >
               {t('pages.profile.links.orders')}
             </Button>
