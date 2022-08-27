@@ -1,3 +1,10 @@
+## [1.61.1](https://github.com/Famous-Roasters/frontend/compare/v1.61.0...v1.61.1) (2022-08-27)
+
+
+### Bug Fixes
+
+* **blog:** update blog reading time wpm calculation & translation ([f580bbc](https://github.com/Famous-Roasters/frontend/commit/f580bbc72b15d7ce4ee4058e1d9165a580576e2f))
+
 # [1.61.0](https://github.com/Famous-Roasters/frontend/compare/v1.60.0...v1.61.0) (2022-08-26)
 
 
