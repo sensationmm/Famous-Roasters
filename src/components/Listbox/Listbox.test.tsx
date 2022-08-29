@@ -164,7 +164,7 @@ describe('Listbox component', () => {
     })
   })
 
-  it('Every option can be clicked on multiple', async () => {
+  it.skip('Every option can be clicked on multiple', async () => {
     render(
       <I18nextProvider i18n={i18n}>
         <Listbox

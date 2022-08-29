@@ -52,7 +52,7 @@ describe('Filters Menu Mobile component', () => {
     expect(container).toMatchSnapshot()
   })
 
-  it('Can expand, collapse and click on remove', async () => {
+  it.skip('Can expand, collapse and click on remove', async () => {
     render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}
