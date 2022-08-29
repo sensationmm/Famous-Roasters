@@ -311,8 +311,8 @@ export const Profile: React.FC = () => {
         <div className={containerStyle}>
           <div className={`${sectionStyle}`}>
             {/* TODO: make this content dynamic from CMS */}
-            <div className="grid w-full md:grid-cols-2">
-              <div className="grid grid-cols-2 grid-cols-[150px_1fr] gap-4 px-0 border-b border-brand-grey-bombay md:max-w-sm md:border-0">
+            <div className="grid w-full md:grid-cols-2 md:gap-4">
+              <div className="grid grid-cols-[150px_1fr] gap-4 border-b border-brand-grey-bombay md:max-w-sm md:border-0">
                 <Link to={'/catalogue?vendor=Nomad'}>
                   <img src={NomadCoffee} className="w-full" />
                 </Link>
@@ -332,7 +332,7 @@ export const Profile: React.FC = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 grid-cols-[150px_1fr] gap-4 px-3 md:max-w-sm">
+              <div className="grid grid-cols-[150px_1fr] gap-4 md:max-w-sm">
                 <Link to={'/catalogue?origin=ET'}>
                   <img src={EthopianCoffee} className="w-full" />
                 </Link>
