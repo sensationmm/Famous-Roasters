@@ -1,3 +1,10 @@
+## [1.61.5](https://github.com/Famous-Roasters/frontend/compare/v1.61.4...v1.61.5) (2022-08-29)
+
+
+### Bug Fixes
+
+* **profile:** fix glitch ([b7e45e5](https://github.com/Famous-Roasters/frontend/commit/b7e45e5b7b3a72fac067139a3f03fe61a7d3974e))
+
 ## [1.61.4](https://github.com/Famous-Roasters/frontend/compare/v1.61.3...v1.61.4) (2022-08-29)
 
 ## [1.61.3](https://github.com/Famous-Roasters/frontend/compare/v1.61.2...v1.61.3) (2022-08-29)
