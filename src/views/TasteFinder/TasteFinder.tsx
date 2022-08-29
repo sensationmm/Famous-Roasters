@@ -18,7 +18,7 @@ import {
 
 enum TasteFinderStepsNames {
   Welcome = 'willkommen',
-  YourName = 'deiner-name',
+  YourName = 'dein-name',
   Bitterness = 'stärke',
   Sweetness = 'süße',
   Acidity = 'lebendigkeit',
@@ -90,7 +90,12 @@ export const TasteFinder: React.FC = () => {
   const [tasteFinderLocalStorage, setTasteFinderLocalStorage] = useLocalStorage('tasteFinder', '')
 
   useEffect(() => {
-    tasteFinderLocalStorage && setTasteFinderState(JSON.parse(tasteFinderLocalStorage))
+    const tasteFinderData = tasteFinderLocalStorage
+    if (tasteFinderData) {
+      setTasteFinderState(JSON.parse(tasteFinderData))
+    } else {
+      navigateTo(0)
+    }
   }, [])
 
   const navigateTo = (index: number) => {
