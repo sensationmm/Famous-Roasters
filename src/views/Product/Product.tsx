@@ -381,7 +381,7 @@ export const Product: React.FC = () => {
 
   const renderProductMainBlock = () => {
     return (
-      <div className="grid gap-6 grid-cols-1 md:grid-cols-2 mt-12">
+      <div className="grid gap-6 grid-cols-1 md:grid-cols-2 mt-10">
         {/* Images */}
         {images && images.nodes.length > 0 && <Carousel images={images.nodes} />}
         <div>
@@ -398,7 +398,7 @@ export const Product: React.FC = () => {
             </Typography>
           </div>
           {/* Title */}
-          <div className="border-b border-brand-grey-whisper pb-4 font-syne">
+          <div className="border-b border-brand-grey-whisper pb-4">
             <Typography as="h1" type={TypographyType.Heading} size={TypographySize.Small}>
               {title}
             </Typography>
