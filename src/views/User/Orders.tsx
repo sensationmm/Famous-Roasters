@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 import {
-  ErrorPrompt,
+  Button,
   IconName,
   Input,
   Layout,
@@ -16,6 +16,7 @@ import {
   TypographySize,
   TypographyType,
 } from 'src/components'
+import { Emphasis } from 'src/components/Button/Button'
 import { useAuth } from 'src/config/cognito'
 import { formatPrice, getSimplifiedId } from 'src/utils'
 
@@ -36,25 +37,30 @@ export type OrderVariant = {
       title: string
       price: string
       weight: number
+      product: {
+        id: string
+      }
     }
   }
 }
 
 export type Order = {
-  id: string
-  name: string
-  createdAt: string
-  displayFulfillmentStatus: string
-  displayFinancialStatus: string
-  totalPriceSet: {
-    shopMoney: {
-      amount: string
-      currencyCode: string
+  node: {
+    id: string
+    name: string
+    createdAt: string
+    displayFulfillmentStatus: string
+    displayFinancialStatus: string
+    totalPriceSet: {
+      shopMoney: {
+        amount: string
+        currencyCode: string
+      }
     }
-  }
-  discountCode: string
-  lineItems: {
-    edges: OrderVariant[]
+    discountCode: string | null
+    lineItems: {
+      edges: OrderVariant[]
+    }
   }
 }
 
@@ -63,7 +69,6 @@ export const Orders: React.FC = () => {
   const { t } = useTranslation()
   const navigate = useNavigate()
   const [orders, setOrders] = useState<Order[]>()
-  const [ordersError, setOrdersError] = useState<boolean>(false)
   const [ordersLoading, setOrdersLoading] = useState<boolean>(false)
   const [filterOrderId, setFilterOrderId] = useState<string>('')
   const [sortOrder, setSortOrder] = useState<ListBoxItem[]>()
@@ -83,16 +88,13 @@ export const Orders: React.FC = () => {
           })
           .then((res) => {
             if (res.data.orders.edges.length > 0) {
-              setOrdersError(false)
               setOrders(res.data.orders.edges)
               setOrdersLoading(false)
             } else {
-              setOrdersError(false)
               setOrdersLoading(false)
             }
           })
           .catch(() => {
-            setOrdersError(true)
             setOrdersLoading(false)
           })
       })
@@ -106,19 +108,15 @@ export const Orders: React.FC = () => {
 
     if (sortOrder) {
       if (sortOrder[0].value === 'newest') {
-        ordersCopy.sort((a, b) => (a.id > b.id ? -1 : 1))
+        ordersCopy.sort((a, b) => (a.node.id > b.node.id ? -1 : 1))
       } else {
-        ordersCopy.sort((a, b) => (a.id < b.id ? -1 : 1))
+        ordersCopy.sort((a, b) => (a.node.id < b.node.id ? -1 : 1))
       }
       setOrders(ordersCopy)
     }
   }, [sortOrder])
 
-  const ordersToShow = orders?.filter((order) => filterOrderId === '' || order.id.includes(filterOrderId)) || []
-
-  if (ordersError) {
-    return <ErrorPrompt />
-  }
+  const ordersToShow = orders?.filter((order) => filterOrderId === '' || order.node.id.includes(filterOrderId)) || []
 
   return (
     <Layout navigationTheme={NavigationTheme.Home}>
@@ -170,40 +168,58 @@ export const Orders: React.FC = () => {
               </div>
             </div>
           ) : (
-            <div
-              className={`mt-8 max-w-[640px] mx-auto${
-                ordersToShow.length === 0 ? ' text-center mb-6 py-6 border-b border-t border-coreUI-text-tertiary' : ''
-              }`}
-            >
+            <div className={`mt-8 ${ordersToShow.length > 0 ? 'max-w-[640px] mx-auto' : ''}`}>
               {ordersToShow.length === 0 ? (
                 filterOrderId !== '' ? (
-                  <Typography>{t('pages.orders.noOrdersTextFiltered')}</Typography>
+                  <>
+                    <Typography type={TypographyType.Heading} size={TypographySize.Tiny} as="h2" className="mb-8">
+                      {t('pages.orders.noOrdersTextFiltered')}
+                    </Typography>
+                    <Button emphasis={Emphasis.Tertiary} onClick={() => setFilterOrderId('')} fullWidth>
+                      {t('pages.orders.clearFilter')}
+                    </Button>
+                  </>
                 ) : (
-                  <Typography>{t('pages.orders.noOrdersText')}</Typography>
+                  <>
+                    <Typography type={TypographyType.Heading} size={TypographySize.Tiny} as="h2" className="mb-2">
+                      {t('pages.orders.noOrdersText')}
+                    </Typography>
+                    <Typography size={TypographySize.Large} as="p" className="mb-8 text-coreUI-text-tertiary">
+                      {t('pages.orders.noOrdersPrompt')}
+                    </Typography>
+                    <Button onClick={() => navigate('/catalogue')} fullWidth>
+                      {t('pages.orders.shopLink')}
+                    </Button>
+                  </>
                 )
               ) : (
                 ordersToShow.map((order) => (
-                  <div key={`order-${order.id}`} className="mb-4 pb-4 md:mb-6 md:pb-6 border-b border-coreUI-border">
+                  <div
+                    key={`order-${order.node.id}`}
+                    className="mb-4 pb-4 md:mb-6 md:pb-6 border-b border-coreUI-border"
+                  >
                     <div className="grid grid-cols-2 gap-6">
                       <div>
-                        <Typography className="block font-bold">Order #{getSimplifiedId(order.id, 'Order')}</Typography>
+                        <Typography className="block font-bold">
+                          Order #{getSimplifiedId(order.node.id, 'Order')}
+                        </Typography>
                         <Typography>
                           {formatPrice(
-                            order.totalPriceSet.shopMoney.amount,
-                            order.totalPriceSet.shopMoney.currencyCode,
+                            order.node.totalPriceSet.shopMoney.amount,
+                            order.node.totalPriceSet.shopMoney.currencyCode,
                           )}
                         </Typography>
                       </div>
                       <div>
                         <Typography className="font-bold" size={TypographySize.Small}>
-                          {t(`shopify.deliveryStatus.${order.displayFulfillmentStatus}`)}
+                          {t(`shopify.deliveryStatus.${order.node.displayFulfillmentStatus}`)}
                         </Typography>
                       </div>
                     </div>
                     <div className="md:grid md:grid-cols-2 md:gap-6">
-                      {order.lineItems.edges.map((item, count) => (
+                      {order.node.lineItems.edges.map((item, count) => (
                         <OrderTile
-                          key={`order-${order.id}-${count}`}
+                          key={`order-${order.node.id}-${count}`}
                           node={item.node}
                           productId={item.node.product.id}
                           showPrice={false}

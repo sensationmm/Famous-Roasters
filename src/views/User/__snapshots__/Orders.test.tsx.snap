@@ -3,13 +3,541 @@
 exports[`Orders view Handles error call 1`] = `
 <div>
   <div
-    class="p-4 border border-coreUI-border bg-white"
+    class="min-h-screen flex flex-col text-brand-black"
   >
     <div
-      class="text-center text-base leading-6"
+      class="bg-white z-10"
     >
-      Ein Fehler ist aufgetreten
+      <header
+        class="relative bg-brand-black"
+      >
+        <nav
+          aria-label="Top"
+          class="max-w-7xl mx-auto px-4 md:px-6 xl:px-8"
+        >
+          <div
+            class="h-16 flex items-center justify-between border-b border-brand-black"
+          >
+            <div
+              class="flex-1 flex items-center xl:hidden"
+            >
+              <button
+                class="-ml-2 bg-brand-black p-2 rounded-md text-gray-400"
+                data-testid="button-open"
+                type="button"
+              >
+                <span
+                  class="sr-only"
+                >
+                  Open menu
+                </span>
+                <svg
+                  class="undefined fill-brand-black stroke-brand-black"
+                  fill="inherit"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M3.17188 5H20.0156C20.1102 5 20.1875 5.07734 20.1875 5.17188V6.375C20.1875 6.46953 20.1102 6.54688 20.0156 6.54688H3.17188C3.07734 6.54688 3 6.46953 3 6.375V5.17188C3 5.07734 3.07734 5 3.17188 5ZM3.17188 11.5469H20.0156C20.1102 11.5469 20.1875 11.6242 20.1875 11.7188V12.9219C20.1875 13.0164 20.1102 13.0938 20.0156 13.0938H3.17188C3.07734 13.0938 3 13.0164 3 12.9219V11.7188C3 11.6242 3.07734 11.5469 3.17188 11.5469ZM20.0156 18.0938H3.17188C3.07734 18.0938 3 18.1711 3 18.2656V19.4688C3 19.5633 3.07734 19.6406 3.17188 19.6406H20.0156C20.1102 19.6406 20.1875 19.5633 20.1875 19.4688V18.2656C20.1875 18.1711 20.1102 18.0938 20.0156 18.0938Z"
+                    fill="#FFFFFF"
+                    fill-rule="evenodd"
+                    stroke="#FFFFFF"
+                    stroke-width="0.25"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="hidden xl:flex-1 xl:block xl:self-stretch"
+            >
+              <div
+                class="h-full flex space-x-10"
+              >
+                <a
+                  class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                  href="//www.60beans.com/uber-uns"
+                >
+                  <span
+                    class="uppercase text-sm leading-5"
+                  >
+                    Über uns
+                  </span>
+                </a>
+                <a
+                  class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                  href="//www.60beans.com/roesterei"
+                >
+                  <span
+                    class="uppercase text-sm leading-5"
+                  >
+                    Unsere Röster
+                  </span>
+                </a>
+                <a
+                  class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                  href="//blog.60beans.com"
+                >
+                  <span
+                    class="uppercase text-sm leading-5"
+                  >
+                    Blog
+                  </span>
+                </a>
+              </div>
+            </div>
+            <a
+              class="flex h-full items-center pl-2 pr-2"
+              href="//www.60beans.com"
+            >
+              <span
+                class="sr-only"
+              >
+                60beans
+              </span>
+              <img
+                alt="60beans"
+                class="h-6"
+                src="60beans-light.svg"
+              />
+            </a>
+            <div
+              class="flex-1 flow-root flex h-full items-center"
+            >
+              <div
+                class="flex-1 flex h-full items-center justify-end xl:flex-none"
+              >
+                <div
+                  class="hidden h-full xl:flex space-x-8 justify-end"
+                >
+                  <a
+                    class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
+                    href="//shop.60beans.com/taste-finder"
+                  >
+                    <span
+                      class="uppercase text-sm leading-5"
+                    >
+                      Tastefinder
+                    </span>
+                  </a>
+                </div>
+                <a
+                  class="hidden xl:block ml-10"
+                  href="//shop.60beans.com/profile"
+                >
+                  <svg
+                    class="undefined fill-brand-black stroke-brand-black"
+                    fill="inherit"
+                    height="24"
+                    viewBox="0 0 24 25"
+                    width="24"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M16 8.66663C16 10.8766 14.21 12.6666 12 12.6666C9.79 12.6666 8 10.8766 8 8.66663C8 6.45663 9.79 4.66663 12 4.66663C14.21 4.66663 16 6.45663 16 8.66663ZM4 18.6666C4 16.0066 9.33 14.6666 12 14.6666C14.67 14.6666 20 16.0066 20 18.6666V20.6666H4V18.6666Z"
+                      fill="#FFFFFF"
+                      fill-rule="evenodd"
+                      stroke="none"
+                      stroke-width="none"
+                    />
+                  </svg>
+                </a>
+                <div
+                  class="ml-4 flow-root xl:ml-10"
+                >
+                  <button
+                    class="relative inline-flex flex-row items-center rounded-full border-2 px-3 py-2 text-sm font-semibold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+                    data-testid="button-shop"
+                    role="button"
+                  >
+                    Shop
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
     </div>
+    <main
+      class="flex flex-col flex-grow w-full items-start bg-white mt-4y"
+    >
+      <div
+        class="w-full max-w-7xl mx-auto px-6 xl:px-8 py-8"
+      >
+        <div
+          class="md:grid md:grid-cols-2 md:gap-4 xl:grid-cols-[1fr_2fr]"
+        >
+          <div
+            class="border-b border-coreUI-text-tertiary md:border-0 pb-6 mb-6 md:pb-0 md:mb-0"
+          >
+            <h1
+              class="mb-4 text-2xl leading-8 font-semibold"
+            >
+              Deine Bestellungen
+            </h1>
+            <p
+              class="text-base leading-6"
+            >
+              Hier findest du alle Informationen über deine Bestellungen.
+            </p>
+          </div>
+          <div
+            class="flex flex-col items-end justify-end"
+          >
+            <label
+              class="w-full md:w-[330px] mb-4 relative"
+            >
+              <span
+                class="absolute -top-6 left-3 px-1 bg-white"
+              >
+                <span
+                  class="text-sm leading-5"
+                />
+              </span>
+              <input
+                class="w-full md:w-[330px] border-coreUI-background-images border rounded-full focus:outline-0 focus:ring px-3 py-1 text-sm pr-8 focus:ring-primary/30"
+                data-testid="filter-ids"
+                id="filter-ids"
+                placeholder="Search for a specific order number"
+                type="number"
+                value=""
+              />
+              <svg
+                class="absolute right-3 top-[50%] translate-y-[-50%] stroke-coreUI-text-tertiary fill-brand-black stroke-brand-black"
+                fill="inherit"
+                height="14"
+                viewBox="0 0 14 14"
+                width="14"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M12.25 12.25L8.75 8.75M9.91667 5.83333C9.91667 8.0885 8.0885 9.91667 5.83333 9.91667C3.57817 9.91667 1.75 8.0885 1.75 5.83333C1.75 3.57817 3.57817 1.75 5.83333 1.75C8.0885 1.75 9.91667 3.57817 9.91667 5.83333Z"
+                  fill="none"
+                  fill-rule="evenodd"
+                  stroke="inherit"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </label>
+            <div
+              class="w-full md:w-auto border-coreUI-background-images w-full relative"
+            >
+              <div
+                class="grid grid-cols-2 items-end"
+              >
+                <div />
+                <div
+                  class="justify-self-end"
+                />
+              </div>
+              <button
+                aria-expanded="false"
+                aria-haspopup="true"
+                class="inline-flex justify-between w-full px-3 py-0.5 text-left bg-white rounded-full border border-coreUI-background-images cursor-default"
+                data-testid="button-listbox"
+                id="headlessui-listbox-button-:re:"
+                type="button"
+              >
+                <span
+                  class="block truncate pt-0.5 text-sm leading-5"
+                >
+                  Sortieren nach...
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="-mr-1 ml-2 h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-8 "
+        >
+          <h2
+            class="mb-2 text-xl leading-7 font-semibold"
+          >
+            Leider hast du noch nichts bei uns bestellst
+          </h2>
+          <p
+            class="mb-8 text-coreUI-text-tertiary text-lg leading-7"
+          >
+            Bist du bereit? Lass uns dir unseren Katalog zeigen ...
+          </p>
+          <button
+            class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary w-full md:max-w-xs md:mx-auto"
+            role="button"
+          >
+            Zum Shop
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer
+      class="bg-brand-black text-base text-white px-5 lg:px-10 py-12 lg:py-20 z-30"
+    >
+      <div
+        class="w-full max-w-7xl mx-auto mb-8 md:mb-12 lg:mb-16 flex flex-col md:flex-row md:items-center justify-start"
+      >
+        <a
+          href="//www.60beans.com"
+        >
+          <span
+            class="sr-only"
+          >
+            60beans
+          </span>
+          <img
+            alt="60beans"
+            class="h-6"
+            src="60beans-light.svg"
+          />
+        </a>
+      </div>
+      <div
+        class="w-full max-w-7xl mx-auto flex flex-col xl:flex-row justify-between"
+      >
+        <div
+          class="grid grid-cols-1 sm:grid-cols-3 gap-4 grow"
+        >
+          <ul
+            class="mb-14"
+          >
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//shop.60beans.com/catalogue"
+              >
+                Shop
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//shop.60beans.com/taste-finder"
+              >
+                Tastefinder
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.linkedin.com/jobs/search/?currentJobId=3196130257&f_C=86587560&geoId=92000000"
+              >
+                Karriere bei 60beans
+              </a>
+            </li>
+          </ul>
+          <ul
+            class="mb-14"
+          >
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/uber-uns"
+              >
+                Über uns
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/roesterei"
+              >
+                Unsere Röster
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//blog.60beans.com"
+              >
+                Blog
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/warum-60beans"
+              >
+                Für Kaffeeröster
+              </a>
+            </li>
+          </ul>
+          <ul
+            class="mb-14"
+          >
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/datenschutz"
+              >
+                Datenschutz
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/impressum"
+              >
+                Impressum
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/cookie-policy"
+              >
+                Cookie Policy
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="mb-16 xl:px-20"
+        >
+          <p
+            class="mb-4 text-base leading-6"
+          >
+            Follow us
+          </p>
+          <ul
+            class="flex text-brand-grey-whisper"
+          >
+            <li
+              class="mr-3 hover:text-brand-grey-bombay"
+            >
+              <a
+                href="//www.facebook.com/60beans.shop"
+              >
+                <svg
+                  class="undefined fill-brand-black stroke-brand-black"
+                  fill="inherit"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M16.5 6H13.5C12.9477 6 12.5 6.44772 12.5 7V10H16.5C16.6137 9.99748 16.7216 10.0504 16.7892 10.1419C16.8568 10.2334 16.8758 10.352 16.84 10.46L16.1 12.66C16.0318 12.8619 15.8431 12.9984 15.63 13H12.5V20.5C12.5 20.7761 12.2761 21 12 21H9.5C9.22386 21 9 20.7761 9 20.5V13H7.5C7.22386 13 7 12.7761 7 12.5V10.5C7 10.2239 7.22386 10 7.5 10H9V7C9 4.79086 10.7909 3 13 3H16.5C16.7761 3 17 3.22386 17 3.5V5.5C17 5.77614 16.7761 6 16.5 6Z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    stroke="none"
+                    stroke-width="none"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li
+              class="mr-3 hover:text-brand-grey-bombay"
+            >
+              <a
+                href="//www.instagram.com/60beans/"
+              >
+                <svg
+                  class="undefined fill-brand-black stroke-brand-black"
+                  fill="inherit"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M16 3H8C5.23858 3 3 5.23858 3 8V16C3 18.7614 5.23858 21 8 21H16C18.7614 21 21 18.7614 21 16V8C21 5.23858 18.7614 3 16 3ZM19.25 16C19.2445 17.7926 17.7926 19.2445 16 19.25H8C6.20735 19.2445 4.75549 17.7926 4.75 16V8C4.75549 6.20735 6.20735 4.75549 8 4.75H16C17.7926 4.75549 19.2445 6.20735 19.25 8V16ZM16.75 8.25C17.3023 8.25 17.75 7.80228 17.75 7.25C17.75 6.69772 17.3023 6.25 16.75 6.25C16.1977 6.25 15.75 6.69772 15.75 7.25C15.75 7.80228 16.1977 8.25 16.75 8.25ZM12 7.5C9.51472 7.5 7.5 9.51472 7.5 12C7.5 14.4853 9.51472 16.5 12 16.5C14.4853 16.5 16.5 14.4853 16.5 12C16.5027 10.8057 16.0294 9.65957 15.1849 8.81508C14.3404 7.97059 13.1943 7.49734 12 7.5ZM9.25 12C9.25 13.5188 10.4812 14.75 12 14.75C13.5188 14.75 14.75 13.5188 14.75 12C14.75 10.4812 13.5188 9.25 12 9.25C10.4812 9.25 9.25 10.4812 9.25 12Z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    stroke="none"
+                    stroke-width="none"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li
+              class="mr-3 hover:text-brand-grey-bombay"
+            >
+              <a
+                href="//www.linkedin.com/company/86587560/"
+              >
+                <svg
+                  class="undefined fill-brand-black stroke-brand-black"
+                  fill="inherit"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3ZM8 18C8.27614 18 8.5 17.7761 8.5 17.5V10.5C8.5 10.2239 8.27614 10 8 10H6.5C6.22386 10 6 10.2239 6 10.5V17.5C6 17.7761 6.22386 18 6.5 18H8ZM7.25 9C6.42157 9 5.75 8.32843 5.75 7.5C5.75 6.67157 6.42157 6 7.25 6C8.07843 6 8.75 6.67157 8.75 7.5C8.75 8.32843 8.07843 9 7.25 9ZM17.5 18C17.7761 18 18 17.7761 18 17.5V12.9C18.0325 11.3108 16.8576 9.95452 15.28 9.76C14.177 9.65925 13.1083 10.1744 12.5 11.1V10.5C12.5 10.2239 12.2761 10 12 10H10.5C10.2239 10 10 10.2239 10 10.5V17.5C10 17.7761 10.2239 18 10.5 18H12C12.2761 18 12.5 17.7761 12.5 17.5V13.75C12.5 12.9216 13.1716 12.25 14 12.25C14.8284 12.25 15.5 12.9216 15.5 13.75V17.5C15.5 17.7761 15.7239 18 16 18H17.5Z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    stroke="none"
+                    stroke-width="none"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="mb-14"
+        >
+          <div
+            class="trustpilot-widget -ml-5"
+            data-businessunit-id="62c454f8cb03c9a2269fadb6"
+            data-locale="de-DE"
+            data-style-height="150px"
+            data-template-id="53aa8807dec7e10d38f59f32"
+            data-theme="dark"
+          >
+            <a
+              href="https://de.trustpilot.com/review/60beans.com"
+              rel="noopener"
+              target="_blank"
+            >
+              Trustpilot
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-full max-w-7xl mx-auto text-center px-2 mb-1 xl:px-10"
+      >
+        <span
+          class="text-center text-base leading-6"
+        >
+          © 2022 60beans. Alle Rechte vorbehalten.
+        </span>
+        <br />
+        <span
+          class="text-center text-base leading-6"
+        >
+          Mit ❤️ aus Berlin.
+        </span>
+      </div>
+    </footer>
   </div>
 </div>
 `;
@@ -1199,13 +1727,24 @@ exports[`Orders view Renders correctly with no orders 1`] = `
           </div>
         </div>
         <div
-          class="mt-8 max-w-[640px] mx-auto text-center mb-6 py-6 border-b border-t border-coreUI-text-tertiary"
+          class="mt-8 "
         >
-          <span
-            class="text-base leading-6"
+          <h2
+            class="mb-2 text-xl leading-7 font-semibold"
           >
-            Du hast noch keine Bestellungen.
-          </span>
+            Leider hast du noch nichts bei uns bestellst
+          </h2>
+          <p
+            class="mb-8 text-coreUI-text-tertiary text-lg leading-7"
+          >
+            Bist du bereit? Lass uns dir unseren Katalog zeigen ...
+          </p>
+          <button
+            class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary w-full md:max-w-xs md:mx-auto"
+            role="button"
+          >
+            Zum Shop
+          </button>
         </div>
       </div>
     </main>
@@ -1730,13 +2269,19 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
           </div>
         </div>
         <div
-          class="mt-8 max-w-[640px] mx-auto text-center mb-6 py-6 border-b border-t border-coreUI-text-tertiary"
+          class="mt-8 "
         >
-          <span
-            class="text-base leading-6"
+          <h2
+            class="mb-8 text-xl leading-7 font-semibold"
           >
             Du hast keine Bestellungen, die auf deine Suche passen.
-          </span>
+          </h2>
+          <button
+            class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-4 py-2 text-base font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black w-full md:max-w-xs md:mx-auto"
+            role="button"
+          >
+            Klarfilter
+          </button>
         </div>
       </div>
     </main>
