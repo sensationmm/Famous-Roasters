@@ -1,3 +1,10 @@
+## [1.61.6](https://github.com/Famous-Roasters/frontend/compare/v1.61.5...v1.61.6) (2022-08-29)
+
+
+### Bug Fixes
+
+* **account:** logged in check ([1462415](https://github.com/Famous-Roasters/frontend/commit/146241518c3b10b0cc4250a7122ed1351b91e031))
+
 ## [1.61.5](https://github.com/Famous-Roasters/frontend/compare/v1.61.4...v1.61.5) (2022-08-29)
 
 
