@@ -103,7 +103,7 @@
     "@typescript-eslint/eslint-plugin": "^5.30.5",
     "@typescript-eslint/parser": "^5.30.5",
     "autoprefixer": "^10.4.2",
-    "aws-amplify": "^4.3.26",
+    "aws-amplify": "^4.3.31",
     "aws-amplify-react": "^5.1.9",
     "babel-loader": "^8.2.3",
     "eslint": "^8.19.0",
