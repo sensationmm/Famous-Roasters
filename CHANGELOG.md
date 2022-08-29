@@ -1,3 +1,10 @@
+## [1.61.3](https://github.com/Famous-Roasters/frontend/compare/v1.61.2...v1.61.3) (2022-08-29)
+
+
+### Bug Fixes
+
+* **product:** add margin to bottom of component ([1da6d97](https://github.com/Famous-Roasters/frontend/commit/1da6d9711d195c701423a406913672f8f90f1cb3))
+
 ## [1.61.2](https://github.com/Famous-Roasters/frontend/compare/v1.61.1...v1.61.2) (2022-08-27)
 
 ## [1.61.1](https://github.com/Famous-Roasters/frontend/compare/v1.61.0...v1.61.1) (2022-08-27)
