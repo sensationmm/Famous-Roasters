@@ -1,5 +1,5 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react'
-import Amplify from 'aws-amplify'
+import Amplify, { Auth } from 'aws-amplify'
 import React from 'react'
 import { I18nextProvider } from 'react-i18next'
 import ReactRouterDom, { LinkProps } from 'react-router-dom'
@@ -12,7 +12,8 @@ import { Account } from '.'
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 const mockCognito = cognito as { useAuth: () => [{ isValid: boolean }, () => void] }
-
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+const mockAmplifyAuth = Auth as { currentAuthenticatedUser: () => Promise<any> }
 const mockUseNavigate = jest.fn()
 
 jest.mock('react-router-dom', () => ({
@@ -67,6 +68,7 @@ describe('Account view', () => {
 
   it('redirects if not authed', async () => {
     mockCognito.useAuth = () => [{ isValid: false }, jest.fn]
+    mockAmplifyAuth.currentAuthenticatedUser = () => Promise.reject()
     render(
       <I18nextProvider i18n={i18n}>
         <ReactRouterDom.MemoryRouter initialEntries={['/account']}>

@@ -11,18 +11,14 @@ import {
   TypographySize,
   TypographyType,
 } from 'src/components'
-import { useAuth } from 'src/config/cognito'
 
 export const Account: React.FC = () => {
   const { t } = useTranslation()
-  const [user] = useAuth()
   const navigate = useNavigate()
 
   useEffect(() => {
-    if (!user?.isValid) {
-      navigate('/login')
-    }
-  }, [user])
+    Auth.currentAuthenticatedUser().catch(() => navigate('/login'))
+  }, [])
 
   const signOut = async () => {
     await Auth.signOut()
