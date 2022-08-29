@@ -202,7 +202,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
         class="w-full max-w-7xl mx-auto px-6 xl:px-8"
       >
         <div
-          class="grid gap-6 grid-cols-1 md:grid-cols-2 mt-12"
+          class="grid gap-6 grid-cols-1 md:grid-cols-2 mt-10"
         >
           <div>
             Carousel here
@@ -219,7 +219,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
               </h2>
             </div>
             <div
-              class="border-b border-brand-grey-whisper pb-4 font-syne"
+              class="border-b border-brand-grey-whisper pb-4"
             >
               <h1
                 class="text-2xl leading-8 font-semibold"
@@ -1337,7 +1337,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
         class="w-full max-w-7xl mx-auto px-6 xl:px-8"
       >
         <div
-          class="grid gap-6 grid-cols-1 md:grid-cols-2 mt-12"
+          class="grid gap-6 grid-cols-1 md:grid-cols-2 mt-10"
         >
           <div>
             <span />
@@ -1351,7 +1351,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               </h2>
             </div>
             <div
-              class="border-b border-brand-grey-whisper pb-4 font-syne"
+              class="border-b border-brand-grey-whisper pb-4"
             >
               <h1
                 class="text-2xl leading-8 font-semibold"
@@ -3112,7 +3112,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
         class="w-full max-w-7xl mx-auto px-6 xl:px-8"
       >
         <div
-          class="grid gap-6 grid-cols-1 md:grid-cols-2 mt-12"
+          class="grid gap-6 grid-cols-1 md:grid-cols-2 mt-10"
         >
           <div>
             <span />
@@ -3126,7 +3126,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
               </h2>
             </div>
             <div
-              class="border-b border-brand-grey-whisper pb-4 font-syne"
+              class="border-b border-brand-grey-whisper pb-4"
             >
               <h1
                 class="text-2xl leading-8 font-semibold"
