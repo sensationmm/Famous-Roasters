@@ -1,3 +1,12 @@
+## [1.61.8](https://github.com/Famous-Roasters/frontend/compare/v1.61.7...v1.61.8) (2022-08-29)
+
+
+### Bug Fixes
+
+* **ci:** address build failures ([6acf29e](https://github.com/Famous-Roasters/frontend/commit/6acf29e132764884930936790bf1eb45281ef9a6))
+* **product:** remove variant dropdown restrictions ([#220](https://github.com/Famous-Roasters/frontend/issues/220)) ([9ea88ff](https://github.com/Famous-Roasters/frontend/commit/9ea88ffcb74fadb6a77531416d5f33bac08d182b))
+* **profile:** launch tastefinder if profile has no taste profile yet ([#211](https://github.com/Famous-Roasters/frontend/issues/211)) ([837179d](https://github.com/Famous-Roasters/frontend/commit/837179d0297e5e6d526c1038ba75efdec2d5c541))
+
 ## [1.61.7](https://github.com/Famous-Roasters/frontend/compare/v1.61.6...v1.61.7) (2022-08-29)
 
 
