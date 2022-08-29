@@ -38,6 +38,21 @@ export const GrindsInfo: React.FC = () => {
       image: whole,
     },
     {
+      key: 'french',
+      iconName: IconName.FrenchPress,
+      image: french,
+    },
+    {
+      key: 'chemex',
+      iconName: IconName.Chemex,
+      image: chemex,
+    },
+    {
+      key: 'v60',
+      iconName: IconName.V60,
+      image: v60,
+    },
+    {
       key: 'aeropress',
       iconName: IconName.Aeropress,
       image: aeropress,
@@ -51,21 +66,6 @@ export const GrindsInfo: React.FC = () => {
       key: 'espresso',
       iconName: IconName.Espresso,
       image: espresso,
-    },
-    {
-      key: 'v60',
-      iconName: IconName.V60,
-      image: v60,
-    },
-    {
-      key: 'chemex',
-      iconName: IconName.Chemex,
-      image: chemex,
-    },
-    {
-      key: 'french',
-      iconName: IconName.FrenchPress,
-      image: french,
     },
   ]
 
