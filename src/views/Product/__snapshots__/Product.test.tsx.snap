@@ -202,14 +202,16 @@ exports[`Product view Renders correctly for a accessories 1`] = `
         class="w-full max-w-7xl mx-auto px-6 xl:px-8"
       >
         <div
-          class="grid gap-6 grid-cols-1 md:grid-cols-2"
+          class="grid gap-6 grid-cols-1 md:grid-cols-2 mt-10"
         >
           <div>
             Carousel here
           </div>
           <div>
             <span />
-            <div>
+            <div
+              class="mb-2"
+            >
               <h2
                 class="text-coreUI-text-secondary text-sm leading-5"
               >
@@ -1335,11 +1337,13 @@ exports[`Product view Renders correctly for a successful call 1`] = `
         class="w-full max-w-7xl mx-auto px-6 xl:px-8"
       >
         <div
-          class="grid gap-6 grid-cols-1 md:grid-cols-2"
+          class="grid gap-6 grid-cols-1 md:grid-cols-2 mt-10"
         >
           <div>
             <span />
-            <div>
+            <div
+              class="mb-2"
+            >
               <h2
                 class="text-coreUI-text-secondary text-sm leading-5"
               >
@@ -2136,7 +2140,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                   <span
                     class="text-coreUI-text-secondary text-xs leading-4"
                   >
-                    Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu Dir. Wir teilen Dir den geplanten Liefertermin im nächsten Schritt mit.
+                    Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu dir. Wir teilen dir den geplanten Liefertermin im nächsten Schritt mit.
                   </span>
                 </div>
               </div>
@@ -2229,7 +2233,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
           <span
             class="text-coreUI-text-secondary text-xs leading-4"
           >
-            Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu Dir. Wir teilen Dir den geplanten Liefertermin im nächsten Schritt mit.
+            Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu dir. Wir teilen dir den geplanten Liefertermin im nächsten Schritt mit.
           </span>
         </div>
       </div>
@@ -3108,11 +3112,13 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
         class="w-full max-w-7xl mx-auto px-6 xl:px-8"
       >
         <div
-          class="grid gap-6 grid-cols-1 md:grid-cols-2"
+          class="grid gap-6 grid-cols-1 md:grid-cols-2 mt-10"
         >
           <div>
             <span />
-            <div>
+            <div
+              class="mb-2"
+            >
               <h2
                 class="text-coreUI-text-secondary text-sm leading-5"
               >
@@ -3896,7 +3902,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                   <span
                     class="text-coreUI-text-secondary text-xs leading-4"
                   >
-                    Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu Dir. Wir teilen Dir den geplanten Liefertermin im nächsten Schritt mit.
+                    Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu dir. Wir teilen dir den geplanten Liefertermin im nächsten Schritt mit.
                   </span>
                 </div>
               </div>
@@ -3989,7 +3995,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
           <span
             class="text-coreUI-text-secondary text-xs leading-4"
           >
-            Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu Dir. Wir teilen Dir den geplanten Liefertermin im nächsten Schritt mit.
+            Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu dir. Wir teilen dir den geplanten Liefertermin im nächsten Schritt mit.
           </span>
         </div>
       </div>

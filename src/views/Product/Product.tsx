@@ -381,13 +381,13 @@ export const Product: React.FC = () => {
 
   const renderProductMainBlock = () => {
     return (
-      <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
+      <div className="grid gap-6 grid-cols-1 md:grid-cols-2 mt-10">
         {/* Images */}
         {images && images.nodes.length > 0 && <Carousel images={images.nodes} />}
         <div>
           <span ref={detailsRef} />
           {/* Vendor and bean_type */}
-          <div>
+          <div className="mb-2">
             <Typography
               as="h2"
               type={TypographyType.Paragraph}
