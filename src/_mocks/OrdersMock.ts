@@ -300,10 +300,10 @@ export const OrdersMock = {
     data: {
       orders: {
         edges: [
-          OrderMock.result.data.orders.edges[0].node,
-          OrderMock2.result.data.orders.edges[0].node,
-          OrderMock1.result.data.orders.edges[0].node,
-          OrderMock3.result.data.orders.edges[0].node,
+          OrderMock.result.data.orders.edges[0],
+          OrderMock2.result.data.orders.edges[0],
+          OrderMock1.result.data.orders.edges[0],
+          OrderMock3.result.data.orders.edges[0],
         ],
       },
     },

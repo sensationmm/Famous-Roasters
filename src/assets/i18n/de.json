@@ -1142,8 +1142,11 @@
     "orders": {
       "title": "Deine Bestellungen",
       "intro": "Hier findest du alle Informationen über deine Bestellungen.",
-      "noOrdersText": "Du hast noch keine Bestellungen.",
-      "noOrdersTextFiltered": "Du hast keine Bestellungen, die auf deine Suche passen."
+      "noOrdersText": "Leider hast du noch nichts bei uns bestellst",
+      "noOrdersPrompt": "Bist du bereit? Lass uns dir unseren Katalog zeigen ...",
+      "noOrdersTextFiltered": "Du hast keine Bestellungen, die auf deine Suche passen.",
+      "shopLink": "Zum Shop",
+      "clearFilter": "Klarfilter"
     },
     "rate": {
       "rateCoffee": "Kaffee bewerten",

@@ -55,7 +55,7 @@ export const Profile: React.FC = () => {
   const breakpoint = useBreakpoint()
   const [userName, setUserName] = useState<string>()
   const [userProfile, setUserProfile] = useState<UserProfile>()
-  const [lastOrder, setLastOrder] = useState<Order>()
+  const [lastOrder, setLastOrder] = useState<Order['node']>()
   const [ordersLoading, setOrdersLoading] = useState<boolean>(false)
   const [getUserProfile] = useLazyQuery(USER_PROFILE)
   const GET_PRODUCTS = loader('src/graphql/queries/products.query.graphql')
