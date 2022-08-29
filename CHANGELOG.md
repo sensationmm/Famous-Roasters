@@ -1,3 +1,10 @@
+## [1.61.7](https://github.com/Famous-Roasters/frontend/compare/v1.61.6...v1.61.7) (2022-08-29)
+
+
+### Bug Fixes
+
+* **orders:** orders data model ([1d09651](https://github.com/Famous-Roasters/frontend/commit/1d096516bc67056ad12cec3c2f24589a992b3cdf))
+
 ## [1.61.6](https://github.com/Famous-Roasters/frontend/compare/v1.61.5...v1.61.6) (2022-08-29)
 
 
