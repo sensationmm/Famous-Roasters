@@ -456,7 +456,7 @@ export const Product: React.FC = () => {
               )}
             </div>
             <div className="grid gap-6 grid-cols-2 mt-4">
-              {variants && variants.nodes.length > 1 && variants.nodes[0].package_size && packageSizes.length > 1 && (
+              {variants && variants.nodes[0].package_size && (
                 <Listbox
                   items={packageSizes}
                   hasTranslatedValues={false}
@@ -472,25 +472,22 @@ export const Product: React.FC = () => {
                   label={t('pages.product.transactional.options.packageSize.label')}
                 />
               )}
-              {variants &&
-                variants.nodes.length > 1 &&
-                variants.nodes[0].equipmentvariant &&
-                variantValues().length > 1 && (
-                  <Listbox
-                    items={variantValues() as ListBoxItem[]}
-                    hasTranslatedValues={false}
-                    translationPrefix="pages.product.transactional.options.equipmentvariant"
-                    multiple={false}
-                    value={[
-                      {
-                        name: variantSelected?.equipmentvariant?.value || '',
-                        value: variantSelected?.equipmentvariant?.value || '',
-                      },
-                    ]}
-                    onChange={(v) => v && updateVariantSelectedWithEquipmentVariant(v)}
-                    label={t('pages.product.transactional.options.equipmentvariant.label')}
-                  />
-                )}
+              {variants && variants.nodes[0].equipmentvariant && (
+                <Listbox
+                  items={variantValues() as ListBoxItem[]}
+                  hasTranslatedValues={false}
+                  translationPrefix="pages.product.transactional.options.equipmentvariant"
+                  multiple={false}
+                  value={[
+                    {
+                      name: variantSelected?.equipmentvariant?.value || '',
+                      value: variantSelected?.equipmentvariant?.value || '',
+                    },
+                  ]}
+                  onChange={(v) => v && updateVariantSelectedWithEquipmentVariant(v)}
+                  label={t('pages.product.transactional.options.equipmentvariant.label')}
+                />
+              )}
               <div>
                 <QuantitySelect
                   min={1}

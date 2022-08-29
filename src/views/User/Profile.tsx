@@ -375,11 +375,7 @@ export const Profile: React.FC = () => {
                 })}
               </div>
               <div className="flex justify-center pt-14">
-                <Button
-                  emphasis={ButtonEmphasis.Tertiary}
-                  onClick={() => navigate('/catalogue?isAccessory=true')}
-                  fullWidth
-                >
+                <Button emphasis={ButtonEmphasis.Tertiary} onClick={() => navigate('/catalogue/accessories')} fullWidth>
                   {t('pages.profile.sections.lastOrder.productSuggestionCTA')}
                 </Button>
               </div>

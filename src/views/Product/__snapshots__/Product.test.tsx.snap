@@ -324,6 +324,94 @@ exports[`Product view Renders correctly for a accessories 1`] = `
               <div
                 class="grid gap-6 grid-cols-2 mt-4"
               >
+                <div
+                  class="w-full relative"
+                >
+                  <div
+                    class="grid grid-cols-2 items-end"
+                  >
+                    <div>
+                      <label
+                        class="flex text-coreUI-text-secondary uppercase mb-1 text-xs leading-4"
+                      >
+                        Größe/Menge
+                      </label>
+                    </div>
+                    <div
+                      class="justify-self-end"
+                    />
+                  </div>
+                  <button
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
+                    data-testid="button-listbox"
+                    id="headlessui-listbox-button-:r2f:"
+                    type="button"
+                  >
+                    <span
+                      class="block truncate text-base leading-6"
+                    >
+                      300g
+                    </span>
+                    <svg
+                      aria-hidden="true"
+                      class="-mr-1 ml-2 h-6 w-6"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div
+                  class="w-full relative"
+                >
+                  <div
+                    class="grid grid-cols-2 items-end"
+                  >
+                    <div>
+                      <label
+                        class="flex text-coreUI-text-secondary uppercase mb-1 text-xs leading-4"
+                      >
+                        Ausführung
+                      </label>
+                    </div>
+                    <div
+                      class="justify-self-end"
+                    />
+                  </div>
+                  <button
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
+                    data-testid="button-listbox"
+                    id="headlessui-listbox-button-:r2g:"
+                    type="button"
+                  >
+                    <span
+                      class="block truncate text-base leading-6"
+                    />
+                    <svg
+                      aria-hidden="true"
+                      class="-mr-1 ml-2 h-6 w-6"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
                 <div>
                   <label
                     class="flex text-coreUI-text-secondary uppercase mb-1 text-xs leading-4"
@@ -570,11 +658,11 @@ exports[`Product view Renders correctly for a accessories 1`] = `
             class="border-t border-coreUI-border mx-auto w-full py-4"
           >
             <button
-              aria-controls="headlessui-disclosure-panel-:r2g:"
+              aria-controls="headlessui-disclosure-panel-:r2i:"
               class="flex w-full justify-between py-2 text-left"
               data-testid="button-disclosure-toggle"
               disabled=""
-              id="headlessui-disclosure-button-:r2f:"
+              id="headlessui-disclosure-button-:r2h:"
               type="button"
             >
               <span
@@ -585,7 +673,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
             </button>
             <div
               class="py-2"
-              id="headlessui-disclosure-panel-:r2g:"
+              id="headlessui-disclosure-panel-:r2i:"
             >
               <div
                 class="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
@@ -1935,7 +2023,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                     aria-haspopup="true"
                     class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                     data-testid="button-listbox"
-                    id="headlessui-listbox-button-:r8:"
+                    id="headlessui-listbox-button-:r1:"
                     type="button"
                   >
                     <span
@@ -1980,7 +2068,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                     aria-haspopup="true"
                     class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                     data-testid="button-listbox"
-                    id="headlessui-listbox-button-:r1:"
+                    id="headlessui-listbox-button-:r2:"
                     type="button"
                   >
                     <span
@@ -2247,11 +2335,11 @@ exports[`Product view Renders correctly for a successful call 1`] = `
             class="border-t border-coreUI-border mx-auto w-full py-4"
           >
             <button
-              aria-controls="headlessui-disclosure-panel-:r3:"
+              aria-controls="headlessui-disclosure-panel-:r4:"
               aria-expanded="true"
               class="flex w-full justify-between py-2 text-left"
               data-testid="button-disclosure-toggle"
-              id="headlessui-disclosure-button-:r2:"
+              id="headlessui-disclosure-button-:r3:"
               type="button"
             >
               <span
@@ -2277,7 +2365,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
             </button>
             <div
               class="py-2"
-              id="headlessui-disclosure-panel-:r3:"
+              id="headlessui-disclosure-panel-:r4:"
             >
               <div>
                 <p
@@ -2557,11 +2645,11 @@ exports[`Product view Renders correctly for a successful call 1`] = `
             class="border-t border-coreUI-border mx-auto w-full py-4"
           >
             <button
-              aria-controls="headlessui-disclosure-panel-:r5:"
+              aria-controls="headlessui-disclosure-panel-:r6:"
               aria-expanded="true"
               class="flex w-full justify-between py-2 text-left"
               data-testid="button-disclosure-toggle"
-              id="headlessui-disclosure-button-:r4:"
+              id="headlessui-disclosure-button-:r5:"
               type="button"
             >
               <span
@@ -2587,7 +2675,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
             </button>
             <div
               class="py-2"
-              id="headlessui-disclosure-panel-:r5:"
+              id="headlessui-disclosure-panel-:r6:"
             >
               <div
                 class="grid gap-6 md:grid-cols-2 xl:grid-cols-1"
@@ -2616,11 +2704,11 @@ exports[`Product view Renders correctly for a successful call 1`] = `
             class="border-t border-coreUI-border mx-auto w-full py-4"
           >
             <button
-              aria-controls="headlessui-disclosure-panel-:r7:"
+              aria-controls="headlessui-disclosure-panel-:r8:"
               class="flex w-full justify-between py-2 text-left"
               data-testid="button-disclosure-toggle"
               disabled=""
-              id="headlessui-disclosure-button-:r6:"
+              id="headlessui-disclosure-button-:r7:"
               type="button"
             >
               <span
@@ -2631,7 +2719,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
             </button>
             <div
               class="py-2"
-              id="headlessui-disclosure-panel-:r7:"
+              id="headlessui-disclosure-panel-:r8:"
             >
               <div
                 class="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mb-10"
@@ -3697,7 +3785,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                     aria-haspopup="true"
                     class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                     data-testid="button-listbox"
-                    id="headlessui-listbox-button-:rf:"
+                    id="headlessui-listbox-button-:ra:"
                     type="button"
                   >
                     <span
@@ -3742,7 +3830,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                     aria-haspopup="true"
                     class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                     data-testid="button-listbox"
-                    id="headlessui-listbox-button-:ra:"
+                    id="headlessui-listbox-button-:rb:"
                     type="button"
                   >
                     <span
@@ -4009,11 +4097,11 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
             class="border-t border-coreUI-border mx-auto w-full py-4"
           >
             <button
-              aria-controls="headlessui-disclosure-panel-:rc:"
+              aria-controls="headlessui-disclosure-panel-:rd:"
               aria-expanded="true"
               class="flex w-full justify-between py-2 text-left"
               data-testid="button-disclosure-toggle"
-              id="headlessui-disclosure-button-:rb:"
+              id="headlessui-disclosure-button-:rc:"
               type="button"
             >
               <span
@@ -4039,7 +4127,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
             </button>
             <div
               class="py-2"
-              id="headlessui-disclosure-panel-:rc:"
+              id="headlessui-disclosure-panel-:rd:"
             >
               <div>
                 <p
@@ -4319,11 +4407,11 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
             class="border-t border-coreUI-border mx-auto w-full py-4"
           >
             <button
-              aria-controls="headlessui-disclosure-panel-:re:"
+              aria-controls="headlessui-disclosure-panel-:rf:"
               aria-expanded="true"
               class="flex w-full justify-between py-2 text-left"
               data-testid="button-disclosure-toggle"
-              id="headlessui-disclosure-button-:rd:"
+              id="headlessui-disclosure-button-:re:"
               type="button"
             >
               <span
@@ -4349,7 +4437,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
             </button>
             <div
               class="py-2"
-              id="headlessui-disclosure-panel-:re:"
+              id="headlessui-disclosure-panel-:rf:"
             >
               <div
                 class="grid gap-6 md:grid-cols-2 xl:grid-cols-1"
