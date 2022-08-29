@@ -222,8 +222,8 @@
     "filters" : {
       "label": "Sortieren nach...",
       "values": {
-        "newest": "Latest order",
-        "oldest": "Oldest order"
+        "newest": "Neueste Bestellung",
+        "oldest": "Älteste Bestellung"
       }
     }
   },
@@ -410,7 +410,8 @@
     "account": {
       "navigation": "Konto",
       "title": "Konto",
-      "intro": "Hier kannst du dich ausloggen."
+      "intro": "Hier kannst du dich ausloggen.",
+      "cta": "Ausloggen"
     },
     "blog": {
       "navigation": "Blog",
@@ -1146,7 +1147,9 @@
       "noOrdersPrompt": "Bist du bereit? Lass uns dir unseren Katalog zeigen ...",
       "noOrdersTextFiltered": "Du hast keine Bestellungen, die auf deine Suche passen.",
       "shopLink": "Zum Shop",
-      "clearFilter": "Klarfilter"
+      "orderNumber": "Bestellnummer",
+      "clearFilter": "Klarfilter",
+      "searchPlaceholder": "Suche nach Bestellnummer"
     },
     "rate": {
       "rateCoffee": "Kaffee bewerten",

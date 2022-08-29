@@ -48,7 +48,7 @@ export const Account: React.FC = () => {
                 className="!mx-0"
                 onClick={signOut}
               >
-                Logout
+                {t('pages.account.cta')}
               </Button>
             </div>
           </div>

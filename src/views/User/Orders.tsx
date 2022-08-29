@@ -139,7 +139,7 @@ export const Orders: React.FC = () => {
                 labelText=""
                 value={filterOrderId}
                 onChange={(e) => setFilterOrderId(e.target.value)}
-                placeholder="Search for a specific order number"
+                placeholder={t('pages.orders.searchPlaceholder')}
                 icon={IconName.Search}
                 className="w-full md:w-[330px] border-coreUI-background-images"
                 classNameWrapper="w-full md:w-[330px] mb-4"
@@ -201,7 +201,7 @@ export const Orders: React.FC = () => {
                     <div className="grid grid-cols-2 gap-6">
                       <div>
                         <Typography className="block font-bold">
-                          Order #{getSimplifiedId(order.node.id, 'Order')}
+                          {t('pages.orders.orderNumber')} #{getSimplifiedId(order.node.id, 'Order')}
                         </Typography>
                         <Typography>
                           {formatPrice(

@@ -189,7 +189,7 @@ exports[`Account view Renders correctly 1`] = `
               data-testid="account-logout"
               role="button"
             >
-              Logout
+              Ausloggen
             </button>
           </div>
         </div>

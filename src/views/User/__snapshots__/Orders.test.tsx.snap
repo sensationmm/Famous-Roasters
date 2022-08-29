@@ -200,7 +200,7 @@ exports[`Orders view Handles error call 1`] = `
                 class="w-full md:w-[330px] border-coreUI-background-images border rounded-full focus:outline-0 focus:ring px-3 py-1 text-sm pr-8 focus:ring-primary/30"
                 data-testid="filter-ids"
                 id="filter-ids"
-                placeholder="Search for a specific order number"
+                placeholder="Suche nach Bestellnummer"
                 type="number"
                 value=""
               />
@@ -742,7 +742,7 @@ exports[`Orders view Renders correctly 1`] = `
                 class="w-full md:w-[330px] border-coreUI-background-images border rounded-full focus:outline-0 focus:ring px-3 py-1 text-sm pr-8 focus:ring-primary/30"
                 data-testid="filter-ids"
                 id="filter-ids"
-                placeholder="Search for a specific order number"
+                placeholder="Suche nach Bestellnummer"
                 type="number"
                 value=""
               />
@@ -819,7 +819,8 @@ exports[`Orders view Renders correctly 1`] = `
                 <span
                   class="block font-bold text-base leading-6"
                 >
-                  Order #
+                  Bestellnummer
+                   #
                   895370
                 </span>
                 <span
@@ -927,7 +928,8 @@ exports[`Orders view Renders correctly 1`] = `
                 <span
                   class="block font-bold text-base leading-6"
                 >
-                  Order #
+                  Bestellnummer
+                   #
                   895372
                 </span>
                 <span
@@ -997,7 +999,8 @@ exports[`Orders view Renders correctly 1`] = `
                 <span
                   class="block font-bold text-base leading-6"
                 >
-                  Order #
+                  Bestellnummer
+                   #
                   895371
                 </span>
                 <span
@@ -1105,7 +1108,8 @@ exports[`Orders view Renders correctly 1`] = `
                 <span
                   class="block font-bold text-base leading-6"
                 >
-                  Order #
+                  Bestellnummer
+                   #
                   895373
                 </span>
                 <span
@@ -1662,7 +1666,7 @@ exports[`Orders view Renders correctly with no orders 1`] = `
                 class="w-full md:w-[330px] border-coreUI-background-images border rounded-full focus:outline-0 focus:ring px-3 py-1 text-sm pr-8 focus:ring-primary/30"
                 data-testid="filter-ids"
                 id="filter-ids"
-                placeholder="Search for a specific order number"
+                placeholder="Suche nach Bestellnummer"
                 type="number"
                 value=""
               />
@@ -2204,7 +2208,7 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
                 class="w-full md:w-[330px] border-coreUI-background-images border rounded-full focus:outline-0 focus:ring px-3 py-1 text-sm pr-8 focus:ring-primary/30"
                 data-testid="filter-ids"
                 id="filter-ids"
-                placeholder="Search for a specific order number"
+                placeholder="Suche nach Bestellnummer"
                 type="number"
                 value="12345"
               />
@@ -2741,7 +2745,7 @@ exports[`Orders view sets filter value 1`] = `
                 class="w-full md:w-[330px] border-coreUI-background-images border rounded-full focus:outline-0 focus:ring px-3 py-1 text-sm pr-8 focus:ring-primary/30"
                 data-testid="filter-ids"
                 id="filter-ids"
-                placeholder="Search for a specific order number"
+                placeholder="Suche nach Bestellnummer"
                 type="number"
                 value="8953"
               />
@@ -2818,7 +2822,8 @@ exports[`Orders view sets filter value 1`] = `
                 <span
                   class="block font-bold text-base leading-6"
                 >
-                  Order #
+                  Bestellnummer
+                   #
                   895370
                 </span>
                 <span
@@ -2926,7 +2931,8 @@ exports[`Orders view sets filter value 1`] = `
                 <span
                   class="block font-bold text-base leading-6"
                 >
-                  Order #
+                  Bestellnummer
+                   #
                   895372
                 </span>
                 <span
@@ -2996,7 +3002,8 @@ exports[`Orders view sets filter value 1`] = `
                 <span
                   class="block font-bold text-base leading-6"
                 >
-                  Order #
+                  Bestellnummer
+                   #
                   895371
                 </span>
                 <span
@@ -3104,7 +3111,8 @@ exports[`Orders view sets filter value 1`] = `
                 <span
                   class="block font-bold text-base leading-6"
                 >
-                  Order #
+                  Bestellnummer
+                   #
                   895373
                 </span>
                 <span
@@ -3661,7 +3669,7 @@ exports[`Orders view sets sort newest first 1`] = `
                 class="w-full md:w-[330px] border-coreUI-background-images border rounded-full focus:outline-0 focus:ring px-3 py-1 text-sm pr-8 focus:ring-primary/30"
                 data-testid="filter-ids"
                 id="filter-ids"
-                placeholder="Search for a specific order number"
+                placeholder="Suche nach Bestellnummer"
                 type="number"
                 value=""
               />
@@ -3706,7 +3714,7 @@ exports[`Orders view sets sort newest first 1`] = `
                 <span
                   class="block truncate pt-0.5 text-sm leading-5"
                 >
-                  Latest order
+                  Neueste Bestellung
                 </span>
                 <svg
                   aria-hidden="true"
@@ -3738,7 +3746,8 @@ exports[`Orders view sets sort newest first 1`] = `
                 <span
                   class="block font-bold text-base leading-6"
                 >
-                  Order #
+                  Bestellnummer
+                   #
                   895370
                 </span>
                 <span
@@ -3846,7 +3855,8 @@ exports[`Orders view sets sort newest first 1`] = `
                 <span
                   class="block font-bold text-base leading-6"
                 >
-                  Order #
+                  Bestellnummer
+                   #
                   895372
                 </span>
                 <span
@@ -3916,7 +3926,8 @@ exports[`Orders view sets sort newest first 1`] = `
                 <span
                   class="block font-bold text-base leading-6"
                 >
-                  Order #
+                  Bestellnummer
+                   #
                   895371
                 </span>
                 <span
@@ -4024,7 +4035,8 @@ exports[`Orders view sets sort newest first 1`] = `
                 <span
                   class="block font-bold text-base leading-6"
                 >
-                  Order #
+                  Bestellnummer
+                   #
                   895373
                 </span>
                 <span
@@ -4581,7 +4593,7 @@ exports[`Orders view sets sort oldest first 1`] = `
                 class="w-full md:w-[330px] border-coreUI-background-images border rounded-full focus:outline-0 focus:ring px-3 py-1 text-sm pr-8 focus:ring-primary/30"
                 data-testid="filter-ids"
                 id="filter-ids"
-                placeholder="Search for a specific order number"
+                placeholder="Suche nach Bestellnummer"
                 type="number"
                 value=""
               />
@@ -4626,7 +4638,7 @@ exports[`Orders view sets sort oldest first 1`] = `
                 <span
                   class="block truncate pt-0.5 text-sm leading-5"
                 >
-                  Oldest order
+                  Älteste Bestellung
                 </span>
                 <svg
                   aria-hidden="true"
@@ -4658,7 +4670,8 @@ exports[`Orders view sets sort oldest first 1`] = `
                 <span
                   class="block font-bold text-base leading-6"
                 >
-                  Order #
+                  Bestellnummer
+                   #
                   895370
                 </span>
                 <span
@@ -4766,7 +4779,8 @@ exports[`Orders view sets sort oldest first 1`] = `
                 <span
                   class="block font-bold text-base leading-6"
                 >
-                  Order #
+                  Bestellnummer
+                   #
                   895372
                 </span>
                 <span
@@ -4836,7 +4850,8 @@ exports[`Orders view sets sort oldest first 1`] = `
                 <span
                   class="block font-bold text-base leading-6"
                 >
-                  Order #
+                  Bestellnummer
+                   #
                   895371
                 </span>
                 <span
@@ -4944,7 +4959,8 @@ exports[`Orders view sets sort oldest first 1`] = `
                 <span
                   class="block font-bold text-base leading-6"
                 >
-                  Order #
+                  Bestellnummer
+                   #
                   895373
                 </span>
                 <span
