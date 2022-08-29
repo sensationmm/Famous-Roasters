@@ -68,7 +68,7 @@ export const FindSimilar: React.FC<FindSimilarProps> = ({ aroma, productId }: Fi
   }
 
   return (
-    <div className="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+    <div className="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mb-10">
       {productNodes?.map((node, i: number) => {
         const id = getSimplifiedId(node.id)
         return (
