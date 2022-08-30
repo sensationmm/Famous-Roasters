@@ -1,3 +1,10 @@
+## [1.61.13](https://github.com/Famous-Roasters/frontend/compare/v1.61.12...v1.61.13) (2022-08-30)
+
+
+### Bug Fixes
+
+* **profile:** update styling ([6ace55c](https://github.com/Famous-Roasters/frontend/commit/6ace55cf81a7a6669e061392a7bf30388f828cbc))
+
 ## [1.61.12](https://github.com/Famous-Roasters/frontend/compare/v1.61.11...v1.61.12) (2022-08-30)
 
 
