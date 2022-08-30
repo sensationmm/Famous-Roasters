@@ -33,6 +33,9 @@ export const FiltersMenuMobile: React.FC<FiltersMenuMobileProps> = ({ filters }:
     setCurrentFilter(key)
   }
 
+  const attributes = filters.map((filter) => filter.attribute)
+  const nrActiveFilters = items.filter((item) => attributes.includes(item.attribute)).length
+
   return (
     <>
       <Transition.Root show={open} unmount={false} as={Fragment}>
@@ -150,7 +153,7 @@ export const FiltersMenuMobile: React.FC<FiltersMenuMobileProps> = ({ filters }:
       >
         <Typography size={TypographySize.Base} className="block truncate">
           {t(`pages.catalogue.filters.common.filtersMenu.filter`)}
-          {items.length > 0 && ` (${items.length})`}
+          {nrActiveFilters > 0 && ` (${nrActiveFilters})`}
         </Typography>
         <ChevronRightIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
       </button>

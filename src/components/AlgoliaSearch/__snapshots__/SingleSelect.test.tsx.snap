@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SingleSelect component Renders correctly 1`] = `
+<div>
+  <div
+    class="w-auto min-w-fit max-w-xs relative"
+  >
+    <div
+      class="grid grid-cols-2 items-end"
+    />
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      class="inline-flex justify-between w-full text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default px-4 py-2"
+      data-testid="button-listbox"
+      id="headlessui-listbox-button-:r0:"
+      type="button"
+    >
+      <span
+        class="block truncate text-base leading-6"
+      >
+        Alle Kaffees
+      </span>
+      <svg
+        aria-hidden="true"
+        class="-mr-1 ml-2 h-6 w-6"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M19 9l-7 7-7-7"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;

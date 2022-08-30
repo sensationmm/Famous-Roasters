@@ -32,6 +32,7 @@ const CoffeeSearch: React.FC = () => {
         <SingleSelectFilter
           attribute="meta.my_fields.coffee_type"
           defaultText={t('pages.catalogue.filters.meta.my_fields.coffee_type')}
+          big
         />
 
         {/* Decaf filter (mobile) */}

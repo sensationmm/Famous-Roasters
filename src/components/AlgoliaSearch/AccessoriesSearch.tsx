@@ -29,6 +29,7 @@ const AccessoriesSearch: React.FC = () => {
         <SingleSelectFilter
           attribute="meta.my_fields.accessory_type"
           defaultText={t('pages.catalogue.filters.meta.my_fields.accessory_type')}
+          big
         />
 
         <SearchBox

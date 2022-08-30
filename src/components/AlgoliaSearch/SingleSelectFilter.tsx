@@ -1,37 +1,29 @@
-import { ChevronDownIcon } from '@heroicons/react/outline'
 import { useClearRefinements, useRefinementList, UseRefinementListProps } from 'react-instantsearch-hooks-web'
+
+import SingleSelect, { SelectItem } from './SingleSelect'
 
 interface FilterProps extends UseRefinementListProps {
   defaultText: string
+  big?: boolean
 }
 
 const SingleSelectFilter = (props: FilterProps) => {
+  const { defaultText, big } = props
   const { items, refine } = useRefinementList({ sortBy: ['name:asc'], ...props })
   const { refine: clearRefinements } = useClearRefinements()
-  const { defaultText } = props
 
-  const currentItem = items.filter((item) => item.isRefined)[0]
-  const currentValue = currentItem?.value || ''
+  const defaultItem = { label: defaultText, value: '', isRefined: false }
+  const options = [defaultItem].concat(items.filter((item) => item.value.length > 0))
+  const currentItem: SelectItem = options.filter((item) => item.isRefined)[0] || defaultItem
+
+  const handleOnChange = (option: SelectItem) => {
+    clearRefinements()
+    refine(option.value)
+  }
 
   return (
     <div>
-      <select
-        onChange={(e) => {
-          const value = e.target.value
-          clearRefinements()
-          value.length && refine(e.target.value)
-        }}
-        className="nochevron text-xl leading-7 font-semibold border-b-2 minimal pb-2 pr-7 bg-white"
-        value={currentValue}
-      >
-        <option value="">{defaultText}</option>
-        {items.map((item) => (
-          <option key={item.value} defaultValue={item.value}>
-            {item.value}
-          </option>
-        ))}
-      </select>
-      <ChevronDownIcon className="-ml-5 -mt-1 h-6 w-6 inline" aria-hidden="true" />
+      <SingleSelect items={options} value={currentItem} onChange={handleOnChange} big={big} />
     </div>
   )
 }
