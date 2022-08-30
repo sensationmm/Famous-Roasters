@@ -28,6 +28,11 @@ export const Brewing: React.FC<TasteFinderFieldHandlerProps> = ({
       text: t('pages.tasteFinder.steps.grindType.options.option3.text'),
     },
     {
+      name: 'FilterkaffeeMachine',
+      iconName: IconName.FilterkaffeeMachine,
+      text: t('pages.tasteFinder.steps.grindType.options.option7.text'),
+    },
+    {
       name: 'Moka',
       iconName: IconName.Moka,
       text: t('pages.tasteFinder.steps.grindType.options.option4.text'),
@@ -41,6 +46,11 @@ export const Brewing: React.FC<TasteFinderFieldHandlerProps> = ({
       name: 'Espresso',
       iconName: IconName.Espresso,
       text: t('pages.tasteFinder.steps.grindType.options.option6.text'),
+    },
+    {
+      name: 'VollautomatMachine',
+      iconName: IconName.VollautomatMachine,
+      text: t('pages.tasteFinder.steps.grindType.options.option8.text'),
     },
   ]
 

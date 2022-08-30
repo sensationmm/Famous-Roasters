@@ -87,7 +87,7 @@ export const _Taste: React.FC<TastePartialScreenProps> = ({
   const getIconCheckboxGridContainer = () => {
     const classNames = ['grid', 'gap-x-4', 'w-full', 'm-auto']
     if (listGuideItems === undefined || listGuideItems > 3) {
-      classNames.push('md:w-5/6', 'md:grid-rows-3', 'md:grid-cols-2', 'md:grid-flow-col')
+      classNames.push('md:w-4/6', 'md:grid-rows-4', 'md:grid-cols-2', 'md:grid-flow-col')
     } else {
       classNames.push('md:w-3/6', 'md:grid-cols-1')
     }

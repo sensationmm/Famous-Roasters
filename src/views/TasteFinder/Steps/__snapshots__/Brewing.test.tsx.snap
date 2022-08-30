@@ -86,7 +86,7 @@ exports[`Bitterness partial view Renders correctly 1`] = `
       class="flex md:flex-none flex-col flex-grow w-full justify-center align-center overflow-x-auto pb-6 md:pb-0"
     >
       <div
-        class="grid gap-x-4 w-full m-auto md:w-5/6 md:grid-rows-3 md:grid-cols-2 md:grid-flow-col"
+        class="grid gap-x-4 w-full m-auto md:w-4/6 md:grid-rows-4 md:grid-cols-2 md:grid-flow-col"
       >
         <div
           class="scroll-auto border-b border-brand-grey-whisper"
@@ -276,6 +276,58 @@ exports[`Bitterness partial view Renders correctly 1`] = `
                 class="undefined fill-brand-black stroke-brand-black"
                 fill="inherit"
                 height="32"
+                viewBox="0 0 28 30"
+                width="32"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M22.4998 15.4999H25.4998C26.6044 15.4999 27.5002 16.3954 27.5002 17.5V25.5001C27.4981 26.2829 27.04 26.9924 26.3271 27.3161C26.4391 27.5268 26.4986 27.7615 26.5 28.0001V29.5C26.5 29.7762 26.2762 30 26.0003 30H0.499981C0.223828 30 1.39033e-05 29.7762 1.39033e-05 29.5V27C0.000222935 26.9093 0.0249267 26.8203 0.0716154 26.7424L2.977 21.9L0.00858405 3.58019C0.00580268 3.57143 0.00671631 3.56322 0.00764338 3.55489C0.008112 3.55068 0.00858405 3.54644 0.00858405 3.54208C0.00502461 3.52826 0.0020937 3.51424 0 3.5C0.00230471 1.56795 1.56795 0.00230305 3.50021 0H21.5C23.4321 0.00230471 24.9977 1.56795 25 3.5C24.9973 3.52177 24.9931 3.54355 24.987 3.56448C24.9881 3.58123 24.9881 3.59777 24.987 3.61452L23.2591 10.9585C23.0485 11.8632 22.241 12.5028 21.312 12.4999H20.4999V13.5H22C22.276 13.5 22.4998 13.7238 22.4998 14V15.4999ZM5.00031 19.9998H3.68277L3.92569 21.5001H12.0002V4.00033H1.08768L1.49322 6.50019H5.00014V7.50032H1.65654L1.90024 9.00021H3.50003V10.0001H2.06066L2.30416 11.5H6.00011V12.5002H2.46618L2.70968 14H4.50017V15H2.8717L3.11478 16.4998H6.50024V17.5H3.27724L3.52031 18.9999H5.00031V19.9998ZM13.4977 13.9972C13.4991 13.7211 13.7242 13.4983 14.0004 13.5L16.5004 13.4999V12.4998H15.6883C14.7593 12.5027 13.9518 11.8633 13.7411 10.9588L13.0004 7.80873V19.723C13.3781 18.4473 13.8607 17.2049 14.443 16.0086L13.5504 14.2235C13.5155 14.1534 13.4973 14.0759 13.4977 13.9972ZM23.0633 20.0761L13.9384 20.077C13.3273 22.1638 13.0113 24.3256 13.0002 26.4998H24.0002C23.9893 24.3254 23.674 22.1631 23.0633 20.0761ZM14.2469 19.1177L22.7552 19.1181C22.4537 18.2243 22.0977 17.3502 21.689 16.4999H15.312C14.9035 17.35 14.5478 18.2241 14.2469 19.1177ZM15.3093 15.5H21.5004L21.5005 14.4999H14.8094L15.3093 15.5ZM17.5003 13.4999H19.5004V12.4998H17.5003V13.4999ZM21.3123 11.4999C21.7768 11.5013 22.1807 11.1814 22.2858 10.7288L23.8684 4.00007H13.1317L14.7147 10.7288C14.8198 11.1814 15.2236 11.5013 15.6882 11.4999H21.3123ZM23.9503 2.99972C23.7112 1.83649 22.688 1.00113 21.5003 0.99966H15.5001C14.3126 1.00111 13.2892 1.83649 13.0501 2.99972H23.9503ZM13.0559 0.99966H3.50048C2.31275 1.00111 1.28945 1.83649 1.05057 2.99972H12.0403C12.1496 2.23954 12.5065 1.53628 13.0559 0.99966ZM3.78353 22.4998L1.0004 27.1383L1.00019 28.9996H12.0001V22.4998H3.78353ZM13.001 29H25.5006L25.501 27.9998C25.501 27.7237 25.2772 27.4999 25.001 27.4999H13.001V29ZM25.5006 26.4999C26.0529 26.4999 26.5005 26.0521 26.5005 25.4998L26.5005 17.5003C26.5005 16.948 26.0529 16.5001 25.5006 16.5001H22.7861C24.2259 19.6383 24.9809 23.047 25.0006 26.4999H25.5006ZM5.00215 26.0018C5.00215 25.1736 5.67379 24.502 6.50204 24.502C7.33029 24.502 8.00192 25.1736 8.00192 26.0018C8.00192 26.8301 7.33029 27.5017 6.50204 27.5017C5.67379 27.5017 5.00215 26.8301 5.00215 26.0018ZM6.00207 26.002C6.00207 26.2782 6.22589 26.502 6.50204 26.502C6.77819 26.502 7.00201 26.2782 7.00201 26.002C7.00201 25.7259 6.77819 25.5021 6.50204 25.5021C6.22589 25.5021 6.00207 25.7259 6.00207 26.002Z"
+                  fill="black"
+                  fill-rule="evenodd"
+                  stroke="none"
+                  stroke-width="none"
+                />
+              </svg>
+            </div>
+            <div
+              class="flex grow text-left pr-3 text-base leading-6 font-semibold"
+            >
+              Filterkaffee Maschine
+            </div>
+          </button>
+        </div>
+        <div
+          class="scroll-auto border-b border-brand-grey-whisper"
+        >
+          <button
+            class="flex w-full flex-row pl-6 py-4 items-center cursor-pointer"
+            data-testid="icon-checkbox"
+          >
+            <div>
+              <svg
+                class="undefined fill-brand-black stroke-brand-black"
+                fill="inherit"
+                height="24"
+                viewBox="0 0 16 16"
+                width="24"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M8,16c-4.4,0-8-3.6-8-8s3.6-8,8-8s8,3.6,8,8S12.4,16,8,16z M8,1C4.1,1,1,4.1,1,8s3.1,7,7,7s7-3.1,7-7S11.9,1,8,1z"
+                  fill="#D8D8D8"
+                  fill-rule="evenodd"
+                  stroke="#D8D8D8"
+                  stroke-width="0.1"
+                />
+              </svg>
+            </div>
+            <div
+              class="flex w-16 h-16 ml-4 mr-4 rounded-full bg-brand-grey-whisper items-center justify-center shrink-0"
+            >
+              <svg
+                class="undefined fill-brand-black stroke-brand-black"
+                fill="inherit"
+                height="32"
                 viewBox="-1 0 27 32"
                 width="32"
               >
@@ -297,7 +349,7 @@ exports[`Bitterness partial view Renders correctly 1`] = `
           </button>
         </div>
         <div
-          class="scroll-auto border-b border-brand-grey-whisper"
+          class="scroll-auto"
         >
           <button
             class="flex w-full flex-row pl-6 py-4 items-center cursor-pointer"
@@ -349,7 +401,7 @@ exports[`Bitterness partial view Renders correctly 1`] = `
           </button>
         </div>
         <div
-          class="scroll-auto"
+          class="scroll-auto border-b border-brand-grey-whisper"
         >
           <button
             class="flex w-full flex-row pl-6 py-4 items-center cursor-pointer"
@@ -397,6 +449,58 @@ exports[`Bitterness partial view Renders correctly 1`] = `
               class="flex grow text-left pr-3 text-base leading-6 font-semibold"
             >
               Espresso Maschine
+            </div>
+          </button>
+        </div>
+        <div
+          class="scroll-auto border-b border-brand-grey-whisper"
+        >
+          <button
+            class="flex w-full flex-row pl-6 py-4 items-center cursor-pointer"
+            data-testid="icon-checkbox"
+          >
+            <div>
+              <svg
+                class="undefined fill-brand-black stroke-brand-black"
+                fill="inherit"
+                height="24"
+                viewBox="0 0 16 16"
+                width="24"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M8,16c-4.4,0-8-3.6-8-8s3.6-8,8-8s8,3.6,8,8S12.4,16,8,16z M8,1C4.1,1,1,4.1,1,8s3.1,7,7,7s7-3.1,7-7S11.9,1,8,1z"
+                  fill="#D8D8D8"
+                  fill-rule="evenodd"
+                  stroke="#D8D8D8"
+                  stroke-width="0.1"
+                />
+              </svg>
+            </div>
+            <div
+              class="flex w-16 h-16 ml-4 mr-4 rounded-full bg-brand-grey-whisper items-center justify-center shrink-0"
+            >
+              <svg
+                class="undefined fill-brand-black stroke-brand-black"
+                fill="inherit"
+                height="32"
+                viewBox="0 0 36 37"
+                width="32"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.3 4.1c0-.4.3-.6.6-.6h9.4c.4 0 .6.3.6.6 0 .4-.3.6-.6.6H5.9c-.3.1-.6-.2-.6-.6zm-.7 27.5h2.7c.4 0 .6-.3.6-.6h-.2.2c0-.4-.3-.6-.6-.6H4.6c-.4 0-.6.3-.6.6-.1.3.2.6.6.6zm31-1.6v5.4c0 .8-.7 1.5-1.5 1.5H2.3c-.8 0-1.5-.7-1.5-1.5V2.7C.8 1.6 1.7.8 2.7.8h26.1c1.1 0 1.9.9 1.9 1.9v5.9c0 .4-.3.6-.6.6H29v3.4c0 .4-.3.6-.6.6h-2v2.4c0 .4-.2.7-.5.9l-.1-.2.1.2c-.2.1-.4.2-.6.2-.2 0-.3 0-.5-.1l.1-.2-.1.2-1.8-.8.1-.2-.1.2c-.4-.2-.6-.6-.6-1v-1.6h-2c-.4 0-.6-.3-.6-.6V9.2h-5.4v18.5c0 .7.6 1.3 1.3 1.3h5c-.4-.5-.6-1.2-.6-1.9V25.2c0-.2.1-.3.2-.4.2-.7.6-1.2 1.2-1.6.5-.3.7-.9.5-1.5l-.7-2.1.2-.1-.2.1c-.1-.2 0-.4.1-.6.1-.2.3-.3.5-.3h6.2c.7 0 1.3.6 1.3 1.3v1.4h.5c.7 0 1.3.6 1.3 1.3H31h.2v2.9c0 .4-.3.6-.6.6-.4 0-.6-.3-.6-.6v-2.9h-.5v5c0 .5-.1.9-.3 1.3h5.7c.2-.1.7.4.7 1zM24.9 15.4v-2.1h-1.4v1.5l1.4.6zm.2-2.3zM20.9 12h6.7V9.2h-6.7V12zm.9 12 .1.2c-.1.1-.3.2-.4.3h6.3V20h-5.3l.4 1.2c.3 1.1-.1 2.3-1 2.9l-.1-.1zM2.1 35.4c0 .1.1.2.2.2H34c.1 0 .2-.1.2-.2v-5.2H15.5c-1.4 0-2.5-1.1-2.5-2.5V8.6c0-.4.3-.6.6-.6h15.9V2.7c0-.3-.3-.6-.6-.6H2.7c-.3 0-.6.3-.6.6v32.7zm19-8.3c0 1 .8 1.9 1.9 1.9h3.6c.7 0 1.3-.6 1.3-1.3v-1.9h-6.7v1.3zm5.5 2.9zm-5.7-4.4zm-.8-.8zm1.2-5.7zM3.9 27.8v-4.5c0-.4.3-.6.6-.6h2.7c.4 0 .6.3.6.6v4.5h-.1.2c0 .4-.3.6-.6.6H4.6c-.4.1-.7-.2-.7-.6zM6.6 24H5.2v3.2h1.4V24z"
+                  fill="inherit"
+                  fill-rule="evenodd"
+                  stroke="none"
+                  stroke-width="none"
+                />
+              </svg>
+            </div>
+            <div
+              class="flex grow text-left pr-3 text-base leading-6 font-semibold"
+            >
+              Vollautomat Maschine
             </div>
           </button>
         </div>

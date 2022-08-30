@@ -35,8 +35,9 @@ export const Processing: React.FC<TasteFinderFieldHandlerProps> = ({
       .catch((err) => new Error(err))
   }, [user?.isValid])
 
-  const getCoffeeType = (value?: string) => {
-    return value === 'Espresso' || value === 'Moka' ? 'ESPRESSO' : 'FILTER'
+  const getCoffeeType = (value: string) => {
+    const espressoTypes = ['Espresso', 'Moka', 'VollautomatMachine']
+    return espressoTypes.includes(value) ? 'ESPRESSO' : 'FILTER'
   }
 
   const propsToProfile = (d: TasteFinderField[]): Partial<TasteFinderProfile> => {
@@ -48,7 +49,7 @@ export const Processing: React.FC<TasteFinderFieldHandlerProps> = ({
         case 'acidity':
           return toRoundedValueInRealScale(parseInt(v as string))
         case 'grindType':
-          return getCoffeeType(v)
+          return getCoffeeType(v as string)
         default:
           return v
       }
@@ -72,7 +73,7 @@ export const Processing: React.FC<TasteFinderFieldHandlerProps> = ({
         bitterness: parseInt(currentData.find((el) => el.name === 'bitterness')?.value as string),
         sweetness: parseInt(currentData.find((el) => el.name === 'sweetness')?.value as string),
         body: parseInt(currentData.find((el) => el.name === 'body')?.value as string),
-        coffeeType: getCoffeeType(currentData.find((el) => el.name === 'grindType')?.value),
+        coffeeType: getCoffeeType(currentData.find((el) => el.name === 'grindType')?.value as string),
       },
     }).catch((err) => {
       throw new Error('Error getting recommendation', err)

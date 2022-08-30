@@ -379,7 +379,7 @@ exports[`Profile view Renders correctly 1`] = `
             class="grid w-full gap-y-8 md:grid-cols-2 md:gap-4"
           >
             <div
-              class="grid grid-cols-[150px_1fr] gap-4 border-b border-brand-grey-bombay md:max-w-sm md:border-0 pb-8"
+              class="grid grid-cols-[150px_1fr] gap-4 border-b border-brand-grey-bombay md:max-w-sm md:border-0 pb-8 md:pb-0"
             >
               <a
                 href="/catalogue?vendor=Nomad"
@@ -407,7 +407,7 @@ exports[`Profile view Renders correctly 1`] = `
               </div>
             </div>
             <div
-              class="grid grid-cols-[150px_1fr] gap-4 md:max-w-sm md:pb-8"
+              class="grid grid-cols-[150px_1fr] gap-4 md:max-w-sm pd-8 md:pb-0"
             >
               <a
                 href="/catalogue?origin=ET"

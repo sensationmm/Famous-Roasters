@@ -1102,6 +1102,12 @@
             },
             "option6": {
               "text": "Espresso Maschine"
+            },
+            "option7": {
+              "text": "Filterkaffee Maschine"
+            },
+            "option8": {
+              "text": "Vollautomat Maschine"
             }
           },
           "text": "Jeder weiß: der Tag beginnt nach der ersten Tasse Kaffee. Auf welche Art brühst du deinen Kaffee?"
