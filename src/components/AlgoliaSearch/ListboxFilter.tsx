@@ -69,7 +69,7 @@ const ListboxFilter = ({ attribute, translationPrefix, showSwatches }: ListboxFi
                     <HUIListbox.Option
                       data-testid={`option-${idx}`}
                       className={({ active }) =>
-                        `cursor-pointer select-none relative py-2 pl-8 pr-4 ${
+                        `cursor-pointer select-none relative py-2 px-8 ${
                           active ? 'bg-brand-grey-whisper' : 'bg-transparent'
                         }`
                       }
