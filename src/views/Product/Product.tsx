@@ -306,7 +306,7 @@ export const Product: React.FC = () => {
             disabled={!variantSelected.availableForSale}
           >
             <span>
-              <Icon name={!isFixed && !isSticky ? IconName.AddToCart : IconName.Cart} size={IconSize.lg} />
+              <Icon name={!isFixed && !isSticky ? IconName.AddToCart : IconName.StickyCart} size={IconSize.lg} />
             </span>
           </Button>
           <Button
