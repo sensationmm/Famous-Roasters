@@ -172,16 +172,14 @@ export const Profile: React.FC = () => {
                     {t('pages.profile.intro')}
                   </Typography>
                 </div>
-                {userProfile.aroma && (
-                  <div className="flex items-center justify-center pt-6 mt-6 border-t border-brand-grey-bombay md:pt-0 md:mt-0 md:border-0">
-                    <MyAroma
-                      aroma={userProfile.aroma}
-                      name={t('pages.featuredProduct.yourCoffeeType.my')}
-                      headingAs="h2"
-                      isProfile
-                    />
-                  </div>
-                )}
+                <div className="flex items-center justify-center pt-6 mt-6 border-t border-brand-grey-bombay md:pt-0 md:mt-0 md:border-0">
+                  <MyAroma
+                    aroma={userProfile.aroma}
+                    name={t('pages.featuredProduct.yourCoffeeType.my')}
+                    headingAs="h2"
+                    isProfile
+                  />
+                </div>
               </>
             ) : (
               <Loader />

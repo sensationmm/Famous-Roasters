@@ -184,6 +184,36 @@ exports[`Profile view Renders correctly 1`] = `
               Willkommen in deiner privaten Kaffeeecke. Hier kannst du dein Geschmacksprofil, deine Bestellungen als auch Kontodaten einsehen.
             </p>
           </div>
+          <div
+            class="flex items-center justify-center pt-6 mt-6 border-t border-brand-grey-bombay md:pt-0 md:mt-0 md:border-0"
+          >
+            <div
+              class="grid grid-cols-1  items-end"
+            >
+              <div
+                class="relative flex justify-center mx-auto  w-80 h-44"
+              >
+                <div
+                  class="top-0 left-auto absolute rounded-full bg-brand-grey-whisper w-32 h-32"
+                />
+                <img
+                  class="absolute top-5 w-52"
+                  src="Empty.webp"
+                />
+              </div>
+              <div
+                class=""
+              >
+                <button
+                  class="w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 justify-center px-3 py-2 text-sm font-semibold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
+                  data-testid="button-empty-tasteprofile-cta"
+                  role="button"
+                >
+                  Finde jetzt dein Geschmacksprofil heraus
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div

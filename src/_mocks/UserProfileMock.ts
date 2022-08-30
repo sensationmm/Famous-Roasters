@@ -10,6 +10,7 @@ export const UserProfileMock = {
       userProfile: {
         id: '123456789',
         email: 'test@test.com',
+        aroma: null,
         newsletterSignup: false,
         tasteFinderProfile: {
           acidity: 1,

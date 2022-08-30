@@ -1000,7 +1000,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
             <img
               alt="experimentell & komplex"
               class="absolute top-5 w-52 md:w-64 xl:w-80"
-              src="Experimental.webp"
+              src="Empty.webp"
             />
           </div>
           <div
@@ -1037,7 +1037,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <span
                 class="text-center md:text-left text-base leading-6"
               >
-                Dein Kaffee ist komplex, er zeigt einen mittleren Körper mit zitronigen Säurenoten. Die Frische und Lebendigkeit machen jede Tasse einzigartig.
+                pages.featuredProduct.items.empty.description
               </span>
             </div>
             <div
@@ -4812,7 +4812,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
             <img
               alt="experimentell & komplex"
               class="absolute top-5 w-52 md:w-64 xl:w-80"
-              src="Experimental.webp"
+              src="Empty.webp"
             />
           </div>
           <div
@@ -4849,7 +4849,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
               <span
                 class="text-center md:text-left text-base leading-6"
               >
-                Dein Kaffee ist komplex, er zeigt einen mittleren Körper mit zitronigen Säurenoten. Die Frische und Lebendigkeit machen jede Tasse einzigartig.
+                pages.featuredProduct.items.empty.description
               </span>
             </div>
             <div
@@ -5624,7 +5624,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
             <img
               alt="experimentell & komplex"
               class="absolute top-5 w-52 md:w-64 xl:w-80"
-              src="Experimental.webp"
+              src="Empty.webp"
             />
           </div>
           <div
@@ -5661,7 +5661,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
               <span
                 class="text-center md:text-left text-base leading-6"
               >
-                Dein Kaffee ist komplex, er zeigt einen mittleren Körper mit zitronigen Säurenoten. Die Frische und Lebendigkeit machen jede Tasse einzigartig.
+                pages.featuredProduct.items.empty.description
               </span>
             </div>
             <div

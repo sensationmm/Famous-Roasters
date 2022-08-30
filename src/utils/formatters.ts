@@ -31,7 +31,9 @@ export const getAromaKey = (aroma: string) => {
       return 'chocolate'
     case 'Würzig & kräftig':
       return 'spicy'
-    default:
+    case 'Experimentell & komplex':
       return 'experimental'
+    default:
+      return 'empty'
   }
 }

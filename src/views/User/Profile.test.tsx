@@ -39,7 +39,8 @@ jest.mock('aws-amplify', () => ({
   __esModule: true,
   Auth: {
     ...jest.requireActual('aws-amplify').Auth,
-    currentAuthenticatedUser: () => Promise.resolve({ attributes: { 'custom:first_name': 'asdd' } }),
+    currentAuthenticatedUser: () =>
+      Promise.resolve({ attributes: { 'custom:first_name': 'asdd', 'custom:aroma': null } }),
     currentSession: () => Promise.resolve(),
   },
 }))

@@ -1014,7 +1014,8 @@
       },
       "title": "Profil",
       "greeting": "Hallo",
-      "intro": "Willkommen in deiner privaten Kaffeeecke. Hier kannst du dein Geschmacksprofil, deine Bestellungen als auch Kontodaten einsehen."
+      "intro": "Willkommen in deiner privaten Kaffeeecke. Hier kannst du dein Geschmacksprofil, deine Bestellungen als auch Kontodaten einsehen.",
+      "tasteFinderCTA": "Finde jetzt dein Geschmacksprofil heraus"
     },
     "tasteFinder": {
       "navigation": "Tastefinder",
