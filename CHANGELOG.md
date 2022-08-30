@@ -1,3 +1,5 @@
+## [1.61.11](https://github.com/Famous-Roasters/frontend/compare/v1.61.10...v1.61.11) (2022-08-30)
+
 ## [1.61.10](https://github.com/Famous-Roasters/frontend/compare/v1.61.9...v1.61.10) (2022-08-30)
 
 
