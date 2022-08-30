@@ -1,7 +1,7 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { TrashIcon } from '@heroicons/react/outline'
 import { CheckIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid'
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useClearRefinements, useCurrentRefinements } from 'react-instantsearch-hooks-web'
 import { Button, ButtonEmphasis, ButtonSize, Typography, TypographySize, TypographyType } from 'src/components'
@@ -21,6 +21,7 @@ export const FiltersMenuMobile: React.FC<FiltersMenuMobileProps> = ({ filters }:
   const { t } = useTranslation()
   const { items } = useCurrentRefinements()
   const { refine: clearRefinements } = useClearRefinements()
+  const cancelButtonRef = useRef<HTMLButtonElement>(null)
 
   const [currentFilter, setCurrentFilter] = useState<string | null>()
 
@@ -35,7 +36,15 @@ export const FiltersMenuMobile: React.FC<FiltersMenuMobileProps> = ({ filters }:
   return (
     <>
       <Transition.Root show={open} unmount={false} as={Fragment}>
-        <Dialog as="div" className="fixed inset-0 flex z-40" open={open} onClose={() => setOpen(false)} unmount={false}>
+        <Dialog
+          as="div"
+          className="fixed inset-0 flex z-40"
+          open={open}
+          unmount={false}
+          initialFocus={cancelButtonRef}
+          // eslint-disable-next-line
+          onClose={() => {}}
+        >
           {filters.map(({ attribute, translationPrefix, showSwatches }) => (
             <FilterMobile
               key={attribute}
@@ -74,6 +83,7 @@ export const FiltersMenuMobile: React.FC<FiltersMenuMobileProps> = ({ filters }:
                   className="-m-2 p-2 rounded-md inline-flex items-center justify-center text-gray-400"
                   onClick={() => setOpen(false)}
                   data-testid="button-filters-menu-close"
+                  ref={cancelButtonRef}
                 >
                   <span className="sr-only">{t(`pages.catalogue.filters.common.filtersMenu.close`)}</span>
                   <ChevronLeftIcon className="h-6 w-6" aria-hidden="true" />
