@@ -1,3 +1,10 @@
+## [1.61.12](https://github.com/Famous-Roasters/frontend/compare/v1.61.11...v1.61.12) (2022-08-30)
+
+
+### Bug Fixes
+
+* **search:** fix bug where filters do not open on mobile ([1e85a5a](https://github.com/Famous-Roasters/frontend/commit/1e85a5a4f1362dfe5f42b030a4e95e084bfa7c4b))
+
 ## [1.61.11](https://github.com/Famous-Roasters/frontend/compare/v1.61.10...v1.61.11) (2022-08-30)
 
 ## [1.61.10](https://github.com/Famous-Roasters/frontend/compare/v1.61.9...v1.61.10) (2022-08-30)
