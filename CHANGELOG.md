@@ -1,3 +1,11 @@
+## [1.61.10](https://github.com/Famous-Roasters/frontend/compare/v1.61.9...v1.61.10) (2022-08-30)
+
+
+### Bug Fixes
+
+* **search:** fix chevron alignment ([16b6586](https://github.com/Famous-Roasters/frontend/commit/16b658601ae5502d3a84ec0f664e7ddcf962ba4e))
+* **search:** fix listbox padding ([4ef4967](https://github.com/Famous-Roasters/frontend/commit/4ef4967c30e6d11a8e76bf3fa7cef1a1de3703b8))
+
 ## [1.61.9](https://github.com/Famous-Roasters/frontend/compare/v1.61.8...v1.61.9) (2022-08-29)
 
 ## [1.61.8](https://github.com/Famous-Roasters/frontend/compare/v1.61.7...v1.61.8) (2022-08-29)
