@@ -1,3 +1,10 @@
+## [1.62.2](https://github.com/Famous-Roasters/frontend/compare/v1.62.1...v1.62.2) (2022-08-31)
+
+
+### Bug Fixes
+
+* **register:** update registration UI regarding terms and privacy policy ([#232](https://github.com/Famous-Roasters/frontend/issues/232)) ([0b6a0a2](https://github.com/Famous-Roasters/frontend/commit/0b6a0a223b5f70862d2532ec1fa45e1fbcb7e5c7))
+
 ## [1.62.1](https://github.com/Famous-Roasters/frontend/compare/v1.62.0...v1.62.1) (2022-08-31)
 
 
