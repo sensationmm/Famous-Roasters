@@ -44,14 +44,11 @@ export const YouMightLike: React.FC<YouMightLikeProps> = ({ productId }: YouMigh
     },
   })
 
-  const resultsCoffee = [...(data?.collection?.products?.nodes || [])]
-    .sort(() => Math.random() - 0.5)
-    .slice(0, breakpoint === 'lg' ? 3 : 2)
+  const resultsCoffee = [...(data?.collection?.products?.nodes || [])].slice(0, breakpoint === 'lg' ? 3 : 2)
   const resultsAccessories = [...(data2?.collection?.products?.nodes || [])]
-    .sort(() => Math.random() - 0.5)
     .filter((node) => getSimplifiedId(node.id) !== productId)
     .slice(0, breakpoint === 'lg' ? 3 : 2)
-  const productNodes = resultsCoffee.concat(resultsAccessories).sort(() => Math.random() - 0.5)
+  const productNodes = resultsCoffee.concat(resultsAccessories)
 
   const pageInfo = data?.collection?.products.pageInfo || {
     hasNextPage: false,
