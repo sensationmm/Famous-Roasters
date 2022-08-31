@@ -3,6 +3,8 @@ import { SignUp } from 'aws-amplify-react'
 import { IAuthPieceProps } from 'aws-amplify-react/lib-esm/Auth/AuthPiece'
 import Form from 'rc-field-form'
 import React from 'react'
+import { Trans } from 'react-i18next'
+import { Link } from 'react-router-dom'
 import {
   AuthFooter,
   Button,
@@ -47,7 +49,7 @@ export class AuthSignUp extends SignUp {
       username: params.email,
       password: params.password,
       attributes: {
-        'custom:tos_consent': this.inputs['confirmTos'],
+        'custom:tos_consent': 'true',
         'custom:first_name': params.firstName,
         'custom:newsletter_signup': this.inputs['newsletterSignup'] || 'false',
         'custom:aroma': savedAroma,
@@ -97,12 +99,12 @@ export class AuthSignUp extends SignUp {
         onClick={() => this.changeState('confirmSignUp')}
         dataTestId="confirmSignUpLink"
         ctaText={i18n.t<string>('auth.signUp.confirmSignUp.action')}
-        className="flex w-fit float-right mt-6 mb-6 border-b cursor-pointer"
+        className="flex w-fit float-left mt-6 mb-6 border-b cursor-pointer"
       />
     )
   }
 
-  renderConfirmTos(): JSX.Element {
+  renderConfirmNewsletter(): JSX.Element {
     return (
       <>
         <div className="mt-8">
@@ -113,14 +115,23 @@ export class AuthSignUp extends SignUp {
             onChange={this.handleInputChange}
           />
         </div>
+      </>
+    )
+  }
+
+  renderLegalConsent(): JSX.Element {
+    return (
+      <>
         <div className="mt-8">
-          <AuthFormCheckbox
-            dataTestId="confirmTos"
-            screenKey="signUp.confirmTos"
-            name="confirmTos"
-            onChange={this.handleInputChange}
-            required
-          />
+          <Typography as="div" type={TypographyType.Paragraph} size={TypographySize.Tiny} className="font-normal">
+            <Trans
+              i18nKey="auth.signUp.confirmTos.consentLabel"
+              components={[
+                <Link to="//www.60beans.com/legal/agb" target="_blank" />,
+                <Link to="//www.60beans.com/legal/datenschutz" target="_blank" />,
+              ]}
+            ></Trans>
+          </Typography>
         </div>
       </>
     )
@@ -178,16 +189,13 @@ export class AuthSignUp extends SignUp {
             {(_, form) => {
               const allTouched =
                 form.isFieldTouched('email') && form.isFieldTouched('password') && form.isFieldTouched('passwordRepeat')
-              const hasErrors =
-                form.getFieldsError().filter((entry) => entry.errors.length > 0).length > 0 ||
-                'confirmTos' in this.inputs === false ||
-                this.inputs['confirmTos'] !== 'true'
-
+              const hasErrors = form.getFieldsError().filter((entry) => entry.errors.length > 0).length > 0
               return (
                 <>
                   {this.renderSignUpInputs()}
-                  {this.renderConfirmTos()}
+                  {this.renderConfirmNewsletter()}
                   {this.renderSignUpButton(form.getFieldsValue(), !allTouched || hasErrors)}
+                  {this.renderLegalConsent()}
                   {this.renderSignUpMiddleActions()}
                   {this.renderSignUpFooterActions()}
                 </>

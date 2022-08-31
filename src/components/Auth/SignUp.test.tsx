@@ -26,6 +26,12 @@ delete window.location
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 window.location = new URL('https://www.60beans.com/register')
+window.localStorage.setItem(
+  'tasteFinder',
+  JSON.stringify(
+    '[{"name":"aroma","value":"experimentell & komplex"},{"name":"name","value":"Torrefattore"},{"name":"bitterness","value":"1"},{"name":"sweetness","value":"1"},{"name":"acidity","value":"1"},{"name":"body","value":"1"},{"name":"grindType","value":"FrenchPress"},{"name":"adventurous","value":"adventurous"},{"name":"shopifyProductIds","value":["7966736744714","7659871600856","7659907842264","7659906203864","7966820630794","7659905745112"]},    {"name":"recommendations","value": [{"shopifyId":"7966737858826","score":0.9814814814814815,"acidity":4,"bitterness":1,"sweetness":2,"body":3},{"shopifyId":"7966736875786","score":0.9567901234567902,"acidity":1,"bitterness":1,"sweetness":1,"body":1},{"shopifyId":"7966738678026","score":0.9351851851851852,"acidity":1,"bitterness":1,"sweetness":3,"body":4},{"shopifyId":"7966738448650","score":0.9320987654320988,"acidity":3,"bitterness":1,"sweetness":2,"body":6},{"shopifyId":"7659877466328","score":0.9074074074074074,"acidity":5,"bitterness":5,"sweetness":5,"body":5},{"shopifyId":"7659914723544","score":0.8950617283950617,"acidity":3,"bitterness":4,"sweetness":5,"body":6}]}]',
+  ),
+)
 
 describe('SignUp custom auth component', () => {
   const snippet = (initialAuthState = 'signUp', initialAuthData = {}) => (
@@ -54,7 +60,6 @@ describe('SignUp custom auth component', () => {
     await waitFor(() => expect(getByText(/Trage bitte deine E-mail-Adresse ein/)).toBeInTheDocument())
     await waitFor(() => expect(getByText(/Please input your password/)).toBeInTheDocument())
     await waitFor(() => expect(getByText(/Please repeat your password/)).toBeInTheDocument())
-    await waitFor(() => expect(getByText(/You need to tick the check box/)).toBeInTheDocument())
   })
 
   it('The user can register', async () => {
@@ -81,7 +86,7 @@ describe('SignUp custom auth component', () => {
     const emailInput = getByTestId('email')
     const passwordInput = getByTestId('password')
     const passwordRepeatInput = getByTestId('passwordRepeat')
-    const acceptTos = getByTestId('confirmTos')
+    const newsletterCheckBox = getByTestId('newsletterSignup')
     const submitBtn = getByTestId('submit')
     expect(emailInput).toBeInTheDocument()
     fireEvent.click(emailInput)
@@ -92,8 +97,9 @@ describe('SignUp custom auth component', () => {
     expect(passwordRepeatInput).toBeInTheDocument()
     fireEvent.click(passwordRepeatInput)
     fireEvent.change(passwordRepeatInput, { target: { value: '123456AbC?' } })
-    expect(acceptTos).toBeInTheDocument()
-    fireEvent.click(acceptTos)
+    expect(newsletterCheckBox).toBeInTheDocument
+    fireEvent.click(newsletterCheckBox)
+    fireEvent.change(newsletterCheckBox, { target: { value: true } })
     expect(submitBtn).toBeInTheDocument()
     fireEvent.click(submitBtn)
 
@@ -112,7 +118,6 @@ describe('SignUp custom auth component', () => {
     const emailInput = getByTestId('email')
     const passwordInput = getByTestId('password')
     const passwordRepeatInput = getByTestId('passwordRepeat')
-    const acceptTos = getByTestId('confirmTos')
     const submitBtn = getByTestId('submit')
     expect(emailInput).toBeInTheDocument()
     fireEvent.click(emailInput)
@@ -123,8 +128,6 @@ describe('SignUp custom auth component', () => {
     expect(passwordRepeatInput).toBeInTheDocument()
     fireEvent.click(passwordRepeatInput)
     fireEvent.change(passwordRepeatInput, { target: { value: '123456AbC?' } })
-    expect(acceptTos).toBeInTheDocument()
-    fireEvent.click(acceptTos)
     expect(submitBtn).toBeInTheDocument()
     fireEvent.click(submitBtn)
 
@@ -143,7 +146,6 @@ describe('SignUp custom auth component', () => {
     const emailInput = getByTestId('email')
     const passwordInput = getByTestId('password')
     const passwordRepeatInput = getByTestId('passwordRepeat')
-    const acceptTos = getByTestId('confirmTos')
     const submitBtn = getByTestId('submit')
     expect(emailInput).toBeInTheDocument()
     fireEvent.click(emailInput)
@@ -154,8 +156,6 @@ describe('SignUp custom auth component', () => {
     expect(passwordRepeatInput).toBeInTheDocument()
     fireEvent.click(passwordRepeatInput)
     fireEvent.change(passwordRepeatInput, { target: { value: '123456AbC?' } })
-    expect(acceptTos).toBeInTheDocument()
-    fireEvent.click(acceptTos)
     expect(submitBtn).toBeInTheDocument()
     fireEvent.click(submitBtn)
 
