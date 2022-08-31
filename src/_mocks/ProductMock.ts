@@ -533,6 +533,23 @@ export const ProductMockWithCustomMetadataNoAroma = {
   },
 }
 
+export const ProductMockWithCustomMetadataInternationalVendor = {
+  request: {
+    query: GET_PRODUCT,
+    variables: {
+      id: 'gid://shopify/Product/7655228866776',
+    },
+  },
+  result: {
+    data: {
+      product: {
+        ...ProductMockDataWithCustomMetadata,
+        vendor: 'Nomad',
+      },
+    },
+  },
+}
+
 export const ProductMockAccessory = {
   request: {
     query: GET_PRODUCT,
