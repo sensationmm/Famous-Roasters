@@ -1,3 +1,18 @@
+# [1.62.0](https://github.com/Famous-Roasters/frontend/compare/v1.61.17...v1.62.0) (2022-08-31)
+
+
+### Bug Fixes
+
+* **product:** carousel styling ([92e1574](https://github.com/Famous-Roasters/frontend/commit/92e15743b95f3d0fe48a11b4ddd671ffa582da6d))
+* **product:** remove focus outline ([a2a877d](https://github.com/Famous-Roasters/frontend/commit/a2a877de47e54cfefa11b5b4e0d05ea965fa7165))
+* **product:** remove sorting ([fef67b0](https://github.com/Famous-Roasters/frontend/commit/fef67b0e06f0e39a72a833ce8404ad07291d7281))
+* **product:** updte rendering ([a5bb281](https://github.com/Famous-Roasters/frontend/commit/a5bb28113b76594da65dbfc412d310a168685197))
+
+
+### Features
+
+* **product:** update to render different delivery for international vendors ([25371e2](https://github.com/Famous-Roasters/frontend/commit/25371e2113ca01c66008af830aaf4dbc521bb2b7))
+
 ## [1.61.17](https://github.com/Famous-Roasters/frontend/compare/v1.61.16...v1.61.17) (2022-08-31)
 
 
