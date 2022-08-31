@@ -1,3 +1,10 @@
+## [1.62.1](https://github.com/Famous-Roasters/frontend/compare/v1.62.0...v1.62.1) (2022-08-31)
+
+
+### Bug Fixes
+
+* **profile:** correct catalogue links for algolia ([ba0c071](https://github.com/Famous-Roasters/frontend/commit/ba0c071d42c92346f1b34f4eb38c8961c8d5e312))
+
 # [1.62.0](https://github.com/Famous-Roasters/frontend/compare/v1.61.17...v1.62.0) (2022-08-31)
 
 
