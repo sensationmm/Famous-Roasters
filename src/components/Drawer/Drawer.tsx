@@ -60,7 +60,7 @@ export const Drawer: React.FC<DialogProps> = ({
                   <div className="px-5 mt-0.5 py-4 flex justify-between border-b border-coreUI-background-images">
                     <button
                       type="button"
-                      className="-m-2 p-2 rounded-md inline-flex items-center justify-center text-gray-400"
+                      className="-m-2 p-2 rounded-md inline-flex items-center justify-center text-gray-400 focus:outline-none"
                       onClick={closeDrawer}
                       data-testid="drawer-dismiss"
                     >

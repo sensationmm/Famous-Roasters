@@ -227,7 +227,7 @@ exports[`Orders view Handles error call 1`] = `
               class="w-full md:w-auto border-coreUI-background-images w-full relative"
             >
               <div
-                class="grid grid-cols-2 items-end"
+                class="flex justify-between items-end"
               >
                 <div />
                 <div
@@ -769,7 +769,7 @@ exports[`Orders view Renders correctly 1`] = `
               class="w-full md:w-auto border-coreUI-background-images w-full relative"
             >
               <div
-                class="grid grid-cols-2 items-end"
+                class="flex justify-between items-end"
               >
                 <div />
                 <div
@@ -1693,7 +1693,7 @@ exports[`Orders view Renders correctly with no orders 1`] = `
               class="w-full md:w-auto border-coreUI-background-images w-full relative"
             >
               <div
-                class="grid grid-cols-2 items-end"
+                class="flex justify-between items-end"
               >
                 <div />
                 <div
@@ -2235,7 +2235,7 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
               class="w-full md:w-auto border-coreUI-background-images w-full relative"
             >
               <div
-                class="grid grid-cols-2 items-end"
+                class="flex justify-between items-end"
               >
                 <div />
                 <div
@@ -2772,7 +2772,7 @@ exports[`Orders view sets filter value 1`] = `
               class="w-full md:w-auto border-coreUI-background-images w-full relative"
             >
               <div
-                class="grid grid-cols-2 items-end"
+                class="flex justify-between items-end"
               >
                 <div />
                 <div
@@ -3696,7 +3696,7 @@ exports[`Orders view sets sort newest first 1`] = `
               class="w-full md:w-auto border-coreUI-background-images w-full relative"
             >
               <div
-                class="grid grid-cols-2 items-end"
+                class="flex justify-between items-end"
               >
                 <div />
                 <div
@@ -4620,7 +4620,7 @@ exports[`Orders view sets sort oldest first 1`] = `
               class="w-full md:w-auto border-coreUI-background-images w-full relative"
             >
               <div
-                class="grid grid-cols-2 items-end"
+                class="flex justify-between items-end"
               >
                 <div />
                 <div
