@@ -69,12 +69,12 @@ export const Carousel: React.FC<CarouselProps> = ({ images = [], slides, tile = 
           )
         })}
       </Swiper>
-      <div className="hidden md:grid grid-flow-col auto-cols-max gap-2">
+      <div className="hidden md:grid grid-cols-7 gap-2">
         {images.map((image, idx) => (
           <div
             key={`carousel-image-tn-${idx}`}
             data-testid={`carousel-image-tn-${idx}`}
-            className="w-full bg-brand-grey-whisper bg-center bg-cover cursor-pointer w-20 h-20"
+            className="bg-brand-grey-whisper bg-center bg-cover cursor-pointer aspect-w-1 aspect-h-1"
             onClick={() => swiper && swiper.slideTo(idx)}
             style={{ backgroundImage: `url("${image.url}")` }}
           />
