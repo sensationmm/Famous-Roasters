@@ -1,3 +1,10 @@
+## [1.61.17](https://github.com/Famous-Roasters/frontend/compare/v1.61.16...v1.61.17) (2022-08-31)
+
+
+### Bug Fixes
+
+* **product:** update the snap ([befa5f7](https://github.com/Famous-Roasters/frontend/commit/befa5f79d4c62a41d52089c16a54047a7044cb19))
+
 ## [1.61.16](https://github.com/Famous-Roasters/frontend/compare/v1.61.15...v1.61.16) (2022-08-30)
 
 ## [1.61.15](https://github.com/Famous-Roasters/frontend/compare/v1.61.14...v1.61.15) (2022-08-30)
