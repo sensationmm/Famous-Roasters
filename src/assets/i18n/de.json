@@ -83,22 +83,22 @@
         "cta": "Passwort setzen",
         "password": {
           "error": {
-            "maxLength": "Your password must not be longer than 98 chars",
-            "minLength": "Your password must be at least 8 characters long",
-            "mustContainLowercase": "Your password must contain at least one lowercase letter",
-            "mustContainNumber": "Your password must contain at least one number",
-            "mustContainSpecial": "Your password must contain at least one special character: ^$*.[]{}()?\"!@#%&/\\,><':;|_~`",
-            "mustContainUppercase": "Your password must contain at least one uppercase letter",
-            "noSpaces": "Your password cannot contain spaces",
-            "required": "Please input your new password"
+            "maxLength": "Das Passwort darf maximal aus 98 Zeichen bestehen",
+            "minLength": "Das Passwort muss mindestens aus 8 Zeichen bestehen",
+            "mustContainLowercase": "Dein Passwort muss mindestens einen Groß- sowie Kleinbuchstaben beinhalten",
+            "mustContainNumber": "Dein Passwort muss mindestens eine Zahl beinhalten",
+            "mustContainSpecial": "Dein Passwort muss mindestens ein Sonderzeichen enthalten, wie bspw.: ^$*.[]{}()?\"!@#%&/\\,><':;|_~`",
+            "mustContainUppercase": "Dein Passwort muss mindestens einen Großbuchstaben beinhalten",
+            "noSpaces": "Dein Passwort darf keine Leerzeichen enthalten",
+            "required": "Bitte gib dein neues Passwort ein"
           },
           "label": "Neues Passwort",
           "placeholder": "Neues Passwort"
         },
         "passwordRepeat": {
           "error": {
-            "matchError": "The password does not match",
-            "required": "Please repeat your new password"
+            "matchError": "Die Passwörter stimmen nicht überein",
+            "required": "Bitte wiederhole dein Passwort"
           },
           "label": "Neues Passwort wiederholen",
           "placeholder": "Neues Passwort wiederholen"
@@ -156,7 +156,7 @@
         "error": {
           "required": "You need to tick the check box below to agree with the Terms and Conditions and the Privacy Policy before we can proceed"
         },
-        "label": "Indem Du auf “Registrieren” klickst, erstellst Du ein 60beans-Konto und stimmst unseren Nutzungs-bedingungen sowie Datenschutzrichtlinien zu."
+        "consentLabel": "Indem Du auf “Registrieren” klickst, erstellst Du ein 60beans-Konto und stimmst unseren <0 className='font-normal border-b'>Nutzungsbedingungen</0> sowie <1 className='font-normal border-b'>Datenschutzrichtlinien</1> zu."
       },
       "newsletterSignup": {
         "label": "Ja, ich möchte gelegentlich E-Mails über Produkt-neuheiten, Rabatte und exklusive Aktionen erhalten. Ich kann mich jederzeit vom Newsletter abmelden."
