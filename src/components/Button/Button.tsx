@@ -112,7 +112,6 @@ const getButtonClassNames = (
   if (disabled) {
     classNames.push(
       'pointer-events-none',
-      'opacity-70',
       'bg-coreUI-background-images',
       '!border-coreUI-background-images',
       'text-coreUI-text-secondary',
