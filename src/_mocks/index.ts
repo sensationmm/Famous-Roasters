@@ -38,6 +38,7 @@ import {
   ProductMockDataWithCustomMetadata,
   ProductMockError,
   ProductMockWithCustomMetadata,
+  ProductMockWithCustomMetadataInternationalVendor,
   ProductMockWithCustomMetadataNoAroma,
 } from './ProductMock'
 import {
@@ -77,6 +78,7 @@ export { ProductMockDataNoImage as ProductMockDataNoImage }
 export { ProductMockDataWithCustomMetadata as ProductMockDataWithCustomMetadata }
 export { ProductMockWithCustomMetadata as ProductMockWithCustomMetadata }
 export { ProductMockWithCustomMetadataNoAroma as ProductMockWithCustomMetadataNoAroma }
+export { ProductMockWithCustomMetadataInternationalVendor as ProductMockWithCustomMetadataInternationalVendor }
 export { FilterAttributesMock as FilterAttributesMock }
 export { FilterAttributesMockError as FilterAttributesMockError }
 export { TasteFinderMockEspresso as TasteFinderMockEspresso }
