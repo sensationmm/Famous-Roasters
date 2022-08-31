@@ -6,7 +6,7 @@ exports[`Listbox component Renders correctly 1`] = `
     class="w-full relative"
   >
     <div
-      class="grid grid-cols-2 items-end"
+      class="flex justify-between items-end"
     >
       <div />
       <div
@@ -50,7 +50,7 @@ exports[`Listbox component Renders correctly for small variant 1`] = `
     class="w-full relative"
   >
     <div
-      class="grid grid-cols-2 items-end"
+      class="flex justify-between items-end"
     >
       <div />
       <div
@@ -149,7 +149,7 @@ exports[`Listbox component Renders correctly multiple 1`] = `
     class="w-full relative"
   >
     <div
-      class="grid grid-cols-2 items-end"
+      class="flex justify-between items-end"
     >
       <div />
       <div
@@ -193,7 +193,7 @@ exports[`Listbox component Renders correctly with initial value 1`] = `
     class="w-full relative"
   >
     <div
-      class="grid grid-cols-2 items-end"
+      class="flex justify-between items-end"
     >
       <div />
       <div
@@ -237,7 +237,7 @@ exports[`Listbox component Renders correctly with no translated values 1`] = `
     class="w-full relative"
   >
     <div
-      class="grid grid-cols-2 items-end"
+      class="flex justify-between items-end"
     >
       <div />
       <div
@@ -281,7 +281,7 @@ exports[`Listbox component Renders correctly with none item 1`] = `
     class="w-full relative"
   >
     <div
-      class="grid grid-cols-2 items-end"
+      class="flex justify-between items-end"
     >
       <div />
       <div
@@ -325,7 +325,7 @@ exports[`Listbox component Renders with disabled items correctly 1`] = `
     class="w-full relative"
   >
     <div
-      class="grid grid-cols-2 items-end"
+      class="flex justify-between items-end"
     >
       <div />
       <div
@@ -369,7 +369,7 @@ exports[`Listbox component Renders with selected disabled items correctly 1`] = 
     class="w-full relative"
   >
     <div
-      class="grid grid-cols-2 items-end"
+      class="flex justify-between items-end"
     >
       <div />
       <div
@@ -413,7 +413,7 @@ exports[`Listbox component Renders with spacing items correctly 1`] = `
     class="w-full relative"
   >
     <div
-      class="grid grid-cols-2 items-end"
+      class="flex justify-between items-end"
     >
       <div />
       <div

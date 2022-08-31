@@ -183,7 +183,7 @@ export const Listbox: React.FC<ListboxProps> = ({
       <HUIListbox value={activeItems} onChange={onChangeHandler} multiple={multiple}>
         {({ open }) => (
           <>
-            <div className="grid grid-cols-2 items-end">
+            <div className="flex justify-between items-end">
               <div>{renderOptionalLabel()}</div>
               <div className="justify-self-end">{renderOptionalAddOn()}</div>
             </div>
