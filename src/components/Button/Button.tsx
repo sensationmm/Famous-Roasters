@@ -110,7 +110,12 @@ const getButtonClassNames = (
       break
   }
   if (disabled) {
-    classNames.push('pointer-events-none', 'opacity-70')
+    classNames.push(
+      'pointer-events-none',
+      'bg-coreUI-background-images',
+      '!border-coreUI-background-images',
+      'text-coreUI-text-secondary',
+    )
     icon.push('pointer-events-none')
     arrow.push('pointer-events-none')
   }

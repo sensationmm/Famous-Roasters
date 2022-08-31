@@ -11,5 +11,9 @@ query userProfile {
       coffeeType
     }
     aroma
+    ratedProducts {
+      shopifyId
+      rating
+    }
   }
 }

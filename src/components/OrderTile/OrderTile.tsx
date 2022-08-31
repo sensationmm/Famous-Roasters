@@ -1,6 +1,7 @@
+import { t } from 'i18next'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Typography, TypographySize, TypographyType } from 'src/components'
+import { Button, ButtonEmphasis, ButtonSize, Typography, TypographySize, TypographyType } from 'src/components'
 import { formatPrice, getSimplifiedId } from 'src/utils'
 import { OrderVariant } from 'src/views'
 
@@ -9,6 +10,7 @@ import { RateYourCoffee } from '../RateYourCoffee'
 export interface OrderTileProps extends OrderVariant {
   productId: string
   showRate?: boolean
+  hasRated?: number
   isSmall?: boolean
   showPrice?: boolean
 }
@@ -25,6 +27,7 @@ export const OrderTile: React.FC<OrderTileProps> = ({ ...props }) => {
       variant: { title: variantTitle, price, weight },
     },
     showRate = false,
+    hasRated = 0,
     isSmall = false,
     showPrice = true,
   } = props
@@ -81,7 +84,15 @@ export const OrderTile: React.FC<OrderTileProps> = ({ ...props }) => {
           )}
         </div>
 
-        {showRate && <RateYourCoffee productOrderTile={{ ...props, showRate: false }} />}
+        {showRate && hasRated !== 0 ? (
+          <Button disabled center emphasis={ButtonEmphasis.Tertiary} size={ButtonSize.xs}>
+            <>
+              {t('pages.rate.rated')}: {t(`pages.rate.scale.${hasRated}`)} ({hasRated}/5)
+            </>
+          </Button>
+        ) : (
+          showRate && <RateYourCoffee productOrderTile={{ ...props, showRate: false }} />
+        )}
       </div>
     </div>
   )

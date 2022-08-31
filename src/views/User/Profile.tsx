@@ -40,12 +40,18 @@ interface TasteFinderProfile extends TasteProfileProps {
   coffeeType: string
 }
 
+interface RatedProduct {
+  shopifyId: string
+  rating: number
+}
+
 interface UserProfile {
   id: string
   email: string
   newsletterSignup: boolean
   tasteFinderProfile: TasteFinderProfile
   aroma: CoffeeAroma
+  ratedProducts: RatedProduct[]
 }
 
 export const Profile: React.FC = () => {
@@ -70,19 +76,15 @@ export const Profile: React.FC = () => {
   }, [])
 
   useEffect(() => {
-    console.log('useEffect', user?.isValid)
     Auth.currentAuthenticatedUser()
       .then((u) => {
-        console.log('currentAuthenticatedUser then', u)
         setUserName(u.attributes['custom:first_name'])
 
         getUserProfile()
           .then((res) => {
-            console.log('getUserProfile then', res)
             setUserProfile(res.data.userProfile)
           })
-          .catch((err) => {
-            console.log('getUserProfile error', err)
+          .catch(() => {
             signOut()
           })
 
@@ -288,9 +290,20 @@ export const Profile: React.FC = () => {
 
               <div className="pt-2 pb-8">
                 <Carousel
-                  slides={lastOrder.lineItems.edges.map((item) => (
-                    <OrderTile node={item.node} productId={item.node.product.id} showRate />
-                  ))}
+                  slides={lastOrder.lineItems.edges.map((item) => {
+                    const hasRated = (userProfile?.ratedProducts?.map((item) => item.shopifyId) || []).findIndex(
+                      (el) => el === getSimplifiedId(item.node.product.id),
+                    )
+
+                    return (
+                      <OrderTile
+                        node={item.node}
+                        productId={item.node.product.id}
+                        showRate
+                        hasRated={hasRated > -1 ? userProfile?.ratedProducts[hasRated]?.rating : 0}
+                      />
+                    )
+                  })}
                   tile
                 />
               </div>
