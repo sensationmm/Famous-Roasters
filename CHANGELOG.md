@@ -1,3 +1,15 @@
+# [1.63.0](https://github.com/Famous-Roasters/frontend/compare/v1.62.2...v1.63.0) (2022-08-31)
+
+
+### Bug Fixes
+
+* **button:** remove legacy opacity setting ([744627d](https://github.com/Famous-Roasters/frontend/commit/744627d09a8d63f892de0806fbd778c5a671cf08))
+
+
+### Features
+
+* **rating:** show previous rating ([67623c8](https://github.com/Famous-Roasters/frontend/commit/67623c82d2e63520954e2adfcfa638079d0d7062))
+
 ## [1.62.2](https://github.com/Famous-Roasters/frontend/compare/v1.62.1...v1.62.2) (2022-08-31)
 
 
