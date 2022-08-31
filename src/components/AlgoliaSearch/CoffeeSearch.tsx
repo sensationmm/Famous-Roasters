@@ -4,6 +4,7 @@ import { Configure, Hits, InstantSearch, SearchBox, SortBy } from 'react-instant
 import CheckboxFilter from 'src/components/AlgoliaSearch/CheckboxFilter'
 import Hit from 'src/components/AlgoliaSearch/Hit'
 
+import { AromaFilter, AromaFilterButton } from './AromaFilter'
 import { FiltersMenuMobile } from './FiltersMenuMobile'
 import ListboxFilter from './ListboxFilter'
 import Pagination from './Pagination'
@@ -66,6 +67,7 @@ const CoffeeSearch: React.FC = () => {
           <ListboxFilter attribute="meta.my_fields.bean_type" />
           <ListboxFilter attribute="meta.my_fields.origin" translationPrefix="pages.catalogue.filters.origin.values" />
           <ListboxFilter attribute="vendor" />
+          <AromaFilterButton />
         </div>
       </div>
 

@@ -219,7 +219,7 @@
   "cta": {
     "next": "Weiter",
     "prev": "Zurück",
-    "filters" : {
+    "filters": {
       "label": "Sortieren nach...",
       "values": {
         "newest": "Neueste Bestellung",
@@ -472,6 +472,12 @@
           "values": {
             "none": "Alle Kaffees"
           }
+        },
+        "tasteProfile": {
+          "acidity_": "Säure",
+          "bitterness": "Stärke",
+          "body": "Körper",
+          "sweetness": "Süße"
         },
         "common": {
           "filtersMenu": {
