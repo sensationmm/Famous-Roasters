@@ -17,7 +17,7 @@ exports[`RateYourCoffee component Renders correctly 1`] = `
     class="hidden md:flex"
   >
     <button
-      class="relative inline-flex flex-row items-center rounded-full border-2 px-3 py-2 text-xs font-semibold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
+      class="w-full relative inline-flex flex-row items-center rounded-full border-2 justify-center px-3 py-2 text-xs font-semibold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
       data-testid="dialog-trigger"
       role="button"
     >

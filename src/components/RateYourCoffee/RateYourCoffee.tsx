@@ -168,7 +168,7 @@ export const RateYourCoffee: React.FC<RateYourCoffeeProps> = ({ productOrderTile
       />
       <Dialog
         trigger={
-          <Button emphasis={ButtonEmphasis.Tertiary} size={ButtonSize.xs}>
+          <Button emphasis={ButtonEmphasis.Tertiary} size={ButtonSize.xs} center className="w-full">
             {t('pages.rate.rateCoffee')}
           </Button>
         }

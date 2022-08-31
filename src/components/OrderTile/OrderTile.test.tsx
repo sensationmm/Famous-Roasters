@@ -83,6 +83,21 @@ describe('Order Tile component', () => {
     expect(container).toMatchSnapshot()
   })
 
+  it('Renders correctly for already rated', async () => {
+    const { container } = render(
+      <I18nextProvider i18n={i18n} data-testId="">
+        <OrderTile
+          productId={'111111'}
+          node={OrderMock.result.data.orders.edges[0].node.lineItems.edges[0].node}
+          showRate
+          hasRated={3}
+        />
+      </I18nextProvider>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
+
   it('handles click on image', async () => {
     render(<OrderTile productId={'111111'} node={OrderMock.result.data.orders.edges[0].node.lineItems.edges[0].node} />)
     const image = await screen.findByTestId('image')

@@ -197,6 +197,7 @@ exports[`Profile view Renders correctly 1`] = `
                   class="top-0 left-auto absolute rounded-full bg-brand-grey-whisper w-32 h-32"
                 />
                 <img
+                  alt=""
                   class="absolute top-5 w-52"
                   src="Empty.webp"
                 />

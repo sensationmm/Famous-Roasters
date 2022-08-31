@@ -10,7 +10,7 @@ export const UserProfileMock = {
       userProfile: {
         id: '123456789',
         email: 'test@test.com',
-        aroma: null,
+        aroma: '',
         newsletterSignup: false,
         tasteFinderProfile: {
           acidity: 1,
@@ -19,6 +19,7 @@ export const UserProfileMock = {
           sweetness: 4,
           coffeeType: 'ESPRESSO',
         },
+        ratedProducts: [{ shopifyId: '7655228899544', rating: 4 }],
       },
     },
   },
