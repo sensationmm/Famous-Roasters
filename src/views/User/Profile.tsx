@@ -311,7 +311,7 @@ export const Profile: React.FC = () => {
             {/* TODO: make this content dynamic from CMS */}
             <div className="grid w-full gap-y-8 md:grid-cols-2 md:gap-4">
               <div className="grid grid-cols-[150px_1fr] gap-4 border-b border-brand-grey-bombay md:max-w-sm md:border-0 pb-8 md:pb-0">
-                <Link to={'/catalogue?vendor=Nomad'}>
+                <Link to={'/catalogue?products[refinementList][vendor][0]=Nomad'}>
                   <img src={NomadCoffee} className="w-full" />
                 </Link>
                 <div className="flex flex-col justify-center">
@@ -319,10 +319,10 @@ export const Profile: React.FC = () => {
                     Neu bei 60beans: Nomad Coffee aus Barcelona!
                   </Typography>
                   <Button
-                    data-testid="button-vendor=Nomad"
+                    data-testid="button-[vendor][0]=Nomad"
                     emphasis={ButtonEmphasis.Secondary}
                     size={ButtonSize.xs}
-                    onClick={() => navigate('/catalogue?vendor=Nomad')}
+                    onClick={() => navigate('/catalogue?products[refinementList][vendor][0]=Nomad')}
                     center
                   >
                     {t('pages.profile.sections.discover.cta')}
@@ -331,7 +331,7 @@ export const Profile: React.FC = () => {
               </div>
 
               <div className="grid grid-cols-[150px_1fr] gap-4 md:max-w-sm pd-8 md:pb-0">
-                <Link to={'/catalogue?origin=ET'}>
+                <Link to={'/catalogue?products[refinementList][meta.my_fields.origin][0]=ET'}>
                   <img src={EthopianCoffee} className="w-full" />
                 </Link>
                 <div className="flex flex-col justify-center">
@@ -339,10 +339,10 @@ export const Profile: React.FC = () => {
                     Entdecke den Kaffee Äthiopiens!
                   </Typography>
                   <Button
-                    data-testid="button-origin=ET"
+                    data-testid="button-[meta.my_fields.origin][0]=ET"
                     emphasis={ButtonEmphasis.Secondary}
                     size={ButtonSize.xs}
-                    onClick={() => navigate('/catalogue?origin=ET')}
+                    onClick={() => navigate('/catalogue?products[refinementList][meta.my_fields.origin][0]=ET')}
                     center
                   >
                     {t('pages.profile.sections.discover.cta')}
