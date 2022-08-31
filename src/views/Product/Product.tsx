@@ -157,6 +157,7 @@ export const Product: React.FC = () => {
   } = data?.product || {}
 
   const isAccessory = productType === 'Accessories'
+  const isInternational = vendor === 'Nomad' // TODO: update to use the backend once updated
 
   useEffect(() => {
     if (variants) {
@@ -332,7 +333,9 @@ export const Product: React.FC = () => {
           <Typography type={TypographyType.Paragraph} size={TypographySize.Small}>
             <strong>{t('pages.product.transactional.shipping.label')}</strong>
             {': '}
-            {t('pages.product.transactional.shipping.value')}
+            {isInternational
+              ? t('pages.product.transactional.shipping.vendor.international')
+              : t('pages.product.transactional.shipping.vendor.german')}
           </Typography>
         </div>
         <div>

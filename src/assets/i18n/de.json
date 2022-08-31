@@ -977,7 +977,10 @@
         "qualityNoteAccessory": "Wir tun immer unser Bestes, um dein Bestellung rechtzeitig zu bearbeiten und zu versenden. Bitte beachten, dass wir einen Drittanbieter-Kurier verwenden, um das Produkt an dein Haustür zu liefern.",
         "shipping": {
           "label": "Lieferzeit",
-          "value": "2-3 Tage"
+          "vendor": {
+            "german": "2-5 Tage",
+            "international": "5-10 Tage"
+          }
         }
       }
     },
