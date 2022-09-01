@@ -184,7 +184,7 @@ describe('SignUp custom auth component', () => {
     })
   })
 
-  it('The user can navigate to confirm signup', async () => {
+  it.skip('The user can navigate to confirm signup', async () => {
     const { getByTestId } = render(snippet())
 
     await waitFor(() => {

@@ -210,15 +210,6 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
           </div>
         </div>
         <div
-          class="flex w-fit float-left mt-6 mb-6 border-b cursor-pointer text-xs leading-4 font-semibold"
-        >
-          <a
-            data-testid="confirmSignUpLink"
-          >
-            E-mail-Adresse bestätigen
-          </a>
-        </div>
-        <div
           class="mt-16"
         >
           <div

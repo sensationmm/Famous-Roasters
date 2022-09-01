@@ -196,7 +196,7 @@ export class AuthSignUp extends SignUp {
                   {this.renderConfirmNewsletter()}
                   {this.renderSignUpButton(form.getFieldsValue(), !allTouched || hasErrors)}
                   {this.renderLegalConsent()}
-                  {this.renderSignUpMiddleActions()}
+                  {/* {this.renderSignUpMiddleActions()} */}
                   {this.renderSignUpFooterActions()}
                 </>
               )
