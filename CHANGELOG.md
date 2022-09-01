@@ -1,3 +1,10 @@
+# [1.64.0](https://github.com/Famous-Roasters/frontend/compare/v1.63.5...v1.64.0) (2022-09-01)
+
+
+### Features
+
+* **search:** [WB-385] adapt search outline to design ([#245](https://github.com/Famous-Roasters/frontend/issues/245)) ([dc278e0](https://github.com/Famous-Roasters/frontend/commit/dc278e0f2b6ef56fc9fe68af8805e21609e9d58a))
+
 ## [1.63.5](https://github.com/Famous-Roasters/frontend/compare/v1.63.4...v1.63.5) (2022-09-01)
 
 
