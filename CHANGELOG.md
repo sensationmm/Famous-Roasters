@@ -1,3 +1,16 @@
+# [1.65.0](https://github.com/Famous-Roasters/frontend/compare/v1.64.0...v1.65.0) (2022-09-01)
+
+
+### Bug Fixes
+
+* **signup:** amended snap ([0183859](https://github.com/Famous-Roasters/frontend/commit/0183859a641695667c06e45f8b87a04b25a119c8))
+* **signup:** translation fix ([c2ef47b](https://github.com/Famous-Roasters/frontend/commit/c2ef47b413c979072b93aee1def5160c608b1528))
+
+
+### Features
+
+* **signup:** auto login on signup ([a0faa4c](https://github.com/Famous-Roasters/frontend/commit/a0faa4c5d5625186b26e29b4cffa6d47d847a4f0))
+
 # [1.64.0](https://github.com/Famous-Roasters/frontend/compare/v1.63.5...v1.64.0) (2022-09-01)
 
 
