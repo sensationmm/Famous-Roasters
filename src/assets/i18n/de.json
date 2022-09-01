@@ -831,9 +831,9 @@
       },
       "title": "Aroma",
       "yourCoffeeType": {
-        "title": "{{name}}'s Kaffeetyp",
+        "title": "{{name}}s Kaffeetyp",
         "namePlaceholder": "Kaffeeliebhaber",
-        "profileTitle": "Dein Kaffeetype"
+        "profileTitle": "Dein Kaffeetyp"
       }
     },
     "forCoffeeRoasters": {
