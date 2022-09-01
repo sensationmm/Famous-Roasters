@@ -23,7 +23,7 @@
         },
         "registerGeneric": {
           "ctaText": "Anmelden",
-          "prompt": "E-Mail-Adresse existiert bereits, bitte versuchen Sie es erneut oder"
+          "prompt": "E-Mail-Adresse existiert bereits, bitte versuche es erneut oder"
         }
       }
     },
