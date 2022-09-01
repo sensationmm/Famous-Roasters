@@ -1,31 +1,12 @@
-import { ChevronRightIcon } from '@heroicons/react/solid'
-import { t } from 'i18next'
-import React, { Fragment, useState } from 'react'
+import { Dialog as HUIDialog, Transition } from '@headlessui/react'
+import { ChevronLeftIcon, ChevronRightIcon, TrashIcon } from '@heroicons/react/solid'
+import xor from 'lodash/xor'
+import React, { Fragment } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useRange, useRefinementList } from 'react-instantsearch-hooks-web'
-import { BeanScaleTag, Dialog, Typography, TypographySize } from 'src/components'
-import { toValueInHumanScale } from 'src/utils'
-import { toRange } from 'src/utils/attributeScaleUtils'
+import { useInstantSearch } from 'react-instantsearch-hooks-web'
+import { BeanScaleTag, Dialog, Typography, TypographySize, TypographyType } from 'src/components'
 
 import { Size, Type } from '../Typography/Typography'
-
-type RefinementListItem = {
-  value: string
-  label: string
-  highlighted?: string
-  count: number
-  isRefined: boolean
-}
-
-export declare type RangeMin = number | undefined
-export declare type RangeMax = number | undefined
-export declare type RangeBoundaries = [RangeMin, RangeMax]
-export declare type Range = {
-  min: RangeMin
-  max: RangeMax
-}
-
-// const ranges: Record<number, number[]> = { 1: [1, 2, 3], 2: [4, 5, 6, 7], 3: [8, 9, 10] }
 
 const ranges = [
   [1, 2, 3],
@@ -36,33 +17,37 @@ const ranges = [
 export const AromaFilter: React.FC = () => {
   const { t } = useTranslation()
   const attributes = ['bitterness', 'acidity_', 'sweetness', 'body']
-  const filters: Record<string, { items: RefinementListItem[]; refine: (value: string) => void }> = {}
-
-  filters['bitterness'] = useRefinementList({ attribute: 'meta.my_fields.bitterness', sortBy: ['name:asc'] })
-  filters['acidity_'] = useRefinementList({ attribute: 'meta.my_fields.acidity_', sortBy: ['name:asc'] })
-  filters['sweetness'] = useRefinementList({ attribute: 'meta.my_fields.sweetness', sortBy: ['name:asc'] })
-  filters['body'] = useRefinementList({ attribute: 'meta.my_fields.body', sortBy: ['name:asc'] })
+  const { indexUiState, setIndexUiState } = useInstantSearch()
 
   const renderFilter = (attribute: string) => {
-    const filter = filters[attribute]
+    const filterName = `meta.my_fields.${attribute}`
+    const currentValues = indexUiState.refinementList && indexUiState.refinementList[filterName]
+    console.log(filterName, currentValues)
 
-    const handleOnClick = (val: number) => {
-      const range = ranges[val - 1]
-      range.map((i) => filter.refine(i.toString()))
-      // filter.refine(range)
+    const handleOnClick = (tasteLevel: number) => {
+      const range = ranges[tasteLevel - 1]
+      const nextValues = xor(currentValues, range.map((i) => i.toString()).sort())
+      console.log('new values:', filterName, nextValues)
+      setIndexUiState({
+        ...indexUiState,
+        refinementList: {
+          ...indexUiState.refinementList,
+          [filterName]: nextValues,
+        },
+      })
     }
 
-    const isButtonActive = (index: number): boolean => {
-      const range = ranges[index - 1]
-      const activeValues = filter.items.filter((item) => item.isRefined).map((item) => parseInt(item.value))
-      return range.every((i) => activeValues.includes(i))
+    const isButtonActive = (tasteLevel: number): boolean => {
+      if (currentValues === undefined) return false
+      const range = ranges[tasteLevel - 1]
+      return range.every((i) => currentValues.includes(i.toString()))
     }
 
     return (
       <div key={attribute}>
         <div className="my-4">
           <Typography type={Type.Label} size={Size.Small}>
-            {t(`pages.catalogue.filters.tasteProfile.${attribute}`)}
+            {t(`pages.catalogue.filters.tasteProfileFilterNames.${attribute}`)}
           </Typography>
         </div>
 
@@ -87,17 +72,86 @@ export const AromaFilter: React.FC = () => {
 }
 
 export const AromaFilterButton: React.FC = () => {
+  const { t } = useTranslation()
   const renderButton = () => (
     <button
       className="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
       data-testid="button-filters-menu-open"
     >
       <Typography size={TypographySize.Base} className="block truncate">
-        Flavours
+        {t('pages.catalogue.filters.tasteProfile')}
       </Typography>
       <ChevronRightIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
     </button>
   )
 
   return <Dialog trigger={renderButton()} body={<AromaFilter />} title="Flavours" unmount={false} />
+}
+
+interface AromaFilterMobileProps {
+  show: boolean
+  back: () => void
+}
+export const AromaFilterMobile: React.FC<AromaFilterMobileProps> = ({ show, back }) => {
+  const { t } = useTranslation()
+  return (
+    <Transition.Root show={show} as={Fragment}>
+      <HUIDialog as="div" className="fixed inset-0 flex z-40" onClose={() => back()}>
+        <Transition.Child
+          as={Fragment}
+          enter="transition-opacity ease-linear duration-300"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="transition-opacity ease-linear duration-300"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <HUIDialog.Overlay className="fixed inset-0 bg-black bg-opacity-25" />
+        </Transition.Child>
+
+        <Transition.Child
+          as={Fragment}
+          enter="transition ease-in-out duration-300 transform"
+          enterFrom="-translate-x-full"
+          enterTo="translate-x-0"
+          leave="transition ease-in-out duration-300 transform"
+          leaveFrom="translate-x-0"
+          leaveTo="-translate-x-full"
+        >
+          <div className="relative w-full bg-white shadow-xl flex flex-col overflow-y-auto justify-between">
+            {/* Top row */}
+            <div className="px-5 pt-5 pb-5 flex justify-between">
+              <button
+                type="button"
+                className="-m-2 p-2 rounded-md inline-flex items-center justify-center text-gray-400"
+                onClick={() => back()}
+                data-testid="button-filter-mobile-close"
+              >
+                <span className="sr-only">{t(`pages.catalogue.filters.common.filterMobile.close`)}</span>
+                <ChevronLeftIcon className="h-6 w-6" aria-hidden="true" />
+              </button>
+              <Typography
+                type={TypographyType.Paragraph}
+                size={TypographySize.Large}
+                className="text-coreUI-text-secondary"
+              >
+                {t(`pages.catalogue.filters.tasteProfile`)}
+                {/* {selectedItems.length > 0 && ` (${selectedItems.length})`} */}
+              </Typography>
+              <button
+                type="button"
+                className="-m-2 p-2 rounded-md inline-flex items-center justify-center text-gray-400"
+                // onClick={() => clearRefinements()}
+                data-testid="button-filter-mobile-remove"
+              >
+                <span className="sr-only">{t(`pages.catalogue.filters.common.filterMobile.removeFilter`)}</span>
+                <TrashIcon className="h-6 w-6" aria-hidden="true" />
+              </button>
+            </div>
+            <AromaFilter />
+          </div>
+        </Transition.Child>
+      </HUIDialog>
+    </Transition.Root>
+  )
 }

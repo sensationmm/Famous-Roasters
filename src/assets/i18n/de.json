@@ -473,7 +473,8 @@
             "none": "Alle Kaffees"
           }
         },
-        "tasteProfile": {
+        "tasteProfile": "Aroma",
+        "tasteProfileFilterNames": {
           "acidity_": "Säure",
           "bitterness": "Stärke",
           "body": "Körper",

@@ -67,6 +67,7 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({
           leaveTo="-translate-x-full"
         >
           <div className="relative w-full bg-white shadow-xl flex flex-col overflow-y-auto justify-between">
+            {/* Header */}
             <div className="px-5 pt-5 pb-5 flex justify-between">
               <button
                 type="button"
@@ -96,6 +97,7 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({
               </button>
             </div>
 
+            {/* Content */}
             <div className="border-t border-coreUI-text-tertiary overflow-auto grow">
               {items.map((item, idx) => (
                 <div key={`filter-${attribute}-${idx}`}>
@@ -125,6 +127,7 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({
               ))}
             </div>
 
+            {/* Footer */}
             <div className="inset-x-0 mx-5 py-6">
               <Button
                 emphasis={ButtonEmphasis.Secondary}
