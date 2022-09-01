@@ -45,7 +45,8 @@ const CoffeeSearch: React.FC = () => {
           classNames={{
             root: 'ml-auto',
             loadingIndicator: 'hidden',
-            input: 'rounded-full border border-coreUI-text-tertiary px-4 py-2 w-full md:w-96 ',
+            input:
+              'rounded-full border border-coreUI-text-tertiary px-6 py-2 w-full md:w-96 focus:outline-2 focus:outline-offset-2 focus:outline-primary/30 focus:border-brand-black',
             submitIcon: '-ml-6',
             resetIcon: 'hidden',
             reset: 'hidden',
