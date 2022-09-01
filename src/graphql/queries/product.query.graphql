@@ -51,7 +51,7 @@ query product($id: ID) {
     bitterness: metafield(namespace: "my_fields", key: "bitterness") {
       value
     }
-    acidity: metafield(namespace: "my_fields", key: "acidity_") {
+    acidity: metafield(namespace: "my_fields", key: "acidity") {
       value
     }
     bean_type: metafield(namespace: "my_fields", key: "bean_type") {
