@@ -1,3 +1,10 @@
+## [1.63.2](https://github.com/Famous-Roasters/frontend/compare/v1.63.1...v1.63.2) (2022-09-01)
+
+
+### Bug Fixes
+
+* **copy:** tastefinder chocolate option labels ([#241](https://github.com/Famous-Roasters/frontend/issues/241)) ([4c196c9](https://github.com/Famous-Roasters/frontend/commit/4c196c91d8b8c15281b81687ca1afeb43e191541))
+
 ## [1.63.1](https://github.com/Famous-Roasters/frontend/compare/v1.63.0...v1.63.1) (2022-08-31)
 
 # [1.63.0](https://github.com/Famous-Roasters/frontend/compare/v1.62.2...v1.63.0) (2022-08-31)
