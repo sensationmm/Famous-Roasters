@@ -11,6 +11,7 @@ import { FilterMobile } from './FilterMobile'
 
 interface FiltersMenuMobileProps {
   filters: Array<{
+    type: 'list' | 'aroma'
     attribute: string
     translationPrefix?: string
     showSwatches?: boolean
@@ -68,17 +69,20 @@ export const FiltersMenuMobile: React.FC<FiltersMenuMobileProps> = ({ filters }:
           // eslint-disable-next-line
           onClose={() => {}}
         >
-          {filters.map(({ attribute, translationPrefix, showSwatches }) => (
-            <FilterMobile
-              key={attribute}
-              attribute={attribute}
-              translationPrefix={translationPrefix}
-              show={attribute === currentFilter}
-              back={() => closeFilter()}
-              showSwatches={showSwatches}
-            />
-          ))}
-          <AromaFilterMobile show={currentFilter === 'tasteProfile'} back={() => closeFilter()} />
+          {filters.map(({ type, attribute, translationPrefix, showSwatches }) =>
+            type === 'list' ? (
+              <FilterMobile
+                key={attribute}
+                attribute={attribute}
+                translationPrefix={translationPrefix}
+                show={attribute === currentFilter}
+                back={() => closeFilter()}
+                showSwatches={showSwatches}
+              />
+            ) : (
+              <AromaFilterMobile show={currentFilter === 'tasteProfile'} back={() => closeFilter()} />
+            ),
+          )}
           <Transition.Child
             as={Fragment}
             enter="transition-opacity ease-linear duration-300"
