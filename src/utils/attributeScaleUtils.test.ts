@@ -1,5 +1,4 @@
 import { toRoundedValueInRealScale, toValueInHumanScale } from '.'
-import { toRange } from './attributeScaleUtils'
 
 describe('Attribute scale utils', () => {
   it('Value in human scale works as expected', () => {
@@ -19,11 +18,5 @@ describe('Attribute scale utils', () => {
     expect(toRoundedValueInRealScale(1)).toEqual(2)
     expect(toRoundedValueInRealScale(2)).toEqual(5)
     expect(toRoundedValueInRealScale(3)).toEqual(8)
-  })
-
-  it('converts a human value to a range of strings', () => {
-    expect(toRange(1)).toEqual(['1', '2', '3'])
-    expect(toRange(2)).toEqual(['4', '5', '6'])
-    expect(toRange(3)).toEqual(['7', '8', '9'])
   })
 })

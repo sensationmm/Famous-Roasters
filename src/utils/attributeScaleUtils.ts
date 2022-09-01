@@ -18,6 +18,3 @@ export const toRoundedValueInRealScale = (aromaAttributeValue: number): number =
       return 5
   }
 }
-
-export const toRange = (aromaAttributeValue: number): string[] =>
-  [1, 2, 3].map((i) => (i + 3 * (aromaAttributeValue - 1)).toString())
