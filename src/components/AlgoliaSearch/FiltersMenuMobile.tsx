@@ -7,7 +7,7 @@ import { useClearRefinements, useCurrentRefinements } from 'react-instantsearch-
 import { Button, ButtonEmphasis, ButtonSize, Typography, TypographySize, TypographyType } from 'src/components'
 
 import { AromaFilterMobile } from './AromaFilter'
-import { FilterMobile } from './FilterMobile'
+import { ListFilterMobile } from './ListFilterMobile'
 
 interface FiltersMenuMobileProps {
   filters: Array<{
@@ -71,7 +71,7 @@ export const FiltersMenuMobile: React.FC<FiltersMenuMobileProps> = ({ filters }:
         >
           {filters.map(({ type, attribute, translationPrefix, showSwatches }) =>
             type === 'list' ? (
-              <FilterMobile
+              <ListFilterMobile
                 key={attribute}
                 attribute={attribute}
                 translationPrefix={translationPrefix}

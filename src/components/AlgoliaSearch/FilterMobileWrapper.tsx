@@ -1,46 +1,28 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { TrashIcon } from '@heroicons/react/outline'
-import { CheckIcon, ChevronLeftIcon } from '@heroicons/react/solid'
+import { ChevronLeftIcon } from '@heroicons/react/solid'
 import React, { Fragment } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useClearRefinements, useRefinementList } from 'react-instantsearch-hooks-web'
-import {
-  Button,
-  ButtonEmphasis,
-  ButtonSize,
-  Tag,
-  TagSwatch,
-  TagType,
-  Typography,
-  TypographySize,
-  TypographyType,
-} from 'src/components'
+import { Button, ButtonEmphasis, ButtonSize, Typography, TypographySize, TypographyType } from 'src/components'
 
-interface FilterMobileProps {
-  attribute: string
-  translationPrefix?: string
+interface FilterMobileWrapperProps {
+  title: string
+  nrActiveValues?: number
   show: boolean
   back: () => void
-  showSwatches?: boolean
+  clear: () => void
+  children: React.ReactNode
 }
 
-export const FilterMobile: React.FC<FilterMobileProps> = ({
-  attribute,
-  translationPrefix,
+export const FilterMobileWrapper: React.FC<FilterMobileWrapperProps> = ({
+  title,
+  nrActiveValues = 0,
   show,
   back,
-  showSwatches,
-}: FilterMobileProps) => {
+  clear,
+  children,
+}: FilterMobileWrapperProps) => {
   const { t } = useTranslation()
-  const { items, refine } = useRefinementList({ attribute, sortBy: ['name:asc'], limit: 100 })
-  const { refine: clearRefinements } = useClearRefinements({ includedAttributes: [attribute] })
-  const selectedItems = items.filter((item) => item.isRefined)
-
-  const renderItem = (value: string, flex: boolean) => (
-    <Typography className={flex ? 'inline-flex' : ''}>
-      {translationPrefix ? t(`${translationPrefix}.${value}`) : value}
-    </Typography>
-  )
 
   return (
     <Transition.Root show={show} as={Fragment}>
@@ -83,13 +65,13 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({
                 size={TypographySize.Large}
                 className="text-coreUI-text-secondary"
               >
-                {t(`pages.catalogue.filters.${attribute}`)}
-                {selectedItems.length > 0 && ` (${selectedItems.length})`}
+                {title}
+                {nrActiveValues > 0 && ` (${nrActiveValues})`}
               </Typography>
               <button
                 type="button"
                 className="-m-2 p-2 rounded-md inline-flex items-center justify-center text-gray-400"
-                onClick={() => clearRefinements()}
+                onClick={() => clear()}
                 data-testid="button-filter-mobile-remove"
               >
                 <span className="sr-only">{t(`pages.catalogue.filters.common.filterMobile.removeFilter`)}</span>
@@ -98,34 +80,7 @@ export const FilterMobile: React.FC<FilterMobileProps> = ({
             </div>
 
             {/* Content */}
-            <div className="border-t border-coreUI-text-tertiary overflow-auto grow">
-              {items.map((item, idx) => (
-                <div key={`filter-${attribute}-${idx}`}>
-                  <div
-                    className="flex justify-between px-5 py-5 border-b border-coreUI-text-tertiary cursor-pointer"
-                    onClick={() => refine(item.value)}
-                  >
-                    {item.isRefined ? (
-                      <span className="inline-flex items-center">
-                        <CheckIcon className="w-5 h-5 mr-2 text-brand-green-club" aria-hidden="true" />
-                        {attribute !== 'meta.my_fields.aroma' ? (
-                          renderItem(item.value, false)
-                        ) : (
-                          <Tag data-testid="filter-selected-tag" type={TagType.Aroma} value={item.value} />
-                        )}
-                      </span>
-                    ) : (
-                      <span className="inline-flex items-left">
-                        {showSwatches && (
-                          <TagSwatch data-testid="filter-option-tagSwatch" type={TagType.Aroma} value={item.value} />
-                        )}
-                        {renderItem(item.value, true)}
-                      </span>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
+            <div className="border-t border-coreUI-text-tertiary overflow-auto grow">{children}</div>
 
             {/* Footer */}
             <div className="inset-x-0 mx-5 py-6">
