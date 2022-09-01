@@ -1,3 +1,10 @@
+## [1.63.5](https://github.com/Famous-Roasters/frontend/compare/v1.63.4...v1.63.5) (2022-09-01)
+
+
+### Bug Fixes
+
+* **register:** remove email verification button ([#244](https://github.com/Famous-Roasters/frontend/issues/244)) ([2b1ccdc](https://github.com/Famous-Roasters/frontend/commit/2b1ccdc7bfbd8b28a25301f6dec9be088a2e66fb))
+
 ## [1.63.4](https://github.com/Famous-Roasters/frontend/compare/v1.63.3...v1.63.4) (2022-09-01)
 
 ## [1.63.3](https://github.com/Famous-Roasters/frontend/compare/v1.63.2...v1.63.3) (2022-09-01)
