@@ -1,3 +1,6 @@
+import { HubPayload } from '@aws-amplify/core'
+import { Hub } from 'aws-amplify'
+import { loader } from 'graphql.macro'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
@@ -9,12 +12,37 @@ import {
   Layout,
   NavigationTheme,
 } from 'src/components'
+import { famousRoastersClient } from 'src/config'
+const SIGN_UP = loader('src/graphql/queries/signUp.query.graphql')
 
 interface AuthProps {
   authState: string
 }
 
 export const Auth: React.FC<AuthProps> = ({ authState }) => {
+  Hub.listen('auth', ({ payload }) => {
+    const client = famousRoastersClient()
+    const { event } = payload as HubPayload
+    if (event === 'autoSignIn') {
+      const jwtToken = payload.data.signInUserSession.accessToken.jwtToken
+
+      client
+        .query({
+          query: SIGN_UP,
+          variables: {
+            accessToken: jwtToken,
+          },
+        })
+        .then(() => {
+          window.localStorage.setItem('authToken', jwtToken)
+          navigate('/profile')
+        })
+        .catch((e) => console.log('SIGN_UP', e))
+    } else if (event === 'autoSignIn_failure') {
+      navigate('/login')
+    }
+  })
+
   const navigate = useNavigate()
   const handleAuthStateChange = (state: string) => {
     switch (state) {

@@ -158,7 +158,7 @@ exports[`Auth cognito errors custom auth component Renders correctly for Registe
       <span
         class="text-sm leading-5"
       >
-        E-mail-Adresse oder Passwort ungültig, bitte prüfen oder
+        E-Mail-Adresse existiert bereits, bitte versuchen Sie es erneut oder
          
         <a
           class="border-b"
