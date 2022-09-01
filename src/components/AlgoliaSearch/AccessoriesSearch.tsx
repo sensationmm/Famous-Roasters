@@ -1,22 +1,16 @@
-import algoliasearch from 'algoliasearch'
 import { useTranslation } from 'react-i18next'
-import { Configure, Hits, InstantSearch, SearchBox, SortBy } from 'react-instantsearch-hooks-web'
+import { Configure, Hits, SearchBox, SortBy } from 'react-instantsearch-hooks-web'
 import Hit from 'src/components/AlgoliaSearch/Hit'
 
 import Pagination from './Pagination'
 import SingleSelectFilter from './SingleSelectFilter'
 import Stats from './Stats'
 
-const searchClient = algoliasearch(
-  process.env.REACT_APP_ALGOLIA_APP_ID || '',
-  process.env.REACT_APP_ALGOLIA_API_KEY || '',
-)
-
 const AccessoriesSearch: React.FC = () => {
   const { t } = useTranslation()
 
   return (
-    <InstantSearch indexName="products" searchClient={searchClient} routing={true}>
+    <>
       <Configure
         distinct={true} // show products, not variants
         hitsPerPage={12}
@@ -71,7 +65,7 @@ const AccessoriesSearch: React.FC = () => {
         classNames={{ root: 'mb-8', list: 'grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3' }}
       />
       <Pagination />
-    </InstantSearch>
+    </>
   )
 }
 
