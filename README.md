@@ -253,20 +253,7 @@ In the Algolia Shopify app, the metafields must be configured like this:
 
 The filter UIs are implemented using the [React InstantSearch Hooks API](https://www.algolia.com/doc/api-reference/widgets/react-hooks/), a collection of React components and hooks to build customized search UIs.
 
-The complete list of facets is:
-
-- vendor
-- meta.my_fields.coffee_type
-- meta.my_fields.bean_type
-- meta.my_fields.aroma
-- meta.my_fields.decaf (type: boolean)
-- meta.my_fields.origin (type: string_array)
-- meta.my_fields.price_per_kg (type: number)
-- meta.my_fields.acidity (for the "Aroma" group) (type: number)
-- meta.my_fields.bitterness (for the "Aroma" group) (type: number)
-- meta.my_fields.sweetness (for the "Aroma" group) (type: number)
-- meta.my_fields.body (for the "Aroma" group) (type: number)
-- meta.my_fields.publishedToFrontend (type: boolean)
+The complete list of facets is documented in `scripts/configureAlgoliaFacets.js`.
 
 <!-- Commiting code -->
 
