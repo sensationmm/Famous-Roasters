@@ -23,7 +23,7 @@
         },
         "registerGeneric": {
           "ctaText": "Anmelden",
-          "prompt": "E-mail-Adresse oder Passwort ungültig, bitte prüfen oder"
+          "prompt": "E-Mail-Adresse existiert bereits, bitte versuche es erneut oder"
         }
       }
     },

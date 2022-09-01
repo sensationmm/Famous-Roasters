@@ -54,6 +54,9 @@ export class AuthSignUp extends SignUp {
         'custom:newsletter_signup': this.inputs['newsletterSignup'] || 'false',
         'custom:aroma': savedAroma,
       },
+      autoSignIn: {
+        enabled: true,
+      },
     })
       .then(() => this.changeState('confirmSignUp', { username: params.email }))
       .catch((error) => {

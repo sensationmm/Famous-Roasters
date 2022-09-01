@@ -30,8 +30,7 @@ export class AuthConfirmSignUp extends ConfirmSignUp {
   confirmSignUpUser = async (params: ConfirmSignUpParams): Promise<void> => {
     await Auth.confirmSignUp(params.username, params.code)
       .then(() => {
-        this.changeState('signIn', params.username)
-        //message.success(i18n.t('auth.confirmSignUp.success'), 10)
+        // Auto sign in handled in Hub.listen in /views/Auth/Auth.tsx
       })
       .catch((error) => {
         if (error.toString().indexOf('UserNotFoundException') !== -1) {
