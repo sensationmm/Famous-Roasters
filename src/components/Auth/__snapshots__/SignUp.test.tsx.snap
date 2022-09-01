@@ -210,7 +210,7 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
           </div>
         </div>
         <div
-          class="mt-16"
+          class="mt-8"
         >
           <div
             class="flex"
@@ -220,7 +220,7 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
             />
           </div>
           <div
-            class="mt-4 mb-4 text-xl leading-7 font-semibold"
+            class="mt-6 mb-6 text-xl leading-7 font-semibold"
           >
             Du hast bereits ein Konto?
           </div>
@@ -236,7 +236,7 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
       </form>
     </div>
     <div
-      class="mt-12"
+      class="mt-8 mb-12"
     >
       <div
         class="flex"

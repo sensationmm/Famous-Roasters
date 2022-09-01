@@ -142,11 +142,11 @@ export class AuthSignUp extends SignUp {
 
   renderSignUpFooterActions(): JSX.Element {
     return (
-      <div className="mt-16">
+      <div className="mt-8">
         <div className="flex">
           <div className="border-t border-brand-grey-whisper absolute w-full left-0" />
         </div>
-        <Typography as="div" type={TypographyType.Heading} size={TypographySize.Tiny} className="mt-4 mb-4">
+        <Typography as="div" type={TypographyType.Heading} size={TypographySize.Tiny} className="mt-6 mb-6">
           {i18n.t<string>('auth.signUp.signIn.prompt')}
         </Typography>
         <Button
@@ -206,7 +206,7 @@ export class AuthSignUp extends SignUp {
             }}
           </Form>
         </div>
-        <div className="mt-12">
+        <div className="mt-8 mb-12">
           <AuthFooter />
         </div>
       </div>
