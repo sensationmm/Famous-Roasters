@@ -25,11 +25,22 @@ const getButtonClassNames = (disabled: boolean): string => {
 const Pagination = (props: UsePaginationProps) => {
   const { currentRefinement, isFirstPage, isLastPage, refine, pages } = usePagination(props)
 
+  const refineWithScrollToTop = (x: number) => {
+    refine(x)
+
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+
+    window.scroll({
+      top: 0,
+      behavior: !mediaQuery || mediaQuery.matches ? 'auto' : 'smooth',
+    })
+  }
+
   return (
     <nav className="border-t border-coreUI-border flex items-center justify-between mb-8">
       <div className="flex-1 flex justify-end mr-2">
         <button
-          onClick={() => refine(currentRefinement - 1)}
+          onClick={() => refineWithScrollToTop(currentRefinement - 1)}
           disabled={isFirstPage}
           className={getButtonClassNames(isFirstPage)}
           data-testid="pagination-previous"
@@ -40,7 +51,7 @@ const Pagination = (props: UsePaginationProps) => {
 
       {pages.map((page) => (
         <div
-          onClick={() => refine(page)}
+          onClick={() => refineWithScrollToTop(page)}
           key={page}
           className={`cursor-pointer w-12 h-10 pt-3.5 text-center font-bold text-coreUI-text-tertiary border-t-2 ${
             currentRefinement === page ? ' text-coreUI-text-primary border-black' : ' border-transparent'
@@ -52,7 +63,7 @@ const Pagination = (props: UsePaginationProps) => {
 
       <div className="flex-1 flex justify-start -mt-0.5 ml-2">
         <button
-          onClick={() => refine(currentRefinement + 1)}
+          onClick={() => refineWithScrollToTop(currentRefinement + 1)}
           disabled={isLastPage}
           className={getButtonClassNames(isLastPage)}
           data-testid="pagination-next"
