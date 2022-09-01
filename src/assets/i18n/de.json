@@ -1056,15 +1056,15 @@
           "options": {
             "option1": {
               "selectedText": "Leichte Bitternote",
-              "text": "Hellere und weniger bittere Milchschokolade"
+              "text": "Milchschokolade"
             },
             "option2": {
               "selectedText": "Ausgeglichene Bitternote",
-              "text": "Dunklere und ausgewogen bittere Schokolade"
+              "text": "Dunkle Schokolade"
             },
             "option3": {
               "selectedText": "Intensive Bitternote",
-              "text": "Sehr Dunkle Schokolade (70%+)"
+              "text": "Zartbitterschokolade"
             }
           },
           "text": "Stell dir vor, dass verschiedene Sorten Schokolade vor dir auf dem Tisch liegen. Für welche würdest du dich entscheiden?"

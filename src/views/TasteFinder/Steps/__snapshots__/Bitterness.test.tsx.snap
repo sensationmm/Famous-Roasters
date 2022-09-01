@@ -109,7 +109,7 @@ exports[`Bitterness partial view Renders correctly 1`] = `
             <div
               class="font-syne font-normal text-2xl leading-8 font-semibold"
             >
-              Hellere und weniger bittere Milchschokolade
+              Milchschokolade
             </div>
           </div>
         </button>
@@ -131,7 +131,7 @@ exports[`Bitterness partial view Renders correctly 1`] = `
             <div
               class="font-syne font-normal text-2xl leading-8 font-semibold"
             >
-              Dunklere und ausgewogen bittere Schokolade
+              Dunkle Schokolade
             </div>
           </div>
         </button>
@@ -153,7 +153,7 @@ exports[`Bitterness partial view Renders correctly 1`] = `
             <div
               class="font-syne font-normal text-2xl leading-8 font-semibold"
             >
-              Sehr Dunkle Schokolade (70%+)
+              Zartbitterschokolade
             </div>
           </div>
         </button>
