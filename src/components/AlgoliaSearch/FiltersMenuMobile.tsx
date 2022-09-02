@@ -75,7 +75,7 @@ export const FiltersMenuMobile: React.FC<FiltersMenuMobileProps> = ({ filters }:
         >
           {filters.map(({ type, attribute, translationPrefix, showSwatches }) =>
             type === 'aroma' ? (
-              <AromaFilterMobile show={currentFilter === 'tasteProfile'} back={() => closeFilter()} />
+              <AromaFilterMobile show={currentFilter === 'tasteProfile'} back={() => closeFilter()} key={attribute} />
             ) : (
               <ListFilterMobile
                 key={attribute}
