@@ -36,7 +36,7 @@ export const Dialog: React.FC<DialogProps> = ({
       <TriggerElement {...trigger.props} onClick={openDialog} data-testid="dialog-trigger" />
 
       <Transition appear show={isOpen} as={Fragment} unmount={unmount}>
-        <HeadlessUIDialog as="div" className="relative z-40" onClose={closeDialog} unmount={unmount}>
+        <HeadlessUIDialog as="div" className="relative z-40" onClose={closeDialog} open={isOpen} unmount={unmount}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
