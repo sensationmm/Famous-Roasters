@@ -3749,7 +3749,7 @@ exports[`Product view Renders correctly for a successful call with International
                     aria-haspopup="true"
                     class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                     data-testid="button-listbox"
-                    id="headlessui-listbox-button-:rg:"
+                    id="headlessui-listbox-button-:r7:"
                     type="button"
                   >
                     <span
@@ -3798,7 +3798,7 @@ exports[`Product view Renders correctly for a successful call with International
                     aria-haspopup="true"
                     class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                     data-testid="button-listbox"
-                    id="headlessui-listbox-button-:rh:"
+                    id="headlessui-listbox-button-:r8:"
                     type="button"
                   >
                     <span
@@ -3843,7 +3843,7 @@ exports[`Product view Renders correctly for a successful call with International
                     aria-haspopup="true"
                     class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                     data-testid="button-listbox"
-                    id="headlessui-listbox-button-:ri:"
+                    id="headlessui-listbox-button-:r9:"
                     type="button"
                   >
                     <span
@@ -4110,11 +4110,11 @@ exports[`Product view Renders correctly for a successful call with International
             class="border-t border-coreUI-border mx-auto w-full py-4"
           >
             <button
-              aria-controls="headlessui-disclosure-panel-:rk:"
+              aria-controls="headlessui-disclosure-panel-:rb:"
               aria-expanded="true"
               class="flex w-full justify-between py-2 text-left"
               data-testid="button-disclosure-toggle"
-              id="headlessui-disclosure-button-:rj:"
+              id="headlessui-disclosure-button-:ra:"
               type="button"
             >
               <span
@@ -4140,7 +4140,7 @@ exports[`Product view Renders correctly for a successful call with International
             </button>
             <div
               class="py-2"
-              id="headlessui-disclosure-panel-:rk:"
+              id="headlessui-disclosure-panel-:rb:"
             >
               <div>
                 <p
@@ -4420,11 +4420,11 @@ exports[`Product view Renders correctly for a successful call with International
             class="border-t border-coreUI-border mx-auto w-full py-4"
           >
             <button
-              aria-controls="headlessui-disclosure-panel-:rm:"
+              aria-controls="headlessui-disclosure-panel-:rd:"
               aria-expanded="true"
               class="flex w-full justify-between py-2 text-left"
               data-testid="button-disclosure-toggle"
-              id="headlessui-disclosure-button-:rl:"
+              id="headlessui-disclosure-button-:rc:"
               type="button"
             >
               <span
@@ -4450,7 +4450,7 @@ exports[`Product view Renders correctly for a successful call with International
             </button>
             <div
               class="py-2"
-              id="headlessui-disclosure-panel-:rm:"
+              id="headlessui-disclosure-panel-:rd:"
             >
               <div
                 class="grid gap-6 md:grid-cols-2 xl:grid-cols-1"
@@ -4479,11 +4479,11 @@ exports[`Product view Renders correctly for a successful call with International
             class="border-t border-coreUI-border mx-auto w-full py-4"
           >
             <button
-              aria-controls="headlessui-disclosure-panel-:ro:"
+              aria-controls="headlessui-disclosure-panel-:rf:"
               class="flex w-full justify-between py-2 text-left"
               data-testid="button-disclosure-toggle"
               disabled=""
-              id="headlessui-disclosure-button-:rn:"
+              id="headlessui-disclosure-button-:re:"
               type="button"
             >
               <span
@@ -4494,7 +4494,7 @@ exports[`Product view Renders correctly for a successful call with International
             </button>
             <div
               class="py-2"
-              id="headlessui-disclosure-panel-:ro:"
+              id="headlessui-disclosure-panel-:rf:"
             >
               <div
                 class="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mb-10"
@@ -5511,7 +5511,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                     aria-haspopup="true"
                     class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                     data-testid="button-listbox"
-                    id="headlessui-listbox-button-:r9:"
+                    id="headlessui-listbox-button-:r0:"
                     type="button"
                   >
                     <span
@@ -5560,7 +5560,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                     aria-haspopup="true"
                     class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                     data-testid="button-listbox"
-                    id="headlessui-listbox-button-:ra:"
+                    id="headlessui-listbox-button-:r1:"
                     type="button"
                   >
                     <span
@@ -5605,7 +5605,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                     aria-haspopup="true"
                     class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
                     data-testid="button-listbox"
-                    id="headlessui-listbox-button-:rb:"
+                    id="headlessui-listbox-button-:r2:"
                     type="button"
                   >
                     <span
@@ -5872,11 +5872,11 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
             class="border-t border-coreUI-border mx-auto w-full py-4"
           >
             <button
-              aria-controls="headlessui-disclosure-panel-:rd:"
+              aria-controls="headlessui-disclosure-panel-:r4:"
               aria-expanded="true"
               class="flex w-full justify-between py-2 text-left"
               data-testid="button-disclosure-toggle"
-              id="headlessui-disclosure-button-:rc:"
+              id="headlessui-disclosure-button-:r3:"
               type="button"
             >
               <span
@@ -5902,7 +5902,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
             </button>
             <div
               class="py-2"
-              id="headlessui-disclosure-panel-:rd:"
+              id="headlessui-disclosure-panel-:r4:"
             >
               <div>
                 <p
@@ -6182,11 +6182,11 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
             class="border-t border-coreUI-border mx-auto w-full py-4"
           >
             <button
-              aria-controls="headlessui-disclosure-panel-:rf:"
+              aria-controls="headlessui-disclosure-panel-:r6:"
               aria-expanded="true"
               class="flex w-full justify-between py-2 text-left"
               data-testid="button-disclosure-toggle"
-              id="headlessui-disclosure-button-:re:"
+              id="headlessui-disclosure-button-:r5:"
               type="button"
             >
               <span
@@ -6212,7 +6212,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
             </button>
             <div
               class="py-2"
-              id="headlessui-disclosure-panel-:rf:"
+              id="headlessui-disclosure-panel-:r6:"
             >
               <div
                 class="grid gap-6 md:grid-cols-2 xl:grid-cols-1"

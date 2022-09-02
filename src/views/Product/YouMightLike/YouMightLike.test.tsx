@@ -18,7 +18,7 @@ window.history = { go: jest.fn() }
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'), // use actual for all non-hook parts
   useParams: () => ({
-    id: '7655228866776',
+    id: '6837501067347',
   }),
 }))
 
@@ -31,7 +31,7 @@ describe('Find accessories partial view', () => {
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
-          <MemoryRouter initialEntries={['/product/7655228866776']}>
+          <MemoryRouter initialEntries={['/product/6837501067347']}>
             <YouMightLike productId="123456789" />
           </MemoryRouter>
         </I18nextProvider>
@@ -49,8 +49,8 @@ describe('Find accessories partial view', () => {
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
-          <MemoryRouter initialEntries={['/product/7655228866776']}>
-            <YouMightLike productId="7655228866776" />
+          <MemoryRouter initialEntries={['/product/6837501067347']}>
+            <YouMightLike productId="6837501067347" />
           </MemoryRouter>
         </I18nextProvider>
       </MockedProvider>,
@@ -67,8 +67,8 @@ describe('Find accessories partial view', () => {
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
-          <MemoryRouter initialEntries={['/product/7655228866776']}>
-            <YouMightLike productId="7655228866776" />
+          <MemoryRouter initialEntries={['/product/6837501067347']}>
+            <YouMightLike productId="6837501067347" />
           </MemoryRouter>
         </I18nextProvider>
       </MockedProvider>,

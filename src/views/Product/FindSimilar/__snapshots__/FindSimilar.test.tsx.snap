@@ -14,7 +14,7 @@ exports[`Find similar partial view Renders correctly for a successful call not e
     class="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mb-10"
   >
     <a
-      href="/product/7655228866776"
+      href="/product/6837501067347"
     >
       <div
         class="flex pt-8"
@@ -104,7 +104,7 @@ exports[`Find similar partial view Renders correctly for a successful call not e
       </div>
     </a>
     <a
-      href="/product/7655228866776"
+      href="/product/6837501067347"
     >
       <div
         class="flex pt-8"
@@ -194,7 +194,7 @@ exports[`Find similar partial view Renders correctly for a successful call not e
       </div>
     </a>
     <a
-      href="/product/7655228866776"
+      href="/product/6837501067347"
     >
       <div
         class="flex pt-8"
