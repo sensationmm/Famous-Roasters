@@ -56,7 +56,7 @@ export const AromaFilter: React.FC = () => {
           return t(`pages.catalogue.filters.tasteProfileCaptions.${attribute}_one`, { count: 1, level: tasteLevels[0] })
         case 2:
           return t(`pages.catalogue.filters.tasteProfileCaptions.${attribute}_two`, {
-            count: 1,
+            count: 2,
             level1: tasteLevels[0],
             level2: tasteLevels[1],
           })
