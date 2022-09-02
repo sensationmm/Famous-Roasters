@@ -5,7 +5,7 @@ import { ProductCustom } from 'src/views/Product/Product'
 const GET_PRODUCT = loader('src/graphql/queries/product.query.graphql')
 
 export const ProductMockDataBase: ProductCustom = {
-  id: 'gid://shopify/Product/7655228866776',
+  id: "gid://shopify/Product/7655228866776",
   title: 'Espresso Raritäten Set',
   productType: 'Espresso',
   vendor: '60beans',
@@ -53,14 +53,14 @@ export const ProductMockDataBase: ProductCustom = {
     edges: [],
     nodes: [
       {
-        id: '123123',
+        id: "123123",
         url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153',
         originalSrc: '',
         src: '',
         transformedSrc: '',
       },
       {
-        id: '123124',
+        id: "123124",
         url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153',
         originalSrc: '',
         src: '',
@@ -113,7 +113,7 @@ export const ProductMockDataBase: ProductCustom = {
 }
 
 export const AccessoryMockDataBase: ProductCustom = {
-  id: 'gid://shopify/Product/7968366166282',
+  id: "gid://shopify/Product/7968366166282",
   title: 'Barista Pinsel | barista.tools',
   productType: 'Accessories',
   vendor: 'Johann Jacobs Haus',
@@ -146,14 +146,14 @@ export const AccessoryMockDataBase: ProductCustom = {
     edges: [],
     nodes: [
       {
-        id: '12345',
+        id: "12345",
         url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/baristatools-barista-pinsel-fur-muhle-und-siebtrager-baristatools-341875_20copy.webp?v=1655308319',
         originalSrc: '',
         src: '',
         transformedSrc: '',
       },
       {
-        id: '23456',
+        id: "23456",
         url: 'https://cdn.shopify.com/s/files/1/0632/7251/7848/products/baristatools-barista-pinsel-fur-muhle-und-siebtrager-baristatools-263505_20copy.webp?v=1655308319',
         originalSrc: '',
         src: '',
@@ -228,7 +228,7 @@ export const AccessoryMockDataBaseWithVariant: ProductCustom = {
     edges: [],
     nodes: [
       {
-        id: 'gid://shopify/ProductVariant/43570607653130',
+        id: "gid://shopify/ProductVariant/43570607653130",
         availableForSale: true,
         price: '28.50',
         package_size: {
@@ -295,7 +295,7 @@ export const ProductMockData: ProductCustom = {
       {
         availableForSale: true,
         currentlyNotInStock: false,
-        id: 'gid://shopify/ProductVariant/42737527324888',
+        id: "gid://shopify/ProductVariant/42737527324888",
         price: '9.99',
         priceV2: {
           amount: '9.99',
@@ -492,7 +492,7 @@ export const ProductMock = {
   request: {
     query: GET_PRODUCT,
     variables: {
-      id: 'gid://shopify/Product/123456',
+      id: "gid://shopify/Product/123456",
     },
   },
   result: {
@@ -506,7 +506,7 @@ export const ProductMockWithCustomMetadata = {
   request: {
     query: GET_PRODUCT,
     variables: {
-      id: 'gid://shopify/Product/7655228866776',
+      id: "gid://shopify/Product/7655228866776",
     },
   },
   result: {
@@ -520,7 +520,7 @@ export const ProductMockWithCustomMetadataNoAroma = {
   request: {
     query: GET_PRODUCT,
     variables: {
-      id: 'gid://shopify/Product/7655228866776',
+      id: "gid://shopify/Product/7655228866776",
     },
   },
   result: {
@@ -537,7 +537,7 @@ export const ProductMockWithCustomMetadataInternationalVendor = {
   request: {
     query: GET_PRODUCT,
     variables: {
-      id: 'gid://shopify/Product/7655228866776',
+      id: "gid://shopify/Product/7655228866776",
     },
   },
   result: {
@@ -554,7 +554,7 @@ export const ProductMockAccessory = {
   request: {
     query: GET_PRODUCT,
     variables: {
-      id: 'gid://shopify/Product/7655228866776',
+      id: "gid://shopify/Product/7655228866776",
     },
   },
   result: {
@@ -568,7 +568,7 @@ export const ProductMockError = {
   request: {
     query: GET_PRODUCT,
     variables: {
-      id: 'gid://shopify/Product/123456',
+      id: "gid://shopify/Product/123456",
     },
   },
   result: {
