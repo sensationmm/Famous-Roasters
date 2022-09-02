@@ -36,7 +36,7 @@ export const getActiveFiltersCount = (
     activeFilters: {},
   }
 
-  attributes.map((attribute) => {
+  attributes.forEach((attribute) => {
     if (attribute === 'tasteProfile') {
       const activeFilters = items.map((item) => item.attribute)
       const tasteProfileCount = intersection(activeFilters, tasteProfileAttributes).length
