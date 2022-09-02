@@ -46,11 +46,14 @@ export const FeaturedProduct: React.FC = () => {
   const { aroma, images, title, whyThisCoffee } = data?.product || {}
 
   useEffect(() => {
-    if (
-      tasteFinderDataJSON &&
-      JSON.parse(tasteFinderDataJSON).find((p: TasteFinderField) => p.name === 'aroma')?.length === 0 &&
-      aroma?.value
-    ) {
+    if (tasteFinderDataJSON !== '' && aroma?.value) {
+      if (tasteFinderData.findIndex((p: TasteFinderField) => p.name === 'aroma') !== -1) {
+        tasteFinderData.forEach((key: TasteFinderField, count: number) => {
+          if (key.name === 'aroma') {
+            tasteFinderData.splice(count, 1)
+          }
+        })
+      }
       const saveAroma = [...tasteFinderData, { name: 'aroma', value: aroma?.value }]
       setTasteFinderLocalStorage(JSON.stringify(saveAroma))
     }

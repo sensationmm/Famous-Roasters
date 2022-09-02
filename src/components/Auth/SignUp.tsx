@@ -43,8 +43,12 @@ export class AuthSignUp extends SignUp {
 
   signUpUser = async (params: SignUpParams): Promise<void> => {
     const tasteFinderLocalStorage = localStorage.getItem('tasteFinder') || ''
-    const tasteFinderJSON = JSON.parse(JSON.parse(tasteFinderLocalStorage))
-    const savedAroma = tasteFinderJSON.find((p: TasteFinderField) => p.name === 'aroma')?.value || ''
+    let savedAroma = ''
+    if (tasteFinderLocalStorage !== '') {
+      const tasteFinderJSON = JSON.parse(JSON.parse(tasteFinderLocalStorage))
+      savedAroma = tasteFinderJSON.find((p: TasteFinderField) => p.name === 'aroma')?.value || ''
+    }
+
     await Auth.signUp({
       username: params.email,
       password: params.password,
