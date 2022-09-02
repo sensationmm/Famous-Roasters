@@ -1,3 +1,10 @@
+## [1.66.1](https://github.com/Famous-Roasters/frontend/compare/v1.66.0...v1.66.1) (2022-09-02)
+
+
+### Bug Fixes
+
+* **dialog:** fix broken scrolling caused by adding aroma filter ([b3a74cb](https://github.com/Famous-Roasters/frontend/commit/b3a74cbaa3a469e340c7e0e16c3a9197f10074af))
+
 # [1.66.0](https://github.com/Famous-Roasters/frontend/compare/v1.65.1...v1.66.0) (2022-09-02)
 
 
