@@ -130,12 +130,15 @@ interface AromaFilterMobileProps {
 export const AromaFilterMobile: React.FC<AromaFilterMobileProps> = ({ show, back }) => {
   const { t } = useTranslation()
   const { refine: clearRefinements } = useClearRefinements({ includedAttributes: tasteProfileAttributes })
+  const { items } = useCurrentRefinements()
+  const { activeFilters } = getActiveFiltersCount(['tasteProfile'], items)
+  const activeValuesCount = activeFilters['tasteProfile']
 
   return (
     <FilterMobileWrapper
       show={show}
       back={back}
-      nrActiveValues={0}
+      nrActiveValues={activeValuesCount}
       clear={() => clearRefinements()}
       title={t('pages.catalogue.filters.tasteProfile')}
     >
