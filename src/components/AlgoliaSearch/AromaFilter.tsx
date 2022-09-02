@@ -41,10 +41,28 @@ export const AromaFilter: React.FC = () => {
       })
     }
 
-    const isButtonActive = (tasteLevel: number): boolean => {
+    const isTasteLevelActive = (tasteLevel: number): boolean => {
       if (currentValues === undefined) return false
       const range = ranges[tasteLevel - 1]
       return range.every((i) => currentValues.includes(i.toString()))
+    }
+
+    const getCaption = (attribute: string): string => {
+      const tasteLevels = [1, 2, 3]
+        .filter((level) => isTasteLevelActive(level))
+        .map((level) => t(`pages.catalogue.filters.tasteProfileCaptions.levels.${level}`))
+      switch (tasteLevels.length) {
+        case 1:
+          return t(`pages.catalogue.filters.tasteProfileCaptions.${attribute}_one`, { count: 1, level: tasteLevels[0] })
+        case 2:
+          return t(`pages.catalogue.filters.tasteProfileCaptions.${attribute}_two`, {
+            count: 1,
+            level1: tasteLevels[0],
+            level2: tasteLevels[1],
+          })
+        default:
+          return t('pages.catalogue.filters.tasteProfileCaptions.noPreference')
+      }
     }
 
     return (
@@ -58,14 +76,14 @@ export const AromaFilter: React.FC = () => {
         <div className="flex flex-row gap-x-4">
           {[1, 2, 3].map((val) => (
             <button onClick={() => handleOnClick(val)} key={`${attribute}-${val}`}>
-              <BeanScaleTag value={val} variant={isButtonActive(val) ? 'solid' : 'outline'} />
+              <BeanScaleTag value={val} variant={isTasteLevelActive(val) ? 'solid' : 'outline'} />
             </button>
           ))}
         </div>
 
         <div className="my-4">
           <Typography type={Type.Paragraph} size={Size.Small}>
-            caption
+            {getCaption(attribute)}
           </Typography>
         </div>
       </div>
