@@ -3,4 +3,5 @@
 
 echo "🚀 Running pre-commit tasks 🚀"
 npx lint-staged --allow-empty
+yarn run test:ci
 echo "🏁 Finished pre-commit tasks 🏁"
