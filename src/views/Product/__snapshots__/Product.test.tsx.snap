@@ -3188,10 +3188,10 @@ exports[`Product view Renders correctly for a successful call with International
                 <div>
                   <div>
                     <div
-                      class="inline-flex items-center rounded-full px-3 py-1 bg-coreUI-background-images"
+                      class="inline-flex items-center rounded-full px-3 py-1 bg-coreUI-background-images "
                     >
                       <svg
-                        class="undefined fill-brand-black stroke-brand-black"
+                        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
                         fill="inherit"
                         height="10"
                         viewBox="0 0 11 11"
@@ -3207,7 +3207,7 @@ exports[`Product view Renders correctly for a successful call with International
                         />
                       </svg>
                       <svg
-                        class="ml-0.5 fill-brand-black stroke-brand-black"
+                        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
                         fill="inherit"
                         height="10"
                         viewBox="0 0 11 11"
@@ -3223,7 +3223,7 @@ exports[`Product view Renders correctly for a successful call with International
                         />
                       </svg>
                       <svg
-                        class="ml-0.5 fill-brand-black stroke-brand-black"
+                        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
                         fill="inherit"
                         height="10"
                         viewBox="0 0 11 11"
@@ -3239,7 +3239,7 @@ exports[`Product view Renders correctly for a successful call with International
                         />
                       </svg>
                       <span
-                        class="ml-2 text-xs leading-4"
+                        class="ml-2 text-brand-black text-xs leading-4"
                       >
                         Leicht
                       </span>
@@ -3298,10 +3298,10 @@ exports[`Product view Renders correctly for a successful call with International
                 <div>
                   <div>
                     <div
-                      class="inline-flex items-center rounded-full px-3 py-1 bg-coreUI-background-images"
+                      class="inline-flex items-center rounded-full px-3 py-1 bg-coreUI-background-images "
                     >
                       <svg
-                        class="undefined fill-brand-black stroke-brand-black"
+                        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
                         fill="inherit"
                         height="10"
                         viewBox="0 0 11 11"
@@ -3317,7 +3317,7 @@ exports[`Product view Renders correctly for a successful call with International
                         />
                       </svg>
                       <svg
-                        class="ml-0.5 fill-brand-black stroke-brand-black"
+                        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
                         fill="inherit"
                         height="10"
                         viewBox="0 0 11 11"
@@ -3333,7 +3333,7 @@ exports[`Product view Renders correctly for a successful call with International
                         />
                       </svg>
                       <svg
-                        class="ml-0.5 fill-brand-black stroke-brand-black"
+                        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
                         fill="inherit"
                         height="10"
                         viewBox="0 0 11 11"
@@ -3349,7 +3349,7 @@ exports[`Product view Renders correctly for a successful call with International
                         />
                       </svg>
                       <span
-                        class="ml-2 text-xs leading-4"
+                        class="ml-2 text-brand-black text-xs leading-4"
                       >
                         Leicht
                       </span>
@@ -3408,10 +3408,10 @@ exports[`Product view Renders correctly for a successful call with International
                 <div>
                   <div>
                     <div
-                      class="inline-flex items-center rounded-full px-3 py-1 bg-coreUI-background-images"
+                      class="inline-flex items-center rounded-full px-3 py-1 bg-coreUI-background-images "
                     >
                       <svg
-                        class="undefined fill-brand-black stroke-brand-black"
+                        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
                         fill="inherit"
                         height="10"
                         viewBox="0 0 11 11"
@@ -3427,7 +3427,7 @@ exports[`Product view Renders correctly for a successful call with International
                         />
                       </svg>
                       <svg
-                        class="ml-0.5 fill-brand-black stroke-brand-black"
+                        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
                         fill="inherit"
                         height="10"
                         viewBox="0 0 11 11"
@@ -3443,7 +3443,7 @@ exports[`Product view Renders correctly for a successful call with International
                         />
                       </svg>
                       <svg
-                        class="ml-0.5 fill-brand-black stroke-brand-black"
+                        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
                         fill="inherit"
                         height="10"
                         viewBox="0 0 11 11"
@@ -3459,7 +3459,7 @@ exports[`Product view Renders correctly for a successful call with International
                         />
                       </svg>
                       <span
-                        class="ml-2 text-xs leading-4"
+                        class="ml-2 text-brand-black text-xs leading-4"
                       >
                         Leicht
                       </span>
@@ -3518,10 +3518,10 @@ exports[`Product view Renders correctly for a successful call with International
                 <div>
                   <div>
                     <div
-                      class="inline-flex items-center rounded-full px-3 py-1 bg-coreUI-background-images"
+                      class="inline-flex items-center rounded-full px-3 py-1 bg-coreUI-background-images "
                     >
                       <svg
-                        class="undefined fill-brand-black stroke-brand-black"
+                        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
                         fill="inherit"
                         height="10"
                         viewBox="0 0 11 11"
@@ -3537,7 +3537,7 @@ exports[`Product view Renders correctly for a successful call with International
                         />
                       </svg>
                       <svg
-                        class="ml-0.5 fill-brand-black stroke-brand-black"
+                        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
                         fill="inherit"
                         height="10"
                         viewBox="0 0 11 11"
@@ -3553,7 +3553,7 @@ exports[`Product view Renders correctly for a successful call with International
                         />
                       </svg>
                       <svg
-                        class="ml-0.5 fill-brand-black stroke-brand-black"
+                        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
                         fill="inherit"
                         height="10"
                         viewBox="0 0 11 11"
@@ -3569,7 +3569,7 @@ exports[`Product view Renders correctly for a successful call with International
                         />
                       </svg>
                       <span
-                        class="ml-2 text-xs leading-4"
+                        class="ml-2 text-brand-black text-xs leading-4"
                       >
                         Leicht
                       </span>
@@ -4950,10 +4950,10 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                 <div>
                   <div>
                     <div
-                      class="inline-flex items-center rounded-full px-3 py-1 bg-coreUI-background-images"
+                      class="inline-flex items-center rounded-full px-3 py-1 bg-coreUI-background-images "
                     >
                       <svg
-                        class="undefined fill-brand-black stroke-brand-black"
+                        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
                         fill="inherit"
                         height="10"
                         viewBox="0 0 11 11"
@@ -4969,7 +4969,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                         />
                       </svg>
                       <svg
-                        class="ml-0.5 fill-brand-black stroke-brand-black"
+                        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
                         fill="inherit"
                         height="10"
                         viewBox="0 0 11 11"
@@ -4985,7 +4985,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                         />
                       </svg>
                       <svg
-                        class="ml-0.5 fill-brand-black stroke-brand-black"
+                        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
                         fill="inherit"
                         height="10"
                         viewBox="0 0 11 11"
@@ -5001,7 +5001,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                         />
                       </svg>
                       <span
-                        class="ml-2 text-xs leading-4"
+                        class="ml-2 text-brand-black text-xs leading-4"
                       >
                         Leicht
                       </span>
@@ -5060,10 +5060,10 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                 <div>
                   <div>
                     <div
-                      class="inline-flex items-center rounded-full px-3 py-1 bg-coreUI-background-images"
+                      class="inline-flex items-center rounded-full px-3 py-1 bg-coreUI-background-images "
                     >
                       <svg
-                        class="undefined fill-brand-black stroke-brand-black"
+                        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
                         fill="inherit"
                         height="10"
                         viewBox="0 0 11 11"
@@ -5079,7 +5079,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                         />
                       </svg>
                       <svg
-                        class="ml-0.5 fill-brand-black stroke-brand-black"
+                        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
                         fill="inherit"
                         height="10"
                         viewBox="0 0 11 11"
@@ -5095,7 +5095,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                         />
                       </svg>
                       <svg
-                        class="ml-0.5 fill-brand-black stroke-brand-black"
+                        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
                         fill="inherit"
                         height="10"
                         viewBox="0 0 11 11"
@@ -5111,7 +5111,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                         />
                       </svg>
                       <span
-                        class="ml-2 text-xs leading-4"
+                        class="ml-2 text-brand-black text-xs leading-4"
                       >
                         Leicht
                       </span>
@@ -5170,10 +5170,10 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                 <div>
                   <div>
                     <div
-                      class="inline-flex items-center rounded-full px-3 py-1 bg-coreUI-background-images"
+                      class="inline-flex items-center rounded-full px-3 py-1 bg-coreUI-background-images "
                     >
                       <svg
-                        class="undefined fill-brand-black stroke-brand-black"
+                        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
                         fill="inherit"
                         height="10"
                         viewBox="0 0 11 11"
@@ -5189,7 +5189,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                         />
                       </svg>
                       <svg
-                        class="ml-0.5 fill-brand-black stroke-brand-black"
+                        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
                         fill="inherit"
                         height="10"
                         viewBox="0 0 11 11"
@@ -5205,7 +5205,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                         />
                       </svg>
                       <svg
-                        class="ml-0.5 fill-brand-black stroke-brand-black"
+                        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
                         fill="inherit"
                         height="10"
                         viewBox="0 0 11 11"
@@ -5221,7 +5221,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                         />
                       </svg>
                       <span
-                        class="ml-2 text-xs leading-4"
+                        class="ml-2 text-brand-black text-xs leading-4"
                       >
                         Leicht
                       </span>
@@ -5280,10 +5280,10 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                 <div>
                   <div>
                     <div
-                      class="inline-flex items-center rounded-full px-3 py-1 bg-coreUI-background-images"
+                      class="inline-flex items-center rounded-full px-3 py-1 bg-coreUI-background-images "
                     >
                       <svg
-                        class="undefined fill-brand-black stroke-brand-black"
+                        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
                         fill="inherit"
                         height="10"
                         viewBox="0 0 11 11"
@@ -5299,7 +5299,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                         />
                       </svg>
                       <svg
-                        class="ml-0.5 fill-brand-black stroke-brand-black"
+                        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
                         fill="inherit"
                         height="10"
                         viewBox="0 0 11 11"
@@ -5315,7 +5315,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                         />
                       </svg>
                       <svg
-                        class="ml-0.5 fill-brand-black stroke-brand-black"
+                        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
                         fill="inherit"
                         height="10"
                         viewBox="0 0 11 11"
@@ -5331,7 +5331,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                         />
                       </svg>
                       <span
-                        class="ml-2 text-xs leading-4"
+                        class="ml-2 text-brand-black text-xs leading-4"
                       >
                         Leicht
                       </span>

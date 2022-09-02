@@ -219,7 +219,7 @@
   "cta": {
     "next": "Weiter",
     "prev": "Zurück",
-    "filters" : {
+    "filters": {
       "label": "Sortieren nach...",
       "values": {
         "newest": "Neueste Bestellung",
@@ -471,6 +471,37 @@
           "label": "Alle Kaffees",
           "values": {
             "none": "Alle Kaffees"
+          }
+        },
+        "tasteProfile": "Aroma",
+        "tasteProfileFilterNames": {
+          "meta": {
+            "my_fields": {
+              "acidity": "Säure",
+              "bitterness": "Stärke",
+              "body": "Körper",
+              "sweetness": "Süße"
+            }
+          }
+        },
+        "tasteProfileCaptions": {
+          "levels": {
+            "1": "leichten",
+            "2": "ausgeglichenen",
+            "3": "hohen"
+          },
+          "noPreference": "Keine Präferenz",
+          "meta": {
+            "my_fields": {
+              "acidity_one": "Du magst Kaffees mit einem {{level}} Säuregrad.",
+              "acidity_two": "Du magst Kaffees mit einem {{level1}} und {{level2}} Säuregrad.",
+              "bitterness_one": "Du magst Kaffees mit einer {{level}} Bitternote.",
+              "bitterness_two": "Du magst Kaffees mit einer {{level1}} und {{level2}} Bitternote.",
+              "sweetness_one": "Du magst Kaffees mit einer {{level}} Süße.",
+              "sweetness_two": "Du magst Kaffees mit einer {{level1}} und {{level2}} Süße.",
+              "body_one": "Du magst Kaffees mit einem {{level}} Körper.",
+              "body_two": "Du magst Kaffees mit einem {{level1}} und {{level2}} Körper."
+            }
           }
         },
         "common": {

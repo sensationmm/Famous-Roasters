@@ -1,25 +1,26 @@
-import algoliasearch from 'algoliasearch'
 import { useTranslation } from 'react-i18next'
-import { Configure, Hits, InstantSearch, SearchBox, SortBy } from 'react-instantsearch-hooks-web'
+import { Configure, Hits, SearchBox, SortBy, useRefinementList } from 'react-instantsearch-hooks-web'
 import CheckboxFilter from 'src/components/AlgoliaSearch/CheckboxFilter'
 import Hit from 'src/components/AlgoliaSearch/Hit'
 
+import { AromaFilterButton } from './AromaFilter'
 import { FiltersMenuMobile } from './FiltersMenuMobile'
 import ListboxFilter from './ListboxFilter'
 import Pagination from './Pagination'
 import SingleSelectFilter from './SingleSelectFilter'
 import Stats from './Stats'
 
-const searchClient = algoliasearch(
-  process.env.REACT_APP_ALGOLIA_APP_ID || '',
-  process.env.REACT_APP_ALGOLIA_API_KEY || '',
-)
-
 const CoffeeSearch: React.FC = () => {
   const { t } = useTranslation()
 
+  // Initialize tasteProfile filters so we don't lose their state when dropdown closes
+  useRefinementList({ attribute: 'meta.my_fields.bitterness' })
+  useRefinementList({ attribute: 'meta.my_fields.acidity' })
+  useRefinementList({ attribute: 'meta.my_fields.sweetness' })
+  useRefinementList({ attribute: 'meta.my_fields.body' })
+
   return (
-    <InstantSearch indexName="products" searchClient={searchClient} routing={true}>
+    <>
       <Configure
         distinct={true} // show products, not variants
         hitsPerPage={12}
@@ -67,6 +68,7 @@ const CoffeeSearch: React.FC = () => {
           <ListboxFilter attribute="meta.my_fields.bean_type" />
           <ListboxFilter attribute="meta.my_fields.origin" translationPrefix="pages.catalogue.filters.origin.values" />
           <ListboxFilter attribute="vendor" />
+          <AromaFilterButton />
         </div>
       </div>
 
@@ -80,10 +82,15 @@ const CoffeeSearch: React.FC = () => {
         <div className="w-1/2 md:hidden">
           <FiltersMenuMobile
             filters={[
-              { attribute: 'meta.my_fields.aroma', showSwatches: true },
-              { attribute: 'meta.my_fields.bean_type' },
-              { attribute: 'meta.my_fields.origin', translationPrefix: 'pages.catalogue.filters.origin.values' },
-              { attribute: 'vendor' },
+              { type: 'list', attribute: 'meta.my_fields.aroma', showSwatches: true },
+              { type: 'aroma', attribute: 'tasteProfile' },
+              { type: 'list', attribute: 'meta.my_fields.bean_type' },
+              {
+                type: 'list',
+                attribute: 'meta.my_fields.origin',
+                translationPrefix: 'pages.catalogue.filters.origin.values',
+              },
+              { type: 'list', attribute: 'vendor' },
             ]}
           />
         </div>
@@ -112,7 +119,7 @@ const CoffeeSearch: React.FC = () => {
         classNames={{ root: 'mb-8', list: 'grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3' }}
       />
       <Pagination />
-    </InstantSearch>
+    </>
   )
 }
 

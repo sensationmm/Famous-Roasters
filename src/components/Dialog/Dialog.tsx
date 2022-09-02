@@ -10,6 +10,7 @@ interface DialogProps extends React.HTMLAttributes<HTMLElement> {
   body: ReactNode
   closeButton?: (onclick: () => void) => void
   showCloseButton?: boolean
+  unmount?: boolean
 }
 
 export const Dialog: React.FC<DialogProps> = ({
@@ -20,6 +21,7 @@ export const Dialog: React.FC<DialogProps> = ({
   className,
   closeButton,
   showCloseButton = false,
+  unmount = true,
 }) => {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -33,8 +35,8 @@ export const Dialog: React.FC<DialogProps> = ({
     <div className={className}>
       <TriggerElement {...trigger.props} onClick={openDialog} data-testid="dialog-trigger" />
 
-      <Transition appear show={isOpen} as={Fragment}>
-        <HeadlessUIDialog as="div" className="relative z-10" onClose={closeDialog}>
+      <Transition appear show={isOpen} as={Fragment} unmount={unmount}>
+        <HeadlessUIDialog as="div" className="relative z-40" onClose={closeDialog} unmount={unmount}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -47,7 +49,7 @@ export const Dialog: React.FC<DialogProps> = ({
             <div className="fixed inset-0 bg-brand-black bg-opacity-25" />
           </Transition.Child>
 
-          <div className="fixed inset-0 overflow-y-auto">
+          <div className="fixed inset-0 overflow-y-auto z-40">
             <div className="flex min-h-full items-center justify-center p-4 text-center">
               <Transition.Child
                 as={Fragment}

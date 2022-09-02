@@ -14,3 +14,15 @@ export const Default = Template.bind({})
 Default.args = {
   value: 2,
 }
+
+export const Outline = Template.bind({})
+Outline.args = {
+  value: 2,
+  variant: 'outline',
+}
+
+export const Solid = Template.bind({})
+Solid.args = {
+  value: 2,
+  variant: 'solid',
+}

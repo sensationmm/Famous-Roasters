@@ -6,10 +6,13 @@ import { useTranslation } from 'react-i18next'
 import { useClearRefinements, useCurrentRefinements } from 'react-instantsearch-hooks-web'
 import { Button, ButtonEmphasis, ButtonSize, Typography, TypographySize, TypographyType } from 'src/components'
 
-import { FilterMobile } from './FilterMobile'
+import { AromaFilterMobile } from './AromaFilter'
+import { ListFilterMobile } from './ListFilterMobile'
+import { getActiveFiltersCount } from './searchUtils'
 
 interface FiltersMenuMobileProps {
   filters: Array<{
+    type: 'list' | 'aroma'
     attribute: string
     translationPrefix?: string
     showSwatches?: boolean
@@ -33,8 +36,30 @@ export const FiltersMenuMobile: React.FC<FiltersMenuMobileProps> = ({ filters }:
     setCurrentFilter(key)
   }
 
-  const attributes = filters.map((filter) => filter.attribute)
-  const nrActiveFilters = items.filter((item) => attributes.includes(item.attribute)).length
+  const { activeFilters, activeFiltersCount } = getActiveFiltersCount(
+    filters.map((filter) => filter.attribute),
+    items,
+  )
+
+  const renderButton = (attribute: string) => {
+    const activeValuesCount = activeFilters[attribute]
+    return (
+      <div
+        key={`filter-${attribute}`}
+        className="flex justify-between px-5 py-5 border-b border-coreUI-text-tertiary cursor-pointer"
+        onClick={() => openFilter(attribute)}
+      >
+        <div className="flex">
+          {activeValuesCount > 0 && <CheckIcon className="w-5 h-5 mr-2 text-brand-green-club" aria-hidden="true" />}
+          <Typography className="inline-flex">
+            {t(`pages.catalogue.filters.${attribute}`)}
+            {activeValuesCount > 0 && ` (${activeValuesCount})`}
+          </Typography>
+        </div>
+        <ChevronRightIcon className="inline-flex h-6 w-6" aria-hidden="true" />
+      </div>
+    )
+  }
 
   return (
     <>
@@ -48,16 +73,20 @@ export const FiltersMenuMobile: React.FC<FiltersMenuMobileProps> = ({ filters }:
           // eslint-disable-next-line
           onClose={() => {}}
         >
-          {filters.map(({ attribute, translationPrefix, showSwatches }) => (
-            <FilterMobile
-              key={attribute}
-              attribute={attribute}
-              translationPrefix={translationPrefix}
-              show={attribute === currentFilter}
-              back={() => closeFilter()}
-              showSwatches={showSwatches}
-            />
-          ))}
+          {filters.map(({ type, attribute, translationPrefix, showSwatches }) =>
+            type === 'aroma' ? (
+              <AromaFilterMobile show={currentFilter === 'tasteProfile'} back={() => closeFilter()} key={attribute} />
+            ) : (
+              <ListFilterMobile
+                key={attribute}
+                attribute={attribute}
+                translationPrefix={translationPrefix}
+                show={attribute === currentFilter}
+                back={() => closeFilter()}
+                showSwatches={showSwatches}
+              />
+            ),
+          )}
           <Transition.Child
             as={Fragment}
             enter="transition-opacity ease-linear duration-300"
@@ -80,6 +109,7 @@ export const FiltersMenuMobile: React.FC<FiltersMenuMobileProps> = ({ filters }:
             leaveTo="-translate-x-full"
           >
             <div className="relative w-full bg-white shadow-xl flex flex-col overflow-y-auto justify-between">
+              {/* Top row */}
               <div className="px-5 pt-5 pb-5 flex justify-between">
                 <button
                   type="button"
@@ -97,7 +127,7 @@ export const FiltersMenuMobile: React.FC<FiltersMenuMobileProps> = ({ filters }:
                   className="text-coreUI-text-secondary"
                 >
                   {t(`pages.catalogue.filters.common.filtersMenu.filterOptions`)}
-                  {items.length > 0 && ` (${items.length})`}
+                  {activeFiltersCount > 0 && ` (${activeFiltersCount})`}
                 </Typography>
                 <button
                   type="button"
@@ -110,27 +140,12 @@ export const FiltersMenuMobile: React.FC<FiltersMenuMobileProps> = ({ filters }:
                 </button>
               </div>
 
+              {/* Filter buttons */}
               <div className="border-t border-coreUI-text-tertiary overflow-auto grow">
-                {filters.map(({ attribute }) => {
-                  const filter = items.find((item) => item.attribute === attribute)
-                  return (
-                    <div
-                      key={`filter-${attribute}`}
-                      className="flex justify-between px-5 py-5 border-b border-coreUI-text-tertiary cursor-pointer"
-                      onClick={() => openFilter(attribute)}
-                    >
-                      <div className="flex">
-                        {filter && <CheckIcon className="w-5 h-5 mr-2 text-brand-green-club" aria-hidden="true" />}
-                        <Typography className="inline-flex">
-                          {t(`pages.catalogue.filters.${attribute}`)}
-                          {filter && ` (${filter.refinements.length})`}
-                        </Typography>
-                      </div>
-                      <ChevronRightIcon className="inline-flex h-6 w-6" aria-hidden="true" />
-                    </div>
-                  )
-                })}
+                {filters.map(({ attribute }) => renderButton(attribute))}
               </div>
+
+              {/* Close button */}
               <div className="inset-x-0 mx-5 py-6">
                 <Button
                   emphasis={ButtonEmphasis.Secondary}
@@ -153,7 +168,7 @@ export const FiltersMenuMobile: React.FC<FiltersMenuMobileProps> = ({ filters }:
       >
         <Typography size={TypographySize.Base} className="block truncate">
           {t(`pages.catalogue.filters.common.filtersMenu.filter`)}
-          {nrActiveFilters > 0 && ` (${nrActiveFilters})`}
+          {activeFiltersCount > 0 && ` (${activeFiltersCount})`}
         </Typography>
         <ChevronRightIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
       </button>

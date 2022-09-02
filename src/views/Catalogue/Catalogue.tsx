@@ -1,5 +1,7 @@
 import { Collection, ProductConnection } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
+import algoliasearch from 'algoliasearch'
 import React from 'react'
+import { InstantSearch } from 'react-instantsearch-hooks-web'
 import { useParams } from 'react-router-dom'
 import { Layout, TabsNavigation } from 'src/components'
 import AccessoriesSearch from 'src/components/AlgoliaSearch/AccessoriesSearch'
@@ -24,6 +26,10 @@ interface TabsDataItem {
   translationKey: string
 }
 
+const searchClient = algoliasearch(
+  process.env.REACT_APP_ALGOLIA_APP_ID || '',
+  process.env.REACT_APP_ALGOLIA_API_KEY || '',
+)
 const tabsData: TabsDataItem[] = [
   // disabled for now
   // { key: 'forYou', translationKey: 'pages.catalogue.tabs.forYou' },
@@ -44,17 +50,15 @@ export type FilterResponse = {
 
 export const Catalogue: React.FC = () => {
   const { productType } = useParams()
-  const renderContent = () => {
-    return productType === 'accessories' ? <AccessoriesSearch /> : <CoffeeSearch />
-  }
 
   return (
     <Layout>
       <main className="flex flex-grow w-full items-start justify-center bg-white mt-4">
         <div className="w-full max-w-7xl mx-auto px-6 xl:px-8">
           <TabsNavigation tabsData={tabsData} />
-
-          {renderContent()}
+          <InstantSearch indexName="products" searchClient={searchClient} routing={true}>
+            {productType === 'accessories' ? <AccessoriesSearch /> : <CoffeeSearch />}
+          </InstantSearch>
         </div>
       </main>
     </Layout>
