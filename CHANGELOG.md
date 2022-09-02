@@ -1,3 +1,10 @@
+## [1.66.2](https://github.com/Famous-Roasters/frontend/compare/v1.66.1...v1.66.2) (2022-09-02)
+
+
+### Bug Fixes
+
+* **signup:** signup failure if no taste finder ([#250](https://github.com/Famous-Roasters/frontend/issues/250)) ([47d1ad6](https://github.com/Famous-Roasters/frontend/commit/47d1ad63dacdf7d92f69fc1ea3b988ea92426853))
+
 ## [1.66.1](https://github.com/Famous-Roasters/frontend/compare/v1.66.0...v1.66.1) (2022-09-02)
 
 
