@@ -458,7 +458,7 @@ exports[`Profile view Renders correctly 1`] = `
             class="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
           >
             <a
-              href="/product/6837501067347"
+              href="/product/7655228866776"
             >
               <div
                 class="flex pt-8"
@@ -548,7 +548,7 @@ exports[`Profile view Renders correctly 1`] = `
               </div>
             </a>
             <a
-              href="/product/6837501067347"
+              href="/product/7655228866776"
             >
               <div
                 class="flex pt-8"
@@ -638,7 +638,7 @@ exports[`Profile view Renders correctly 1`] = `
               </div>
             </a>
             <a
-              href="/product/6837501067347"
+              href="/product/7655228866776"
             >
               <div
                 class="flex pt-8"

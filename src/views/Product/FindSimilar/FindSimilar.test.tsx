@@ -18,7 +18,7 @@ window.history = { go: jest.fn() }
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'), // use actual for all non-hook parts
   useParams: () => ({
-    id: '6837501067347',
+    id: '7655228866776',
   }),
 }))
 
@@ -31,8 +31,8 @@ describe('Find similar partial view', () => {
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
-          <MemoryRouter initialEntries={['/product/6837501067347']}>
-            <FindSimilar aroma="experimentell & komplex" productId="6837501067347" />
+          <MemoryRouter initialEntries={['/product/7655228866776']}>
+            <FindSimilar aroma="experimentell & komplex" productId="7655228866776" />
           </MemoryRouter>
         </I18nextProvider>
       </MockedProvider>,
@@ -49,7 +49,7 @@ describe('Find similar partial view', () => {
         addTypename={false}
       >
         <I18nextProvider i18n={i18n}>
-          <MemoryRouter initialEntries={['/product/6837501067347']}>
+          <MemoryRouter initialEntries={['/product/7655228866776']}>
             <FindSimilar aroma="experimentell & komplex" productId="12345678" />
           </MemoryRouter>
         </I18nextProvider>

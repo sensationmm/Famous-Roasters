@@ -5,10 +5,10 @@ import { ProductCustom } from 'src/views/Product/Product'
 const GET_PRODUCT = loader('src/graphql/queries/product.query.graphql')
 
 export const ProductMockDataBase: ProductCustom = {
-  id: "gid://shopify/Product/6837501067347",
+  id: "gid://shopify/Product/7655228866776",
   title: 'Espresso Raritäten Set',
   productType: 'Espresso',
-  vendor: 'Indie',
+  vendor: '60beans',
   totalInventory: 100,
   priceRange: {
     maxVariantPrice: {
@@ -113,10 +113,10 @@ export const ProductMockDataBase: ProductCustom = {
 }
 
 export const AccessoryMockDataBase: ProductCustom = {
-  id: "gid://shopify/Product/6837801222227",
-  title: 'Barista Naturhaarpinsel',
+  id: "gid://shopify/Product/7968366166282",
+  title: 'Barista Pinsel | barista.tools',
   productType: 'Accessories',
-  vendor: '60beans',
+  vendor: 'Johann Jacobs Haus',
   priceRange: {
     minVariantPrice: {
       amount: '28.5',
@@ -129,7 +129,7 @@ export const AccessoryMockDataBase: ProductCustom = {
   },
   description: '',
   descriptionHtml:
-  '<p>Der Naturhaarpinsel von barista.tools ist ideal für das Reinigen des Siebträgers und des Bereichs rund um die Mühle. Gerade für die Arbeit im professionellen Bereich ist dies der optimale Mühlenpinsel - optisch ansprechend, praktisch um schnell Kaffeekrümmel von der Mühle oder dem Arbeitsbereich zu entfernen und liegt gut in der Hand.</p><p>Das Naturhaar ist hitzebeständig und der Pinsel langlebig verarbeitet.</p><p> </p>',
+    '<p>Der Naturhaarpinsel von barista.tools ist ideal für das Reinigen des Siebträgers und des Bereichs rund um die Mühle. Gerade für die Arbeit im professionellen Bereich ist dies der optimale Mühlenpinsel - optisch ansprechend, praktisch um schnell Kaffeekrümmel von der Mühle oder dem Arbeitsbereich zu entfernen und liegt gut in der Hand.</p>\n<p>Das Naturhaar ist hitzebeständig und der Pinsel langlebig verarbeitet.</p>\n<p> </p>',
   whyThisCoffee: {
     value: '',
   },
@@ -506,7 +506,7 @@ export const ProductMockWithCustomMetadata = {
   request: {
     query: GET_PRODUCT,
     variables: {
-      id: "gid://shopify/Product/6837501067347",
+      id: "gid://shopify/Product/7655228866776",
     },
   },
   result: {
@@ -520,7 +520,7 @@ export const ProductMockWithCustomMetadataNoAroma = {
   request: {
     query: GET_PRODUCT,
     variables: {
-      id: "gid://shopify/Product/6837501067347",
+      id: "gid://shopify/Product/7655228866776",
     },
   },
   result: {
@@ -537,7 +537,7 @@ export const ProductMockWithCustomMetadataInternationalVendor = {
   request: {
     query: GET_PRODUCT,
     variables: {
-      id: "gid://shopify/Product/6837501067347",
+      id: "gid://shopify/Product/7655228866776",
     },
   },
   result: {
@@ -554,7 +554,7 @@ export const ProductMockAccessory = {
   request: {
     query: GET_PRODUCT,
     variables: {
-      id: "gid://shopify/Product/6837501067347",
+      id: "gid://shopify/Product/7655228866776",
     },
   },
   result: {

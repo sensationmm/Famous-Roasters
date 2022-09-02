@@ -3,7 +3,7 @@
 exports[`Hit component Renders correctly 1`] = `
 <div>
   <a
-    href="/product/gid://shopify/Product/6837501067347"
+    href="/product/gid://shopify/Product/7655228866776"
   >
     <div
       class="flex pt-8 md:px-6"
