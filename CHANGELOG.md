@@ -1,3 +1,22 @@
+# [1.67.0](https://github.com/Famous-Roasters/frontend/compare/v1.66.2...v1.67.0) (2022-09-02)
+
+
+### Bug Fixes
+
+* **ci:** aaarghhhh ([2bfe49f](https://github.com/Famous-Roasters/frontend/commit/2bfe49f961a4cfb00d71ba458100df704284c2b1))
+* **ci:** change secrets ([30f89a5](https://github.com/Famous-Roasters/frontend/commit/30f89a5e30cf0315326045f566a359b855f56e14))
+* **ci:** env vars ([e0d6a79](https://github.com/Famous-Roasters/frontend/commit/e0d6a793bbd174fd7e990304849731d293687f09))
+* **ci:** env vars ([8e5ff8e](https://github.com/Famous-Roasters/frontend/commit/8e5ff8ea4445525d6f74bfeba1b7c9c7cced37c3))
+* **ci:** restore skip snapshots on deploy ([1a716f8](https://github.com/Famous-Roasters/frontend/commit/1a716f8f461fdc2cb731b96783a4cbac07dc5fba))
+* **signup:** signup failure if no taste finder ([73fcf2d](https://github.com/Famous-Roasters/frontend/commit/73fcf2db3e43145ffa60501601119410d9a01156))
+* **test:** restore proper checks ([7742e3e](https://github.com/Famous-Roasters/frontend/commit/7742e3e1156a5d0941057ff6eed326a88afa4808))
+
+
+### Features
+
+* **precommit:** remove build -u ([2bae094](https://github.com/Famous-Roasters/frontend/commit/2bae0948362dda0d8a7b470b6a62d0cbd8c1a675))
+* **precommit:** test pre commit ([da9a11c](https://github.com/Famous-Roasters/frontend/commit/da9a11c1fa6cf40f3ccbf790805733e5d1675382))
+
 ## [1.66.2](https://github.com/Famous-Roasters/frontend/compare/v1.66.1...v1.66.2) (2022-09-02)
 
 
