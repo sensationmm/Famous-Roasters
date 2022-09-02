@@ -68,7 +68,6 @@ const CoffeeSearch: React.FC = () => {
           <ListboxFilter attribute="meta.my_fields.origin" translationPrefix="pages.catalogue.filters.origin.values" />
           <ListboxFilter attribute="vendor" />
           <AromaFilterButton />
-          {/* <AromaFilter /> */}
         </div>
       </div>
 
