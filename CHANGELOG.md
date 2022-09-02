@@ -1,3 +1,25 @@
+# [1.66.0](https://github.com/Famous-Roasters/frontend/compare/v1.65.1...v1.66.0) (2022-09-02)
+
+
+### Bug Fixes
+
+* **search:** cleanup ([4ef5001](https://github.com/Famous-Roasters/frontend/commit/4ef5001bf6f81617cfec4fac2f5494ec2b6f4397))
+* **search:** fix translation variable ([e0091db](https://github.com/Famous-Roasters/frontend/commit/e0091dbc4adf713ed8865249dedf2c717f5c8a11))
+
+
+### Features
+
+* **search:** add basic aroma filter ([b5538dd](https://github.com/Famous-Roasters/frontend/commit/b5538dd8b0792fcc1ec256bcad18bfe8345472f4))
+* **search:** add captions ([96f5e1b](https://github.com/Famous-Roasters/frontend/commit/96f5e1b7bc1a6a25f7c2ebeab4152e53a1a1362b))
+* **search:** add key ([9f4317a](https://github.com/Famous-Roasters/frontend/commit/9f4317a6112e3d1aa5ac19a520e79ce72397c82e))
+* **search:** add translation ([27c3e64](https://github.com/Famous-Roasters/frontend/commit/27c3e6432f1217e9bec7530dce0473c8f3c1bdfe))
+* **search:** dynamically insert aroma filter on mobile ([83e7f4c](https://github.com/Famous-Roasters/frontend/commit/83e7f4c29b464bbf8848861344a4e2276570b549))
+* **search:** implement aroma filter desktop/mobile ([18deda2](https://github.com/Famous-Roasters/frontend/commit/18deda21596651f6df00a7a057d1a82f195a4d78))
+* **search:** increase dialog z-index ([493346f](https://github.com/Famous-Roasters/frontend/commit/493346fe27ee95f6269f13eae991dc57d923c7f3))
+* **search:** refactor active values counting ([3ded786](https://github.com/Famous-Roasters/frontend/commit/3ded7862711b51e45af881c10f194b70699e4262))
+* **search:** update active values count in mobile view ([08b433f](https://github.com/Famous-Roasters/frontend/commit/08b433fb6b3d3311578356f30c6d6dbcee50f615))
+* **search:** update snapshots ([e2a7b64](https://github.com/Famous-Roasters/frontend/commit/e2a7b64c185a642a6d0ba0a3f4e8a5ec3efbb29e))
+
 ## [1.65.1](https://github.com/Famous-Roasters/frontend/compare/v1.65.0...v1.65.1) (2022-09-01)
 
 # [1.65.0](https://github.com/Famous-Roasters/frontend/compare/v1.64.0...v1.65.0) (2022-09-01)
