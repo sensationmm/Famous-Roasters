@@ -475,10 +475,14 @@
         },
         "tasteProfile": "Aroma",
         "tasteProfileFilterNames": {
-          "acidity_": "Säure",
-          "bitterness": "Stärke",
-          "body": "Körper",
-          "sweetness": "Süße"
+          "meta": {
+            "my_fields": {
+              "acidity": "Säure",
+              "bitterness": "Stärke",
+              "body": "Körper",
+              "sweetness": "Süße"
+            }
+          }
         },
         "common": {
           "filtersMenu": {

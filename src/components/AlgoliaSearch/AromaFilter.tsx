@@ -2,11 +2,12 @@ import { ChevronRightIcon } from '@heroicons/react/solid'
 import xor from 'lodash/xor'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { useInstantSearch } from 'react-instantsearch-hooks-web'
+import { useClearRefinements, useCurrentRefinements, useInstantSearch } from 'react-instantsearch-hooks-web'
 import { BeanScaleTag, Dialog, Typography, TypographySize } from 'src/components'
 
 import { Size, Type } from '../Typography/Typography'
 import { FilterMobileWrapper } from './FilterMobileWrapper'
+import { getActiveFiltersCount } from './searchUtils'
 
 const ranges = [
   [1, 2, 3],
@@ -14,14 +15,19 @@ const ranges = [
   [8, 9, 10],
 ]
 
+export const tasteProfileAttributes = [
+  'meta.my_fields.bitterness',
+  'meta.my_fields.acidity',
+  'meta.my_fields.sweetness',
+  'meta.my_fields.body',
+]
+
 export const AromaFilter: React.FC = () => {
   const { t } = useTranslation()
-  const attributes = ['bitterness', 'acidity_', 'sweetness', 'body']
   const { indexUiState, setIndexUiState } = useInstantSearch()
 
   const renderFilter = (attribute: string) => {
-    const filterName = `meta.my_fields.${attribute}`
-    const currentValues = indexUiState.refinementList && indexUiState.refinementList[filterName]
+    const currentValues = indexUiState.refinementList && indexUiState.refinementList[attribute]
 
     const handleOnClick = (tasteLevel: number) => {
       const range = ranges[tasteLevel - 1]
@@ -30,7 +36,7 @@ export const AromaFilter: React.FC = () => {
         ...indexUiState,
         refinementList: {
           ...indexUiState.refinementList,
-          [filterName]: nextValues,
+          [attribute]: nextValues,
         },
       })
     }
@@ -66,11 +72,15 @@ export const AromaFilter: React.FC = () => {
     )
   }
 
-  return <div className=" gap-y-4">{attributes.map((attribute) => renderFilter(attribute))}</div>
+  return <div className="p-5 gap-y-4">{tasteProfileAttributes.map((attribute) => renderFilter(attribute))}</div>
 }
 
 export const AromaFilterButton: React.FC = () => {
   const { t } = useTranslation()
+  const { items } = useCurrentRefinements()
+  const { activeFilters } = getActiveFiltersCount(['tasteProfile'], items)
+  const activeValuesCount = activeFilters['tasteProfile']
+
   const renderButton = () => (
     <button
       className="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
@@ -78,6 +88,7 @@ export const AromaFilterButton: React.FC = () => {
     >
       <Typography size={TypographySize.Base} className="block truncate">
         {t('pages.catalogue.filters.tasteProfile')}
+        {activeValuesCount > 0 && ` (${activeValuesCount})`}
       </Typography>
       <ChevronRightIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
     </button>
@@ -90,19 +101,17 @@ interface AromaFilterMobileProps {
   show: boolean
   back: () => void
 }
+
 export const AromaFilterMobile: React.FC<AromaFilterMobileProps> = ({ show, back }) => {
   const { t } = useTranslation()
-
-  const clear = () => {
-    console.log('clear aromas')
-  }
+  const { refine: clearRefinements } = useClearRefinements({ includedAttributes: tasteProfileAttributes })
 
   return (
     <FilterMobileWrapper
       show={show}
       back={back}
       nrActiveValues={0}
-      clear={clear}
+      clear={() => clearRefinements()}
       title={t('pages.catalogue.filters.tasteProfile')}
     >
       <AromaFilter />

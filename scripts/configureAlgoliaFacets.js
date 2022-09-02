@@ -11,7 +11,7 @@ const attributesForFaceting = [
   'meta.my_fields.decaf',
   'meta.my_fields.origin',
   'meta.my_fields.price_per_kg',
-  'meta.my_fields.acidity_',
+  'meta.my_fields.acidity',
   'meta.my_fields.bitterness',
   'meta.my_fields.sweetness',
   'meta.my_fields.body',

@@ -8,6 +8,7 @@ import { Button, ButtonEmphasis, ButtonSize, Typography, TypographySize, Typogra
 
 import { AromaFilterMobile } from './AromaFilter'
 import { ListFilterMobile } from './ListFilterMobile'
+import { getActiveFiltersCount } from './searchUtils'
 
 interface FiltersMenuMobileProps {
   filters: Array<{
@@ -35,10 +36,13 @@ export const FiltersMenuMobile: React.FC<FiltersMenuMobileProps> = ({ filters }:
     setCurrentFilter(key)
   }
 
-  const attributes = filters.map((filter) => filter.attribute)
-  const nrActiveFilters = items.filter((item) => attributes.includes(item.attribute)).length
+  const { activeFilters, activeFiltersCount } = getActiveFiltersCount(
+    filters.map((filter) => filter.attribute),
+    items,
+  )
 
-  const renderButton = (attribute: string, nrSelectedValues = 0) => {
+  const renderButton = (attribute: string) => {
+    const activeValuesCount = activeFilters[attribute]
     return (
       <div
         key={`filter-${attribute}`}
@@ -46,10 +50,10 @@ export const FiltersMenuMobile: React.FC<FiltersMenuMobileProps> = ({ filters }:
         onClick={() => openFilter(attribute)}
       >
         <div className="flex">
-          {nrSelectedValues > 0 && <CheckIcon className="w-5 h-5 mr-2 text-brand-green-club" aria-hidden="true" />}
+          {activeValuesCount > 0 && <CheckIcon className="w-5 h-5 mr-2 text-brand-green-club" aria-hidden="true" />}
           <Typography className="inline-flex">
             {t(`pages.catalogue.filters.${attribute}`)}
-            {nrSelectedValues > 0 && ` (${nrSelectedValues})`}
+            {activeValuesCount > 0 && ` (${activeValuesCount})`}
           </Typography>
         </div>
         <ChevronRightIcon className="inline-flex h-6 w-6" aria-hidden="true" />
@@ -70,7 +74,9 @@ export const FiltersMenuMobile: React.FC<FiltersMenuMobileProps> = ({ filters }:
           onClose={() => {}}
         >
           {filters.map(({ type, attribute, translationPrefix, showSwatches }) =>
-            type === 'list' ? (
+            type === 'aroma' ? (
+              <AromaFilterMobile show={currentFilter === 'tasteProfile'} back={() => closeFilter()} />
+            ) : (
               <ListFilterMobile
                 key={attribute}
                 attribute={attribute}
@@ -79,8 +85,6 @@ export const FiltersMenuMobile: React.FC<FiltersMenuMobileProps> = ({ filters }:
                 back={() => closeFilter()}
                 showSwatches={showSwatches}
               />
-            ) : (
-              <AromaFilterMobile show={currentFilter === 'tasteProfile'} back={() => closeFilter()} />
             ),
           )}
           <Transition.Child
@@ -123,7 +127,7 @@ export const FiltersMenuMobile: React.FC<FiltersMenuMobileProps> = ({ filters }:
                   className="text-coreUI-text-secondary"
                 >
                   {t(`pages.catalogue.filters.common.filtersMenu.filterOptions`)}
-                  {items.length > 0 && ` (${items.length})`}
+                  {activeFiltersCount > 0 && ` (${activeFiltersCount})`}
                 </Typography>
                 <button
                   type="button"
@@ -138,11 +142,7 @@ export const FiltersMenuMobile: React.FC<FiltersMenuMobileProps> = ({ filters }:
 
               {/* Filter buttons */}
               <div className="border-t border-coreUI-text-tertiary overflow-auto grow">
-                {filters.map(({ attribute }) => {
-                  const filter = items.find((item) => item.attribute === attribute)
-                  return renderButton(attribute, filter?.refinements.length || 0)
-                })}
-                {renderButton('tasteProfile', 0)}
+                {filters.map(({ attribute }) => renderButton(attribute))}
               </div>
 
               {/* Close button */}
@@ -168,7 +168,7 @@ export const FiltersMenuMobile: React.FC<FiltersMenuMobileProps> = ({ filters }:
       >
         <Typography size={TypographySize.Base} className="block truncate">
           {t(`pages.catalogue.filters.common.filtersMenu.filter`)}
-          {nrActiveFilters > 0 && ` (${nrActiveFilters})`}
+          {activeFiltersCount > 0 && ` (${activeFiltersCount})`}
         </Typography>
         <ChevronRightIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
       </button>

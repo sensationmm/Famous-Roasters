@@ -13,9 +13,9 @@ import Stats from './Stats'
 const CoffeeSearch: React.FC = () => {
   const { t } = useTranslation()
 
-  // Initialize flavour filters so we don't lose their state when dropdown closes
+  // Initialize tasteProfile filters so we don't lose their state when dropdown closes
   useRefinementList({ attribute: 'meta.my_fields.bitterness' })
-  useRefinementList({ attribute: 'meta.my_fields.acidity_' })
+  useRefinementList({ attribute: 'meta.my_fields.acidity' })
   useRefinementList({ attribute: 'meta.my_fields.sweetness' })
   useRefinementList({ attribute: 'meta.my_fields.body' })
 
