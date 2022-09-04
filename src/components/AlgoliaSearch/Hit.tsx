@@ -47,9 +47,9 @@ const Hit = ({ hit }: { hit: RawHit }) => {
   return (
     <Link to={`/product/${id}`} key={`product-tile-link-${id}`}>
       <div className="flex pt-8 md:px-6">
-        <div className="flex justify-center items-center shrink-0 self-center relative w-32 h-32">
-          <div className="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32">
-            <img src={image} alt={title} className="w-28 max-h-28" />
+        <div className="flex justify-center items-center shrink-0 self-center relative w-36 h-36">
+          <div className="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36">
+            <img src={image} alt={title} className="w-24 max-h-24" />
             {isDecaf && <Tag type={TagType.Decaf} value="Decaf" small={true} className="absolute top-2 left-0" />}
           </div>
         </div>
