@@ -1,9 +1,8 @@
-import { ChevronRightIcon } from '@heroicons/react/solid'
 import xor from 'lodash/xor'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { useClearRefinements, useCurrentRefinements, useInstantSearch } from 'react-instantsearch-hooks-web'
-import { BeanScaleTag, Dialog, Typography, TypographySize } from 'src/components'
+import { BeanScaleTag, Dialog, Icon, IconName, Typography, TypographySize } from 'src/components'
 
 import { Size, Type } from '../Typography/Typography'
 import { FilterMobileWrapper } from './FilterMobileWrapper'
@@ -108,7 +107,7 @@ export const AromaFilterButton: React.FC = () => {
         {t('pages.catalogue.filters.tasteProfile')}
         {activeValuesCount > 0 && ` (${activeValuesCount})`}
       </Typography>
-      <ChevronRightIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
+      <Icon name={IconName.ChevronDown} className="-mr-1 ml-2 mt-1 h-4 w-4" aria-hidden="true" />
     </button>
   )
 
