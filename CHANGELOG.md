@@ -1,3 +1,10 @@
+## [1.67.2](https://github.com/Famous-Roasters/frontend/compare/v1.67.1...v1.67.2) (2022-09-06)
+
+
+### Bug Fixes
+
+* **ui:** [WB-404] update aroma filter chevron ([#254](https://github.com/Famous-Roasters/frontend/issues/254)) ([ca0595e](https://github.com/Famous-Roasters/frontend/commit/ca0595e38990575579315be24665a4a44fe3a6be))
+
 ## [1.67.1](https://github.com/Famous-Roasters/frontend/compare/v1.67.0...v1.67.1) (2022-09-04)
 
 # [1.67.0](https://github.com/Famous-Roasters/frontend/compare/v1.66.2...v1.67.0) (2022-09-02)
