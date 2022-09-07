@@ -1,7 +1,7 @@
 import Auth from '@aws-amplify/auth'
 import { SignUp } from 'aws-amplify-react'
 import { IAuthPieceProps } from 'aws-amplify-react/lib-esm/Auth/AuthPiece'
-import Form from 'rc-field-form'
+import Form, { FormInstance } from 'rc-field-form'
 import React from 'react'
 import { Trans } from 'react-i18next'
 import { Link } from 'react-router-dom'
@@ -72,7 +72,8 @@ export class AuthSignUp extends SignUp {
       })
   }
 
-  renderSignUpInputs(): JSX.Element {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  renderSignUpInputs(form: FormInstance<any>): JSX.Element {
     return (
       <>
         <div className="w-full mt-6">
@@ -82,7 +83,7 @@ export class AuthSignUp extends SignUp {
           <AuthFormEmail screenKey="signUp" onChange={this.handleInputChange} />
         </div>
         <div className="w-full mt-8">
-          <AuthFormDoublePassword screenKey="signUp" onChange={this.handleInputChange} />
+          <AuthFormDoublePassword screenKey="signUp" onChange={this.handleInputChange} form={form} />
         </div>
       </>
     )
@@ -199,7 +200,7 @@ export class AuthSignUp extends SignUp {
               const hasErrors = form.getFieldsError().filter((entry) => entry.errors.length > 0).length > 0
               return (
                 <>
-                  {this.renderSignUpInputs()}
+                  {this.renderSignUpInputs(form)}
                   {this.renderConfirmNewsletter()}
                   {this.renderSignUpButton(form.getFieldsValue(), !allTouched || hasErrors)}
                   {this.renderLegalConsent()}
