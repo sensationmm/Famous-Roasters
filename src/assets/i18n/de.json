@@ -189,7 +189,8 @@
           "required": "Bitte gib dein Passwort ein"
         },
         "label": "Dein Passwort",
-        "placeholder": "Dein Passwort"
+        "placeholder": "Dein Passwort",
+        "rules": "Anforderungen an dein Passwort"
       },
       "passwordRepeat": {
         "error": {

@@ -14,6 +14,8 @@ interface AuthFormItemInputProps {
   disabled?: boolean
   value?: string
   dataTestId?: string
+  hideErrors?: boolean
+  validateTrigger?: 'onChange' | 'onBlur'
 }
 
 export const AuthFormItemInput: React.FC<AuthFormItemInputProps> = ({
@@ -26,6 +28,8 @@ export const AuthFormItemInput: React.FC<AuthFormItemInputProps> = ({
   disabled = false,
   value = '',
   dataTestId = undefined,
+  hideErrors = false,
+  validateTrigger = 'onBlur',
 }: AuthFormItemInputProps) => {
   const [fieldErrors, setFieldErrors] = useState<string[]>([])
   const handleChange = (metaChange: Meta) => {
@@ -34,7 +38,13 @@ export const AuthFormItemInput: React.FC<AuthFormItemInputProps> = ({
   }
   return (
     <>
-      <Field name={name} rules={rules} initialValue={value} onMetaChange={handleChange} validateTrigger="onBlur">
+      <Field
+        name={name}
+        rules={rules}
+        initialValue={value}
+        onMetaChange={handleChange}
+        validateTrigger={validateTrigger}
+      >
         <Input
           labelText={label}
           type={type}
@@ -46,7 +56,7 @@ export const AuthFormItemInput: React.FC<AuthFormItemInputProps> = ({
           className={fieldErrors.length > 0 ? 'w-full border-negative' : 'w-full'}
         />
       </Field>
-      {fieldErrors.length > 0 && (
+      {fieldErrors.length > 0 && hideErrors !== true && (
         <ul className="text-negative mt-2 mb-4">
           {fieldErrors.map((error, idx) => (
             <Typography as="li" size={TypographySize.Tiny} key={`${name}-error-${idx}`}>
