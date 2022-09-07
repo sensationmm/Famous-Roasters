@@ -101,4 +101,27 @@ describe('Cart view', () => {
     expect(buttons[0]).toBeInTheDocument()
     fireEvent.click(buttons[0])
   })
+
+  it('Shows notification if items missing', async () => {
+    render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
+        mocks={[CartMock]}
+        addTypename={false}
+      >
+        <CartContext.Provider
+          value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 2, removeFromCart: () => alert('test') }}
+        >
+          <I18nextProvider i18n={i18n}>
+            <MemoryRouter initialEntries={['/cart?missingItems=true']}>
+              <Cart />
+            </MemoryRouter>
+          </I18nextProvider>
+        </CartContext.Provider>
+      </MockedProvider>,
+    )
+    await act(async (): Promise<void> => {
+      await new Promise((resolve) => setTimeout(resolve, 500))
+    })
+  })
 })

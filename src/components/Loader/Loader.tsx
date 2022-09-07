@@ -2,19 +2,25 @@ import React from 'react'
 
 interface LoaderProps extends React.HTMLAttributes<HTMLElement> {
   center?: boolean
+  isSmall?: boolean
 }
 
-const getLoaderClassNames = (): string => {
-  const classNames: string[] = ['w-8', 'h-8', 'text-brand-grey-mine', 'animate-spin', 'fill-brand-grey-bombay']
+const getLoaderClassNames = (isSmall: LoaderProps['isSmall']): string => {
+  const classNames: string[] = ['text-brand-grey-mine', 'animate-spin', 'fill-brand-grey-bombay']
+  if (isSmall) {
+    classNames.push('w-4', 'h-4')
+  } else {
+    classNames.push('w-8', 'h-8')
+  }
   return classNames.join(' ')
 }
 
-export const Loader: React.FC<LoaderProps> = ({ center = true }: LoaderProps) => {
+export const Loader: React.FC<LoaderProps> = ({ center = true, isSmall = false }: LoaderProps) => {
   return (
     <div className={center ? 'flex justify-center' : undefined}>
       <svg
         role="status"
-        className={getLoaderClassNames()}
+        className={getLoaderClassNames(isSmall)}
         viewBox="0 0 100 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

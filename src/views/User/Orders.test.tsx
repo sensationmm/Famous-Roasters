@@ -6,6 +6,7 @@ import { act } from 'react-dom/test-utils'
 import { I18nextProvider } from 'react-i18next'
 import ReactRouterDom, { LinkProps } from 'react-router-dom'
 import { OrdersMock, UserProfileMock } from 'src/_mocks'
+import { CartContext } from 'src/components'
 import { i18n } from 'src/config'
 import { awsconfig } from 'src/config/cognito/auth.hook'
 
@@ -241,6 +242,70 @@ describe('Orders view', () => {
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 500)))
     expect(container).toMatchSnapshot()
+  })
+
+  it('Handles reorder', async () => {
+    global.fetch = jest.fn(() =>
+      Promise.resolve({
+        json: () => Promise.resolve({ data: OrdersMock.result.data }),
+      }),
+    ) as jest.Mock
+    const addToCartMock = jest.fn()
+    render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
+        mocks={[UserProfileMock, OrdersMock]}
+        addTypename={false}
+      >
+        <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1, addToCart: addToCartMock }}>
+          <I18nextProvider i18n={i18n}>
+            <ReactRouterDom.MemoryRouter initialEntries={['/profile/orders']}>
+              <Orders />
+            </ReactRouterDom.MemoryRouter>
+          </I18nextProvider>
+        </CartContext.Provider>
+      </MockedProvider>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 500)))
+    const button = await screen.queryAllByTestId('reorder-btn')[1]
+    expect(button).toBeInTheDocument()
+    fireEvent.click(button)
+    await waitFor(() => new Promise((res) => setTimeout(res, 500)))
+
+    expect(addToCartMock).toHaveBeenCalledTimes(OrdersMock.result.data.orders.edges[1].node.lineItems.edges.length)
+    expect(mockUseNavigate).toHaveBeenCalledWith('/cart')
+  })
+
+  it('Handles reorder with missing items', async () => {
+    global.fetch = jest.fn(() =>
+      Promise.resolve({
+        json: () => Promise.resolve({ data: OrdersMock.result.data }),
+      }),
+    ) as jest.Mock
+    const addToCartMock = jest.fn()
+    render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
+        mocks={[UserProfileMock, OrdersMock]}
+        addTypename={false}
+      >
+        <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1, addToCart: addToCartMock }}>
+          <I18nextProvider i18n={i18n}>
+            <ReactRouterDom.MemoryRouter initialEntries={['/profile/orders']}>
+              <Orders />
+            </ReactRouterDom.MemoryRouter>
+          </I18nextProvider>
+        </CartContext.Provider>
+      </MockedProvider>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 500)))
+    const button = await screen.queryAllByTestId('reorder-btn')[0]
+    expect(button).toBeInTheDocument()
+    fireEvent.click(button)
+    await waitFor(() => new Promise((res) => setTimeout(res, 500)))
+
+    expect(addToCartMock).toHaveBeenCalledTimes(OrdersMock.result.data.orders.edges[0].node.lineItems.edges.length)
+    expect(mockUseNavigate).toHaveBeenCalledWith('/cart?missingItems=true')
   })
 
   afterAll(() => {

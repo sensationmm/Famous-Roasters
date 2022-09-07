@@ -1,5 +1,5 @@
 import { Transition } from '@headlessui/react'
-import { CheckCircleIcon } from '@heroicons/react/outline'
+import { CheckCircleIcon, ExclamationCircleIcon } from '@heroicons/react/outline'
 import { XIcon } from '@heroicons/react/solid'
 import React, { Fragment, useState } from 'react'
 import { Typography, TypographySize, TypographyType } from 'src/components'
@@ -7,9 +7,10 @@ import { Typography, TypographySize, TypographyType } from 'src/components'
 interface NotificationProps {
   heading: string
   body: string
+  status?: 'success' | 'fail'
 }
 
-export const Notification: React.FC<NotificationProps> = ({ heading, body }: NotificationProps) => {
+export const Notification: React.FC<NotificationProps> = ({ heading, body, status = 'success' }: NotificationProps) => {
   const [showNotification, setShowNotification] = useState(true)
   return (
     <>
@@ -29,7 +30,11 @@ export const Notification: React.FC<NotificationProps> = ({ heading, body }: Not
               <div className="p-4">
                 <div className="flex items-start">
                   <div className="flex-shrink-0">
-                    <CheckCircleIcon className="h-6 w-6 text-positive" aria-hidden="true" />
+                    {status === 'success' ? (
+                      <CheckCircleIcon className="h-6 w-6 text-positive" aria-hidden="true" />
+                    ) : (
+                      <ExclamationCircleIcon className="h-6 w-6 text-negative" aria-hidden="true" />
+                    )}
                   </div>
                   <div className="ml-3 w-0 flex-1 pt-0.5">
                     <Typography as="p" type={TypographyType.Label} size={TypographySize.Small}>

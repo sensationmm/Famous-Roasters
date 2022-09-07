@@ -13,7 +13,7 @@ interface CartProviderProps {
   children: React.ReactNode
 }
 
-interface CartItem {
+export interface CartItem {
   quantity: number
   item: Scalars['ID']
 }
@@ -68,8 +68,8 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProv
     }
   }, [])
 
-  const createCart = (firstItem: CartItem) => {
-    cartCreate({
+  const createCart = async (firstItem: CartItem) => {
+    await cartCreate({
       variables: {
         input: {
           lines: [
@@ -92,8 +92,8 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProv
       })
   }
 
-  const addLinesToCart = (item: CartItem, localStorageCartId: string) => {
-    cartLinesAdd({
+  const addLinesToCart = async (item: CartItem, localStorageCartId: string) => {
+    await cartLinesAdd({
       variables: {
         cartId: localStorageCartId,
         lines: [
@@ -114,15 +114,15 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProv
       })
   }
 
-  const addToCart = (item: CartItem) => {
+  const addToCart = async (item: CartItem) => {
     const localStorageCartIdValue = window.localStorage.getItem('cartId')
     const localStorageCartId = (localStorageCartIdValue && JSON.parse(localStorageCartIdValue)) || null
     // this step could be avoided if using a localstorage listener
     if (localStorageCartId) {
-      addLinesToCart(item, localStorageCartId)
+      await addLinesToCart(item, localStorageCartId)
       if (!cartId) setCartId(localStorageCartId)
     } else {
-      createCart(item)
+      await createCart(item)
     }
   }
 

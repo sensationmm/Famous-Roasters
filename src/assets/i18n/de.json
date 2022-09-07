@@ -435,6 +435,10 @@
         "add": {
           "body": "Dein Kaffee wartet schon auf dich",
           "heading": "Zum Warenkorb hinzugefügt"
+        },
+        "fail": {
+          "body": "Stock level isn't high enough to reorder everything you asked for",
+          "heading": "We couldn't add some items"
         }
       },
       "subtotal": "Zwischensumme",
@@ -1190,7 +1194,8 @@
       "shopLink": "Zum Shop",
       "orderNumber": "Bestellnummer",
       "clearFilter": "Klarfilter",
-      "searchPlaceholder": "Suche nach Bestellnummer"
+      "searchPlaceholder": "Suche nach Bestellnummer",
+      "ctaReorder": "Erneut bestellen"
     },
     "rate": {
       "rateCoffee": "Kaffee bewerten",
