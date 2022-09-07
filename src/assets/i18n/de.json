@@ -437,8 +437,8 @@
           "heading": "Zum Warenkorb hinzugefügt"
         },
         "fail": {
-          "body": "Stock level isn't high enough to reorder everything you asked for",
-          "heading": "We couldn't add some items"
+          "body": "Unsere Lagerbestände reichen aktuell nicht für eine Nachbestellung aus",
+          "heading": "Wir konnten einige Artikel leider nicht hinzufügen"
         }
       },
       "subtotal": "Zwischensumme",
