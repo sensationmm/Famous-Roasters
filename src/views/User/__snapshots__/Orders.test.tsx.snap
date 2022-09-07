@@ -821,12 +821,12 @@ exports[`Orders view Renders correctly 1`] = `
                 >
                   Bestellnummer
                    #
-                  895370
+                  4391324024915
                 </span>
                 <span
                   class="text-base leading-6"
                 >
-                  3,90 €
+                  44,87 €
                 </span>
               </div>
               <div>
@@ -852,9 +852,9 @@ exports[`Orders view Renders correctly 1`] = `
                     class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
                   >
                     <img
-                      alt="Cycle Blend"
+                      alt="Lord Voldemort"
                       class="w-14 max-h-14"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/specialty-coffee-espresso-cycle-blend-cycle-roasters-lubeck_20copy.webp?v=1655307920"
+                      src="https://cdn.shopify.com/s/files/1/0571/6036/8211/products/E.CO_.LORD_-1_a42893e8-5aac-4fc9-a320-fa9c68406524copy.webp?v=1662365500"
                     />
                   </div>
                 </div>
@@ -868,12 +868,12 @@ exports[`Orders view Renders correctly 1`] = `
                     <div
                       class="text-sm leading-5 font-semibold"
                     >
-                      Cycle Blend
+                      2 x Lord Voldemort
                     </div>
                     <div
                       class="text-coreUI-text-secondary text-sm leading-5"
                     >
-                      250g / Ganze Bohne
+                      Café en Grano / 250gr
                     </div>
                   </div>
                 </div>
@@ -890,9 +890,9 @@ exports[`Orders view Renders correctly 1`] = `
                     class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
                   >
                     <img
-                      alt="Santiago"
+                      alt="Primavera Family"
                       class="w-14 max-h-14"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/SANTIAGO_Filter.webp?v=1657875982"
+                      src="https://cdn.shopify.com/s/files/1/0571/6036/8211/products/E.GU_.PRIM.webp?v=1662477989"
                     />
                   </div>
                 </div>
@@ -906,16 +906,65 @@ exports[`Orders view Renders correctly 1`] = `
                     <div
                       class="text-sm leading-5 font-semibold"
                     >
-                      Santiago
+                      Primavera Family
                     </div>
                     <div
                       class="text-coreUI-text-secondary text-sm leading-5"
                     >
-                      250g / Ganze Bohne
+                      Café en Grano / 250gr
                     </div>
                   </div>
                 </div>
               </div>
+              <div
+                class="flex pt-4 w-full"
+                data-testid="wrapper"
+              >
+                <div
+                  class="flex justify-center items-center shrink-0 self-center relative w-16 h-16 cursor-pointer"
+                  data-testid="image"
+                >
+                  <div
+                    class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
+                  >
+                    <img
+                      alt="Entre Ríos"
+                      class="w-14 max-h-14"
+                      src="https://cdn.shopify.com/s/files/1/0571/6036/8211/products/E.CR_.ERW-1_a32c2e28-6725-4292-9438-7ec9fd598423.webp?v=1662477945"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="pl-4 flex flex-col justify-center"
+                >
+                  <div
+                    class="mb-2 cursor-pointer"
+                    data-testid="tile"
+                  >
+                    <div
+                      class="text-sm leading-5 font-semibold"
+                    >
+                      Entre Ríos
+                    </div>
+                    <div
+                      class="text-coreUI-text-secondary text-sm leading-5"
+                    >
+                      Café en Grano / 250gr
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="mt-4 flex"
+            >
+              <button
+                class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-3 py-2 text-sm font-semibold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black w-full md:max-w-xs md:mx-auto"
+                data-testid="reorder-btn"
+                role="button"
+              >
+                Erneut bestellen
+              </button>
             </div>
           </div>
           <div
@@ -930,7 +979,7 @@ exports[`Orders view Renders correctly 1`] = `
                 >
                   Bestellnummer
                    #
-                  895372
+                  4386125873235
                 </span>
                 <span
                   class="text-base leading-6"
@@ -961,9 +1010,9 @@ exports[`Orders view Renders correctly 1`] = `
                     class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
                   >
                     <img
-                      alt="Cycle Blend"
+                      alt="Álfrún Blend"
                       class="w-14 max-h-14"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/specialty-coffee-espresso-cycle-blend-cycle-roasters-lubeck_20copy.webp?v=1655307920"
+                      src="https://cdn.shopify.com/s/files/1/0571/6036/8211/products/beans31199.webp?v=1662477481"
                     />
                   </div>
                 </div>
@@ -977,16 +1026,65 @@ exports[`Orders view Renders correctly 1`] = `
                     <div
                       class="text-sm leading-5 font-semibold"
                     >
-                      Cycle Blend
+                      Álfrún Blend
                     </div>
                     <div
                       class="text-coreUI-text-secondary text-sm leading-5"
                     >
-                      250g / Ganze Bohne
+                      1 kg
                     </div>
                   </div>
                 </div>
               </div>
+              <div
+                class="flex pt-4 w-full"
+                data-testid="wrapper"
+              >
+                <div
+                  class="flex justify-center items-center shrink-0 self-center relative w-16 h-16 cursor-pointer"
+                  data-testid="image"
+                >
+                  <div
+                    class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
+                  >
+                    <img
+                      alt="Roadster's"
+                      class="w-14 max-h-14"
+                      src="https://cdn.shopify.com/s/files/1/0571/6036/8211/products/Roadsters_250_52f3f12d-2796-442c-9388-99f33d4f8ef6.webp?v=1662478272"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="pl-4 flex flex-col justify-center"
+                >
+                  <div
+                    class="mb-2 cursor-pointer"
+                    data-testid="tile"
+                  >
+                    <div
+                      class="text-sm leading-5 font-semibold"
+                    >
+                      Roadster's
+                    </div>
+                    <div
+                      class="text-coreUI-text-secondary text-sm leading-5"
+                    >
+                      Beutel / 1kg / Beutel / Ganze Bohne
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="mt-4 flex"
+            >
+              <button
+                class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-3 py-2 text-sm font-semibold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black w-full md:max-w-xs md:mx-auto"
+                data-testid="reorder-btn"
+                role="button"
+              >
+                Erneut bestellen
+              </button>
             </div>
           </div>
           <div
@@ -1001,19 +1099,19 @@ exports[`Orders view Renders correctly 1`] = `
                 >
                   Bestellnummer
                    #
-                  895371
+                  4386021998675
                 </span>
                 <span
                   class="text-base leading-6"
                 >
-                  3,90 €
+                  31,85 €
                 </span>
               </div>
               <div>
                 <span
                   class="font-bold text-sm leading-5"
                 >
-                  Geliefert
+                  Ausstehend
                 </span>
               </div>
             </div>
@@ -1032,9 +1130,9 @@ exports[`Orders view Renders correctly 1`] = `
                     class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
                   >
                     <img
-                      alt="Cycle Blend"
+                      alt="Roadster's"
                       class="w-14 max-h-14"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/specialty-coffee-espresso-cycle-blend-cycle-roasters-lubeck_20copy.webp?v=1655307920"
+                      src="https://cdn.shopify.com/s/files/1/0571/6036/8211/products/Roadsters_250_52f3f12d-2796-442c-9388-99f33d4f8ef6.webp?v=1662478272"
                     />
                   </div>
                 </div>
@@ -1048,12 +1146,12 @@ exports[`Orders view Renders correctly 1`] = `
                     <div
                       class="text-sm leading-5 font-semibold"
                     >
-                      Cycle Blend
+                      Roadster's
                     </div>
                     <div
                       class="text-coreUI-text-secondary text-sm leading-5"
                     >
-                      250g / Ganze Bohne
+                      Beutel / 1kg / Beutel / Ganze Bohne
                     </div>
                   </div>
                 </div>
@@ -1070,9 +1168,9 @@ exports[`Orders view Renders correctly 1`] = `
                     class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
                   >
                     <img
-                      alt="Santiago"
+                      alt="Álfrún Blend"
                       class="w-14 max-h-14"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/SANTIAGO_Filter.webp?v=1657875982"
+                      src="https://cdn.shopify.com/s/files/1/0571/6036/8211/products/beans31199.webp?v=1662477481"
                     />
                   </div>
                 </div>
@@ -1086,16 +1184,27 @@ exports[`Orders view Renders correctly 1`] = `
                     <div
                       class="text-sm leading-5 font-semibold"
                     >
-                      2 x Santiago
+                      Álfrún Blend
                     </div>
                     <div
                       class="text-coreUI-text-secondary text-sm leading-5"
                     >
-                      250g / Ganze Bohne
+                      250 g
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+            <div
+              class="mt-4 flex"
+            >
+              <button
+                class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-3 py-2 text-sm font-semibold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black w-full md:max-w-xs md:mx-auto"
+                data-testid="reorder-btn"
+                role="button"
+              >
+                Erneut bestellen
+              </button>
             </div>
           </div>
           <div
@@ -1110,19 +1219,19 @@ exports[`Orders view Renders correctly 1`] = `
                 >
                   Bestellnummer
                    #
-                  895373
+                  4382313480275
                 </span>
                 <span
                   class="text-base leading-6"
                 >
-                  3,90 €
+                  24,55 €
                 </span>
               </div>
               <div>
                 <span
                   class="font-bold text-sm leading-5"
                 >
-                  Geliefert
+                  Ausstehend
                 </span>
               </div>
             </div>
@@ -1141,9 +1250,9 @@ exports[`Orders view Renders correctly 1`] = `
                     class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
                   >
                     <img
-                      alt="Cycle Blend"
+                      alt="The Lady"
                       class="w-14 max-h-14"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/specialty-coffee-espresso-cycle-blend-cycle-roasters-lubeck_20copy.webp?v=1655307920"
+                      src="https://cdn.shopify.com/s/files/1/0571/6036/8211/products/F.MY_.LADY_e0a9fb12-d5cb-4d7a-8245-d3b2961b3216.webp?v=1662477994"
                     />
                   </div>
                 </div>
@@ -1157,54 +1266,27 @@ exports[`Orders view Renders correctly 1`] = `
                     <div
                       class="text-sm leading-5 font-semibold"
                     >
-                      Cycle Blend
+                      The Lady
                     </div>
                     <div
                       class="text-coreUI-text-secondary text-sm leading-5"
                     >
-                      250g / Ganze Bohne
+                      Espresso / 250gr
                     </div>
                   </div>
                 </div>
               </div>
-              <div
-                class="flex pt-4 w-full"
-                data-testid="wrapper"
+            </div>
+            <div
+              class="mt-4 flex"
+            >
+              <button
+                class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-3 py-2 text-sm font-semibold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black w-full md:max-w-xs md:mx-auto"
+                data-testid="reorder-btn"
+                role="button"
               >
-                <div
-                  class="flex justify-center items-center shrink-0 self-center relative w-16 h-16 cursor-pointer"
-                  data-testid="image"
-                >
-                  <div
-                    class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
-                  >
-                    <img
-                      alt="Santiago"
-                      class="w-14 max-h-14"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/SANTIAGO_Filter.webp?v=1657875982"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="pl-4 flex flex-col justify-center"
-                >
-                  <div
-                    class="mb-2 cursor-pointer"
-                    data-testid="tile"
-                  >
-                    <div
-                      class="text-sm leading-5 font-semibold"
-                    >
-                      Santiago
-                    </div>
-                    <div
-                      class="text-coreUI-text-secondary text-sm leading-5"
-                    >
-                      250g / Ganze Bohne
-                    </div>
-                  </div>
-                </div>
-              </div>
+                Erneut bestellen
+              </button>
             </div>
           </div>
         </div>
@@ -2810,406 +2892,19 @@ exports[`Orders view sets filter value 1`] = `
           </div>
         </div>
         <div
-          class="mt-8 max-w-[640px] mx-auto"
+          class="mt-8 "
         >
-          <div
-            class="mb-4 pb-4 md:mb-6 md:pb-6 border-b border-coreUI-border"
+          <h2
+            class="mb-8 text-xl leading-7 font-semibold"
           >
-            <div
-              class="grid grid-cols-2 gap-6"
-            >
-              <div>
-                <span
-                  class="block font-bold text-base leading-6"
-                >
-                  Bestellnummer
-                   #
-                  895370
-                </span>
-                <span
-                  class="text-base leading-6"
-                >
-                  3,90 €
-                </span>
-              </div>
-              <div>
-                <span
-                  class="font-bold text-sm leading-5"
-                >
-                  Geliefert
-                </span>
-              </div>
-            </div>
-            <div
-              class="md:grid md:grid-cols-2 md:gap-6"
-            >
-              <div
-                class="flex pt-4 w-full"
-                data-testid="wrapper"
-              >
-                <div
-                  class="flex justify-center items-center shrink-0 self-center relative w-16 h-16 cursor-pointer"
-                  data-testid="image"
-                >
-                  <div
-                    class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
-                  >
-                    <img
-                      alt="Cycle Blend"
-                      class="w-14 max-h-14"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/specialty-coffee-espresso-cycle-blend-cycle-roasters-lubeck_20copy.webp?v=1655307920"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="pl-4 flex flex-col justify-center"
-                >
-                  <div
-                    class="mb-2 cursor-pointer"
-                    data-testid="tile"
-                  >
-                    <div
-                      class="text-sm leading-5 font-semibold"
-                    >
-                      Cycle Blend
-                    </div>
-                    <div
-                      class="text-coreUI-text-secondary text-sm leading-5"
-                    >
-                      250g / Ganze Bohne
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="flex pt-4 w-full"
-                data-testid="wrapper"
-              >
-                <div
-                  class="flex justify-center items-center shrink-0 self-center relative w-16 h-16 cursor-pointer"
-                  data-testid="image"
-                >
-                  <div
-                    class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
-                  >
-                    <img
-                      alt="Santiago"
-                      class="w-14 max-h-14"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/SANTIAGO_Filter.webp?v=1657875982"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="pl-4 flex flex-col justify-center"
-                >
-                  <div
-                    class="mb-2 cursor-pointer"
-                    data-testid="tile"
-                  >
-                    <div
-                      class="text-sm leading-5 font-semibold"
-                    >
-                      Santiago
-                    </div>
-                    <div
-                      class="text-coreUI-text-secondary text-sm leading-5"
-                    >
-                      250g / Ganze Bohne
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="mb-4 pb-4 md:mb-6 md:pb-6 border-b border-coreUI-border"
+            Du hast keine Bestellungen, die auf deine Suche passen.
+          </h2>
+          <button
+            class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-4 py-2 text-base font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black w-full md:max-w-xs md:mx-auto"
+            role="button"
           >
-            <div
-              class="grid grid-cols-2 gap-6"
-            >
-              <div>
-                <span
-                  class="block font-bold text-base leading-6"
-                >
-                  Bestellnummer
-                   #
-                  895372
-                </span>
-                <span
-                  class="text-base leading-6"
-                >
-                  3,90 €
-                </span>
-              </div>
-              <div>
-                <span
-                  class="font-bold text-sm leading-5"
-                >
-                  Geliefert
-                </span>
-              </div>
-            </div>
-            <div
-              class="md:grid md:grid-cols-2 md:gap-6"
-            >
-              <div
-                class="flex pt-4 w-full"
-                data-testid="wrapper"
-              >
-                <div
-                  class="flex justify-center items-center shrink-0 self-center relative w-16 h-16 cursor-pointer"
-                  data-testid="image"
-                >
-                  <div
-                    class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
-                  >
-                    <img
-                      alt="Cycle Blend"
-                      class="w-14 max-h-14"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/specialty-coffee-espresso-cycle-blend-cycle-roasters-lubeck_20copy.webp?v=1655307920"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="pl-4 flex flex-col justify-center"
-                >
-                  <div
-                    class="mb-2 cursor-pointer"
-                    data-testid="tile"
-                  >
-                    <div
-                      class="text-sm leading-5 font-semibold"
-                    >
-                      Cycle Blend
-                    </div>
-                    <div
-                      class="text-coreUI-text-secondary text-sm leading-5"
-                    >
-                      250g / Ganze Bohne
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="mb-4 pb-4 md:mb-6 md:pb-6 border-b border-coreUI-border"
-          >
-            <div
-              class="grid grid-cols-2 gap-6"
-            >
-              <div>
-                <span
-                  class="block font-bold text-base leading-6"
-                >
-                  Bestellnummer
-                   #
-                  895371
-                </span>
-                <span
-                  class="text-base leading-6"
-                >
-                  3,90 €
-                </span>
-              </div>
-              <div>
-                <span
-                  class="font-bold text-sm leading-5"
-                >
-                  Geliefert
-                </span>
-              </div>
-            </div>
-            <div
-              class="md:grid md:grid-cols-2 md:gap-6"
-            >
-              <div
-                class="flex pt-4 w-full"
-                data-testid="wrapper"
-              >
-                <div
-                  class="flex justify-center items-center shrink-0 self-center relative w-16 h-16 cursor-pointer"
-                  data-testid="image"
-                >
-                  <div
-                    class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
-                  >
-                    <img
-                      alt="Cycle Blend"
-                      class="w-14 max-h-14"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/specialty-coffee-espresso-cycle-blend-cycle-roasters-lubeck_20copy.webp?v=1655307920"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="pl-4 flex flex-col justify-center"
-                >
-                  <div
-                    class="mb-2 cursor-pointer"
-                    data-testid="tile"
-                  >
-                    <div
-                      class="text-sm leading-5 font-semibold"
-                    >
-                      Cycle Blend
-                    </div>
-                    <div
-                      class="text-coreUI-text-secondary text-sm leading-5"
-                    >
-                      250g / Ganze Bohne
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="flex pt-4 w-full"
-                data-testid="wrapper"
-              >
-                <div
-                  class="flex justify-center items-center shrink-0 self-center relative w-16 h-16 cursor-pointer"
-                  data-testid="image"
-                >
-                  <div
-                    class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
-                  >
-                    <img
-                      alt="Santiago"
-                      class="w-14 max-h-14"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/SANTIAGO_Filter.webp?v=1657875982"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="pl-4 flex flex-col justify-center"
-                >
-                  <div
-                    class="mb-2 cursor-pointer"
-                    data-testid="tile"
-                  >
-                    <div
-                      class="text-sm leading-5 font-semibold"
-                    >
-                      2 x Santiago
-                    </div>
-                    <div
-                      class="text-coreUI-text-secondary text-sm leading-5"
-                    >
-                      250g / Ganze Bohne
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="mb-4 pb-4 md:mb-6 md:pb-6 border-b border-coreUI-border"
-          >
-            <div
-              class="grid grid-cols-2 gap-6"
-            >
-              <div>
-                <span
-                  class="block font-bold text-base leading-6"
-                >
-                  Bestellnummer
-                   #
-                  895373
-                </span>
-                <span
-                  class="text-base leading-6"
-                >
-                  3,90 €
-                </span>
-              </div>
-              <div>
-                <span
-                  class="font-bold text-sm leading-5"
-                >
-                  Geliefert
-                </span>
-              </div>
-            </div>
-            <div
-              class="md:grid md:grid-cols-2 md:gap-6"
-            >
-              <div
-                class="flex pt-4 w-full"
-                data-testid="wrapper"
-              >
-                <div
-                  class="flex justify-center items-center shrink-0 self-center relative w-16 h-16 cursor-pointer"
-                  data-testid="image"
-                >
-                  <div
-                    class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
-                  >
-                    <img
-                      alt="Cycle Blend"
-                      class="w-14 max-h-14"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/specialty-coffee-espresso-cycle-blend-cycle-roasters-lubeck_20copy.webp?v=1655307920"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="pl-4 flex flex-col justify-center"
-                >
-                  <div
-                    class="mb-2 cursor-pointer"
-                    data-testid="tile"
-                  >
-                    <div
-                      class="text-sm leading-5 font-semibold"
-                    >
-                      Cycle Blend
-                    </div>
-                    <div
-                      class="text-coreUI-text-secondary text-sm leading-5"
-                    >
-                      250g / Ganze Bohne
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="flex pt-4 w-full"
-                data-testid="wrapper"
-              >
-                <div
-                  class="flex justify-center items-center shrink-0 self-center relative w-16 h-16 cursor-pointer"
-                  data-testid="image"
-                >
-                  <div
-                    class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
-                  >
-                    <img
-                      alt="Santiago"
-                      class="w-14 max-h-14"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/SANTIAGO_Filter.webp?v=1657875982"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="pl-4 flex flex-col justify-center"
-                >
-                  <div
-                    class="mb-2 cursor-pointer"
-                    data-testid="tile"
-                  >
-                    <div
-                      class="text-sm leading-5 font-semibold"
-                    >
-                      Santiago
-                    </div>
-                    <div
-                      class="text-coreUI-text-secondary text-sm leading-5"
-                    >
-                      250g / Ganze Bohne
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+            Klarfilter
+          </button>
         </div>
       </div>
     </main>
@@ -3748,12 +3443,12 @@ exports[`Orders view sets sort newest first 1`] = `
                 >
                   Bestellnummer
                    #
-                  895370
+                  4391324024915
                 </span>
                 <span
                   class="text-base leading-6"
                 >
-                  3,90 €
+                  44,87 €
                 </span>
               </div>
               <div>
@@ -3779,9 +3474,9 @@ exports[`Orders view sets sort newest first 1`] = `
                     class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
                   >
                     <img
-                      alt="Cycle Blend"
+                      alt="Lord Voldemort"
                       class="w-14 max-h-14"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/specialty-coffee-espresso-cycle-blend-cycle-roasters-lubeck_20copy.webp?v=1655307920"
+                      src="https://cdn.shopify.com/s/files/1/0571/6036/8211/products/E.CO_.LORD_-1_a42893e8-5aac-4fc9-a320-fa9c68406524copy.webp?v=1662365500"
                     />
                   </div>
                 </div>
@@ -3795,12 +3490,12 @@ exports[`Orders view sets sort newest first 1`] = `
                     <div
                       class="text-sm leading-5 font-semibold"
                     >
-                      Cycle Blend
+                      2 x Lord Voldemort
                     </div>
                     <div
                       class="text-coreUI-text-secondary text-sm leading-5"
                     >
-                      250g / Ganze Bohne
+                      Café en Grano / 250gr
                     </div>
                   </div>
                 </div>
@@ -3817,9 +3512,9 @@ exports[`Orders view sets sort newest first 1`] = `
                     class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
                   >
                     <img
-                      alt="Santiago"
+                      alt="Primavera Family"
                       class="w-14 max-h-14"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/SANTIAGO_Filter.webp?v=1657875982"
+                      src="https://cdn.shopify.com/s/files/1/0571/6036/8211/products/E.GU_.PRIM.webp?v=1662477989"
                     />
                   </div>
                 </div>
@@ -3833,16 +3528,65 @@ exports[`Orders view sets sort newest first 1`] = `
                     <div
                       class="text-sm leading-5 font-semibold"
                     >
-                      Santiago
+                      Primavera Family
                     </div>
                     <div
                       class="text-coreUI-text-secondary text-sm leading-5"
                     >
-                      250g / Ganze Bohne
+                      Café en Grano / 250gr
                     </div>
                   </div>
                 </div>
               </div>
+              <div
+                class="flex pt-4 w-full"
+                data-testid="wrapper"
+              >
+                <div
+                  class="flex justify-center items-center shrink-0 self-center relative w-16 h-16 cursor-pointer"
+                  data-testid="image"
+                >
+                  <div
+                    class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
+                  >
+                    <img
+                      alt="Entre Ríos"
+                      class="w-14 max-h-14"
+                      src="https://cdn.shopify.com/s/files/1/0571/6036/8211/products/E.CR_.ERW-1_a32c2e28-6725-4292-9438-7ec9fd598423.webp?v=1662477945"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="pl-4 flex flex-col justify-center"
+                >
+                  <div
+                    class="mb-2 cursor-pointer"
+                    data-testid="tile"
+                  >
+                    <div
+                      class="text-sm leading-5 font-semibold"
+                    >
+                      Entre Ríos
+                    </div>
+                    <div
+                      class="text-coreUI-text-secondary text-sm leading-5"
+                    >
+                      Café en Grano / 250gr
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="mt-4 flex"
+            >
+              <button
+                class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-3 py-2 text-sm font-semibold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black w-full md:max-w-xs md:mx-auto"
+                data-testid="reorder-btn"
+                role="button"
+              >
+                Erneut bestellen
+              </button>
             </div>
           </div>
           <div
@@ -3857,7 +3601,7 @@ exports[`Orders view sets sort newest first 1`] = `
                 >
                   Bestellnummer
                    #
-                  895372
+                  4386125873235
                 </span>
                 <span
                   class="text-base leading-6"
@@ -3888,9 +3632,9 @@ exports[`Orders view sets sort newest first 1`] = `
                     class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
                   >
                     <img
-                      alt="Cycle Blend"
+                      alt="Álfrún Blend"
                       class="w-14 max-h-14"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/specialty-coffee-espresso-cycle-blend-cycle-roasters-lubeck_20copy.webp?v=1655307920"
+                      src="https://cdn.shopify.com/s/files/1/0571/6036/8211/products/beans31199.webp?v=1662477481"
                     />
                   </div>
                 </div>
@@ -3904,16 +3648,65 @@ exports[`Orders view sets sort newest first 1`] = `
                     <div
                       class="text-sm leading-5 font-semibold"
                     >
-                      Cycle Blend
+                      Álfrún Blend
                     </div>
                     <div
                       class="text-coreUI-text-secondary text-sm leading-5"
                     >
-                      250g / Ganze Bohne
+                      1 kg
                     </div>
                   </div>
                 </div>
               </div>
+              <div
+                class="flex pt-4 w-full"
+                data-testid="wrapper"
+              >
+                <div
+                  class="flex justify-center items-center shrink-0 self-center relative w-16 h-16 cursor-pointer"
+                  data-testid="image"
+                >
+                  <div
+                    class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
+                  >
+                    <img
+                      alt="Roadster's"
+                      class="w-14 max-h-14"
+                      src="https://cdn.shopify.com/s/files/1/0571/6036/8211/products/Roadsters_250_52f3f12d-2796-442c-9388-99f33d4f8ef6.webp?v=1662478272"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="pl-4 flex flex-col justify-center"
+                >
+                  <div
+                    class="mb-2 cursor-pointer"
+                    data-testid="tile"
+                  >
+                    <div
+                      class="text-sm leading-5 font-semibold"
+                    >
+                      Roadster's
+                    </div>
+                    <div
+                      class="text-coreUI-text-secondary text-sm leading-5"
+                    >
+                      Beutel / 1kg / Beutel / Ganze Bohne
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="mt-4 flex"
+            >
+              <button
+                class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-3 py-2 text-sm font-semibold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black w-full md:max-w-xs md:mx-auto"
+                data-testid="reorder-btn"
+                role="button"
+              >
+                Erneut bestellen
+              </button>
             </div>
           </div>
           <div
@@ -3928,19 +3721,19 @@ exports[`Orders view sets sort newest first 1`] = `
                 >
                   Bestellnummer
                    #
-                  895371
+                  4386021998675
                 </span>
                 <span
                   class="text-base leading-6"
                 >
-                  3,90 €
+                  31,85 €
                 </span>
               </div>
               <div>
                 <span
                   class="font-bold text-sm leading-5"
                 >
-                  Geliefert
+                  Ausstehend
                 </span>
               </div>
             </div>
@@ -3959,9 +3752,9 @@ exports[`Orders view sets sort newest first 1`] = `
                     class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
                   >
                     <img
-                      alt="Cycle Blend"
+                      alt="Roadster's"
                       class="w-14 max-h-14"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/specialty-coffee-espresso-cycle-blend-cycle-roasters-lubeck_20copy.webp?v=1655307920"
+                      src="https://cdn.shopify.com/s/files/1/0571/6036/8211/products/Roadsters_250_52f3f12d-2796-442c-9388-99f33d4f8ef6.webp?v=1662478272"
                     />
                   </div>
                 </div>
@@ -3975,12 +3768,12 @@ exports[`Orders view sets sort newest first 1`] = `
                     <div
                       class="text-sm leading-5 font-semibold"
                     >
-                      Cycle Blend
+                      Roadster's
                     </div>
                     <div
                       class="text-coreUI-text-secondary text-sm leading-5"
                     >
-                      250g / Ganze Bohne
+                      Beutel / 1kg / Beutel / Ganze Bohne
                     </div>
                   </div>
                 </div>
@@ -3997,9 +3790,9 @@ exports[`Orders view sets sort newest first 1`] = `
                     class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
                   >
                     <img
-                      alt="Santiago"
+                      alt="Álfrún Blend"
                       class="w-14 max-h-14"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/SANTIAGO_Filter.webp?v=1657875982"
+                      src="https://cdn.shopify.com/s/files/1/0571/6036/8211/products/beans31199.webp?v=1662477481"
                     />
                   </div>
                 </div>
@@ -4013,16 +3806,27 @@ exports[`Orders view sets sort newest first 1`] = `
                     <div
                       class="text-sm leading-5 font-semibold"
                     >
-                      2 x Santiago
+                      Álfrún Blend
                     </div>
                     <div
                       class="text-coreUI-text-secondary text-sm leading-5"
                     >
-                      250g / Ganze Bohne
+                      250 g
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+            <div
+              class="mt-4 flex"
+            >
+              <button
+                class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-3 py-2 text-sm font-semibold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black w-full md:max-w-xs md:mx-auto"
+                data-testid="reorder-btn"
+                role="button"
+              >
+                Erneut bestellen
+              </button>
             </div>
           </div>
           <div
@@ -4037,19 +3841,19 @@ exports[`Orders view sets sort newest first 1`] = `
                 >
                   Bestellnummer
                    #
-                  895373
+                  4382313480275
                 </span>
                 <span
                   class="text-base leading-6"
                 >
-                  3,90 €
+                  24,55 €
                 </span>
               </div>
               <div>
                 <span
                   class="font-bold text-sm leading-5"
                 >
-                  Geliefert
+                  Ausstehend
                 </span>
               </div>
             </div>
@@ -4068,9 +3872,9 @@ exports[`Orders view sets sort newest first 1`] = `
                     class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
                   >
                     <img
-                      alt="Cycle Blend"
+                      alt="The Lady"
                       class="w-14 max-h-14"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/specialty-coffee-espresso-cycle-blend-cycle-roasters-lubeck_20copy.webp?v=1655307920"
+                      src="https://cdn.shopify.com/s/files/1/0571/6036/8211/products/F.MY_.LADY_e0a9fb12-d5cb-4d7a-8245-d3b2961b3216.webp?v=1662477994"
                     />
                   </div>
                 </div>
@@ -4084,54 +3888,27 @@ exports[`Orders view sets sort newest first 1`] = `
                     <div
                       class="text-sm leading-5 font-semibold"
                     >
-                      Cycle Blend
+                      The Lady
                     </div>
                     <div
                       class="text-coreUI-text-secondary text-sm leading-5"
                     >
-                      250g / Ganze Bohne
+                      Espresso / 250gr
                     </div>
                   </div>
                 </div>
               </div>
-              <div
-                class="flex pt-4 w-full"
-                data-testid="wrapper"
+            </div>
+            <div
+              class="mt-4 flex"
+            >
+              <button
+                class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-3 py-2 text-sm font-semibold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black w-full md:max-w-xs md:mx-auto"
+                data-testid="reorder-btn"
+                role="button"
               >
-                <div
-                  class="flex justify-center items-center shrink-0 self-center relative w-16 h-16 cursor-pointer"
-                  data-testid="image"
-                >
-                  <div
-                    class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
-                  >
-                    <img
-                      alt="Santiago"
-                      class="w-14 max-h-14"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/SANTIAGO_Filter.webp?v=1657875982"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="pl-4 flex flex-col justify-center"
-                >
-                  <div
-                    class="mb-2 cursor-pointer"
-                    data-testid="tile"
-                  >
-                    <div
-                      class="text-sm leading-5 font-semibold"
-                    >
-                      Santiago
-                    </div>
-                    <div
-                      class="text-coreUI-text-secondary text-sm leading-5"
-                    >
-                      250g / Ganze Bohne
-                    </div>
-                  </div>
-                </div>
-              </div>
+                Erneut bestellen
+              </button>
             </div>
           </div>
         </div>
@@ -4672,12 +4449,12 @@ exports[`Orders view sets sort oldest first 1`] = `
                 >
                   Bestellnummer
                    #
-                  895370
+                  4391324024915
                 </span>
                 <span
                   class="text-base leading-6"
                 >
-                  3,90 €
+                  44,87 €
                 </span>
               </div>
               <div>
@@ -4703,9 +4480,9 @@ exports[`Orders view sets sort oldest first 1`] = `
                     class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
                   >
                     <img
-                      alt="Cycle Blend"
+                      alt="Lord Voldemort"
                       class="w-14 max-h-14"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/specialty-coffee-espresso-cycle-blend-cycle-roasters-lubeck_20copy.webp?v=1655307920"
+                      src="https://cdn.shopify.com/s/files/1/0571/6036/8211/products/E.CO_.LORD_-1_a42893e8-5aac-4fc9-a320-fa9c68406524copy.webp?v=1662365500"
                     />
                   </div>
                 </div>
@@ -4719,12 +4496,12 @@ exports[`Orders view sets sort oldest first 1`] = `
                     <div
                       class="text-sm leading-5 font-semibold"
                     >
-                      Cycle Blend
+                      2 x Lord Voldemort
                     </div>
                     <div
                       class="text-coreUI-text-secondary text-sm leading-5"
                     >
-                      250g / Ganze Bohne
+                      Café en Grano / 250gr
                     </div>
                   </div>
                 </div>
@@ -4741,9 +4518,9 @@ exports[`Orders view sets sort oldest first 1`] = `
                     class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
                   >
                     <img
-                      alt="Santiago"
+                      alt="Primavera Family"
                       class="w-14 max-h-14"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/SANTIAGO_Filter.webp?v=1657875982"
+                      src="https://cdn.shopify.com/s/files/1/0571/6036/8211/products/E.GU_.PRIM.webp?v=1662477989"
                     />
                   </div>
                 </div>
@@ -4757,16 +4534,65 @@ exports[`Orders view sets sort oldest first 1`] = `
                     <div
                       class="text-sm leading-5 font-semibold"
                     >
-                      Santiago
+                      Primavera Family
                     </div>
                     <div
                       class="text-coreUI-text-secondary text-sm leading-5"
                     >
-                      250g / Ganze Bohne
+                      Café en Grano / 250gr
                     </div>
                   </div>
                 </div>
               </div>
+              <div
+                class="flex pt-4 w-full"
+                data-testid="wrapper"
+              >
+                <div
+                  class="flex justify-center items-center shrink-0 self-center relative w-16 h-16 cursor-pointer"
+                  data-testid="image"
+                >
+                  <div
+                    class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
+                  >
+                    <img
+                      alt="Entre Ríos"
+                      class="w-14 max-h-14"
+                      src="https://cdn.shopify.com/s/files/1/0571/6036/8211/products/E.CR_.ERW-1_a32c2e28-6725-4292-9438-7ec9fd598423.webp?v=1662477945"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="pl-4 flex flex-col justify-center"
+                >
+                  <div
+                    class="mb-2 cursor-pointer"
+                    data-testid="tile"
+                  >
+                    <div
+                      class="text-sm leading-5 font-semibold"
+                    >
+                      Entre Ríos
+                    </div>
+                    <div
+                      class="text-coreUI-text-secondary text-sm leading-5"
+                    >
+                      Café en Grano / 250gr
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="mt-4 flex"
+            >
+              <button
+                class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-3 py-2 text-sm font-semibold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black w-full md:max-w-xs md:mx-auto"
+                data-testid="reorder-btn"
+                role="button"
+              >
+                Erneut bestellen
+              </button>
             </div>
           </div>
           <div
@@ -4781,7 +4607,7 @@ exports[`Orders view sets sort oldest first 1`] = `
                 >
                   Bestellnummer
                    #
-                  895372
+                  4386125873235
                 </span>
                 <span
                   class="text-base leading-6"
@@ -4812,9 +4638,9 @@ exports[`Orders view sets sort oldest first 1`] = `
                     class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
                   >
                     <img
-                      alt="Cycle Blend"
+                      alt="Álfrún Blend"
                       class="w-14 max-h-14"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/specialty-coffee-espresso-cycle-blend-cycle-roasters-lubeck_20copy.webp?v=1655307920"
+                      src="https://cdn.shopify.com/s/files/1/0571/6036/8211/products/beans31199.webp?v=1662477481"
                     />
                   </div>
                 </div>
@@ -4828,16 +4654,65 @@ exports[`Orders view sets sort oldest first 1`] = `
                     <div
                       class="text-sm leading-5 font-semibold"
                     >
-                      Cycle Blend
+                      Álfrún Blend
                     </div>
                     <div
                       class="text-coreUI-text-secondary text-sm leading-5"
                     >
-                      250g / Ganze Bohne
+                      1 kg
                     </div>
                   </div>
                 </div>
               </div>
+              <div
+                class="flex pt-4 w-full"
+                data-testid="wrapper"
+              >
+                <div
+                  class="flex justify-center items-center shrink-0 self-center relative w-16 h-16 cursor-pointer"
+                  data-testid="image"
+                >
+                  <div
+                    class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
+                  >
+                    <img
+                      alt="Roadster's"
+                      class="w-14 max-h-14"
+                      src="https://cdn.shopify.com/s/files/1/0571/6036/8211/products/Roadsters_250_52f3f12d-2796-442c-9388-99f33d4f8ef6.webp?v=1662478272"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="pl-4 flex flex-col justify-center"
+                >
+                  <div
+                    class="mb-2 cursor-pointer"
+                    data-testid="tile"
+                  >
+                    <div
+                      class="text-sm leading-5 font-semibold"
+                    >
+                      Roadster's
+                    </div>
+                    <div
+                      class="text-coreUI-text-secondary text-sm leading-5"
+                    >
+                      Beutel / 1kg / Beutel / Ganze Bohne
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="mt-4 flex"
+            >
+              <button
+                class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-3 py-2 text-sm font-semibold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black w-full md:max-w-xs md:mx-auto"
+                data-testid="reorder-btn"
+                role="button"
+              >
+                Erneut bestellen
+              </button>
             </div>
           </div>
           <div
@@ -4852,19 +4727,19 @@ exports[`Orders view sets sort oldest first 1`] = `
                 >
                   Bestellnummer
                    #
-                  895371
+                  4386021998675
                 </span>
                 <span
                   class="text-base leading-6"
                 >
-                  3,90 €
+                  31,85 €
                 </span>
               </div>
               <div>
                 <span
                   class="font-bold text-sm leading-5"
                 >
-                  Geliefert
+                  Ausstehend
                 </span>
               </div>
             </div>
@@ -4883,9 +4758,9 @@ exports[`Orders view sets sort oldest first 1`] = `
                     class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
                   >
                     <img
-                      alt="Cycle Blend"
+                      alt="Roadster's"
                       class="w-14 max-h-14"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/specialty-coffee-espresso-cycle-blend-cycle-roasters-lubeck_20copy.webp?v=1655307920"
+                      src="https://cdn.shopify.com/s/files/1/0571/6036/8211/products/Roadsters_250_52f3f12d-2796-442c-9388-99f33d4f8ef6.webp?v=1662478272"
                     />
                   </div>
                 </div>
@@ -4899,12 +4774,12 @@ exports[`Orders view sets sort oldest first 1`] = `
                     <div
                       class="text-sm leading-5 font-semibold"
                     >
-                      Cycle Blend
+                      Roadster's
                     </div>
                     <div
                       class="text-coreUI-text-secondary text-sm leading-5"
                     >
-                      250g / Ganze Bohne
+                      Beutel / 1kg / Beutel / Ganze Bohne
                     </div>
                   </div>
                 </div>
@@ -4921,9 +4796,9 @@ exports[`Orders view sets sort oldest first 1`] = `
                     class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
                   >
                     <img
-                      alt="Santiago"
+                      alt="Álfrún Blend"
                       class="w-14 max-h-14"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/SANTIAGO_Filter.webp?v=1657875982"
+                      src="https://cdn.shopify.com/s/files/1/0571/6036/8211/products/beans31199.webp?v=1662477481"
                     />
                   </div>
                 </div>
@@ -4937,16 +4812,27 @@ exports[`Orders view sets sort oldest first 1`] = `
                     <div
                       class="text-sm leading-5 font-semibold"
                     >
-                      2 x Santiago
+                      Álfrún Blend
                     </div>
                     <div
                       class="text-coreUI-text-secondary text-sm leading-5"
                     >
-                      250g / Ganze Bohne
+                      250 g
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+            <div
+              class="mt-4 flex"
+            >
+              <button
+                class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-3 py-2 text-sm font-semibold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black w-full md:max-w-xs md:mx-auto"
+                data-testid="reorder-btn"
+                role="button"
+              >
+                Erneut bestellen
+              </button>
             </div>
           </div>
           <div
@@ -4961,19 +4847,19 @@ exports[`Orders view sets sort oldest first 1`] = `
                 >
                   Bestellnummer
                    #
-                  895373
+                  4382313480275
                 </span>
                 <span
                   class="text-base leading-6"
                 >
-                  3,90 €
+                  24,55 €
                 </span>
               </div>
               <div>
                 <span
                   class="font-bold text-sm leading-5"
                 >
-                  Geliefert
+                  Ausstehend
                 </span>
               </div>
             </div>
@@ -4992,9 +4878,9 @@ exports[`Orders view sets sort oldest first 1`] = `
                     class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
                   >
                     <img
-                      alt="Cycle Blend"
+                      alt="The Lady"
                       class="w-14 max-h-14"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/specialty-coffee-espresso-cycle-blend-cycle-roasters-lubeck_20copy.webp?v=1655307920"
+                      src="https://cdn.shopify.com/s/files/1/0571/6036/8211/products/F.MY_.LADY_e0a9fb12-d5cb-4d7a-8245-d3b2961b3216.webp?v=1662477994"
                     />
                   </div>
                 </div>
@@ -5008,54 +4894,27 @@ exports[`Orders view sets sort oldest first 1`] = `
                     <div
                       class="text-sm leading-5 font-semibold"
                     >
-                      Cycle Blend
+                      The Lady
                     </div>
                     <div
                       class="text-coreUI-text-secondary text-sm leading-5"
                     >
-                      250g / Ganze Bohne
+                      Espresso / 250gr
                     </div>
                   </div>
                 </div>
               </div>
-              <div
-                class="flex pt-4 w-full"
-                data-testid="wrapper"
+            </div>
+            <div
+              class="mt-4 flex"
+            >
+              <button
+                class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-3 py-2 text-sm font-semibold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black w-full md:max-w-xs md:mx-auto"
+                data-testid="reorder-btn"
+                role="button"
               >
-                <div
-                  class="flex justify-center items-center shrink-0 self-center relative w-16 h-16 cursor-pointer"
-                  data-testid="image"
-                >
-                  <div
-                    class="flex justify-center items-center rounded-full bg-coreUI-background-images w-16 h-16"
-                  >
-                    <img
-                      alt="Santiago"
-                      class="w-14 max-h-14"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/SANTIAGO_Filter.webp?v=1657875982"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="pl-4 flex flex-col justify-center"
-                >
-                  <div
-                    class="mb-2 cursor-pointer"
-                    data-testid="tile"
-                  >
-                    <div
-                      class="text-sm leading-5 font-semibold"
-                    >
-                      Santiago
-                    </div>
-                    <div
-                      class="text-coreUI-text-secondary text-sm leading-5"
-                    >
-                      250g / Ganze Bohne
-                    </div>
-                  </div>
-                </div>
-              </div>
+                Erneut bestellen
+              </button>
             </div>
           </div>
         </div>

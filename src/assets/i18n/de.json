@@ -435,6 +435,10 @@
         "add": {
           "body": "Dein Kaffee wartet schon auf dich",
           "heading": "Zum Warenkorb hinzugefügt"
+        },
+        "fail": {
+          "body": "Unsere Lagerbestände reichen aktuell nicht für eine Nachbestellung aus",
+          "heading": "Wir konnten einige Artikel leider nicht hinzufügen"
         }
       },
       "subtotal": "Zwischensumme",
@@ -1190,7 +1194,8 @@
       "shopLink": "Zum Shop",
       "orderNumber": "Bestellnummer",
       "clearFilter": "Klarfilter",
-      "searchPlaceholder": "Suche nach Bestellnummer"
+      "searchPlaceholder": "Suche nach Bestellnummer",
+      "ctaReorder": "Erneut bestellen"
     },
     "rate": {
       "rateCoffee": "Kaffee bewerten",

@@ -10,6 +10,12 @@ describe('Loader component', () => {
     expect(container).toMatchSnapshot()
   })
 
+  it('Renders correctly in small', async () => {
+    const { container } = render(<Loader isSmall />)
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
+
   it('Renders correctly with center false', async () => {
     const { container } = render(<Loader center={false} />)
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))

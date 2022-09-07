@@ -352,7 +352,7 @@ exports[`Profile view Renders correctly 1`] = `
             class="flex justify-center"
           >
             <svg
-              class="w-8 h-8 text-brand-grey-mine animate-spin fill-brand-grey-bombay"
+              class="text-brand-grey-mine animate-spin fill-brand-grey-bombay w-8 h-8"
               fill="none"
               role="status"
               viewBox="0 0 100 101"

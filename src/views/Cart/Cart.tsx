@@ -3,9 +3,9 @@ import { TrashIcon } from '@heroicons/react/outline'
 import { CartQueryQuery } from '@shopify/hydrogen/dist/esnext/components/CartProvider/graphql/CartQuery'
 import { Scalars } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import {
   Button,
   ButtonEmphasis,
@@ -13,6 +13,7 @@ import {
   CartContext,
   Layout,
   Loader,
+  Notification,
   QuantitySelect,
   Typography,
   TypographySize,
@@ -22,13 +23,20 @@ import { formatPrice, getSimplifiedId } from 'src/utils'
 
 export const Cart: React.FC = () => {
   const { t } = useTranslation()
+  const [searchParams, setSearchParams] = useSearchParams()
   const GET_CART = loader('src/graphql/queries/cart.query.graphql')
   const { cartId } = useContext(CartContext)
   const [cartQuery, { loading, data }] = useLazyQuery<CartQueryQuery>(GET_CART)
   const { modifyQuantity, removeFromCart } = useContext(CartContext)
+  const [showMissingItemsWarning, setShowMissingItemsWarning] = useState<boolean>(false)
+  let timeout: ReturnType<typeof setTimeout>
 
   useEffect(() => {
     document.title = `${t('brand.name')} | ${t('pages.cart.title')}`
+
+    return () => {
+      clearTimeout(timeout)
+    }
   }, [])
 
   useEffect(() => {
@@ -42,6 +50,17 @@ export const Cart: React.FC = () => {
       })
     }
   }, [cartId])
+
+  useEffect(() => {
+    if (searchParams.get('missingItems') === 'true') {
+      setShowMissingItemsWarning(true)
+      searchParams.delete('missingItems')
+      setSearchParams(searchParams)
+      timeout = setTimeout(() => {
+        setShowMissingItemsWarning(false)
+      }, 3000)
+    }
+  }, [searchParams.get('missingItems')])
 
   if (loading) {
     return (
@@ -241,6 +260,13 @@ export const Cart: React.FC = () => {
 
   return (
     <Layout>
+      {showMissingItemsWarning && (
+        <Notification
+          heading={t('pages.cart.notification.fail.heading')}
+          body={t('pages.cart.notification.fail.body')}
+          status="fail"
+        />
+      )}
       <main className="flex flex-grow w-full items-start justify-center bg-white mt-4 mb-4">
         <div className="w-full max-w-7xl mx-auto px-6 xl:px-8">
           <Typography as={'h1'} type={TypographyType.Heading} size={TypographySize.Small} className="mb-4">

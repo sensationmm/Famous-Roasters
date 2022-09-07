@@ -10,6 +10,12 @@ describe('Notification component', () => {
     expect(container).toMatchSnapshot()
   })
 
+  it('Renders correctly in fail state', async () => {
+    const { container } = render(<Notification heading="Title" body="Content" status="fail" />)
+    await waitFor(() => new Promise((res) => setTimeout(res, 0)))
+    expect(container).toMatchSnapshot()
+  })
+
   it('Can be dismissed', async () => {
     render(<Notification heading="Title" body="Content" />)
     const buttonDismiss = await screen.findByTestId('notification-dismiss')

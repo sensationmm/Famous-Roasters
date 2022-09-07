@@ -17,6 +17,7 @@ Default.args = {
   hasArrow: false,
   disabled: false,
   fullWidth: false,
+  showLoading: false,
 }
 
 export const Primary = Template.bind({})
@@ -26,6 +27,7 @@ Primary.args = {
   hasArrow: false,
   disabled: false,
   fullWidth: false,
+  showLoading: false,
 }
 
 export const Secondary = Template.bind({})
@@ -35,6 +37,7 @@ Secondary.args = {
   hasArrow: false,
   disabled: false,
   fullWidth: false,
+  showLoading: false,
 }
 
 export const Tertiary = Template.bind({})
@@ -45,4 +48,5 @@ Tertiary.args = {
   center: false,
   disabled: false,
   fullWidth: false,
+  showLoading: false,
 }
