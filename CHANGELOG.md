@@ -1,3 +1,10 @@
+# [1.69.0](https://github.com/Famous-Roasters/frontend/compare/v1.68.0...v1.69.0) (2022-09-07)
+
+
+### Features
+
+* **signup:** password rules ([8091d80](https://github.com/Famous-Roasters/frontend/commit/8091d80d1297710777e82488ee1bdcff4f00794d))
+
 # [1.68.0](https://github.com/Famous-Roasters/frontend/compare/v1.67.4...v1.68.0) (2022-09-07)
 
 
