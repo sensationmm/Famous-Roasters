@@ -1,3 +1,10 @@
+## [1.67.4](https://github.com/Famous-Roasters/frontend/compare/v1.67.3...v1.67.4) (2022-09-07)
+
+
+### Bug Fixes
+
+* **tf:** [WB-407] add dividers to brewing types screen ([#255](https://github.com/Famous-Roasters/frontend/issues/255)) ([9ce3dfa](https://github.com/Famous-Roasters/frontend/commit/9ce3dfa89ccd7aaf98cb382b45f6ba459cec7ddf))
+
 ## [1.67.3](https://github.com/Famous-Roasters/frontend/compare/v1.67.2...v1.67.3) (2022-09-06)
 
 ## [1.67.2](https://github.com/Famous-Roasters/frontend/compare/v1.67.1...v1.67.2) (2022-09-06)
