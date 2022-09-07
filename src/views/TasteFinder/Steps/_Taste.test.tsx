@@ -47,19 +47,29 @@ const BrewingData = [
     text: 'text 3',
   },
   {
+    name: 'filter',
+    iconName: IconName.FilterkaffeeMachine,
+    text: 'text 4',
+  },
+  {
     name: 'moka',
     iconName: IconName.Moka,
-    text: 'text 4',
+    text: 'text 5',
   },
   {
     name: 'chemex',
     iconName: IconName.Chemex,
-    text: 'text 5',
+    text: 'text 6',
   },
   {
     name: 'espresso',
     iconName: IconName.Espresso,
-    text: 'text 6',
+    text: 'text 7',
+  },
+  {
+    name: 'vollautomat',
+    iconName: IconName.VollautomatMachine,
+    text: 'text 8',
   },
 ]
 

@@ -193,7 +193,7 @@ exports[`Bitterness partial view Renders correctly 1`] = `
           </button>
         </div>
         <div
-          class="scroll-auto border-b border-brand-grey-whisper md:border-0 scroll-auto"
+          class="scroll-auto border-b border-brand-grey-whisper"
         >
           <button
             class="flex w-full flex-row pl-6 py-4 items-center cursor-pointer"
@@ -245,7 +245,7 @@ exports[`Bitterness partial view Renders correctly 1`] = `
           </button>
         </div>
         <div
-          class="scroll-auto border-b border-brand-grey-whisper"
+          class="scroll-auto border-b border-brand-grey-whisper md:border-0 scroll-auto"
         >
           <button
             class="flex w-full flex-row pl-6 py-4 items-center cursor-pointer"
@@ -276,7 +276,7 @@ exports[`Bitterness partial view Renders correctly 1`] = `
                 class="undefined fill-brand-black stroke-brand-black"
                 fill="inherit"
                 height="32"
-                viewBox="0 0 28 30"
+                viewBox="-1 0 28 30"
                 width="32"
               >
                 <path
@@ -285,7 +285,7 @@ exports[`Bitterness partial view Renders correctly 1`] = `
                   fill="black"
                   fill-rule="evenodd"
                   stroke="none"
-                  stroke-width="none"
+                  stroke-width="0.25"
                 />
               </svg>
             </div>
@@ -349,7 +349,7 @@ exports[`Bitterness partial view Renders correctly 1`] = `
           </button>
         </div>
         <div
-          class="scroll-auto"
+          class="scroll-auto border-b border-brand-grey-whisper"
         >
           <button
             class="flex w-full flex-row pl-6 py-4 items-center cursor-pointer"
@@ -453,7 +453,7 @@ exports[`Bitterness partial view Renders correctly 1`] = `
           </button>
         </div>
         <div
-          class="scroll-auto border-b border-brand-grey-whisper"
+          class="scroll-auto"
         >
           <button
             class="flex w-full flex-row pl-6 py-4 items-center cursor-pointer"
@@ -484,7 +484,7 @@ exports[`Bitterness partial view Renders correctly 1`] = `
                 class="undefined fill-brand-black stroke-brand-black"
                 fill="inherit"
                 height="32"
-                viewBox="0 0 36 37"
+                viewBox="-1 0 36 37"
                 width="32"
               >
                 <path
@@ -493,7 +493,7 @@ exports[`Bitterness partial view Renders correctly 1`] = `
                   fill="inherit"
                   fill-rule="evenodd"
                   stroke="none"
-                  stroke-width="none"
+                  stroke-width="0.25"
                 />
               </svg>
             </div>

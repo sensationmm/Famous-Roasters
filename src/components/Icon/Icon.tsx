@@ -153,7 +153,7 @@ const iconsViewBoxMap: { [name: string]: string } = {
   Espresso: '0 0 30 32',
   Explore: '0 0 60 60',
   Facebook: '0 0 24 24',
-  FilterkaffeeMachine: '0 0 28 30',
+  FilterkaffeeMachine: '-1 0 28 30',
   FrenchPress: '-1 0 23 35',
   Info: '0 0 20 21',
   Instagram: '0 0 24 24',
@@ -175,7 +175,7 @@ const iconsViewBoxMap: { [name: string]: string } = {
   Taste: '-1 0 24 24',
   V60: '-1 0 36 26',
   Variety: '-1 0 21 24',
-  VollautomatMachine: '0 0 36 37',
+  VollautomatMachine: '-1 0 36 37',
   WholeBean: '-1 0 33 32',
 }
 
@@ -230,6 +230,7 @@ const iconsStrokeWidthMap: { [name: string]: string } = {
   ChevronDown: '2',
   Espresso: '0.25',
   Explore: '0.75',
+  FilterkaffeeMachine: '0.25',
   FrenchPress: '0.25',
   MyCoffee: '0.25',
   Info: '2',
@@ -244,6 +245,7 @@ const iconsStrokeWidthMap: { [name: string]: string } = {
   Question: '0.1',
   Taste: '0.75',
   V60: '0.25',
+  VollautomatMachine: '0.25',
   WholeBean: '0.25',
 }
 

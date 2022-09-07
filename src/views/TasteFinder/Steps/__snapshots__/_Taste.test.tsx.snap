@@ -153,7 +153,7 @@ exports[`Taste screen dynamic partial view Handles correctly icon type without i
           </button>
         </div>
         <div
-          class="scroll-auto border-b border-brand-grey-whisper md:border-0 scroll-auto"
+          class="scroll-auto border-b border-brand-grey-whisper"
         >
           <button
             class="flex w-full flex-row pl-6 py-4 items-center cursor-pointer"

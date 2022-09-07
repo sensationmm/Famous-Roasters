@@ -73,9 +73,9 @@ export const _Taste: React.FC<TastePartialScreenProps> = ({
 
   const getIconCheckboxContainerClass = (i: number) => {
     switch (i) {
-      case 2:
+      case 3:
         return 'scroll-auto border-b border-brand-grey-whisper md:border-0 scroll-auto'
-      case 5:
+      case 7:
         return 'scroll-auto'
       default:
         return listGuideItems && listGuideItems - 1 === i
