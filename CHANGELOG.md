@@ -1,3 +1,11 @@
+## [1.69.2](https://github.com/Famous-Roasters/frontend/compare/v1.69.1...v1.69.2) (2022-09-08)
+
+
+### Bug Fixes
+
+* **signup:** safari render bug ([0d31404](https://github.com/Famous-Roasters/frontend/commit/0d3140479e0fa772fc3714ac4c797503bba30c7e))
+* **signup:** tailwind class bug ([8a6475f](https://github.com/Famous-Roasters/frontend/commit/8a6475f974ed82ea59c56bcb9d33741ed14cf558))
+
 ## [1.69.1](https://github.com/Famous-Roasters/frontend/compare/v1.69.0...v1.69.1) (2022-09-08)
 
 # [1.69.0](https://github.com/Famous-Roasters/frontend/compare/v1.68.0...v1.69.0) (2022-09-07)
