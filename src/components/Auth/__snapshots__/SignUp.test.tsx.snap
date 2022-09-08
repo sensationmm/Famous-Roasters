@@ -150,7 +150,7 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
               class="flex mb-4"
             >
               <svg
-                class="mr-2 fill-coreUI-text-tertiary fill-brand-black stroke-brand-black"
+                class="mr-2 fill-coreUI-text-tertiary shrink-0 fill-brand-black stroke-brand-black"
                 fill="inherit"
                 height="24"
                 viewBox="0 0 16 16"
@@ -175,7 +175,7 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
               class="flex mb-4"
             >
               <svg
-                class="mr-2 fill-coreUI-text-tertiary fill-brand-black stroke-brand-black"
+                class="mr-2 fill-coreUI-text-tertiary shrink-0 fill-brand-black stroke-brand-black"
                 fill="inherit"
                 height="24"
                 viewBox="0 0 16 16"
@@ -200,7 +200,7 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
               class="flex mb-4"
             >
               <svg
-                class="mr-2 fill-coreUI-text-tertiary fill-brand-black stroke-brand-black"
+                class="mr-2 fill-coreUI-text-tertiary shrink-0 fill-brand-black stroke-brand-black"
                 fill="inherit"
                 height="24"
                 viewBox="0 0 16 16"
@@ -225,7 +225,7 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
               class="flex mb-4"
             >
               <svg
-                class="mr-2 fill-coreUI-text-tertiary fill-brand-black stroke-brand-black"
+                class="mr-2 fill-coreUI-text-tertiary shrink-0 fill-brand-black stroke-brand-black"
                 fill="inherit"
                 height="24"
                 viewBox="0 0 16 16"
@@ -250,7 +250,7 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
               class="flex mb-4"
             >
               <svg
-                class="mr-2 fill-coreUI-text-tertiary fill-brand-black stroke-brand-black"
+                class="mr-2 fill-coreUI-text-tertiary shrink-0 fill-brand-black stroke-brand-black"
                 fill="inherit"
                 height="24"
                 viewBox="0 0 16 16"
@@ -275,7 +275,7 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
               class="flex mb-4"
             >
               <svg
-                class="mr-2 fill-coreUI-text-tertiary fill-brand-black stroke-brand-black"
+                class="mr-2 fill-coreUI-text-tertiary shrink-0 fill-brand-black stroke-brand-black"
                 fill="inherit"
                 height="24"
                 viewBox="0 0 16 16"
@@ -300,7 +300,7 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
               class="flex mb-4"
             >
               <svg
-                class="mr-2 fill-coreUI-text-tertiary fill-brand-black stroke-brand-black"
+                class="mr-2 fill-coreUI-text-tertiary shrink-0 fill-brand-black stroke-brand-black"
                 fill="inherit"
                 height="24"
                 viewBox="0 0 16 16"
