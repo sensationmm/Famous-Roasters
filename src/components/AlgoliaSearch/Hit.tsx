@@ -67,7 +67,7 @@ const Hit = ({ hit }: { hit: RawHit }) => {
             as="div"
             type={TypographyType.Paragraph}
             size={TypographySize.Base}
-            className="flex flex-col w-full justify-start"
+            className={`flex flex-col w-full justify-start${outOfStock ? ' text-coreUI-text-tertiary' : ''}`}
           >
             {vendor}
           </Typography>
