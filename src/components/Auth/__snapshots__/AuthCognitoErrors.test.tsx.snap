@@ -6,9 +6,25 @@ exports[`Auth cognito errors custom auth component Renders correctly for CodeMis
     name="testAuthFormCognitoErrors"
   >
     <div
-      class="bg-brand-grey-whisper p-4 mb-8"
+      class=" flex bg-brand-grey-whisper p-4 mb-8 rounded"
       data-testid="alertInvalidCode"
     >
+      <svg
+        class="mt-1 mr-3 fill-negative shrink-0 fill-brand-black stroke-brand-black"
+        fill="inherit"
+        height="16"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM6.70711 5.29289C6.31658 4.90237 5.68342 4.90237 5.29289 5.29289C4.90237 5.68342 4.90237 6.31658 5.29289 6.70711L6.58579 8L5.29289 9.29289C4.90237 9.68342 4.90237 10.3166 5.29289 10.7071C5.68342 11.0976 6.31658 11.0976 6.70711 10.7071L8 9.41421L9.29289 10.7071C9.68342 11.0976 10.3166 11.0976 10.7071 10.7071C11.0976 10.3166 11.0976 9.68342 10.7071 9.29289L9.41421 8L10.7071 6.70711C11.0976 6.31658 11.0976 5.68342 10.7071 5.29289C10.3166 4.90237 9.68342 4.90237 9.29289 5.29289L8 6.58579L6.70711 5.29289Z"
+          fill="inherit"
+          fill-rule="evenodd"
+          stroke="none"
+          stroke-width="none"
+        />
+      </svg>
       <span
         class="text-sm leading-5"
       >
@@ -25,9 +41,25 @@ exports[`Auth cognito errors custom auth component Renders correctly for Confirm
     name="testAuthFormCognitoErrors"
   >
     <div
-      class="bg-brand-grey-whisper p-4 mb-8"
+      class=" flex bg-brand-grey-whisper p-4 mb-8 rounded"
       data-testid="alertRegisterInvalidParam"
     >
+      <svg
+        class="mt-1 mr-3 fill-negative shrink-0 fill-brand-black stroke-brand-black"
+        fill="inherit"
+        height="16"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM6.70711 5.29289C6.31658 4.90237 5.68342 4.90237 5.29289 5.29289C4.90237 5.68342 4.90237 6.31658 5.29289 6.70711L6.58579 8L5.29289 9.29289C4.90237 9.68342 4.90237 10.3166 5.29289 10.7071C5.68342 11.0976 6.31658 11.0976 6.70711 10.7071L8 9.41421L9.29289 10.7071C9.68342 11.0976 10.3166 11.0976 10.7071 10.7071C11.0976 10.3166 11.0976 9.68342 10.7071 9.29289L9.41421 8L10.7071 6.70711C11.0976 6.31658 11.0976 5.68342 10.7071 5.29289C10.3166 4.90237 9.68342 4.90237 9.29289 5.29289L8 6.58579L6.70711 5.29289Z"
+          fill="inherit"
+          fill-rule="evenodd"
+          stroke="none"
+          stroke-width="none"
+        />
+      </svg>
       <span
         class="text-sm leading-5"
       >
@@ -52,9 +84,25 @@ exports[`Auth cognito errors custom auth component Renders correctly for Confirm
     name="testAuthFormCognitoErrors"
   >
     <div
-      class="bg-brand-grey-whisper p-4 mb-8"
+      class=" flex bg-brand-grey-whisper p-4 mb-8 rounded"
       data-testid="alertConfirmUserNotFound"
     >
+      <svg
+        class="mt-1 mr-3 fill-negative shrink-0 fill-brand-black stroke-brand-black"
+        fill="inherit"
+        height="16"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM6.70711 5.29289C6.31658 4.90237 5.68342 4.90237 5.29289 5.29289C4.90237 5.68342 4.90237 6.31658 5.29289 6.70711L6.58579 8L5.29289 9.29289C4.90237 9.68342 4.90237 10.3166 5.29289 10.7071C5.68342 11.0976 6.31658 11.0976 6.70711 10.7071L8 9.41421L9.29289 10.7071C9.68342 11.0976 10.3166 11.0976 10.7071 10.7071C11.0976 10.3166 11.0976 9.68342 10.7071 9.29289L9.41421 8L10.7071 6.70711C11.0976 6.31658 11.0976 5.68342 10.7071 5.29289C10.3166 4.90237 9.68342 4.90237 9.29289 5.29289L8 6.58579L6.70711 5.29289Z"
+          fill="inherit"
+          fill-rule="evenodd"
+          stroke="none"
+          stroke-width="none"
+        />
+      </svg>
       <span
         class="text-sm leading-5"
       >
@@ -79,9 +127,25 @@ exports[`Auth cognito errors custom auth component Renders correctly for ForgotP
     name="testAuthFormCognitoErrors"
   >
     <div
-      class="bg-brand-grey-whisper p-4 mb-8"
+      class=" flex bg-brand-grey-whisper p-4 mb-8 rounded"
       data-testid="alertForgotPasswordGeneric"
     >
+      <svg
+        class="mt-1 mr-3 fill-negative shrink-0 fill-brand-black stroke-brand-black"
+        fill="inherit"
+        height="16"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM6.70711 5.29289C6.31658 4.90237 5.68342 4.90237 5.29289 5.29289C4.90237 5.68342 4.90237 6.31658 5.29289 6.70711L6.58579 8L5.29289 9.29289C4.90237 9.68342 4.90237 10.3166 5.29289 10.7071C5.68342 11.0976 6.31658 11.0976 6.70711 10.7071L8 9.41421L9.29289 10.7071C9.68342 11.0976 10.3166 11.0976 10.7071 10.7071C11.0976 10.3166 11.0976 9.68342 10.7071 9.29289L9.41421 8L10.7071 6.70711C11.0976 6.31658 11.0976 5.68342 10.7071 5.29289C10.3166 4.90237 9.68342 4.90237 9.29289 5.29289L8 6.58579L6.70711 5.29289Z"
+          fill="inherit"
+          fill-rule="evenodd"
+          stroke="none"
+          stroke-width="none"
+        />
+      </svg>
       <span
         class="text-sm leading-5"
       >
@@ -106,9 +170,25 @@ exports[`Auth cognito errors custom auth component Renders correctly for LoginGe
     name="testAuthFormCognitoErrors"
   >
     <div
-      class="bg-brand-grey-whisper p-4 mb-8"
+      class=" flex bg-brand-grey-whisper p-4 mb-8 rounded"
       data-testid="alertLoginGeneric"
     >
+      <svg
+        class="mt-1 mr-3 fill-negative shrink-0 fill-brand-black stroke-brand-black"
+        fill="inherit"
+        height="16"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM6.70711 5.29289C6.31658 4.90237 5.68342 4.90237 5.29289 5.29289C4.90237 5.68342 4.90237 6.31658 5.29289 6.70711L6.58579 8L5.29289 9.29289C4.90237 9.68342 4.90237 10.3166 5.29289 10.7071C5.68342 11.0976 6.31658 11.0976 6.70711 10.7071L8 9.41421L9.29289 10.7071C9.68342 11.0976 10.3166 11.0976 10.7071 10.7071C11.0976 10.3166 11.0976 9.68342 10.7071 9.29289L9.41421 8L10.7071 6.70711C11.0976 6.31658 11.0976 5.68342 10.7071 5.29289C10.3166 4.90237 9.68342 4.90237 9.29289 5.29289L8 6.58579L6.70711 5.29289Z"
+          fill="inherit"
+          fill-rule="evenodd"
+          stroke="none"
+          stroke-width="none"
+        />
+      </svg>
       <span
         class="text-sm leading-5"
       >
@@ -133,9 +213,25 @@ exports[`Auth cognito errors custom auth component Renders correctly for NotAuth
     name="testAuthFormCognitoErrors"
   >
     <div
-      class="bg-brand-grey-whisper p-4 mb-8"
+      class=" flex bg-brand-grey-whisper p-4 mb-8 rounded"
       data-testid="alertIncorrectUserNameOrPassword"
     >
+      <svg
+        class="mt-1 mr-3 fill-negative shrink-0 fill-brand-black stroke-brand-black"
+        fill="inherit"
+        height="16"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM6.70711 5.29289C6.31658 4.90237 5.68342 4.90237 5.29289 5.29289C4.90237 5.68342 4.90237 6.31658 5.29289 6.70711L6.58579 8L5.29289 9.29289C4.90237 9.68342 4.90237 10.3166 5.29289 10.7071C5.68342 11.0976 6.31658 11.0976 6.70711 10.7071L8 9.41421L9.29289 10.7071C9.68342 11.0976 10.3166 11.0976 10.7071 10.7071C11.0976 10.3166 11.0976 9.68342 10.7071 9.29289L9.41421 8L10.7071 6.70711C11.0976 6.31658 11.0976 5.68342 10.7071 5.29289C10.3166 4.90237 9.68342 4.90237 9.29289 5.29289L8 6.58579L6.70711 5.29289Z"
+          fill="inherit"
+          fill-rule="evenodd"
+          stroke="none"
+          stroke-width="none"
+        />
+      </svg>
       <span
         class="text-sm leading-5"
       >
@@ -152,9 +248,25 @@ exports[`Auth cognito errors custom auth component Renders correctly for Registe
     name="testAuthFormCognitoErrors"
   >
     <div
-      class="bg-brand-grey-whisper p-4 mb-8"
+      class=" flex bg-brand-grey-whisper p-4 mb-8 rounded"
       data-testid="alertRegisterGeneric"
     >
+      <svg
+        class="mt-1 mr-3 fill-negative shrink-0 fill-brand-black stroke-brand-black"
+        fill="inherit"
+        height="16"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM6.70711 5.29289C6.31658 4.90237 5.68342 4.90237 5.29289 5.29289C4.90237 5.68342 4.90237 6.31658 5.29289 6.70711L6.58579 8L5.29289 9.29289C4.90237 9.68342 4.90237 10.3166 5.29289 10.7071C5.68342 11.0976 6.31658 11.0976 6.70711 10.7071L8 9.41421L9.29289 10.7071C9.68342 11.0976 10.3166 11.0976 10.7071 10.7071C11.0976 10.3166 11.0976 9.68342 10.7071 9.29289L9.41421 8L10.7071 6.70711C11.0976 6.31658 11.0976 5.68342 10.7071 5.29289C10.3166 4.90237 9.68342 4.90237 9.29289 5.29289L8 6.58579L6.70711 5.29289Z"
+          fill="inherit"
+          fill-rule="evenodd"
+          stroke="none"
+          stroke-width="none"
+        />
+      </svg>
       <span
         class="text-sm leading-5"
       >
@@ -179,9 +291,25 @@ exports[`Auth cognito errors custom auth component Renders correctly for UserNot
     name="testAuthFormCognitoErrors"
   >
     <div
-      class="bg-brand-grey-whisper p-4 mb-8"
+      class=" flex bg-brand-grey-whisper p-4 mb-8 rounded"
       data-testid="alertIncorrectUserNameOrPassword"
     >
+      <svg
+        class="mt-1 mr-3 fill-negative shrink-0 fill-brand-black stroke-brand-black"
+        fill="inherit"
+        height="16"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM6.70711 5.29289C6.31658 4.90237 5.68342 4.90237 5.29289 5.29289C4.90237 5.68342 4.90237 6.31658 5.29289 6.70711L6.58579 8L5.29289 9.29289C4.90237 9.68342 4.90237 10.3166 5.29289 10.7071C5.68342 11.0976 6.31658 11.0976 6.70711 10.7071L8 9.41421L9.29289 10.7071C9.68342 11.0976 10.3166 11.0976 10.7071 10.7071C11.0976 10.3166 11.0976 9.68342 10.7071 9.29289L9.41421 8L10.7071 6.70711C11.0976 6.31658 11.0976 5.68342 10.7071 5.29289C10.3166 4.90237 9.68342 4.90237 9.29289 5.29289L8 6.58579L6.70711 5.29289Z"
+          fill="inherit"
+          fill-rule="evenodd"
+          stroke="none"
+          stroke-width="none"
+        />
+      </svg>
       <span
         class="text-sm leading-5"
       >
@@ -198,9 +326,25 @@ exports[`Auth cognito errors custom auth component Renders correctly for Usernam
     name="testAuthFormCognitoErrors"
   >
     <div
-      class="bg-brand-grey-whisper p-4 mb-8"
+      class=" flex bg-brand-grey-whisper p-4 mb-8 rounded"
       data-testid="alertIncorrectUserNameOrPassword"
     >
+      <svg
+        class="mt-1 mr-3 fill-negative shrink-0 fill-brand-black stroke-brand-black"
+        fill="inherit"
+        height="16"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM6.70711 5.29289C6.31658 4.90237 5.68342 4.90237 5.29289 5.29289C4.90237 5.68342 4.90237 6.31658 5.29289 6.70711L6.58579 8L5.29289 9.29289C4.90237 9.68342 4.90237 10.3166 5.29289 10.7071C5.68342 11.0976 6.31658 11.0976 6.70711 10.7071L8 9.41421L9.29289 10.7071C9.68342 11.0976 10.3166 11.0976 10.7071 10.7071C11.0976 10.3166 11.0976 9.68342 10.7071 9.29289L9.41421 8L10.7071 6.70711C11.0976 6.31658 11.0976 5.68342 10.7071 5.29289C10.3166 4.90237 9.68342 4.90237 9.29289 5.29289L8 6.58579L6.70711 5.29289Z"
+          fill="inherit"
+          fill-rule="evenodd"
+          stroke="none"
+          stroke-width="none"
+        />
+      </svg>
       <span
         class="text-sm leading-5"
       >
@@ -225,9 +369,25 @@ exports[`Auth cognito errors custom auth component Renders correctly for other e
     name="testAuthFormCognitoErrors"
   >
     <div
-      class="bg-brand-grey-whisper p-4 mb-8"
+      class=" flex bg-brand-grey-whisper p-4 mb-8 rounded"
       data-testid="alertGeneric"
     >
+      <svg
+        class="mt-1 mr-3 fill-negative shrink-0 fill-brand-black stroke-brand-black"
+        fill="inherit"
+        height="16"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM6.70711 5.29289C6.31658 4.90237 5.68342 4.90237 5.29289 5.29289C4.90237 5.68342 4.90237 6.31658 5.29289 6.70711L6.58579 8L5.29289 9.29289C4.90237 9.68342 4.90237 10.3166 5.29289 10.7071C5.68342 11.0976 6.31658 11.0976 6.70711 10.7071L8 9.41421L9.29289 10.7071C9.68342 11.0976 10.3166 11.0976 10.7071 10.7071C11.0976 10.3166 11.0976 9.68342 10.7071 9.29289L9.41421 8L10.7071 6.70711C11.0976 6.31658 11.0976 5.68342 10.7071 5.29289C10.3166 4.90237 9.68342 4.90237 9.29289 5.29289L8 6.58579L6.70711 5.29289Z"
+          fill="inherit"
+          fill-rule="evenodd"
+          stroke="none"
+          stroke-width="none"
+        />
+      </svg>
       <span
         class="text-sm leading-5"
       >

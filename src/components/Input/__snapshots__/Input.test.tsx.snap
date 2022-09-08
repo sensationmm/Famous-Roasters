@@ -62,9 +62,9 @@ exports[`Badge component Renders icon version correctly 1`] = `
     <svg
       class="absolute right-3 top-[50%] translate-y-[-50%] stroke-coreUI-text-tertiary fill-brand-black stroke-brand-black"
       fill="inherit"
-      height="14"
+      height="16"
       viewBox="0 0 30 30"
-      width="14"
+      width="16"
     >
       <path
         clip-rule="evenodd"
