@@ -132,10 +132,10 @@ export const AuthFormDoublePassword: React.FC<AuthFormDoublePasswordProps> = ({
           </Typography>
           {passwordRules.map((err, count) => {
             const color =
-              passwordErrors?.indexOf(err) > -1 || passwordValue === '' ? 'coreUI-text-tertiary' : 'positive'
+              passwordErrors?.indexOf(err) > -1 || passwordValue === '' ? 'fill-coreUI-text-tertiary' : 'fill-positive'
             return (
               <div className="flex mb-4" key={`rule-${count}`}>
-                <Icon name={IconName.Check} className={`mr-2 fill-${color}`} />
+                <Icon name={IconName.Check} className={`mr-2 ${color} shrink-0`} />
                 <Typography type={TypographyType.Paragraph} size={TypographySize.Small}>
                   {err}
                 </Typography>
