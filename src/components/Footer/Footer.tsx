@@ -30,11 +30,6 @@ const footerLinks: FooterLink[][] = [
       href: '//www.linkedin.com/jobs/search/?currentJobId=3196130257&f_C=86587560&geoId=92000000',
       target: '_blank',
     },
-    {
-      key: 'refund',
-      href: '//www.60beans.com/refund-policy',
-      target: '_blank',
-    },
   ],
   [
     { key: 'about', href: '//www.60beans.com/uber-uns' },
@@ -47,6 +42,7 @@ const footerLinks: FooterLink[][] = [
     { key: 'imprint', href: '//www.60beans.com/legal/impressum' },
     { key: 'cookiePolicy', href: '//www.60beans.com/legal/cookie-policy' },
     { key: 'termsAndConditions', href: '//www.60beans.com/legal/agb' },
+    { key: 'refund', href: '//www.60beans.com/legal/widerrufsrecht' },
   ],
 ]
 

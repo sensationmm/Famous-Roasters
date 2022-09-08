@@ -62,16 +62,6 @@ exports[`Footer component Renders correctly 1`] = `
               Karriere bei 60beans
             </a>
           </li>
-          <li
-            class="mb-4"
-          >
-            <a
-              href="//www.60beans.com/refund-policy"
-              target="_blank"
-            >
-              Wiederrufsrecht
-            </a>
-          </li>
         </ul>
         <ul
           class="mb-14"
@@ -158,6 +148,16 @@ exports[`Footer component Renders correctly 1`] = `
               target="_self"
             >
               Allgemeine Geschäftsbedingungen
+            </a>
+          </li>
+          <li
+            class="mb-4"
+          >
+            <a
+              href="//www.60beans.com/legal/widerrufsrecht"
+              target="_self"
+            >
+              Widerrufsrecht
             </a>
           </li>
         </ul>
