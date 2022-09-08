@@ -839,8 +839,9 @@
       "title": "Allgemeine Geschäftsbedingungen"
     },
     "error": {
-      "navigation": "Fehler",
-      "title": "Fehler"
+      "navigation": "Oh Oh",
+      "title": "Oh oh! Jemand hat Kaffee auf die Tastatur verschüttet und dabei ist diese Seite verloren gegangen!",
+      "body": "Lass uns zurück in den Shop gehen während wir dieses Malheur beseitigen."
     },
     "featuredProduct": {
       "cta": {

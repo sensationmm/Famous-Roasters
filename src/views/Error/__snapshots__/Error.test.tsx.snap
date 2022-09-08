@@ -161,13 +161,42 @@ exports[`Error view Renders correctly 1`] = `
       </header>
     </div>
     <main
-      class="flex-grow flex items-center justify-center bg-brand-grey-whisper"
+      class="mx-auto white xs:mt-12 xl:mt-24"
     >
-      <div>
+      <div
+        class="grid h-fit mx-auto xs:grid-cols-1 w-[280px] mb-12 md:grid-cols-1 xl:grid-cols-2 w-2/3"
+      >
         <div
-          class="text-center text-lg leading-7"
+          class="mx-auto mb-0"
         >
-          Fehler
+          <img
+            class="xs:w-[200px] sm:w-[300px] xl:w-[499px]"
+            src="404-cup.webp"
+          />
+        </div>
+        <div
+          class="xl:pt-4"
+        >
+          <p
+            class="text-center xs:mt-2 md:mt-1 xl:text-left text-2xl leading-8 font-semibold"
+          >
+            Oh oh! Jemand hat Kaffee auf die Tastatur verschüttet und dabei ist diese Seite verloren gegangen!
+          </p>
+          <p
+            class="text-center mt-8 xl:text-left text-lg leading-7"
+          >
+            Lass uns zurück in den Shop gehen während wir dieses Malheur beseitigen.
+          </p>
+          <p
+            class="mt-8"
+          >
+            <button
+              class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary w-full md:max-w-xs md:mx-auto"
+              role="button"
+            >
+              Zum Shop
+            </button>
+          </p>
         </div>
       </div>
     </main>
