@@ -1,3 +1,10 @@
+# [1.70.0](https://github.com/Famous-Roasters/frontend/compare/v1.69.2...v1.70.0) (2022-09-08)
+
+
+### Features
+
+* **404:** adapt new error page layout ([#260](https://github.com/Famous-Roasters/frontend/issues/260)) ([6b8180f](https://github.com/Famous-Roasters/frontend/commit/6b8180f68c4b23da316d44879cc7748eeeba51a4))
+
 ## [1.69.2](https://github.com/Famous-Roasters/frontend/compare/v1.69.1...v1.69.2) (2022-09-08)
 
 
