@@ -33,10 +33,6 @@ export const Cart: React.FC = () => {
 
   useEffect(() => {
     document.title = `${t('brand.name')} | ${t('pages.cart.title')}`
-
-    return () => {
-      clearTimeout(timeout)
-    }
   }, [])
 
   useEffect(() => {
@@ -58,6 +54,7 @@ export const Cart: React.FC = () => {
       setSearchParams(searchParams)
       timeout = setTimeout(() => {
         setShowMissingItemsWarning(false)
+        clearTimeout(timeout)
       }, 3000)
     }
   }, [searchParams.get('missingItems')])
