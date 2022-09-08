@@ -132,9 +132,9 @@ exports[`Button component renders with arrow 1`] = `
     <svg
       class="absolute right-2 fill-brand-black text-brand-black stroke-brand-black fill-brand-black stroke-brand-black"
       fill="inherit"
-      height="14"
+      height="16"
       viewBox="0 0 9 16"
-      width="14"
+      width="16"
     >
       <path
         clip-rule="evenodd"
@@ -159,9 +159,9 @@ exports[`Button component renders with arrow lg 1`] = `
     <svg
       class="absolute right-2 fill-brand-black text-brand-black stroke-brand-black fill-brand-black stroke-brand-black"
       fill="inherit"
-      height="14"
+      height="16"
       viewBox="0 0 9 16"
-      width="14"
+      width="16"
     >
       <path
         clip-rule="evenodd"
@@ -186,9 +186,9 @@ exports[`Button component renders with arrow md 1`] = `
     <svg
       class="absolute right-2 fill-brand-black text-brand-black stroke-brand-black fill-brand-black stroke-brand-black"
       fill="inherit"
-      height="14"
+      height="16"
       viewBox="0 0 9 16"
-      width="14"
+      width="16"
     >
       <path
         clip-rule="evenodd"
@@ -213,9 +213,9 @@ exports[`Button component renders with arrow sm 1`] = `
     <svg
       class="absolute right-2 fill-brand-black text-brand-black stroke-brand-black fill-brand-black stroke-brand-black"
       fill="inherit"
-      height="14"
+      height="16"
       viewBox="0 0 9 16"
-      width="14"
+      width="16"
     >
       <path
         clip-rule="evenodd"
@@ -267,9 +267,9 @@ exports[`Button component renders with arrow xs 1`] = `
     <svg
       class="absolute right-2 fill-brand-black text-brand-black stroke-brand-black fill-brand-black stroke-brand-black"
       fill="inherit"
-      height="14"
+      height="16"
       viewBox="0 0 9 16"
-      width="14"
+      width="16"
     >
       <path
         clip-rule="evenodd"

@@ -131,9 +131,9 @@ exports[`Icon component Renders correctly small icon 1`] = `
   <svg
     class="undefined fill-brand-black stroke-brand-black"
     fill="inherit"
-    height="14"
+    height="16"
     viewBox="0 0 11 11"
-    width="14"
+    width="16"
   >
     <path
       clip-rule="evenodd"

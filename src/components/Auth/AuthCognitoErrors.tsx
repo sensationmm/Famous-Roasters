@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography, TypographySize } from 'src/components'
+import { ErrorBox } from 'src/components'
 import i18n from 'src/config/i18n'
 
 interface AuthCognitoErrorsProps {
@@ -11,81 +11,61 @@ export const AuthCognitoErrors: React.FC<AuthCognitoErrorsProps> = ({ errorCode 
     switch (errorCode) {
       case 'LoginGenericException':
         return (
-          <div className="bg-brand-grey-whisper p-4 mb-8" data-testid="alertLoginGeneric">
-            <Typography size={TypographySize.Small}>
-              {i18n.t<string>('auth.cognito.errors.loginGeneric.prompt')}{' '}
-              <a href="/register" className="border-b">
-                {i18n.t<string>('auth.cognito.errors.loginGeneric.ctaText')}.
-              </a>
-            </Typography>
-          </div>
+          <ErrorBox dataTestId="alertLoginGeneric">
+            {i18n.t<string>('auth.cognito.errors.loginGeneric.prompt')}{' '}
+            <a href="/register" className="border-b">
+              {i18n.t<string>('auth.cognito.errors.loginGeneric.ctaText')}.
+            </a>
+          </ErrorBox>
         )
       case 'ForgotPasswordGenericException':
         return (
-          <div className="bg-brand-grey-whisper p-4 mb-8" data-testid="alertForgotPasswordGeneric">
-            <Typography size={TypographySize.Small}>
-              {i18n.t<string>('auth.cognito.errors.forgotPasswordGeneric.prompt')}{' '}
-              <a href="/register" className="border-b">
-                {i18n.t<string>('auth.cognito.errors.forgotPasswordGeneric.ctaText')}.
-              </a>
-            </Typography>
-          </div>
+          <ErrorBox dataTestId="alertForgotPasswordGeneric">
+            {i18n.t<string>('auth.cognito.errors.forgotPasswordGeneric.prompt')}{' '}
+            <a href="/register" className="border-b">
+              {i18n.t<string>('auth.cognito.errors.forgotPasswordGeneric.ctaText')}.
+            </a>
+          </ErrorBox>
         )
       case 'RegisterGenericException':
         return (
-          <div className="bg-brand-grey-whisper p-4 mb-8" data-testid="alertRegisterGeneric">
-            <Typography size={TypographySize.Small}>
-              {i18n.t<string>('auth.cognito.errors.registerGeneric.prompt')}{' '}
-              <a href="/login" className="border-b">
-                {i18n.t<string>('auth.cognito.errors.registerGeneric.ctaText')}.
-              </a>
-            </Typography>
-          </div>
+          <ErrorBox dataTestId="alertRegisterGeneric">
+            {i18n.t<string>('auth.cognito.errors.registerGeneric.prompt')}{' '}
+            <a href="/login" className="border-b">
+              {i18n.t<string>('auth.cognito.errors.registerGeneric.ctaText')}.
+            </a>
+          </ErrorBox>
         )
       case 'ConfirmUserNotFoundException':
         return (
-          <div className="bg-brand-grey-whisper p-4 mb-8" data-testid="alertConfirmUserNotFound">
-            <Typography size={TypographySize.Small}>
-              {i18n.t<string>('auth.cognito.errors.confirmUserNotFound.prompt')}{' '}
-              <a href="/register" className="border-b">
-                {i18n.t<string>('auth.cognito.errors.confirmUserNotFound.ctaText')}.
-              </a>
-            </Typography>
-          </div>
+          <ErrorBox dataTestId="alertConfirmUserNotFound">
+            {i18n.t<string>('auth.cognito.errors.confirmUserNotFound.prompt')}{' '}
+            <a href="/register" className="border-b">
+              {i18n.t<string>('auth.cognito.errors.confirmUserNotFound.ctaText')}.
+            </a>
+          </ErrorBox>
         )
       case 'ConfirmUserInvalidParameterException':
         return (
-          <div className="bg-brand-grey-whisper p-4 mb-8" data-testid="alertRegisterInvalidParam">
-            <Typography size={TypographySize.Small}>
-              {i18n.t<string>('auth.cognito.errors.confirmUserInvalidParameter.prompt')}{' '}
-              <a href="/login" className="border-b">
-                {i18n.t<string>('auth.cognito.errors.confirmUserInvalidParameter.ctaText')}.
-              </a>
-            </Typography>
-          </div>
+          <ErrorBox dataTestId="alertRegisterInvalidParam">
+            {i18n.t<string>('auth.cognito.errors.confirmUserInvalidParameter.prompt')}{' '}
+            <a href="/login" className="border-b">
+              {i18n.t<string>('auth.cognito.errors.confirmUserInvalidParameter.ctaText')}.
+            </a>
+          </ErrorBox>
         )
       case 'UserNotFoundException':
       case 'UsernameExistsException':
       case 'NotAuthorizedException':
         return (
-          <div className="bg-brand-grey-whisper p-4 mb-8" data-testid="alertIncorrectUserNameOrPassword">
-            <Typography size={TypographySize.Small}>
-              {i18n.t<string>('auth.cognito.errors.incorrectUserNameOrPassword')}
-            </Typography>
-          </div>
+          <ErrorBox dataTestId="alertIncorrectUserNameOrPassword">
+            {i18n.t<string>('auth.cognito.errors.incorrectUserNameOrPassword')}
+          </ErrorBox>
         )
       case 'CodeMismatchException':
-        return (
-          <div className="bg-brand-grey-whisper p-4 mb-8" data-testid="alertInvalidCode">
-            <Typography size={TypographySize.Small}>{i18n.t<string>('auth.cognito.errors.invalidCode')}</Typography>
-          </div>
-        )
+        return <ErrorBox dataTestId="alertInvalidCode">{i18n.t<string>('auth.cognito.errors.invalidCode')}</ErrorBox>
       default:
-        return (
-          <div className="bg-brand-grey-whisper p-4 mb-8" data-testid="alertGeneric">
-            <Typography size={TypographySize.Small}>{i18n.t<string>('auth.cognito.errors.generic')}</Typography>
-          </div>
-        )
+        return <ErrorBox dataTestId="alertGeneric">{i18n.t<string>('auth.cognito.errors.generic')}</ErrorBox>
     }
   } else return <></>
 }

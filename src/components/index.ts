@@ -25,6 +25,7 @@ import { Circle, CircleType } from './Circle'
 import { Dialog } from './Dialog'
 import { Disclosure } from './Disclosure'
 import { Drawer } from './Drawer'
+import { ErrorBox } from './ErrorBox'
 import { ErrorPrompt } from './ErrorPrompt'
 import { FilterData, FilterMobile } from './FilterMobile'
 import { FiltersMenuMobile } from './FiltersMenuMobile'
@@ -87,6 +88,7 @@ export type { CoffeeAroma as CoffeeAroma }
 export { Dialog as Dialog }
 export { Drawer as Drawer }
 export { Disclosure as Disclosure }
+export { ErrorBox }
 export { ErrorPrompt as ErrorPrompt }
 export type { FilterData as FilterData }
 export { FilterMobile as FilterMobile }

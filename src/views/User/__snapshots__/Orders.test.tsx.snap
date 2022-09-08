@@ -207,9 +207,9 @@ exports[`Orders view Handles error call 1`] = `
               <svg
                 class="absolute right-3 top-[50%] translate-y-[-50%] stroke-coreUI-text-tertiary fill-brand-black stroke-brand-black"
                 fill="inherit"
-                height="14"
+                height="16"
                 viewBox="0 0 14 14"
-                width="14"
+                width="16"
               >
                 <path
                   clip-rule="evenodd"
@@ -767,9 +767,9 @@ exports[`Orders view Renders correctly 1`] = `
               <svg
                 class="absolute right-3 top-[50%] translate-y-[-50%] stroke-coreUI-text-tertiary fill-brand-black stroke-brand-black"
                 fill="inherit"
-                height="14"
+                height="16"
                 viewBox="0 0 14 14"
-                width="14"
+                width="16"
               >
                 <path
                   clip-rule="evenodd"
@@ -1791,9 +1791,9 @@ exports[`Orders view Renders correctly with no orders 1`] = `
               <svg
                 class="absolute right-3 top-[50%] translate-y-[-50%] stroke-coreUI-text-tertiary fill-brand-black stroke-brand-black"
                 fill="inherit"
-                height="14"
+                height="16"
                 viewBox="0 0 14 14"
-                width="14"
+                width="16"
               >
                 <path
                   clip-rule="evenodd"
@@ -2351,9 +2351,9 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
               <svg
                 class="absolute right-3 top-[50%] translate-y-[-50%] stroke-coreUI-text-tertiary fill-brand-black stroke-brand-black"
                 fill="inherit"
-                height="14"
+                height="16"
                 viewBox="0 0 14 14"
-                width="14"
+                width="16"
               >
                 <path
                   clip-rule="evenodd"
@@ -2906,9 +2906,9 @@ exports[`Orders view sets filter value 1`] = `
               <svg
                 class="absolute right-3 top-[50%] translate-y-[-50%] stroke-coreUI-text-tertiary fill-brand-black stroke-brand-black"
                 fill="inherit"
-                height="14"
+                height="16"
                 viewBox="0 0 14 14"
-                width="14"
+                width="16"
               >
                 <path
                   clip-rule="evenodd"
@@ -3461,9 +3461,9 @@ exports[`Orders view sets sort newest first 1`] = `
               <svg
                 class="absolute right-3 top-[50%] translate-y-[-50%] stroke-coreUI-text-tertiary fill-brand-black stroke-brand-black"
                 fill="inherit"
-                height="14"
+                height="16"
                 viewBox="0 0 14 14"
-                width="14"
+                width="16"
               >
                 <path
                   clip-rule="evenodd"
@@ -4485,9 +4485,9 @@ exports[`Orders view sets sort oldest first 1`] = `
               <svg
                 class="absolute right-3 top-[50%] translate-y-[-50%] stroke-coreUI-text-tertiary fill-brand-black stroke-brand-black"
                 fill="inherit"
-                height="14"
+                height="16"
                 viewBox="0 0 14 14"
-                width="14"
+                width="16"
               >
                 <path
                   clip-rule="evenodd"
