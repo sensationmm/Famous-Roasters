@@ -1,3 +1,11 @@
+# [1.71.0](https://github.com/Famous-Roasters/frontend/compare/v1.70.1...v1.71.0) (2022-09-08)
+
+
+### Features
+
+* **catalogue:** implement filter clear button ([4fe93f4](https://github.com/Famous-Roasters/frontend/commit/4fe93f48855125647532f54f05d326fb3667326f))
+* **cognito:** add cognito error design ([3a84ba8](https://github.com/Famous-Roasters/frontend/commit/3a84ba88a40055f89c571a3282cf2671e4e6f861))
+
 ## [1.70.1](https://github.com/Famous-Roasters/frontend/compare/v1.70.0...v1.70.1) (2022-09-08)
 
 # [1.70.0](https://github.com/Famous-Roasters/frontend/compare/v1.69.2...v1.70.0) (2022-09-08)
