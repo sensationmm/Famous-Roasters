@@ -1,5 +1,14 @@
+import { TrashIcon } from '@heroicons/react/outline'
 import { useTranslation } from 'react-i18next'
-import { Configure, Hits, SearchBox, SortBy, useRefinementList } from 'react-instantsearch-hooks-web'
+import {
+  Configure,
+  Hits,
+  SearchBox,
+  SortBy,
+  useClearRefinements,
+  useCurrentRefinements,
+  useRefinementList,
+} from 'react-instantsearch-hooks-web'
 import CheckboxFilter from 'src/components/AlgoliaSearch/CheckboxFilter'
 import Hit from 'src/components/AlgoliaSearch/Hit'
 
@@ -18,6 +27,9 @@ const CoffeeSearch: React.FC = () => {
   useRefinementList({ attribute: 'meta.my_fields.acidity' })
   useRefinementList({ attribute: 'meta.my_fields.sweetness' })
   useRefinementList({ attribute: 'meta.my_fields.body' })
+
+  const { items: activeRefinements } = useCurrentRefinements()
+  const { refine: clearRefinements } = useClearRefinements()
 
   return (
     <>
@@ -69,6 +81,12 @@ const CoffeeSearch: React.FC = () => {
           <ListboxFilter attribute="meta.my_fields.origin" translationPrefix="pages.catalogue.filters.origin.values" />
           <ListboxFilter attribute="vendor" />
           <AromaFilterButton />
+          {activeRefinements.length > 0 && (
+            <button type="button" onClick={() => clearRefinements()} data-testid="button-filters-menu-remove-dt">
+              <span className="sr-only">{t(`pages.catalogue.filters.common.filtersMenu.removeFilter`)}</span>
+              <TrashIcon className="h-8 w-8" aria-hidden="true" />
+            </button>
+          )}
         </div>
       </div>
 
