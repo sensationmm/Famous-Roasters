@@ -543,7 +543,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
         class="w-full max-w-7xl mx-auto flex flex-col xl:flex-row justify-between"
       >
         <div
-          class="grid grid-cols-1 sm:grid-cols-3 gap-4 grow"
+          class="grid grid-cols-1 sm:grid-cols-3 gap-1 grow"
         >
           <ul
             class="mb-14"
@@ -576,6 +576,16 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 target="_blank"
               >
                 Karriere bei 60beans
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/refund-policy"
+                target="_blank"
+              >
+                Wiederrufsrecht
               </a>
             </li>
           </ul>
@@ -654,6 +664,16 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 target="_self"
               >
                 Cookie Policy
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/agb"
+                target="_self"
+              >
+                Allgemeine Geschäftsbedingungen
               </a>
             </li>
           </ul>
@@ -1330,7 +1350,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
         class="w-full max-w-7xl mx-auto flex flex-col xl:flex-row justify-between"
       >
         <div
-          class="grid grid-cols-1 sm:grid-cols-3 gap-4 grow"
+          class="grid grid-cols-1 sm:grid-cols-3 gap-1 grow"
         >
           <ul
             class="mb-14"
@@ -1363,6 +1383,16 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 target="_blank"
               >
                 Karriere bei 60beans
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/refund-policy"
+                target="_blank"
+              >
+                Wiederrufsrecht
               </a>
             </li>
           </ul>
@@ -1441,6 +1471,16 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 target="_self"
               >
                 Cookie Policy
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/agb"
+                target="_self"
+              >
+                Allgemeine Geschäftsbedingungen
               </a>
             </li>
           </ul>
@@ -2117,7 +2157,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
         class="w-full max-w-7xl mx-auto flex flex-col xl:flex-row justify-between"
       >
         <div
-          class="grid grid-cols-1 sm:grid-cols-3 gap-4 grow"
+          class="grid grid-cols-1 sm:grid-cols-3 gap-1 grow"
         >
           <ul
             class="mb-14"
@@ -2150,6 +2190,16 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 target="_blank"
               >
                 Karriere bei 60beans
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/refund-policy"
+                target="_blank"
+              >
+                Wiederrufsrecht
               </a>
             </li>
           </ul>
@@ -2228,6 +2278,16 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 target="_self"
               >
                 Cookie Policy
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/agb"
+                target="_self"
+              >
+                Allgemeine Geschäftsbedingungen
               </a>
             </li>
           </ul>
@@ -2904,7 +2964,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
         class="w-full max-w-7xl mx-auto flex flex-col xl:flex-row justify-between"
       >
         <div
-          class="grid grid-cols-1 sm:grid-cols-3 gap-4 grow"
+          class="grid grid-cols-1 sm:grid-cols-3 gap-1 grow"
         >
           <ul
             class="mb-14"
@@ -2937,6 +2997,16 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 target="_blank"
               >
                 Karriere bei 60beans
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/refund-policy"
+                target="_blank"
+              >
+                Wiederrufsrecht
               </a>
             </li>
           </ul>
@@ -3015,6 +3085,16 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 target="_self"
               >
                 Cookie Policy
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/agb"
+                target="_self"
+              >
+                Allgemeine Geschäftsbedingungen
               </a>
             </li>
           </ul>
@@ -3691,7 +3771,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
         class="w-full max-w-7xl mx-auto flex flex-col xl:flex-row justify-between"
       >
         <div
-          class="grid grid-cols-1 sm:grid-cols-3 gap-4 grow"
+          class="grid grid-cols-1 sm:grid-cols-3 gap-1 grow"
         >
           <ul
             class="mb-14"
@@ -3724,6 +3804,16 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 target="_blank"
               >
                 Karriere bei 60beans
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/refund-policy"
+                target="_blank"
+              >
+                Wiederrufsrecht
               </a>
             </li>
           </ul>
@@ -3802,6 +3892,16 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 target="_self"
               >
                 Cookie Policy
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/agb"
+                target="_self"
+              >
+                Allgemeine Geschäftsbedingungen
               </a>
             </li>
           </ul>
@@ -4355,7 +4455,7 @@ exports[`Featured product view Renders correctly for a successful call without a
         class="w-full max-w-7xl mx-auto flex flex-col xl:flex-row justify-between"
       >
         <div
-          class="grid grid-cols-1 sm:grid-cols-3 gap-4 grow"
+          class="grid grid-cols-1 sm:grid-cols-3 gap-1 grow"
         >
           <ul
             class="mb-14"
@@ -4388,6 +4488,16 @@ exports[`Featured product view Renders correctly for a successful call without a
                 target="_blank"
               >
                 Karriere bei 60beans
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/refund-policy"
+                target="_blank"
+              >
+                Wiederrufsrecht
               </a>
             </li>
           </ul>
@@ -4466,6 +4576,16 @@ exports[`Featured product view Renders correctly for a successful call without a
                 target="_self"
               >
                 Cookie Policy
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/agb"
+                target="_self"
+              >
+                Allgemeine Geschäftsbedingungen
               </a>
             </li>
           </ul>
@@ -5142,7 +5262,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
         class="w-full max-w-7xl mx-auto flex flex-col xl:flex-row justify-between"
       >
         <div
-          class="grid grid-cols-1 sm:grid-cols-3 gap-4 grow"
+          class="grid grid-cols-1 sm:grid-cols-3 gap-1 grow"
         >
           <ul
             class="mb-14"
@@ -5175,6 +5295,16 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
                 target="_blank"
               >
                 Karriere bei 60beans
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/refund-policy"
+                target="_blank"
+              >
+                Wiederrufsrecht
               </a>
             </li>
           </ul>
@@ -5253,6 +5383,16 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
                 target="_self"
               >
                 Cookie Policy
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/agb"
+                target="_self"
+              >
+                Allgemeine Geschäftsbedingungen
               </a>
             </li>
           </ul>
@@ -5941,7 +6081,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
         class="w-full max-w-7xl mx-auto flex flex-col xl:flex-row justify-between"
       >
         <div
-          class="grid grid-cols-1 sm:grid-cols-3 gap-4 grow"
+          class="grid grid-cols-1 sm:grid-cols-3 gap-1 grow"
         >
           <ul
             class="mb-14"
@@ -5974,6 +6114,16 @@ exports[`Featured product view renders as expected if no taste finder data exist
                 target="_blank"
               >
                 Karriere bei 60beans
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/refund-policy"
+                target="_blank"
+              >
+                Wiederrufsrecht
               </a>
             </li>
           </ul>
@@ -6052,6 +6202,16 @@ exports[`Featured product view renders as expected if no taste finder data exist
                 target="_self"
               >
                 Cookie Policy
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/agb"
+                target="_self"
+              >
+                Allgemeine Geschäftsbedingungen
               </a>
             </li>
           </ul>

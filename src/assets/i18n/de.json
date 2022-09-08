@@ -834,6 +834,10 @@
       "navigation": "Cookie Policy",
       "title": "Cookie Policy"
     },
+    "termsAndConditions": {
+      "navigation": "Allgemeine Geschäftsbedingungen",
+      "title": "Allgemeine Geschäftsbedingungen"
+    },
     "error": {
       "navigation": "Fehler",
       "title": "Fehler"
@@ -883,6 +887,10 @@
     "jobs": {
       "navigation": "Karriere bei 60beans",
       "title": "Karriere bei 60beans"
+    },
+    "refund": {
+      "navigation": "Wiederrufsrecht",
+      "title": "Wiederrufsrecht"
     },
     "ourRoasters": {
       "navigation": "Unsere Röster",

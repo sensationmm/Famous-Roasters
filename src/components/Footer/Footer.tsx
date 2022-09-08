@@ -2,8 +2,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import LogoLight from 'src/assets/images/logo/60beans-light.svg'
-import { Typography, TypographyType } from 'src/components'
-import { Icon, IconName } from 'src/components'
+import { Icon, IconName, Typography, TypographyType } from 'src/components'
 
 import { TrustPilot } from './TrustPilot'
 
@@ -31,6 +30,11 @@ const footerLinks: FooterLink[][] = [
       href: '//www.linkedin.com/jobs/search/?currentJobId=3196130257&f_C=86587560&geoId=92000000',
       target: '_blank',
     },
+    {
+      key: 'refund',
+      href: '//www.60beans.com/refund-policy',
+      target: '_blank',
+    },
   ],
   [
     { key: 'about', href: '//www.60beans.com/uber-uns' },
@@ -42,6 +46,7 @@ const footerLinks: FooterLink[][] = [
     { key: 'privacy', href: '//www.60beans.com/legal/datenschutz' },
     { key: 'imprint', href: '//www.60beans.com/legal/impressum' },
     { key: 'cookiePolicy', href: '//www.60beans.com/legal/cookie-policy' },
+    { key: 'termsAndConditions', href: '//www.60beans.com/legal/agb' },
   ],
 ]
 
@@ -84,7 +89,7 @@ export const Footer: React.FC = () => {
         </Link>
       </div>
       <div className="w-full max-w-7xl mx-auto flex flex-col xl:flex-row justify-between">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 grow">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-1 grow">
           {/* Links */}
           {footerLinks.map((footerLinkSet: FooterLink[], index: number) => {
             return (

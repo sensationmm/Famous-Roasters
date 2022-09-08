@@ -555,7 +555,7 @@ exports[`Cart view Renders correctly 1`] = `
         class="w-full max-w-7xl mx-auto flex flex-col xl:flex-row justify-between"
       >
         <div
-          class="grid grid-cols-1 sm:grid-cols-3 gap-4 grow"
+          class="grid grid-cols-1 sm:grid-cols-3 gap-1 grow"
         >
           <ul
             class="mb-14"
@@ -588,6 +588,16 @@ exports[`Cart view Renders correctly 1`] = `
                 target="_blank"
               >
                 Karriere bei 60beans
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/refund-policy"
+                target="_blank"
+              >
+                Wiederrufsrecht
               </a>
             </li>
           </ul>
@@ -666,6 +676,16 @@ exports[`Cart view Renders correctly 1`] = `
                 target="_self"
               >
                 Cookie Policy
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/agb"
+                target="_self"
+              >
+                Allgemeine Geschäftsbedingungen
               </a>
             </li>
           </ul>
@@ -1058,7 +1078,7 @@ exports[`Cart view Renders correctly for no cart id 1`] = `
         class="w-full max-w-7xl mx-auto flex flex-col xl:flex-row justify-between"
       >
         <div
-          class="grid grid-cols-1 sm:grid-cols-3 gap-4 grow"
+          class="grid grid-cols-1 sm:grid-cols-3 gap-1 grow"
         >
           <ul
             class="mb-14"
@@ -1091,6 +1111,16 @@ exports[`Cart view Renders correctly for no cart id 1`] = `
                 target="_blank"
               >
                 Karriere bei 60beans
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/refund-policy"
+                target="_blank"
+              >
+                Wiederrufsrecht
               </a>
             </li>
           </ul>
@@ -1169,6 +1199,16 @@ exports[`Cart view Renders correctly for no cart id 1`] = `
                 target="_self"
               >
                 Cookie Policy
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/agb"
+                target="_self"
+              >
+                Allgemeine Geschäftsbedingungen
               </a>
             </li>
           </ul>

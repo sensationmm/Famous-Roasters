@@ -220,7 +220,7 @@ exports[`Account view Renders correctly 1`] = `
         class="w-full max-w-7xl mx-auto flex flex-col xl:flex-row justify-between"
       >
         <div
-          class="grid grid-cols-1 sm:grid-cols-3 gap-4 grow"
+          class="grid grid-cols-1 sm:grid-cols-3 gap-1 grow"
         >
           <ul
             class="mb-14"
@@ -250,6 +250,15 @@ exports[`Account view Renders correctly 1`] = `
                 href="//www.linkedin.com/jobs/search/?currentJobId=3196130257&f_C=86587560&geoId=92000000"
               >
                 Karriere bei 60beans
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/refund-policy"
+              >
+                Wiederrufsrecht
               </a>
             </li>
           </ul>
@@ -321,6 +330,15 @@ exports[`Account view Renders correctly 1`] = `
                 href="//www.60beans.com/legal/cookie-policy"
               >
                 Cookie Policy
+              </a>
+            </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/agb"
+              >
+                Allgemeine Geschäftsbedingungen
               </a>
             </li>
           </ul>
