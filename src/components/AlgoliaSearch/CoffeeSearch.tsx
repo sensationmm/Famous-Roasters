@@ -37,8 +37,8 @@ const CoffeeSearch: React.FC = () => {
           hidden={!productHits}
         />
         <div className={`${productHits > 0 ? 'hidden' : ''} grid gap-2 grid-cols-1 mb-8 md:grid-cols-2 xl:grid-cols-3`}>
-          {[...numberOfTiles].map(() => (
-            <ProductTileLoader />
+          {[...numberOfTiles].map((_, count) => (
+            <ProductTileLoader key={`loader-${count}`} />
           ))}
         </div>
       </>
