@@ -1,3 +1,10 @@
+## [1.72.2](https://github.com/Famous-Roasters/frontend/compare/v1.72.1...v1.72.2) (2022-09-09)
+
+
+### Bug Fixes
+
+* **catalogue:** add react key to loader render ([dfda1fc](https://github.com/Famous-Roasters/frontend/commit/dfda1fc4f28390dcd29aacb45b5f187c4f0b98a9))
+
 ## [1.72.1](https://github.com/Famous-Roasters/frontend/compare/v1.72.0...v1.72.1) (2022-09-09)
 
 # [1.72.0](https://github.com/Famous-Roasters/frontend/compare/v1.71.3...v1.72.0) (2022-09-09)
