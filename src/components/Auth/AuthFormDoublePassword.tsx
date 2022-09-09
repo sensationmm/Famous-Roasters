@@ -22,9 +22,7 @@ export const AuthFormDoublePassword: React.FC<AuthFormDoublePasswordProps> = ({
 
   const passwordRules = [
     i18n.t(`auth.${screenKey}.password.error.minLength`),
-    i18n.t(`auth.${screenKey}.password.error.maxLength`),
-    i18n.t(`auth.${screenKey}.password.error.mustContainLowercase`),
-    i18n.t(`auth.${screenKey}.password.error.mustContainUppercase`),
+    i18n.t(`auth.${screenKey}.password.error.mustContainUpperLowercase`),
     i18n.t(`auth.${screenKey}.password.error.mustContainNumber`),
     i18n.t(`auth.${screenKey}.password.error.mustContainSpecial`),
     i18n.t(`auth.${screenKey}.password.error.noSpaces`),
@@ -42,14 +40,14 @@ export const AuthFormDoublePassword: React.FC<AuthFormDoublePasswordProps> = ({
           rules={[
             { required: true, message: i18n.t(`auth.${screenKey}.password.error.required`) },
             { min: 8, message: passwordRules[0] },
-            { max: 20, message: passwordRules[1] },
+            { max: 20, message: passwordRules[0] },
             () => ({
               validator(_, value) {
                 const lowercase = /(?=([a-z]+){1})/
                 if (!value || value.match(lowercase)) {
                   return Promise.resolve()
                 }
-                return Promise.reject(new Error(passwordRules[2]))
+                return Promise.reject(new Error(passwordRules[1]))
               },
             }),
             () => ({
@@ -58,7 +56,7 @@ export const AuthFormDoublePassword: React.FC<AuthFormDoublePasswordProps> = ({
                 if (!value || value.match(uppercase)) {
                   return Promise.resolve()
                 }
-                return Promise.reject(new Error(passwordRules[3]))
+                return Promise.reject(new Error(passwordRules[1]))
               },
             }),
             () => ({
@@ -67,7 +65,7 @@ export const AuthFormDoublePassword: React.FC<AuthFormDoublePasswordProps> = ({
                 if (!value || value.match(numbers)) {
                   return Promise.resolve()
                 }
-                return Promise.reject(new Error(passwordRules[4]))
+                return Promise.reject(new Error(passwordRules[2]))
               },
             }),
             () => ({
@@ -77,7 +75,7 @@ export const AuthFormDoublePassword: React.FC<AuthFormDoublePasswordProps> = ({
                 if (!value || value.match(special)) {
                   return Promise.resolve()
                 }
-                return Promise.reject(new Error(passwordRules[5]))
+                return Promise.reject(new Error(passwordRules[3]))
               },
             }),
             () => ({
@@ -87,7 +85,7 @@ export const AuthFormDoublePassword: React.FC<AuthFormDoublePasswordProps> = ({
                 if (!value || !value.match(space)) {
                   return Promise.resolve()
                 }
-                return Promise.reject(new Error(passwordRules[6]))
+                return Promise.reject(new Error(passwordRules[4]))
               },
             }),
           ]}
