@@ -298,7 +298,7 @@ export const Icon: React.FC<IconProps> = ({ name, size = IconSize.md, className 
       width={getSizeValue(size)}
       height={getSizeValue(size)}
       viewBox={iconsViewBoxMap[name]}
-      className={`${className} fill-brand-black stroke-brand-black`}
+      className={`${className}`}
       fill="inherit"
     >
       <path

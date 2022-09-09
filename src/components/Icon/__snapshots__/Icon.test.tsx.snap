@@ -3,7 +3,7 @@
 exports[`Icon component Renders correctly 1`] = `
 <div>
   <svg
-    class="undefined fill-brand-black stroke-brand-black"
+    class="undefined"
     fill="inherit"
     height="24"
     viewBox="0 0 11 11"
@@ -24,7 +24,7 @@ exports[`Icon component Renders correctly 1`] = `
 exports[`Icon component Renders correctly base icon 1`] = `
 <div>
   <svg
-    class="undefined fill-brand-black stroke-brand-black"
+    class="undefined"
     fill="inherit"
     height="20"
     viewBox="0 0 11 11"
@@ -45,7 +45,7 @@ exports[`Icon component Renders correctly base icon 1`] = `
 exports[`Icon component Renders correctly extra large icon 1`] = `
 <div>
   <svg
-    class="undefined fill-brand-black stroke-brand-black"
+    class="undefined"
     fill="inherit"
     height="48"
     viewBox="-1 0 21 24"
@@ -66,7 +66,7 @@ exports[`Icon component Renders correctly extra large icon 1`] = `
 exports[`Icon component Renders correctly extra small icon 1`] = `
 <div>
   <svg
-    class="undefined fill-brand-black stroke-brand-black"
+    class="undefined"
     fill="inherit"
     height="10"
     viewBox="0 0 11 11"
@@ -87,7 +87,7 @@ exports[`Icon component Renders correctly extra small icon 1`] = `
 exports[`Icon component Renders correctly large icon 1`] = `
 <div>
   <svg
-    class="undefined fill-brand-black stroke-brand-black"
+    class="undefined"
     fill="inherit"
     height="32"
     viewBox="0 0 11 11"
@@ -108,7 +108,7 @@ exports[`Icon component Renders correctly large icon 1`] = `
 exports[`Icon component Renders correctly medium icon 1`] = `
 <div>
   <svg
-    class="undefined fill-brand-black stroke-brand-black"
+    class="undefined"
     fill="inherit"
     height="24"
     viewBox="0 0 11 11"
@@ -129,7 +129,7 @@ exports[`Icon component Renders correctly medium icon 1`] = `
 exports[`Icon component Renders correctly small icon 1`] = `
 <div>
   <svg
-    class="undefined fill-brand-black stroke-brand-black"
+    class="undefined"
     fill="inherit"
     height="16"
     viewBox="0 0 11 11"

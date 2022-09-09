@@ -107,7 +107,11 @@ export const AromaFilterButton: React.FC = () => {
         {t('pages.catalogue.filters.tasteProfile')}
         {activeValuesCount > 0 && ` (${activeValuesCount})`}
       </Typography>
-      <Icon name={IconName.ChevronDown} className="-mr-1 ml-2 mt-1 h-4 w-4" aria-hidden="true" />
+      <Icon
+        name={IconName.ChevronDown}
+        className="-mr-1 ml-2 mt-1 h-4 w-4 fill-brand-black stroke-brand-black"
+        aria-hidden="true"
+      />
     </button>
   )
 
