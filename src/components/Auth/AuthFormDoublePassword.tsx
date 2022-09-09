@@ -40,7 +40,7 @@ export const AuthFormDoublePassword: React.FC<AuthFormDoublePasswordProps> = ({
           rules={[
             { required: true, message: i18n.t(`auth.${screenKey}.password.error.required`) },
             { min: 8, message: passwordRules[0] },
-            { max: 20, message: passwordRules[0] },
+            { max: 32, message: passwordRules[0] },
             () => ({
               validator(_, value) {
                 const lowercase = /(?=([a-z]+){1})/

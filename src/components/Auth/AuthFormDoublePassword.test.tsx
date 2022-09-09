@@ -37,7 +37,8 @@ describe('Email and double Password fields group custom auth component', () => {
       fireEvent.click(password)
       fireEvent.change(password, {
         target: {
-          value: '1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890',
+          value:
+            '12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890',
         },
       })
       fireEvent.click(password)

@@ -83,7 +83,7 @@
         "cta": "Passwort setzen",
         "password": {
           "error": {
-            "minLength": "Das Passwort muss mindestens aus 8 Zeichen bestehen",
+            "minLength": "Das Passwort muss aus mindestens 8 und maximal 32 Zeichen bestehen",
             "mustContainUpperLowercase": "Dein Passwort muss mindestens einen Groß- sowie Kleinbuchstaben beinhalten",
             "mustContainNumber": "Dein Passwort muss mindestens eine Zahl beinhalten",
             "mustContainSpecial": "Dein Passwort muss mindestens ein Sonderzeichen enthalten, wie bspw.: ^$*.[]{}()?\"!@#%&/\\,><':;|_~`",
@@ -177,7 +177,7 @@
       },
       "password": {
         "error": {
-          "minLength": "Das Passwort muss mindestens aus 8 Zeichen bestehen",
+          "minLength": "Das Passwort muss aus mindestens 8 und maximal 32 Zeichen bestehen",
           "mustContainUpperLowercase": "Dein Passwort muss mindestens einen Groß- sowie Kleinbuchstaben beinhalten",
           "mustContainNumber": "Dein Passwort muss mindestens eine Zahl beinhalten",
           "mustContainSpecial": "Dein Passwort muss mindestens ein Sonderzeichen enthalten, wie bspw.: ^$*.[]{}()?\"!@#%&/\\,><':;|_~`",
