@@ -1,3 +1,10 @@
+# [1.72.0](https://github.com/Famous-Roasters/frontend/compare/v1.71.3...v1.72.0) (2022-09-09)
+
+
+### Features
+
+* **search:** [WB-412] add loading state component ([#223](https://github.com/Famous-Roasters/frontend/issues/223)) ([578a80a](https://github.com/Famous-Roasters/frontend/commit/578a80a887596d6ae3fd44ad6e98a179c65c2b7c))
+
 ## [1.71.3](https://github.com/Famous-Roasters/frontend/compare/v1.71.2...v1.71.3) (2022-09-09)
 
 ## [1.71.2](https://github.com/Famous-Roasters/frontend/compare/v1.71.1...v1.71.2) (2022-09-09)
