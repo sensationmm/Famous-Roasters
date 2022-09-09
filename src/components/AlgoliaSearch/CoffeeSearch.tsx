@@ -28,19 +28,23 @@ const CoffeeSearch: React.FC = () => {
   const numberOfHitsToShow = 12
   const numberOfTiles = Array(numberOfHitsToShow)
 
-  const renderContent = () =>
-    productHits ? (
-      <Hits
-        hitComponent={Hit}
-        classNames={{ root: 'mb-8', list: 'grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3' }}
-      />
-    ) : (
-      <div className="grid gap-2 grid-cols-1 mb-8 md:grid-cols-2 xl:grid-cols-3">
-        {[...numberOfTiles].map(() => (
-          <ProductTileLoader />
-        ))}
-      </div>
+  const renderContent = () => {
+    return (
+      <>
+        <Hits
+          hitComponent={Hit}
+          classNames={{ root: 'mb-8', list: 'grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3' }}
+          hidden={!productHits}
+        />
+        <div className={`${productHits > 0 ? 'hidden' : ''} grid gap-2 grid-cols-1 mb-8 md:grid-cols-2 xl:grid-cols-3`}>
+          {[...numberOfTiles].map(() => (
+            <ProductTileLoader />
+          ))}
+        </div>
+      </>
     )
+  }
+
   // Initialize tasteProfile filters so we don't lose their state when dropdown closes
   useRefinementList({ attribute: 'meta.my_fields.bitterness' })
   useRefinementList({ attribute: 'meta.my_fields.acidity' })
