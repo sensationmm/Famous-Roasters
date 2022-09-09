@@ -32,7 +32,7 @@ exports[`Layout component Renders correctly 1`] = `
                   Open menu
                 </span>
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -127,7 +127,7 @@ exports[`Layout component Renders correctly 1`] = `
                   href="//shop.60beans.com/profile"
                 >
                   <svg
-                    class="undefined fill-brand-black stroke-brand-black"
+                    class="undefined"
                     fill="inherit"
                     height="24"
                     viewBox="0 0 24 25"
@@ -155,7 +155,7 @@ exports[`Layout component Renders correctly 1`] = `
                       class="static flex-shrink-0 relative"
                     >
                       <svg
-                        class="undefined fill-brand-black stroke-brand-black"
+                        class="undefined"
                         fill="inherit"
                         height="24"
                         viewBox="0 0 24 25"
@@ -258,16 +258,6 @@ exports[`Layout component Renders correctly 1`] = `
                 Karriere bei 60beans
               </a>
             </li>
-            <li
-              class="mb-4"
-            >
-              <a
-                href="//www.60beans.com/refund-policy"
-                target="_blank"
-              >
-                Wiederrufsrecht
-              </a>
-            </li>
           </ul>
           <ul
             class="mb-14"
@@ -356,6 +346,16 @@ exports[`Layout component Renders correctly 1`] = `
                 Allgemeine Geschäftsbedingungen
               </a>
             </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/widerrufsrecht"
+                target="_self"
+              >
+                Widerrufsrecht
+              </a>
+            </li>
           </ul>
         </div>
         <div
@@ -377,7 +377,7 @@ exports[`Layout component Renders correctly 1`] = `
                 target="_blank"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -402,7 +402,7 @@ exports[`Layout component Renders correctly 1`] = `
                 target="_blank"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -427,7 +427,7 @@ exports[`Layout component Renders correctly 1`] = `
                 target="_blank"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"

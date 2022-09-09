@@ -12,6 +12,7 @@ exports[`SingleSelect component Renders correctly 1`] = `
       aria-expanded="false"
       aria-haspopup="true"
       class="inline-flex justify-between w-full text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default px-4 py-2"
+      data-headlessui-state=""
       data-testid="button-listbox"
       id="headlessui-listbox-button-:r0:"
       type="button"

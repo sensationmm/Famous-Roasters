@@ -6,13 +6,13 @@ exports[`ProductTileLoader component Renders correctly 1`] = `
     class="relative flex pt-8 md:px-6"
   >
     <div
-      class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+      class="flex justify-center items-center shrink-0 self-center relative w-36 h-36"
     >
       <div
-        class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+        class="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36"
       >
         <div
-          class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+          class="block bg-coreUI-text-tertiary rounded w-2/5 h-3/5"
         />
       </div>
     </div>
@@ -23,13 +23,13 @@ exports[`ProductTileLoader component Renders correctly 1`] = `
         class="flex"
       >
         <div
-          class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-5"
+          class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-10"
         />
         <div
           class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-14"
         />
         <div
-          class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-10"
+          class="block bg-coreUI-text-tertiary rounded h-1.5 mr-1.5 mb-3 w-4"
         />
       </div>
       <div

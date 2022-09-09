@@ -32,7 +32,7 @@ exports[`Taste Finder view Renders correctly 1`] = `
                   Open menu
                 </span>
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -127,7 +127,7 @@ exports[`Taste Finder view Renders correctly 1`] = `
                   href="//shop.60beans.com/profile"
                 >
                   <svg
-                    class="undefined fill-brand-black stroke-brand-black"
+                    class="undefined"
                     fill="inherit"
                     height="24"
                     viewBox="0 0 24 25"

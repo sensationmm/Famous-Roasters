@@ -130,7 +130,7 @@ exports[`Button component renders with arrow 1`] = `
   >
     CTA
     <svg
-      class="absolute right-2 fill-brand-black text-brand-black stroke-brand-black fill-brand-black stroke-brand-black"
+      class="absolute right-2 fill-brand-black text-brand-black stroke-brand-black"
       fill="inherit"
       height="16"
       viewBox="0 0 9 16"
@@ -157,7 +157,7 @@ exports[`Button component renders with arrow lg 1`] = `
   >
     CTA
     <svg
-      class="absolute right-2 fill-brand-black text-brand-black stroke-brand-black fill-brand-black stroke-brand-black"
+      class="absolute right-2 fill-brand-black text-brand-black stroke-brand-black"
       fill="inherit"
       height="16"
       viewBox="0 0 9 16"
@@ -184,7 +184,7 @@ exports[`Button component renders with arrow md 1`] = `
   >
     CTA
     <svg
-      class="absolute right-2 fill-brand-black text-brand-black stroke-brand-black fill-brand-black stroke-brand-black"
+      class="absolute right-2 fill-brand-black text-brand-black stroke-brand-black"
       fill="inherit"
       height="16"
       viewBox="0 0 9 16"
@@ -211,7 +211,7 @@ exports[`Button component renders with arrow sm 1`] = `
   >
     CTA
     <svg
-      class="absolute right-2 fill-brand-black text-brand-black stroke-brand-black fill-brand-black stroke-brand-black"
+      class="absolute right-2 fill-brand-black text-brand-black stroke-brand-black"
       fill="inherit"
       height="16"
       viewBox="0 0 9 16"
@@ -238,7 +238,7 @@ exports[`Button component renders with arrow xl 1`] = `
   >
     CTA
     <svg
-      class="absolute right-3 fill-brand-black text-brand-black stroke-brand-black fill-brand-black stroke-brand-black"
+      class="absolute right-3 fill-brand-black text-brand-black stroke-brand-black"
       fill="inherit"
       height="20"
       viewBox="0 0 9 16"
@@ -265,7 +265,7 @@ exports[`Button component renders with arrow xs 1`] = `
   >
     CTA
     <svg
-      class="absolute right-2 fill-brand-black text-brand-black stroke-brand-black fill-brand-black stroke-brand-black"
+      class="absolute right-2 fill-brand-black text-brand-black stroke-brand-black"
       fill="inherit"
       height="16"
       viewBox="0 0 9 16"
@@ -291,7 +291,7 @@ exports[`Button component renders with icon 1`] = `
     role="button"
   >
     <svg
-      class="mr-4 fill-brand-black text-brand-black stroke-brand-black fill-brand-black stroke-brand-black"
+      class="mr-4 fill-brand-black text-brand-black stroke-brand-black"
       fill="inherit"
       height="24"
       viewBox="0 0 30 30"
@@ -318,7 +318,7 @@ exports[`Button component renders with icon small 1`] = `
     role="button"
   >
     <svg
-      class="mr-2 fill-brand-black text-brand-black stroke-brand-black fill-brand-black stroke-brand-black"
+      class="mr-2 fill-brand-black text-brand-black stroke-brand-black"
       fill="inherit"
       height="20"
       viewBox="0 0 30 30"

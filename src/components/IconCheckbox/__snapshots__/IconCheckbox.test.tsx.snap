@@ -8,7 +8,7 @@ exports[`ImageCheckbox component Renders correctly 1`] = `
   >
     <div>
       <svg
-        class="undefined fill-brand-black stroke-brand-black"
+        class="undefined"
         fill="inherit"
         height="24"
         viewBox="0 0 16 16"
@@ -28,7 +28,7 @@ exports[`ImageCheckbox component Renders correctly 1`] = `
       class="flex w-16 h-16 ml-4 mr-4 rounded-full bg-brand-grey-whisper items-center justify-center shrink-0"
     >
       <svg
-        class="undefined fill-brand-black stroke-brand-black"
+        class="undefined"
         fill="inherit"
         height="32"
         viewBox="0 0 30 32"
@@ -61,7 +61,7 @@ exports[`ImageCheckbox component Renders correctly for selected 1`] = `
   >
     <div>
       <svg
-        class="undefined fill-brand-black stroke-brand-black"
+        class="undefined"
         fill="inherit"
         height="24"
         viewBox="0 0 16 16"
@@ -81,7 +81,7 @@ exports[`ImageCheckbox component Renders correctly for selected 1`] = `
       class="flex w-16 h-16 ml-4 mr-4 rounded-full bg-brand-grey-whisper items-center justify-center shrink-0"
     >
       <svg
-        class="undefined fill-brand-black stroke-brand-black"
+        class="undefined"
         fill="inherit"
         height="32"
         viewBox="0 0 30 32"

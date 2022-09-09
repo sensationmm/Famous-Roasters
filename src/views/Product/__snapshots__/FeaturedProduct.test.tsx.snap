@@ -32,7 +32,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   Open menu
                 </span>
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -127,7 +127,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   href="//shop.60beans.com/profile"
                 >
                   <svg
-                    class="undefined fill-brand-black stroke-brand-black"
+                    class="undefined"
                     fill="inherit"
                     height="24"
                     viewBox="0 0 24 25"
@@ -155,7 +155,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                       class="static flex-shrink-0 relative"
                     >
                       <svg
-                        class="undefined fill-brand-black stroke-brand-black"
+                        class="undefined"
                         fill="inherit"
                         height="24"
                         viewBox="0 0 24 25"
@@ -263,7 +263,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   class="flex mt-6"
                 >
                   <svg
-                    class="mr-2.5 fill-brand-black stroke-brand-black"
+                    class="mr-2.5"
                     fill="inherit"
                     height="20"
                     viewBox="0 0 20 20"
@@ -297,7 +297,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   class="flex mt-6"
                 >
                   <svg
-                    class="mr-2.5 fill-brand-black stroke-brand-black"
+                    class="mr-2.5"
                     fill="inherit"
                     height="20"
                     viewBox="0 0 20 20"
@@ -578,16 +578,6 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 Karriere bei 60beans
               </a>
             </li>
-            <li
-              class="mb-4"
-            >
-              <a
-                href="//www.60beans.com/refund-policy"
-                target="_blank"
-              >
-                Wiederrufsrecht
-              </a>
-            </li>
           </ul>
           <ul
             class="mb-14"
@@ -676,6 +666,16 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 Allgemeine Geschäftsbedingungen
               </a>
             </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/widerrufsrecht"
+                target="_self"
+              >
+                Widerrufsrecht
+              </a>
+            </li>
           </ul>
         </div>
         <div
@@ -697,7 +697,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 target="_blank"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -722,7 +722,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 target="_blank"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -747,7 +747,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 target="_blank"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -839,7 +839,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   Open menu
                 </span>
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -934,7 +934,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   href="//shop.60beans.com/profile"
                 >
                   <svg
-                    class="undefined fill-brand-black stroke-brand-black"
+                    class="undefined"
                     fill="inherit"
                     height="24"
                     viewBox="0 0 24 25"
@@ -962,7 +962,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                       class="static flex-shrink-0 relative"
                     >
                       <svg
-                        class="undefined fill-brand-black stroke-brand-black"
+                        class="undefined"
                         fill="inherit"
                         height="24"
                         viewBox="0 0 24 25"
@@ -1070,7 +1070,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   class="flex mt-6"
                 >
                   <svg
-                    class="mr-2.5 fill-brand-black stroke-brand-black"
+                    class="mr-2.5"
                     fill="inherit"
                     height="20"
                     viewBox="0 0 20 20"
@@ -1104,7 +1104,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   class="flex mt-6"
                 >
                   <svg
-                    class="mr-2.5 fill-brand-black stroke-brand-black"
+                    class="mr-2.5"
                     fill="inherit"
                     height="20"
                     viewBox="0 0 20 20"
@@ -1385,16 +1385,6 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 Karriere bei 60beans
               </a>
             </li>
-            <li
-              class="mb-4"
-            >
-              <a
-                href="//www.60beans.com/refund-policy"
-                target="_blank"
-              >
-                Wiederrufsrecht
-              </a>
-            </li>
           </ul>
           <ul
             class="mb-14"
@@ -1483,6 +1473,16 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 Allgemeine Geschäftsbedingungen
               </a>
             </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/widerrufsrecht"
+                target="_self"
+              >
+                Widerrufsrecht
+              </a>
+            </li>
           </ul>
         </div>
         <div
@@ -1504,7 +1504,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 target="_blank"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -1529,7 +1529,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 target="_blank"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -1554,7 +1554,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 target="_blank"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -1646,7 +1646,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   Open menu
                 </span>
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -1741,7 +1741,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   href="//shop.60beans.com/profile"
                 >
                   <svg
-                    class="undefined fill-brand-black stroke-brand-black"
+                    class="undefined"
                     fill="inherit"
                     height="24"
                     viewBox="0 0 24 25"
@@ -1769,7 +1769,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                       class="static flex-shrink-0 relative"
                     >
                       <svg
-                        class="undefined fill-brand-black stroke-brand-black"
+                        class="undefined"
                         fill="inherit"
                         height="24"
                         viewBox="0 0 24 25"
@@ -1877,7 +1877,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   class="flex mt-6"
                 >
                   <svg
-                    class="mr-2.5 fill-brand-black stroke-brand-black"
+                    class="mr-2.5"
                     fill="inherit"
                     height="20"
                     viewBox="0 0 20 20"
@@ -1911,7 +1911,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   class="flex mt-6"
                 >
                   <svg
-                    class="mr-2.5 fill-brand-black stroke-brand-black"
+                    class="mr-2.5"
                     fill="inherit"
                     height="20"
                     viewBox="0 0 20 20"
@@ -2192,16 +2192,6 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 Karriere bei 60beans
               </a>
             </li>
-            <li
-              class="mb-4"
-            >
-              <a
-                href="//www.60beans.com/refund-policy"
-                target="_blank"
-              >
-                Wiederrufsrecht
-              </a>
-            </li>
           </ul>
           <ul
             class="mb-14"
@@ -2290,6 +2280,16 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 Allgemeine Geschäftsbedingungen
               </a>
             </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/widerrufsrecht"
+                target="_self"
+              >
+                Widerrufsrecht
+              </a>
+            </li>
           </ul>
         </div>
         <div
@@ -2311,7 +2311,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 target="_blank"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -2336,7 +2336,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 target="_blank"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -2361,7 +2361,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 target="_blank"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -2453,7 +2453,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   Open menu
                 </span>
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -2548,7 +2548,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   href="//shop.60beans.com/profile"
                 >
                   <svg
-                    class="undefined fill-brand-black stroke-brand-black"
+                    class="undefined"
                     fill="inherit"
                     height="24"
                     viewBox="0 0 24 25"
@@ -2576,7 +2576,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                       class="static flex-shrink-0 relative"
                     >
                       <svg
-                        class="undefined fill-brand-black stroke-brand-black"
+                        class="undefined"
                         fill="inherit"
                         height="24"
                         viewBox="0 0 24 25"
@@ -2684,7 +2684,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   class="flex mt-6"
                 >
                   <svg
-                    class="mr-2.5 fill-brand-black stroke-brand-black"
+                    class="mr-2.5"
                     fill="inherit"
                     height="20"
                     viewBox="0 0 20 20"
@@ -2718,7 +2718,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   class="flex mt-6"
                 >
                   <svg
-                    class="mr-2.5 fill-brand-black stroke-brand-black"
+                    class="mr-2.5"
                     fill="inherit"
                     height="20"
                     viewBox="0 0 20 20"
@@ -2999,16 +2999,6 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 Karriere bei 60beans
               </a>
             </li>
-            <li
-              class="mb-4"
-            >
-              <a
-                href="//www.60beans.com/refund-policy"
-                target="_blank"
-              >
-                Wiederrufsrecht
-              </a>
-            </li>
           </ul>
           <ul
             class="mb-14"
@@ -3097,6 +3087,16 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 Allgemeine Geschäftsbedingungen
               </a>
             </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/widerrufsrecht"
+                target="_self"
+              >
+                Widerrufsrecht
+              </a>
+            </li>
           </ul>
         </div>
         <div
@@ -3118,7 +3118,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 target="_blank"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -3143,7 +3143,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 target="_blank"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -3168,7 +3168,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 target="_blank"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -3260,7 +3260,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   Open menu
                 </span>
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -3355,7 +3355,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   href="//shop.60beans.com/profile"
                 >
                   <svg
-                    class="undefined fill-brand-black stroke-brand-black"
+                    class="undefined"
                     fill="inherit"
                     height="24"
                     viewBox="0 0 24 25"
@@ -3383,7 +3383,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                       class="static flex-shrink-0 relative"
                     >
                       <svg
-                        class="undefined fill-brand-black stroke-brand-black"
+                        class="undefined"
                         fill="inherit"
                         height="24"
                         viewBox="0 0 24 25"
@@ -3491,7 +3491,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   class="flex mt-6"
                 >
                   <svg
-                    class="mr-2.5 fill-brand-black stroke-brand-black"
+                    class="mr-2.5"
                     fill="inherit"
                     height="20"
                     viewBox="0 0 20 20"
@@ -3525,7 +3525,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                   class="flex mt-6"
                 >
                   <svg
-                    class="mr-2.5 fill-brand-black stroke-brand-black"
+                    class="mr-2.5"
                     fill="inherit"
                     height="20"
                     viewBox="0 0 20 20"
@@ -3806,16 +3806,6 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 Karriere bei 60beans
               </a>
             </li>
-            <li
-              class="mb-4"
-            >
-              <a
-                href="//www.60beans.com/refund-policy"
-                target="_blank"
-              >
-                Wiederrufsrecht
-              </a>
-            </li>
           </ul>
           <ul
             class="mb-14"
@@ -3904,6 +3894,16 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 Allgemeine Geschäftsbedingungen
               </a>
             </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/widerrufsrecht"
+                target="_self"
+              >
+                Widerrufsrecht
+              </a>
+            </li>
           </ul>
         </div>
         <div
@@ -3925,7 +3925,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 target="_blank"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -3950,7 +3950,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 target="_blank"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -3975,7 +3975,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 target="_blank"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -4067,7 +4067,7 @@ exports[`Featured product view Renders correctly for a successful call without a
                   Open menu
                 </span>
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -4162,7 +4162,7 @@ exports[`Featured product view Renders correctly for a successful call without a
                   href="//shop.60beans.com/profile"
                 >
                   <svg
-                    class="undefined fill-brand-black stroke-brand-black"
+                    class="undefined"
                     fill="inherit"
                     height="24"
                     viewBox="0 0 24 25"
@@ -4190,7 +4190,7 @@ exports[`Featured product view Renders correctly for a successful call without a
                       class="static flex-shrink-0 relative"
                     >
                       <svg
-                        class="undefined fill-brand-black stroke-brand-black"
+                        class="undefined"
                         fill="inherit"
                         height="24"
                         viewBox="0 0 24 25"
@@ -4490,16 +4490,6 @@ exports[`Featured product view Renders correctly for a successful call without a
                 Karriere bei 60beans
               </a>
             </li>
-            <li
-              class="mb-4"
-            >
-              <a
-                href="//www.60beans.com/refund-policy"
-                target="_blank"
-              >
-                Wiederrufsrecht
-              </a>
-            </li>
           </ul>
           <ul
             class="mb-14"
@@ -4588,6 +4578,16 @@ exports[`Featured product view Renders correctly for a successful call without a
                 Allgemeine Geschäftsbedingungen
               </a>
             </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/widerrufsrecht"
+                target="_self"
+              >
+                Widerrufsrecht
+              </a>
+            </li>
           </ul>
         </div>
         <div
@@ -4609,7 +4609,7 @@ exports[`Featured product view Renders correctly for a successful call without a
                 target="_blank"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -4634,7 +4634,7 @@ exports[`Featured product view Renders correctly for a successful call without a
                 target="_blank"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -4659,7 +4659,7 @@ exports[`Featured product view Renders correctly for a successful call without a
                 target="_blank"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -4751,7 +4751,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
                   Open menu
                 </span>
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -4846,7 +4846,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
                   href="//shop.60beans.com/profile"
                 >
                   <svg
-                    class="undefined fill-brand-black stroke-brand-black"
+                    class="undefined"
                     fill="inherit"
                     height="24"
                     viewBox="0 0 24 25"
@@ -4874,7 +4874,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
                       class="static flex-shrink-0 relative"
                     >
                       <svg
-                        class="undefined fill-brand-black stroke-brand-black"
+                        class="undefined"
                         fill="inherit"
                         height="24"
                         viewBox="0 0 24 25"
@@ -4982,7 +4982,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
                   class="flex mt-6"
                 >
                   <svg
-                    class="mr-2.5 fill-brand-black stroke-brand-black"
+                    class="mr-2.5"
                     fill="inherit"
                     height="20"
                     viewBox="0 0 20 20"
@@ -5016,7 +5016,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
                   class="flex mt-6"
                 >
                   <svg
-                    class="mr-2.5 fill-brand-black stroke-brand-black"
+                    class="mr-2.5"
                     fill="inherit"
                     height="20"
                     viewBox="0 0 20 20"
@@ -5297,16 +5297,6 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
                 Karriere bei 60beans
               </a>
             </li>
-            <li
-              class="mb-4"
-            >
-              <a
-                href="//www.60beans.com/refund-policy"
-                target="_blank"
-              >
-                Wiederrufsrecht
-              </a>
-            </li>
           </ul>
           <ul
             class="mb-14"
@@ -5395,6 +5385,16 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
                 Allgemeine Geschäftsbedingungen
               </a>
             </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/widerrufsrecht"
+                target="_self"
+              >
+                Widerrufsrecht
+              </a>
+            </li>
           </ul>
         </div>
         <div
@@ -5416,7 +5416,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
                 target="_blank"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -5441,7 +5441,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
                 target="_blank"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -5466,7 +5466,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
                 target="_blank"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -5583,7 +5583,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
                   Open menu
                 </span>
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -5678,7 +5678,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
                   href="//shop.60beans.com/profile"
                 >
                   <svg
-                    class="undefined fill-brand-black stroke-brand-black"
+                    class="undefined"
                     fill="inherit"
                     height="24"
                     viewBox="0 0 24 25"
@@ -5706,7 +5706,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
                       class="static flex-shrink-0 relative"
                     >
                       <svg
-                        class="undefined fill-brand-black stroke-brand-black"
+                        class="undefined"
                         fill="inherit"
                         height="24"
                         viewBox="0 0 24 25"
@@ -5814,7 +5814,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
                   class="flex mt-6"
                 >
                   <svg
-                    class="mr-2.5 fill-brand-black stroke-brand-black"
+                    class="mr-2.5"
                     fill="inherit"
                     height="20"
                     viewBox="0 0 20 20"
@@ -5848,7 +5848,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
                   class="flex mt-6"
                 >
                   <svg
-                    class="mr-2.5 fill-brand-black stroke-brand-black"
+                    class="mr-2.5"
                     fill="inherit"
                     height="20"
                     viewBox="0 0 20 20"
@@ -6116,16 +6116,6 @@ exports[`Featured product view renders as expected if no taste finder data exist
                 Karriere bei 60beans
               </a>
             </li>
-            <li
-              class="mb-4"
-            >
-              <a
-                href="//www.60beans.com/refund-policy"
-                target="_blank"
-              >
-                Wiederrufsrecht
-              </a>
-            </li>
           </ul>
           <ul
             class="mb-14"
@@ -6214,6 +6204,16 @@ exports[`Featured product view renders as expected if no taste finder data exist
                 Allgemeine Geschäftsbedingungen
               </a>
             </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/widerrufsrecht"
+                target="_self"
+              >
+                Widerrufsrecht
+              </a>
+            </li>
           </ul>
         </div>
         <div
@@ -6235,7 +6235,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
                 target="_blank"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -6260,7 +6260,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
                 target="_blank"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -6285,7 +6285,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
                 target="_blank"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"

@@ -10,7 +10,7 @@ exports[`Auth cognito errors custom auth component Renders correctly for CodeMis
       data-testid="alertInvalidCode"
     >
       <svg
-        class="mt-1 mr-3 fill-negative shrink-0 fill-brand-black stroke-brand-black"
+        class="mt-1 mr-3 fill-negative shrink-0"
         fill="inherit"
         height="16"
         viewBox="0 0 16 16"
@@ -45,7 +45,7 @@ exports[`Auth cognito errors custom auth component Renders correctly for Confirm
       data-testid="alertRegisterInvalidParam"
     >
       <svg
-        class="mt-1 mr-3 fill-negative shrink-0 fill-brand-black stroke-brand-black"
+        class="mt-1 mr-3 fill-negative shrink-0"
         fill="inherit"
         height="16"
         viewBox="0 0 16 16"
@@ -88,7 +88,7 @@ exports[`Auth cognito errors custom auth component Renders correctly for Confirm
       data-testid="alertConfirmUserNotFound"
     >
       <svg
-        class="mt-1 mr-3 fill-negative shrink-0 fill-brand-black stroke-brand-black"
+        class="mt-1 mr-3 fill-negative shrink-0"
         fill="inherit"
         height="16"
         viewBox="0 0 16 16"
@@ -131,7 +131,7 @@ exports[`Auth cognito errors custom auth component Renders correctly for ForgotP
       data-testid="alertForgotPasswordGeneric"
     >
       <svg
-        class="mt-1 mr-3 fill-negative shrink-0 fill-brand-black stroke-brand-black"
+        class="mt-1 mr-3 fill-negative shrink-0"
         fill="inherit"
         height="16"
         viewBox="0 0 16 16"
@@ -174,7 +174,7 @@ exports[`Auth cognito errors custom auth component Renders correctly for LoginGe
       data-testid="alertLoginGeneric"
     >
       <svg
-        class="mt-1 mr-3 fill-negative shrink-0 fill-brand-black stroke-brand-black"
+        class="mt-1 mr-3 fill-negative shrink-0"
         fill="inherit"
         height="16"
         viewBox="0 0 16 16"
@@ -217,7 +217,7 @@ exports[`Auth cognito errors custom auth component Renders correctly for NotAuth
       data-testid="alertIncorrectUserNameOrPassword"
     >
       <svg
-        class="mt-1 mr-3 fill-negative shrink-0 fill-brand-black stroke-brand-black"
+        class="mt-1 mr-3 fill-negative shrink-0"
         fill="inherit"
         height="16"
         viewBox="0 0 16 16"
@@ -252,7 +252,7 @@ exports[`Auth cognito errors custom auth component Renders correctly for Registe
       data-testid="alertRegisterGeneric"
     >
       <svg
-        class="mt-1 mr-3 fill-negative shrink-0 fill-brand-black stroke-brand-black"
+        class="mt-1 mr-3 fill-negative shrink-0"
         fill="inherit"
         height="16"
         viewBox="0 0 16 16"
@@ -295,7 +295,7 @@ exports[`Auth cognito errors custom auth component Renders correctly for UserNot
       data-testid="alertIncorrectUserNameOrPassword"
     >
       <svg
-        class="mt-1 mr-3 fill-negative shrink-0 fill-brand-black stroke-brand-black"
+        class="mt-1 mr-3 fill-negative shrink-0"
         fill="inherit"
         height="16"
         viewBox="0 0 16 16"
@@ -330,7 +330,7 @@ exports[`Auth cognito errors custom auth component Renders correctly for Usernam
       data-testid="alertIncorrectUserNameOrPassword"
     >
       <svg
-        class="mt-1 mr-3 fill-negative shrink-0 fill-brand-black stroke-brand-black"
+        class="mt-1 mr-3 fill-negative shrink-0"
         fill="inherit"
         height="16"
         viewBox="0 0 16 16"
@@ -373,7 +373,7 @@ exports[`Auth cognito errors custom auth component Renders correctly for other e
       data-testid="alertGeneric"
     >
       <svg
-        class="mt-1 mr-3 fill-negative shrink-0 fill-brand-black stroke-brand-black"
+        class="mt-1 mr-3 fill-negative shrink-0"
         fill="inherit"
         height="16"
         viewBox="0 0 16 16"

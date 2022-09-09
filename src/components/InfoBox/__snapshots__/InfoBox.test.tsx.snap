@@ -6,7 +6,7 @@ exports[`InfoBox component Renders correctly 1`] = `
     class="flex items-center px-5 py-3 bg-coreUI-background-images"
   >
     <svg
-      class="undefined fill-brand-black stroke-brand-black"
+      class="undefined"
       fill="inherit"
       height="24"
       viewBox="0 0 20 21"
@@ -47,7 +47,7 @@ exports[`InfoBox component Renders correctly without text 1`] = `
     class="flex items-center px-5 py-3 bg-coreUI-background-images"
   >
     <svg
-      class="undefined fill-brand-black stroke-brand-black"
+      class="undefined"
       fill="inherit"
       height="24"
       viewBox="0 0 20 21"

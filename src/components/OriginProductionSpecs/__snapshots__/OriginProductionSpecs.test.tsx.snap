@@ -15,7 +15,7 @@ exports[`OriginProductionSpecs component Renders correctly 1`] = `
           class="w-12 h-12 rounded-full bg-brand-grey-whisper flex items-center justify-center"
         >
           <svg
-            class="undefined fill-brand-black stroke-brand-black"
+            class="undefined"
             fill="inherit"
             height="24"
             viewBox="-1 0 24 24"
@@ -57,7 +57,7 @@ exports[`OriginProductionSpecs component Renders correctly 1`] = `
           class="w-12 h-12 rounded-full bg-brand-grey-whisper flex items-center justify-center"
         >
           <svg
-            class="undefined fill-brand-black stroke-brand-black"
+            class="undefined"
             fill="inherit"
             height="24"
             viewBox="-1 0 18 26"
@@ -99,7 +99,7 @@ exports[`OriginProductionSpecs component Renders correctly 1`] = `
           class="w-12 h-12 rounded-full bg-brand-grey-whisper flex items-center justify-center"
         >
           <svg
-            class="undefined fill-brand-black stroke-brand-black"
+            class="undefined"
             fill="inherit"
             height="24"
             viewBox="0 0 26 26"
@@ -141,7 +141,7 @@ exports[`OriginProductionSpecs component Renders correctly 1`] = `
           class="w-12 h-12 rounded-full bg-brand-grey-whisper flex items-center justify-center"
         >
           <svg
-            class="undefined fill-brand-black stroke-brand-black"
+            class="undefined"
             fill="inherit"
             height="24"
             viewBox="0 0 25 18"
@@ -183,7 +183,7 @@ exports[`OriginProductionSpecs component Renders correctly 1`] = `
           class="w-12 h-12 rounded-full bg-brand-grey-whisper flex items-center justify-center"
         >
           <svg
-            class="undefined fill-brand-black stroke-brand-black"
+            class="undefined"
             fill="inherit"
             height="24"
             viewBox="-1 0 21 24"
@@ -225,7 +225,7 @@ exports[`OriginProductionSpecs component Renders correctly 1`] = `
           class="w-12 h-12 rounded-full bg-brand-grey-whisper flex items-center justify-center"
         >
           <svg
-            class="undefined fill-brand-black stroke-brand-black"
+            class="undefined"
             fill="inherit"
             height="24"
             viewBox="0 0 24 24"

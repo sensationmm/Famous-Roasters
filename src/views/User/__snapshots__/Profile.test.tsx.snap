@@ -32,7 +32,7 @@ exports[`Profile view Renders correctly 1`] = `
                   Open menu
                 </span>
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -127,7 +127,7 @@ exports[`Profile view Renders correctly 1`] = `
                   href="//shop.60beans.com/profile"
                 >
                   <svg
-                    class="undefined fill-brand-black stroke-brand-black"
+                    class="undefined"
                     fill="inherit"
                     height="24"
                     viewBox="0 0 24 25"
@@ -229,7 +229,7 @@ exports[`Profile view Renders correctly 1`] = `
             role="button"
           >
             <svg
-              class="mr-4 fill-brand-black text-brand-black stroke-brand-black fill-brand-black stroke-brand-black"
+              class="mr-4 fill-brand-black text-brand-black stroke-brand-black"
               fill="inherit"
               height="24"
               viewBox="0 0 31 28"
@@ -246,7 +246,7 @@ exports[`Profile view Renders correctly 1`] = `
             </svg>
             Bestellungen
             <svg
-              class="absolute right-2 fill-brand-black text-brand-black stroke-brand-black fill-brand-black stroke-brand-black"
+              class="absolute right-2 fill-brand-black text-brand-black stroke-brand-black"
               fill="inherit"
               height="16"
               viewBox="0 0 9 16"
@@ -268,7 +268,7 @@ exports[`Profile view Renders correctly 1`] = `
             role="button"
           >
             <svg
-              class="mr-4 fill-brand-black text-brand-black stroke-brand-black fill-brand-black stroke-brand-black"
+              class="mr-4 fill-brand-black text-brand-black stroke-brand-black"
               fill="inherit"
               height="24"
               viewBox="0 0 30 30"
@@ -285,7 +285,7 @@ exports[`Profile view Renders correctly 1`] = `
             </svg>
             Konto
             <svg
-              class="absolute right-2 fill-brand-black text-brand-black stroke-brand-black fill-brand-black stroke-brand-black"
+              class="absolute right-2 fill-brand-black text-brand-black stroke-brand-black"
               fill="inherit"
               height="16"
               viewBox="0 0 9 16"
@@ -307,7 +307,7 @@ exports[`Profile view Renders correctly 1`] = `
             role="button"
           >
             <svg
-              class="mr-4 fill-brand-black text-brand-black stroke-brand-black fill-brand-black stroke-brand-black"
+              class="mr-4 fill-brand-black text-brand-black stroke-brand-black"
               fill="inherit"
               height="24"
               viewBox="-1 0 24 24"
@@ -324,7 +324,7 @@ exports[`Profile view Renders correctly 1`] = `
             </svg>
             Geschmacksprofil
             <svg
-              class="absolute right-2 fill-brand-black text-brand-black stroke-brand-black fill-brand-black stroke-brand-black"
+              class="absolute right-2 fill-brand-black text-brand-black stroke-brand-black"
               fill="inherit"
               height="16"
               viewBox="0 0 9 16"
@@ -494,13 +494,13 @@ exports[`Profile view Renders correctly 1`] = `
                   class="absolute"
                 >
                   <div
-                    class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+                    class="flex justify-center items-center shrink-0 self-center relative w-36 h-36"
                   >
                     <div
-                      class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+                      class="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36"
                     >
                       <div
-                        class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+                        class="block bg-coreUI-text-tertiary rounded w-2/5 h-3/5"
                       />
                     </div>
                   </div>
@@ -584,13 +584,13 @@ exports[`Profile view Renders correctly 1`] = `
                   class="absolute"
                 >
                   <div
-                    class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+                    class="flex justify-center items-center shrink-0 self-center relative w-36 h-36"
                   >
                     <div
-                      class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+                      class="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36"
                     >
                       <div
-                        class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+                        class="block bg-coreUI-text-tertiary rounded w-2/5 h-3/5"
                       />
                     </div>
                   </div>
@@ -674,13 +674,13 @@ exports[`Profile view Renders correctly 1`] = `
                   class="absolute"
                 >
                   <div
-                    class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+                    class="flex justify-center items-center shrink-0 self-center relative w-36 h-36"
                   >
                     <div
-                      class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+                      class="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36"
                     >
                       <div
-                        class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+                        class="block bg-coreUI-text-tertiary rounded w-2/5 h-3/5"
                       />
                     </div>
                   </div>
@@ -843,15 +843,6 @@ exports[`Profile view Renders correctly 1`] = `
                 Karriere bei 60beans
               </a>
             </li>
-            <li
-              class="mb-4"
-            >
-              <a
-                href="//www.60beans.com/refund-policy"
-              >
-                Wiederrufsrecht
-              </a>
-            </li>
           </ul>
           <ul
             class="mb-14"
@@ -932,6 +923,15 @@ exports[`Profile view Renders correctly 1`] = `
                 Allgemeine Geschäftsbedingungen
               </a>
             </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/widerrufsrecht"
+              >
+                Widerrufsrecht
+              </a>
+            </li>
           </ul>
         </div>
         <div
@@ -952,7 +952,7 @@ exports[`Profile view Renders correctly 1`] = `
                 href="//www.facebook.com/60beans.shop"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -976,7 +976,7 @@ exports[`Profile view Renders correctly 1`] = `
                 href="//www.instagram.com/60beans/"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -1000,7 +1000,7 @@ exports[`Profile view Renders correctly 1`] = `
                 href="//www.linkedin.com/company/86587560/"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"

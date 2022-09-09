@@ -32,7 +32,7 @@ exports[`Account view Renders correctly 1`] = `
                   Open menu
                 </span>
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -127,7 +127,7 @@ exports[`Account view Renders correctly 1`] = `
                   href="//shop.60beans.com/profile"
                 >
                   <svg
-                    class="undefined fill-brand-black stroke-brand-black"
+                    class="undefined"
                     fill="inherit"
                     height="24"
                     viewBox="0 0 24 25"
@@ -252,15 +252,6 @@ exports[`Account view Renders correctly 1`] = `
                 Karriere bei 60beans
               </a>
             </li>
-            <li
-              class="mb-4"
-            >
-              <a
-                href="//www.60beans.com/refund-policy"
-              >
-                Wiederrufsrecht
-              </a>
-            </li>
           </ul>
           <ul
             class="mb-14"
@@ -341,6 +332,15 @@ exports[`Account view Renders correctly 1`] = `
                 Allgemeine Geschäftsbedingungen
               </a>
             </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/widerrufsrecht"
+              >
+                Widerrufsrecht
+              </a>
+            </li>
           </ul>
         </div>
         <div
@@ -361,7 +361,7 @@ exports[`Account view Renders correctly 1`] = `
                 href="//www.facebook.com/60beans.shop"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -385,7 +385,7 @@ exports[`Account view Renders correctly 1`] = `
                 href="//www.instagram.com/60beans/"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -409,7 +409,7 @@ exports[`Account view Renders correctly 1`] = `
                 href="//www.linkedin.com/company/86587560/"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"

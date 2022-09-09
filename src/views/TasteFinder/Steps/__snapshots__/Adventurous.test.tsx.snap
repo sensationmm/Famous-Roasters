@@ -23,7 +23,7 @@ exports[`Adventurous partial view Renders correctly 1`] = `
             class="flex mt-4"
           >
             <svg
-              class="mr-2.5 fill-brand-black stroke-brand-black"
+              class="mr-2.5"
               fill="inherit"
               height="20"
               viewBox="0 0 20 20"
@@ -57,7 +57,7 @@ exports[`Adventurous partial view Renders correctly 1`] = `
             class="flex mt-4"
           >
             <svg
-              class="mr-2.5 fill-brand-black stroke-brand-black"
+              class="mr-2.5"
               fill="inherit"
               height="20"
               viewBox="0 0 20 20"
@@ -97,7 +97,7 @@ exports[`Adventurous partial view Renders correctly 1`] = `
           >
             <div>
               <svg
-                class="undefined fill-brand-black stroke-brand-black"
+                class="undefined"
                 fill="inherit"
                 height="24"
                 viewBox="0 0 16 16"
@@ -117,7 +117,7 @@ exports[`Adventurous partial view Renders correctly 1`] = `
               class="flex w-20 h-20 ml-4 mr-4 rounded-full bg-brand-grey-whisper items-center justify-center shrink-0"
             >
               <svg
-                class="undefined fill-brand-black stroke-brand-black"
+                class="undefined"
                 fill="inherit"
                 height="48"
                 viewBox="0 0 50 40"
@@ -149,7 +149,7 @@ exports[`Adventurous partial view Renders correctly 1`] = `
           >
             <div>
               <svg
-                class="undefined fill-brand-black stroke-brand-black"
+                class="undefined"
                 fill="inherit"
                 height="24"
                 viewBox="0 0 16 16"
@@ -169,7 +169,7 @@ exports[`Adventurous partial view Renders correctly 1`] = `
               class="flex w-20 h-20 ml-4 mr-4 rounded-full bg-brand-grey-whisper items-center justify-center shrink-0"
             >
               <svg
-                class="undefined fill-brand-black stroke-brand-black"
+                class="undefined"
                 fill="inherit"
                 height="48"
                 viewBox="0 0 60 60"

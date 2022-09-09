@@ -7,10 +7,12 @@ import {
   SortBy,
   useClearRefinements,
   useCurrentRefinements,
+  useInstantSearch,
   useRefinementList,
 } from 'react-instantsearch-hooks-web'
 import CheckboxFilter from 'src/components/AlgoliaSearch/CheckboxFilter'
 import Hit from 'src/components/AlgoliaSearch/Hit'
+import { ProductTileLoader } from 'src/components/ProductTile'
 
 import { AromaFilterButton } from './AromaFilter'
 import { FiltersMenuMobile } from './FiltersMenuMobile'
@@ -21,7 +23,24 @@ import Stats from './Stats'
 
 const CoffeeSearch: React.FC = () => {
   const { t } = useTranslation()
+  const search = useInstantSearch()
+  const productHits = search?.results?.nbHits
+  const numberOfHitsToShow = 12
+  const numberOfTiles = Array(numberOfHitsToShow)
 
+  const renderContent = () =>
+    productHits ? (
+      <Hits
+        hitComponent={Hit}
+        classNames={{ root: 'mb-8', list: 'grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3' }}
+      />
+    ) : (
+      <div className="grid gap-2 grid-cols-1 mb-8 md:grid-cols-2 xl:grid-cols-3">
+        {[...numberOfTiles].map(() => (
+          <ProductTileLoader />
+        ))}
+      </div>
+    )
   // Initialize tasteProfile filters so we don't lose their state when dropdown closes
   useRefinementList({ attribute: 'meta.my_fields.bitterness' })
   useRefinementList({ attribute: 'meta.my_fields.acidity' })
@@ -35,7 +54,7 @@ const CoffeeSearch: React.FC = () => {
     <>
       <Configure
         distinct={true} // show products, not variants
-        hitsPerPage={12}
+        hitsPerPage={numberOfHitsToShow}
         maxValuesPerFacet={100}
         facetFilters={['collections:coffee', 'meta.my_fields.publishedToFrontend:true']}
       />
@@ -132,10 +151,7 @@ const CoffeeSearch: React.FC = () => {
         <Stats />
       </div>
 
-      <Hits
-        hitComponent={Hit}
-        classNames={{ root: 'mb-8', list: 'grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3' }}
-      />
+      {renderContent()}
       <Pagination />
     </>
   )

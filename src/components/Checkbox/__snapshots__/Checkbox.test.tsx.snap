@@ -8,7 +8,7 @@ exports[`Checkbox component Renders correctly 1`] = `
   >
     <div>
       <svg
-        class="undefined fill-brand-black stroke-brand-black"
+        class="undefined"
         fill="inherit"
         height="24"
         viewBox="0 0 24 24"
@@ -41,7 +41,7 @@ exports[`Checkbox component Renders correctly for selected 1`] = `
   >
     <div>
       <svg
-        class="undefined fill-brand-black stroke-brand-black"
+        class="undefined"
         fill="inherit"
         height="24"
         viewBox="0 0 24 24"

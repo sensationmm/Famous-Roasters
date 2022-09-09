@@ -6,7 +6,7 @@ exports[`ErrorBox component Renders correctly 1`] = `
     class=" flex bg-brand-grey-whisper p-4 mb-8 rounded"
   >
     <svg
-      class="mt-1 mr-3 fill-negative shrink-0 fill-brand-black stroke-brand-black"
+      class="mt-1 mr-3 fill-negative shrink-0"
       fill="inherit"
       height="16"
       viewBox="0 0 16 16"
@@ -40,7 +40,7 @@ exports[`ErrorBox component Renders correctly with className override 1`] = `
     class="text-bold flex bg-brand-grey-whisper p-4 mb-8 rounded"
   >
     <svg
-      class="mt-1 mr-3 fill-negative shrink-0 fill-brand-black stroke-brand-black"
+      class="mt-1 mr-3 fill-negative shrink-0"
       fill="inherit"
       height="16"
       viewBox="0 0 16 16"

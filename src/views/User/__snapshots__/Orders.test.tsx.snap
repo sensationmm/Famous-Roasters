@@ -32,7 +32,7 @@ exports[`Orders view Handles error call 1`] = `
                   Open menu
                 </span>
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -127,7 +127,7 @@ exports[`Orders view Handles error call 1`] = `
                   href="//shop.60beans.com/profile"
                 >
                   <svg
-                    class="undefined fill-brand-black stroke-brand-black"
+                    class="undefined"
                     fill="inherit"
                     height="24"
                     viewBox="0 0 24 25"
@@ -205,7 +205,7 @@ exports[`Orders view Handles error call 1`] = `
                 value=""
               />
               <svg
-                class="absolute right-3 top-[50%] translate-y-[-50%] stroke-coreUI-text-tertiary fill-brand-black stroke-brand-black"
+                class="absolute right-3 top-[50%] translate-y-[-50%] stroke-coreUI-text-tertiary"
                 fill="inherit"
                 height="16"
                 viewBox="0 0 14 14"
@@ -238,8 +238,9 @@ exports[`Orders view Handles error call 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 class="inline-flex justify-between w-full px-3 py-0.5 text-left bg-white rounded-full border border-coreUI-background-images cursor-default"
+                data-headlessui-state=""
                 data-testid="button-listbox"
-                id="headlessui-listbox-button-:re:"
+                id="headlessui-listbox-button-:rc:"
                 type="button"
               >
                 <span
@@ -343,15 +344,6 @@ exports[`Orders view Handles error call 1`] = `
                 Karriere bei 60beans
               </a>
             </li>
-            <li
-              class="mb-4"
-            >
-              <a
-                href="//www.60beans.com/refund-policy"
-              >
-                Wiederrufsrecht
-              </a>
-            </li>
           </ul>
           <ul
             class="mb-14"
@@ -432,6 +424,15 @@ exports[`Orders view Handles error call 1`] = `
                 Allgemeine Geschäftsbedingungen
               </a>
             </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/widerrufsrecht"
+              >
+                Widerrufsrecht
+              </a>
+            </li>
           </ul>
         </div>
         <div
@@ -452,7 +453,7 @@ exports[`Orders view Handles error call 1`] = `
                 href="//www.facebook.com/60beans.shop"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -476,7 +477,7 @@ exports[`Orders view Handles error call 1`] = `
                 href="//www.instagram.com/60beans/"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -500,7 +501,7 @@ exports[`Orders view Handles error call 1`] = `
                 href="//www.linkedin.com/company/86587560/"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -592,7 +593,7 @@ exports[`Orders view Renders correctly 1`] = `
                   Open menu
                 </span>
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -687,7 +688,7 @@ exports[`Orders view Renders correctly 1`] = `
                   href="//shop.60beans.com/profile"
                 >
                   <svg
-                    class="undefined fill-brand-black stroke-brand-black"
+                    class="undefined"
                     fill="inherit"
                     height="24"
                     viewBox="0 0 24 25"
@@ -765,7 +766,7 @@ exports[`Orders view Renders correctly 1`] = `
                 value=""
               />
               <svg
-                class="absolute right-3 top-[50%] translate-y-[-50%] stroke-coreUI-text-tertiary fill-brand-black stroke-brand-black"
+                class="absolute right-3 top-[50%] translate-y-[-50%] stroke-coreUI-text-tertiary"
                 fill="inherit"
                 height="16"
                 viewBox="0 0 14 14"
@@ -798,6 +799,7 @@ exports[`Orders view Renders correctly 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 class="inline-flex justify-between w-full px-3 py-0.5 text-left bg-white rounded-full border border-coreUI-background-images cursor-default"
+                data-headlessui-state=""
                 data-testid="button-listbox"
                 id="headlessui-listbox-button-:r0:"
                 type="button"
@@ -1367,15 +1369,6 @@ exports[`Orders view Renders correctly 1`] = `
                 Karriere bei 60beans
               </a>
             </li>
-            <li
-              class="mb-4"
-            >
-              <a
-                href="//www.60beans.com/refund-policy"
-              >
-                Wiederrufsrecht
-              </a>
-            </li>
           </ul>
           <ul
             class="mb-14"
@@ -1456,6 +1449,15 @@ exports[`Orders view Renders correctly 1`] = `
                 Allgemeine Geschäftsbedingungen
               </a>
             </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/widerrufsrecht"
+              >
+                Widerrufsrecht
+              </a>
+            </li>
           </ul>
         </div>
         <div
@@ -1476,7 +1478,7 @@ exports[`Orders view Renders correctly 1`] = `
                 href="//www.facebook.com/60beans.shop"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -1500,7 +1502,7 @@ exports[`Orders view Renders correctly 1`] = `
                 href="//www.instagram.com/60beans/"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -1524,7 +1526,7 @@ exports[`Orders view Renders correctly 1`] = `
                 href="//www.linkedin.com/company/86587560/"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -1616,7 +1618,7 @@ exports[`Orders view Renders correctly with no orders 1`] = `
                   Open menu
                 </span>
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -1711,7 +1713,7 @@ exports[`Orders view Renders correctly with no orders 1`] = `
                   href="//shop.60beans.com/profile"
                 >
                   <svg
-                    class="undefined fill-brand-black stroke-brand-black"
+                    class="undefined"
                     fill="inherit"
                     height="24"
                     viewBox="0 0 24 25"
@@ -1789,7 +1791,7 @@ exports[`Orders view Renders correctly with no orders 1`] = `
                 value=""
               />
               <svg
-                class="absolute right-3 top-[50%] translate-y-[-50%] stroke-coreUI-text-tertiary fill-brand-black stroke-brand-black"
+                class="absolute right-3 top-[50%] translate-y-[-50%] stroke-coreUI-text-tertiary"
                 fill="inherit"
                 height="16"
                 viewBox="0 0 14 14"
@@ -1822,6 +1824,7 @@ exports[`Orders view Renders correctly with no orders 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 class="inline-flex justify-between w-full px-3 py-0.5 text-left bg-white rounded-full border border-coreUI-background-images cursor-default"
+                data-headlessui-state=""
                 data-testid="button-listbox"
                 id="headlessui-listbox-button-:r1:"
                 type="button"
@@ -1927,15 +1930,6 @@ exports[`Orders view Renders correctly with no orders 1`] = `
                 Karriere bei 60beans
               </a>
             </li>
-            <li
-              class="mb-4"
-            >
-              <a
-                href="//www.60beans.com/refund-policy"
-              >
-                Wiederrufsrecht
-              </a>
-            </li>
           </ul>
           <ul
             class="mb-14"
@@ -2016,6 +2010,15 @@ exports[`Orders view Renders correctly with no orders 1`] = `
                 Allgemeine Geschäftsbedingungen
               </a>
             </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/widerrufsrecht"
+              >
+                Widerrufsrecht
+              </a>
+            </li>
           </ul>
         </div>
         <div
@@ -2036,7 +2039,7 @@ exports[`Orders view Renders correctly with no orders 1`] = `
                 href="//www.facebook.com/60beans.shop"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -2060,7 +2063,7 @@ exports[`Orders view Renders correctly with no orders 1`] = `
                 href="//www.instagram.com/60beans/"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -2084,7 +2087,7 @@ exports[`Orders view Renders correctly with no orders 1`] = `
                 href="//www.linkedin.com/company/86587560/"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -2176,7 +2179,7 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
                   Open menu
                 </span>
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -2271,7 +2274,7 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
                   href="//shop.60beans.com/profile"
                 >
                   <svg
-                    class="undefined fill-brand-black stroke-brand-black"
+                    class="undefined"
                     fill="inherit"
                     height="24"
                     viewBox="0 0 24 25"
@@ -2349,7 +2352,7 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
                 value="12345"
               />
               <svg
-                class="absolute right-3 top-[50%] translate-y-[-50%] stroke-coreUI-text-tertiary fill-brand-black stroke-brand-black"
+                class="absolute right-3 top-[50%] translate-y-[-50%] stroke-coreUI-text-tertiary"
                 fill="inherit"
                 height="16"
                 viewBox="0 0 14 14"
@@ -2382,8 +2385,9 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 class="inline-flex justify-between w-full px-3 py-0.5 text-left bg-white rounded-full border border-coreUI-background-images cursor-default"
+                data-headlessui-state=""
                 data-testid="button-listbox"
-                id="headlessui-listbox-button-:rd:"
+                id="headlessui-listbox-button-:rb:"
                 type="button"
               >
                 <span
@@ -2482,15 +2486,6 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
                 Karriere bei 60beans
               </a>
             </li>
-            <li
-              class="mb-4"
-            >
-              <a
-                href="//www.60beans.com/refund-policy"
-              >
-                Wiederrufsrecht
-              </a>
-            </li>
           </ul>
           <ul
             class="mb-14"
@@ -2571,6 +2566,15 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
                 Allgemeine Geschäftsbedingungen
               </a>
             </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/widerrufsrecht"
+              >
+                Widerrufsrecht
+              </a>
+            </li>
           </ul>
         </div>
         <div
@@ -2591,7 +2595,7 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
                 href="//www.facebook.com/60beans.shop"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -2615,7 +2619,7 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
                 href="//www.instagram.com/60beans/"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -2639,7 +2643,7 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
                 href="//www.linkedin.com/company/86587560/"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -2731,7 +2735,7 @@ exports[`Orders view sets filter value 1`] = `
                   Open menu
                 </span>
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -2826,7 +2830,7 @@ exports[`Orders view sets filter value 1`] = `
                   href="//shop.60beans.com/profile"
                 >
                   <svg
-                    class="undefined fill-brand-black stroke-brand-black"
+                    class="undefined"
                     fill="inherit"
                     height="24"
                     viewBox="0 0 24 25"
@@ -2904,7 +2908,7 @@ exports[`Orders view sets filter value 1`] = `
                 value="8953"
               />
               <svg
-                class="absolute right-3 top-[50%] translate-y-[-50%] stroke-coreUI-text-tertiary fill-brand-black stroke-brand-black"
+                class="absolute right-3 top-[50%] translate-y-[-50%] stroke-coreUI-text-tertiary"
                 fill="inherit"
                 height="16"
                 viewBox="0 0 14 14"
@@ -2937,6 +2941,7 @@ exports[`Orders view sets filter value 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 class="inline-flex justify-between w-full px-3 py-0.5 text-left bg-white rounded-full border border-coreUI-background-images cursor-default"
+                data-headlessui-state=""
                 data-testid="button-listbox"
                 id="headlessui-listbox-button-:r2:"
                 type="button"
@@ -3037,15 +3042,6 @@ exports[`Orders view sets filter value 1`] = `
                 Karriere bei 60beans
               </a>
             </li>
-            <li
-              class="mb-4"
-            >
-              <a
-                href="//www.60beans.com/refund-policy"
-              >
-                Wiederrufsrecht
-              </a>
-            </li>
           </ul>
           <ul
             class="mb-14"
@@ -3126,6 +3122,15 @@ exports[`Orders view sets filter value 1`] = `
                 Allgemeine Geschäftsbedingungen
               </a>
             </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/widerrufsrecht"
+              >
+                Widerrufsrecht
+              </a>
+            </li>
           </ul>
         </div>
         <div
@@ -3146,7 +3151,7 @@ exports[`Orders view sets filter value 1`] = `
                 href="//www.facebook.com/60beans.shop"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -3170,7 +3175,7 @@ exports[`Orders view sets filter value 1`] = `
                 href="//www.instagram.com/60beans/"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -3194,7 +3199,7 @@ exports[`Orders view sets filter value 1`] = `
                 href="//www.linkedin.com/company/86587560/"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -3286,7 +3291,7 @@ exports[`Orders view sets sort newest first 1`] = `
                   Open menu
                 </span>
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -3381,7 +3386,7 @@ exports[`Orders view sets sort newest first 1`] = `
                   href="//shop.60beans.com/profile"
                 >
                   <svg
-                    class="undefined fill-brand-black stroke-brand-black"
+                    class="undefined"
                     fill="inherit"
                     height="24"
                     viewBox="0 0 24 25"
@@ -3459,7 +3464,7 @@ exports[`Orders view sets sort newest first 1`] = `
                 value=""
               />
               <svg
-                class="absolute right-3 top-[50%] translate-y-[-50%] stroke-coreUI-text-tertiary fill-brand-black stroke-brand-black"
+                class="absolute right-3 top-[50%] translate-y-[-50%] stroke-coreUI-text-tertiary"
                 fill="inherit"
                 height="16"
                 viewBox="0 0 14 14"
@@ -3492,8 +3497,9 @@ exports[`Orders view sets sort newest first 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 class="inline-flex justify-between w-full px-3 py-0.5 text-left bg-white rounded-full border border-coreUI-background-images cursor-default"
+                data-headlessui-state=""
                 data-testid="button-listbox"
-                id="headlessui-listbox-button-:r8:"
+                id="headlessui-listbox-button-:r7:"
                 type="button"
               >
                 <span
@@ -4061,15 +4067,6 @@ exports[`Orders view sets sort newest first 1`] = `
                 Karriere bei 60beans
               </a>
             </li>
-            <li
-              class="mb-4"
-            >
-              <a
-                href="//www.60beans.com/refund-policy"
-              >
-                Wiederrufsrecht
-              </a>
-            </li>
           </ul>
           <ul
             class="mb-14"
@@ -4150,6 +4147,15 @@ exports[`Orders view sets sort newest first 1`] = `
                 Allgemeine Geschäftsbedingungen
               </a>
             </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/widerrufsrecht"
+              >
+                Widerrufsrecht
+              </a>
+            </li>
           </ul>
         </div>
         <div
@@ -4170,7 +4176,7 @@ exports[`Orders view sets sort newest first 1`] = `
                 href="//www.facebook.com/60beans.shop"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -4194,7 +4200,7 @@ exports[`Orders view sets sort newest first 1`] = `
                 href="//www.instagram.com/60beans/"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -4218,7 +4224,7 @@ exports[`Orders view sets sort newest first 1`] = `
                 href="//www.linkedin.com/company/86587560/"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -4310,7 +4316,7 @@ exports[`Orders view sets sort oldest first 1`] = `
                   Open menu
                 </span>
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -4405,7 +4411,7 @@ exports[`Orders view sets sort oldest first 1`] = `
                   href="//shop.60beans.com/profile"
                 >
                   <svg
-                    class="undefined fill-brand-black stroke-brand-black"
+                    class="undefined"
                     fill="inherit"
                     height="24"
                     viewBox="0 0 24 25"
@@ -4483,7 +4489,7 @@ exports[`Orders view sets sort oldest first 1`] = `
                 value=""
               />
               <svg
-                class="absolute right-3 top-[50%] translate-y-[-50%] stroke-coreUI-text-tertiary fill-brand-black stroke-brand-black"
+                class="absolute right-3 top-[50%] translate-y-[-50%] stroke-coreUI-text-tertiary"
                 fill="inherit"
                 height="16"
                 viewBox="0 0 14 14"
@@ -4516,6 +4522,7 @@ exports[`Orders view sets sort oldest first 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 class="inline-flex justify-between w-full px-3 py-0.5 text-left bg-white rounded-full border border-coreUI-background-images cursor-default"
+                data-headlessui-state=""
                 data-testid="button-listbox"
                 id="headlessui-listbox-button-:r3:"
                 type="button"
@@ -5085,15 +5092,6 @@ exports[`Orders view sets sort oldest first 1`] = `
                 Karriere bei 60beans
               </a>
             </li>
-            <li
-              class="mb-4"
-            >
-              <a
-                href="//www.60beans.com/refund-policy"
-              >
-                Wiederrufsrecht
-              </a>
-            </li>
           </ul>
           <ul
             class="mb-14"
@@ -5174,6 +5172,15 @@ exports[`Orders view sets sort oldest first 1`] = `
                 Allgemeine Geschäftsbedingungen
               </a>
             </li>
+            <li
+              class="mb-4"
+            >
+              <a
+                href="//www.60beans.com/legal/widerrufsrecht"
+              >
+                Widerrufsrecht
+              </a>
+            </li>
           </ul>
         </div>
         <div
@@ -5194,7 +5201,7 @@ exports[`Orders view sets sort oldest first 1`] = `
                 href="//www.facebook.com/60beans.shop"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -5218,7 +5225,7 @@ exports[`Orders view sets sort oldest first 1`] = `
                 href="//www.instagram.com/60beans/"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"
@@ -5242,7 +5249,7 @@ exports[`Orders view sets sort oldest first 1`] = `
                 href="//www.linkedin.com/company/86587560/"
               >
                 <svg
-                  class="undefined fill-brand-black stroke-brand-black"
+                  class="undefined"
                   fill="inherit"
                   height="24"
                   viewBox="0 0 24 24"

@@ -60,7 +60,7 @@ exports[`Badge component Renders icon version correctly 1`] = `
       class="border rounded-full focus:outline-0 focus:ring px-4 py-2 pr-8 focus:ring-primary/30"
     />
     <svg
-      class="absolute right-3 top-[50%] translate-y-[-50%] stroke-coreUI-text-tertiary fill-brand-black stroke-brand-black"
+      class="absolute right-3 top-[50%] translate-y-[-50%] stroke-coreUI-text-tertiary"
       fill="inherit"
       height="16"
       viewBox="0 0 30 30"

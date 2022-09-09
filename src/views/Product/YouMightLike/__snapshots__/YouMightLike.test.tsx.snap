@@ -42,13 +42,13 @@ exports[`Find accessories partial view Renders correctly for a successful call 1
           class="absolute"
         >
           <div
-            class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+            class="flex justify-center items-center shrink-0 self-center relative w-36 h-36"
           >
             <div
-              class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+              class="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36"
             >
               <div
-                class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+                class="block bg-coreUI-text-tertiary rounded w-2/5 h-3/5"
               />
             </div>
           </div>
@@ -132,13 +132,13 @@ exports[`Find accessories partial view Renders correctly for a successful call 1
           class="absolute"
         >
           <div
-            class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+            class="flex justify-center items-center shrink-0 self-center relative w-36 h-36"
           >
             <div
-              class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+              class="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36"
             >
               <div
-                class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+                class="block bg-coreUI-text-tertiary rounded w-2/5 h-3/5"
               />
             </div>
           </div>
@@ -222,13 +222,13 @@ exports[`Find accessories partial view Renders correctly for a successful call 1
           class="absolute"
         >
           <div
-            class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+            class="flex justify-center items-center shrink-0 self-center relative w-36 h-36"
           >
             <div
-              class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+              class="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36"
             >
               <div
-                class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+                class="block bg-coreUI-text-tertiary rounded w-2/5 h-3/5"
               />
             </div>
           </div>
@@ -312,13 +312,13 @@ exports[`Find accessories partial view Renders correctly for a successful call 1
           class="absolute"
         >
           <div
-            class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+            class="flex justify-center items-center shrink-0 self-center relative w-36 h-36"
           >
             <div
-              class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+              class="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36"
             >
               <div
-                class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+                class="block bg-coreUI-text-tertiary rounded w-2/5 h-3/5"
               />
             </div>
           </div>
@@ -402,13 +402,13 @@ exports[`Find accessories partial view Renders correctly for a successful call 1
           class="absolute"
         >
           <div
-            class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+            class="flex justify-center items-center shrink-0 self-center relative w-36 h-36"
           >
             <div
-              class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+              class="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36"
             >
               <div
-                class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+                class="block bg-coreUI-text-tertiary rounded w-2/5 h-3/5"
               />
             </div>
           </div>
@@ -492,13 +492,13 @@ exports[`Find accessories partial view Renders correctly for a successful call 1
           class="absolute"
         >
           <div
-            class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+            class="flex justify-center items-center shrink-0 self-center relative w-36 h-36"
           >
             <div
-              class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+              class="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36"
             >
               <div
-                class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+                class="block bg-coreUI-text-tertiary rounded w-2/5 h-3/5"
               />
             </div>
           </div>
@@ -591,13 +591,13 @@ exports[`Find accessories partial view Renders correctly for a successful call n
           class="absolute"
         >
           <div
-            class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+            class="flex justify-center items-center shrink-0 self-center relative w-36 h-36"
           >
             <div
-              class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+              class="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36"
             >
               <div
-                class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+                class="block bg-coreUI-text-tertiary rounded w-2/5 h-3/5"
               />
             </div>
           </div>
@@ -681,13 +681,13 @@ exports[`Find accessories partial view Renders correctly for a successful call n
           class="absolute"
         >
           <div
-            class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+            class="flex justify-center items-center shrink-0 self-center relative w-36 h-36"
           >
             <div
-              class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+              class="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36"
             >
               <div
-                class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+                class="block bg-coreUI-text-tertiary rounded w-2/5 h-3/5"
               />
             </div>
           </div>
@@ -771,13 +771,13 @@ exports[`Find accessories partial view Renders correctly for a successful call n
           class="absolute"
         >
           <div
-            class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+            class="flex justify-center items-center shrink-0 self-center relative w-36 h-36"
           >
             <div
-              class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+              class="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36"
             >
               <div
-                class="block bg-coreUI-text-tertiary rounded w-2/5 h-4/5"
+                class="block bg-coreUI-text-tertiary rounded w-2/5 h-3/5"
               />
             </div>
           </div>

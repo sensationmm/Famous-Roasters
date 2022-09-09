@@ -7,7 +7,7 @@ exports[`BeanScaleTag component Renders correctly for high scale 1`] = `
       class="inline-flex items-center rounded-full px-3 py-1 bg-coreUI-background-images "
     >
       <svg
-        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
+        class="ml-0.5 stroke-brand-black fill-brand-black"
         fill="inherit"
         height="10"
         viewBox="0 0 11 11"
@@ -23,7 +23,7 @@ exports[`BeanScaleTag component Renders correctly for high scale 1`] = `
         />
       </svg>
       <svg
-        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
+        class="ml-0.5 stroke-brand-black fill-brand-black"
         fill="inherit"
         height="10"
         viewBox="0 0 11 11"
@@ -39,7 +39,7 @@ exports[`BeanScaleTag component Renders correctly for high scale 1`] = `
         />
       </svg>
       <svg
-        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
+        class="ml-0.5 stroke-brand-black fill-brand-black"
         fill="inherit"
         height="10"
         viewBox="0 0 11 11"
@@ -71,7 +71,7 @@ exports[`BeanScaleTag component Renders correctly for low scale 1`] = `
       class="inline-flex items-center rounded-full px-3 py-1 bg-coreUI-background-images "
     >
       <svg
-        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
+        class="ml-0.5 stroke-brand-black fill-brand-black"
         fill="inherit"
         height="10"
         viewBox="0 0 11 11"
@@ -87,7 +87,7 @@ exports[`BeanScaleTag component Renders correctly for low scale 1`] = `
         />
       </svg>
       <svg
-        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
+        class="ml-0.5 stroke-brand-black fill-brand-black"
         fill="inherit"
         height="10"
         viewBox="0 0 11 11"
@@ -103,7 +103,7 @@ exports[`BeanScaleTag component Renders correctly for low scale 1`] = `
         />
       </svg>
       <svg
-        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
+        class="ml-0.5 stroke-brand-black fill-brand-black"
         fill="inherit"
         height="10"
         viewBox="0 0 11 11"
@@ -135,7 +135,7 @@ exports[`BeanScaleTag component Renders correctly for mid scale 1`] = `
       class="inline-flex items-center rounded-full px-3 py-1 bg-coreUI-background-images "
     >
       <svg
-        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
+        class="ml-0.5 stroke-brand-black fill-brand-black"
         fill="inherit"
         height="10"
         viewBox="0 0 11 11"
@@ -151,7 +151,7 @@ exports[`BeanScaleTag component Renders correctly for mid scale 1`] = `
         />
       </svg>
       <svg
-        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
+        class="ml-0.5 stroke-brand-black fill-brand-black"
         fill="inherit"
         height="10"
         viewBox="0 0 11 11"
@@ -167,7 +167,7 @@ exports[`BeanScaleTag component Renders correctly for mid scale 1`] = `
         />
       </svg>
       <svg
-        class="ml-0.5 stroke-brand-black fill-brand-black fill-brand-black stroke-brand-black"
+        class="ml-0.5 stroke-brand-black fill-brand-black"
         fill="inherit"
         height="10"
         viewBox="0 0 11 11"
