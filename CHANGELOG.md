@@ -1,3 +1,10 @@
+## [1.72.3](https://github.com/Famous-Roasters/frontend/compare/v1.72.2...v1.72.3) (2022-09-10)
+
+
+### Bug Fixes
+
+* **catalogue:** test placeholder render ([185721b](https://github.com/Famous-Roasters/frontend/commit/185721b47888f0ea2558c5135a1126e40dd3c10a))
+
 ## [1.72.2](https://github.com/Famous-Roasters/frontend/compare/v1.72.1...v1.72.2) (2022-09-09)
 
 
