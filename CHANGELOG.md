@@ -1,3 +1,11 @@
+## [1.72.5](https://github.com/Famous-Roasters/frontend/compare/v1.72.4...v1.72.5) (2022-09-10)
+
+
+### Bug Fixes
+
+* **catalogue:** main filter clearing others ([#263](https://github.com/Famous-Roasters/frontend/issues/263)) ([f41cc6a](https://github.com/Famous-Roasters/frontend/commit/f41cc6a3d8c178dbeb6bed41027a0fa01b48df67))
+* **catalogue:** tablet filter layout ([#264](https://github.com/Famous-Roasters/frontend/issues/264)) ([ff20e57](https://github.com/Famous-Roasters/frontend/commit/ff20e577c7d7e36a911386e41e069bbc6e307d6b))
+
 ## [1.72.4](https://github.com/Famous-Roasters/frontend/compare/v1.72.3...v1.72.4) (2022-09-10)
 
 
