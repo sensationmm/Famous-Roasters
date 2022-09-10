@@ -26,8 +26,7 @@ const CoffeeSearch: React.FC = () => {
   const search = useInstantSearch()
   const productHits = search?.results?.nbHits
   const numberOfHitsToShow = 12
-  const numberOfTiles = Array(numberOfHitsToShow)
-  console.log(numberOfHitsToShow, numberOfTiles)
+
   const renderContent = () => {
     return (
       <>
@@ -37,10 +36,9 @@ const CoffeeSearch: React.FC = () => {
           hidden={!productHits}
         />
         <div className={`${productHits > 0 ? 'hidden' : ''} grid gap-2 grid-cols-1 mb-8 md:grid-cols-2 xl:grid-cols-3`}>
-          {[...numberOfTiles].map((_, count) => {
-            console.log(`loader-${count}`)
-            return <ProductTileLoader key={`loader-${count}`} />
-          })}
+          {[...Array(numberOfHitsToShow)].map((_, count) => (
+            <ProductTileLoader key={`loader-${count}`} />
+          ))}
         </div>
       </>
     )
