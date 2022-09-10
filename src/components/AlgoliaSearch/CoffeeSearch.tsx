@@ -33,7 +33,6 @@ const CoffeeSearch: React.FC = () => {
         <Hits
           hitComponent={Hit}
           classNames={{ root: 'mb-8', list: 'grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3' }}
-          hidden={!productHits}
         />
         <div className={`${productHits > 0 ? 'hidden' : ''} grid gap-2 grid-cols-1 mb-8 md:grid-cols-2 xl:grid-cols-3`}>
           {[...Array(numberOfHitsToShow)].map((_, count) => (

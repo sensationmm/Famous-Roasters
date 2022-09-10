@@ -298,9 +298,8 @@ exports[`Product view Renders correctly for a accessories 1`] = `
                     aria-expanded="false"
                     aria-haspopup="true"
                     class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
-                    data-headlessui-state=""
                     data-testid="button-listbox"
-                    id="headlessui-listbox-button-:r2l:"
+                    id="headlessui-listbox-button-:r2n:"
                     type="button"
                   >
                     <span
@@ -346,9 +345,8 @@ exports[`Product view Renders correctly for a accessories 1`] = `
                     aria-expanded="false"
                     aria-haspopup="true"
                     class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
-                    data-headlessui-state=""
                     data-testid="button-listbox"
-                    id="headlessui-listbox-button-:r2m:"
+                    id="headlessui-listbox-button-:r2o:"
                     type="button"
                   >
                     <span
@@ -392,9 +390,8 @@ exports[`Product view Renders correctly for a accessories 1`] = `
                     aria-expanded="false"
                     aria-haspopup="true"
                     class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
-                    data-headlessui-state=""
                     data-testid="button-listbox"
-                    id="headlessui-listbox-button-:r2n:"
+                    id="headlessui-listbox-button-:r2p:"
                     type="button"
                   >
                     <span
@@ -661,12 +658,11 @@ exports[`Product view Renders correctly for a accessories 1`] = `
             class="border-t border-coreUI-border mx-auto w-full py-4"
           >
             <button
-              aria-controls="headlessui-disclosure-panel-:r2p:"
+              aria-controls="headlessui-disclosure-panel-:r2r:"
               class="flex w-full justify-between py-2 text-left"
-              data-headlessui-state="open"
               data-testid="button-disclosure-toggle"
               disabled=""
-              id="headlessui-disclosure-button-:r2o:"
+              id="headlessui-disclosure-button-:r2q:"
               type="button"
             >
               <span
@@ -677,8 +673,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
             </button>
             <div
               class="py-2"
-              data-headlessui-state="open"
-              id="headlessui-disclosure-panel-:r2p:"
+              id="headlessui-disclosure-panel-:r2r:"
             >
               <div
                 class="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
@@ -1998,7 +1993,6 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                     aria-expanded="false"
                     aria-haspopup="true"
                     class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
-                    data-headlessui-state=""
                     data-testid="button-listbox"
                     id="headlessui-listbox-button-:r0:"
                     type="button"
@@ -2048,7 +2042,6 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                     aria-expanded="false"
                     aria-haspopup="true"
                     class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
-                    data-headlessui-state=""
                     data-testid="button-listbox"
                     id="headlessui-listbox-button-:r1:"
                     type="button"
@@ -2094,7 +2087,6 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                     aria-expanded="false"
                     aria-haspopup="true"
                     class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
-                    data-headlessui-state=""
                     data-testid="button-listbox"
                     id="headlessui-listbox-button-:r2:"
                     type="button"
@@ -2366,7 +2358,6 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               aria-controls="headlessui-disclosure-panel-:r4:"
               aria-expanded="true"
               class="flex w-full justify-between py-2 text-left"
-              data-headlessui-state="open"
               data-testid="button-disclosure-toggle"
               id="headlessui-disclosure-button-:r3:"
               type="button"
@@ -2394,7 +2385,6 @@ exports[`Product view Renders correctly for a successful call 1`] = `
             </button>
             <div
               class="py-2"
-              data-headlessui-state="open"
               id="headlessui-disclosure-panel-:r4:"
             >
               <div>
@@ -2678,7 +2668,6 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               aria-controls="headlessui-disclosure-panel-:r6:"
               aria-expanded="true"
               class="flex w-full justify-between py-2 text-left"
-              data-headlessui-state="open"
               data-testid="button-disclosure-toggle"
               id="headlessui-disclosure-button-:r5:"
               type="button"
@@ -2706,7 +2695,6 @@ exports[`Product view Renders correctly for a successful call 1`] = `
             </button>
             <div
               class="py-2"
-              data-headlessui-state="open"
               id="headlessui-disclosure-panel-:r6:"
             >
               <div
@@ -2738,7 +2726,6 @@ exports[`Product view Renders correctly for a successful call 1`] = `
             <button
               aria-controls="headlessui-disclosure-panel-:r8:"
               class="flex w-full justify-between py-2 text-left"
-              data-headlessui-state="open"
               data-testid="button-disclosure-toggle"
               disabled=""
               id="headlessui-disclosure-button-:r7:"
@@ -2752,7 +2739,6 @@ exports[`Product view Renders correctly for a successful call 1`] = `
             </button>
             <div
               class="py-2"
-              data-headlessui-state="open"
               id="headlessui-disclosure-panel-:r8:"
             >
               <div
@@ -3802,7 +3788,6 @@ exports[`Product view Renders correctly for a successful call with International
                     aria-expanded="false"
                     aria-haspopup="true"
                     class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
-                    data-headlessui-state=""
                     data-testid="button-listbox"
                     id="headlessui-listbox-button-:rg:"
                     type="button"
@@ -3852,7 +3837,6 @@ exports[`Product view Renders correctly for a successful call with International
                     aria-expanded="false"
                     aria-haspopup="true"
                     class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
-                    data-headlessui-state=""
                     data-testid="button-listbox"
                     id="headlessui-listbox-button-:rh:"
                     type="button"
@@ -3898,7 +3882,6 @@ exports[`Product view Renders correctly for a successful call with International
                     aria-expanded="false"
                     aria-haspopup="true"
                     class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
-                    data-headlessui-state=""
                     data-testid="button-listbox"
                     id="headlessui-listbox-button-:ri:"
                     type="button"
@@ -4170,7 +4153,6 @@ exports[`Product view Renders correctly for a successful call with International
               aria-controls="headlessui-disclosure-panel-:rk:"
               aria-expanded="true"
               class="flex w-full justify-between py-2 text-left"
-              data-headlessui-state="open"
               data-testid="button-disclosure-toggle"
               id="headlessui-disclosure-button-:rj:"
               type="button"
@@ -4198,7 +4180,6 @@ exports[`Product view Renders correctly for a successful call with International
             </button>
             <div
               class="py-2"
-              data-headlessui-state="open"
               id="headlessui-disclosure-panel-:rk:"
             >
               <div>
@@ -4482,7 +4463,6 @@ exports[`Product view Renders correctly for a successful call with International
               aria-controls="headlessui-disclosure-panel-:rm:"
               aria-expanded="true"
               class="flex w-full justify-between py-2 text-left"
-              data-headlessui-state="open"
               data-testid="button-disclosure-toggle"
               id="headlessui-disclosure-button-:rl:"
               type="button"
@@ -4510,7 +4490,6 @@ exports[`Product view Renders correctly for a successful call with International
             </button>
             <div
               class="py-2"
-              data-headlessui-state="open"
               id="headlessui-disclosure-panel-:rm:"
             >
               <div
@@ -4542,7 +4521,6 @@ exports[`Product view Renders correctly for a successful call with International
             <button
               aria-controls="headlessui-disclosure-panel-:ro:"
               class="flex w-full justify-between py-2 text-left"
-              data-headlessui-state="open"
               data-testid="button-disclosure-toggle"
               disabled=""
               id="headlessui-disclosure-button-:rn:"
@@ -4556,7 +4534,6 @@ exports[`Product view Renders correctly for a successful call with International
             </button>
             <div
               class="py-2"
-              data-headlessui-state="open"
               id="headlessui-disclosure-panel-:ro:"
             >
               <div
@@ -5593,7 +5570,6 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                     aria-expanded="false"
                     aria-haspopup="true"
                     class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
-                    data-headlessui-state=""
                     data-testid="button-listbox"
                     id="headlessui-listbox-button-:r9:"
                     type="button"
@@ -5643,7 +5619,6 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                     aria-expanded="false"
                     aria-haspopup="true"
                     class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
-                    data-headlessui-state=""
                     data-testid="button-listbox"
                     id="headlessui-listbox-button-:ra:"
                     type="button"
@@ -5689,7 +5664,6 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                     aria-expanded="false"
                     aria-haspopup="true"
                     class="inline-flex justify-between w-full px-4 py-2 text-left bg-white rounded-full border border-coreUI-text-tertiary cursor-default"
-                    data-headlessui-state=""
                     data-testid="button-listbox"
                     id="headlessui-listbox-button-:rb:"
                     type="button"
@@ -5961,7 +5935,6 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
               aria-controls="headlessui-disclosure-panel-:rd:"
               aria-expanded="true"
               class="flex w-full justify-between py-2 text-left"
-              data-headlessui-state="open"
               data-testid="button-disclosure-toggle"
               id="headlessui-disclosure-button-:rc:"
               type="button"
@@ -5989,7 +5962,6 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
             </button>
             <div
               class="py-2"
-              data-headlessui-state="open"
               id="headlessui-disclosure-panel-:rd:"
             >
               <div>
@@ -6273,7 +6245,6 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
               aria-controls="headlessui-disclosure-panel-:rf:"
               aria-expanded="true"
               class="flex w-full justify-between py-2 text-left"
-              data-headlessui-state="open"
               data-testid="button-disclosure-toggle"
               id="headlessui-disclosure-button-:re:"
               type="button"
@@ -6301,7 +6272,6 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
             </button>
             <div
               class="py-2"
-              data-headlessui-state="open"
               id="headlessui-disclosure-panel-:rf:"
             >
               <div
