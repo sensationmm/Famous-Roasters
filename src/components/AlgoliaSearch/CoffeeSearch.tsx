@@ -63,7 +63,7 @@ const CoffeeSearch: React.FC = () => {
       />
 
       {/* Top row: Method, Decaf (mobile), Query */}
-      <div className="md:flex gap-x-4 mt-6 mb-4">
+      <div className="xl:flex gap-x-4 mt-6 mb-4">
         <SingleSelectFilter
           attribute="meta.my_fields.coffee_type"
           defaultText={t('pages.catalogue.filters.meta.my_fields.coffee_type')}
@@ -71,7 +71,7 @@ const CoffeeSearch: React.FC = () => {
         />
 
         {/* Decaf filter (mobile) */}
-        <div className="my-4 md:hidden">
+        <div className="my-4 xl:hidden">
           <CheckboxFilter attribute="meta.my_fields.decaf" />
         </div>
 
@@ -81,7 +81,7 @@ const CoffeeSearch: React.FC = () => {
             root: 'ml-auto',
             loadingIndicator: 'hidden',
             input:
-              'rounded-full border border-coreUI-text-tertiary px-6 py-2 w-full md:w-96 focus:outline-2 focus:outline-offset-2 focus:outline-primary/30 focus:border-brand-black',
+              'rounded-full border border-coreUI-text-tertiary px-6 py-2 w-full xl:w-96 focus:outline-2 focus:outline-offset-2 focus:outline-primary/30 focus:border-brand-black',
             submitIcon: '-ml-6',
             resetIcon: 'hidden',
             reset: 'hidden',
@@ -90,7 +90,7 @@ const CoffeeSearch: React.FC = () => {
       </div>
 
       {/* Middle row: Filters (desktop) */}
-      <div className="hidden md:flex">
+      <div className="hidden xl:flex">
         <div className="flex flex-row gap-x-4 justify-end w-full">
           {/* Decaf filter (desktop) */}
           <div className="mr-auto mt-2">
@@ -114,12 +114,12 @@ const CoffeeSearch: React.FC = () => {
 
       {/* Bottom row: Stats (desktop), Filters (mobile), Sorting*/}
       <div className="flex flex-row space-between gap-x-4 my-4">
-        <div className="hidden md:flex w-1/2">
+        <div className="hidden xl:flex w-1/2">
           <Stats />
         </div>
 
         {/* Filters mobile */}
-        <div className="w-1/2 md:hidden">
+        <div className="w-1/2 xl:hidden">
           <FiltersMenuMobile
             filters={[
               { type: 'list', attribute: 'meta.my_fields.aroma', showSwatches: true },
@@ -150,7 +150,7 @@ const CoffeeSearch: React.FC = () => {
         </div>
       </div>
 
-      <div className="md:hidden">
+      <div className="xl:hidden">
         <Stats />
       </div>
 

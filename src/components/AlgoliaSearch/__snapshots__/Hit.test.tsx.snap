@@ -9,7 +9,7 @@ exports[`Hit component Renders correctly 1`] = `
       class="flex pt-8 md:px-6"
     >
       <div
-        class="flex justify-center items-center shrink-0 self-center relative w-36 h-36"
+        class="flex justify-center items-center shrink-0 relative w-36 h-36"
       >
         <div
           class="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36"
