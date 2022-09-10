@@ -1,3 +1,10 @@
+## [1.72.4](https://github.com/Famous-Roasters/frontend/compare/v1.72.3...v1.72.4) (2022-09-10)
+
+
+### Bug Fixes
+
+* **catalogue:** different approch to array iteration ([6c7a6a7](https://github.com/Famous-Roasters/frontend/commit/6c7a6a775214b0ba02e10fb1a32ff2dab6abecee))
+
 ## [1.72.3](https://github.com/Famous-Roasters/frontend/compare/v1.72.2...v1.72.3) (2022-09-10)
 
 
