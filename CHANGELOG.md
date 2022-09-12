@@ -1,3 +1,10 @@
+## [1.72.6](https://github.com/Famous-Roasters/frontend/compare/v1.72.5...v1.72.6) (2022-09-12)
+
+
+### Bug Fixes
+
+* **catalogue:** mobile filter state ([19993d6](https://github.com/Famous-Roasters/frontend/commit/19993d69d56bc009a76962324b0aff01533757a6))
+
 ## [1.72.5](https://github.com/Famous-Roasters/frontend/compare/v1.72.4...v1.72.5) (2022-09-10)
 
 
