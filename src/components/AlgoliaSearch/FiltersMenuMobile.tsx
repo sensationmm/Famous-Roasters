@@ -107,6 +107,7 @@ export const FiltersMenuMobile: React.FC<FiltersMenuMobileProps> = ({ filters }:
             leave="transition ease-in-out duration-300 transform"
             leaveFrom="translate-x-0"
             leaveTo="-translate-x-full"
+            unmount={false}
           >
             <div className="relative w-full bg-white shadow-xl flex flex-col overflow-y-auto justify-between">
               {/* Top row */}

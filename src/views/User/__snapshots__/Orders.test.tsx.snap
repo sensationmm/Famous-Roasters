@@ -238,8 +238,9 @@ exports[`Orders view Handles error call 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 class="inline-flex justify-between w-full px-3 py-0.5 text-left bg-white rounded-full border border-coreUI-background-images cursor-default"
+                data-headlessui-state=""
                 data-testid="button-listbox"
-                id="headlessui-listbox-button-:re:"
+                id="headlessui-listbox-button-:rc:"
                 type="button"
               >
                 <span
@@ -798,6 +799,7 @@ exports[`Orders view Renders correctly 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 class="inline-flex justify-between w-full px-3 py-0.5 text-left bg-white rounded-full border border-coreUI-background-images cursor-default"
+                data-headlessui-state=""
                 data-testid="button-listbox"
                 id="headlessui-listbox-button-:r0:"
                 type="button"
@@ -1822,6 +1824,7 @@ exports[`Orders view Renders correctly with no orders 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 class="inline-flex justify-between w-full px-3 py-0.5 text-left bg-white rounded-full border border-coreUI-background-images cursor-default"
+                data-headlessui-state=""
                 data-testid="button-listbox"
                 id="headlessui-listbox-button-:r1:"
                 type="button"
@@ -2382,8 +2385,9 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 class="inline-flex justify-between w-full px-3 py-0.5 text-left bg-white rounded-full border border-coreUI-background-images cursor-default"
+                data-headlessui-state=""
                 data-testid="button-listbox"
-                id="headlessui-listbox-button-:rd:"
+                id="headlessui-listbox-button-:rb:"
                 type="button"
               >
                 <span
@@ -2937,6 +2941,7 @@ exports[`Orders view sets filter value 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 class="inline-flex justify-between w-full px-3 py-0.5 text-left bg-white rounded-full border border-coreUI-background-images cursor-default"
+                data-headlessui-state=""
                 data-testid="button-listbox"
                 id="headlessui-listbox-button-:r2:"
                 type="button"
@@ -3492,8 +3497,9 @@ exports[`Orders view sets sort newest first 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 class="inline-flex justify-between w-full px-3 py-0.5 text-left bg-white rounded-full border border-coreUI-background-images cursor-default"
+                data-headlessui-state=""
                 data-testid="button-listbox"
-                id="headlessui-listbox-button-:r8:"
+                id="headlessui-listbox-button-:r7:"
                 type="button"
               >
                 <span
@@ -4516,6 +4522,7 @@ exports[`Orders view sets sort oldest first 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 class="inline-flex justify-between w-full px-3 py-0.5 text-left bg-white rounded-full border border-coreUI-background-images cursor-default"
+                data-headlessui-state=""
                 data-testid="button-listbox"
                 id="headlessui-listbox-button-:r3:"
                 type="button"
