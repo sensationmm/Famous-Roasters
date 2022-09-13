@@ -115,14 +115,7 @@ export const AromaFilterButton: React.FC = () => {
     </button>
   )
 
-  return (
-    <Dialog
-      trigger={renderButton()}
-      body={<AromaFilter />}
-      title={t('pages.catalogue.filters.tasteProfile')}
-      unmount={false}
-    />
-  )
+  return <Dialog trigger={renderButton()} body={<AromaFilter />} title={t('pages.catalogue.filters.tasteProfile')} />
 }
 
 interface AromaFilterMobileProps {
