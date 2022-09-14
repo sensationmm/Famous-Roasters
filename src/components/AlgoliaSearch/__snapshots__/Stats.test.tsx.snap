@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stats component Handles failure 1`] = `<div />`;
+
+exports[`Stats component Renders correctly 1`] = `
+<div>
+  <div
+    class="mt-4"
+  >
+    Wir haben 
+    <span
+      class="font-bold"
+    >
+      1000 Produkte
+    </span>
+     gefunden.
+  </div>
+</div>
+`;
+
+exports[`Stats component Renders correctly for zero results 1`] = `
+<div>
+  <div
+    class="mt-4 text-coreUI-text-tertiary"
+  >
+    Wir haben leder 
+    <span
+      class="font-bold"
+    >
+      kein Produkte
+    </span>
+     gefunden.
+  </div>
+</div>
+`;

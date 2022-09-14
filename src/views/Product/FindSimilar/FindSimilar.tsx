@@ -38,7 +38,7 @@ export const FindSimilar: React.FC<FindSimilarProps> = ({ aroma, productId }: Fi
       last: null,
       before: null,
       after: null,
-      sortKey: undefined,
+      sortKey: 'BEST_SELLING',
       reverse: undefined,
       filters: { productMetafield: { namespace: 'my_fields', key: 'aroma', value: `${aroma}` } },
     },

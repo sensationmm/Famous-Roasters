@@ -76,4 +76,22 @@ describe('Find accessories partial view', () => {
     await waitFor(() => new Promise((res) => setTimeout(res, 500)))
     expect(container).toMatchSnapshot()
   })
+
+  it('Renders correctly for filtered to coffees version', async () => {
+    const { container } = render(
+      <MockedProvider
+        defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
+        mocks={[CatalogueMockAccessoriesYouMightLike, CatalogueMockRandom]}
+        addTypename={false}
+      >
+        <I18nextProvider i18n={i18n}>
+          <MemoryRouter initialEntries={['/product/7655228866776']}>
+            <YouMightLike productId="7655228866776" filter="coffee" />
+          </MemoryRouter>
+        </I18nextProvider>
+      </MockedProvider>,
+    )
+    await waitFor(() => new Promise((res) => setTimeout(res, 500)))
+    expect(container).toMatchSnapshot()
+  })
 })
