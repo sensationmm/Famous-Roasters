@@ -1,3 +1,10 @@
+# [1.73.0](https://github.com/Famous-Roasters/frontend/compare/v1.72.7...v1.73.0) (2022-09-14)
+
+
+### Features
+
+* **catalogue:** empty catalogue state ([633febe](https://github.com/Famous-Roasters/frontend/commit/633febe5c970d8210e91447c8c5590b113015f58))
+
 ## [1.72.7](https://github.com/Famous-Roasters/frontend/compare/v1.72.6...v1.72.7) (2022-09-13)
 
 ## [1.72.6](https://github.com/Famous-Roasters/frontend/compare/v1.72.5...v1.72.6) (2022-09-12)
