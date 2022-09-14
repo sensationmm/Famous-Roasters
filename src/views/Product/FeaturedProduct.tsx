@@ -186,7 +186,11 @@ export const FeaturedProduct: React.FC = () => {
             </Link>
           </div>
           <div className="mt-4 col-span-2 md:mt-0 md:col-start-2 md:col-span-1">
-            <Link to="/catalogue">
+            <Link
+              to={encodeURI(
+                `/catalogue?products[refinementList][meta.my_fields.aroma][0]=${aroma?.value || ''}`,
+              ).replace('&', '%26')}
+            >
               <Button
                 type="button"
                 emphasis={ButtonEmphasis.Secondary}

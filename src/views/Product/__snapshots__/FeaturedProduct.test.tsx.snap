@@ -502,7 +502,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mt-4 col-span-2 md:mt-0 md:col-start-2 md:col-span-1"
             >
               <a
-                href="/catalogue"
+                href="/catalogue?products%5BrefinementList%5D%5Bmeta.my_fields.aroma%5D%5B0%5D=Nussig%20%26%20schokoladig"
               >
                 <button
                   class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
@@ -1309,7 +1309,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mt-4 col-span-2 md:mt-0 md:col-start-2 md:col-span-1"
             >
               <a
-                href="/catalogue"
+                href="/catalogue?products%5BrefinementList%5D%5Bmeta.my_fields.aroma%5D%5B0%5D=experimentell%20%26%20komplex"
               >
                 <button
                   class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
@@ -2116,7 +2116,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mt-4 col-span-2 md:mt-0 md:col-start-2 md:col-span-1"
             >
               <a
-                href="/catalogue"
+                href="/catalogue?products%5BrefinementList%5D%5Bmeta.my_fields.aroma%5D%5B0%5D=Floral%20%26%20leicht"
               >
                 <button
                   class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
@@ -2923,7 +2923,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mt-4 col-span-2 md:mt-0 md:col-start-2 md:col-span-1"
             >
               <a
-                href="/catalogue"
+                href="/catalogue?products%5BrefinementList%5D%5Bmeta.my_fields.aroma%5D%5B0%5D=Fruchtig%20%26%20lebhaft"
               >
                 <button
                   class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
@@ -3730,7 +3730,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mt-4 col-span-2 md:mt-0 md:col-start-2 md:col-span-1"
             >
               <a
-                href="/catalogue"
+                href="/catalogue?products%5BrefinementList%5D%5Bmeta.my_fields.aroma%5D%5B0%5D=W%C3%BCrzig%20%26%20kr%C3%A4ftig"
               >
                 <button
                   class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
@@ -4414,7 +4414,7 @@ exports[`Featured product view Renders correctly for a successful call without a
               class="mt-4 col-span-2 md:mt-0 md:col-start-2 md:col-span-1"
             >
               <a
-                href="/catalogue"
+                href="/catalogue?products%5BrefinementList%5D%5Bmeta.my_fields.aroma%5D%5B0%5D="
               >
                 <button
                   class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
@@ -5221,7 +5221,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
               class="mt-4 col-span-2 md:mt-0 md:col-start-2 md:col-span-1"
             >
               <a
-                href="/catalogue"
+                href="/catalogue?products%5BrefinementList%5D%5Bmeta.my_fields.aroma%5D%5B0%5D=experimentell%20%26%20komplex"
               >
                 <button
                   class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
@@ -6040,7 +6040,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
               class="mt-4 col-span-2 md:mt-0 md:col-start-2 md:col-span-1"
             >
               <a
-                href="/catalogue"
+                href="/catalogue?products%5BrefinementList%5D%5Bmeta.my_fields.aroma%5D%5B0%5D=experimentell%20%26%20komplex"
               >
                 <button
                   class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
