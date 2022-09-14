@@ -1,3 +1,11 @@
+## [1.73.1](https://github.com/Famous-Roasters/frontend/compare/v1.73.0...v1.73.1) (2022-09-14)
+
+
+### Bug Fixes
+
+* **taste finder:** add correct link to more products ([af52a2d](https://github.com/Famous-Roasters/frontend/commit/af52a2d382e32d74c3a9156ee08d9eb7ff5037d0))
+* **taste finder:** missing snap ([7629c86](https://github.com/Famous-Roasters/frontend/commit/7629c869aef03e1c77230f174cd49638ef4eecb2))
+
 # [1.73.0](https://github.com/Famous-Roasters/frontend/compare/v1.72.7...v1.73.0) (2022-09-14)
 
 
