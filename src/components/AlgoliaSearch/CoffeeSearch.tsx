@@ -1,5 +1,6 @@
 import { TrashIcon } from '@heroicons/react/outline'
 import { useTranslation } from 'react-i18next'
+import { SearchResults } from 'react-instantsearch-core'
 import {
   Configure,
   Hits,
@@ -10,9 +11,10 @@ import {
   useInstantSearch,
   useRefinementList,
 } from 'react-instantsearch-hooks-web'
+import { ProductTileLoader, Typography, TypographySize, TypographyType } from 'src/components'
 import CheckboxFilter from 'src/components/AlgoliaSearch/CheckboxFilter'
 import Hit from 'src/components/AlgoliaSearch/Hit'
-import { ProductTileLoader } from 'src/components/ProductTile'
+import { YouMightLike } from 'src/views/Product/YouMightLike'
 
 import { AromaFilterButton } from './AromaFilter'
 import { FiltersMenuMobile } from './FiltersMenuMobile'
@@ -21,34 +23,68 @@ import Pagination from './Pagination'
 import SingleSelectFilter from './SingleSelectFilter'
 import Stats from './Stats'
 
+interface CustomSearch extends SearchResults {
+  exhaustive?: {
+    nbHits: boolean
+  }
+}
+
+export const renderSearchContent = (
+  type: 'coffee' | 'accessory',
+  searchResults: CustomSearch,
+  productHits: number,
+  numberOfHitsToShow: number,
+) => {
+  const { t } = useTranslation()
+  const finished = typeof searchResults?.exhaustive !== 'undefined'
+
+  return (
+    <>
+      {productHits === 0 &&
+        (finished ? (
+          <>
+            <div className="xl:w-1/2 pt-6 xl:pt-0">
+              <Typography type={TypographyType.Heading} size={TypographySize.Tiny} as="p" className="mb-2">
+                {t('pages.catalogue.noResults.title')}
+              </Typography>
+              <Typography size={TypographySize.Large} as="p" className="text-coreUI-text-tertiary">
+                {t('pages.catalogue.noResults.text')}
+              </Typography>
+            </div>
+            <div className="mt-6 pt-6 border-t border-coreUI-border">
+              <Typography as="p" type={TypographyType.Heading} size={TypographySize.Tiny} className="text-bold">
+                {t('pages.catalogue.noResults.youMightLike')}
+              </Typography>
+              <div className="p-6 pt-0">
+                <YouMightLike productId={'0'} filter={type} />
+              </div>
+            </div>
+          </>
+        ) : (
+          <div className="grid gap-2 grid-cols-1 mb-8 md:grid-cols-2 xl:grid-cols-3">
+            {[...Array(numberOfHitsToShow)].map((_, count) => (
+              <ProductTileLoader key={`loader-${count}`} />
+            ))}
+          </div>
+        ))}
+      <Hits
+        hitComponent={Hit}
+        classNames={{ root: 'mb-8', list: 'grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3' }}
+      />
+    </>
+  )
+}
+
 const CoffeeSearch: React.FC = () => {
   const { t } = useTranslation()
   const search = useInstantSearch()
   const productHits = search?.results?.nbHits
   const numberOfHitsToShow = 12
-
-  const renderContent = () => {
-    return (
-      <>
-        <Hits
-          hitComponent={Hit}
-          classNames={{ root: 'mb-8', list: 'grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3' }}
-        />
-        <div className={`${productHits > 0 ? 'hidden' : ''} grid gap-2 grid-cols-1 mb-8 md:grid-cols-2 xl:grid-cols-3`}>
-          {[...Array(numberOfHitsToShow)].map((_, count) => (
-            <ProductTileLoader key={`loader-${count}`} />
-          ))}
-        </div>
-      </>
-    )
-  }
-
   // Initialize tasteProfile filters so we don't lose their state when dropdown closes
   useRefinementList({ attribute: 'meta.my_fields.bitterness' })
   useRefinementList({ attribute: 'meta.my_fields.acidity' })
   useRefinementList({ attribute: 'meta.my_fields.sweetness' })
   useRefinementList({ attribute: 'meta.my_fields.body' })
-
   const { items: activeRefinements } = useCurrentRefinements()
   const { refine: clearRefinements } = useClearRefinements()
 
@@ -153,8 +189,8 @@ const CoffeeSearch: React.FC = () => {
         <Stats />
       </div>
 
-      {renderContent()}
-      <Pagination />
+      {renderSearchContent('coffee', search.results, productHits, numberOfHitsToShow)}
+      {productHits > 0 && <Pagination />}
     </>
   )
 }

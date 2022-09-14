@@ -448,6 +448,12 @@
         "stats_one": "Wir haben <span class='font-bold'>{{count}} Produkt</span> gefunden.",
         "stats_other": "Wir haben <span class='font-bold'>{{count}} Produkte</span> gefunden."
       },
+      "noResults": {
+        "title": "Leider haben wir keine passenden Ergebnisse für deine Suchanfrage gefunden",
+        "text": "Aber wir glauben, dass dich diese Kaffeesorten vielleicht auch interessieren könnten...",
+        "stats": "Wir haben leder <span class='font-bold'>kein Produkte</span> gefunden.",
+        "youMightLike": "Könnte dir auch gefallen"
+      },
       "filters": {
         "meta": {
           "my_fields": {

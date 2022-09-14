@@ -7,11 +7,14 @@ const Stats: React.FC = () => {
 
   const count = search?.results?.nbHits
 
-  return count ? (
+  return typeof count !== 'undefined' ? (
     <div
-      className="mt-4"
+      className={`mt-4${count === 0 ? ' text-coreUI-text-tertiary' : ''}`}
       dangerouslySetInnerHTML={{
-        __html: t('pages.catalogue.search.stats', { count, interpolation: { escapeValue: false } }),
+        __html: t(count > 0 ? 'pages.catalogue.search.stats' : 'pages.catalogue.noResults.stats', {
+          count,
+          interpolation: { escapeValue: false },
+        }),
       }}
     />
   ) : null

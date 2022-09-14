@@ -1,13 +1,16 @@
 import { useTranslation } from 'react-i18next'
-import { Configure, Hits, SearchBox, SortBy } from 'react-instantsearch-hooks-web'
-import Hit from 'src/components/AlgoliaSearch/Hit'
+import { Configure, SearchBox, SortBy, useInstantSearch } from 'react-instantsearch-hooks-web'
 
+import { renderSearchContent } from './CoffeeSearch'
 import Pagination from './Pagination'
 import SingleSelectFilter from './SingleSelectFilter'
 import Stats from './Stats'
 
 const AccessoriesSearch: React.FC = () => {
   const { t } = useTranslation()
+  const search = useInstantSearch()
+  const productHits = search?.results?.nbHits
+  const numberOfHitsToShow = 12
 
   return (
     <>
@@ -61,10 +64,7 @@ const AccessoriesSearch: React.FC = () => {
         </div>
       </div>
 
-      <Hits
-        hitComponent={Hit}
-        classNames={{ root: 'mb-8', list: 'grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3' }}
-      />
+      {renderSearchContent('accessory', search.results, productHits, numberOfHitsToShow)}
       <Pagination />
     </>
   )

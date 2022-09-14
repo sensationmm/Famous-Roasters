@@ -10,9 +10,10 @@ import { CollectionQuery } from 'src/views/Catalogue'
 
 interface YouMightLikeProps {
   productId: string
+  filter?: 'coffee' | 'accessory'
 }
 
-export const YouMightLike: React.FC<YouMightLikeProps> = ({ productId }: YouMightLikeProps) => {
+export const YouMightLike: React.FC<YouMightLikeProps> = ({ productId, filter }: YouMightLikeProps) => {
   const GET_PRODUCTS = loader('src/graphql/queries/products.query.graphql')
   const breakpoint = useBreakpoint()
 
@@ -23,7 +24,7 @@ export const YouMightLike: React.FC<YouMightLikeProps> = ({ productId }: YouMigh
       last: null,
       before: null,
       after: null,
-      sortKey: undefined,
+      sortKey: 'BEST_SELLING',
       reverse: undefined,
     },
   })
@@ -39,15 +40,26 @@ export const YouMightLike: React.FC<YouMightLikeProps> = ({ productId }: YouMigh
       last: null,
       before: null,
       after: null,
-      sortKey: undefined,
+      sortKey: 'BEST_SELLING',
       reverse: undefined,
     },
   })
 
-  const resultsCoffee = [...(data?.collection?.products?.nodes || [])].slice(0, breakpoint === 'lg' ? 3 : 2)
+  const calculateTiles = (type: YouMightLikeProps['filter'], filter: YouMightLikeProps['filter']) => {
+    if (filter) {
+      if (type === filter) {
+        return breakpoint === 'lg' ? 6 : 4
+      }
+      return 0
+    }
+
+    return breakpoint === 'lg' ? 3 : 2
+  }
+
+  const resultsCoffee = [...(data?.collection?.products?.nodes || [])].slice(0, calculateTiles('coffee', filter))
   const resultsAccessories = [...(data2?.collection?.products?.nodes || [])]
     .filter((node) => getSimplifiedId(node.id) !== productId)
-    .slice(0, breakpoint === 'lg' ? 3 : 2)
+    .slice(0, calculateTiles('accessory', filter))
   const productNodes = resultsCoffee.concat(resultsAccessories)
 
   const pageInfo = data?.collection?.products.pageInfo || {
