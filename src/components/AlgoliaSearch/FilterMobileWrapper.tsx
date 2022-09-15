@@ -80,7 +80,9 @@ export const FilterMobileWrapper: React.FC<FilterMobileWrapperProps> = ({
             </div>
 
             {/* Content */}
-            <div className="border-t border-coreUI-text-tertiary overflow-auto grow">{children}</div>
+            <div className="border-t border-coreUI-text-tertiary overflow-auto grow">
+              <Dialog.Panel>{children}</Dialog.Panel>
+            </div>
 
             {/* Footer */}
             <div className="inset-x-0 mx-5 py-6">
