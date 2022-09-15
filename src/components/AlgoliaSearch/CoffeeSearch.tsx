@@ -98,12 +98,18 @@ const CoffeeSearch: React.FC = () => {
       />
 
       {/* Top row: Method, Decaf (mobile), Query */}
-      <div className="xl:flex gap-x-4 mt-6 mb-4">
-        <SingleSelectFilter
-          attribute="meta.my_fields.coffee_type"
-          defaultText={t('pages.catalogue.filters.meta.my_fields.coffee_type')}
-          big
-        />
+      <div className="xl:flex gap-x-4 mt-6 mb-4 items-center">
+        <div className="flex gap-x-4 items-center">
+          <SingleSelectFilter
+            attribute="meta.my_fields.coffee_type"
+            defaultText={t('pages.catalogue.filters.meta.my_fields.coffee_type')}
+            big
+          />
+
+          <Typography size={TypographySize.Tiny} className="text-coreUI-text-tertiary">
+            {t('pages.catalogue.filterCoffeesText')}
+          </Typography>
+        </div>
 
         {/* Decaf filter (mobile) */}
         <div className="my-4 xl:hidden">

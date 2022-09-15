@@ -822,7 +822,8 @@
       "tile": {
         "from": "ab"
       },
-      "title": "Katalog"
+      "title": "Katalog",
+      "filterCoffeesText": "Alle Zubereitungsarten inkl. Vollautomaten, Handfilter und Siebträger"
     },
     "checkout": {
       "navigation": "Checkout",
