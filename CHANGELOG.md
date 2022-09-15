@@ -1,3 +1,10 @@
+# [1.74.0](https://github.com/Famous-Roasters/frontend/compare/v1.73.2...v1.74.0) (2022-09-15)
+
+
+### Features
+
+* **catalog:** add filter text ([7f445a0](https://github.com/Famous-Roasters/frontend/commit/7f445a0fd44afa6aec18a672ee9f66d5dcb1dd27))
+
 ## [1.73.2](https://github.com/Famous-Roasters/frontend/compare/v1.73.1...v1.73.2) (2022-09-15)
 
 
