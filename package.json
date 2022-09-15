@@ -76,7 +76,7 @@
     "@babel/core": "^7.17.8",
     "@commitlint/cli": "^16.2.1",
     "@commitlint/config-conventional": "^16.2.1",
-    "@headlessui/react": "^1.6.0",
+    "@headlessui/react": "^0.0.0-insiders.dd2feef",
     "@heroicons/react": "^1.0.6",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
