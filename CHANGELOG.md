@@ -1,3 +1,10 @@
+## [1.73.2](https://github.com/Famous-Roasters/frontend/compare/v1.73.1...v1.73.2) (2022-09-15)
+
+
+### Bug Fixes
+
+* **catalog:** mobile fiter menu scroll ([ac63ab7](https://github.com/Famous-Roasters/frontend/commit/ac63ab7c7f389572d7542790c50b52e2708aa9d0))
+
 ## [1.73.1](https://github.com/Famous-Roasters/frontend/compare/v1.73.0...v1.73.1) (2022-09-14)
 
 
