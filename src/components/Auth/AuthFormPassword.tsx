@@ -29,7 +29,7 @@ export const AuthFormPassword: React.FC<AuthFormPasswordProps> = ({ screenKey, o
           onClick={() => setShowPassword(!showPassword)}
         >
           <Icon
-            name={!showPassword ? IconName.PasswordHide : IconName.PasswordShow}
+            name={showPassword ? IconName.PasswordHide : IconName.PasswordShow}
             className="text-coreUI-text-secondary"
           />
         </div>

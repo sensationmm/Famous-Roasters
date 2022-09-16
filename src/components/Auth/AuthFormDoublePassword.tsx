@@ -35,7 +35,7 @@ export const AuthFormDoublePassword: React.FC<AuthFormDoublePasswordProps> = ({
   const icon = (
     <div data-testid="password-view-toggle" className="cursor-pointer" onClick={() => setShowPassword(!showPassword)}>
       <Icon
-        name={!showPassword ? IconName.PasswordHide : IconName.PasswordShow}
+        name={showPassword ? IconName.PasswordHide : IconName.PasswordShow}
         className="text-coreUI-text-secondary"
       />
     </div>
