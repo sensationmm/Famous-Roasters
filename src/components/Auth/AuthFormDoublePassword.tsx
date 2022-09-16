@@ -1,5 +1,5 @@
 import { FormInstance } from 'rc-field-form'
-import React, { ChangeEventHandler } from 'react'
+import React, { ChangeEventHandler, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Icon, IconName, Typography, TypographySize, TypographyType } from 'src/components'
 import i18n from 'src/config/i18n'
@@ -19,6 +19,7 @@ export const AuthFormDoublePassword: React.FC<AuthFormDoublePasswordProps> = ({
   form,
 }: AuthFormDoublePasswordProps) => {
   const { t } = useTranslation()
+  const [showPassword, setShowPassword] = useState<boolean>(false)
 
   const passwordRules = [
     i18n.t(`auth.${screenKey}.password.error.minLength`),
@@ -30,6 +31,16 @@ export const AuthFormDoublePassword: React.FC<AuthFormDoublePasswordProps> = ({
 
   const passwordValue = form?.getFieldValue('password') || ''
   const passwordErrors = form?.getFieldError('password') || []
+
+  const icon = (
+    <div data-testid="password-view-toggle" className="cursor-pointer" onClick={() => setShowPassword(!showPassword)}>
+      <Icon
+        name={!showPassword ? IconName.PasswordHide : IconName.PasswordShow}
+        className="text-coreUI-text-secondary"
+      />
+    </div>
+  )
+  const inputType = !showPassword ? 'password' : 'text'
 
   return (
     <>
@@ -89,13 +100,14 @@ export const AuthFormDoublePassword: React.FC<AuthFormDoublePasswordProps> = ({
               },
             }),
           ]}
-          type="password"
+          type={inputType}
           hasFeedback
           placeholder={i18n.t(`auth.${screenKey}.password.placeholder`)}
           onChange={onChange}
           dataTestId="password"
           hideErrors
           validateTrigger="onChange"
+          icon={icon}
         />
       </div>
       <div className="mt-8">
@@ -116,11 +128,12 @@ export const AuthFormDoublePassword: React.FC<AuthFormDoublePasswordProps> = ({
               },
             }),
           ]}
-          type="password"
+          type={inputType}
           hasFeedback
           placeholder={i18n.t(`auth.${screenKey}.passwordRepeat.placeholder`)}
           onChange={onChange}
           dataTestId="passwordRepeat"
+          icon={icon}
         />
       </div>
       {form && (
@@ -130,7 +143,7 @@ export const AuthFormDoublePassword: React.FC<AuthFormDoublePasswordProps> = ({
           </Typography>
           {passwordRules.map((err, count) => {
             const color =
-              passwordErrors?.indexOf(err) > -1 || passwordValue === '' ? 'fill-coreUI-text-tertiary' : 'fill-positive'
+              passwordErrors?.indexOf(err) > -1 || passwordValue === '' ? 'text-coreUI-text-tertiary' : 'text-positive'
             return (
               <div className="flex mb-4" key={`rule-${count}`}>
                 <Icon name={IconName.Check} className={`mr-2 ${color} shrink-0`} />

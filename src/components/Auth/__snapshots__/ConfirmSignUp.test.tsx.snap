@@ -45,50 +45,58 @@ exports[`ConfirmSignUp custom auth component Renders correctly 1`] = `
       <div
         class="w-full mt-8"
       >
-        <label
+        <div
           class="relative"
         >
-          <span
-            class="absolute -top-6 left-3 px-1 bg-white"
+          <label
+            class="relative"
           >
             <span
-              class="text-sm leading-5"
+              class="absolute -top-6 left-3 px-1 bg-white"
             >
-              Deine E-mail-Adresse
+              <span
+                class="text-sm leading-5"
+              >
+                Deine E-mail-Adresse
+              </span>
             </span>
-          </span>
-          <input
-            class="w-full border rounded-full focus:outline-0 focus:ring px-4 py-2 focus:ring-primary/30"
-            data-testid="username"
-            placeholder="Deine E-mail-Adresse"
-            type="email"
-            value="hello@60beans.com"
-          />
-        </label>
+            <input
+              class="w-full  border rounded-full focus:outline-0 focus:ring px-4 py-2 focus:ring-primary/30"
+              data-testid="username"
+              placeholder="Deine E-mail-Adresse"
+              type="email"
+              value="hello@60beans.com"
+            />
+          </label>
+        </div>
       </div>
       <div
         class="w-full mt-8"
       >
-        <label
+        <div
           class="relative"
         >
-          <span
-            class="absolute -top-6 left-3 px-1 bg-white"
+          <label
+            class="relative"
           >
             <span
-              class="text-sm leading-5"
+              class="absolute -top-6 left-3 px-1 bg-white"
             >
-              Verifizierungscode
+              <span
+                class="text-sm leading-5"
+              >
+                Verifizierungscode
+              </span>
             </span>
-          </span>
-          <input
-            class="w-full border rounded-full focus:outline-0 focus:ring px-4 py-2 focus:ring-primary/30"
-            data-testid="code"
-            placeholder="Verifizierungscode"
-            type="text"
-            value=""
-          />
-        </label>
+            <input
+              class="w-full  border rounded-full focus:outline-0 focus:ring px-4 py-2 focus:ring-primary/30"
+              data-testid="code"
+              placeholder="Verifizierungscode"
+              type="text"
+              value=""
+            />
+          </label>
+        </div>
       </div>
       <div
         class="w-full mt-8"
@@ -225,50 +233,58 @@ exports[`ConfirmSignUp custom auth component The new registration code request w
       <div
         class="w-full mt-8"
       >
-        <label
+        <div
           class="relative"
         >
-          <span
-            class="absolute -top-6 left-3 px-1 bg-white"
+          <label
+            class="relative"
           >
             <span
-              class="text-sm leading-5"
+              class="absolute -top-6 left-3 px-1 bg-white"
             >
-              Deine E-mail-Adresse
+              <span
+                class="text-sm leading-5"
+              >
+                Deine E-mail-Adresse
+              </span>
             </span>
-          </span>
-          <input
-            class="w-full border rounded-full focus:outline-0 focus:ring px-4 py-2 focus:ring-primary/30"
-            data-testid="username"
-            placeholder="Deine E-mail-Adresse"
-            type="email"
-            value=""
-          />
-        </label>
+            <input
+              class="w-full  border rounded-full focus:outline-0 focus:ring px-4 py-2 focus:ring-primary/30"
+              data-testid="username"
+              placeholder="Deine E-mail-Adresse"
+              type="email"
+              value=""
+            />
+          </label>
+        </div>
       </div>
       <div
         class="w-full mt-8"
       >
-        <label
+        <div
           class="relative"
         >
-          <span
-            class="absolute -top-6 left-3 px-1 bg-white"
+          <label
+            class="relative"
           >
             <span
-              class="text-sm leading-5"
+              class="absolute -top-6 left-3 px-1 bg-white"
             >
-              Verifizierungscode
+              <span
+                class="text-sm leading-5"
+              >
+                Verifizierungscode
+              </span>
             </span>
-          </span>
-          <input
-            class="w-full border rounded-full focus:outline-0 focus:ring px-4 py-2 focus:ring-primary/30"
-            data-testid="code"
-            placeholder="Verifizierungscode"
-            type="text"
-            value=""
-          />
-        </label>
+            <input
+              class="w-full  border rounded-full focus:outline-0 focus:ring px-4 py-2 focus:ring-primary/30"
+              data-testid="code"
+              placeholder="Verifizierungscode"
+              type="text"
+              value=""
+            />
+          </label>
+        </div>
       </div>
       <div
         class="w-full mt-8"
