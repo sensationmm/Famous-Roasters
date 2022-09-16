@@ -44,99 +44,169 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
         <div
           class="w-full mt-6"
         >
-          <label
+          <div
             class="relative"
           >
-            <span
-              class="absolute -top-6 left-3 px-1 bg-white"
+            <label
+              class="relative"
             >
               <span
-                class="text-sm leading-5"
+                class="absolute -top-6 left-3 px-1 bg-white"
               >
-                Deine Vorname
+                <span
+                  class="text-sm leading-5"
+                >
+                  Deine Vorname
+                </span>
               </span>
-            </span>
-            <input
-              class="w-full border rounded-full focus:outline-0 focus:ring px-4 py-2 focus:ring-primary/30"
-              data-testid="firstName"
-              placeholder="Deine Vorname"
-              type="text"
-              value=""
-            />
-          </label>
+              <input
+                class="w-full  border rounded-full focus:outline-0 focus:ring px-4 py-2 focus:ring-primary/30"
+                data-testid="firstName"
+                placeholder="Deine Vorname"
+                type="text"
+                value=""
+              />
+            </label>
+          </div>
         </div>
         <div
           class="w-full mt-6"
         >
-          <label
+          <div
             class="relative"
           >
-            <span
-              class="absolute -top-6 left-3 px-1 bg-white"
+            <label
+              class="relative"
             >
               <span
-                class="text-sm leading-5"
+                class="absolute -top-6 left-3 px-1 bg-white"
               >
-                Deine E-mail-Adresse
+                <span
+                  class="text-sm leading-5"
+                >
+                  Deine E-mail-Adresse
+                </span>
               </span>
-            </span>
-            <input
-              class="w-full border rounded-full focus:outline-0 focus:ring px-4 py-2 focus:ring-primary/30"
-              data-testid="email"
-              placeholder="Deine E-mail-Adresse"
-              type="email"
-              value=""
-            />
-          </label>
+              <input
+                class="w-full  border rounded-full focus:outline-0 focus:ring px-4 py-2 focus:ring-primary/30"
+                data-testid="email"
+                placeholder="Deine E-mail-Adresse"
+                type="email"
+                value=""
+              />
+            </label>
+          </div>
         </div>
         <div
           class="w-full mt-8"
         >
           <div>
-            <label
+            <div
               class="relative"
             >
-              <span
-                class="absolute -top-6 left-3 px-1 bg-white"
+              <label
+                class="relative"
               >
                 <span
-                  class="text-sm leading-5"
+                  class="absolute -top-6 left-3 px-1 bg-white"
                 >
-                  Dein Passwort
+                  <span
+                    class="text-sm leading-5"
+                  >
+                    Dein Passwort
+                  </span>
                 </span>
-              </span>
-              <input
-                class="w-full border rounded-full focus:outline-0 focus:ring px-4 py-2 focus:ring-primary/30"
-                data-testid="password"
-                placeholder="Dein Passwort"
-                type="password"
-                value=""
-              />
-            </label>
+                <input
+                  class="w-full pr-11 border rounded-full focus:outline-0 focus:ring px-4 py-2 focus:ring-primary/30"
+                  data-testid="password"
+                  placeholder="Dein Passwort"
+                  type="password"
+                  value=""
+                />
+              </label>
+              <div
+                class="absolute right-3 top-1/2 -translate-y-2/4"
+              >
+                <div
+                  class="cursor-pointer"
+                  data-testid="password-view-toggle"
+                >
+                  <svg
+                    class="text-coreUI-text-secondary"
+                    fill="inherit"
+                    height="24"
+                    viewBox="0 0 22 16"
+                    width="24"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M14 8C14 9.65685 12.6569 11 11 11C9.34315 11 8 9.65685 8 8C8 6.34315 9.34315 5 11 5C12.6569 5 14 6.34315 14 8Z M1.45825 7.99997C2.73253 3.94288 6.52281 1 11.0004 1C15.4781 1 19.2684 3.94291 20.5426 8.00004C19.2684 12.0571 15.4781 15 11.0005 15C6.52281 15 2.73251 12.0571 1.45825 7.99997Z"
+                      fill="none"
+                      fill-rule="evenodd"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
           </div>
           <div
             class="mt-8"
           >
-            <label
+            <div
               class="relative"
             >
-              <span
-                class="absolute -top-6 left-3 px-1 bg-white"
+              <label
+                class="relative"
               >
                 <span
-                  class="text-sm leading-5"
+                  class="absolute -top-6 left-3 px-1 bg-white"
                 >
-                  Passwort wiederholen
+                  <span
+                    class="text-sm leading-5"
+                  >
+                    Passwort wiederholen
+                  </span>
                 </span>
-              </span>
-              <input
-                class="w-full border rounded-full focus:outline-0 focus:ring px-4 py-2 focus:ring-primary/30"
-                data-testid="passwordRepeat"
-                placeholder="Passwort wiederholen"
-                type="password"
-                value=""
-              />
-            </label>
+                <input
+                  class="w-full pr-11 border rounded-full focus:outline-0 focus:ring px-4 py-2 focus:ring-primary/30"
+                  data-testid="passwordRepeat"
+                  placeholder="Passwort wiederholen"
+                  type="password"
+                  value=""
+                />
+              </label>
+              <div
+                class="absolute right-3 top-1/2 -translate-y-2/4"
+              >
+                <div
+                  class="cursor-pointer"
+                  data-testid="password-view-toggle"
+                >
+                  <svg
+                    class="text-coreUI-text-secondary"
+                    fill="inherit"
+                    height="24"
+                    viewBox="0 0 22 16"
+                    width="24"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M14 8C14 9.65685 12.6569 11 11 11C9.34315 11 8 9.65685 8 8C8 6.34315 9.34315 5 11 5C12.6569 5 14 6.34315 14 8Z M1.45825 7.99997C2.73253 3.94288 6.52281 1 11.0004 1C15.4781 1 19.2684 3.94291 20.5426 8.00004C19.2684 12.0571 15.4781 15 11.0005 15C6.52281 15 2.73251 12.0571 1.45825 7.99997Z"
+                      fill="none"
+                      fill-rule="evenodd"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
           </div>
           <div
             class="mt-4 p-4 pb-1 bg-brand-grey-whisper rounded-md"
@@ -150,7 +220,7 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
               class="flex mb-4"
             >
               <svg
-                class="mr-2 fill-coreUI-text-tertiary shrink-0"
+                class="mr-2 text-coreUI-text-tertiary shrink-0"
                 fill="inherit"
                 height="24"
                 viewBox="0 0 16 16"
@@ -159,7 +229,7 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
                 <path
                   clip-rule="evenodd"
                   d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM11.7071 6.70711C12.0976 6.31658 12.0976 5.68342 11.7071 5.29289C11.3166 4.90237 10.6834 4.90237 10.2929 5.29289L7 8.58579L5.70711 7.29289C5.31658 6.90237 4.68342 6.90237 4.29289 7.29289C3.90237 7.68342 3.90237 8.31658 4.29289 8.70711L6.29289 10.7071C6.68342 11.0976 7.31658 11.0976 7.70711 10.7071L11.7071 6.70711Z"
-                  fill="inherit"
+                  fill="currentColor"
                   fill-rule="evenodd"
                   stroke="none"
                   stroke-width="none"
@@ -175,7 +245,7 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
               class="flex mb-4"
             >
               <svg
-                class="mr-2 fill-coreUI-text-tertiary shrink-0"
+                class="mr-2 text-coreUI-text-tertiary shrink-0"
                 fill="inherit"
                 height="24"
                 viewBox="0 0 16 16"
@@ -184,7 +254,7 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
                 <path
                   clip-rule="evenodd"
                   d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM11.7071 6.70711C12.0976 6.31658 12.0976 5.68342 11.7071 5.29289C11.3166 4.90237 10.6834 4.90237 10.2929 5.29289L7 8.58579L5.70711 7.29289C5.31658 6.90237 4.68342 6.90237 4.29289 7.29289C3.90237 7.68342 3.90237 8.31658 4.29289 8.70711L6.29289 10.7071C6.68342 11.0976 7.31658 11.0976 7.70711 10.7071L11.7071 6.70711Z"
-                  fill="inherit"
+                  fill="currentColor"
                   fill-rule="evenodd"
                   stroke="none"
                   stroke-width="none"
@@ -200,7 +270,7 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
               class="flex mb-4"
             >
               <svg
-                class="mr-2 fill-coreUI-text-tertiary shrink-0"
+                class="mr-2 text-coreUI-text-tertiary shrink-0"
                 fill="inherit"
                 height="24"
                 viewBox="0 0 16 16"
@@ -209,7 +279,7 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
                 <path
                   clip-rule="evenodd"
                   d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM11.7071 6.70711C12.0976 6.31658 12.0976 5.68342 11.7071 5.29289C11.3166 4.90237 10.6834 4.90237 10.2929 5.29289L7 8.58579L5.70711 7.29289C5.31658 6.90237 4.68342 6.90237 4.29289 7.29289C3.90237 7.68342 3.90237 8.31658 4.29289 8.70711L6.29289 10.7071C6.68342 11.0976 7.31658 11.0976 7.70711 10.7071L11.7071 6.70711Z"
-                  fill="inherit"
+                  fill="currentColor"
                   fill-rule="evenodd"
                   stroke="none"
                   stroke-width="none"
@@ -225,7 +295,7 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
               class="flex mb-4"
             >
               <svg
-                class="mr-2 fill-coreUI-text-tertiary shrink-0"
+                class="mr-2 text-coreUI-text-tertiary shrink-0"
                 fill="inherit"
                 height="24"
                 viewBox="0 0 16 16"
@@ -234,7 +304,7 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
                 <path
                   clip-rule="evenodd"
                   d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM11.7071 6.70711C12.0976 6.31658 12.0976 5.68342 11.7071 5.29289C11.3166 4.90237 10.6834 4.90237 10.2929 5.29289L7 8.58579L5.70711 7.29289C5.31658 6.90237 4.68342 6.90237 4.29289 7.29289C3.90237 7.68342 3.90237 8.31658 4.29289 8.70711L6.29289 10.7071C6.68342 11.0976 7.31658 11.0976 7.70711 10.7071L11.7071 6.70711Z"
-                  fill="inherit"
+                  fill="currentColor"
                   fill-rule="evenodd"
                   stroke="none"
                   stroke-width="none"
@@ -250,7 +320,7 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
               class="flex mb-4"
             >
               <svg
-                class="mr-2 fill-coreUI-text-tertiary shrink-0"
+                class="mr-2 text-coreUI-text-tertiary shrink-0"
                 fill="inherit"
                 height="24"
                 viewBox="0 0 16 16"
@@ -259,7 +329,7 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
                 <path
                   clip-rule="evenodd"
                   d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM11.7071 6.70711C12.0976 6.31658 12.0976 5.68342 11.7071 5.29289C11.3166 4.90237 10.6834 4.90237 10.2929 5.29289L7 8.58579L5.70711 7.29289C5.31658 6.90237 4.68342 6.90237 4.29289 7.29289C3.90237 7.68342 3.90237 8.31658 4.29289 8.70711L6.29289 10.7071C6.68342 11.0976 7.31658 11.0976 7.70711 10.7071L11.7071 6.70711Z"
-                  fill="inherit"
+                  fill="currentColor"
                   fill-rule="evenodd"
                   stroke="none"
                   stroke-width="none"
@@ -291,9 +361,9 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
                 <path
                   clip-rule="evenodd"
                   d="M19 22H5c-1.7 0-3-1.3-3-3V5c0-1.7 1.3-3 3-3h14c1.7 0 3 1.3 3 3v14c0 1.7-1.3 3-3 3zM5 4c-.6 0-1 .4-1 1v14c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V5c0-.6-.4-1-1-1H5z"
-                  fill="inherit"
+                  fill="currentColor"
                   fill-rule="evenodd"
-                  stroke="inherit"
+                  stroke="currentColor"
                   stroke-width="0.25"
                 />
               </svg>

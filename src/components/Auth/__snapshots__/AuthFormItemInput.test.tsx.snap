@@ -5,25 +5,29 @@ exports[`ConfirmSignUp custom auth component Renders correctly 1`] = `
   <form
     method="POST"
   >
-    <label
+    <div
       class="relative"
     >
-      <span
-        class="absolute -top-6 left-3 px-1 bg-white"
+      <label
+        class="relative"
       >
         <span
-          class="text-sm leading-5"
+          class="absolute -top-6 left-3 px-1 bg-white"
         >
-          itemLabel
+          <span
+            class="text-sm leading-5"
+          >
+            itemLabel
+          </span>
         </span>
-      </span>
-      <input
-        class="w-full border rounded-full focus:outline-0 focus:ring px-4 py-2 focus:ring-primary/30"
-        placeholder="itemPlaceHolder"
-        type="password"
-        value=""
-      />
-    </label>
+        <input
+          class="w-full  border rounded-full focus:outline-0 focus:ring px-4 py-2 focus:ring-primary/30"
+          placeholder="itemPlaceHolder"
+          type="password"
+          value=""
+        />
+      </label>
+    </div>
   </form>
 </div>
 `;
@@ -33,25 +37,93 @@ exports[`ConfirmSignUp custom auth component Renders correctly for non given typ
   <form
     method="POST"
   >
-    <label
+    <div
       class="relative"
     >
-      <span
-        class="absolute -top-6 left-3 px-1 bg-white"
+      <label
+        class="relative"
       >
         <span
-          class="text-sm leading-5"
+          class="absolute -top-6 left-3 px-1 bg-white"
         >
-          itemLabel
+          <span
+            class="text-sm leading-5"
+          >
+            itemLabel
+          </span>
         </span>
-      </span>
-      <input
-        class="w-full border rounded-full focus:outline-0 focus:ring px-4 py-2 focus:ring-primary/30"
-        placeholder="itemPlaceHolder"
-        type="text"
-        value=""
-      />
-    </label>
+        <input
+          class="w-full  border rounded-full focus:outline-0 focus:ring px-4 py-2 focus:ring-primary/30"
+          placeholder="itemPlaceHolder"
+          type="text"
+          value=""
+        />
+      </label>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`ConfirmSignUp custom auth component Renders correctly with errors 1`] = `
+<div>
+  <form
+    method="POST"
+  >
+    <div
+      class="relative"
+    >
+      <label
+        class="relative"
+      >
+        <span
+          class="absolute -top-6 left-3 px-1 bg-white"
+        >
+          <span
+            class="text-sm leading-5"
+          >
+            itemLabel
+          </span>
+        </span>
+        <input
+          class="w-full border-negative pr-11 border rounded-full focus:outline-0 focus:ring px-4 py-2 focus:ring-primary/30"
+          data-testid="input-field"
+          placeholder="itemPlaceHolder"
+          type="password"
+          value="asd"
+        />
+      </label>
+      <div
+        class="absolute right-3 top-1/2 -translate-y-2/4"
+      >
+        <svg
+          class="undefined"
+          fill="inherit"
+          height="24"
+          viewBox="0 0 22 16"
+          width="24"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M14 8C14 9.65685 12.6569 11 11 11C9.34315 11 8 9.65685 8 8C8 6.34315 9.34315 5 11 5C12.6569 5 14 6.34315 14 8Z M1.45825 7.99997C2.73253 3.94288 6.52281 1 11.0004 1C15.4781 1 19.2684 3.94291 20.5426 8.00004C19.2684 12.0571 15.4781 15 11.0005 15C6.52281 15 2.73251 12.0571 1.45825 7.99997Z"
+            fill="none"
+            fill-rule="evenodd"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
+      </div>
+    </div>
+    <ul
+      class="text-negative mt-2 mb-4"
+    >
+      <li
+        class="text-xs leading-4"
+      >
+        Not long enough
+      </li>
+    </ul>
   </form>
 </div>
 `;
