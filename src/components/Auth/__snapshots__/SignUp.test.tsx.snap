@@ -159,7 +159,7 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
                 <path
                   clip-rule="evenodd"
                   d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM11.7071 6.70711C12.0976 6.31658 12.0976 5.68342 11.7071 5.29289C11.3166 4.90237 10.6834 4.90237 10.2929 5.29289L7 8.58579L5.70711 7.29289C5.31658 6.90237 4.68342 6.90237 4.29289 7.29289C3.90237 7.68342 3.90237 8.31658 4.29289 8.70711L6.29289 10.7071C6.68342 11.0976 7.31658 11.0976 7.70711 10.7071L11.7071 6.70711Z"
-                  fill="inherit"
+                  fill="currentColor"
                   fill-rule="evenodd"
                   stroke="none"
                   stroke-width="none"
@@ -184,7 +184,7 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
                 <path
                   clip-rule="evenodd"
                   d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM11.7071 6.70711C12.0976 6.31658 12.0976 5.68342 11.7071 5.29289C11.3166 4.90237 10.6834 4.90237 10.2929 5.29289L7 8.58579L5.70711 7.29289C5.31658 6.90237 4.68342 6.90237 4.29289 7.29289C3.90237 7.68342 3.90237 8.31658 4.29289 8.70711L6.29289 10.7071C6.68342 11.0976 7.31658 11.0976 7.70711 10.7071L11.7071 6.70711Z"
-                  fill="inherit"
+                  fill="currentColor"
                   fill-rule="evenodd"
                   stroke="none"
                   stroke-width="none"
@@ -209,7 +209,7 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
                 <path
                   clip-rule="evenodd"
                   d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM11.7071 6.70711C12.0976 6.31658 12.0976 5.68342 11.7071 5.29289C11.3166 4.90237 10.6834 4.90237 10.2929 5.29289L7 8.58579L5.70711 7.29289C5.31658 6.90237 4.68342 6.90237 4.29289 7.29289C3.90237 7.68342 3.90237 8.31658 4.29289 8.70711L6.29289 10.7071C6.68342 11.0976 7.31658 11.0976 7.70711 10.7071L11.7071 6.70711Z"
-                  fill="inherit"
+                  fill="currentColor"
                   fill-rule="evenodd"
                   stroke="none"
                   stroke-width="none"
@@ -234,7 +234,7 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
                 <path
                   clip-rule="evenodd"
                   d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM11.7071 6.70711C12.0976 6.31658 12.0976 5.68342 11.7071 5.29289C11.3166 4.90237 10.6834 4.90237 10.2929 5.29289L7 8.58579L5.70711 7.29289C5.31658 6.90237 4.68342 6.90237 4.29289 7.29289C3.90237 7.68342 3.90237 8.31658 4.29289 8.70711L6.29289 10.7071C6.68342 11.0976 7.31658 11.0976 7.70711 10.7071L11.7071 6.70711Z"
-                  fill="inherit"
+                  fill="currentColor"
                   fill-rule="evenodd"
                   stroke="none"
                   stroke-width="none"
@@ -259,7 +259,7 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
                 <path
                   clip-rule="evenodd"
                   d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM11.7071 6.70711C12.0976 6.31658 12.0976 5.68342 11.7071 5.29289C11.3166 4.90237 10.6834 4.90237 10.2929 5.29289L7 8.58579L5.70711 7.29289C5.31658 6.90237 4.68342 6.90237 4.29289 7.29289C3.90237 7.68342 3.90237 8.31658 4.29289 8.70711L6.29289 10.7071C6.68342 11.0976 7.31658 11.0976 7.70711 10.7071L11.7071 6.70711Z"
-                  fill="inherit"
+                  fill="currentColor"
                   fill-rule="evenodd"
                   stroke="none"
                   stroke-width="none"
@@ -291,9 +291,9 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
                 <path
                   clip-rule="evenodd"
                   d="M19 22H5c-1.7 0-3-1.3-3-3V5c0-1.7 1.3-3 3-3h14c1.7 0 3 1.3 3 3v14c0 1.7-1.3 3-3 3zM5 4c-.6 0-1 .4-1 1v14c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V5c0-.6-.4-1-1-1H5z"
-                  fill="inherit"
+                  fill="currentColor"
                   fill-rule="evenodd"
-                  stroke="inherit"
+                  stroke="currentColor"
                   stroke-width="0.25"
                 />
               </svg>
