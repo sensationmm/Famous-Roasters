@@ -1,3 +1,16 @@
+# [1.75.0](https://github.com/Famous-Roasters/frontend/compare/v1.74.0...v1.75.0) (2022-09-16)
+
+
+### Bug Fixes
+
+* **signin:** view hide icons wrong way round ([059b1f5](https://github.com/Famous-Roasters/frontend/commit/059b1f512227a73d5ebe743dba5a00425c80007c))
+
+
+### Features
+
+* **signin:** add password view toggle ([74cc191](https://github.com/Famous-Roasters/frontend/commit/74cc191ee9f1f293d4ceecb69743587e4cc31108))
+* **signin:** change to icon colouring ([2097c76](https://github.com/Famous-Roasters/frontend/commit/2097c760c68f04900ab309f0a2d091968dda16fb))
+
 # [1.74.0](https://github.com/Famous-Roasters/frontend/compare/v1.73.2...v1.74.0) (2022-09-15)
 
 
