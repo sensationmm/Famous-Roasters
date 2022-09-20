@@ -6,9 +6,10 @@ import { AuthFormItemInput } from '.'
 interface AuthFormEmailProps {
   screenKey: string
   onChange: ChangeEventHandler<HTMLInputElement>
+  value?: string
 }
 
-export const AuthFormEmail: React.FC<AuthFormEmailProps> = ({ screenKey, onChange }: AuthFormEmailProps) => {
+export const AuthFormEmail: React.FC<AuthFormEmailProps> = ({ screenKey, onChange, value }: AuthFormEmailProps) => {
   return (
     <AuthFormItemInput
       name="email"
@@ -21,6 +22,7 @@ export const AuthFormEmail: React.FC<AuthFormEmailProps> = ({ screenKey, onChang
       placeholder={i18n.t(`auth.${screenKey}.email.placeholder`)}
       onChange={onChange}
       dataTestId="email"
+      value={value}
     />
   )
 }

@@ -32,3 +32,36 @@ exports[`First name fields group custom auth component Renders correctly 1`] = `
   </form>
 </div>
 `;
+
+exports[`First name fields group custom auth component Renders correctly with given value 1`] = `
+<div>
+  <form
+    method="POST"
+  >
+    <div
+      class="relative"
+    >
+      <label
+        class="relative"
+      >
+        <span
+          class="absolute -top-6 left-3 px-1 bg-white"
+        >
+          <span
+            class="text-sm leading-5"
+          >
+            auth.signIn.firstName.label
+          </span>
+        </span>
+        <input
+          class="w-full  border rounded-full focus:outline-0 focus:ring px-4 py-2 focus:ring-primary/30"
+          data-testid="firstName"
+          placeholder="auth.signIn.firstName.placeholder"
+          type="text"
+          value="test"
+        />
+      </label>
+    </div>
+  </form>
+</div>
+`;

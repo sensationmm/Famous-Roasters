@@ -203,4 +203,15 @@ describe('SignUp custom auth component', () => {
       fireEvent.click(goToSignInLink)
     })
   })
+
+  it('Shows provided values', async () => {
+    const { container } = render(
+      <I18nextProvider i18n={i18n}>
+        <MemoryRouter initialEntries={['/register?name=Spongebob&email=test@test.com']}>
+          <AuthSignUp authState={'signUp'} authData={{}} />
+        </MemoryRouter>
+      </I18nextProvider>,
+    )
+    expect(container).toMatchSnapshot()
+  })
 })

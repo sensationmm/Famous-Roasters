@@ -4,7 +4,7 @@ import { IAuthPieceProps } from 'aws-amplify-react/lib-esm/Auth/AuthPiece'
 import Form, { FormInstance } from 'rc-field-form'
 import React from 'react'
 import { Trans } from 'react-i18next'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import {
   AuthFooter,
   Button,
@@ -74,13 +74,18 @@ export class AuthSignUp extends SignUp {
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   renderSignUpInputs(form: FormInstance<any>): JSX.Element {
+    const [searchParams] = useSearchParams()
     return (
       <>
         <div className="w-full mt-6">
-          <AuthFormFirstName screenKey="signUp" onChange={this.handleInputChange} />
+          <AuthFormFirstName
+            screenKey="signUp"
+            onChange={this.handleInputChange}
+            value={searchParams.get('name') || ''}
+          />
         </div>
         <div className="w-full mt-6">
-          <AuthFormEmail screenKey="signUp" onChange={this.handleInputChange} />
+          <AuthFormEmail screenKey="signUp" onChange={this.handleInputChange} value={searchParams.get('email') || ''} />
         </div>
         <div className="w-full mt-8">
           <AuthFormDoublePassword screenKey="signUp" onChange={this.handleInputChange} form={form} />
@@ -89,7 +94,15 @@ export class AuthSignUp extends SignUp {
     )
   }
 
-  renderSignUpButton(fields: SignUpParams, disabled: boolean): JSX.Element {
+  renderSignUpButton(
+    fields: SignUpParams,
+    emailTouched: boolean,
+    passwordTouched: boolean,
+    hasErrors: boolean,
+  ): JSX.Element {
+    const [searchParams] = useSearchParams()
+
+    const disabled = (!emailTouched && searchParams.get('email') === '') || !passwordTouched || hasErrors
     return (
       <div className="mt-8">
         <AuthFormButton
@@ -169,6 +182,7 @@ export class AuthSignUp extends SignUp {
   }
 
   render(): JSX.Element {
+    // const [searchParams] = useSearchParams()
     return this.props.authState === 'signUp' || this.props.authState === 'signUpError' ? (
       <div className="my-4 mx-6 md:mx-0">
         <div className="flex w-full">
@@ -195,14 +209,14 @@ export class AuthSignUp extends SignUp {
           </div>
           <Form name="signUp" method="POST">
             {(_, form) => {
-              const allTouched =
-                form.isFieldTouched('email') && form.isFieldTouched('password') && form.isFieldTouched('passwordRepeat')
+              const emailTouched = form.isFieldTouched('email')
+              const passwordTouched = form.isFieldTouched('password') && form.isFieldTouched('passwordRepeat')
               const hasErrors = form.getFieldsError().filter((entry) => entry.errors.length > 0).length > 0
               return (
                 <>
                   {this.renderSignUpInputs(form)}
                   {this.renderConfirmNewsletter()}
-                  {this.renderSignUpButton(form.getFieldsValue(), !allTouched || hasErrors)}
+                  {this.renderSignUpButton(form.getFieldsValue(), emailTouched, passwordTouched, hasErrors)}
                   {this.renderLegalConsent()}
                   {/* {this.renderSignUpMiddleActions()} */}
                   {this.renderSignUpFooterActions()}
