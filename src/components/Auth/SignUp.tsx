@@ -74,13 +74,18 @@ export class AuthSignUp extends SignUp {
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   renderSignUpInputs(form: FormInstance<any>): JSX.Element {
+    const searchParams = new URLSearchParams(window.location.search)
     return (
       <>
         <div className="w-full mt-6">
-          <AuthFormFirstName screenKey="signUp" onChange={this.handleInputChange} />
+          <AuthFormFirstName
+            screenKey="signUp"
+            onChange={this.handleInputChange}
+            value={searchParams.get('name') || ''}
+          />
         </div>
         <div className="w-full mt-6">
-          <AuthFormEmail screenKey="signUp" onChange={this.handleInputChange} />
+          <AuthFormEmail screenKey="signUp" onChange={this.handleInputChange} value={searchParams.get('email') || ''} />
         </div>
         <div className="w-full mt-8">
           <AuthFormDoublePassword screenKey="signUp" onChange={this.handleInputChange} form={form} />
@@ -195,8 +200,11 @@ export class AuthSignUp extends SignUp {
           </div>
           <Form name="signUp" method="POST">
             {(_, form) => {
+              const searchParams = new URLSearchParams(window.location.search)
               const allTouched =
-                form.isFieldTouched('email') && form.isFieldTouched('password') && form.isFieldTouched('passwordRepeat')
+                (form.isFieldTouched('email') || searchParams.get('email') !== '') &&
+                form.isFieldTouched('password') &&
+                form.isFieldTouched('passwordRepeat')
               const hasErrors = form.getFieldsError().filter((entry) => entry.errors.length > 0).length > 0
               return (
                 <>

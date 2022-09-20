@@ -478,3 +478,480 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
   </div>
 </div>
 `;
+
+exports[`SignUp custom auth component Shows provided values 1`] = `
+<div>
+  <div
+    class="my-4 mx-6 md:mx-0"
+  >
+    <div
+      class="flex w-full"
+    >
+      <span
+        class="text-2xl leading-8 font-semibold"
+      >
+        Erstelle ein Konto
+      </span>
+    </div>
+    <div
+      class="mt-12"
+    >
+      <div
+        class="flex"
+      >
+        <div
+          class="border-t border-brand-grey-whisper absolute w-full left-0"
+        />
+      </div>
+      <div
+        class="w-full mt-4"
+      >
+        <div
+          class="uppercase font-normal text-coreUI-text-secondary text-xs leading-4 font-semibold"
+        >
+          Registrierung mit Email
+        </div>
+      </div>
+      <div
+        class="mt-4"
+      />
+      <form
+        method="POST"
+      >
+        <div
+          class="w-full mt-6"
+        >
+          <div
+            class="relative"
+          >
+            <label
+              class="relative"
+            >
+              <span
+                class="absolute -top-6 left-3 px-1 bg-white"
+              >
+                <span
+                  class="text-sm leading-5"
+                >
+                  Deine Vorname
+                </span>
+              </span>
+              <input
+                class="w-full  border rounded-full focus:outline-0 focus:ring px-4 py-2 focus:ring-primary/30"
+                data-testid="firstName"
+                placeholder="Deine Vorname"
+                type="text"
+                value="Spongebob"
+              />
+            </label>
+          </div>
+        </div>
+        <div
+          class="w-full mt-6"
+        >
+          <div
+            class="relative"
+          >
+            <label
+              class="relative"
+            >
+              <span
+                class="absolute -top-6 left-3 px-1 bg-white"
+              >
+                <span
+                  class="text-sm leading-5"
+                >
+                  Deine E-mail-Adresse
+                </span>
+              </span>
+              <input
+                class="w-full  border rounded-full focus:outline-0 focus:ring px-4 py-2 focus:ring-primary/30"
+                data-testid="email"
+                placeholder="Deine E-mail-Adresse"
+                type="email"
+                value="test@test.com"
+              />
+            </label>
+          </div>
+        </div>
+        <div
+          class="w-full mt-8"
+        >
+          <div>
+            <div
+              class="relative"
+            >
+              <label
+                class="relative"
+              >
+                <span
+                  class="absolute -top-6 left-3 px-1 bg-white"
+                >
+                  <span
+                    class="text-sm leading-5"
+                  >
+                    Dein Passwort
+                  </span>
+                </span>
+                <input
+                  class="w-full pr-11 border rounded-full focus:outline-0 focus:ring px-4 py-2 focus:ring-primary/30"
+                  data-testid="password"
+                  placeholder="Dein Passwort"
+                  type="password"
+                  value=""
+                />
+              </label>
+              <div
+                class="absolute right-3 top-1/2 -translate-y-2/4"
+              >
+                <div
+                  class="cursor-pointer"
+                  data-testid="password-view-toggle"
+                >
+                  <svg
+                    class="text-coreUI-text-secondary"
+                    fill="inherit"
+                    height="24"
+                    viewBox="0 0 22 16"
+                    width="24"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M14 8C14 9.65685 12.6569 11 11 11C9.34315 11 8 9.65685 8 8C8 6.34315 9.34315 5 11 5C12.6569 5 14 6.34315 14 8Z M1.45825 7.99997C2.73253 3.94288 6.52281 1 11.0004 1C15.4781 1 19.2684 3.94291 20.5426 8.00004C19.2684 12.0571 15.4781 15 11.0005 15C6.52281 15 2.73251 12.0571 1.45825 7.99997Z"
+                      fill="none"
+                      fill-rule="evenodd"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="mt-8"
+          >
+            <div
+              class="relative"
+            >
+              <label
+                class="relative"
+              >
+                <span
+                  class="absolute -top-6 left-3 px-1 bg-white"
+                >
+                  <span
+                    class="text-sm leading-5"
+                  >
+                    Passwort wiederholen
+                  </span>
+                </span>
+                <input
+                  class="w-full pr-11 border rounded-full focus:outline-0 focus:ring px-4 py-2 focus:ring-primary/30"
+                  data-testid="passwordRepeat"
+                  placeholder="Passwort wiederholen"
+                  type="password"
+                  value=""
+                />
+              </label>
+              <div
+                class="absolute right-3 top-1/2 -translate-y-2/4"
+              >
+                <div
+                  class="cursor-pointer"
+                  data-testid="password-view-toggle"
+                >
+                  <svg
+                    class="text-coreUI-text-secondary"
+                    fill="inherit"
+                    height="24"
+                    viewBox="0 0 22 16"
+                    width="24"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M14 8C14 9.65685 12.6569 11 11 11C9.34315 11 8 9.65685 8 8C8 6.34315 9.34315 5 11 5C12.6569 5 14 6.34315 14 8Z M1.45825 7.99997C2.73253 3.94288 6.52281 1 11.0004 1C15.4781 1 19.2684 3.94291 20.5426 8.00004C19.2684 12.0571 15.4781 15 11.0005 15C6.52281 15 2.73251 12.0571 1.45825 7.99997Z"
+                      fill="none"
+                      fill-rule="evenodd"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="mt-4 p-4 pb-1 bg-brand-grey-whisper rounded-md"
+          >
+            <span
+              class="block pb-4 text-sm leading-5 font-semibold"
+            >
+              Anforderungen an dein Passwort
+            </span>
+            <div
+              class="flex mb-4"
+            >
+              <svg
+                class="mr-2 text-coreUI-text-tertiary shrink-0"
+                fill="inherit"
+                height="24"
+                viewBox="0 0 16 16"
+                width="24"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM11.7071 6.70711C12.0976 6.31658 12.0976 5.68342 11.7071 5.29289C11.3166 4.90237 10.6834 4.90237 10.2929 5.29289L7 8.58579L5.70711 7.29289C5.31658 6.90237 4.68342 6.90237 4.29289 7.29289C3.90237 7.68342 3.90237 8.31658 4.29289 8.70711L6.29289 10.7071C6.68342 11.0976 7.31658 11.0976 7.70711 10.7071L11.7071 6.70711Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  stroke="none"
+                  stroke-width="none"
+                />
+              </svg>
+              <span
+                class="text-sm leading-5"
+              >
+                Das Passwort muss aus mindestens 8 und maximal 32 Zeichen bestehen
+              </span>
+            </div>
+            <div
+              class="flex mb-4"
+            >
+              <svg
+                class="mr-2 text-coreUI-text-tertiary shrink-0"
+                fill="inherit"
+                height="24"
+                viewBox="0 0 16 16"
+                width="24"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM11.7071 6.70711C12.0976 6.31658 12.0976 5.68342 11.7071 5.29289C11.3166 4.90237 10.6834 4.90237 10.2929 5.29289L7 8.58579L5.70711 7.29289C5.31658 6.90237 4.68342 6.90237 4.29289 7.29289C3.90237 7.68342 3.90237 8.31658 4.29289 8.70711L6.29289 10.7071C6.68342 11.0976 7.31658 11.0976 7.70711 10.7071L11.7071 6.70711Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  stroke="none"
+                  stroke-width="none"
+                />
+              </svg>
+              <span
+                class="text-sm leading-5"
+              >
+                Dein Passwort muss mindestens einen Groß- sowie Kleinbuchstaben beinhalten
+              </span>
+            </div>
+            <div
+              class="flex mb-4"
+            >
+              <svg
+                class="mr-2 text-coreUI-text-tertiary shrink-0"
+                fill="inherit"
+                height="24"
+                viewBox="0 0 16 16"
+                width="24"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM11.7071 6.70711C12.0976 6.31658 12.0976 5.68342 11.7071 5.29289C11.3166 4.90237 10.6834 4.90237 10.2929 5.29289L7 8.58579L5.70711 7.29289C5.31658 6.90237 4.68342 6.90237 4.29289 7.29289C3.90237 7.68342 3.90237 8.31658 4.29289 8.70711L6.29289 10.7071C6.68342 11.0976 7.31658 11.0976 7.70711 10.7071L11.7071 6.70711Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  stroke="none"
+                  stroke-width="none"
+                />
+              </svg>
+              <span
+                class="text-sm leading-5"
+              >
+                Dein Passwort muss mindestens eine Zahl beinhalten
+              </span>
+            </div>
+            <div
+              class="flex mb-4"
+            >
+              <svg
+                class="mr-2 text-coreUI-text-tertiary shrink-0"
+                fill="inherit"
+                height="24"
+                viewBox="0 0 16 16"
+                width="24"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM11.7071 6.70711C12.0976 6.31658 12.0976 5.68342 11.7071 5.29289C11.3166 4.90237 10.6834 4.90237 10.2929 5.29289L7 8.58579L5.70711 7.29289C5.31658 6.90237 4.68342 6.90237 4.29289 7.29289C3.90237 7.68342 3.90237 8.31658 4.29289 8.70711L6.29289 10.7071C6.68342 11.0976 7.31658 11.0976 7.70711 10.7071L11.7071 6.70711Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  stroke="none"
+                  stroke-width="none"
+                />
+              </svg>
+              <span
+                class="text-sm leading-5"
+              >
+                Dein Passwort muss mindestens ein Sonderzeichen enthalten, wie bspw.: ^$*.[]{}()?"!@#%&/\\,&gt;&lt;':;|_~\`
+              </span>
+            </div>
+            <div
+              class="flex mb-4"
+            >
+              <svg
+                class="mr-2 text-coreUI-text-tertiary shrink-0"
+                fill="inherit"
+                height="24"
+                viewBox="0 0 16 16"
+                width="24"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM11.7071 6.70711C12.0976 6.31658 12.0976 5.68342 11.7071 5.29289C11.3166 4.90237 10.6834 4.90237 10.2929 5.29289L7 8.58579L5.70711 7.29289C5.31658 6.90237 4.68342 6.90237 4.29289 7.29289C3.90237 7.68342 3.90237 8.31658 4.29289 8.70711L6.29289 10.7071C6.68342 11.0976 7.31658 11.0976 7.70711 10.7071L11.7071 6.70711Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  stroke="none"
+                  stroke-width="none"
+                />
+              </svg>
+              <span
+                class="text-sm leading-5"
+              >
+                Dein Passwort darf keine Leerzeichen enthalten
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-8"
+        >
+          <button
+            class="flex w-full flex-row items-start cursor-pointer disabled:opacity-20 disabled:cursor-not-allowed"
+            data-testid="newsletterSignup"
+          >
+            <div>
+              <svg
+                class="undefined"
+                fill="inherit"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M19 22H5c-1.7 0-3-1.3-3-3V5c0-1.7 1.3-3 3-3h14c1.7 0 3 1.3 3 3v14c0 1.7-1.3 3-3 3zM5 4c-.6 0-1 .4-1 1v14c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V5c0-.6-.4-1-1-1H5z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  stroke="currentColor"
+                  stroke-width="0.25"
+                />
+              </svg>
+            </div>
+            <div
+              class="flex grow text-left pl-2 text-xs leading-4"
+            >
+              Ja, ich möchte gelegentlich E-Mails über Produkt-neuheiten, Rabatte und exklusive Aktionen erhalten. Ich kann mich jederzeit vom Newsletter abmelden.
+            </div>
+          </button>
+        </div>
+        <div
+          class="mt-8"
+        >
+          <button
+            class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-md font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary pointer-events-none bg-coreUI-background-images !border-coreUI-background-images text-coreUI-text-secondary"
+            data-testid="submit"
+            disabled=""
+            role="button"
+            type="submit"
+          >
+            Registrieren
+          </button>
+        </div>
+        <div
+          class="mt-8"
+        >
+          <div
+            class="font-normal text-xs leading-4"
+          >
+            Indem Du auf “Registrieren” klickst, erstellst Du ein 60beans-Konto und stimmst unseren 
+            <a
+              class="font-normal border-b"
+              href="//www.60beans.com/legal/agb"
+              target="_blank"
+            >
+              Nutzungsbedingungen
+            </a>
+             sowie 
+            <a
+              class="font-normal border-b"
+              href="//www.60beans.com/legal/datenschutz"
+              target="_blank"
+            >
+              Datenschutzrichtlinien
+            </a>
+             zu.
+          </div>
+        </div>
+        <div
+          class="mt-8"
+        >
+          <div
+            class="flex"
+          >
+            <div
+              class="border-t border-brand-grey-whisper absolute w-full left-0"
+            />
+          </div>
+          <div
+            class="mt-6 mb-6 text-xl leading-7 font-semibold"
+          >
+            Du hast bereits ein Konto?
+          </div>
+          <button
+            class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-md font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
+            data-testid="goToSignInLink"
+            role="button"
+            type="button"
+          >
+            Anmelden
+          </button>
+        </div>
+      </form>
+    </div>
+    <div
+      class="mt-8 mb-12"
+    >
+      <div
+        class="flex"
+      >
+        <div
+          class="border-t border-brand-grey-whisper absolute w-full left-0"
+        />
+      </div>
+      <div
+        class="w-full mt-4 flex justify-center"
+      >
+        <a
+          href="//www.notion.so/Datenschutzhinweise-ad5b45261a964166a74883d2770e28ea"
+          target="_blank"
+        >
+          <div
+            class="font-normal border-b text-xs leading-4"
+          >
+            Datenschutz-Bestimmungen
+          </div>
+        </a>
+        <a
+          class="ml-10"
+          href="//slender-petunia-c3c.notion.site/Imprint-33b18fd9e469471ab768eef8155da968"
+          target="_blank"
+        >
+          <div
+            class="font-normal border-b text-xs leading-4"
+          >
+            Impressum
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

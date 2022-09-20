@@ -6,11 +6,13 @@ import { AuthFormItemInput } from '.'
 interface AuthFormFirstNameProps {
   screenKey: string
   onChange: ChangeEventHandler<HTMLInputElement>
+  value?: string
 }
 
 export const AuthFormFirstName: React.FC<AuthFormFirstNameProps> = ({
   screenKey,
   onChange,
+  value = '',
 }: AuthFormFirstNameProps) => {
   return (
     <AuthFormItemInput
@@ -20,6 +22,7 @@ export const AuthFormFirstName: React.FC<AuthFormFirstNameProps> = ({
       placeholder={i18n.t(`auth.${screenKey}.firstName.placeholder`)}
       onChange={onChange}
       dataTestId="firstName"
+      value={value}
     />
   )
 }
