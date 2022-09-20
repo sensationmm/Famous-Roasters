@@ -205,6 +205,13 @@ describe('SignUp custom auth component', () => {
   })
 
   it('Shows provided values', async () => {
+    Object.defineProperty(window, 'location', {
+      writable: true,
+      value: {
+        ...window.location,
+        search: '?name=Spongebob&email=test@test.com',
+      },
+    })
     const { container } = render(
       <I18nextProvider i18n={i18n}>
         <MemoryRouter initialEntries={['/register?name=Spongebob&email=test@test.com']}>
