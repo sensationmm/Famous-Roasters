@@ -1,3 +1,10 @@
+## [1.75.1](https://github.com/Famous-Roasters/frontend/compare/v1.75.0...v1.75.1) (2022-09-20)
+
+
+### Bug Fixes
+
+* **product:** price per kg mismatch ([7a05e5c](https://github.com/Famous-Roasters/frontend/commit/7a05e5caedc696a5a53218ad2d94cae08a90115c))
+
 # [1.75.0](https://github.com/Famous-Roasters/frontend/compare/v1.74.0...v1.75.0) (2022-09-16)
 
 
