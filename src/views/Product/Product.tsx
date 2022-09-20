@@ -154,6 +154,7 @@ export const Product: React.FC = () => {
     vendor_description,
     vendor_image,
     extraDescription,
+    pricePerKg,
   } = data?.product || {}
 
   const isAccessory = productType === 'Accessories'
@@ -269,22 +270,15 @@ export const Product: React.FC = () => {
               <Typography type={TypographyType.Heading} size={TypographySize.Small} className="mr-1">
                 {formatPrice((quantity * parseFloat(variantSelected?.price)).toString(), currencyCode)}
               </Typography>
-              <Typography
-                type={TypographyType.Paragraph}
-                size={TypographySize.Tiny}
-                className="text-coreUI-text-tertiary"
-              >
-                (
-                {variantSelected?.package_size &&
-                  formatPrice(
-                    (
-                      (parseFloat(variantSelected?.price) * 1000) /
-                      parseFloat(variantSelected?.package_size?.value)
-                    ).toString(),
-                    'EUR',
-                  )}
-                /kg)
-              </Typography>
+              {pricePerKg && (
+                <Typography
+                  type={TypographyType.Paragraph}
+                  size={TypographySize.Tiny}
+                  className="text-coreUI-text-tertiary"
+                >
+                  ({formatPrice(pricePerKg.value)}/kg)
+                </Typography>
+              )}
             </>
           )}
           <Typography
