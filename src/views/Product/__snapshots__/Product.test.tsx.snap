@@ -479,13 +479,6 @@ exports[`Product view Renders correctly for a accessories 1`] = `
                   >
                     28,50 €
                   </span>
-                  <span
-                    class="text-coreUI-text-tertiary text-xs leading-4"
-                  >
-                    (
-                    95,00 €
-                    /kg)
-                  </span>
                   <div
                     class="text-coreUI-text-tertiary text-xs leading-4"
                   >
@@ -571,13 +564,6 @@ exports[`Product view Renders correctly for a accessories 1`] = `
             class="mr-1 text-2xl leading-8 font-semibold"
           >
             28,50 €
-          </span>
-          <span
-            class="text-coreUI-text-tertiary text-xs leading-4"
-          >
-            (
-            95,00 €
-            /kg)
           </span>
           <div
             class="text-coreUI-text-tertiary text-xs leading-4"
@@ -2185,7 +2171,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                     class="text-coreUI-text-tertiary text-xs leading-4"
                   >
                     (
-                    39,96 €
+                    10,00 €
                     /kg)
                   </span>
                   <div
@@ -2278,7 +2264,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
             class="text-coreUI-text-tertiary text-xs leading-4"
           >
             (
-            39,96 €
+            10,00 €
             /kg)
           </span>
           <div
@@ -3989,7 +3975,7 @@ exports[`Product view Renders correctly for a successful call with International
                     class="text-coreUI-text-tertiary text-xs leading-4"
                   >
                     (
-                    39,96 €
+                    10,00 €
                     /kg)
                   </span>
                   <div
@@ -4082,7 +4068,7 @@ exports[`Product view Renders correctly for a successful call with International
             class="text-coreUI-text-tertiary text-xs leading-4"
           >
             (
-            39,96 €
+            10,00 €
             /kg)
           </span>
           <div
@@ -5780,7 +5766,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                     class="text-coreUI-text-tertiary text-xs leading-4"
                   >
                     (
-                    39,96 €
+                    10,00 €
                     /kg)
                   </span>
                   <div
@@ -5873,7 +5859,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
             class="text-coreUI-text-tertiary text-xs leading-4"
           >
             (
-            39,96 €
+            10,00 €
             /kg)
           </span>
           <div
