@@ -1,3 +1,15 @@
+# [1.76.0](https://github.com/Famous-Roasters/frontend/compare/v1.75.1...v1.76.0) (2022-09-20)
+
+
+### Bug Fixes
+
+* **signup:** non-hook approach ([604b011](https://github.com/Famous-Roasters/frontend/commit/604b0118de6db7c0da2aa9a25b8ed100ea837029))
+
+
+### Features
+
+* **signup:** prepopulate signup values from order confirmation ([2ff1fbb](https://github.com/Famous-Roasters/frontend/commit/2ff1fbb4ddc55c4b833e24a78bbeca43b7a1bff7))
+
 ## [1.75.1](https://github.com/Famous-Roasters/frontend/compare/v1.75.0...v1.75.1) (2022-09-20)
 
 
