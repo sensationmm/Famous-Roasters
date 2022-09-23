@@ -14,6 +14,8 @@ import {
   Button,
   ButtonEmphasis,
   ButtonSize,
+  Icon,
+  IconName,
   Typography,
   TypographySize,
   TypographyType,
@@ -76,7 +78,30 @@ export class AuthSignIn extends SignIn {
   }
 
   renderSignInButton(disabled: boolean): JSX.Element {
-    return <AuthFormButton ctaText={i18n.t<string>('auth.signIn.title')} disabled={disabled} />
+    return (
+      <>
+        <AuthFormButton ctaText={i18n.t<string>('auth.signIn.title')} disabled={disabled} />
+
+        <div className="mt-6 pt-4 border-t border-brand-grey-whisper">
+          <Typography
+            as="p"
+            type={TypographyType.Label}
+            size={TypographySize.Tiny}
+            className="mb-2 uppercase font-normal text-coreUI-text-secondary"
+          >
+            {i18n.t<string>('auth.signIn.signUpSocial')}
+          </Typography>
+          <div className="grid grid-cols-2 gap-4">
+            <Button emphasis={ButtonEmphasis.Tertiary} center>
+              <Icon name={IconName.Google} />
+            </Button>
+            <Button emphasis={ButtonEmphasis.Tertiary} center>
+              <Icon name={IconName.Apple} />
+            </Button>
+          </div>
+        </div>
+      </>
+    )
   }
 
   renderSignInMiddleActions(): JSX.Element {
