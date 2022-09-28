@@ -7,7 +7,7 @@ import {
 import { loader } from 'graphql.macro'
 import React, { useContext, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import {
   Button,
   ButtonEmphasis,
@@ -378,7 +378,7 @@ export const Product: React.FC = () => {
 
   const renderProductMainBlock = () => {
     return (
-      <div className="grid gap-6 grid-cols-1 md:grid-cols-2 mt-10">
+      <div className="grid gap-6 grid-cols-1 md:grid-cols-2 mt-4">
         {/* Images */}
         {images && images.nodes.length > 0 && <Carousel images={images.nodes} />}
         <div>
@@ -597,6 +597,14 @@ export const Product: React.FC = () => {
   return (
     <Layout>
       <main className="flex flex-col w-full items-start justify-center bg-white mt-4 mb-4">
+        <div className="w-full max-w-7xl mx-auto px-6 xl:px-8 font-bold">
+          <Typography size={TypographySize.Tiny}>
+            <Link to="/catalogue" className="text-coreUI-text-tertiary">
+              Shop
+            </Link>{' '}
+            &gt; {title}
+          </Typography>
+        </div>
         <div className="w-full max-w-7xl mx-auto px-6 xl:px-8">{renderProductMainBlock()}</div>
         {renderMobileStickyCTABlock()}
         <div className="w-full max-w-7xl mx-auto px-6 xl:px-8">{id && renderProductCollapsableBlocks()}</div>
