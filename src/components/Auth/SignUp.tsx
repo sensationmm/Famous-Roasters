@@ -200,7 +200,11 @@ export class AuthSignUp extends SignUp {
             >
               <Icon name={IconName.Google} />
             </Button>
-            <Button emphasis={ButtonEmphasis.Tertiary} center>
+            <Button
+              emphasis={ButtonEmphasis.Tertiary}
+              center
+              onClick={() => Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Apple })}
+            >
               <Icon name={IconName.Apple} />
             </Button>
           </div>
