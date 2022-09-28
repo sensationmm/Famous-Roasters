@@ -1,3 +1,10 @@
+# [1.77.0](https://github.com/Famous-Roasters/frontend/compare/v1.76.0...v1.77.0) (2022-09-28)
+
+
+### Features
+
+* **product:** add breadcrumb to product page ([cce6fde](https://github.com/Famous-Roasters/frontend/commit/cce6fde606c03d30ce3da1b0a01433778b8a8a07))
+
 # [1.76.0](https://github.com/Famous-Roasters/frontend/compare/v1.75.1...v1.76.0) (2022-09-20)
 
 
