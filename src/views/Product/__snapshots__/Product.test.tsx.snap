@@ -199,10 +199,27 @@ exports[`Product view Renders correctly for a accessories 1`] = `
       class="flex flex-col w-full items-start justify-center bg-white mt-4 mb-4"
     >
       <div
+        class="w-full max-w-7xl mx-auto px-6 xl:px-8 font-bold"
+      >
+        <span
+          class="text-xs leading-4"
+        >
+          <a
+            class="text-coreUI-text-tertiary"
+            href="/catalogue"
+          >
+            Shop
+          </a>
+           
+          &gt; 
+          Barista Pinsel | barista.tools
+        </span>
+      </div>
+      <div
         class="w-full max-w-7xl mx-auto px-6 xl:px-8"
       >
         <div
-          class="grid gap-6 grid-cols-1 md:grid-cols-2 mt-10"
+          class="grid gap-6 grid-cols-1 md:grid-cols-2 mt-4"
         >
           <div>
             Carousel here
@@ -1433,10 +1450,27 @@ exports[`Product view Renders correctly for a successful call 1`] = `
       class="flex flex-col w-full items-start justify-center bg-white mt-4 mb-4"
     >
       <div
+        class="w-full max-w-7xl mx-auto px-6 xl:px-8 font-bold"
+      >
+        <span
+          class="text-xs leading-4"
+        >
+          <a
+            class="text-coreUI-text-tertiary"
+            href="/catalogue"
+          >
+            Shop
+          </a>
+           
+          &gt; 
+          Espresso Raritäten Set
+        </span>
+      </div>
+      <div
         class="w-full max-w-7xl mx-auto px-6 xl:px-8"
       >
         <div
-          class="grid gap-6 grid-cols-1 md:grid-cols-2 mt-10"
+          class="grid gap-6 grid-cols-1 md:grid-cols-2 mt-4"
         >
           <div>
             <span />
@@ -3237,10 +3271,27 @@ exports[`Product view Renders correctly for a successful call with International
       class="flex flex-col w-full items-start justify-center bg-white mt-4 mb-4"
     >
       <div
+        class="w-full max-w-7xl mx-auto px-6 xl:px-8 font-bold"
+      >
+        <span
+          class="text-xs leading-4"
+        >
+          <a
+            class="text-coreUI-text-tertiary"
+            href="/catalogue"
+          >
+            Shop
+          </a>
+           
+          &gt; 
+          Espresso Raritäten Set
+        </span>
+      </div>
+      <div
         class="w-full max-w-7xl mx-auto px-6 xl:px-8"
       >
         <div
-          class="grid gap-6 grid-cols-1 md:grid-cols-2 mt-10"
+          class="grid gap-6 grid-cols-1 md:grid-cols-2 mt-4"
         >
           <div>
             <span />
@@ -5041,10 +5092,27 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
       class="flex flex-col w-full items-start justify-center bg-white mt-4 mb-4"
     >
       <div
+        class="w-full max-w-7xl mx-auto px-6 xl:px-8 font-bold"
+      >
+        <span
+          class="text-xs leading-4"
+        >
+          <a
+            class="text-coreUI-text-tertiary"
+            href="/catalogue"
+          >
+            Shop
+          </a>
+           
+          &gt; 
+          Espresso Raritäten Set
+        </span>
+      </div>
+      <div
         class="w-full max-w-7xl mx-auto px-6 xl:px-8"
       >
         <div
-          class="grid gap-6 grid-cols-1 md:grid-cols-2 mt-10"
+          class="grid gap-6 grid-cols-1 md:grid-cols-2 mt-4"
         >
           <div>
             <span />
