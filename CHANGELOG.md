@@ -1,3 +1,10 @@
+## [1.77.1](https://github.com/Famous-Roasters/frontend/compare/v1.77.0...v1.77.1) (2022-10-03)
+
+
+### Bug Fixes
+
+* **catalogue:** ui jumping on last page navigation ([e01fdd8](https://github.com/Famous-Roasters/frontend/commit/e01fdd8b613c54d0e00766870f2c40d3e79c82ee))
+
 # [1.77.0](https://github.com/Famous-Roasters/frontend/compare/v1.76.0...v1.77.0) (2022-09-28)
 
 
