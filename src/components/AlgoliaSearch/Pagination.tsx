@@ -1,4 +1,5 @@
 import { ArrowNarrowLeftIcon, ArrowNarrowRightIcon } from '@heroicons/react/solid'
+import { useEffect } from 'react'
 import { usePagination, UsePaginationProps } from 'react-instantsearch-hooks-web'
 
 const getButtonClassNames = (disabled: boolean): string => {
@@ -23,17 +24,25 @@ const getButtonClassNames = (disabled: boolean): string => {
 }
 
 const Pagination = (props: UsePaginationProps) => {
+  let scrollTimeout: ReturnType<typeof setTimeout>
   const { currentRefinement, isFirstPage, isLastPage, refine, pages } = usePagination(props)
+
+  useEffect(() => {
+    return clearTimeout(scrollTimeout)
+  }, [])
 
   const refineWithScrollToTop = (x: number) => {
     refine(x)
 
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
-
-    window.scroll({
-      top: 0,
-      behavior: !mediaQuery || mediaQuery.matches ? 'auto' : 'smooth',
-    })
+    scrollTimeout = setTimeout(
+      () =>
+        window.scroll({
+          top: 0,
+          behavior: !mediaQuery || mediaQuery.matches ? 'auto' : 'smooth',
+        }),
+      100,
+    )
   }
 
   return (
@@ -49,8 +58,9 @@ const Pagination = (props: UsePaginationProps) => {
         </button>
       </div>
 
-      {pages.map((page) => (
+      {pages.map((page, count) => (
         <div
+          data-testid={`pagination-page-${count}`}
           onClick={() => refineWithScrollToTop(page)}
           key={page}
           className={`cursor-pointer w-12 h-10 pt-3.5 text-center font-bold text-coreUI-text-tertiary border-t-2 ${
