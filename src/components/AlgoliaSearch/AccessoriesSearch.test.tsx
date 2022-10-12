@@ -8,8 +8,8 @@ import { i18n } from 'src/config'
 import AccessoriesSearch from './AccessoriesSearch'
 
 const searchClient = algoliasearch(
-  process.env.REACT_APP_ALGOLIA_APP_ID || '',
-  process.env.REACT_APP_ALGOLIA_API_KEY || '',
+  process.env.REACT_APP_ALGOLIA_APP_ID || 'UJO1LDXRBG',
+  process.env.REACT_APP_ALGOLIA_API_KEY || 'ae9617f85b12371cbdfbe18d4c727fcc',
 )
 
 describe('AccessoriesSearch view', () => {
