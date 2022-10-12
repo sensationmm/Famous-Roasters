@@ -1,3 +1,16 @@
+# [1.78.0](https://github.com/Famous-Roasters/frontend/compare/v1.77.1...v1.78.0) (2022-10-12)
+
+
+### Bug Fixes
+
+* **catalogue:** add fallback algolia keys ([a399799](https://github.com/Famous-Roasters/frontend/commit/a399799e86fac98dbcf6bda01c2faa752acd1cc0))
+* **catalogue:** correct text showing when filtered ([47a85b2](https://github.com/Famous-Roasters/frontend/commit/47a85b228e2f9f6ba6bac30aa99d76f84804f891))
+
+
+### Features
+
+* **catalogue:** add algolia test coverage ([4199e05](https://github.com/Famous-Roasters/frontend/commit/4199e05c10c60b2e8a78b04b13898cdaea15a473))
+
 ## [1.77.1](https://github.com/Famous-Roasters/frontend/compare/v1.77.0...v1.77.1) (2022-10-03)
 
 
