@@ -823,7 +823,12 @@
         "from": "ab"
       },
       "title": "Katalog",
-      "filterCoffeesText": "Alle Zubereitungsarten inkl. Vollautomaten, Handfilter und Siebträger"
+      "coffeeFiltersExplanationText": {
+        "all" : "Alle Zubereitungsarten inkl. Vollautomaten, Handfilter und Siebträger",
+        "filter": "Moccamaster, French Press, Aeropress, Handfilter und Filtermaschine",
+        "espresso": "Espresso maschine, Moka pot, Vollautomaten",
+        "omni": ""
+      }
     },
     "checkout": {
       "navigation": "Checkout",
