@@ -1,4 +1,4 @@
-import Auth from '@aws-amplify/auth'
+import Auth, { CognitoHostedUIIdentityProvider } from '@aws-amplify/auth'
 import { SignIn } from 'aws-amplify-react'
 import { IAuthPieceProps } from 'aws-amplify-react/lib-esm/Auth/AuthPiece'
 import Form from 'rc-field-form'
@@ -92,10 +92,14 @@ export class AuthSignIn extends SignIn {
             {i18n.t<string>('auth.signIn.signUpSocial')}
           </Typography>
           <div className="grid grid-cols-2 gap-4">
-            <Button emphasis={ButtonEmphasis.Tertiary} center>
+            <Button
+              emphasis={ButtonEmphasis.Tertiary}
+              center
+              onClick={() => Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Google })}
+            >
               <Icon name={IconName.Google} />
             </Button>
-            <Button emphasis={ButtonEmphasis.Tertiary} center>
+            <Button emphasis={ButtonEmphasis.Tertiary} center disabled>
               <Icon name={IconName.Apple} />
             </Button>
           </div>

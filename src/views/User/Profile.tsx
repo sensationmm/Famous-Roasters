@@ -83,7 +83,6 @@ export const Profile: React.FC = () => {
       const { event } = payload as HubPayload
       if (event === 'cognitoHostedUI') {
         const jwtToken = payload.data.signInUserSession.accessToken.jwtToken
-        console.log('cognitoHostedUI', payload.data)
         client
           .query({
             query: SIGN_UP,
@@ -93,9 +92,10 @@ export const Profile: React.FC = () => {
           })
           .then(() => {
             window.localStorage.setItem('authToken', jwtToken)
-            // navigate('/profile')
           })
-          .catch((e) => console.log('SIGN_UP HOSTED', e))
+          .catch((e) => {
+            throw new Error('Error with hosted sign in', e)
+          })
       }
     })
   }, [])
@@ -103,7 +103,6 @@ export const Profile: React.FC = () => {
   useEffect(() => {
     Auth.currentAuthenticatedUser()
       .then((u) => {
-        console.log('currentAuthenticatedUser', u)
         setUserName(u.attributes['custom:first_name'])
 
         getUserProfile()

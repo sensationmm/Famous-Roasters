@@ -49,7 +49,8 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
           </svg>
         </button>
         <button
-          class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-4 py-2 text-base font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
+          class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-4 py-2 text-base font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black pointer-events-none bg-coreUI-background-images !border-coreUI-background-images text-coreUI-text-secondary"
+          disabled=""
           role="button"
         >
           <svg
@@ -581,7 +582,8 @@ exports[`SignUp custom auth component Shows provided values 1`] = `
           </svg>
         </button>
         <button
-          class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-4 py-2 text-base font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
+          class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-4 py-2 text-base font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black pointer-events-none bg-coreUI-background-images !border-coreUI-background-images text-coreUI-text-secondary"
+          disabled=""
           role="button"
         >
           <svg
