@@ -1,3 +1,30 @@
+# [1.78.0](https://github.com/Famous-Roasters/frontend/compare/v1.77.1...v1.78.0) (2022-10-12)
+
+
+### Bug Fixes
+
+* **catalogue:** add fallback algolia keys ([a399799](https://github.com/Famous-Roasters/frontend/commit/a399799e86fac98dbcf6bda01c2faa752acd1cc0))
+* **catalogue:** correct text showing when filtered ([47a85b2](https://github.com/Famous-Roasters/frontend/commit/47a85b228e2f9f6ba6bac30aa99d76f84804f891))
+
+
+### Features
+
+* **catalogue:** add algolia test coverage ([4199e05](https://github.com/Famous-Roasters/frontend/commit/4199e05c10c60b2e8a78b04b13898cdaea15a473))
+
+## [1.77.1](https://github.com/Famous-Roasters/frontend/compare/v1.77.0...v1.77.1) (2022-10-03)
+
+
+### Bug Fixes
+
+* **catalogue:** ui jumping on last page navigation ([e01fdd8](https://github.com/Famous-Roasters/frontend/commit/e01fdd8b613c54d0e00766870f2c40d3e79c82ee))
+
+# [1.77.0](https://github.com/Famous-Roasters/frontend/compare/v1.76.0...v1.77.0) (2022-09-28)
+
+
+### Features
+
+* **product:** add breadcrumb to product page ([cce6fde](https://github.com/Famous-Roasters/frontend/commit/cce6fde606c03d30ce3da1b0a01433778b8a8a07))
+
 # [1.76.0](https://github.com/Famous-Roasters/frontend/compare/v1.75.1...v1.76.0) (2022-09-20)
 
 

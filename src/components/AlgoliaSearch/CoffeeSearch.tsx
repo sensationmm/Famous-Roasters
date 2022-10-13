@@ -88,6 +88,20 @@ const CoffeeSearch: React.FC = () => {
   const { items: activeRefinements } = useCurrentRefinements()
   const { refine: clearRefinements } = useClearRefinements()
 
+  const getCoffeeText = () => {
+    const type = activeRefinements.find((x) => x.label === 'meta.my_fields.coffee_type')?.refinements[1].value
+    switch (type) {
+      case 'Filter':
+        return 'filter'
+      case 'Espresso':
+        return 'espresso'
+      case 'Omni':
+        return 'omni'
+      default:
+        return 'all'
+    }
+  }
+
   return (
     <>
       <Configure
@@ -107,7 +121,7 @@ const CoffeeSearch: React.FC = () => {
           />
 
           <Typography size={TypographySize.Tiny} className="text-coreUI-text-tertiary">
-            {t('pages.catalogue.filterCoffeesText')}
+            {t(`pages.catalogue.coffeeFiltersExplanationText.${getCoffeeText()}`)}
           </Typography>
         </div>
 
