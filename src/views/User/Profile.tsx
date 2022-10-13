@@ -1,5 +1,6 @@
 import { useLazyQuery } from '@apollo/client/react/hooks'
-import { Auth } from 'aws-amplify'
+import { HubPayload } from '@aws-amplify/core'
+import { Auth, Hub } from 'aws-amplify'
 import { loader } from 'graphql.macro'
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -26,10 +27,11 @@ import {
   TypographySize,
   TypographyType,
 } from 'src/components'
-import { shopifyAccessoryCollection, storeFrontClient } from 'src/config'
+import { famousRoastersClient, shopifyAccessoryCollection, storeFrontClient } from 'src/config'
 import { useAuth } from 'src/config/cognito'
 import useBreakpoint from 'src/hooks/useBreakpoint'
 const USER_PROFILE = loader('src/graphql/queries/userProfile.query.graphql')
+const SIGN_UP = loader('src/graphql/queries/signUp.query.graphql')
 import { formatDate, formatPrice, getSimplifiedId } from 'src/utils'
 
 import { CollectionQuery } from '../Catalogue'
@@ -73,6 +75,29 @@ export const Profile: React.FC = () => {
     document.title = `${t('brand.name')} | ${t('pages.profile.title')}`
 
     accessories.length === 0 && fetchAccessories()
+  }, [])
+
+  useEffect(() => {
+    Hub.listen('auth', ({ payload }) => {
+      const client = famousRoastersClient()
+      const { event } = payload as HubPayload
+      if (event === 'cognitoHostedUI') {
+        const jwtToken = payload.data.signInUserSession.accessToken.jwtToken
+        client
+          .query({
+            query: SIGN_UP,
+            variables: {
+              accessToken: jwtToken,
+            },
+          })
+          .then(() => {
+            window.localStorage.setItem('authToken', jwtToken)
+          })
+          .catch((e) => {
+            throw new Error('Error with hosted sign in', e)
+          })
+      }
+    })
   }, [])
 
   useEffect(() => {

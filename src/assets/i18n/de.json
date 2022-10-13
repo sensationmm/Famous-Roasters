@@ -144,7 +144,8 @@
         "action": "Registrieren",
         "prompt": "Ich bin neu hier"
       },
-      "title": "Anmelden"
+      "title": "Anmelden",
+      "signUpSocial": "oder weiter mit"
     },
     "signUp": {
       "confirmSignUp": {
@@ -201,7 +202,8 @@
         "prompt": "Du hast bereits ein Konto?"
       },
       "title": "Erstelle ein Konto",
-      "withEmail": "Registrierung mit Email"
+      "withEmail": "Registrierung mit Email",
+      "withSocial": "Registrierung mit"
     },
     "signOut": {
       "action": "Abmelden"

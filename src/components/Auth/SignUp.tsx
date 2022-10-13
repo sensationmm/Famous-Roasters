@@ -1,4 +1,4 @@
-import Auth from '@aws-amplify/auth'
+import Auth, { CognitoHostedUIIdentityProvider } from '@aws-amplify/auth'
 import { SignUp } from 'aws-amplify-react'
 import { IAuthPieceProps } from 'aws-amplify-react/lib-esm/Auth/AuthPiece'
 import Form, { FormInstance } from 'rc-field-form'
@@ -10,6 +10,8 @@ import {
   Button,
   ButtonEmphasis,
   ButtonSize,
+  Icon,
+  IconName,
   Typography,
   TypographySize,
   TypographyType,
@@ -34,6 +36,21 @@ interface SignUpParams {
   userConfirmed: boolean
   newsletterSignup: boolean
 }
+
+export const socialSignInButtons = () => (
+  <div className="grid grid-cols-2 gap-4">
+    <Button
+      emphasis={ButtonEmphasis.Tertiary}
+      center
+      onClick={() => Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Google })}
+    >
+      <Icon name={IconName.Google} />
+    </Button>
+    <Button emphasis={ButtonEmphasis.Tertiary} center disabled>
+      <Icon name={IconName.Apple} />
+    </Button>
+  </div>
+)
 
 export class AuthSignUp extends SignUp {
   constructor(props: IAuthPieceProps) {
@@ -177,11 +194,22 @@ export class AuthSignUp extends SignUp {
     return this.props.authState === 'signUp' || this.props.authState === 'signUpError' ? (
       <div className="my-4 mx-6 md:mx-0">
         <div className="flex w-full">
-          <Typography type={TypographyType.Heading} size={TypographySize.Small}>
+          <Typography as="h1" type={TypographyType.Heading} size={TypographySize.Small}>
             {i18n.t<string>('auth.signUp.title')}
           </Typography>
         </div>
-        <div className="mt-12">
+        <div className="mt-4">
+          <Typography
+            as="p"
+            type={TypographyType.Label}
+            size={TypographySize.Tiny}
+            className="mb-2 uppercase font-normal text-coreUI-text-secondary"
+          >
+            {i18n.t<string>('auth.signUp.withSocial')}
+          </Typography>
+          {socialSignInButtons()}
+        </div>
+        <div className="mt-6 md:mt-10">
           <div className="flex">
             <div className="border-t border-brand-grey-whisper absolute w-full left-0" />
           </div>

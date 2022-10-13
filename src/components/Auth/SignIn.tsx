@@ -20,6 +20,8 @@ import {
 } from 'src/components'
 import { i18n } from 'src/config'
 
+import { socialSignInButtons } from './SignUp'
+
 interface SignInParams {
   email: string
   password: string
@@ -76,7 +78,23 @@ export class AuthSignIn extends SignIn {
   }
 
   renderSignInButton(disabled: boolean): JSX.Element {
-    return <AuthFormButton ctaText={i18n.t<string>('auth.signIn.title')} disabled={disabled} />
+    return (
+      <>
+        <AuthFormButton ctaText={i18n.t<string>('auth.signIn.title')} disabled={disabled} />
+
+        <div className="mt-6 pt-4 border-t border-brand-grey-whisper">
+          <Typography
+            as="p"
+            type={TypographyType.Label}
+            size={TypographySize.Tiny}
+            className="mb-2 uppercase font-normal text-coreUI-text-secondary"
+          >
+            {i18n.t<string>('auth.signIn.signUpSocial')}
+          </Typography>
+          {socialSignInButtons()}
+        </div>
+      </>
+    )
   }
 
   renderSignInMiddleActions(): JSX.Element {

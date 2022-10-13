@@ -7,6 +7,14 @@ export const awsconfig = {
   aws_cognito_region: process.env.REACT_APP_COGNITO_REGION,
   aws_user_pools_id: process.env.REACT_APP_COGNITO_USER_POOL_ID,
   aws_user_pools_web_client_id: process.env.REACT_APP_COGNITO_CLIENT_ID,
+
+  oauth: {
+    domain: process.env.REACT_APP_COGNITO_DOMAIN,
+    scope: ['email', 'openid', 'profile', 'aws.cognito.signin.user.admin'],
+    redirectSignIn: process.env.REACT_APP_COGNITO_CALLBACK_SIGNIN,
+    redirectSignOut: process.env.REACT_APP_COGNITO_CALLBACK_SIGNOUT,
+    responseType: 'code',
+  },
 }
 Amplify.configure(awsconfig)
 
