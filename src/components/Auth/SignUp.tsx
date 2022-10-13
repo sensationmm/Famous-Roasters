@@ -37,6 +37,21 @@ interface SignUpParams {
   newsletterSignup: boolean
 }
 
+export const socialSignInButtons = () => (
+  <div className="grid grid-cols-2 gap-4">
+    <Button
+      emphasis={ButtonEmphasis.Tertiary}
+      center
+      onClick={() => Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Google })}
+    >
+      <Icon name={IconName.Google} />
+    </Button>
+    <Button emphasis={ButtonEmphasis.Tertiary} center disabled>
+      <Icon name={IconName.Apple} />
+    </Button>
+  </div>
+)
+
 export class AuthSignUp extends SignUp {
   constructor(props: IAuthPieceProps) {
     super(props)
@@ -192,18 +207,7 @@ export class AuthSignUp extends SignUp {
           >
             {i18n.t<string>('auth.signUp.withSocial')}
           </Typography>
-          <div className="grid grid-cols-2 gap-4">
-            <Button
-              emphasis={ButtonEmphasis.Tertiary}
-              center
-              onClick={() => Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Google })}
-            >
-              <Icon name={IconName.Google} />
-            </Button>
-            <Button emphasis={ButtonEmphasis.Tertiary} center disabled>
-              <Icon name={IconName.Apple} />
-            </Button>
-          </div>
+          {socialSignInButtons()}
         </div>
         <div className="mt-6 md:mt-10">
           <div className="flex">
