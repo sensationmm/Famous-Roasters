@@ -1,3 +1,19 @@
+# [1.79.0](https://github.com/Famous-Roasters/frontend/compare/v1.78.0...v1.79.0) (2022-10-14)
+
+
+### Bug Fixes
+
+* **signup:** fix code duplication sonar bug ([d5ec667](https://github.com/Famous-Roasters/frontend/commit/d5ec6675c153d3c34940c7ea74ecf1f444b96df0))
+* **workflow:** add missing new env vars ([2d1df1e](https://github.com/Famous-Roasters/frontend/commit/2d1df1ef387bbf84751cc821c637e95e5dfb9b8a))
+* **workflow:** correct secret names for staging ([6ef2947](https://github.com/Famous-Roasters/frontend/commit/6ef2947f9bc431e1fff2ec37273057327e7b621c))
+
+
+### Features
+
+* **register:** social sign in setup ([236d17e](https://github.com/Famous-Roasters/frontend/commit/236d17e1dc613a61b1afaa653a9daa9ee94558da))
+* **signup:** google sign in final ([8042c13](https://github.com/Famous-Roasters/frontend/commit/8042c13a529556674ee40c85fae9e507d4ca9261))
+* **signup:** google sign up ([a5e3678](https://github.com/Famous-Roasters/frontend/commit/a5e3678aa10a4daaa1a672ad0bf2c3a480546e6c))
+
 # [1.78.0](https://github.com/Famous-Roasters/frontend/compare/v1.77.1...v1.78.0) (2022-10-12)
 
 
