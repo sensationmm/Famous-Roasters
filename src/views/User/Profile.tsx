@@ -47,13 +47,25 @@ interface RatedProduct {
   rating: number
 }
 
-interface UserProfile {
+interface ShippingDetails {
+  firstName: string
+  lastName: string
+  company: string
+  street: string
+  additionalInfo: string
+  zipCode: string
+  city: string
+  country: string
+}
+
+export interface UserProfile {
   id: string
   email: string
   newsletterSignup: boolean
   tasteFinderProfile: TasteFinderProfile
   aroma: CoffeeAroma
   ratedProducts: RatedProduct[]
+  shipping: ShippingDetails | undefined
 }
 
 export const Profile: React.FC = () => {

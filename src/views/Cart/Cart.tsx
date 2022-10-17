@@ -19,17 +19,25 @@ import {
   TypographySize,
   TypographyType,
 } from 'src/components'
+import { famousRoastersClient } from 'src/config'
+import { useAuth } from 'src/config/cognito'
 import { formatPrice, getSimplifiedId } from 'src/utils'
+import { UserProfile } from 'src/views/User'
+
+const USER_PROFILE = loader('src/graphql/queries/userProfile.query.graphql')
+const GET_CART = loader('src/graphql/queries/cart.query.graphql')
 
 export const Cart: React.FC = () => {
+  const [user] = useAuth()
   const { t } = useTranslation()
   const [searchParams, setSearchParams] = useSearchParams()
-  const GET_CART = loader('src/graphql/queries/cart.query.graphql')
   const { cartId } = useContext(CartContext)
   const [cartQuery, { loading, data }] = useLazyQuery<CartQueryQuery>(GET_CART)
   const { modifyQuantity, removeFromCart } = useContext(CartContext)
   const [showMissingItemsWarning, setShowMissingItemsWarning] = useState<boolean>(false)
   let timeout: ReturnType<typeof setTimeout>
+  const client = famousRoastersClient()
+  const [userProfile, setUserProfile] = useState<UserProfile>()
 
   useEffect(() => {
     document.title = `${t('brand.name')} | ${t('pages.cart.title')}`
@@ -58,6 +66,20 @@ export const Cart: React.FC = () => {
       }, 3000)
     }
   }, [searchParams.get('missingItems')])
+
+  useEffect(() => {
+    user &&
+      client
+        .query({
+          query: USER_PROFILE,
+          variables: {
+            accessToken: user?.getAccessToken().getJwtToken(),
+          },
+        })
+        .then((res) => {
+          res.data && setUserProfile(res.data.userProfile)
+        })
+  }, [user])
 
   if (loading) {
     return (
@@ -99,6 +121,32 @@ export const Cart: React.FC = () => {
 
   const handleModifyQuantity = (item: Scalars['ID'], quantity: number) => {
     modifyQuantity && modifyQuantity(item, quantity)
+  }
+
+  const generateCheckoutUrl = () => {
+    const checkoutUrl = [data?.cart?.checkoutUrl]
+
+    userProfile?.email && checkoutUrl.push(`?checkout[email]=${userProfile?.email}`)
+
+    if (userProfile?.shipping) {
+      checkoutUrl.push('&')
+      userProfile?.shipping?.firstName &&
+        checkoutUrl.push(`checkout[shipping_address][first_name]=${userProfile?.shipping?.firstName}&`)
+      userProfile?.shipping?.lastName &&
+        checkoutUrl.push(`checkout[shipping_address][last_name]=${userProfile?.shipping?.lastName}&`)
+      userProfile?.shipping?.company &&
+        checkoutUrl.push(`checkout[shipping_address][company]=${userProfile?.shipping?.company}&`)
+      userProfile?.shipping?.street &&
+        checkoutUrl.push(`checkout[shipping_address][address1]=${userProfile?.shipping?.street}&`)
+      userProfile?.shipping?.additionalInfo &&
+        checkoutUrl.push(`checkout[shipping_address][address2]=${userProfile?.shipping?.additionalInfo}&`)
+      userProfile?.shipping?.city &&
+        checkoutUrl.push(`checkout[shipping_address][city]=${userProfile?.shipping?.city}&`)
+      userProfile?.shipping?.zipCode &&
+        checkoutUrl.push(`checkout[shipping_address][zip]=${userProfile?.shipping?.zipCode}`)
+    }
+
+    return checkoutUrl.join('')
   }
 
   const renderCartWithItems = () => {
@@ -221,12 +269,7 @@ export const Cart: React.FC = () => {
         )}
         <div className="grid gap-4 grid-cols-1 md:flex md:justify-end my-6">
           <div className="grid md:order-2 justify-items-end">
-            <a
-              id="toCheckout"
-              href={data?.cart?.checkoutUrl}
-              className="flex w-full md:w-max"
-              data-testid="goToCheckout"
-            >
+            <a id="toCheckout" href={generateCheckoutUrl()} className="flex w-full md:w-max" data-testid="goToCheckout">
               <Button
                 type="button"
                 emphasis={ButtonEmphasis.Primary}

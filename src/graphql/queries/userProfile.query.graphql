@@ -15,5 +15,15 @@ query userProfile {
       shopifyId
       rating
     }
+    shipping {
+      firstName
+      lastName
+      company
+      street
+      additionalInfo
+      zipCode
+      city
+      country
+    }
   }
 }

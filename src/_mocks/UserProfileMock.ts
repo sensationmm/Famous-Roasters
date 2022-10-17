@@ -20,6 +20,16 @@ export const UserProfileMock = {
           coffeeType: 'ESPRESSO',
         },
         ratedProducts: [{ shopifyId: '7655228899544', rating: 4 }],
+        shipping: {
+          firstName: 'adsdas',
+          lastName: 'adsdas',
+          company: 'adsdas',
+          street: 'adsdas',
+          additionalInfo: 'adsdas',
+          zipCode: 'adsdas',
+          city: 'adsdas',
+          country: 'adsdas',
+        }
       },
     },
   },
