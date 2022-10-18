@@ -1,3 +1,10 @@
+# [1.80.0](https://github.com/Famous-Roasters/frontend/compare/v1.79.0...v1.80.0) (2022-10-18)
+
+
+### Features
+
+* **checkout:** pre-populate users saved address ([b99f163](https://github.com/Famous-Roasters/frontend/commit/b99f163bf521df0ca1605752a16d048745f7c710))
+
 # [1.79.0](https://github.com/Famous-Roasters/frontend/compare/v1.78.0...v1.79.0) (2022-10-14)
 
 
