@@ -5,7 +5,7 @@ import { Catalogue } from './Catalogue'
 import { Error } from './Error'
 import { FeaturedProduct, Product } from './Product'
 import { TasteFinder } from './TasteFinder'
-import { Account, Orders, OrderVariant, Profile } from './User'
+import { Account, Orders, OrderVariant, Profile, UserProfile } from './User'
 
 export { Account }
 export { Auth as Auth }
@@ -21,4 +21,5 @@ export { Orders as Orders }
 export type { OrderVariant as OrderVariant }
 export { Product as Product }
 export { Profile as Profile }
+export type { UserProfile }
 export { TasteFinder as TasteFinder }
