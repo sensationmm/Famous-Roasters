@@ -1,3 +1,10 @@
+## [1.80.2](https://github.com/Famous-Roasters/frontend/compare/v1.80.1...v1.80.2) (2022-10-18)
+
+
+### Bug Fixes
+
+* **signup:** hide apple sign in button for now ([4aa5bfa](https://github.com/Famous-Roasters/frontend/commit/4aa5bfa14ed774deb94f286f24280b51ec8f811e))
+
 ## [1.80.1](https://github.com/Famous-Roasters/frontend/compare/v1.80.0...v1.80.1) (2022-10-18)
 
 # [1.80.0](https://github.com/Famous-Roasters/frontend/compare/v1.79.0...v1.80.0) (2022-10-18)
