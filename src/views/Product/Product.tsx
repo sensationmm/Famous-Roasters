@@ -33,7 +33,7 @@ import {
   TypographySize,
   TypographyType,
 } from 'src/components'
-import { formatPrice, getAPIId, parseHtmlSafely } from 'src/utils'
+import { formatPrice, getAPIId, getRegion, parseHtmlSafely, regionImages } from 'src/utils'
 
 import { FindSimilar } from './FindSimilar'
 import { YouMightLike } from './YouMightLike'
@@ -505,31 +505,43 @@ export const Product: React.FC = () => {
     )
   }
 
-  const renderProductBlockContentGetToKnow = () => (
-    <>
-      {descriptionHtml && <div dangerouslySetInnerHTML={{ __html: parseHtmlSafely(descriptionHtml) }} />}
+  const renderProductBlockContentGetToKnow = () => {
+    const region = getRegion(origin?.value || '')
+    const layout = region ? 'md:grid-cols-2' : ''
+    return (
+      <div className={`grid ${layout} gap-6`}>
+        {region !== undefined && (
+          <div className="h-[150px] md:h-auto overflow-hidden">
+            <img
+              className="w-full relative top-2/3 md:top-0 -translate-y-1/2 md:translate-y-0"
+              src={regionImages[region]}
+            />
+          </div>
+        )}
+        {/* Characteristics section */}
+        <div>
+          {descriptionHtml && <div dangerouslySetInnerHTML={{ __html: parseHtmlSafely(descriptionHtml) }} />}
 
-      {/* Characteristics section */}
-      <div className="mt-8">
-        <Typography
-          as="div"
-          type={TypographyType.Label}
-          size={TypographySize.Base}
-          className="pb-2 mb-4 border-b border-coreUI-border"
-        >
-          {t('pages.product.originProcessing.title')}
-        </Typography>
-        <OriginProductionSpecs
-          flavourNotes={flavourNotes?.value}
-          origin={origin?.value}
-          producer={producer?.value}
-          altitude={altitude?.value}
-          variety={variety?.value}
-          processing={processing?.value}
-        />
+          <Typography
+            as="div"
+            type={TypographyType.Label}
+            size={TypographySize.Base}
+            className="pb-2 mb-4 border-b border-coreUI-border"
+          >
+            {t('pages.product.originProcessing.title')}
+          </Typography>
+          <OriginProductionSpecs
+            flavourNotes={flavourNotes?.value}
+            origin={origin?.value}
+            producer={producer?.value}
+            altitude={altitude?.value}
+            variety={variety?.value}
+            processing={processing?.value}
+          />
+        </div>
       </div>
-    </>
-  )
+    )
+  }
 
   const renderProductBlockContentMeetTheRoaster = () => {
     return (
