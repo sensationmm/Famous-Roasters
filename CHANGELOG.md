@@ -1,3 +1,10 @@
+# [1.81.0](https://github.com/Famous-Roasters/frontend/compare/v1.80.2...v1.81.0) (2022-10-19)
+
+
+### Features
+
+* **product:** add coffee region imagery ([47a3ea9](https://github.com/Famous-Roasters/frontend/commit/47a3ea9ab8a8c89b99c698d84e71b9e5d87590a7))
+
 ## [1.80.2](https://github.com/Famous-Roasters/frontend/compare/v1.80.1...v1.80.2) (2022-10-18)
 
 
