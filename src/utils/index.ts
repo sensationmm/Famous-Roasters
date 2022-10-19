@@ -3,6 +3,7 @@ import { formatDate, formatPrice, getAPIId, getAromaKey, getSimplifiedId } from 
 import { formatBlogHtmlElement, formatHtmlElement, isAllowedHtmlElement, parseHtmlSafely } from './htmlContentParser'
 import { useLocalStorage } from './localStorage'
 import { readTimeCalculator } from './readTimeCalculator'
+import { getRegion, regionImages } from './regionMapping'
 
 export { formatDate as formatDate }
 export { formatPrice as formatPrice }
@@ -17,3 +18,5 @@ export { isAllowedHtmlElement as isAllowedHtmlElement }
 export { toValueInHumanScale as toValueInHumanScale }
 export { toRoundedValueInRealScale as toRoundedValueInRealScale }
 export { readTimeCalculator as readTimeCalculator }
+export { getRegion }
+export { regionImages }
