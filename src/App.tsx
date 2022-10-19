@@ -1,4 +1,5 @@
 import { ApolloProvider } from '@apollo/client'
+import * as Sentry from '@sentry/react'
 import React, { useLayoutEffect, useState } from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
@@ -109,4 +110,4 @@ const App = () => {
   )
 }
 
-export default App
+export default Sentry.withProfiler(App)
