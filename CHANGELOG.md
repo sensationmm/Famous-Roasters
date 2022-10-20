@@ -1,3 +1,10 @@
+# [1.82.0](https://github.com/Famous-Roasters/frontend/compare/v1.81.0...v1.82.0) (2022-10-20)
+
+
+### Features
+
+* **app:** implement senty ([f2cc951](https://github.com/Famous-Roasters/frontend/commit/f2cc951ac5c428c84ad545670d1a69212f2da423))
+
 # [1.81.0](https://github.com/Famous-Roasters/frontend/compare/v1.80.2...v1.81.0) (2022-10-19)
 
 
