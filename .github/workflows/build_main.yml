@@ -53,9 +53,6 @@ jobs:
           yarn prettier
           yarn lint
 
-      - name: Auto Minify
-        uses: nizarmah/auto-minify@v2.1.1
-
       - name: Unit Tests
         run: yarn run test:ci -u
         env:
@@ -91,6 +88,9 @@ jobs:
           REACT_APP_ALGOLIA_API_KEY: ${{ secrets.REACT_APP_ALGOLIA_API_KEY }}
           REACT_APP_GTM_ID: ${{ secrets.REACT_APP_GTM_ID }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Auto Minify
+        uses: nizarmah/auto-minify@v2.1.1
 
       - name: Configure AWS credentials
         id: creds
