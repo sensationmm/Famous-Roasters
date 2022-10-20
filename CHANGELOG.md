@@ -1,3 +1,10 @@
+## [1.82.1](https://github.com/Famous-Roasters/frontend/compare/v1.82.0...v1.82.1) (2022-10-20)
+
+
+### Bug Fixes
+
+* **page speed:** utilise cdn image conversion tools ([f74bd17](https://github.com/Famous-Roasters/frontend/commit/f74bd17d4a259697358d72e83d5983cc0fcef489))
+
 # [1.82.0](https://github.com/Famous-Roasters/frontend/compare/v1.81.0...v1.82.0) (2022-10-20)
 
 
