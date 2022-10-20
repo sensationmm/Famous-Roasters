@@ -81,7 +81,7 @@ export const Footer: React.FC = () => {
       <div className="w-full max-w-7xl mx-auto mb-8 md:mb-12 lg:mb-16 flex flex-col md:flex-row md:items-center justify-start">
         <Link to="//www.60beans.com">
           <span className="sr-only">{t('brand.name')}</span>
-          <img src={LogoLight} alt={t('brand.name')} className="h-6" />
+          <img src={LogoLight} alt={t('brand.name')} className="h-6" width="118px" height="24px" />
         </Link>
       </div>
       <div className="w-full max-w-7xl mx-auto flex flex-col xl:flex-row justify-between">

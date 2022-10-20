@@ -99,7 +99,9 @@ exports[`Orders view Handles error call 1`] = `
               <img
                 alt="60beans"
                 class="h-6"
+                height="24px"
                 src="60beans-light.svg"
+                width="118px"
               />
             </a>
             <div
@@ -304,7 +306,9 @@ exports[`Orders view Handles error call 1`] = `
           <img
             alt="60beans"
             class="h-6"
+            height="24px"
             src="60beans-light.svg"
+            width="118px"
           />
         </a>
       </div>
@@ -660,7 +664,9 @@ exports[`Orders view Renders correctly 1`] = `
               <img
                 alt="60beans"
                 class="h-6"
+                height="24px"
                 src="60beans-light.svg"
+                width="118px"
               />
             </a>
             <div
@@ -1329,7 +1335,9 @@ exports[`Orders view Renders correctly 1`] = `
           <img
             alt="60beans"
             class="h-6"
+            height="24px"
             src="60beans-light.svg"
+            width="118px"
           />
         </a>
       </div>
@@ -1685,7 +1693,9 @@ exports[`Orders view Renders correctly with no orders 1`] = `
               <img
                 alt="60beans"
                 class="h-6"
+                height="24px"
                 src="60beans-light.svg"
+                width="118px"
               />
             </a>
             <div
@@ -1890,7 +1900,9 @@ exports[`Orders view Renders correctly with no orders 1`] = `
           <img
             alt="60beans"
             class="h-6"
+            height="24px"
             src="60beans-light.svg"
+            width="118px"
           />
         </a>
       </div>
@@ -2246,7 +2258,9 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
               <img
                 alt="60beans"
                 class="h-6"
+                height="24px"
                 src="60beans-light.svg"
+                width="118px"
               />
             </a>
             <div
@@ -2446,7 +2460,9 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
           <img
             alt="60beans"
             class="h-6"
+            height="24px"
             src="60beans-light.svg"
+            width="118px"
           />
         </a>
       </div>
@@ -2802,7 +2818,9 @@ exports[`Orders view sets filter value 1`] = `
               <img
                 alt="60beans"
                 class="h-6"
+                height="24px"
                 src="60beans-light.svg"
+                width="118px"
               />
             </a>
             <div
@@ -3002,7 +3020,9 @@ exports[`Orders view sets filter value 1`] = `
           <img
             alt="60beans"
             class="h-6"
+            height="24px"
             src="60beans-light.svg"
+            width="118px"
           />
         </a>
       </div>
@@ -3358,7 +3378,9 @@ exports[`Orders view sets sort newest first 1`] = `
               <img
                 alt="60beans"
                 class="h-6"
+                height="24px"
                 src="60beans-light.svg"
+                width="118px"
               />
             </a>
             <div
@@ -4027,7 +4049,9 @@ exports[`Orders view sets sort newest first 1`] = `
           <img
             alt="60beans"
             class="h-6"
+            height="24px"
             src="60beans-light.svg"
+            width="118px"
           />
         </a>
       </div>
@@ -4383,7 +4407,9 @@ exports[`Orders view sets sort oldest first 1`] = `
               <img
                 alt="60beans"
                 class="h-6"
+                height="24px"
                 src="60beans-light.svg"
+                width="118px"
               />
             </a>
             <div
@@ -5052,7 +5078,9 @@ exports[`Orders view sets sort oldest first 1`] = `
           <img
             alt="60beans"
             class="h-6"
+            height="24px"
             src="60beans-light.svg"
+            width="118px"
           />
         </a>
       </div>
