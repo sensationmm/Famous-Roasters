@@ -1,3 +1,10 @@
+## [1.82.2](https://github.com/Famous-Roasters/frontend/compare/v1.82.1...v1.82.2) (2022-10-20)
+
+
+### Bug Fixes
+
+* **page speed:** add explicit image sizes ([dd045b4](https://github.com/Famous-Roasters/frontend/commit/dd045b4128f68f938b131c667513c8b56950e7cf))
+
 ## [1.82.1](https://github.com/Famous-Roasters/frontend/compare/v1.82.0...v1.82.1) (2022-10-20)
 
 
