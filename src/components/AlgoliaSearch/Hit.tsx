@@ -49,7 +49,7 @@ const Hit = ({ hit }: { hit: RawHit }) => {
       <div className="flex pt-8 md:px-6">
         <div className="flex justify-center items-center shrink-0 relative w-36 h-36">
           <div className="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36">
-            <img src={image} alt={title} className="w-24 max-h-24" />
+            <img src={`${image}&width=150&height=150`} alt={title} className="w-24 max-h-24" />
             {isDecaf && <Tag type={TagType.Decaf} value="Decaf" small={true} className="absolute top-2 left-0" />}
           </div>
         </div>
