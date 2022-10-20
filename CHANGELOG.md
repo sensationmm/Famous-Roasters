@@ -1,3 +1,11 @@
+## [1.82.3](https://github.com/Famous-Roasters/frontend/compare/v1.82.2...v1.82.3) (2022-10-20)
+
+
+### Bug Fixes
+
+* **page speed:** move uglify ([8d9a84f](https://github.com/Famous-Roasters/frontend/commit/8d9a84f7241633ce99623468e22164085bdda973))
+* **page-speed:** test minify js and css ([3c98583](https://github.com/Famous-Roasters/frontend/commit/3c9858368cb1288027cd559005a3fb85ab80e0e6))
+
 ## [1.82.2](https://github.com/Famous-Roasters/frontend/compare/v1.82.1...v1.82.2) (2022-10-20)
 
 
