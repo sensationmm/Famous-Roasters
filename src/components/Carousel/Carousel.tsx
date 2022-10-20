@@ -61,7 +61,11 @@ export const Carousel: React.FC<CarouselProps> = ({ images = [], slides, tile = 
               className={`flex w-full justify-center ${isImages && 'bg-brand-grey-whisper'}`}
             >
               {images.length > 0 ? (
-                <img src={(slide as Image).url} alt={`carousel-image-${idx}`} />
+                <img
+                  className="w-full"
+                  src={`${(slide as Image).url}&width=600&height=600`}
+                  alt={`carousel-image-${idx}`}
+                />
               ) : (
                 (slide as ReactNode)
               )}
@@ -76,7 +80,7 @@ export const Carousel: React.FC<CarouselProps> = ({ images = [], slides, tile = 
             data-testid={`carousel-image-tn-${idx}`}
             className="bg-brand-grey-whisper bg-center bg-cover cursor-pointer aspect-w-1 aspect-h-1"
             onClick={() => swiper && swiper.slideTo(idx)}
-            style={{ backgroundImage: `url("${image.url}")` }}
+            style={{ backgroundImage: `url("${image.url}&width=150&height=150")` }}
           />
         ))}
       </div>

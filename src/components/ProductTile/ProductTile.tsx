@@ -66,11 +66,11 @@ export const ProductTile: React.FC<ProductTileProps> = ({
 
   return (
     <div className={getOuterContainerClasses()}>
-      <img src={imgSrc} alt={title} className="hidden" onLoad={() => setImageLoaded(true)} />
+      <img src={`${imgSrc}&width=150&height=150`} alt={title} className="hidden" onLoad={() => setImageLoaded(true)} />
       {showImage && (
         <div className="flex justify-center items-center shrink-0 self-center relative w-32 h-32">
           <div className="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32">
-            <img src={imgSrc} alt={title} className="w-28 max-h-28" />
+            <img src={`${imgSrc}&width=150&height=150`} alt={title} className="w-28 max-h-28" />
             {decaf && decaf.value === 'true' && (
               <Tag type={TagType.Decaf} value="Decaf" small={true} className="absolute top-2 left-0" />
             )}

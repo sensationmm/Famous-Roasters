@@ -17,7 +17,7 @@ exports[`Hit component Renders correctly 1`] = `
           <img
             alt="Espresso Raritäten Set"
             class="w-24 max-h-24"
-            src="https://example.com/image"
+            src="https://example.com/image&width=150&height=150"
           />
         </div>
       </div>
