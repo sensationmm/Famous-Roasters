@@ -53,6 +53,9 @@ jobs:
           yarn prettier
           yarn lint
 
+      - name: Auto Minify
+        uses: nizarmah/auto-minify@v2.1.1
+
       - name: Unit Tests
         run: yarn run test:ci -u
         env:
