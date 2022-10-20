@@ -19,7 +19,9 @@ exports[`Product Tile component Renders as expected for missing attributes 1`] =
         <img
           alt="Espresso Raritäten Set"
           class="w-28 max-h-28"
+          height="150px"
           src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153&width=150&height=150"
+          width="150px"
         />
       </div>
     </div>
@@ -98,7 +100,9 @@ exports[`Product Tile component Renders as expected for out of stock featured it
         <img
           alt="Espresso Raritäten Set"
           class="w-28 max-h-28"
+          height="150px"
           src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153&width=150&height=150"
+          width="150px"
         />
       </div>
     </div>
@@ -186,7 +190,9 @@ exports[`Product Tile component Renders as expected for out of stock item 1`] = 
         <img
           alt="Espresso Raritäten Set"
           class="w-28 max-h-28"
+          height="150px"
           src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153&width=150&height=150"
+          width="150px"
         />
       </div>
     </div>
@@ -274,7 +280,9 @@ exports[`Product Tile component Renders as expected with type category 1`] = `
         <img
           alt="Espresso Raritäten Set"
           class="w-28 max-h-28"
+          height="150px"
           src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153&width=150&height=150"
+          width="150px"
         />
       </div>
     </div>
@@ -360,7 +368,9 @@ exports[`Product Tile component Renders correctly 1`] = `
         <img
           alt="Espresso Raritäten Set"
           class="w-28 max-h-28"
+          height="150px"
           src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153&width=150&height=150"
+          width="150px"
         />
       </div>
     </div>
@@ -443,7 +453,9 @@ exports[`Product Tile component Renders featured correctly 1`] = `
         <img
           alt="Espresso Raritäten Set"
           class="w-28 max-h-28"
+          height="150px"
           src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153&width=150&height=150"
+          width="150px"
         />
       </div>
     </div>

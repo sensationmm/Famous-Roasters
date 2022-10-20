@@ -99,7 +99,9 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <img
                 alt="60beans"
                 class="h-6"
+                height="24px"
                 src="60beans-light.svg"
+                width="118px"
               />
             </a>
             <div
@@ -535,7 +537,9 @@ exports[`Featured product view Renders correctly for a successful call with arom
           <img
             alt="60beans"
             class="h-6"
+            height="24px"
             src="60beans-light.svg"
+            width="118px"
           />
         </a>
       </div>
@@ -906,7 +910,9 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <img
                 alt="60beans"
                 class="h-6"
+                height="24px"
                 src="60beans-light.svg"
+                width="118px"
               />
             </a>
             <div
@@ -1342,7 +1348,9 @@ exports[`Featured product view Renders correctly for a successful call with arom
           <img
             alt="60beans"
             class="h-6"
+            height="24px"
             src="60beans-light.svg"
+            width="118px"
           />
         </a>
       </div>
@@ -1713,7 +1721,9 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <img
                 alt="60beans"
                 class="h-6"
+                height="24px"
                 src="60beans-light.svg"
+                width="118px"
               />
             </a>
             <div
@@ -2149,7 +2159,9 @@ exports[`Featured product view Renders correctly for a successful call with arom
           <img
             alt="60beans"
             class="h-6"
+            height="24px"
             src="60beans-light.svg"
+            width="118px"
           />
         </a>
       </div>
@@ -2520,7 +2532,9 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <img
                 alt="60beans"
                 class="h-6"
+                height="24px"
                 src="60beans-light.svg"
+                width="118px"
               />
             </a>
             <div
@@ -2956,7 +2970,9 @@ exports[`Featured product view Renders correctly for a successful call with arom
           <img
             alt="60beans"
             class="h-6"
+            height="24px"
             src="60beans-light.svg"
+            width="118px"
           />
         </a>
       </div>
@@ -3327,7 +3343,9 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <img
                 alt="60beans"
                 class="h-6"
+                height="24px"
                 src="60beans-light.svg"
+                width="118px"
               />
             </a>
             <div
@@ -3763,7 +3781,9 @@ exports[`Featured product view Renders correctly for a successful call with arom
           <img
             alt="60beans"
             class="h-6"
+            height="24px"
             src="60beans-light.svg"
+            width="118px"
           />
         </a>
       </div>
@@ -4134,7 +4154,9 @@ exports[`Featured product view Renders correctly for a successful call without a
               <img
                 alt="60beans"
                 class="h-6"
+                height="24px"
                 src="60beans-light.svg"
+                width="118px"
               />
             </a>
             <div
@@ -4447,7 +4469,9 @@ exports[`Featured product view Renders correctly for a successful call without a
           <img
             alt="60beans"
             class="h-6"
+            height="24px"
             src="60beans-light.svg"
+            width="118px"
           />
         </a>
       </div>
@@ -4818,7 +4842,9 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
               <img
                 alt="60beans"
                 class="h-6"
+                height="24px"
                 src="60beans-light.svg"
+                width="118px"
               />
             </a>
             <div
@@ -5254,7 +5280,9 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
           <img
             alt="60beans"
             class="h-6"
+            height="24px"
             src="60beans-light.svg"
+            width="118px"
           />
         </a>
       </div>
@@ -5650,7 +5678,9 @@ exports[`Featured product view renders as expected if no taste finder data exist
               <img
                 alt="60beans"
                 class="h-6"
+                height="24px"
                 src="60beans-light.svg"
+                width="118px"
               />
             </a>
             <div
@@ -6073,7 +6103,9 @@ exports[`Featured product view renders as expected if no taste finder data exist
           <img
             alt="60beans"
             class="h-6"
+            height="24px"
             src="60beans-light.svg"
+            width="118px"
           />
         </a>
       </div>

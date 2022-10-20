@@ -70,7 +70,13 @@ export const ProductTile: React.FC<ProductTileProps> = ({
       {showImage && (
         <div className="flex justify-center items-center shrink-0 self-center relative w-32 h-32">
           <div className="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32">
-            <img src={`${imgSrc}&width=150&height=150`} alt={title} className="w-28 max-h-28" />
+            <img
+              src={`${imgSrc}&width=150&height=150`}
+              alt={title}
+              className="w-28 max-h-28"
+              width="150px"
+              height="150px"
+            />
             {decaf && decaf.value === 'true' && (
               <Tag type={TagType.Decaf} value="Decaf" small={true} className="absolute top-2 left-0" />
             )}

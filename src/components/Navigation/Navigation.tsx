@@ -200,7 +200,7 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
             {/* Logo */}
             <Link to="//www.60beans.com" className="flex h-full items-center pl-2 pr-2">
               <span className="sr-only">{t('brand.name')}</span>
-              <img src={LogoLight} alt={t('brand.name')} className="h-6" />
+              <img src={LogoLight} alt={t('brand.name')} className="h-6" width="118px" height="24px" />
             </Link>
 
             <div className="flex-1 flow-root flex h-full items-center">

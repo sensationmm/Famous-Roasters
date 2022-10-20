@@ -65,6 +65,8 @@ export const Carousel: React.FC<CarouselProps> = ({ images = [], slides, tile = 
                   className="w-full"
                   src={`${(slide as Image).url}&width=600&height=600`}
                   alt={`carousel-image-${idx}`}
+                  width="600px"
+                  height="600px"
                 />
               ) : (
                 (slide as ReactNode)

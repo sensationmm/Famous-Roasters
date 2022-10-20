@@ -99,7 +99,9 @@ exports[`Profile view Renders correctly 1`] = `
               <img
                 alt="60beans"
                 class="h-6"
+                height="24px"
                 src="60beans-light.svg"
+                width="118px"
               />
             </a>
             <div
@@ -477,7 +479,9 @@ exports[`Profile view Renders correctly 1`] = `
                     <img
                       alt="Espresso Raritäten Set"
                       class="w-28 max-h-28"
+                      height="150px"
                       src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153&width=150&height=150"
+                      width="150px"
                     />
                     <div
                       class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
@@ -567,7 +571,9 @@ exports[`Profile view Renders correctly 1`] = `
                     <img
                       alt="Espresso Raritäten Set"
                       class="w-28 max-h-28"
+                      height="150px"
                       src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153&width=150&height=150"
+                      width="150px"
                     />
                     <div
                       class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
@@ -657,7 +663,9 @@ exports[`Profile view Renders correctly 1`] = `
                     <img
                       alt="Espresso Raritäten Set"
                       class="w-28 max-h-28"
+                      height="150px"
                       src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153&width=150&height=150"
+                      width="150px"
                     />
                     <div
                       class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
@@ -803,7 +811,9 @@ exports[`Profile view Renders correctly 1`] = `
           <img
             alt="60beans"
             class="h-6"
+            height="24px"
             src="60beans-light.svg"
+            width="118px"
           />
         </a>
       </div>
