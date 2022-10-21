@@ -94,6 +94,7 @@ jobs:
         with:
           overwrite: true
           js_engine: uglify-js
+          directory: build
 
       - name: Configure AWS credentials
         id: creds
