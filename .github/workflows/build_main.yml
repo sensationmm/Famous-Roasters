@@ -91,6 +91,9 @@ jobs:
 
       - name: Auto Minify
         uses: nizarmah/auto-minify@v2.1.1
+        with:
+          overwrite: true
+          js_engine: uglify-js
 
       - name: Configure AWS credentials
         id: creds
