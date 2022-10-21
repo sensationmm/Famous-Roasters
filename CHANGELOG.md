@@ -1,3 +1,10 @@
+# [1.83.0](https://github.com/Famous-Roasters/frontend/compare/v1.82.5...v1.83.0) (2022-10-21)
+
+
+### Features
+
+* **product:** 404 if product not found ([1859798](https://github.com/Famous-Roasters/frontend/commit/1859798616c2fc0a2b081ce08120af31ff661481))
+
 ## [1.82.5](https://github.com/Famous-Roasters/frontend/compare/v1.82.4...v1.82.5) (2022-10-21)
 
 
