@@ -1,3 +1,10 @@
+## [1.82.5](https://github.com/Famous-Roasters/frontend/compare/v1.82.4...v1.82.5) (2022-10-21)
+
+
+### Bug Fixes
+
+* **page speed:** correct src directory ([871e1c7](https://github.com/Famous-Roasters/frontend/commit/871e1c7a9a62aad44ba9f2f7df385b1c91d51bb7))
+
 ## [1.82.4](https://github.com/Famous-Roasters/frontend/compare/v1.82.3...v1.82.4) (2022-10-21)
 
 
