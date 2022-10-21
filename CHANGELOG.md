@@ -1,3 +1,10 @@
+## [1.82.4](https://github.com/Famous-Roasters/frontend/compare/v1.82.3...v1.82.4) (2022-10-21)
+
+
+### Bug Fixes
+
+* **page speed:** minify config ([8f8292c](https://github.com/Famous-Roasters/frontend/commit/8f8292c921d2f0d0267930eba2effcf3c8d9acbd))
+
 ## [1.82.3](https://github.com/Famous-Roasters/frontend/compare/v1.82.2...v1.82.3) (2022-10-20)
 
 
