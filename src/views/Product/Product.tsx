@@ -34,6 +34,7 @@ import {
   TypographyType,
 } from 'src/components'
 import { formatPrice, getAPIId, getRegion, parseHtmlSafely, regionImages } from 'src/utils'
+import { Error } from 'src/views/Error'
 
 import { FindSimilar } from './FindSimilar'
 import { YouMightLike } from './YouMightLike'
@@ -175,6 +176,10 @@ export const Product: React.FC = () => {
         ? setPackageSizes(packageSizesValues(undefined, variantSelected.equipmentvariant.value))
         : setPackageSizes(packageSizesValues()))
   }, [variantSelected])
+
+  if (data !== undefined && data?.product === null) {
+    return <Error />
+  }
 
   if (error) {
     // console.log('error', error.networkError)

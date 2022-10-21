@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 import errorImage from 'src/assets/images/404/404-cup.webp'
@@ -14,6 +15,10 @@ export const Error: React.FC = () => {
 
   return (
     <Layout navigationTheme={NavigationTheme.Home}>
+      <Helmet>
+        <title>{`${t('pages.error.title')} - ${t('brand.name')}`}</title>
+        <meta name="description" content={t('pages.error.title')} />
+      </Helmet>
       <main className="mx-auto white xs:mt-12 xl:mt-24">
         <div className="grid h-fit mx-auto xs:grid-cols-1 w-[280px] mb-12 md:grid-cols-1 xl:grid-cols-2 w-2/3">
           <div className="mx-auto mb-0">
