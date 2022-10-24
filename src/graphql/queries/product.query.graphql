@@ -2,6 +2,10 @@ query product($id: ID) {
   product(id: $id) {
     id
     title
+    seo {
+      title
+      description
+    }
     productType
     vendor
     vendor_description: metafield(namespace: "my_fields", key: "vendor_description") {

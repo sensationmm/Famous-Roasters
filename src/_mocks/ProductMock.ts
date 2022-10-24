@@ -7,6 +7,10 @@ const GET_PRODUCT = loader('src/graphql/queries/product.query.graphql')
 export const ProductMockDataBase: ProductCustom = {
   id: "gid://shopify/Product/7655228866776",
   title: 'Espresso Raritäten Set',
+  seo: {
+    title: 'Hi',
+    description: 'Hello World'
+  },
   productType: 'Espresso',
   vendor: '60beans',
   totalInventory: 100,
@@ -91,7 +95,6 @@ export const ProductMockDataBase: ProductCustom = {
       hasPreviousPage: false,
     },
   },
-  seo: {},
   tags: [],
   updatedAt: '',
   variants: {
@@ -115,6 +118,10 @@ export const ProductMockDataBase: ProductCustom = {
 export const AccessoryMockDataBase: ProductCustom = {
   id: "gid://shopify/Product/7968366166282",
   title: 'Barista Pinsel | barista.tools',
+  seo: {
+    title: 'Hi',
+    description: 'Hello World'
+  },
   productType: 'Accessories',
   vendor: 'Johann Jacobs Haus',
   priceRange: {
@@ -213,7 +220,6 @@ export const AccessoryMockDataBase: ProductCustom = {
       hasPreviousPage: false,
     },
   },
-  seo: {},
   tags: [],
   updatedAt: '',
   vendor_description: undefined,
