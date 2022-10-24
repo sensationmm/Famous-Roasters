@@ -213,7 +213,8 @@
   "brand": {
     "copyright": "© {{year}} 60beans. Alle Rechte vorbehalten.",
     "name": "60beans",
-    "withLove": "Mit ❤️ aus Berlin."
+    "withLove": "Mit ❤️ aus Berlin.",
+    "productSEO": "online kaufen"
   },
   "cta": {
     "next": "Weiter",

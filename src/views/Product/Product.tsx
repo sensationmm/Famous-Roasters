@@ -6,6 +6,7 @@ import {
 } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
 import React, { useContext, useEffect, useRef, useState } from 'react'
+import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
 import { Link, useParams } from 'react-router-dom'
 import {
@@ -156,6 +157,7 @@ export const Product: React.FC = () => {
     vendor_image,
     extraDescription,
     pricePerKg,
+    seo,
   } = data?.product || {}
 
   const isAccessory = productType === 'Accessories'
@@ -613,6 +615,12 @@ export const Product: React.FC = () => {
 
   return (
     <Layout>
+      {(seo?.title !== null || seo?.description !== null) && (
+        <Helmet>
+          {seo?.title && <title>{`${seo?.title} ${t('brand.productSEO')} | ${t('brand.name')}`}</title>}
+          {seo?.description && <meta name="description" content={seo?.description} />}
+        </Helmet>
+      )}
       <main className="flex flex-col w-full items-start justify-center bg-white mt-4 mb-4">
         <div className="w-full max-w-7xl mx-auto px-6 xl:px-8 font-bold">
           <Typography size={TypographySize.Tiny}>
