@@ -1,3 +1,10 @@
+# [1.84.0](https://github.com/Famous-Roasters/frontend/compare/v1.83.0...v1.84.0) (2022-10-24)
+
+
+### Features
+
+* **product:** add shopify driven seo meta tags on product page ([4ac1bf1](https://github.com/Famous-Roasters/frontend/commit/4ac1bf1c99816c6b2401de1e3b167bd4cd16e79f))
+
 # [1.83.0](https://github.com/Famous-Roasters/frontend/compare/v1.82.5...v1.83.0) (2022-10-21)
 
 
