@@ -1,6 +1,8 @@
 import { Collection, ProductConnection } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import algoliasearch from 'algoliasearch'
 import React from 'react'
+import { Helmet } from 'react-helmet'
+import { useTranslation } from 'react-i18next'
 import { InstantSearch } from 'react-instantsearch-hooks-web'
 import { useParams } from 'react-router-dom'
 import { Layout, TabsNavigation } from 'src/components'
@@ -50,9 +52,13 @@ export type FilterResponse = {
 
 export const Catalogue: React.FC = () => {
   const { productType } = useParams()
+  const { t } = useTranslation()
 
   return (
     <Layout>
+      <Helmet>
+        <title>{`${t('brand.seo.catalogue')} | ${t('brand.name')}`}</title>
+      </Helmet>
       <main className="flex flex-grow w-full items-start justify-center bg-white mt-4">
         <div className="w-full max-w-7xl mx-auto px-6 xl:px-8">
           <TabsNavigation tabsData={tabsData} />

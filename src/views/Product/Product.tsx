@@ -101,8 +101,6 @@ export const Product: React.FC = () => {
   const [packageSizes, setPackageSizes] = useState<ListBoxItem[]>([])
 
   useEffect(() => {
-    document.title = `${t('brand.name')} | ${t('pages.product.title')}`
-
     const handleScroll = () => {
       const stickyOffsetTop = stickyCTARef.current?.offsetTop || 0
       const relScrollWindow = window.outerHeight + window.scrollY
@@ -138,6 +136,7 @@ export const Product: React.FC = () => {
     vendor,
     coffee_type,
     accessory_type,
+    bean_type,
     aroma,
     flavourNotes,
     origin,
@@ -157,7 +156,6 @@ export const Product: React.FC = () => {
     vendor_image,
     extraDescription,
     pricePerKg,
-    seo,
   } = data?.product || {}
 
   const isAccessory = productType === 'Accessories'
@@ -613,14 +611,61 @@ export const Product: React.FC = () => {
     )
   }
 
+  const generateMetaTags = () => {
+    const isCoffee = !accessory_type
+    const titleTag = [title]
+    const descTag = [title]
+
+    coffee_type && titleTag.push(` ${coffee_type.value} ${t('brand.seo.coffee')}`)
+
+    titleTag.push(t('brand.seo.buyOnline'))
+    isCoffee
+      ? descTag.push(t('brand.seo.buyOnline'))
+      : descTag.push(`${t('brand.seo.now')} ${t('brand.seo.buyOnline')}`)
+
+    titleTag.push(`| ${t('brand.name')}`)
+
+    !isCoffee && descTag.push(`✓ ${t('brand.seo.largeSelection', { type: productType })}`)
+
+    const origins = origin?.value.split(',')
+    const beanOrigin: Array<string> = []
+    origins?.forEach((o) => {
+      beanOrigin.push(t(`pages.catalogue.filters.origin.values.${o}`))
+    })
+
+    bean_type &&
+      origin &&
+      descTag.push(
+        `✓ ${t('brand.seo.beanOrigin', {
+          bean: bean_type.value,
+          origin: beanOrigin.join(', '),
+        })}`,
+      )
+
+    const flavours = (val: string) => {
+      const flavours = val.split(', ')
+      const last = flavours.pop()
+
+      return `${flavours.join(', ')} & ${last}`
+    }
+
+    flavourNotes && descTag.push(`✓ ${t('brand.seo.flavour', { flavour: flavours(flavourNotes.value) })}`)
+
+    descTag.push(`✓ ${t('brand.seo.shipping')}`)
+
+    !isCoffee && descTag.push(`✓ ${t('brand.seo.warranty')}`)
+
+    return (
+      <Helmet>
+        <title>{titleTag.join(' ')}</title>
+        <meta name="description" content={`${descTag.join(' ')}!`} />
+      </Helmet>
+    )
+  }
+
   return (
     <Layout>
-      {(seo?.title !== null || seo?.description !== null) && (
-        <Helmet>
-          {seo?.title && <title>{`${seo?.title} ${t('brand.productSEO')} | ${t('brand.name')}`}</title>}
-          {seo?.description && <meta name="description" content={seo?.description} />}
-        </Helmet>
-      )}
+      {generateMetaTags()}
       <main className="flex flex-col w-full items-start justify-center bg-white mt-4 mb-4">
         <div className="w-full max-w-7xl mx-auto px-6 xl:px-8 font-bold">
           <Typography size={TypographySize.Tiny}>
