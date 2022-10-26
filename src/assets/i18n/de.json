@@ -214,7 +214,16 @@
     "copyright": "© {{year}} 60beans. Alle Rechte vorbehalten.",
     "name": "60beans",
     "withLove": "Mit ❤️ aus Berlin.",
-    "productSEO": "online kaufen"
+    "seo": {
+      "buyOnline": "online kaufen",
+      "coffee": "Kaffee",
+      "beanOrigin": "{{bean}} Bohnen aus {{origin}}",
+      "flavour": "erinnert an {{flavour}}",
+      "shipping": "Schneller Versand",
+      "warranty": "Herstellergarantie",
+      "now": "jetzt",
+      "largeSelection": "Große Auswahl an {{type}}"
+    }
   },
   "cta": {
     "next": "Weiter",
