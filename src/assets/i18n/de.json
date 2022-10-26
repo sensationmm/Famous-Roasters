@@ -215,6 +215,7 @@
     "name": "60beans",
     "withLove": "Mit ❤️ aus Berlin.",
     "seo": {
+      "catalogue": "Katalog",
       "buyOnline": "online kaufen",
       "coffee": "Kaffee",
       "beanOrigin": "{{bean}} Bohnen aus {{origin}}",
