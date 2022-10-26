@@ -1,3 +1,15 @@
+# [1.85.0](https://github.com/Famous-Roasters/frontend/compare/v1.84.0...v1.85.0) (2022-10-26)
+
+
+### Bug Fixes
+
+* **seo:** prevent override on catalogue page ([4764463](https://github.com/Famous-Roasters/frontend/commit/47644636631825cdcfb5faa8a327d5239b07346e))
+
+
+### Features
+
+* **product:** extend meta tags with template ([4c09948](https://github.com/Famous-Roasters/frontend/commit/4c09948037d3d7cf93e199b943b13b04f387bd53))
+
 # [1.84.0](https://github.com/Famous-Roasters/frontend/compare/v1.83.0...v1.84.0) (2022-10-24)
 
 
