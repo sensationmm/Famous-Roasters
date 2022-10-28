@@ -1,3 +1,10 @@
+## [1.86.1](https://github.com/Famous-Roasters/frontend/compare/v1.86.0...v1.86.1) (2022-10-28)
+
+
+### Bug Fixes
+
+* **seo:** new product patterns ([e61c8a0](https://github.com/Famous-Roasters/frontend/commit/e61c8a0ace5a1dd708c4d758b620c6ce5b459d63))
+
 # [1.86.0](https://github.com/Famous-Roasters/frontend/compare/v1.85.0...v1.86.0) (2022-10-28)
 
 
