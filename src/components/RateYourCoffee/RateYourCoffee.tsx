@@ -33,7 +33,6 @@ type RateYourCoffeeProps = {
 export const RateYourCoffee: React.FC<RateYourCoffeeProps> = ({ productOrderTile }) => {
   const { t } = useTranslation()
   const [rating, setRating] = useState<RatingProps['value']>()
-  const [comment, setComment] = useState<string>('')
   const [complete, setComplete] = useState<boolean>(false)
   let completeTimeout: ReturnType<typeof setTimeout>
   const storefrontClient = storeFrontClient()
@@ -62,16 +61,7 @@ export const RateYourCoffee: React.FC<RateYourCoffeeProps> = ({ productOrderTile
     return clearTimeout(completeTimeout)
   }, [])
 
-  useEffect(() => {
-    const commentInput = textAreaRef.current
-    if (commentInput !== null) {
-      commentInput?.focus()
-      commentInput.selectionStart = commentInput.value.length
-      commentInput.selectionEnd = commentInput.value.length
-    }
-  }, [comment])
-
-  const submitRating = async () => {
+  const submitRating = async (comment: string) => {
     rateProduct({
       variables: { productID: getSimplifiedId(productOrderTile.productId), rating: rating, comment: comment },
     }).then(() => {
@@ -80,6 +70,7 @@ export const RateYourCoffee: React.FC<RateYourCoffeeProps> = ({ productOrderTile
   }
 
   const FormContent = () => {
+    const [comment, setComment] = useState<string>('')
     const style = 'mb-8'
     return (
       <div className="px-5">
@@ -108,7 +99,7 @@ export const RateYourCoffee: React.FC<RateYourCoffeeProps> = ({ productOrderTile
             emphasis={ButtonEmphasis.Secondary}
             fullWidth
             center
-            onClick={submitRating}
+            onClick={() => submitRating(comment)}
             disabled={!rating}
           >
             {t('pages.rate.submit')}
@@ -135,9 +126,11 @@ export const RateYourCoffee: React.FC<RateYourCoffeeProps> = ({ productOrderTile
       onClick()
     }
     return (
-      <Button data-testid="custom-close-btn" emphasis={ButtonEmphasis.Tertiary} fullWidth center onClick={onClose}>
-        {t('pages.rate.doneCTA')}
-      </Button>
+      <div className="flex">
+        <Button data-testid="custom-close-btn" emphasis={ButtonEmphasis.Tertiary} fullWidth center onClick={onClose}>
+          {t('pages.rate.doneCTA')}
+        </Button>
+      </div>
     )
   }
 
