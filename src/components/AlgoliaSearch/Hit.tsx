@@ -24,25 +24,31 @@ type RawHit = {
   variants_min_price: number
   variants_max_price: number
   variants_count: number
+  inventory_management: string | undefined
 }
 
 const Hit = ({ hit }: { hit: RawHit }) => {
   const { t } = useTranslation()
-  const featured = false
   const showFrom = hit.variants_count > 1
-  const { id, image, title, vendor, variants_inventory_count: totalInventory, variants_min_price } = hit
+  const {
+    id,
+    image,
+    title,
+    vendor,
+    variants_inventory_count: totalInventory,
+    inventory_management,
+    variants_min_price,
+  } = hit
+
   const origin = hit.meta.my_fields?.origin
   const decaf = hit.meta.my_fields?.decaf
   const coffee_type = hit.meta.my_fields?.coffee_type
   const price_per_kg = hit.meta.my_fields?.price_per_kg
 
   const isDecaf = decaf === true || decaf === 'true'
-  const outOfStock = totalInventory !== undefined && totalInventory !== null && totalInventory <= 0
-  const textLineClassNames = outOfStock
-    ? 'text-coreUI-text-tertiary'
-    : featured
-    ? 'mt-1 text-coreUI-text-secondary'
-    : 'text-coreUI-text-secondary'
+  const outOfStock =
+    inventory_management === 'shopify' && totalInventory !== undefined && totalInventory !== null && totalInventory <= 0
+  const textLineClassNames = outOfStock ? 'text-coreUI-text-tertiary' : 'text-coreUI-text-secondary'
 
   return (
     <Link to={`/product/${id}`} key={`product-tile-link-${id}`}>
@@ -104,26 +110,14 @@ const Hit = ({ hit }: { hit: RawHit }) => {
           )}
 
           <div className="flex items-baseline">
-            {featured ? (
-              <Typography
-                as="div"
-                type={TypographyType.Label}
-                size={TypographySize.Large}
-                className={`mr-1 mt-1${outOfStock ? ' text-gray-400' : ''}`}
-              >
-                {showFrom && t('pages.catalogue.tile.from') + ' '}
-                {formatPrice(variants_min_price)}
-              </Typography>
-            ) : (
-              <Typography
-                type={TypographyType.Label}
-                size={TypographySize.Base}
-                className={`mr-1${outOfStock ? ' text-coreUI-text-tertiary' : ''}`}
-              >
-                {showFrom && t('pages.catalogue.tile.from') + ' '}
-                {formatPrice(variants_min_price)}
-              </Typography>
-            )}
+            <Typography
+              type={TypographyType.Label}
+              size={TypographySize.Base}
+              className={`mr-1${outOfStock ? ' text-coreUI-text-tertiary' : ''}`}
+            >
+              {showFrom && t('pages.catalogue.tile.from') + ' '}
+              {formatPrice(variants_min_price)}
+            </Typography>
             {price_per_kg && (
               <Typography
                 type={TypographyType.Paragraph}

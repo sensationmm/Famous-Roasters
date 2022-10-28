@@ -12,6 +12,7 @@ export const ProductMockDataBase: ProductCustom = {
     description: 'Hello World'
   },
   productType: 'Espresso',
+  isGiftCard: false,
   vendor: '60beans',
   totalInventory: 100,
   priceRange: {
@@ -105,14 +106,7 @@ export const ProductMockDataBase: ProductCustom = {
       hasPreviousPage: false,
     },
   },
-  metafields: {
-    edges: [],
-    nodes: [],
-    pageInfo: {
-      hasNextPage: false,
-      hasPreviousPage: false,
-    },
-  },
+  metafields: []
 }
 
 export const AccessoryMockDataBase: ProductCustom = {
@@ -123,6 +117,7 @@ export const AccessoryMockDataBase: ProductCustom = {
     description: 'Hello World'
   },
   productType: 'Accessories',
+  isGiftCard: false,
   vendor: 'Johann Jacobs Haus',
   priceRange: {
     minVariantPrice: {
@@ -172,14 +167,7 @@ export const AccessoryMockDataBase: ProductCustom = {
       hasPreviousPage: false,
     },
   },
-  metafields: {
-    edges: [],
-    nodes: [],
-    pageInfo: {
-      hasNextPage: false,
-      hasPreviousPage: false,
-    },
-  },
+  metafields: [],
   availableForSale: true,
   collections: {
     edges: [],
@@ -236,7 +224,7 @@ export const AccessoryMockDataBaseWithVariant: ProductCustom = {
       {
         id: "gid://shopify/ProductVariant/43570607653130",
         availableForSale: true,
-        price: '28.50',
+        price: { amount: '28.50', currencyCode: CurrencyCode.Eur},
         package_size: {
           value: '300g',
         },
@@ -246,14 +234,7 @@ export const AccessoryMockDataBaseWithVariant: ProductCustom = {
         grind_type: {
           value: '',
         },
-        metafields: {
-          edges: [],
-          nodes: [],
-          pageInfo: {
-            hasNextPage: false,
-            hasPreviousPage: false,
-          },
-        },
+        metafields: [],
         currentlyNotInStock: false,
         priceV2: {
           amount: '9.99',
@@ -302,19 +283,12 @@ export const ProductMockData: ProductCustom = {
         availableForSale: true,
         currentlyNotInStock: false,
         id: "gid://shopify/ProductVariant/42737527324888",
-        price: '9.99',
+        price: { amount: '9.99', currencyCode: CurrencyCode.Eur },
         priceV2: {
           amount: '9.99',
           currencyCode: CurrencyCode.Eur,
         },
-        metafields: {
-          edges: [],
-          nodes: [],
-          pageInfo: {
-            hasNextPage: false,
-            hasPreviousPage: false,
-          },
-        },
+        metafields: [],
         product: ProductMockDataBase,
         requiresShipping: true,
         selectedOptions: [],
@@ -351,14 +325,7 @@ export const ProductMockData: ProductCustom = {
   },
   vendor: '60beans',
   totalInventory: 100,
-  metafields: {
-    edges: [],
-    nodes: [],
-    pageInfo: {
-      hasNextPage: false,
-      hasPreviousPage: false,
-    },
-  },
+  metafields: [],
 }
 
 export const ProductMockDataWithCustomMetadata: ProductCustom = {

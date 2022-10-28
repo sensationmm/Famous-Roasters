@@ -40,7 +40,7 @@ export const OrderMock = {
                       variant: {
                         id: 'gid://shopify/ProductVariant/43655916421386',
                         title: '250g / Ganze Bohne',
-                        price: '7.20',
+                        price: { amount: '7.20'},
                         weight: 250.0,
                         product: {
                           id: 'gid://shopify/Product/7655228899544',
@@ -62,7 +62,7 @@ export const OrderMock = {
                       variant: {
                         id: 'gid://shopify/ProductVariant/43655917502730',
                         title: '250g / Ganze Bohne',
-                        price: '9.50',
+                        price: { amount: '9.50'},
                         weight: 0.3,
                         product: {
                           id: 'gid://shopify/Product/7659914100952',

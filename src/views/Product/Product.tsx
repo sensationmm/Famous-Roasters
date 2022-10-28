@@ -8,7 +8,7 @@ import { loader } from 'graphql.macro'
 import React, { useContext, useEffect, useRef, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import {
   Button,
   ButtonEmphasis,
@@ -81,6 +81,7 @@ export interface ProductCustom extends ProductType {
   vendor_description?: ProductMeta
   variants: ProductVariantConnectionCustom
   vendor_image?: ProductMeta
+  isGiftCard: boolean
 }
 
 export interface ProductQuery {
@@ -156,8 +157,10 @@ export const Product: React.FC = () => {
     vendor_image,
     extraDescription,
     pricePerKg,
+    isGiftCard,
   } = data?.product || {}
 
+  const isCoffee = productType !== 'Accessories' && productType !== ''
   const isAccessory = productType === 'Accessories'
   const isInternational = vendor === 'Nomad' // TODO: update to use the backend once updated
 
@@ -273,7 +276,7 @@ export const Product: React.FC = () => {
           {variants && (
             <>
               <Typography type={TypographyType.Heading} size={TypographySize.Small} className="mr-1">
-                {formatPrice((quantity * parseFloat(variantSelected?.price)).toString(), currencyCode)}
+                {formatPrice((quantity * parseFloat(variantSelected?.price.amount)).toString(), currencyCode)}
               </Typography>
               {pricePerKg && (
                 <Typography
@@ -330,16 +333,22 @@ export const Product: React.FC = () => {
       <>
         <div className="mt-4">
           <Typography type={TypographyType.Paragraph} size={TypographySize.Small}>
-            <strong>{t('pages.product.transactional.shipping.label')}</strong>
-            {': '}
-            {isInternational
-              ? t('pages.product.transactional.shipping.vendor.international')
-              : t('pages.product.transactional.shipping.vendor.german')}
+            {!isGiftCard ? (
+              <>
+                <strong>{t('pages.product.transactional.shipping.label')}</strong>
+                {': '}
+                {isInternational
+                  ? t('pages.product.transactional.shipping.vendor.international')
+                  : t('pages.product.transactional.shipping.vendor.german')}
+              </>
+            ) : (
+              <strong>{t('pages.product.transactional.shipping.vendor.giftCard')}</strong>
+            )}
           </Typography>
         </div>
         <div>
           <Typography type={TypographyType.Paragraph} size={TypographySize.Tiny} className="text-coreUI-text-secondary">
-            {t(`pages.product.transactional.qualityNote${isAccessory ? 'Accessory' : ''}`)}
+            {t(`pages.product.transactional.qualityNote${!isCoffee ? (isGiftCard ? 'GiftCard' : 'Accessory') : ''}`)}
           </Typography>
         </div>
       </>
@@ -396,7 +405,7 @@ export const Product: React.FC = () => {
               size={TypographySize.Small}
               className="text-coreUI-text-secondary"
             >
-              {isAccessory ? accessory_type?.value || '' : coffee_type ? `${vendor} | ${coffee_type.value}` : vendor}
+              {!isCoffee ? accessory_type?.value || '' : coffee_type ? `${vendor} | ${coffee_type.value}` : vendor}
             </Typography>
           </div>
           {/* Title */}
@@ -429,7 +438,7 @@ export const Product: React.FC = () => {
             </div>
           )}
 
-          {isAccessory && descriptionHtml && (
+          {!isCoffee && descriptionHtml && (
             <div
               className="pt-4 border-b border-brand-grey-whisper"
               dangerouslySetInnerHTML={{ __html: parseHtmlSafely(descriptionHtml) }}
@@ -564,9 +573,11 @@ export const Product: React.FC = () => {
   const renderProductCollapsableBlocks = () => {
     // some blocks - disabled as no real content yet
     // const blocksData = [{ key: 'getToKnow' }, { key: 'meetTheRoaster' }, { key: 'learnToBrew' }, { key: 'findSimilar' }]
-    const blocksData = !isAccessory
+    const blocksData = isCoffee
       ? [{ key: 'getToKnow' }, { key: 'meetTheRoaster' }, { key: 'findSimilar' }]
-      : [{ key: 'aboutProduct' }, { key: 'youMightLike' }]
+      : isAccessory
+      ? [{ key: 'aboutProduct' }, { key: 'youMightLike' }]
+      : [{ key: 'youMightLike' }]
 
     const renderProductBlockContent = (key: string) => {
       switch (key) {
@@ -667,11 +678,11 @@ export const Product: React.FC = () => {
     <Layout>
       {generateMetaTags()}
       <main className="flex flex-col w-full items-start justify-center bg-white mt-4 mb-4">
-        <div className="w-full max-w-7xl mx-auto px-6 xl:px-8 font-bold">
+        <div className="w-full max-w-7xl mx-auto px-6 xl:px-8 font-bold cursor-pointer">
           <Typography size={TypographySize.Tiny}>
-            <Link to="/catalogue" className="text-coreUI-text-tertiary">
+            <div className="inline text-coreUI-text-tertiary" onClick={() => history.go(-1)}>
               Shop
-            </Link>{' '}
+            </div>{' '}
             &gt; {title}
           </Typography>
         </div>

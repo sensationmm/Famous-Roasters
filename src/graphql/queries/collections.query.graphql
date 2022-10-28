@@ -1,0 +1,16 @@
+query collections {
+  collections(first: 100) {
+    nodes {
+      id
+      title
+      sortOrder: metafield(namespace: "my_fields", key: "sort_order") {
+        value
+      }
+      products(first: 1) {
+        nodes {
+          id
+        }
+      }
+    }
+  }
+}

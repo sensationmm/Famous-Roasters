@@ -7,6 +7,7 @@ query product($id: ID) {
       description
     }
     productType
+    isGiftCard
     vendor
     vendor_description: metafield(namespace: "my_fields", key: "vendor_description") {
       value
@@ -83,7 +84,9 @@ query product($id: ID) {
       nodes {
         id
         availableForSale
-        price
+        price {
+          amount
+        }
         package_size: metafield(namespace: "my_fields", key: "package_size") {
           value
         }

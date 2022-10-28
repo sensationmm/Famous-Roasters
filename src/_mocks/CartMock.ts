@@ -63,7 +63,7 @@ export const CartMockData: CartQueryQuery = {
     },
     attributes: [],
     discountCodes: [],
-    estimatedCost: {
+    cost: {
       subtotalAmount: {
         amount: '10',
         currencyCode: CurrencyCode.Eur,
@@ -73,6 +73,7 @@ export const CartMockData: CartQueryQuery = {
         currencyCode: CurrencyCode.Eur,
       },
     },
+    totalQuantity: 0,
     lines: {
       edges: [
         CartLineEdgeMockData,

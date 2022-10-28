@@ -150,7 +150,7 @@ export const Cart: React.FC = () => {
   }
 
   const renderCartWithItems = () => {
-    const { lines, estimatedCost } = data?.cart || {}
+    const { lines, cost } = data?.cart || {}
     return (
       <>
         <div className="grid gap-2 grid-cols-1">
@@ -245,7 +245,7 @@ export const Cart: React.FC = () => {
               )
             })}
         </div>
-        {estimatedCost && (
+        {cost && (
           <div className="grid justify-items-start md:justify-items-end mt-6">
             <Typography
               type={TypographyType.Paragraph}
@@ -255,7 +255,7 @@ export const Cart: React.FC = () => {
               {t('pages.cart.subtotal')}
             </Typography>
             <Typography type={TypographyType.Heading} size={TypographySize.Small} className="mr-1">
-              {formatPrice(estimatedCost.totalAmount.amount, estimatedCost.totalAmount.currencyCode)}
+              {formatPrice(cost.totalAmount.amount, cost.totalAmount.currencyCode)}
             </Typography>
             <Typography
               as="div"

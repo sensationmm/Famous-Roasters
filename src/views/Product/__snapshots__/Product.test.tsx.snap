@@ -201,17 +201,16 @@ exports[`Product view Renders correctly for a accessories 1`] = `
       class="flex flex-col w-full items-start justify-center bg-white mt-4 mb-4"
     >
       <div
-        class="w-full max-w-7xl mx-auto px-6 xl:px-8 font-bold"
+        class="w-full max-w-7xl mx-auto px-6 xl:px-8 font-bold cursor-pointer"
       >
         <span
           class="text-xs leading-4"
         >
-          <a
-            class="text-coreUI-text-tertiary"
-            href="/catalogue"
+          <div
+            class="inline text-coreUI-text-tertiary"
           >
             Shop
-          </a>
+          </div>
            
           &gt; 
           Barista Pinsel | barista.tools
@@ -1462,17 +1461,16 @@ exports[`Product view Renders correctly for a successful call 1`] = `
       class="flex flex-col w-full items-start justify-center bg-white mt-4 mb-4"
     >
       <div
-        class="w-full max-w-7xl mx-auto px-6 xl:px-8 font-bold"
+        class="w-full max-w-7xl mx-auto px-6 xl:px-8 font-bold cursor-pointer"
       >
         <span
           class="text-xs leading-4"
         >
-          <a
-            class="text-coreUI-text-tertiary"
-            href="/catalogue"
+          <div
+            class="inline text-coreUI-text-tertiary"
           >
             Shop
-          </a>
+          </div>
            
           &gt; 
           Espresso Raritäten Set
@@ -3297,17 +3295,16 @@ exports[`Product view Renders correctly for a successful call with International
       class="flex flex-col w-full items-start justify-center bg-white mt-4 mb-4"
     >
       <div
-        class="w-full max-w-7xl mx-auto px-6 xl:px-8 font-bold"
+        class="w-full max-w-7xl mx-auto px-6 xl:px-8 font-bold cursor-pointer"
       >
         <span
           class="text-xs leading-4"
         >
-          <a
-            class="text-coreUI-text-tertiary"
-            href="/catalogue"
+          <div
+            class="inline text-coreUI-text-tertiary"
           >
             Shop
-          </a>
+          </div>
            
           &gt; 
           Espresso Raritäten Set
@@ -5132,17 +5129,16 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
       class="flex flex-col w-full items-start justify-center bg-white mt-4 mb-4"
     >
       <div
-        class="w-full max-w-7xl mx-auto px-6 xl:px-8 font-bold"
+        class="w-full max-w-7xl mx-auto px-6 xl:px-8 font-bold cursor-pointer"
       >
         <span
           class="text-xs leading-4"
         >
-          <a
-            class="text-coreUI-text-tertiary"
-            href="/catalogue"
+          <div
+            class="inline text-coreUI-text-tertiary"
           >
             Shop
-          </a>
+          </div>
            
           &gt; 
           Espresso Raritäten Set
