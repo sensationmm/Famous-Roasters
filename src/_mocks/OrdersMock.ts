@@ -118,7 +118,7 @@ export const OrdersMock = {
                               variant: {
                                  id: "gid://shopify/ProductVariant/40194621767763",
                                  title: "Café en Grano / 250gr",
-                                 price: "24.09",
+                                 price: { amount: "24.09" },
                                  weight:250.0,
                                  inventoryQuantity:1,
                                  product: {
@@ -141,7 +141,7 @@ export const OrdersMock = {
                               variant: {
                                  id: "gid://shopify/ProductVariant/40194630910035",
                                  title: "Café en Grano / 250gr",
-                                 price: "20.45",
+                                 price: { amount: "20.45" },
                                  weight:250.0,
                                  inventoryQuantity:98,
                                  product: {
@@ -164,7 +164,7 @@ export const OrdersMock = {
                               variant: {
                                  id: "gid://shopify/ProductVariant/40194558853203",
                                  title: "Café en Grano / 250gr",
-                                 price: "19.55",
+                                 price: { amount: "19.55" },
                                  weight:250.0,
                                  inventoryQuantity:98,
                                  product: {
@@ -207,7 +207,7 @@ export const OrdersMock = {
                               variant: {
                                  id: "gid://shopify/ProductVariant/40194047049811",
                                  title: "1 kg",
-                                 price: "35.90",
+                                 price: { amount: "35.90" },
                                  weight:1000.0,
                                  inventoryQuantity:95,
                                  product: {
@@ -230,7 +230,7 @@ export const OrdersMock = {
                               variant: {
                                  id: "gid://shopify/ProductVariant/40195698098259",
                                  title: "Beutel / 1kg / Beutel / Ganze Bohne",
-                                 price: "36.00",
+                                 price: { amount: "36.00" },
                                  weight:1030.0,
                                  inventoryQuantity:39997,
                                  product: {
@@ -273,7 +273,7 @@ export const OrdersMock = {
                               variant: {
                                  id: "gid://shopify/ProductVariant/40195698098259",
                                  title: "Beutel / 1kg / Beutel / Ganze Bohne",
-                                 price: "36.00",
+                                 price: { amount: "36.00" },
                                  weight:1030.0,
                                  inventoryQuantity:39997,
                                  product: {
@@ -296,7 +296,7 @@ export const OrdersMock = {
                               variant: {
                                  id: "gid://shopify/ProductVariant/40194051375187",
                                  title: "250 g",
-                                 price: "9.50",
+                                 price: { amount: "9.50" },
                                  weight:265.0,
                                  inventoryQuantity:90,
                                  product: {
@@ -339,7 +339,7 @@ export const OrdersMock = {
                               variant: {
                                  id: "gid://shopify/ProductVariant/40194636316755",
                                  title: "Espresso / 250gr",
-                                 price: "24.55",
+                                 price: { amount: "24.55" },
                                  weight:250.0,
                                  inventoryQuantity:99,
                                  product: {
