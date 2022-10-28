@@ -1,3 +1,10 @@
+# [1.86.0](https://github.com/Famous-Roasters/frontend/compare/v1.85.0...v1.86.0) (2022-10-28)
+
+
+### Features
+
+* **catalogue:** add enw tabs to catalogue view ([81e187a](https://github.com/Famous-Roasters/frontend/commit/81e187adb06dacd45afb959a880de768880d10e6))
+
 # [1.85.0](https://github.com/Famous-Roasters/frontend/compare/v1.84.0...v1.85.0) (2022-10-26)
 
 
