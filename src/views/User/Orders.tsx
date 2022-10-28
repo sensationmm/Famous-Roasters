@@ -38,7 +38,7 @@ export type OrderVariant = {
     variant: {
       id: string
       title: string
-      price: string
+      price: { amount: string }
       weight: number
       inventoryQuantity?: number
       product: {

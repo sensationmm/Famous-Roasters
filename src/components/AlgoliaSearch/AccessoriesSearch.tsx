@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { Configure, SearchBox, SortBy, useInstantSearch } from 'react-instantsearch-hooks-web'
+import { useParams } from 'react-router-dom'
 
 import { renderSearchContent } from './CoffeeSearch'
 import Pagination from './Pagination'
@@ -11,6 +12,9 @@ const AccessoriesSearch: React.FC = () => {
   const search = useInstantSearch()
   const productHits = search?.results?.nbHits
   const numberOfHitsToShow = 12
+  const { productType } = useParams()
+
+  const collection = productType === 'accessories' ? 'equipment' : productType
 
   return (
     <>
@@ -18,7 +22,7 @@ const AccessoriesSearch: React.FC = () => {
         distinct={true} // show products, not variants
         hitsPerPage={12}
         maxValuesPerFacet={100}
-        facetFilters={['collections:equipment', 'meta.my_fields.publishedToFrontend:true']}
+        facetFilters={[`collections:${collection}`, 'meta.my_fields.publishedToFrontend:true']}
       />
 
       {/* Top row: Method, Decaf (mobile), Query */}

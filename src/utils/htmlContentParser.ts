@@ -78,5 +78,5 @@ export const parseHtmlSafely = (html: string, formatter: (el: Element) => Elemen
   const children = Array.from(parser.parseFromString(html, 'text/html').body.children)
   const resultContainer = document.createElement('html')
   children.forEach((child) => isAllowedHtmlElement(child) && resultContainer.append(formatter(child)))
-  return resultContainer.innerHTML
+  return resultContainer.innerHTML || `<p class="mb-4">${html}</p>`
 }

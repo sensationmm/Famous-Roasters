@@ -830,7 +830,10 @@
         "discover": "Entdecken",
         "forYou": "Für Dich",
         "coffee": "Kaffee",
-        "accessories": "Zubehör"
+        "accessories": "Zubehör",
+        "equipment": "Zubehör",
+        "advent": "Advent",
+        "gifts": "Geschenke"
       },
       "tile": {
         "from": "ab"
@@ -1041,11 +1044,13 @@
         },
         "qualityNote": "Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu dir. Wir teilen dir den geplanten Liefertermin im nächsten Schritt mit.",
         "qualityNoteAccessory": "Wir tun immer unser Bestes, um dein Bestellung rechtzeitig zu bearbeiten und zu versenden. Bitte beachten, dass wir einen Drittanbieter-Kurier verwenden, um das Produkt an dein Haustür zu liefern.",
+        "qualityNoteGiftCard": "Verschenke Specialty Coffee Genuss von Europas besten Röstereien! Unsere 60beans Geschenkgutscheine können für alle Kaffees in unserem Sortiment eingelöst werden. Dein Gutscheincode wird dir direkt nach dem Kauf als E-Mail zugesendet und ist direkt einlösbar.",
         "shipping": {
           "label": "Lieferzeit",
           "vendor": {
             "german": "2-5 Tage",
-            "international": "5-10 Tage"
+            "international": "5-10 Tage",
+            "giftCard": "Geschenkgutschein"
           }
         }
       }

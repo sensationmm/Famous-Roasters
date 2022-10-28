@@ -69,3 +69,157 @@ exports[`Hit component Renders correctly 1`] = `
   </a>
 </div>
 `;
+
+exports[`Hit component Renders correctly for decaf 1`] = `
+<div>
+  <a
+    href="/product/gid://shopify/Product/7655228866776"
+  >
+    <div
+      class="flex pt-8 md:px-6"
+    >
+      <div
+        class="flex justify-center items-center shrink-0 relative w-36 h-36"
+      >
+        <div
+          class="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36"
+        >
+          <img
+            alt="Espresso Raritäten Set"
+            class="w-24 max-h-24"
+            height="150px"
+            src="https://example.com/image&width=150&height=150"
+            width="150px"
+          />
+          <div
+            class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+          >
+            <span
+              class="text-xs leading-4"
+            >
+              Decaf
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col w-full justify-start pl-4"
+      >
+        <div
+          class="text-base leading-6 font-semibold"
+        >
+          Espresso Raritäten Set
+        </div>
+        <div
+          class="flex flex-col w-full justify-start text-base leading-6"
+        >
+          19grams
+        </div>
+        <div
+          class="text-coreUI-text-secondary text-base leading-6"
+        >
+          Brasilien, 
+          Kolumbien
+        </div>
+        <div
+          class="text-coreUI-text-secondary text-base leading-6"
+        >
+          Filter
+        </div>
+        <div
+          class="flex items-baseline"
+        >
+          <span
+            class="mr-1 text-base leading-6 font-semibold"
+          >
+            ab 
+            5,00 €
+          </span>
+          <span
+            class="text-coreUI-text-secondary text-xs leading-4"
+          >
+            (
+            10,00 €
+            /kg)
+          </span>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Hit component Renders correctly for out of stock 1`] = `
+<div>
+  <a
+    href="/product/gid://shopify/Product/7655228866776"
+  >
+    <div
+      class="flex pt-8 md:px-6"
+    >
+      <div
+        class="flex justify-center items-center shrink-0 relative w-36 h-36"
+      >
+        <div
+          class="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36"
+        >
+          <img
+            alt="Espresso Raritäten Set"
+            class="w-24 max-h-24"
+            height="150px"
+            src="https://example.com/image&width=150&height=150"
+            width="150px"
+          />
+        </div>
+      </div>
+      <div
+        class="flex flex-col w-full justify-start pl-4"
+      >
+        <div
+          class="text-coreUI-text-tertiary text-base leading-6 font-semibold"
+        >
+          Espresso Raritäten Set
+        </div>
+        <div
+          class="flex flex-col w-full justify-start text-coreUI-text-tertiary text-base leading-6"
+        >
+          19grams
+        </div>
+        <div
+          class="text-coreUI-text-tertiary text-base leading-6"
+        >
+          Brasilien, 
+          Kolumbien
+        </div>
+        <div
+          class="text-coreUI-text-tertiary text-base leading-6"
+        >
+          Filter
+        </div>
+        <div
+          class="flex items-baseline"
+        >
+          <span
+            class="mr-1 text-coreUI-text-tertiary text-base leading-6 font-semibold"
+          >
+            ab 
+            5,00 €
+          </span>
+          <span
+            class="text-coreUI-text-tertiary text-xs leading-4"
+          >
+            (
+            10,00 €
+            /kg)
+          </span>
+        </div>
+        <span
+          class="text-negative text-xs leading-4"
+        >
+          Ausverkauft
+        </span>
+      </div>
+    </div>
+  </a>
+</div>
+`;
