@@ -627,16 +627,18 @@ export const Product: React.FC = () => {
     const titleTag = [title]
     const descTag = [title]
 
-    coffee_type && titleTag.push(` ${coffee_type.value} ${t('brand.seo.coffee')}`)
+    coffee_type && titleTag.push(`${coffee_type.value}`)
+    coffee_type && coffee_type.value !== 'Espresso' && titleTag.push(`${t('brand.seo.coffee')}`)
 
     titleTag.push(t('brand.seo.buyOnline'))
     isCoffee
       ? descTag.push(t('brand.seo.buyOnline'))
-      : descTag.push(`${t('brand.seo.now')} ${t('brand.seo.buyOnline')}`)
+      : descTag.push(`${t('brand.seo.now')} ${t('brand.seo.buyOnline')}!`)
 
-    titleTag.push(`| ${t('brand.name')}`)
+    titleTag.push(`| ${t('brand.seo.site')}`)
 
-    !isCoffee && descTag.push(`✓ ${t('brand.seo.largeSelection', { type: productType })}`)
+    !isCoffee && descTag.push(`${t('brand.seo.largeSelection', { vendor: vendor })}`)
+    !isCoffee && descTag.push(`✓ ${t('brand.seo.professional', { type: accessory_type.value })}`)
 
     const origins = origin?.value.split(',')
     const beanOrigin: Array<string> = []
@@ -647,7 +649,7 @@ export const Product: React.FC = () => {
     bean_type &&
       origin &&
       descTag.push(
-        `✓ ${t('brand.seo.beanOrigin', {
+        `➤ ${t('brand.seo.beanOrigin', {
           bean: bean_type.value,
           origin: beanOrigin.join(', '),
         })}`,
@@ -664,7 +666,7 @@ export const Product: React.FC = () => {
 
     descTag.push(`✓ ${t('brand.seo.shipping')}`)
 
-    !isCoffee && descTag.push(`✓ ${t('brand.seo.warranty')}`)
+    !isCoffee && descTag.push(`➤ ${t('brand.seo.discoverNow')}`)
 
     return (
       <Helmet>
