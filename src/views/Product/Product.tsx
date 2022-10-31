@@ -664,6 +664,7 @@ export const Product: React.FC = () => {
 
     flavourNotes && descTag.push(`✓ ${t('brand.seo.flavour', { flavour: flavours(flavourNotes.value) })}`)
 
+    isCoffee && descTag.push(`✓ ${t('brand.seo.largeAssortment')}`)
     descTag.push(`✓ ${t('brand.seo.shipping')}`)
 
     !isCoffee && descTag.push(`➤ ${t('brand.seo.discoverNow')}`)
