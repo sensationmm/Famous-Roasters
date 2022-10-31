@@ -1,3 +1,10 @@
+## [1.88.1](https://github.com/Famous-Roasters/frontend/compare/v1.88.0...v1.88.1) (2022-10-31)
+
+
+### Bug Fixes
+
+* **signup:** hide apple signin ([dfd34c1](https://github.com/Famous-Roasters/frontend/commit/dfd34c156296b842e1028274b2889ba525d50edd))
+
 # [1.88.0](https://github.com/Famous-Roasters/frontend/compare/v1.87.1...v1.88.0) (2022-10-31)
 
 
