@@ -38,7 +38,7 @@ interface SignUpParams {
 }
 
 export const socialSignInButtons = () => (
-  <div className="grid grid-cols-2 gap-4">
+  <div className="grid grid-cols-1 gap-4">
     <Button
       emphasis={ButtonEmphasis.Tertiary}
       center
@@ -47,13 +47,13 @@ export const socialSignInButtons = () => (
       <Icon name={IconName.Google} />
     </Button>
 
-    <Button
+    {/* <Button
       emphasis={ButtonEmphasis.Tertiary}
       center
       onClick={() => Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Apple })}
     >
       <Icon name={IconName.Apple} />
-    </Button>
+    </Button> */}
   </div>
 )
 

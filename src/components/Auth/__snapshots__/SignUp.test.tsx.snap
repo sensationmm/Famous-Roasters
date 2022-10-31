@@ -25,7 +25,7 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
         Registrierung mit
       </p>
       <div
-        class="grid grid-cols-2 gap-4"
+        class="grid grid-cols-1 gap-4"
       >
         <button
           class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-4 py-2 text-base font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
@@ -41,27 +41,6 @@ exports[`SignUp custom auth component Renders correctly for an expected state 1`
             <path
               clip-rule="evenodd"
               d="M23.86,11.76a14.86,14.86,0,0,0-.21-2.49H12.34V14h6.48a6.42,6.42,0,0,1-2.63,3.91A7.37,7.37,0,0,1,12.07,19a7.36,7.36,0,0,1-6.84-4.75,7.15,7.15,0,0,1,.25-4.74v0A7.32,7.32,0,0,1,12.33,4.7,6.82,6.82,0,0,1,17,6.48l3.51-3.39A12,12,0,0,0,12.33,0a12.3,12.3,0,0,0-11,6.48l0,0A11.08,11.08,0,0,0,1.32,17v.14a12,12,0,0,0,10.75,6.49,11.58,11.58,0,0,0,8-2.87l0,0A12.31,12.31,0,0,0,23.86,11.76Z"
-              fill="currentColor"
-              fill-rule="evenodd"
-              stroke="none"
-              stroke-width="none"
-            />
-          </svg>
-        </button>
-        <button
-          class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-4 py-2 text-base font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
-          role="button"
-        >
-          <svg
-            class="undefined"
-            fill="inherit"
-            height="24"
-            viewBox="0 0 19 24"
-            width="24"
-          >
-            <path
-              clip-rule="evenodd"
-              d="M9.75493 5.53846C10.8059 5.53846 12.1234 4.8061 12.9079 3.82962C13.6184 2.94469 14.1365 1.70884 14.1365 0.472981C14.1365 0.305149 14.1217 0.137317 14.0921 0C12.9227 0.0457724 11.5164 0.808645 10.6727 1.8309C10.0066 2.60903 9.39967 3.82963 9.39967 5.08074C9.39967 5.26383 9.42928 5.44692 9.44408 5.50795C9.51809 5.5232 9.63651 5.53846 9.75493 5.53846ZM6.05428 24C7.49013 24 8.12665 23.0083 9.91776 23.0083C11.7385 23.0083 12.1382 23.9695 13.7368 23.9695C15.3059 23.9695 16.3569 22.4743 17.3487 21.0095C18.4589 19.3312 18.9178 17.6834 18.9474 17.6071C18.8438 17.5766 15.8388 16.3102 15.8388 12.7552C15.8388 9.67323 18.2072 8.28481 18.3405 8.178C16.7714 5.85887 14.3882 5.79784 13.7368 5.79784C11.9753 5.79784 10.5395 6.89638 9.63651 6.89638C8.65954 6.89638 7.37171 5.85887 5.84704 5.85887C2.94572 5.85887 0 8.33058 0 12.9994C0 15.8983 1.09539 18.965 2.44243 20.9485C3.59704 22.6268 4.60362 24 6.05428 24Z"
               fill="currentColor"
               fill-rule="evenodd"
               stroke="none"
@@ -557,7 +536,7 @@ exports[`SignUp custom auth component Shows provided values 1`] = `
         Registrierung mit
       </p>
       <div
-        class="grid grid-cols-2 gap-4"
+        class="grid grid-cols-1 gap-4"
       >
         <button
           class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-4 py-2 text-base font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
@@ -573,27 +552,6 @@ exports[`SignUp custom auth component Shows provided values 1`] = `
             <path
               clip-rule="evenodd"
               d="M23.86,11.76a14.86,14.86,0,0,0-.21-2.49H12.34V14h6.48a6.42,6.42,0,0,1-2.63,3.91A7.37,7.37,0,0,1,12.07,19a7.36,7.36,0,0,1-6.84-4.75,7.15,7.15,0,0,1,.25-4.74v0A7.32,7.32,0,0,1,12.33,4.7,6.82,6.82,0,0,1,17,6.48l3.51-3.39A12,12,0,0,0,12.33,0a12.3,12.3,0,0,0-11,6.48l0,0A11.08,11.08,0,0,0,1.32,17v.14a12,12,0,0,0,10.75,6.49,11.58,11.58,0,0,0,8-2.87l0,0A12.31,12.31,0,0,0,23.86,11.76Z"
-              fill="currentColor"
-              fill-rule="evenodd"
-              stroke="none"
-              stroke-width="none"
-            />
-          </svg>
-        </button>
-        <button
-          class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-4 py-2 text-base font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
-          role="button"
-        >
-          <svg
-            class="undefined"
-            fill="inherit"
-            height="24"
-            viewBox="0 0 19 24"
-            width="24"
-          >
-            <path
-              clip-rule="evenodd"
-              d="M9.75493 5.53846C10.8059 5.53846 12.1234 4.8061 12.9079 3.82962C13.6184 2.94469 14.1365 1.70884 14.1365 0.472981C14.1365 0.305149 14.1217 0.137317 14.0921 0C12.9227 0.0457724 11.5164 0.808645 10.6727 1.8309C10.0066 2.60903 9.39967 3.82963 9.39967 5.08074C9.39967 5.26383 9.42928 5.44692 9.44408 5.50795C9.51809 5.5232 9.63651 5.53846 9.75493 5.53846ZM6.05428 24C7.49013 24 8.12665 23.0083 9.91776 23.0083C11.7385 23.0083 12.1382 23.9695 13.7368 23.9695C15.3059 23.9695 16.3569 22.4743 17.3487 21.0095C18.4589 19.3312 18.9178 17.6834 18.9474 17.6071C18.8438 17.5766 15.8388 16.3102 15.8388 12.7552C15.8388 9.67323 18.2072 8.28481 18.3405 8.178C16.7714 5.85887 14.3882 5.79784 13.7368 5.79784C11.9753 5.79784 10.5395 6.89638 9.63651 6.89638C8.65954 6.89638 7.37171 5.85887 5.84704 5.85887C2.94572 5.85887 0 8.33058 0 12.9994C0 15.8983 1.09539 18.965 2.44243 20.9485C3.59704 22.6268 4.60362 24 6.05428 24Z"
               fill="currentColor"
               fill-rule="evenodd"
               stroke="none"
