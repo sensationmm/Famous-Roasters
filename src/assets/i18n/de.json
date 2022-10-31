@@ -226,7 +226,8 @@
       "now": "jetzt",
       "largeSelection": "Große Auswahl an {{vendor}}",
       "professional": "Profi {{type}}",
-      "discoverNow": "Jetzt entdecken"
+      "discoverNow": "Jetzt entdecken",
+      "largeAssortment": "Großes Sortiment"
     }
   },
   "cta": {
