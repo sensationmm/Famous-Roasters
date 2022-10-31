@@ -1,3 +1,10 @@
+# [1.88.0](https://github.com/Famous-Roasters/frontend/compare/v1.87.1...v1.88.0) (2022-10-31)
+
+
+### Features
+
+* **seo:** new requested description item ([a50ff93](https://github.com/Famous-Roasters/frontend/commit/a50ff93bf92b7efce92189e021bdb22d8efa053f))
+
 ## [1.87.1](https://github.com/Famous-Roasters/frontend/compare/v1.87.0...v1.87.1) (2022-10-28)
 
 
