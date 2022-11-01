@@ -17,6 +17,7 @@ import {
   TypographyType,
 } from 'src/components'
 import i18n from 'src/config/i18n'
+import LoadingContext, { LoadingContextType } from 'src/hooks/isLoading'
 import { TasteFinderField } from 'src/views/TasteFinder'
 
 import {
@@ -58,12 +59,15 @@ export const socialSignInButtons = () => (
 )
 
 export class AuthSignUp extends SignUp {
+  static contextType = LoadingContext
   constructor(props: IAuthPieceProps) {
     super(props)
     this._validAuthStates = ['signUp', 'signUpError']
   }
 
   signUpUser = async (params: SignUpParams): Promise<void> => {
+    const { setIsLoading } = this.context as LoadingContextType
+    setIsLoading(true)
     const tasteFinderLocalStorage = localStorage.getItem('tasteFinder') || ''
     let savedAroma = ''
     if (tasteFinderLocalStorage !== '') {
@@ -84,8 +88,12 @@ export class AuthSignUp extends SignUp {
         enabled: true,
       },
     })
-      .then(() => this.changeState('confirmSignUp', { username: params.email }))
+      .then(() => {
+        this.changeState('confirmSignUp', { username: params.email })
+        setIsLoading(false)
+      })
       .catch((error) => {
+        setIsLoading(false)
         if (error.toString().indexOf('UsernameExistsException') !== -1) {
           this.changeState('signUpError', { errorCode: 'RegisterGenericException' })
         } else {

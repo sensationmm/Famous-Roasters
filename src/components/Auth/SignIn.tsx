@@ -19,6 +19,7 @@ import {
   TypographyType,
 } from 'src/components'
 import { i18n } from 'src/config'
+import LoadingContext, { LoadingContextType } from 'src/hooks/isLoading'
 
 import { socialSignInButtons } from './SignUp'
 
@@ -28,6 +29,7 @@ interface SignInParams {
 }
 
 export class AuthSignIn extends SignIn {
+  static contextType = LoadingContext
   constructor(props: IAuthPieceProps) {
     super(props)
     this._validAuthStates = ['signIn', 'signInError']
@@ -46,13 +48,17 @@ export class AuthSignIn extends SignIn {
   }
 
   signInUser = async (params: SignInParams): Promise<void> => {
+    const { setIsLoading } = this.context as LoadingContextType
+    setIsLoading(true)
     await Auth.signIn(params.email, params.password)
       .then((res) => {
         this.changeState('signedIn', params.email)
         window.localStorage.setItem('authToken', res.signInUserSession.accessToken.jwtToken)
         window.location.reload()
+        setIsLoading(false)
       })
       .catch((error) => {
+        setIsLoading(false)
         if (
           error.toString().indexOf('UserNotFoundException') !== -1 ||
           error.toString().indexOf('NotAuthorizedException') !== -1
