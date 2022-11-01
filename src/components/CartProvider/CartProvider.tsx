@@ -60,8 +60,8 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProv
           setCartId(storedCartId)
           size && setCartSize(size)
         })
-        .catch((err) => {
-          throw new Error('Error fetching cart', err)
+        .catch(() => {
+          setCartId('')
         })
     } else {
       setCartSize(0)

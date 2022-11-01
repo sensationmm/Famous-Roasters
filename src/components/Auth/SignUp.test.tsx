@@ -5,6 +5,7 @@ import React from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { MemoryRouter } from 'react-router-dom'
 import i18n from 'src/config/i18n'
+import LoadingContext from 'src/hooks/isLoading'
 
 import { AuthSignUp } from '.'
 
@@ -35,11 +36,13 @@ window.localStorage.setItem(
 
 describe('SignUp custom auth component', () => {
   const snippet = (initialAuthState = 'signUp', initialAuthData = {}) => (
-    <I18nextProvider i18n={i18n}>
-      <MemoryRouter initialEntries={['/register']}>
-        <AuthSignUp authState={initialAuthState} authData={initialAuthData} />
-      </MemoryRouter>
-    </I18nextProvider>
+    <LoadingContext.Provider value={{ isLoading: false, setIsLoading: jest.fn }}>
+      <I18nextProvider i18n={i18n}>
+        <MemoryRouter initialEntries={['/register']}>
+          <AuthSignUp authState={initialAuthState} authData={initialAuthData} />
+        </MemoryRouter>
+      </I18nextProvider>
+    </LoadingContext.Provider>
   )
 
   it('Renders correctly for an expected state', async () => {
@@ -213,11 +216,13 @@ describe('SignUp custom auth component', () => {
       },
     })
     const { container } = render(
-      <I18nextProvider i18n={i18n}>
-        <MemoryRouter initialEntries={['/register?name=Spongebob&email=test@test.com']}>
-          <AuthSignUp authState={'signUp'} authData={{}} />
-        </MemoryRouter>
-      </I18nextProvider>,
+      <LoadingContext.Provider value={{ isLoading: false, setIsLoading: jest.fn }}>
+        <I18nextProvider i18n={i18n}>
+          <MemoryRouter initialEntries={['/register?name=Spongebob&email=test@test.com']}>
+            <AuthSignUp authState={'signUp'} authData={{}} />
+          </MemoryRouter>
+        </I18nextProvider>
+      </LoadingContext.Provider>,
     )
     expect(container).toMatchSnapshot()
   })
