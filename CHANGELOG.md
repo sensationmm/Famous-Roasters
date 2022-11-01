@@ -1,3 +1,12 @@
+## [1.88.2](https://github.com/Famous-Roasters/frontend/compare/v1.88.1...v1.88.2) (2022-11-01)
+
+
+### Bug Fixes
+
+* **app:** make hook before conditional render ([0c29054](https://github.com/Famous-Roasters/frontend/commit/0c290543c1b1e3afe1dd914e4c5ab0941d07b551))
+* **cart:** remove thrown error is stale id ([81e7384](https://github.com/Famous-Roasters/frontend/commit/81e7384578e621e49a84e4084480d603833d20f2))
+* **signup:** fix double sign in click ([50a6c44](https://github.com/Famous-Roasters/frontend/commit/50a6c447e1bae7b3c64613b465d6abc46c3ceddd))
+
 ## [1.88.1](https://github.com/Famous-Roasters/frontend/compare/v1.88.0...v1.88.1) (2022-10-31)
 
 
