@@ -49,8 +49,6 @@ export const Cart: React.FC = () => {
         variables: {
           id: cartId,
         },
-      }).catch((err) => {
-        throw new Error('Error fetching cart', err)
       })
     }
   }, [cartId])
