@@ -33,6 +33,10 @@ const App = () => {
     setIsBlog(host.split('.').includes('blog'))
   }, [])
 
+  useEffect(() => {
+    document.body.style.overflow = isLoading ? 'hidden' : 'auto'
+  }, [isLoading])
+
   if (isBlog) {
     return (
       <ApolloProvider client={hygraphClient()}>
@@ -57,10 +61,6 @@ const App = () => {
       </ApolloProvider>
     )
   }
-
-  useEffect(() => {
-    document.body.style.overflow = isLoading ? 'hidden' : 'auto'
-  }, [isLoading])
 
   return (
     <ApolloProvider client={storeFrontClient()}>
