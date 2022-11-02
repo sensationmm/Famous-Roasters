@@ -11,6 +11,8 @@ import {
   ButtonEmphasis,
   ButtonSize,
   CartContext,
+  Icon,
+  IconName,
   Layout,
   Loader,
   Notification,
@@ -243,49 +245,52 @@ export const Cart: React.FC = () => {
               )
             })}
         </div>
-        {cost && (
-          <div className="grid justify-items-start md:justify-items-end mt-6">
-            <Typography
-              type={TypographyType.Paragraph}
-              size={TypographySize.Tiny}
-              className="uppercase text-coreUI-text-secondary"
-            >
-              {t('pages.cart.subtotal')}
-            </Typography>
-            <Typography type={TypographyType.Heading} size={TypographySize.Small} className="mr-1">
-              {formatPrice(cost.totalAmount.amount, cost.totalAmount.currencyCode)}
-            </Typography>
-            <Typography
-              as="div"
-              type={TypographyType.Paragraph}
-              size={TypographySize.Tiny}
-              className="text-coreUI-text-secondary"
-            >
-              {t('pages.product.transactional.price.footNote')}
+        <div className="w-full grid gap-4 lg:grid-cols-2 my-6">
+          <div className="p-4 bg-brand-grey-whisper grid grid-cols-[30px,_1fr] gap-4">
+            <Icon name={IconName.Info} />
+            <Typography type={TypographyType.Paragraph} size={TypographySize.Tiny}>
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: t('pages.cart.multiPackage'),
+                }}
+              />
             </Typography>
           </div>
-        )}
-        <div className="grid gap-4 grid-cols-1 md:flex md:justify-end my-6">
+          <div className="flex justify-end items-center">
+            {cost && (
+              <div className="grid justify-items-start justify-items-end mt-6 lg:mt-0">
+                <Typography type={TypographyType.Heading} size={TypographySize.Small} className="mr-1">
+                  {formatPrice(cost.totalAmount.amount, cost.totalAmount.currencyCode)}
+                </Typography>
+                <Typography
+                  as="div"
+                  type={TypographyType.Paragraph}
+                  size={TypographySize.Tiny}
+                  className="text-coreUI-text-secondary"
+                >
+                  {t('pages.cart.priceIncl')}
+                </Typography>
+              </div>
+            )}
+          </div>
+        </div>
+
+        <div className="relative grid gap-4 md:grid-cols-2 md:my-6 md:w-1/2 md:left-1/2">
           <div className="grid md:order-2 justify-items-end">
-            <a id="toCheckout" href={generateCheckoutUrl()} className="flex w-full md:w-max" data-testid="goToCheckout">
-              <Button
-                type="button"
-                emphasis={ButtonEmphasis.Primary}
-                size={ButtonSize.md}
-                className="flex w-full justify-center"
-              >
+            <a id="toCheckout" href={generateCheckoutUrl()} className="flex w-full" data-testid="goToCheckout">
+              <Button type="button" emphasis={ButtonEmphasis.Primary} size={ButtonSize.md} fullWidth>
                 {t('pages.cart.ctaCheckout')}
               </Button>
             </a>
           </div>
           <div className="grid md:order-1 push justify-items-start">
-            <Link to="/catalogue" className="flex w-full md:w-max">
+            <Link to="/catalogue" className="flex w-full">
               <Button
                 type="button"
                 emphasis={ButtonEmphasis.Secondary}
                 size={ButtonSize.md}
-                className="flex w-full justify-center"
                 data-testid="continueShopping"
+                fullWidth
               >
                 {t('pages.cart.ctaContinue')}
               </Button>
