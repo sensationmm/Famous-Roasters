@@ -87,8 +87,8 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProv
         cid && setStoredCartId(cid)
         setCartSize(firstItem.quantity)
       })
-      .catch((err) => {
-        throw new Error('Error creating cart', err)
+      .catch(async () => {
+        await createCart(firstItem) // try again
       })
   }
 
