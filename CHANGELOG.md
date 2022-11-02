@@ -1,3 +1,10 @@
+# [1.89.0](https://github.com/Famous-Roasters/frontend/compare/v1.88.3...v1.89.0) (2022-11-02)
+
+
+### Features
+
+* **cart:** multi package warning ([f06d174](https://github.com/Famous-Roasters/frontend/commit/f06d1741f41595e45bdbd669b6f915f25f54530f))
+
 ## [1.88.3](https://github.com/Famous-Roasters/frontend/compare/v1.88.2...v1.88.3) (2022-11-02)
 
 
