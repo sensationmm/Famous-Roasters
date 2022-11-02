@@ -1,41 +1,41 @@
 query cart($id: ID!) {
-    cart(id: $id) {
-        checkoutUrl
-        id
-        estimatedCost {
-            totalAmount {
+  cart(id: $id) {
+    checkoutUrl
+    id
+    cost {
+      totalAmount {
+        amount
+        currencyCode
+      }
+    }
+    lines(first: 20) {
+      edges {
+        node {
+          id
+          merchandise {
+            ... on ProductVariant {
+              id
+              image {
+                altText
+                url
+              }
+              priceV2 {
                 amount
                 currencyCode
+              }
+              product {
+                title
+                id
+              }
+              selectedOptions {
+                name
+                value
+              }
             }
+          }
+          quantity
         }
-        lines(first: 20) {
-            edges {
-                node {
-                    id
-                    merchandise {
-                        ... on ProductVariant {
-                            id
-                            image {
-                                altText
-                                url
-                            }
-                            priceV2 {
-                                amount
-                                currencyCode
-                            }
-                            product {
-                                title
-                                id
-                            }
-                            selectedOptions {
-                                name
-                                value
-                            }
-                        }
-                    }
-                    quantity
-                }
-            }
-        }
+      }
     }
+  }
 }

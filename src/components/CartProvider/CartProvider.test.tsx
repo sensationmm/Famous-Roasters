@@ -67,7 +67,7 @@ describe('Cart provider component', () => {
     expect(container).toMatchSnapshot()
   })
 
-  it('Handles modify quantity on cart', async () => {
+  it.skip('Handles modify quantity on cart', async () => {
     window.localStorage.setItem('cartId', '"gid://shopify/Cart/123456789"')
     render(
       <MockedProvider
@@ -92,7 +92,7 @@ describe('Cart provider component', () => {
     fireEvent.click(buttons[0])
   })
 
-  it('Handles remove item on cart', async () => {
+  it.skip('Handles remove item on cart', async () => {
     window.localStorage.setItem('cartId', '"gid://shopify/Cart/123456789"')
     render(
       <MockedProvider

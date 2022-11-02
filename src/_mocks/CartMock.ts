@@ -73,6 +73,18 @@ export const CartMockData: CartQueryQuery = {
         currencyCode: CurrencyCode.Eur,
       },
     },
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    estimatedCost: {
+      subtotalAmount: {
+        amount: '10',
+        currencyCode: CurrencyCode.Eur,
+      },
+      totalAmount: {
+        amount: '10',
+        currencyCode: CurrencyCode.Eur,
+      },
+    },
     totalQuantity: 0,
     lines: {
       edges: [

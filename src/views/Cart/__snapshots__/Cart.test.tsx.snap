@@ -473,38 +473,76 @@ exports[`Cart view Renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="grid justify-items-start md:justify-items-end mt-6"
+          class="w-full grid gap-4 lg:grid-cols-2 my-6"
         >
-          <span
-            class="uppercase text-coreUI-text-secondary text-xs leading-4"
-          >
-            Zwischensumme
-          </span>
-          <span
-            class="mr-1 text-2xl leading-8 font-semibold"
-          >
-            10,00 €
-          </span>
           <div
-            class="text-coreUI-text-secondary text-xs leading-4"
+            class="p-4 bg-brand-grey-whisper grid grid-cols-[30px,_1fr] gap-4"
           >
-            Preise inkl. MwSt.
+            <svg
+              class="undefined"
+              fill="inherit"
+              height="24"
+              viewBox="0 0 20 21"
+              width="24"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M11 14.4229H10V10.4229H9M10 6.42285H10.01M19 10.4229C19 15.3934 14.9706 19.4229 10 19.4229C5.02944 19.4229 1 15.3934 1 10.4229C1 5.45229 5.02944 1.42285 10 1.42285C14.9706 1.42285 19 5.45229 19 10.4229Z"
+                fill="none"
+                fill-rule="evenodd"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+            <span
+              class="text-xs leading-4"
+            >
+              <span>
+                Da du von verschiedenen Röstern bestellst, wirst du 
+                <span
+                  class="font-bold"
+                >
+                  jeweils ein Paket
+                </span>
+                 von jedem Röster erhalten.
+              </span>
+            </span>
+          </div>
+          <div
+            class="flex justify-end items-center"
+          >
+            <div
+              class="grid justify-items-start justify-items-end mt-6 lg:mt-0"
+            >
+              <span
+                class="mr-1 text-2xl leading-8 font-semibold"
+              >
+                10,00 €
+              </span>
+              <div
+                class="text-coreUI-text-secondary text-xs leading-4"
+              >
+                Preise inkl. MwSt. und Versand
+              </div>
+            </div>
           </div>
         </div>
         <div
-          class="grid gap-4 grid-cols-1 md:flex md:justify-end my-6"
+          class="relative grid gap-4 md:grid-cols-2 md:my-6 md:w-1/2 md:left-1/2"
         >
           <div
             class="grid md:order-2 justify-items-end"
           >
             <a
-              class="flex w-full md:w-max"
+              class="flex w-full"
               data-testid="goToCheckout"
               href="https://famousroasters.myshopify.com/cart/c/123456789"
               id="toCheckout"
             >
               <button
-                class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+                class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary w-full md:max-w-xs md:mx-auto"
                 role="button"
                 type="button"
               >
@@ -516,11 +554,11 @@ exports[`Cart view Renders correctly 1`] = `
             class="grid md:order-1 push justify-items-start"
           >
             <a
-              class="flex w-full md:w-max"
+              class="flex w-full"
               href="/catalogue"
             >
               <button
-                class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black"
+                class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-4 py-2 text-base font-bold text-white bg-brand-black border-transparent hover:bg-coreUI-text-secondary active:bg-brand-black w-full md:max-w-xs md:mx-auto"
                 data-testid="continueShopping"
                 role="button"
                 type="button"
