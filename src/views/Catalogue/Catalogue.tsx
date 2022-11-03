@@ -7,7 +7,7 @@ import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
 import { InstantSearch } from 'react-instantsearch-hooks-web'
 import { useParams } from 'react-router-dom'
-import { ErrorPrompt, Layout, Loader, TabsNavigation } from 'src/components'
+import { ErrorPrompt, Layout, Loader, ProductTileLoader, TabsNavigation } from 'src/components'
 import AccessoriesSearch from 'src/components/AlgoliaSearch/AccessoriesSearch'
 import CoffeeSearch from 'src/components/AlgoliaSearch/CoffeeSearch'
 
@@ -70,9 +70,20 @@ export const Catalogue: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="flex h-64 mb-32 justify-center items-center">
-        <Loader />
-      </div>
+      <Layout>
+        <main className="flex flex-grow w-full items-start justify-center bg-white mt-4">
+          <div className="w-full max-w-7xl mx-auto px-6 xl:px-8">
+            <div className="h-[290px] xl:h-[226px] flex justify-center items-center">
+              <Loader />
+            </div>
+            <div className="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mb-16 pb-8 border-b border-coreUI-border ">
+              {[...Array(12)].map((_, count) => (
+                <ProductTileLoader key={`loader-${count}`} />
+              ))}
+            </div>
+          </div>
+        </main>
+      </Layout>
     )
   }
 
