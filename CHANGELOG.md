@@ -1,3 +1,10 @@
+## [1.89.1](https://github.com/Famous-Roasters/frontend/compare/v1.89.0...v1.89.1) (2022-11-03)
+
+
+### Bug Fixes
+
+* **speed:** cumulative layout shift ([09b14c3](https://github.com/Famous-Roasters/frontend/commit/09b14c32026e70ea09a93490b94ac53c90286b50))
+
 # [1.89.0](https://github.com/Famous-Roasters/frontend/compare/v1.88.3...v1.89.0) (2022-11-02)
 
 
