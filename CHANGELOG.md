@@ -1,3 +1,10 @@
+# [1.90.0](https://github.com/Famous-Roasters/frontend/compare/v1.89.1...v1.90.0) (2022-11-04)
+
+
+### Features
+
+* **catalogue:** match search placeholder to tab ([383c430](https://github.com/Famous-Roasters/frontend/commit/383c430dde2532ca53b59f6068fbd6499209c96b))
+
 ## [1.89.1](https://github.com/Famous-Roasters/frontend/compare/v1.89.0...v1.89.1) (2022-11-03)
 
 
