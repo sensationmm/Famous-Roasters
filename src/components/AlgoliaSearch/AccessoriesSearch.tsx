@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { Configure, SearchBox, SortBy, useInstantSearch } from 'react-instantsearch-hooks-web'
 import { useParams } from 'react-router-dom'
+import { capitalize } from 'src/utils/formatters'
 
 import { renderSearchContent } from './CoffeeSearch'
 import Pagination from './Pagination'
@@ -34,7 +35,7 @@ const AccessoriesSearch: React.FC = () => {
         />
 
         <SearchBox
-          placeholder={t('pages.catalogue.search.placeholderAccessories')}
+          placeholder={t(`pages.catalogue.search.placeholder${capitalize(collection as string)}`)}
           classNames={{
             root: 'ml-auto mt-4 md:mt-0',
             loadingIndicator: 'hidden',
