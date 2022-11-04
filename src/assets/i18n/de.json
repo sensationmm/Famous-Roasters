@@ -464,6 +464,9 @@
       "search": {
         "placeholderCoffee": "Finde deine Kaffees oder Röster",
         "placeholderAccessories": "Finde Zubehör",
+        "placeholderEquipment": "Finde Zubehör",
+        "placeholderGifts": "Finde Geschenke",
+        "placeholderAdvent": "Finde Adventskalender",
         "stats_one": "Wir haben <span class='font-bold'>{{count}} Produkt</span> gefunden.",
         "stats_other": "Wir haben <span class='font-bold'>{{count}} Produkte</span> gefunden."
       },

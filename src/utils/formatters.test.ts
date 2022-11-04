@@ -1,4 +1,5 @@
 import { formatDate, formatPrice, getAPIId, getAromaKey, getSimplifiedId } from '.'
+import { capitalize } from './formatters'
 
 describe('Formatter utils', () => {
   it('Format date works', () => {
@@ -41,5 +42,10 @@ describe('Formatter utils', () => {
     expect(getAromaKey('Experimentell & komplex')).toEqual('experimental')
     expect(getAromaKey('other')).toEqual('empty')
     expect(getAromaKey('')).toEqual('empty')
+  })
+
+  describe('capitalize', () => {
+    it('works for string', () => expect(capitalize('hello')).toEqual('Hello'))
+    it('works for empty string', () => expect(capitalize('')).toEqual(''))
   })
 })
