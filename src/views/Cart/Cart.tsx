@@ -256,7 +256,7 @@ export const Cart: React.FC = () => {
               )
             })}
         </div>
-        <div className="w-full grid gap-4 lg:grid-cols-2 my-6">
+        <div className={`w-full grid gap-4 ${vendors > 1 ? 'lg:grid-cols-2' : ''} my-6`}>
           {vendors > 1 && (
             <div className="p-4 bg-brand-grey-whisper grid grid-cols-[30px,_1fr] gap-4">
               <Icon name={IconName.Info} />
