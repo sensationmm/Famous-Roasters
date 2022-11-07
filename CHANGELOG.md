@@ -1,3 +1,10 @@
+## [1.92.1](https://github.com/Famous-Roasters/frontend/compare/v1.92.0...v1.92.1) (2022-11-07)
+
+
+### Bug Fixes
+
+* **algolia:** indexName error in sentry ([b40a046](https://github.com/Famous-Roasters/frontend/commit/b40a046a1bbe7944909f7be86529e51fedfaa122))
+
 # [1.92.0](https://github.com/Famous-Roasters/frontend/compare/v1.91.0...v1.92.0) (2022-11-07)
 
 
