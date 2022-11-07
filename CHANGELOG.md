@@ -1,3 +1,10 @@
+# [1.92.0](https://github.com/Famous-Roasters/frontend/compare/v1.91.0...v1.92.0) (2022-11-07)
+
+
+### Features
+
+* **cart:** conditional multi package warning ([35326d0](https://github.com/Famous-Roasters/frontend/commit/35326d04bed2624b05d5ddc0a49ffe0b3c6c4e4f))
+
 # [1.91.0](https://github.com/Famous-Roasters/frontend/compare/v1.90.0...v1.91.0) (2022-11-07)
 
 
