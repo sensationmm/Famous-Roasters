@@ -1,3 +1,10 @@
+## [1.92.2](https://github.com/Famous-Roasters/frontend/compare/v1.92.1...v1.92.2) (2022-11-07)
+
+
+### Bug Fixes
+
+* **cart:** layout break when no package warning ([7d1a13d](https://github.com/Famous-Roasters/frontend/commit/7d1a13d23967847f50855304dae8cb57d8fca583))
+
 ## [1.92.1](https://github.com/Famous-Roasters/frontend/compare/v1.92.0...v1.92.1) (2022-11-07)
 
 
