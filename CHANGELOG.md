@@ -1,3 +1,10 @@
+# [1.91.0](https://github.com/Famous-Roasters/frontend/compare/v1.90.0...v1.91.0) (2022-11-07)
+
+
+### Features
+
+* **google:** add google site verify file ([63babf9](https://github.com/Famous-Roasters/frontend/commit/63babf9cfd783d265220fc07766a9fafb8bc6dfa))
+
 # [1.90.0](https://github.com/Famous-Roasters/frontend/compare/v1.89.1...v1.90.0) (2022-11-04)
 
 
