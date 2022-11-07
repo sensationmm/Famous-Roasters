@@ -7,7 +7,7 @@ import Pagination from './Pagination'
 describe('Pagination component', () => {
   const snippet = () => (
     <InstantSearch
-      indexName="test"
+      indexName="products"
       searchClient={{
         async search() {
           return {
