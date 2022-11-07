@@ -500,13 +500,13 @@ exports[`Cart view Renders correctly 1`] = `
               class="text-xs leading-4"
             >
               <span>
-                Da du von verschiedenen Röstern bestellst, wirst du 
+                Da du von verschiedenen Röstereien bestellst, wirst du 
                 <span
                   class="font-bold"
                 >
                   jeweils ein Paket
                 </span>
-                 von jedem Röster erhalten.
+                 von jeder Rösterei erhalten.
               </span>
             </span>
           </div>

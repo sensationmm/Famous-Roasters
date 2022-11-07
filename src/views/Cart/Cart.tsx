@@ -29,6 +29,12 @@ import { UserProfile } from 'src/views/User'
 const USER_PROFILE = loader('src/graphql/queries/userProfile.query.graphql')
 const GET_CART = loader('src/graphql/queries/cart.query.graphql')
 
+interface CustomCartProduct {
+  vendor: string
+  title: string
+  id: string
+}
+
 export const Cart: React.FC = () => {
   const [user] = useAuth()
   const { t } = useTranslation()
@@ -151,6 +157,11 @@ export const Cart: React.FC = () => {
 
   const renderCartWithItems = () => {
     const { lines, cost } = data?.cart || {}
+
+    const vendors = new Set(
+      lines?.edges.map((e) => (e.node.merchandise.product as unknown as CustomCartProduct).vendor),
+    ).size
+
     return (
       <>
         <div className="grid gap-2 grid-cols-1">
@@ -246,16 +257,18 @@ export const Cart: React.FC = () => {
             })}
         </div>
         <div className="w-full grid gap-4 lg:grid-cols-2 my-6">
-          <div className="p-4 bg-brand-grey-whisper grid grid-cols-[30px,_1fr] gap-4">
-            <Icon name={IconName.Info} />
-            <Typography type={TypographyType.Paragraph} size={TypographySize.Tiny}>
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: t('pages.cart.multiPackage'),
-                }}
-              />
-            </Typography>
-          </div>
+          {vendors > 1 && (
+            <div className="p-4 bg-brand-grey-whisper grid grid-cols-[30px,_1fr] gap-4">
+              <Icon name={IconName.Info} />
+              <Typography type={TypographyType.Paragraph} size={TypographySize.Tiny}>
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: t('pages.cart.multiPackage'),
+                  }}
+                />
+              </Typography>
+            </div>
+          )}
           <div className="flex justify-end items-center">
             {cost && (
               <div className="grid justify-items-start justify-items-end mt-6 lg:mt-0">
