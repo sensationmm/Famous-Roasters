@@ -33,6 +33,7 @@ interface CustomCartProduct {
   vendor: string
   title: string
   id: string
+  isGiftCard: boolean
 }
 
 export const Cart: React.FC = () => {
@@ -159,7 +160,9 @@ export const Cart: React.FC = () => {
     const { lines, cost } = data?.cart || {}
 
     const vendors = new Set(
-      lines?.edges.map((e) => (e.node.merchandise.product as unknown as CustomCartProduct).vendor),
+      lines?.edges
+        .filter((e) => (e.node.merchandise.product as unknown as CustomCartProduct).isGiftCard === false)
+        .map((e) => (e.node.merchandise.product as unknown as CustomCartProduct).vendor),
     ).size
 
     return (

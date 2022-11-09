@@ -37,7 +37,8 @@ const CartLineEdgeMockData: CartLineEdge = {
         title: 'Cycle Blend',
         handle: '',
         id: 'gid://shopify/Product/7655228866776',
-        vendor: 'Cycle Roasters'
+        vendor: 'Cycle Roasters',
+        isGiftCard: false
       },
       selectedOptions: [
         {
@@ -104,7 +105,8 @@ export const CartMockData: CartQueryQuery = {
                 title: '60beans',
                 handle: '',
                 id: 'gid://shopify/Product/23232323',
-                vendor: 'Cycle Roasters 2'
+                vendor: 'Cycle Roasters 2',
+                isGiftCard: false
               },
               selectedOptions: [
                 {

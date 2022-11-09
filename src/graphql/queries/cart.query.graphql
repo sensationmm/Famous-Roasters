@@ -27,6 +27,7 @@ query cart($id: ID!) {
                 title
                 id
                 vendor
+                isGiftCard
               }
               selectedOptions {
                 name
