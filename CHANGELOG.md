@@ -1,3 +1,10 @@
+# [1.93.0](https://github.com/Famous-Roasters/frontend/compare/v1.92.2...v1.93.0) (2022-11-09)
+
+
+### Features
+
+* **cart:** hide multi package warning if gift card ([85d0231](https://github.com/Famous-Roasters/frontend/commit/85d0231e1e01d1f79f8dfdbefb44d4c97ee8499c))
+
 ## [1.92.2](https://github.com/Famous-Roasters/frontend/compare/v1.92.1...v1.92.2) (2022-11-07)
 
 
