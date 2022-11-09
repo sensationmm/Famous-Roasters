@@ -160,7 +160,7 @@ export const Product: React.FC = () => {
     isGiftCard,
   } = data?.product || {}
 
-  const isCoffee = productType !== 'Accessories' && productType !== ''
+  const isCoffee = !accessory_type
   const isAccessory = productType === 'Accessories'
   const isInternational = vendor === 'Nomad' // TODO: update to use the backend once updated
 
@@ -571,8 +571,6 @@ export const Product: React.FC = () => {
   }
 
   const renderProductCollapsableBlocks = () => {
-    // some blocks - disabled as no real content yet
-    // const blocksData = [{ key: 'getToKnow' }, { key: 'meetTheRoaster' }, { key: 'learnToBrew' }, { key: 'findSimilar' }]
     const blocksData = isCoffee
       ? [{ key: 'getToKnow' }, { key: 'meetTheRoaster' }, { key: 'findSimilar' }]
       : isAccessory
