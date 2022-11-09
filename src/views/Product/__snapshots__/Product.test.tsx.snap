@@ -228,22 +228,26 @@ exports[`Product view Renders correctly for a accessories 1`] = `
           <div>
             <span />
             <div
-              class="mb-2"
+              class="flex flex-col-reverse"
             >
-              <h2
-                class="text-coreUI-text-secondary text-sm leading-5"
+              <div
+                class="border-b border-brand-grey-whisper pb-4"
               >
-                Tamper
-              </h2>
-            </div>
-            <div
-              class="border-b border-brand-grey-whisper pb-4"
-            >
-              <h1
-                class="text-2xl leading-8 font-semibold"
+                <h1
+                  class="text-2xl leading-8 font-semibold"
+                >
+                  Barista Pinsel | barista.tools
+                </h1>
+              </div>
+              <div
+                class="mb-2"
               >
-                Barista Pinsel | barista.tools
-              </h1>
+                <p
+                  class="text-coreUI-text-secondary text-sm leading-5"
+                >
+                  Tamper
+                </p>
+              </div>
             </div>
             <div
               class="pt-4 border-b border-brand-grey-whisper"
@@ -1485,32 +1489,36 @@ exports[`Product view Renders correctly for a successful call 1`] = `
           <div>
             <span />
             <div
-              class="mb-2"
+              class="flex flex-col-reverse"
             >
-              <h2
-                class="text-coreUI-text-secondary text-sm leading-5"
-              />
-            </div>
-            <div
-              class="border-b border-brand-grey-whisper pb-4"
-            >
-              <h1
-                class="text-2xl leading-8 font-semibold"
-              >
-                Espresso Raritäten Set
-              </h1>
               <div
-                class="mt-1"
+                class="border-b border-brand-grey-whisper pb-4"
               >
-                <div
-                  class="inline-flex rounded-full px-3 py-1 bg-tags-santasGray text-white border border-white"
+                <h1
+                  class="text-2xl leading-8 font-semibold"
                 >
-                  <span
-                    class="text-xs leading-4"
+                  Espresso Raritäten Set
+                </h1>
+                <div
+                  class="mt-1"
+                >
+                  <div
+                    class="inline-flex rounded-full px-3 py-1 bg-tags-santasGray text-white border border-white"
                   >
-                    Decaf
-                  </span>
+                    <span
+                      class="text-xs leading-4"
+                    >
+                      Decaf
+                    </span>
+                  </div>
                 </div>
+              </div>
+              <div
+                class="mb-2"
+              >
+                <p
+                  class="text-coreUI-text-secondary text-sm leading-5"
+                />
               </div>
             </div>
             <div
@@ -2960,32 +2968,36 @@ exports[`Product view Renders correctly for a successful call with International
           <div>
             <span />
             <div
-              class="mb-2"
+              class="flex flex-col-reverse"
             >
-              <h2
-                class="text-coreUI-text-secondary text-sm leading-5"
-              />
-            </div>
-            <div
-              class="border-b border-brand-grey-whisper pb-4"
-            >
-              <h1
-                class="text-2xl leading-8 font-semibold"
-              >
-                Espresso Raritäten Set
-              </h1>
               <div
-                class="mt-1"
+                class="border-b border-brand-grey-whisper pb-4"
               >
-                <div
-                  class="inline-flex rounded-full px-3 py-1 bg-tags-santasGray text-white border border-white"
+                <h1
+                  class="text-2xl leading-8 font-semibold"
                 >
-                  <span
-                    class="text-xs leading-4"
+                  Espresso Raritäten Set
+                </h1>
+                <div
+                  class="mt-1"
+                >
+                  <div
+                    class="inline-flex rounded-full px-3 py-1 bg-tags-santasGray text-white border border-white"
                   >
-                    Decaf
-                  </span>
+                    <span
+                      class="text-xs leading-4"
+                    >
+                      Decaf
+                    </span>
+                  </div>
                 </div>
+              </div>
+              <div
+                class="mb-2"
+              >
+                <p
+                  class="text-coreUI-text-secondary text-sm leading-5"
+                />
               </div>
             </div>
             <div
@@ -4435,32 +4447,36 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
           <div>
             <span />
             <div
-              class="mb-2"
+              class="flex flex-col-reverse"
             >
-              <h2
-                class="text-coreUI-text-secondary text-sm leading-5"
-              />
-            </div>
-            <div
-              class="border-b border-brand-grey-whisper pb-4"
-            >
-              <h1
-                class="text-2xl leading-8 font-semibold"
-              >
-                Espresso Raritäten Set
-              </h1>
               <div
-                class="mt-1"
+                class="border-b border-brand-grey-whisper pb-4"
               >
-                <div
-                  class="inline-flex rounded-full px-3 py-1 bg-tags-santasGray text-white border border-white"
+                <h1
+                  class="text-2xl leading-8 font-semibold"
                 >
-                  <span
-                    class="text-xs leading-4"
+                  Espresso Raritäten Set
+                </h1>
+                <div
+                  class="mt-1"
+                >
+                  <div
+                    class="inline-flex rounded-full px-3 py-1 bg-tags-santasGray text-white border border-white"
                   >
-                    Decaf
-                  </span>
+                    <span
+                      class="text-xs leading-4"
+                    >
+                      Decaf
+                    </span>
+                  </div>
                 </div>
+              </div>
+              <div
+                class="mb-2"
+              >
+                <p
+                  class="text-coreUI-text-secondary text-sm leading-5"
+                />
               </div>
             </div>
             <div
