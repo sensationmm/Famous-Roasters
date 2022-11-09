@@ -397,28 +397,30 @@ export const Product: React.FC = () => {
         {images && images.nodes.length > 0 && <Carousel images={images.nodes} />}
         <div>
           <span ref={detailsRef} />
-          {/* Vendor and bean_type */}
-          <div className="mb-2">
-            <Typography
-              as="h2"
-              type={TypographyType.Paragraph}
-              size={TypographySize.Small}
-              className="text-coreUI-text-secondary"
-            >
-              {!isCoffee ? accessory_type?.value || '' : coffee_type ? `${vendor} | ${coffee_type.value}` : vendor}
-            </Typography>
-          </div>
-          {/* Title */}
-          <div className="border-b border-brand-grey-whisper pb-4">
-            <Typography as="h1" type={TypographyType.Heading} size={TypographySize.Small}>
-              {title}
-            </Typography>
-            {/* Decaf tag */}
-            {decaf && decaf.value === 'true' && (
-              <div className="mt-1">
-                <Tag type={TagType.Decaf} value="Decaf" />
-              </div>
-            )}
+          <div className="flex flex-col-reverse">
+            {/* Title */}
+            <div className="border-b border-brand-grey-whisper pb-4">
+              <Typography as="h1" type={TypographyType.Heading} size={TypographySize.Small}>
+                {title}
+              </Typography>
+              {/* Decaf tag */}
+              {decaf && decaf.value === 'true' && (
+                <div className="mt-1">
+                  <Tag type={TagType.Decaf} value="Decaf" />
+                </div>
+              )}
+            </div>
+            {/* Vendor and bean_type */}
+            <div className="mb-2">
+              <Typography
+                as="p"
+                type={TypographyType.Paragraph}
+                size={TypographySize.Small}
+                className="text-coreUI-text-secondary"
+              >
+                {!isCoffee ? accessory_type?.value || '' : coffee_type ? `${vendor} | ${coffee_type.value}` : vendor}
+              </Typography>
+            </div>
           </div>
           {/* Aroma tag */}
           {aroma && (
