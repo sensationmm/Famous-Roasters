@@ -1,3 +1,10 @@
+## [1.93.1](https://github.com/Famous-Roasters/frontend/compare/v1.93.0...v1.93.1) (2022-11-09)
+
+
+### Bug Fixes
+
+* **product:** fix new collections showing coffee layout ([934424f](https://github.com/Famous-Roasters/frontend/commit/934424f34732880b836c17e803c52317ce557a55))
+
 # [1.93.0](https://github.com/Famous-Roasters/frontend/compare/v1.92.2...v1.93.0) (2022-11-09)
 
 
