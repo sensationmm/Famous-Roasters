@@ -1,3 +1,10 @@
+# [1.94.0](https://github.com/Famous-Roasters/frontend/compare/v1.93.1...v1.94.0) (2022-11-09)
+
+
+### Features
+
+* **product:** correct header structure ([62bfb24](https://github.com/Famous-Roasters/frontend/commit/62bfb24734fbed103a649803120b327a0dc51402))
+
 ## [1.93.1](https://github.com/Famous-Roasters/frontend/compare/v1.93.0...v1.93.1) (2022-11-09)
 
 
