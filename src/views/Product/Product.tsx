@@ -107,17 +107,19 @@ export const Product: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       const stickyOffsetTop = stickyCTARef.current?.offsetTop || 0
-      const relScrollWindow = window.outerHeight + window.scrollY
-      if (relScrollWindow > stickyOffsetTop) {
-        setIsSticky(false)
-        if (window.scrollY > stickyOffsetTop) {
-          setIsFixed(true)
+      if (window) {
+        const relScrollWindow = window.outerHeight + window.scrollY
+        if (relScrollWindow > stickyOffsetTop) {
+          setIsSticky(false)
+          if (window.scrollY > stickyOffsetTop) {
+            setIsFixed(true)
+          } else {
+            setIsFixed(false)
+          }
         } else {
+          setIsSticky(true)
           setIsFixed(false)
         }
-      } else {
-        setIsSticky(true)
-        setIsFixed(false)
       }
     }
 
