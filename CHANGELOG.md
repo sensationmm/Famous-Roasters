@@ -1,3 +1,11 @@
+## [1.94.3](https://github.com/Famous-Roasters/frontend/compare/v1.94.2...v1.94.3) (2022-11-10)
+
+
+### Bug Fixes
+
+* **github:** remove whitespace from template ([02446b6](https://github.com/Famous-Roasters/frontend/commit/02446b6348e45a8fb9a4f9465aead0d2e4ea58be))
+* **product:** get correct collection definition ([618d78d](https://github.com/Famous-Roasters/frontend/commit/618d78dc9af75bfc996ec7c00288ab39412027d6))
+
 ## [1.94.2](https://github.com/Famous-Roasters/frontend/compare/v1.94.1...v1.94.2) (2022-11-10)
 
 
