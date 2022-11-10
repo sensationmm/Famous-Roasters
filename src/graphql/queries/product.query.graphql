@@ -9,6 +9,14 @@ query product($id: ID) {
     productType
     isGiftCard
     vendor
+    collections(first: 10) {
+      edges {
+        node {
+          id
+          handle
+        }
+      }
+    }
     vendor_description: metafield(namespace: "my_fields", key: "vendor_description") {
       value
     }

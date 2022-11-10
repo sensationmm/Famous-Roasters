@@ -34,6 +34,7 @@ import {
   TypographySize,
   TypographyType,
 } from 'src/components'
+import useBreakpoint from 'src/hooks/useBreakpoint'
 import { formatPrice, getAPIId, getRegion, parseHtmlSafely, regionImages } from 'src/utils'
 import { Error } from 'src/views/Error'
 
@@ -100,6 +101,8 @@ export const Product: React.FC = () => {
   const [isSticky, setIsSticky] = useState<boolean>(true)
   const [isFixed, setIsFixed] = useState<boolean>(false)
   const [packageSizes, setPackageSizes] = useState<ListBoxItem[]>([])
+  const breakpoint = useBreakpoint()
+  const isMobile = breakpoint === 'sm'
 
   useEffect(() => {
     const handleScroll = () => {
@@ -118,12 +121,12 @@ export const Product: React.FC = () => {
       }
     }
 
-    window.addEventListener('scroll', handleScroll)
+    isMobile && window.addEventListener('scroll', handleScroll)
 
     return () => {
-      window.removeEventListener('scroll', handleScroll)
+      isMobile && window.removeEventListener('scroll', handleScroll)
     }
-  }, [])
+  }, [isMobile])
 
   const { loading, error, data } = useQuery<ProductQuery>(GET_PRODUCT, {
     variables: {
@@ -135,6 +138,7 @@ export const Product: React.FC = () => {
     title,
     productType,
     vendor,
+    collections,
     coffee_type,
     accessory_type,
     bean_type,
@@ -160,7 +164,8 @@ export const Product: React.FC = () => {
     isGiftCard,
   } = data?.product || {}
 
-  const isCoffee = !accessory_type
+  const collectionsList = collections?.edges.map((e) => e.node.handle) || []
+  const isCoffee = collectionsList.find((el) => el === 'coffee') !== undefined
   const isAccessory = productType === 'Accessories'
   const isInternational = vendor === 'Nomad' // TODO: update to use the backend once updated
 
@@ -185,7 +190,6 @@ export const Product: React.FC = () => {
   }
 
   if (error) {
-    // console.log('error', error.networkError)
     return <ErrorPrompt promptAction={() => history.go(0)} />
   }
 
