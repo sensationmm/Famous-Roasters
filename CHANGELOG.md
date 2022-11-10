@@ -1,3 +1,10 @@
+## [1.94.2](https://github.com/Famous-Roasters/frontend/compare/v1.94.1...v1.94.2) (2022-11-10)
+
+
+### Bug Fixes
+
+* **speed:** render blocking resources & accessibility ([9b17a4c](https://github.com/Famous-Roasters/frontend/commit/9b17a4c7c6a34507abef41f087205e7e327217aa))
+
 ## [1.94.1](https://github.com/Famous-Roasters/frontend/compare/v1.94.0...v1.94.1) (2022-11-10)
 
 
