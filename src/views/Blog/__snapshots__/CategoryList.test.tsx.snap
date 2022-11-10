@@ -530,6 +530,7 @@ exports[`Blog Category List View Renders correctly 1`] = `
               <a
                 href="//www.facebook.com/60beans.shop"
                 target="_blank"
+                title="Go to facebook"
               >
                 <svg
                   class="undefined"
@@ -555,6 +556,7 @@ exports[`Blog Category List View Renders correctly 1`] = `
               <a
                 href="//www.instagram.com/60beans/"
                 target="_blank"
+                title="Go to instagram"
               >
                 <svg
                   class="undefined"
@@ -580,6 +582,7 @@ exports[`Blog Category List View Renders correctly 1`] = `
               <a
                 href="//www.linkedin.com/company/86587560/"
                 target="_blank"
+                title="Go to linkedIn"
               >
                 <svg
                   class="undefined"

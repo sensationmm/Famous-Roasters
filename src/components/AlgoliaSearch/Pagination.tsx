@@ -53,6 +53,7 @@ const Pagination = (props: UsePaginationProps) => {
           disabled={isFirstPage}
           className={getButtonClassNames(isFirstPage)}
           data-testid="pagination-previous"
+          name="Previous Page"
         >
           <ArrowNarrowLeftIcon className="mr-1.5 h-5 w-5" aria-hidden="true" />
         </button>
@@ -77,6 +78,7 @@ const Pagination = (props: UsePaginationProps) => {
           disabled={isLastPage}
           className={getButtonClassNames(isLastPage)}
           data-testid="pagination-next"
+          name="Next Page"
         >
           <ArrowNarrowRightIcon className="ml-1.5 h-5 w-5" aria-hidden="true" />
         </button>

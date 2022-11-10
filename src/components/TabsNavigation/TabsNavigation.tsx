@@ -26,6 +26,7 @@ export const TabsNavigation: React.FC<TabsNavigationProps> = ({ tabsData }: Tabs
             className="mr-6"
             key={tabsDataItem.key}
             data-testid={`tab-${tabsDataItem.key}`}
+            role="tab"
           >
             <Typography
               size={TypographySize.Small}
