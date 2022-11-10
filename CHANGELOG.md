@@ -1,3 +1,10 @@
+## [1.94.1](https://github.com/Famous-Roasters/frontend/compare/v1.94.0...v1.94.1) (2022-11-10)
+
+
+### Bug Fixes
+
+* **speed:** removed unused packages ([b126e36](https://github.com/Famous-Roasters/frontend/commit/b126e36146309f0f575224388b644bf33d27cce6))
+
 # [1.94.0](https://github.com/Famous-Roasters/frontend/compare/v1.93.1...v1.94.0) (2022-11-09)
 
 
