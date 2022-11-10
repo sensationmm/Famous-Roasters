@@ -28,7 +28,31 @@ export const ProductMockDataBase: ProductCustom = {
   descriptionHtml: '<p>Hello world</p>',
   availableForSale: false,
   collections: {
-    edges: [],
+    edges: [
+      {
+        node: {
+          id: 'asda',
+          handle: 'example',
+          metafields: [],
+          __typename: "Collection",
+          description: '',
+          descriptionHtml: '',
+          products: {
+            edges: [],
+            filters: [],
+            nodes: [],
+            pageInfo: {
+              hasNextPage: false,
+              hasPreviousPage: false,
+            },
+          },
+          seo: {},
+          title: '',
+          updatedAt: ''
+        },
+        cursor: ''
+      }
+    ],
     nodes: [],
     pageInfo: {
       hasNextPage: false,
@@ -170,7 +194,31 @@ export const AccessoryMockDataBase: ProductCustom = {
   metafields: [],
   availableForSale: true,
   collections: {
-    edges: [],
+    edges: [
+      {
+        node: {
+          id: 'asda',
+          handle: 'example',
+          metafields: [],
+          __typename: "Collection",
+          description: '',
+          descriptionHtml: '',
+          products: {
+            edges: [],
+            filters: [],
+            nodes: [],
+            pageInfo: {
+              hasNextPage: false,
+              hasPreviousPage: false,
+            },
+          },
+          seo: {},
+          title: '',
+          updatedAt: ''
+        },
+        cursor: ''
+      }
+    ],
     nodes: [],
     pageInfo: {
       hasNextPage: false,
