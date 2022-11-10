@@ -113,7 +113,7 @@ export const Footer: React.FC = () => {
               const { id, href, icon } = socialMediaLink
               return (
                 <li key={id} className="mr-3 hover:text-brand-grey-bombay">
-                  <Link to={href} target="_blank">
+                  <Link to={href} target="_blank" title={`Go to ${id}`}>
                     <Icon name={icon} />
                   </Link>
                 </li>
@@ -124,51 +124,6 @@ export const Footer: React.FC = () => {
         <div className="mb-14">
           <TrustPilot />
         </div>
-        {/* PLEASE NOTE: this is old code, needs to be refactored to match new stying if turned on */}
-        {/* <div className="order-1 md:order-2"> */}
-        {/* Customer service */}
-        {/* Newsletter */}
-        {/*<div className="mt-12">
-            <div>
-              <Typography type={TypographyType.Heading} size={TypographySize.Base} className="font-syne">
-                {t('footer.newsletter.title')}
-              </Typography>
-            </div>
-            <div className="mt-6">
-              <Typography type={TypographyType.Paragraph} size={TypographySize.Large}>
-                {t('footer.newsletter.text')}
-              </Typography>
-            </div>
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <div className="mt-6">
-                <Input
-                  type="text"
-                  mode={InputMode.dark}
-                  labelText={t('footer.newsletter.inputLabel')}
-                  placeholder={t('footer.newsletter.inputPlaceholder')}
-                  className="w-72"
-                  data-testid="newsletter-email"
-                  {...register('email')}
-                />
-              </div>
-              <div className="mt-6">
-                <Button
-                  type="submit"
-                  emphasis={ButtonEmphasis.Tertiary}
-                  size={ButtonSize.lg}
-                  data-testid="newsletter-submit"
-                >
-                  {t('footer.newsletter.cta')}
-                </Button>
-              </div>
-            </form>
-            <div className="mt-4">
-              <Typography type={TypographyType.Paragraph} className="text-brand-grey-bombay">
-                {t('footer.newsletter.disclaimer')}
-              </Typography>
-            </div>
-          </div>
-        </div> */}
       </div>
 
       <div className="w-full max-w-7xl mx-auto text-center px-2 mb-1 xl:px-10">

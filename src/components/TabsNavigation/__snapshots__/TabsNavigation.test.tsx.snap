@@ -10,6 +10,7 @@ exports[`Tabs Navigation component Renders correctly 1`] = `
       class="mr-6"
       data-testid="tab-forYou"
       href="/catalogue/forYou"
+      role="tab"
     >
       <span
         class="text-coreUI-text-secondary hover:text-coreUI-text-primary pb-1.5 text-sm leading-5"
@@ -21,6 +22,7 @@ exports[`Tabs Navigation component Renders correctly 1`] = `
       class="mr-6"
       data-testid="tab-discover"
       href="/catalogue/discover"
+      role="tab"
     >
       <span
         class="text-coreUI-text-secondary hover:text-coreUI-text-primary pb-1.5 text-sm leading-5"

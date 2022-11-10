@@ -699,6 +699,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <a
                 href="//www.facebook.com/60beans.shop"
                 target="_blank"
+                title="Go to facebook"
               >
                 <svg
                   class="undefined"
@@ -724,6 +725,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <a
                 href="//www.instagram.com/60beans/"
                 target="_blank"
+                title="Go to instagram"
               >
                 <svg
                   class="undefined"
@@ -749,6 +751,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <a
                 href="//www.linkedin.com/company/86587560/"
                 target="_blank"
+                title="Go to linkedIn"
               >
                 <svg
                   class="undefined"
@@ -1510,6 +1513,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <a
                 href="//www.facebook.com/60beans.shop"
                 target="_blank"
+                title="Go to facebook"
               >
                 <svg
                   class="undefined"
@@ -1535,6 +1539,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <a
                 href="//www.instagram.com/60beans/"
                 target="_blank"
+                title="Go to instagram"
               >
                 <svg
                   class="undefined"
@@ -1560,6 +1565,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <a
                 href="//www.linkedin.com/company/86587560/"
                 target="_blank"
+                title="Go to linkedIn"
               >
                 <svg
                   class="undefined"
@@ -2321,6 +2327,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <a
                 href="//www.facebook.com/60beans.shop"
                 target="_blank"
+                title="Go to facebook"
               >
                 <svg
                   class="undefined"
@@ -2346,6 +2353,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <a
                 href="//www.instagram.com/60beans/"
                 target="_blank"
+                title="Go to instagram"
               >
                 <svg
                   class="undefined"
@@ -2371,6 +2379,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <a
                 href="//www.linkedin.com/company/86587560/"
                 target="_blank"
+                title="Go to linkedIn"
               >
                 <svg
                   class="undefined"
@@ -3132,6 +3141,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <a
                 href="//www.facebook.com/60beans.shop"
                 target="_blank"
+                title="Go to facebook"
               >
                 <svg
                   class="undefined"
@@ -3157,6 +3167,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <a
                 href="//www.instagram.com/60beans/"
                 target="_blank"
+                title="Go to instagram"
               >
                 <svg
                   class="undefined"
@@ -3182,6 +3193,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <a
                 href="//www.linkedin.com/company/86587560/"
                 target="_blank"
+                title="Go to linkedIn"
               >
                 <svg
                   class="undefined"
@@ -3943,6 +3955,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <a
                 href="//www.facebook.com/60beans.shop"
                 target="_blank"
+                title="Go to facebook"
               >
                 <svg
                   class="undefined"
@@ -3968,6 +3981,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <a
                 href="//www.instagram.com/60beans/"
                 target="_blank"
+                title="Go to instagram"
               >
                 <svg
                   class="undefined"
@@ -3993,6 +4007,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               <a
                 href="//www.linkedin.com/company/86587560/"
                 target="_blank"
+                title="Go to linkedIn"
               >
                 <svg
                   class="undefined"
@@ -4631,6 +4646,7 @@ exports[`Featured product view Renders correctly for a successful call without a
               <a
                 href="//www.facebook.com/60beans.shop"
                 target="_blank"
+                title="Go to facebook"
               >
                 <svg
                   class="undefined"
@@ -4656,6 +4672,7 @@ exports[`Featured product view Renders correctly for a successful call without a
               <a
                 href="//www.instagram.com/60beans/"
                 target="_blank"
+                title="Go to instagram"
               >
                 <svg
                   class="undefined"
@@ -4681,6 +4698,7 @@ exports[`Featured product view Renders correctly for a successful call without a
               <a
                 href="//www.linkedin.com/company/86587560/"
                 target="_blank"
+                title="Go to linkedIn"
               >
                 <svg
                   class="undefined"
@@ -5442,6 +5460,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
               <a
                 href="//www.facebook.com/60beans.shop"
                 target="_blank"
+                title="Go to facebook"
               >
                 <svg
                   class="undefined"
@@ -5467,6 +5486,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
               <a
                 href="//www.instagram.com/60beans/"
                 target="_blank"
+                title="Go to instagram"
               >
                 <svg
                   class="undefined"
@@ -5492,6 +5512,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
               <a
                 href="//www.linkedin.com/company/86587560/"
                 target="_blank"
+                title="Go to linkedIn"
               >
                 <svg
                   class="undefined"
@@ -6265,6 +6286,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
               <a
                 href="//www.facebook.com/60beans.shop"
                 target="_blank"
+                title="Go to facebook"
               >
                 <svg
                   class="undefined"
@@ -6290,6 +6312,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
               <a
                 href="//www.instagram.com/60beans/"
                 target="_blank"
+                title="Go to instagram"
               >
                 <svg
                   class="undefined"
@@ -6315,6 +6338,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
               <a
                 href="//www.linkedin.com/company/86587560/"
                 target="_blank"
+                title="Go to linkedIn"
               >
                 <svg
                   class="undefined"

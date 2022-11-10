@@ -858,6 +858,7 @@ exports[`AccessoriesSearch view Renders correctly for accessories 1`] = `
         class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center font-bold text-coreUI-text-tertiary"
         data-testid="pagination-previous"
         disabled=""
+        name="Previous Page"
       >
         <svg
           aria-hidden="true"
@@ -887,6 +888,7 @@ exports[`AccessoriesSearch view Renders correctly for accessories 1`] = `
         class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center font-bold text-coreUI-text-tertiary"
         data-testid="pagination-next"
         disabled=""
+        name="Next Page"
       >
         <svg
           aria-hidden="true"
@@ -1765,6 +1767,7 @@ exports[`AccessoriesSearch view Renders correctly for other 1`] = `
         class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center font-bold text-coreUI-text-tertiary"
         data-testid="pagination-previous"
         disabled=""
+        name="Previous Page"
       >
         <svg
           aria-hidden="true"
@@ -1794,6 +1797,7 @@ exports[`AccessoriesSearch view Renders correctly for other 1`] = `
         class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center font-bold text-coreUI-text-tertiary"
         data-testid="pagination-next"
         disabled=""
+        name="Next Page"
       >
         <svg
           aria-hidden="true"
