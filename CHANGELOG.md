@@ -1,3 +1,10 @@
+## [1.94.6](https://github.com/Famous-Roasters/frontend/compare/v1.94.5...v1.94.6) (2022-11-11)
+
+
+### Bug Fixes
+
+* **speed:** correct media ([a4f3966](https://github.com/Famous-Roasters/frontend/commit/a4f396604daaccbcaaa1bb0d6bfc1bcc589a2bc0))
+
 ## [1.94.5](https://github.com/Famous-Roasters/frontend/compare/v1.94.4...v1.94.5) (2022-11-11)
 
 
