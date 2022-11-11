@@ -9,10 +9,11 @@ exports[`Pagination component Renders correctly 1`] = `
       class="flex-1 flex justify-end mr-2"
     >
       <button
+        aria-label="Previous Page"
         class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center font-bold text-coreUI-text-tertiary"
         data-testid="pagination-previous"
         disabled=""
-        name="Previous Page"
+        title="Previous Page"
       >
         <svg
           aria-hidden="true"
@@ -39,10 +40,11 @@ exports[`Pagination component Renders correctly 1`] = `
       class="flex-1 flex justify-start -mt-0.5 ml-2"
     >
       <button
+        aria-label="Next Page"
         class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center font-bold text-coreUI-text-tertiary"
         data-testid="pagination-next"
         disabled=""
-        name="Next Page"
+        title="Next Page"
       >
         <svg
           aria-hidden="true"

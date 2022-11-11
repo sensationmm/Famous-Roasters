@@ -173,5 +173,3 @@ export class AuthSignIn extends SignIn {
     )
   }
 }
-
-export default AuthSignIn

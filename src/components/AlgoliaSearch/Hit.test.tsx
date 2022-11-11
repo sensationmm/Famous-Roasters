@@ -1,7 +1,7 @@
 import { render, waitFor } from '@testing-library/react'
 import { I18nextProvider } from 'react-i18next'
 import { BrowserRouter as Router } from 'react-router-dom'
-import { ProductMockData } from 'src/_mocks'
+import { ProductMockData } from 'src/_mocks/ProductMock'
 import { i18n } from 'src/config'
 
 import Hit from './Hit'
