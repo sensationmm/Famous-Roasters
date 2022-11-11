@@ -348,7 +348,7 @@ export const CatalogueMockAccessoriesYouMightLike = {
   },
 }
 
-export const CatalogueMockFilter1 = {
+const CatalogueMockFilter1 = {
   ...CatalogueMock1,
   request: {
     ...CatalogueMock1.request,
@@ -365,7 +365,7 @@ export const CatalogueMockFilter1 = {
   },
 }
 
-export const CatalogueMockFilter2 = {
+const CatalogueMockFilter2 = {
   ...CatalogueMock1,
   request: {
     ...CatalogueMock1.request,
@@ -382,7 +382,7 @@ export const CatalogueMockFilter2 = {
   },
 }
 
-export const CatalogueMockFilter3 = {
+const CatalogueMockFilter3 = {
   ...CatalogueMock1,
   request: {
     ...CatalogueMock1.request,
@@ -399,7 +399,7 @@ export const CatalogueMockFilter3 = {
   },
 }
 
-export const CatalogueMockFilter4 = {
+const CatalogueMockFilter4 = {
   ...CatalogueMock1,
   request: {
     ...CatalogueMock1.request,
@@ -416,7 +416,7 @@ export const CatalogueMockFilter4 = {
   },
 }
 
-export const CatalogueMockFilter5 = {
+const CatalogueMockFilter5 = {
   ...CatalogueMock1,
   request: {
     ...CatalogueMock1.request,
@@ -433,7 +433,7 @@ export const CatalogueMockFilter5 = {
   },
 }
 
-export const CatalogueMockFilter6 = {
+const CatalogueMockFilter6 = {
   ...CatalogueMock1,
   request: {
     ...CatalogueMock1.request,
@@ -450,7 +450,7 @@ export const CatalogueMockFilter6 = {
   },
 }
 
-export const CatalogueMockFilter7 = {
+const CatalogueMockFilter7 = {
   ...CatalogueMock1,
   request: {
     ...CatalogueMock1.request,
@@ -467,7 +467,7 @@ export const CatalogueMockFilter7 = {
   },
 }
 
-export const CatalogueMockFilter8 = {
+const CatalogueMockFilter8 = {
   ...CatalogueMock1,
   request: {
     ...CatalogueMock1.request,
@@ -484,7 +484,7 @@ export const CatalogueMockFilter8 = {
   },
 }
 
-export const CatalogueMockFilter9 = {
+const CatalogueMockFilter9 = {
   ...CatalogueMock1,
   request: {
     ...CatalogueMock1.request,
@@ -501,7 +501,7 @@ export const CatalogueMockFilter9 = {
   },
 }
 
-export const CatalogueMockFilter10 = {
+const CatalogueMockFilter10 = {
   ...CatalogueMock1,
   request: {
     ...CatalogueMock1.request,
@@ -517,7 +517,7 @@ export const CatalogueMockFilter10 = {
   },
 }
 
-export const CatalogueMockFilter11 = {
+const CatalogueMockFilter11 = {
   ...CatalogueMock1,
   request: {
     ...CatalogueMock1.request,

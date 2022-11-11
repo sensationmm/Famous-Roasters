@@ -4,7 +4,7 @@ import { loader } from 'graphql.macro'
 import { ProductCustom } from 'src/views/Product/Product'
 const GET_PRODUCT = loader('src/graphql/queries/product.query.graphql')
 
-export const ProductMockDataBase: ProductCustom = {
+const ProductMockDataBase: ProductCustom = {
   id: "gid://shopify/Product/7655228866776",
   title: 'Espresso Raritäten Set',
   seo: {
@@ -133,7 +133,7 @@ export const ProductMockDataBase: ProductCustom = {
   metafields: []
 }
 
-export const AccessoryMockDataBase: ProductCustom = {
+const AccessoryMockDataBase: ProductCustom = {
   id: "gid://shopify/Product/7968366166282",
   title: 'Barista Pinsel | barista.tools',
   seo: {
@@ -261,7 +261,7 @@ export const AccessoryMockDataBase: ProductCustom = {
   vendor_description: undefined,
 }
 
-export const AccessoryMockDataBaseWithVariant: ProductCustom = {
+const AccessoryMockDataBaseWithVariant: ProductCustom = {
   ...AccessoryMockDataBase,
   extraDescription: {
     value: '',

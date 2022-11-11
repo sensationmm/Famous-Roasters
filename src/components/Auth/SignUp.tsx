@@ -269,5 +269,3 @@ export class AuthSignUp extends SignUp {
     )
   }
 }
-
-export default AuthSignUp

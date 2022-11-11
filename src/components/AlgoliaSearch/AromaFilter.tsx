@@ -21,7 +21,7 @@ export const tasteProfileAttributes = [
   'meta.my_fields.body',
 ]
 
-export const AromaFilter: React.FC = () => {
+const AromaFilter: React.FC = () => {
   const { t } = useTranslation()
   const { indexUiState, setIndexUiState } = useInstantSearch()
 

@@ -15,11 +15,11 @@ export type CurrentRefinementsConnectorParamsItem = {
  * Simplified model of the type with the same name in `react-instantsearch-hooks` which isn't exported.
  * Represents a filter value
  */
-export type CurrentRefinementsConnectorParamsRefinement = {
+type CurrentRefinementsConnectorParamsRefinement = {
   value: string | number
 }
 
-export type ActiveFiltersCount = {
+type ActiveFiltersCount = {
   activeFiltersCount: number
   activeFilters: Record<string, number>
 }

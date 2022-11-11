@@ -29,8 +29,6 @@ import {
 import { FilterAttributesMock, FilterAttributesMockError } from './FilterAttributesMock'
 import { OrderMock, OrdersMock } from './OrdersMock'
 import {
-  AccessoryMockDataBase,
-  AccessoryMockDataBaseWithVariant,
   ProductMock,
   ProductMockAccessory,
   ProductMockData,
@@ -49,47 +47,45 @@ import {
 } from './TasteFinderMock'
 import { UserProfileMock } from './UserProfileMock'
 
-export { AccessoryMockDataBase as AccessoryMockDataBase }
-export { AccessoryMockDataBaseWithVariant as AccessoryMockDataBaseWithVariant }
-export { CartAddLinesMock as CartAddLinesMock }
-export { CartCreateMock as CartCreateMock }
-export { CartLinesRemoveMock as CartLinesRemoveMock }
-export { CartLinesRemoveMock2 as CartLinesRemoveMock2 }
-export { CartLinesUpdateMock as CartLinesUpdateMock }
-export { CartMock as CartMock }
-export { CartMockData as CartMockData }
-export { CartMockError as CartMockError }
-export { CatalogueMockAccessories as CatalogueMockAccessories }
+export { CartAddLinesMock }
+export { CartCreateMock }
+export { CartLinesRemoveMock }
+export { CartLinesRemoveMock2 }
+export { CartLinesUpdateMock }
+export { CartMock }
+export { CartMockData }
+export { CartMockError }
+export { CatalogueMockAccessories }
 export { CatalogueMockAccessoriesYouMightLike }
-export { CatalogueMocks as CatalogueMocks }
-export { CatalogueMocksFilters as CatalogueMocksFilters }
-export { CatalogueMocksPagination as CatalogueMocksPagination }
-export { CatalogueMockError as CatalogueMockError }
-export { CatalogueMockMissingData as CatalogueMockMissingData }
-export { CatalogueMockRandom as CatalogueMockRandom }
-export { CatalogueMockSimilar as CatalogueMockSimilar }
-export { OrderMock as OrderMock }
-export { OrdersMock as OrdersMock }
-export { ProductMock as ProductMock }
-export { ProductMockAccessory as ProductMockAccessory }
-export { ProductMockError as ProductMockError }
-export { ProductMockData as ProductMockData }
-export { ProductMockDataNoImage as ProductMockDataNoImage }
-export { ProductMockDataWithCustomMetadata as ProductMockDataWithCustomMetadata }
-export { ProductMockWithCustomMetadata as ProductMockWithCustomMetadata }
-export { ProductMockWithCustomMetadataNoAroma as ProductMockWithCustomMetadataNoAroma }
-export { ProductMockWithCustomMetadataInternationalVendor as ProductMockWithCustomMetadataInternationalVendor }
-export { FilterAttributesMock as FilterAttributesMock }
-export { FilterAttributesMockError as FilterAttributesMockError }
-export { TasteFinderMockEspresso as TasteFinderMockEspresso }
-export { TasteFinderMockFilter as TasteFinderMockFilter }
-export { TasteFinderMockQueryEspresso as TasteFinderMockQueryEspresso }
-export { TasteFinderMockQueryFilter as TasteFinderMockQueryFilter }
-export { UserProfileMock as UserProfileMock }
-export { BlogMock as BlogMock }
-export { BlogMockError as BlogMockError }
-export { BlogCategoryListMock as BlogCategoryListMock }
-export { BlogCategoryListMockError as BlogCategoryListMockError }
-export { BlogListByCategoryMock as BlogListByCategoryMock }
-export { BlogListByCategoryEmptyMock as BlogListByCategoryEmptyMock }
-export { BlogListByCategoryMockError as BlogListByCategoryMockError }
+export { CatalogueMocks }
+export { CatalogueMocksFilters }
+export { CatalogueMocksPagination }
+export { CatalogueMockError }
+export { CatalogueMockMissingData }
+export { CatalogueMockRandom }
+export { CatalogueMockSimilar }
+export { OrderMock }
+export { OrdersMock }
+export { ProductMock }
+export { ProductMockAccessory }
+export { ProductMockError }
+export { ProductMockData }
+export { ProductMockDataNoImage }
+export { ProductMockDataWithCustomMetadata }
+export { ProductMockWithCustomMetadata }
+export { ProductMockWithCustomMetadataNoAroma }
+export { ProductMockWithCustomMetadataInternationalVendor }
+export { FilterAttributesMock }
+export { FilterAttributesMockError }
+export { TasteFinderMockEspresso }
+export { TasteFinderMockFilter }
+export { TasteFinderMockQueryEspresso }
+export { TasteFinderMockQueryFilter }
+export { UserProfileMock }
+export { BlogMock }
+export { BlogMockError }
+export { BlogCategoryListMock }
+export { BlogCategoryListMockError }
+export { BlogListByCategoryMock }
+export { BlogListByCategoryEmptyMock }
+export { BlogListByCategoryMockError }
