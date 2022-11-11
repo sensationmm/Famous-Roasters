@@ -7,6 +7,7 @@ import { CartQueryQuery } from '@shopify/hydrogen/dist/esnext/components/CartPro
 import { Scalars } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
 import React, { createContext, useEffect, useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { useLocalStorage } from 'src/utils'
 
 interface CartProviderProps {
@@ -24,6 +25,8 @@ interface CartContextProps {
   addToCart?: (item: CartItem) => void
   removeFromCart?: (item: Scalars['ID'], actualQty: number) => void
   modifyQuantity?: (lineId: Scalars['ID'], quantity: number) => void
+  cartError?: string
+  setCartError?: (val?: string) => void
 }
 
 export const CartContext = createContext<CartContextProps>({})
@@ -31,6 +34,7 @@ export const CartContext = createContext<CartContextProps>({})
 export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProviderProps) => {
   const [cartSize, setCartSize] = useState<number>()
   const [cartId, setCartId] = useState<Scalars['ID']>()
+  const { t } = useTranslation()
   const GET_CART = loader('src/graphql/queries/cart.query.graphql')
   const GET_CART_CREATE = loader('src/graphql/queries/cartCreate.mutation.graphql')
   const GET_CART_LINES_ADD = loader('src/graphql/queries/cartLinesAdd.mutation.graphql')
@@ -42,6 +46,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProv
   const [cartLinesRemove] = useMutation<CartLineRemoveMutation>(GET_CART_LINES_REMOVE)
   const [cartLinesUpdate] = useMutation<CartLineUpdateMutation>(GET_CART_LINES_UPDATE)
   const [storedCartId, setStoredCartId] = useLocalStorage('cartId', '')
+  const [cartError, setCartError] = useState<string>()
 
   useEffect(() => {
     if (storedCartId) {
@@ -109,8 +114,8 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProv
         const size = quantities?.reduce((x, y) => x + y)
         size && setCartSize(size)
       })
-      .catch((err) => {
-        throw new Error('Error adding to cart', err)
+      .catch(() => {
+        setCartError(t('pages.cart.notification.fail.heading'))
       })
   }
 
@@ -172,8 +177,8 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }: CartProv
   }
 
   const cartMemo = useMemo(
-    () => ({ cartId, storedCartId, cartSize, addToCart, removeFromCart, modifyQuantity }),
-    [cartSize],
+    () => ({ cartId, storedCartId, cartSize, addToCart, removeFromCart, modifyQuantity, cartError, setCartError }),
+    [cartSize, cartError],
   )
 
   return <CartContext.Provider value={{ ...cartMemo }}>{children}</CartContext.Provider>

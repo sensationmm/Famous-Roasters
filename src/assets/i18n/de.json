@@ -454,7 +454,8 @@
         },
         "fail": {
           "body": "Unsere Lagerbestände reichen aktuell nicht für eine Nachbestellung aus",
-          "heading": "Wir konnten einige Artikel leider nicht hinzufügen"
+          "heading": "Wir konnten einige Artikel leider nicht hinzufügen",
+          "retry": "Bitte versuche es erneut"
         }
       },
       "subtotal": "Zwischensumme",
