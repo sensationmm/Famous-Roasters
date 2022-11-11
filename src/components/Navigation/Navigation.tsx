@@ -54,9 +54,10 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
   const [open, setOpen] = useState(false)
   const navigate = useNavigate()
   const { t } = useTranslation()
-  const { cartSize } = useContext(CartContext)
+  const { cartSize, cartError, setCartError } = useContext(CartContext)
   const [actualCartSize, setActualCartSize] = useState<number>()
   const [showAddedToCart, setShowAddedToCart] = useState<boolean>(false)
+  const [showCartError, setShowCartError] = useState<boolean>(false)
 
   useEffect(() => {
     if (cartSize !== undefined) {
@@ -75,6 +76,16 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
       }
     }
   }, [cartSize])
+
+  useEffect(() => {
+    if (cartError !== undefined) {
+      setShowCartError(true)
+      setTimeout(() => {
+        setShowCartError(false)
+        setCartError && setCartError()
+      }, 3000)
+    }
+  }, [cartError])
 
   const renderMenuItemsMobile = (data: NavigationDataItem[]) =>
     data.map((page) => (
@@ -246,6 +257,13 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
                         <Notification
                           heading={t('pages.cart.notification.add.heading')}
                           body={t('pages.cart.notification.add.body')}
+                        />
+                      )}
+                      {showCartError && (
+                        <Notification
+                          status="fail"
+                          heading={cartError as string}
+                          body={t('pages.cart.notification.fail.retry')}
                         />
                       )}
                     </>
