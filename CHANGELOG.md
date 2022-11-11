@@ -1,3 +1,12 @@
+## [1.94.4](https://github.com/Famous-Roasters/frontend/compare/v1.94.3...v1.94.4) (2022-11-11)
+
+
+### Bug Fixes
+
+* **sentry:** add to cart error ([e3e65b3](https://github.com/Famous-Roasters/frontend/commit/e3e65b3666085d4c3d26b2c4536c205e1b99560e))
+* **sentry:** errors ([44cc6c2](https://github.com/Famous-Roasters/frontend/commit/44cc6c2634bd982a53f7f4e59e774e79952c5335))
+* **sentry:** upgrade version ([3a93cfa](https://github.com/Famous-Roasters/frontend/commit/3a93cfa168c21a9073b8ecbd1ae3ebf57351740e))
+
 ## [1.94.3](https://github.com/Famous-Roasters/frontend/compare/v1.94.2...v1.94.3) (2022-11-10)
 
 
