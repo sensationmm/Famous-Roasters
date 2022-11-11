@@ -1,3 +1,11 @@
+## [1.94.5](https://github.com/Famous-Roasters/frontend/compare/v1.94.4...v1.94.5) (2022-11-11)
+
+
+### Bug Fixes
+
+* **speed:** google font blocking load ([56fe2eb](https://github.com/Famous-Roasters/frontend/commit/56fe2ebcb2f3d3921398de458e6b62cbcb524964))
+* **speed:** remove unused files ([9d97eff](https://github.com/Famous-Roasters/frontend/commit/9d97effb18ecf4715103507edafcd5709528a3a2))
+
 ## [1.94.4](https://github.com/Famous-Roasters/frontend/compare/v1.94.3...v1.94.4) (2022-11-11)
 
 
