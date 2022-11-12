@@ -1,3 +1,10 @@
+## [1.94.7](https://github.com/Famous-Roasters/frontend/compare/v1.94.6...v1.94.7) (2022-11-12)
+
+
+### Bug Fixes
+
+* **speed:** try to fix google fonts ([b412a03](https://github.com/Famous-Roasters/frontend/commit/b412a039f56651b81f57da1b01278ca6f05e4630))
+
 ## [1.94.6](https://github.com/Famous-Roasters/frontend/compare/v1.94.5...v1.94.6) (2022-11-11)
 
 
