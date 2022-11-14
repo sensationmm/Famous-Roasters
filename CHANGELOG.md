@@ -1,3 +1,10 @@
+## [1.95.1](https://github.com/Famous-Roasters/frontend/compare/v1.95.0...v1.95.1) (2022-11-14)
+
+
+### Bug Fixes
+
+* **product:** smart shop link ([8fe415a](https://github.com/Famous-Roasters/frontend/commit/8fe415a054f9d82816ff499a1063818c4c2c2872))
+
 # [1.95.0](https://github.com/Famous-Roasters/frontend/compare/v1.94.7...v1.95.0) (2022-11-14)
 
 
