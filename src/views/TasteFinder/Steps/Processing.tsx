@@ -1,10 +1,11 @@
 import { useLazyQuery } from '@apollo/client/react/hooks'
 import { Auth } from 'aws-amplify'
 import { loader } from 'graphql.macro'
-import Lottie from 'lottie-react'
 import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import aeropressAni from 'src/assets/images/lottieAnimations/aeropress.json'
+import AeropressBase from 'src/assets/images/lottieAnimations/aeropress/base.png'
+import AeropressLevel from 'src/assets/images/lottieAnimations/aeropress/level.png'
+import AeropressPress from 'src/assets/images/lottieAnimations/aeropress/press.png'
 import { Typography, TypographySize, TypographyType } from 'src/components'
 import { useAuth } from 'src/config/cognito'
 import { toRoundedValueInRealScale } from 'src/utils'
@@ -103,7 +104,13 @@ export const Processing: React.FC<TasteFinderFieldHandlerProps> = ({
   return (
     <div className="flex-grow flex items-center justify-center">
       <div className="flex flex-col items-center justify-center -mt-20">
-        <Lottie animationData={aeropressAni} loop={true} className="h-72" />
+        <div className="flex justify-center items-center">
+          <div className="relative w-[90px] h-[230px]">
+            <img src={AeropressBase} className="w-full absolute bottom-0" />
+            <img src={AeropressPress} className="w-full absolute top-0 animate-aeropressDown" />
+            <img src={AeropressLevel} className="w-full absolute bottom-0 animate-aeropressUp" />
+          </div>
+        </div>
         <Typography
           as="h1"
           type={TypographyType.Heading}

@@ -72,10 +72,22 @@ module.exports = {
               '0%': { left: 0 },
               '50%': { left: '100%' } ,
               '100%': { left: '100%' } 
+            },
+            aeropressDown: {
+              '0%': { top: '0px' },
+              '50%': { top: '50px' },
+              '100%': { top: '0px' },
+            },
+            aeropressUp: {
+              '0%': { bottom: '0px' },
+              '50%': { bottom: '25px' },
+              '100%': { bottom: '0px' },
             }
           },
           animation: {
-            swipe: 'swipe 3s ease-in-out infinite'
+            swipe: 'swipe 3s ease-in-out infinite',
+            aeropressDown: 'aeropressDown 4s ease-in-out infinite',
+            aeropressUp: 'aeropressUp 4s ease-in-out infinite'
           }
         }
     },

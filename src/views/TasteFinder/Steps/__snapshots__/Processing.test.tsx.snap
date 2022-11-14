@@ -8,6 +8,26 @@ exports[`Processing partial view Renders correctly for expresso 1`] = `
     <div
       class="flex flex-col items-center justify-center -mt-20"
     >
+      <div
+        class="flex justify-center items-center"
+      >
+        <div
+          class="relative w-[90px] h-[230px]"
+        >
+          <img
+            class="w-full absolute bottom-0"
+            src="base.png"
+          />
+          <img
+            class="w-full absolute top-0 animate-aeropressDown"
+            src="press.png"
+          />
+          <img
+            class="w-full absolute bottom-0 animate-aeropressUp"
+            src="level.png"
+          />
+        </div>
+      </div>
       <h1
         class="flex text-center w-3/4 md:w-2/3 md:text-2xl md:leading-8 xl:w-1/2 xl:text-3xl xl:leading-10 mt-8 text-xl leading-7 font-semibold"
       >
@@ -28,6 +48,26 @@ exports[`Processing partial view Renders correctly for filter 1`] = `
     <div
       class="flex flex-col items-center justify-center -mt-20"
     >
+      <div
+        class="flex justify-center items-center"
+      >
+        <div
+          class="relative w-[90px] h-[230px]"
+        >
+          <img
+            class="w-full absolute bottom-0"
+            src="base.png"
+          />
+          <img
+            class="w-full absolute top-0 animate-aeropressDown"
+            src="press.png"
+          />
+          <img
+            class="w-full absolute bottom-0 animate-aeropressUp"
+            src="level.png"
+          />
+        </div>
+      </div>
       <h1
         class="flex text-center w-3/4 md:w-2/3 md:text-2xl md:leading-8 xl:w-1/2 xl:text-3xl xl:leading-10 mt-8 text-xl leading-7 font-semibold"
       >
