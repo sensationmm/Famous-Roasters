@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "version": "1.94.7",
+  "version": "1.95.0",
   "private": true,
   "dependencies": {
     "@apollo/client": "3.5.10",

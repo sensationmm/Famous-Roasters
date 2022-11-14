@@ -1,3 +1,10 @@
+# [1.95.0](https://github.com/Famous-Roasters/frontend/compare/v1.94.7...v1.95.0) (2022-11-14)
+
+
+### Features
+
+* **speed:** replace lottie animations ([ae1dde7](https://github.com/Famous-Roasters/frontend/commit/ae1dde7ede658e3442e039002152c044751da948))
+
 ## [1.94.7](https://github.com/Famous-Roasters/frontend/compare/v1.94.6...v1.94.7) (2022-11-12)
 
 
