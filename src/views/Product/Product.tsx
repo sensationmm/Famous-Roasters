@@ -8,7 +8,7 @@ import { loader } from 'graphql.macro'
 import React, { useContext, useEffect, useRef, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import {
   Button,
   ButtonEmphasis,
@@ -91,6 +91,7 @@ export interface ProductQuery {
 
 export const Product: React.FC = () => {
   const { id } = useParams()
+  const navigate = useNavigate()
   const { t } = useTranslation()
   const GET_PRODUCT = loader('src/graphql/queries/product.query.graphql')
   const [quantity, setQuantity] = useState<number>(1)
@@ -683,13 +684,18 @@ export const Product: React.FC = () => {
     )
   }
 
+  console.log('prevPath', history.state?.usr?.prevPath)
+
   return (
     <Layout>
       {generateMetaTags()}
       <main className="flex flex-col w-full items-start justify-center bg-white mt-4 mb-4">
         <div className="w-full max-w-7xl mx-auto px-6 xl:px-8 font-bold cursor-pointer">
           <Typography size={TypographySize.Tiny}>
-            <div className="inline text-coreUI-text-tertiary" onClick={() => history.go(-1)}>
+            <div
+              className="inline text-coreUI-text-tertiary"
+              onClick={() => (history.state?.usr?.prevPath ? history.go(-1) : navigate('/catalogue'))}
+            >
               Shop
             </div>{' '}
             &gt; {title}

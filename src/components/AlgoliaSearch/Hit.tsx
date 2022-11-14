@@ -51,7 +51,7 @@ const Hit = ({ hit }: { hit: RawHit }) => {
   const textLineClassNames = outOfStock ? 'text-coreUI-text-tertiary' : 'text-coreUI-text-secondary'
 
   return (
-    <Link to={`/product/${id}`} key={`product-tile-link-${id}`}>
+    <Link key={`product-tile-link-${id}`} to={`/product/${id}`} state={{ prevPath: location.pathname }}>
       <div className="flex pt-8 md:px-6">
         <div className="flex justify-center items-center shrink-0 relative w-36 h-36">
           <div className="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36">
