@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Syne:wght@400;600&display=swap">
+    <link rel="stylesheet" media="print" onload="this.onload=null;this.setAttribute('screen');" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Syne:wght@400;600&display=swap">
     <noscript>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Syne:wght@400;600&display=swap">
     </noscript>
@@ -33,8 +33,9 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=%REACT_APP_GTM_ID%"
-                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=%REACT_APP_GTM_ID%" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div id="root"></div>
   </body>
