@@ -1,3 +1,10 @@
+## [1.95.2](https://github.com/Famous-Roasters/frontend/compare/v1.95.1...v1.95.2) (2022-11-15)
+
+
+### Bug Fixes
+
+* **product:** alignment of coffee origin ([071c940](https://github.com/Famous-Roasters/frontend/commit/071c940d0652b2dabf8345fa9e2dd1cd7081ac9f))
+
 ## [1.95.1](https://github.com/Famous-Roasters/frontend/compare/v1.95.0...v1.95.1) (2022-11-14)
 
 
