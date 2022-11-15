@@ -692,7 +692,7 @@ export const Product: React.FC = () => {
           <Typography size={TypographySize.Tiny}>
             <div
               className="inline text-coreUI-text-tertiary"
-              onClick={() => (history.state?.usr?.prevPath ? history.go(-1) : navigate('/catalogue'))}
+              onClick={() => (history.state?.usr?.prevPath !== undefined ? history.go(-1) : navigate('/catalogue'))}
             >
               Shop
             </div>{' '}
