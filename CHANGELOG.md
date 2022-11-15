@@ -1,3 +1,10 @@
+## [1.95.4](https://github.com/Famous-Roasters/frontend/compare/v1.95.3...v1.95.4) (2022-11-15)
+
+
+### Bug Fixes
+
+* **product:** undefined route prop ([3510e74](https://github.com/Famous-Roasters/frontend/commit/3510e74e39765fde04cf544da5d16901090fcb44))
+
 ## [1.95.3](https://github.com/Famous-Roasters/frontend/compare/v1.95.2...v1.95.3) (2022-11-15)
 
 
