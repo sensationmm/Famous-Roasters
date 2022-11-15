@@ -1,3 +1,10 @@
+## [1.95.5](https://github.com/Famous-Roasters/frontend/compare/v1.95.4...v1.95.5) (2022-11-15)
+
+
+### Bug Fixes
+
+* **sentry:** upgrade instantsearch package ([5290bf9](https://github.com/Famous-Roasters/frontend/commit/5290bf9a6c7594448a6ba9bbd3c8cbfd83baef50))
+
 ## [1.95.4](https://github.com/Famous-Roasters/frontend/compare/v1.95.3...v1.95.4) (2022-11-15)
 
 
