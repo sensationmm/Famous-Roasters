@@ -1,3 +1,10 @@
+## [1.95.3](https://github.com/Famous-Roasters/frontend/compare/v1.95.2...v1.95.3) (2022-11-15)
+
+
+### Bug Fixes
+
+* **font:** font not loading ([a1ab8b1](https://github.com/Famous-Roasters/frontend/commit/a1ab8b1868ca694524360f650082497a41d4f8c3))
+
 ## [1.95.2](https://github.com/Famous-Roasters/frontend/compare/v1.95.1...v1.95.2) (2022-11-15)
 
 
