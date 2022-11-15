@@ -65,7 +65,7 @@ exports[`AccessoriesSearch view Renders correctly for accessories 1`] = `
         />
         <button
           class="ais-SearchBox-submit"
-          title="Submit the search query."
+          title="Submit the search query"
           type="submit"
         >
           <svg
@@ -82,7 +82,7 @@ exports[`AccessoriesSearch view Renders correctly for accessories 1`] = `
         <button
           class="ais-SearchBox-reset hidden"
           hidden=""
-          title="Clear the search query."
+          title="Clear the search query"
           type="reset"
         >
           <svg
@@ -976,7 +976,7 @@ exports[`AccessoriesSearch view Renders correctly for other 1`] = `
         />
         <button
           class="ais-SearchBox-submit"
-          title="Submit the search query."
+          title="Submit the search query"
           type="submit"
         >
           <svg
@@ -993,7 +993,7 @@ exports[`AccessoriesSearch view Renders correctly for other 1`] = `
         <button
           class="ais-SearchBox-reset hidden"
           hidden=""
-          title="Clear the search query."
+          title="Clear the search query"
           type="reset"
         >
           <svg

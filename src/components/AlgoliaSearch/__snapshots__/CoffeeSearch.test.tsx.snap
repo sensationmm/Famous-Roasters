@@ -107,7 +107,7 @@ exports[`CoffeeSearch view Renders correctly 1`] = `
         />
         <button
           class="ais-SearchBox-submit"
-          title="Submit the search query."
+          title="Submit the search query"
           type="submit"
         >
           <svg
@@ -124,7 +124,7 @@ exports[`CoffeeSearch view Renders correctly 1`] = `
         <button
           class="ais-SearchBox-reset hidden"
           hidden=""
-          title="Clear the search query."
+          title="Clear the search query"
           type="reset"
         >
           <svg
