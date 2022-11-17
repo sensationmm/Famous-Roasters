@@ -121,7 +121,8 @@ export const Profile: React.FC = () => {
           .then((res) => {
             setUserProfile(res.data.userProfile)
           })
-          .catch(() => {
+          .catch((e) => {
+            console.log('getUserProfile', e)
             signOut()
           })
 
@@ -141,11 +142,13 @@ export const Profile: React.FC = () => {
               setOrdersLoading(false)
             }
           })
-          .catch(() => {
+          .catch((e) => {
+            console.log('orders', e)
             setOrdersLoading(false)
           })
       })
-      .catch(() => {
+      .catch((e) => {
+        console.log('currentAuthenticatedUser', e)
         navigate('/login')
       })
   }, [user?.isValid])
