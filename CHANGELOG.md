@@ -1,3 +1,10 @@
+# [1.96.0](https://github.com/Famous-Roasters/frontend/compare/v1.95.5...v1.96.0) (2022-11-17)
+
+
+### Features
+
+* **signup:** activate apple sign in ([0e214fe](https://github.com/Famous-Roasters/frontend/commit/0e214fe839f70590f217231890205b0d677dc439))
+
 ## [1.95.5](https://github.com/Famous-Roasters/frontend/compare/v1.95.4...v1.95.5) (2022-11-15)
 
 
