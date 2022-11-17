@@ -45,6 +45,7 @@ export const Auth: React.FC<AuthProps> = ({ authState }) => {
 
   const navigate = useNavigate()
   const handleAuthStateChange = (state: string) => {
+    console.log(window.location.pathname)
     switch (state) {
       case 'signUp':
       case 'signUpError':
@@ -64,6 +65,7 @@ export const Auth: React.FC<AuthProps> = ({ authState }) => {
       case 'signIn':
       case 'signInError':
       default:
+        console.log('default')
         window.location.pathname !== '/login' && navigate('/login')
         break
     }
