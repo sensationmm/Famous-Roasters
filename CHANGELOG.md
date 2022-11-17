@@ -1,3 +1,10 @@
+## [1.96.1](https://github.com/Famous-Roasters/frontend/compare/v1.96.0...v1.96.1) (2022-11-17)
+
+
+### Bug Fixes
+
+* **profile:** check logout error ([3fb213b](https://github.com/Famous-Roasters/frontend/commit/3fb213b0afd30866dc7b4b6db764d60d67fa61ed))
+
 # [1.96.0](https://github.com/Famous-Roasters/frontend/compare/v1.95.5...v1.96.0) (2022-11-17)
 
 
