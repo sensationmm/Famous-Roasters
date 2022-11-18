@@ -1,3 +1,10 @@
+# [1.97.0](https://github.com/Famous-Roasters/frontend/compare/v1.96.5...v1.97.0) (2022-11-18)
+
+
+### Features
+
+* **google:** add verification file for blog ([657dbcd](https://github.com/Famous-Roasters/frontend/commit/657dbcd959653a93ebb8b3ec00a3eb044c5aff54))
+
 ## [1.96.5](https://github.com/Famous-Roasters/frontend/compare/v1.96.4...v1.96.5) (2022-11-18)
 
 
