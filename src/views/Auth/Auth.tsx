@@ -23,6 +23,7 @@ export const Auth: React.FC<AuthProps> = ({ authState = 'signIn' }) => {
   Hub.listen('auth', ({ payload }) => {
     const client = famousRoastersClient()
     const { event } = payload as HubPayload
+    console.log('Hub.listen', event)
     if (event === 'autoSignIn') {
       const jwtToken = payload.data.signInUserSession.accessToken.jwtToken
 
@@ -104,6 +105,9 @@ export const Auth: React.FC<AuthProps> = ({ authState = 'signIn' }) => {
         )
     }
   }
+
+  console.log('window.location.pathname', window.location.pathname)
+  console.log('authState', authState)
 
   return (
     <Layout navigationTheme={NavigationTheme.Home} showFooter={false}>
