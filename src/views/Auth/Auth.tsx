@@ -19,7 +19,7 @@ interface AuthProps {
   authState: string
 }
 
-export const Auth: React.FC<AuthProps> = ({ authState }) => {
+export const Auth: React.FC<AuthProps> = ({ authState = 'signIn' }) => {
   Hub.listen('auth', ({ payload }) => {
     const client = famousRoastersClient()
     const { event } = payload as HubPayload
@@ -44,8 +44,8 @@ export const Auth: React.FC<AuthProps> = ({ authState }) => {
   })
 
   useEffect(() => {
-    !authState && handleAuthStateChange('signIn')
-  }, [authState])
+    handleAuthStateChange(authState)
+  }, [])
 
   const navigate = useNavigate()
   const handleAuthStateChange = (state: string) => {
