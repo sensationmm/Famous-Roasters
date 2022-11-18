@@ -1,7 +1,7 @@
 import { HubPayload } from '@aws-amplify/core'
 import { Hub } from 'aws-amplify'
 import { loader } from 'graphql.macro'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
   AuthConfirmSignUp,
@@ -19,7 +19,7 @@ interface AuthProps {
   authState: string
 }
 
-export const Auth: React.FC<AuthProps> = ({ authState = 'signIn' }) => {
+export const Auth: React.FC<AuthProps> = ({ authState }) => {
   Hub.listen('auth', ({ payload }) => {
     const client = famousRoastersClient()
     const { event } = payload as HubPayload
@@ -42,6 +42,10 @@ export const Auth: React.FC<AuthProps> = ({ authState = 'signIn' }) => {
       navigate('/login')
     }
   })
+
+  useEffect(() => {
+    !authState && handleAuthStateChange('signIn')
+  }, [authState])
 
   const navigate = useNavigate()
   const handleAuthStateChange = (state: string) => {
