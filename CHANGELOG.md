@@ -1,3 +1,10 @@
+## [1.96.4](https://github.com/Famous-Roasters/frontend/compare/v1.96.3...v1.96.4) (2022-11-18)
+
+
+### Bug Fixes
+
+* **auth:** debugging ([6049f6f](https://github.com/Famous-Roasters/frontend/commit/6049f6f8f41d2eafb0c086dcc6dbe5fef19f3ea9))
+
 ## [1.96.3](https://github.com/Famous-Roasters/frontend/compare/v1.96.2...v1.96.3) (2022-11-18)
 
 
