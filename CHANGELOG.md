@@ -1,3 +1,11 @@
+## [1.96.3](https://github.com/Famous-Roasters/frontend/compare/v1.96.2...v1.96.3) (2022-11-18)
+
+
+### Bug Fixes
+
+* **auth:** blank login screen ([be3165c](https://github.com/Famous-Roasters/frontend/commit/be3165ccca725f369f673e5d16c14e9a1bcf184e))
+* **auth:** initialise auth screen ([e64b5a6](https://github.com/Famous-Roasters/frontend/commit/e64b5a66a4326848f8472de158e8caa72103858c))
+
 ## [1.96.2](https://github.com/Famous-Roasters/frontend/compare/v1.96.1...v1.96.2) (2022-11-18)
 
 
