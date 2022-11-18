@@ -71,14 +71,14 @@ export const OrderTile: React.FC<OrderTileProps> = ({ ...props }) => {
           {showPrice && (
             <div className="flex items-baseline">
               <Typography type={TypographyType.Label} size={TypographySize.Base} className={`mr-1`}>
-                {formatPrice(price.amount, 'EUR')}
+                {formatPrice(price, 'EUR')}
               </Typography>
               <Typography
                 type={TypographyType.Paragraph}
                 size={TypographySize.Tiny}
                 className={'text-coreUI-text-secondary'}
               >
-                ({formatPrice(((1000 / weight) * parseFloat(price.amount)).toString(), 'EUR')}/kg)
+                ({formatPrice(((1000 / weight) * parseFloat(price)).toString(), 'EUR')}/kg)
               </Typography>
             </div>
           )}
