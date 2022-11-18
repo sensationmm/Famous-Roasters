@@ -1,3 +1,10 @@
+## [1.96.5](https://github.com/Famous-Roasters/frontend/compare/v1.96.4...v1.96.5) (2022-11-18)
+
+
+### Bug Fixes
+
+* **auth:** remove blank render ([895216c](https://github.com/Famous-Roasters/frontend/commit/895216c7a2b5666a0c4d9c165984296acf1a91d6))
+
 ## [1.96.4](https://github.com/Famous-Roasters/frontend/compare/v1.96.3...v1.96.4) (2022-11-18)
 
 
