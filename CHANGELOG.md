@@ -1,3 +1,10 @@
+## [1.97.1](https://github.com/Famous-Roasters/frontend/compare/v1.97.0...v1.97.1) (2022-11-18)
+
+
+### Bug Fixes
+
+* **profile:** order tile price bug ([c1afc0b](https://github.com/Famous-Roasters/frontend/commit/c1afc0b81fa4452afbfa707dfecbcbf93d80c84c))
+
 # [1.97.0](https://github.com/Famous-Roasters/frontend/compare/v1.96.5...v1.97.0) (2022-11-18)
 
 
