@@ -1,6 +1,270 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SignIn custom auth component Renders correctly (nothing) for an unexpected state 1`] = `<div />`;
+exports[`SignIn custom auth component Renders correctly (nothing) for an unexpected state 1`] = `
+<div>
+  <div
+    class="my-8 mx-6 md:my-12 md:mx-0"
+  >
+    <div
+      class="flex w-full justify-center"
+    >
+      <svg
+        fill="none"
+        height="107"
+        viewBox="0 0 400 400"
+        width="107"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="200"
+          cy="200"
+          fill="#D4FF81"
+          r="200"
+        />
+        <path
+          clip-rule="evenodd"
+          d="M266 225.882C266 267.294 243.14 288 214.739 288C196.728 288 183.336 279.488 177.332 266.604V285.239H136V112H177.332V182.86C184.259 171.357 196.728 161.694 214.97 161.694C243.14 161.694 266 182.86 266 224.042V225.882ZM231.006 225.964C231.006 240.559 219.132 252.391 204.483 252.391C189.835 252.391 177.96 240.559 177.96 225.964C177.96 211.369 189.835 199.538 204.483 199.538C219.132 199.538 231.006 211.369 231.006 225.964ZM251 156C263.15 156 273 146.15 273 134C273 121.85 263.15 112 251 112C238.85 112 229 121.85 229 134C229 146.15 238.85 156 251 156Z"
+          fill="#212121"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </div>
+    <div
+      class="flex w-full justify-center mt-6"
+    >
+      <span
+        class="text-2xl leading-8 font-semibold"
+      >
+        Willkommen bei 60beans
+      </span>
+    </div>
+    <div
+      class="mt-12"
+    >
+      <form
+        method="POST"
+      >
+        <div
+          class="w-full"
+        >
+          <div
+            class="relative"
+          >
+            <label
+              class="relative"
+            >
+              <span
+                class="absolute -top-6 left-3 px-1 bg-white"
+              >
+                <span
+                  class="text-sm leading-5"
+                >
+                  Deine E-mail-Adresse
+                </span>
+              </span>
+              <input
+                class="w-full  border rounded-full focus:outline-0 focus:ring px-4 py-2 focus:ring-primary/30"
+                data-testid="email"
+                placeholder="Deine E-mail-Adresse"
+                type="email"
+                value=""
+              />
+            </label>
+          </div>
+        </div>
+        <div
+          class="w-full mt-8"
+        >
+          <div
+            class="relative"
+          >
+            <label
+              class="relative"
+            >
+              <span
+                class="absolute -top-6 left-3 px-1 bg-white"
+              >
+                <span
+                  class="text-sm leading-5"
+                >
+                  Dein Passwort
+                </span>
+              </span>
+              <input
+                class="w-full pr-11 border rounded-full focus:outline-0 focus:ring px-4 py-2 focus:ring-primary/30"
+                data-testid="password"
+                placeholder="Dein Passwort"
+                type="password"
+                value=""
+              />
+            </label>
+            <div
+              class="absolute right-3 top-1/2 -translate-y-2/4"
+            >
+              <div
+                class="cursor-pointer"
+                data-testid="password-view-toggle"
+              >
+                <svg
+                  class="text-coreUI-text-secondary"
+                  fill="inherit"
+                  height="24"
+                  viewBox="0 0 22 16"
+                  width="24"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M14 8C14 9.65685 12.6569 11 11 11C9.34315 11 8 9.65685 8 8C8 6.34315 9.34315 5 11 5C12.6569 5 14 6.34315 14 8Z M1.45825 7.99997C2.73253 3.94288 6.52281 1 11.0004 1C15.4781 1 19.2684 3.94291 20.5426 8.00004C19.2684 12.0571 15.4781 15 11.0005 15C6.52281 15 2.73251 12.0571 1.45825 7.99997Z"
+                    fill="none"
+                    fill-rule="evenodd"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex w-fit float-right mt-6 mb-6 border-b cursor-pointer text-xs leading-4 font-semibold"
+        >
+          <a
+            data-testid="forgotPasswordLink"
+          >
+            Passwort vergessen?
+          </a>
+        </div>
+        <button
+          class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-md font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary pointer-events-none bg-coreUI-background-images !border-coreUI-background-images text-coreUI-text-secondary"
+          data-testid="submit"
+          disabled=""
+          role="button"
+          type="submit"
+        >
+          Anmelden
+        </button>
+        <div
+          class="mt-6 pt-4 border-t border-brand-grey-whisper"
+        >
+          <p
+            class="mb-2 uppercase font-normal text-coreUI-text-secondary text-xs leading-4 font-semibold"
+          >
+            oder weiter mit
+          </p>
+          <div
+            class="grid grid-cols-2 gap-4"
+          >
+            <button
+              class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-4 py-2 text-base font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
+              role="button"
+            >
+              <svg
+                class="undefined"
+                fill="inherit"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M23.86,11.76a14.86,14.86,0,0,0-.21-2.49H12.34V14h6.48a6.42,6.42,0,0,1-2.63,3.91A7.37,7.37,0,0,1,12.07,19a7.36,7.36,0,0,1-6.84-4.75,7.15,7.15,0,0,1,.25-4.74v0A7.32,7.32,0,0,1,12.33,4.7,6.82,6.82,0,0,1,17,6.48l3.51-3.39A12,12,0,0,0,12.33,0a12.3,12.3,0,0,0-11,6.48l0,0A11.08,11.08,0,0,0,1.32,17v.14a12,12,0,0,0,10.75,6.49,11.58,11.58,0,0,0,8-2.87l0,0A12.31,12.31,0,0,0,23.86,11.76Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  stroke="none"
+                  stroke-width="none"
+                />
+              </svg>
+            </button>
+            <button
+              class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-4 py-2 text-base font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
+              role="button"
+            >
+              <svg
+                class="undefined"
+                fill="inherit"
+                height="24"
+                viewBox="0 0 19 24"
+                width="24"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M9.75493 5.53846C10.8059 5.53846 12.1234 4.8061 12.9079 3.82962C13.6184 2.94469 14.1365 1.70884 14.1365 0.472981C14.1365 0.305149 14.1217 0.137317 14.0921 0C12.9227 0.0457724 11.5164 0.808645 10.6727 1.8309C10.0066 2.60903 9.39967 3.82963 9.39967 5.08074C9.39967 5.26383 9.42928 5.44692 9.44408 5.50795C9.51809 5.5232 9.63651 5.53846 9.75493 5.53846ZM6.05428 24C7.49013 24 8.12665 23.0083 9.91776 23.0083C11.7385 23.0083 12.1382 23.9695 13.7368 23.9695C15.3059 23.9695 16.3569 22.4743 17.3487 21.0095C18.4589 19.3312 18.9178 17.6834 18.9474 17.6071C18.8438 17.5766 15.8388 16.3102 15.8388 12.7552C15.8388 9.67323 18.2072 8.28481 18.3405 8.178C16.7714 5.85887 14.3882 5.79784 13.7368 5.79784C11.9753 5.79784 10.5395 6.89638 9.63651 6.89638C8.65954 6.89638 7.37171 5.85887 5.84704 5.85887C2.94572 5.85887 0 8.33058 0 12.9994C0 15.8983 1.09539 18.965 2.44243 20.9485C3.59704 22.6268 4.60362 24 6.05428 24Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  stroke="none"
+                  stroke-width="none"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="mt-10"
+        >
+          <div
+            class="flex"
+          >
+            <div
+              class="border-t border-brand-grey-whisper absolute w-full left-0"
+            />
+          </div>
+          <div
+            class="mt-4 mb-4 text-xl leading-7 font-semibold"
+          >
+            Ich bin neu hier
+          </div>
+          <button
+            class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-md font-bold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black"
+            data-testid="goToSignUpLink"
+            role="button"
+            type="button"
+          >
+            Registrieren
+          </button>
+        </div>
+      </form>
+    </div>
+    <div
+      class="mt-12"
+    >
+      <div
+        class="flex"
+      >
+        <div
+          class="border-t border-brand-grey-whisper absolute w-full left-0"
+        />
+      </div>
+      <div
+        class="w-full mt-4 flex justify-center"
+      >
+        <a
+          href="//www.notion.so/Datenschutzhinweise-ad5b45261a964166a74883d2770e28ea"
+          target="_blank"
+        >
+          <div
+            class="font-normal border-b text-xs leading-4"
+          >
+            Datenschutz-Bestimmungen
+          </div>
+        </a>
+        <a
+          class="ml-10"
+          href="//slender-petunia-c3c.notion.site/Imprint-33b18fd9e469471ab768eef8155da968"
+          target="_blank"
+        >
+          <div
+            class="font-normal border-b text-xs leading-4"
+          >
+            Impressum
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
 exports[`SignIn custom auth component Renders correctly for an expected state 1`] = `
 <div>

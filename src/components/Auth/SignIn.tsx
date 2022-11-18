@@ -137,7 +137,7 @@ export class AuthSignIn extends SignIn {
     )
   }
   render(): JSX.Element {
-    return this.props.authState === 'signIn' || this.props.authState === 'signInError' ? (
+    return (
       <div className="my-8 mx-6 md:my-12 md:mx-0">
         <div className="flex w-full justify-center">
           <Badge size={107} />
@@ -168,8 +168,6 @@ export class AuthSignIn extends SignIn {
           <AuthFooter />
         </div>
       </div>
-    ) : (
-      <></>
     )
   }
 }
