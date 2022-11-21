@@ -1,3 +1,10 @@
+## [1.97.2](https://github.com/Famous-Roasters/frontend/compare/v1.97.1...v1.97.2) (2022-11-21)
+
+
+### Bug Fixes
+
+* **auth:** signin failure diagnosis ([3971e9b](https://github.com/Famous-Roasters/frontend/commit/3971e9ba039c936f12828fbb4cdf3a309dd8d0b1))
+
 ## [1.97.1](https://github.com/Famous-Roasters/frontend/compare/v1.97.0...v1.97.1) (2022-11-18)
 
 
