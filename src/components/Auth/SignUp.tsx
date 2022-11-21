@@ -43,7 +43,11 @@ export const socialSignInButtons = () => (
     <Button
       emphasis={ButtonEmphasis.Tertiary}
       center
-      onClick={() => Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Google })}
+      onClick={() =>
+        Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Google }).catch((e) =>
+          console.log('federatedSignIn catch', e),
+        )
+      }
     >
       <Icon name={IconName.Google} />
     </Button>
@@ -51,7 +55,11 @@ export const socialSignInButtons = () => (
     <Button
       emphasis={ButtonEmphasis.Tertiary}
       center
-      onClick={() => Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Apple })}
+      onClick={() =>
+        Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Apple }).catch((e) =>
+          console.log('federatedSignIn catch', e),
+        )
+      }
     >
       <Icon name={IconName.Apple} />
     </Button>

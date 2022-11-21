@@ -21,8 +21,10 @@ interface AuthProps {
 
 export const Auth: React.FC<AuthProps> = ({ authState = 'signIn' }) => {
   Hub.listen('auth', ({ payload }) => {
+    console.log('Auth Hub', payload)
     const client = famousRoastersClient()
-    const { event } = payload as HubPayload
+    const { event, message } = payload as HubPayload
+    console.log('Auth Hub event', event)
     if (event === 'autoSignIn') {
       const jwtToken = payload.data.signInUserSession.accessToken.jwtToken
 
@@ -40,6 +42,8 @@ export const Auth: React.FC<AuthProps> = ({ authState = 'signIn' }) => {
         .catch((e) => console.log('SIGN_UP', e))
     } else if (event === 'autoSignIn_failure') {
       navigate('/login')
+    } else if (event === 'cognitoHostedUI_failure') {
+      console.log('cognitoHostedUI_failure', message)
     }
   })
 
