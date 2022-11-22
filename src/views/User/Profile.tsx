@@ -119,7 +119,7 @@ export const Profile: React.FC = () => {
 
         getUserProfile()
           .then((res) => {
-            console.log('getUserProfile then', res)
+            console.log('getUserProfile then', res.data)
             setUserProfile(res.data.userProfile)
           })
           .catch((e) => {
