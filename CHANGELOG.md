@@ -1,3 +1,10 @@
+## [1.97.4](https://github.com/Famous-Roasters/frontend/compare/v1.97.3...v1.97.4) (2022-11-22)
+
+
+### Bug Fixes
+
+* **profile:** getUserProfile log data ([c56cdbf](https://github.com/Famous-Roasters/frontend/commit/c56cdbf44568638758458b3190b5cda569476655))
+
 ## [1.97.3](https://github.com/Famous-Roasters/frontend/compare/v1.97.2...v1.97.3) (2022-11-22)
 
 
