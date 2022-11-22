@@ -130,7 +130,7 @@ export const Profile: React.FC = () => {
             .catch(() => {
               signOut()
             })
-        }, 100)
+        }, 250)
 
         setOrdersLoading(true)
         const token = localStorage.getItem('authToken')
