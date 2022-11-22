@@ -117,39 +117,37 @@ export const Profile: React.FC = () => {
       .then((u) => {
         setUserName(u.attributes['custom:first_name'])
 
-        getUserProfile()
-          .then((res) => {
-            console.log('getUserProfile then', res.data)
-            setUserProfile(res.data.userProfile)
-          })
-          .catch((e) => {
-            console.log('getUserProfile catch', e)
-            signOut()
-          })
+        setTimeout(() => {
+          getUserProfile()
+            .then((res) => {
+              setUserProfile(res.data.userProfile)
+            })
+            .catch(() => {
+              navigate('/login')
+            })
 
-        setOrdersLoading(true)
-        const token = localStorage.getItem('authToken')
-        fetch(process.env.REACT_APP_FAMOUS_ROASTERS_ORDERS_ENDPOINT as string, {
-          headers: {
-            authorization: token ? `Bearer ${token}` : '',
-          },
-        })
-          .then((response) => response.json())
-          .then((res) => {
-            if (res.data.orders.edges.length > 0) {
-              setLastOrder(res.data.orders.edges[0].node)
-              setOrdersLoading(false)
-            } else {
-              setOrdersLoading(false)
-            }
+          setOrdersLoading(true)
+          const token = localStorage.getItem('authToken')
+          fetch(process.env.REACT_APP_FAMOUS_ROASTERS_ORDERS_ENDPOINT as string, {
+            headers: {
+              authorization: token ? `Bearer ${token}` : '',
+            },
           })
-          .catch((e) => {
-            console.log('orders', e)
-            setOrdersLoading(false)
-          })
+            .then((response) => response.json())
+            .then((res) => {
+              if (res.data.orders.edges.length > 0) {
+                setLastOrder(res.data.orders.edges[0].node)
+                setOrdersLoading(false)
+              } else {
+                setOrdersLoading(false)
+              }
+            })
+            .catch(() => {
+              setOrdersLoading(false)
+            })
+        }, 100)
       })
-      .catch((e) => {
-        console.log('currentAuthenticatedUser', e)
+      .catch(() => {
         navigate('/login')
       })
   }, [user?.isValid])
@@ -179,16 +177,8 @@ export const Profile: React.FC = () => {
         setAccessories(nodes)
       })
       .catch((err) => {
-        console.log(err.networkError)
         throw new Error('Error fetching accessories', err)
       })
-  }
-
-  const signOut = async () => {
-    await Auth.signOut().catch((err) => new Error(err))
-    navigate('/login')
-    window.location.reload()
-    window.localStorage.removeItem('authToken')
   }
 
   const containerStyle = 'w-full border-b border-brand-grey-bombay'
