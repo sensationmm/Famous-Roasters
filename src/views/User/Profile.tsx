@@ -82,11 +82,16 @@ export const Profile: React.FC = () => {
   const shopifyClient = storeFrontClient()
   const [accessories, setAccessories] = useState<ProductCustom[]>([])
   const [loadingAccessories, setLoadingAccessories] = useState<boolean>(true)
+  let timeout: ReturnType<typeof setTimeout>
 
   useEffect(() => {
     document.title = `${t('brand.name')} | ${t('pages.profile.title')}`
 
     accessories.length === 0 && fetchAccessories()
+
+    return () => {
+      clearTimeout(timeout)
+    }
   }, [])
 
   useEffect(() => {
@@ -117,15 +122,15 @@ export const Profile: React.FC = () => {
       .then((u) => {
         setUserName(u.attributes['custom:first_name'])
 
-        getUserProfile()
-          .then((res) => {
-            console.log('getUserProfile then', res.data)
-            setUserProfile(res.data.userProfile)
-          })
-          .catch((e) => {
-            console.log('getUserProfile catch', e)
-            signOut()
-          })
+        timeout = setTimeout(() => {
+          getUserProfile()
+            .then((res) => {
+              setUserProfile(res.data.userProfile)
+            })
+            .catch(() => {
+              signOut()
+            })
+        }, 100)
 
         setOrdersLoading(true)
         const token = localStorage.getItem('authToken')
@@ -143,13 +148,11 @@ export const Profile: React.FC = () => {
               setOrdersLoading(false)
             }
           })
-          .catch((e) => {
-            console.log('orders', e)
+          .catch(() => {
             setOrdersLoading(false)
           })
       })
-      .catch((e) => {
-        console.log('currentAuthenticatedUser', e)
+      .catch(() => {
         navigate('/login')
       })
   }, [user?.isValid])
@@ -179,7 +182,6 @@ export const Profile: React.FC = () => {
         setAccessories(nodes)
       })
       .catch((err) => {
-        console.log(err.networkError)
         throw new Error('Error fetching accessories', err)
       })
   }

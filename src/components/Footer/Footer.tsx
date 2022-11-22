@@ -46,17 +46,8 @@ const footerLinks: FooterLink[][] = [
   ],
 ]
 
-/*type FormValues = {
-  email: string
-}*/
-
 export const Footer: React.FC = () => {
   const { t } = useTranslation()
-  /*const { register, handleSubmit } = useForm<FormValues>()
-
-  const onSubmit: SubmitHandler<FormValues> = (data: FieldValues) => {
-    console.log('user wants to register with email', data.email)
-  }*/
 
   const socialMediaLinks: SocialMediaLink[] = [
     {
