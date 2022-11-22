@@ -1,3 +1,11 @@
+## [1.97.5](https://github.com/Famous-Roasters/frontend/compare/v1.97.4...v1.97.5) (2022-11-22)
+
+
+### Bug Fixes
+
+* **profile:** remove premature logout ([6b66bc8](https://github.com/Famous-Roasters/frontend/commit/6b66bc8066a78fa2533a983b96d7104a2a5205d1))
+* **profile:** remove premature logout ([ea6b009](https://github.com/Famous-Roasters/frontend/commit/ea6b0094f9c067a38934d0b1d179ace23f6b6f32))
+
 ## [1.97.4](https://github.com/Famous-Roasters/frontend/compare/v1.97.3...v1.97.4) (2022-11-22)
 
 
