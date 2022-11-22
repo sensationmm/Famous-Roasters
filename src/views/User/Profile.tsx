@@ -82,11 +82,16 @@ export const Profile: React.FC = () => {
   const shopifyClient = storeFrontClient()
   const [accessories, setAccessories] = useState<ProductCustom[]>([])
   const [loadingAccessories, setLoadingAccessories] = useState<boolean>(true)
+  let timeout: ReturnType<typeof setTimeout>
 
   useEffect(() => {
     document.title = `${t('brand.name')} | ${t('pages.profile.title')}`
 
     accessories.length === 0 && fetchAccessories()
+
+    return () => {
+      clearTimeout(timeout)
+    }
   }, [])
 
   useEffect(() => {
@@ -117,35 +122,35 @@ export const Profile: React.FC = () => {
       .then((u) => {
         setUserName(u.attributes['custom:first_name'])
 
-        setTimeout(() => {
+        timeout = setTimeout(() => {
           getUserProfile()
             .then((res) => {
               setUserProfile(res.data.userProfile)
             })
             .catch(() => {
-              navigate('/login')
-            })
-
-          setOrdersLoading(true)
-          const token = localStorage.getItem('authToken')
-          fetch(process.env.REACT_APP_FAMOUS_ROASTERS_ORDERS_ENDPOINT as string, {
-            headers: {
-              authorization: token ? `Bearer ${token}` : '',
-            },
-          })
-            .then((response) => response.json())
-            .then((res) => {
-              if (res.data.orders.edges.length > 0) {
-                setLastOrder(res.data.orders.edges[0].node)
-                setOrdersLoading(false)
-              } else {
-                setOrdersLoading(false)
-              }
-            })
-            .catch(() => {
-              setOrdersLoading(false)
+              signOut()
             })
         }, 100)
+
+        setOrdersLoading(true)
+        const token = localStorage.getItem('authToken')
+        fetch(process.env.REACT_APP_FAMOUS_ROASTERS_ORDERS_ENDPOINT as string, {
+          headers: {
+            authorization: token ? `Bearer ${token}` : '',
+          },
+        })
+          .then((response) => response.json())
+          .then((res) => {
+            if (res.data.orders.edges.length > 0) {
+              setLastOrder(res.data.orders.edges[0].node)
+              setOrdersLoading(false)
+            } else {
+              setOrdersLoading(false)
+            }
+          })
+          .catch(() => {
+            setOrdersLoading(false)
+          })
       })
       .catch(() => {
         navigate('/login')
@@ -179,6 +184,13 @@ export const Profile: React.FC = () => {
       .catch((err) => {
         throw new Error('Error fetching accessories', err)
       })
+  }
+
+  const signOut = async () => {
+    await Auth.signOut().catch((err) => new Error(err))
+    navigate('/login')
+    window.location.reload()
+    window.localStorage.removeItem('authToken')
   }
 
   const containerStyle = 'w-full border-b border-brand-grey-bombay'

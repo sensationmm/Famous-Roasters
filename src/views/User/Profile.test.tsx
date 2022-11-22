@@ -64,7 +64,7 @@ jest.mock('src/config', () => ({
 }))
 
 describe('Profile view', () => {
-  it.skip('Renders correctly', async () => {
+  it('Renders correctly', async () => {
     const { container } = render(
       <MockedProvider
         defaultOptions={{ watchQuery: { fetchPolicy: 'network-only' } }}
