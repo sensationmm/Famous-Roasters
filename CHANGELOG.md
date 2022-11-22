@@ -1,3 +1,10 @@
+## [1.97.6](https://github.com/Famous-Roasters/frontend/compare/v1.97.5...v1.97.6) (2022-11-22)
+
+
+### Bug Fixes
+
+* **auth:** extend timeout for google auth ([2e34614](https://github.com/Famous-Roasters/frontend/commit/2e346143eecd085f2f92d278511761c740029269))
+
 ## [1.97.5](https://github.com/Famous-Roasters/frontend/compare/v1.97.4...v1.97.5) (2022-11-22)
 
 
