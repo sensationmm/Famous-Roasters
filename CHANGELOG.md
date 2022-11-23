@@ -1,3 +1,10 @@
+## [1.97.8](https://github.com/Famous-Roasters/frontend/compare/v1.97.7...v1.97.8) (2022-11-23)
+
+
+### Bug Fixes
+
+* **auth:** remove logs ([5632403](https://github.com/Famous-Roasters/frontend/commit/56324038d1d3a0fc5f3c491cec3e422c989b0988))
+
 ## [1.97.7](https://github.com/Famous-Roasters/frontend/compare/v1.97.6...v1.97.7) (2022-11-23)
 
 
