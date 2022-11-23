@@ -1,3 +1,10 @@
+## [1.97.7](https://github.com/Famous-Roasters/frontend/compare/v1.97.6...v1.97.7) (2022-11-23)
+
+
+### Bug Fixes
+
+* **auth:** diagnose google sign in failure ([99776db](https://github.com/Famous-Roasters/frontend/commit/99776db0d192e431a1356b3e997cf013d520bf33))
+
 ## [1.97.6](https://github.com/Famous-Roasters/frontend/compare/v1.97.5...v1.97.6) (2022-11-22)
 
 
