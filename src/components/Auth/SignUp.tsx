@@ -43,7 +43,9 @@ export const socialSignInButtons = () => (
     <Button
       emphasis={ButtonEmphasis.Tertiary}
       center
-      onClick={() => Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Google })}
+      onClick={() =>
+        Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Google }).catch((e) => console.log(e))
+      }
     >
       <Icon name={IconName.Google} />
     </Button>

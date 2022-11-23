@@ -78,7 +78,7 @@ describe('Profile view', () => {
         </I18nextProvider>
       </MockedProvider>,
     )
-    await waitFor(() => new Promise((res) => setTimeout(res, 500)))
+    await waitFor(() => new Promise((res) => setTimeout(res, 750)))
     expect(container).toMatchSnapshot()
     expect(fetchSpy).toHaveBeenCalledTimes(1)
   })
