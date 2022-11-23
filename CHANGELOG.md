@@ -1,3 +1,10 @@
+# [1.98.0](https://github.com/Famous-Roasters/frontend/compare/v1.97.8...v1.98.0) (2022-11-23)
+
+
+### Features
+
+* **loader:** implement new loader ([e16b631](https://github.com/Famous-Roasters/frontend/commit/e16b631b252666f9566723db20706ec0ab83186f))
+
 ## [1.97.8](https://github.com/Famous-Roasters/frontend/compare/v1.97.7...v1.97.8) (2022-11-23)
 
 
