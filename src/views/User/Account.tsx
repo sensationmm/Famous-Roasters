@@ -1,5 +1,5 @@
 import { Auth } from 'aws-amplify'
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 import {
@@ -11,16 +11,19 @@ import {
   TypographySize,
   TypographyType,
 } from 'src/components'
+import LoadingContext from 'src/hooks/isLoading'
 
 export const Account: React.FC = () => {
   const { t } = useTranslation()
   const navigate = useNavigate()
+  const { setIsLoading } = useContext(LoadingContext)
 
   useEffect(() => {
     Auth.currentAuthenticatedUser().catch(() => navigate('/login'))
   }, [])
 
   const signOut = async () => {
+    setIsLoading(true)
     await Auth.signOut()
     navigate('/login')
     window.location.reload()

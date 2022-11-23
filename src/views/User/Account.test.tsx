@@ -6,6 +6,7 @@ import ReactRouterDom, { LinkProps } from 'react-router-dom'
 import { i18n } from 'src/config'
 import * as cognito from 'src/config/cognito'
 import { awsconfig } from 'src/config/cognito/auth.hook'
+import LoadingContext from 'src/hooks/isLoading'
 
 import { Account } from '.'
 
@@ -82,11 +83,13 @@ describe('Account view', () => {
 
   it('calls sign out', async () => {
     render(
-      <I18nextProvider i18n={i18n}>
-        <ReactRouterDom.MemoryRouter initialEntries={['/account']}>
-          <Account />
-        </ReactRouterDom.MemoryRouter>
-      </I18nextProvider>,
+      <LoadingContext.Provider value={{ isLoading: false, setIsLoading: jest.fn() }}>
+        <I18nextProvider i18n={i18n}>
+          <ReactRouterDom.MemoryRouter initialEntries={['/account']}>
+            <Account />
+          </ReactRouterDom.MemoryRouter>
+        </I18nextProvider>
+      </LoadingContext.Provider>,
     )
     const logoutBtn = await screen.findByTestId('account-logout')
     expect(logoutBtn).toBeInTheDocument()
