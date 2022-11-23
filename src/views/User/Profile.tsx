@@ -97,7 +97,6 @@ export const Profile: React.FC = () => {
   useEffect(() => {
     Hub.listen('auth', ({ payload }) => {
       const client = famousRoastersClient()
-      console.log('Profile Hub', payload)
       const { event } = payload as HubPayload
       if (event === 'cognitoHostedUI') {
         const jwtToken = payload.data.signInUserSession.accessToken.jwtToken
@@ -121,17 +120,14 @@ export const Profile: React.FC = () => {
   useEffect(() => {
     Auth.currentAuthenticatedUser()
       .then((u) => {
-        console.log('currentAuthenticatedUser', u)
         setUserName(u.attributes['custom:first_name'])
 
         timeout = setTimeout(() => {
           getUserProfile()
             .then((res) => {
-              console.log('getUserProfile then', res)
               setUserProfile(res.data.userProfile)
             })
-            .catch((e) => {
-              console.log('getUserProfile catch', e)
+            .catch(() => {
               signOut()
             })
         }, 500)
@@ -156,8 +152,7 @@ export const Profile: React.FC = () => {
             setOrdersLoading(false)
           })
       })
-      .catch((e) => {
-        console.log('currentAuthenticatedUser catch', e)
+      .catch(() => {
         navigate('/login')
       })
   }, [user?.isValid])
