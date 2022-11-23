@@ -64,13 +64,13 @@ const App = () => {
 
   return (
     <ApolloProvider client={storeFrontClient()}>
-      <LoadingContext.Provider value={{ isLoading, setIsLoading }}>
-        <CartProvider>
+      <CartProvider>
+        <LoadingContext.Provider value={{ isLoading, setIsLoading }}>
           <I18nextProvider i18n={i18n}>
             <BrowserRouter>
               <ScrollToTop />
               {isLoading && (
-                <div className="fixed flex justify-center items-center top-0 left-0 w-screen h-screen bg-coreUI-text-primary/70 z-[1000]">
+                <div className="fixed flex justify-center items-center top-0 left-0 w-screen h-screen bg-brand-grey-whisper/60 z-[1000]">
                   <Loader />
                 </div>
               )}
@@ -115,8 +115,8 @@ const App = () => {
               </Routes>
             </BrowserRouter>
           </I18nextProvider>
-        </CartProvider>
-      </LoadingContext.Provider>
+        </LoadingContext.Provider>
+      </CartProvider>
     </ApolloProvider>
   )
 }

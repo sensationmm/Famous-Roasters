@@ -23,6 +23,7 @@ import {
 } from 'src/components'
 import { famousRoastersClient } from 'src/config'
 import { useAuth } from 'src/config/cognito'
+import LoadingContext from 'src/hooks/isLoading'
 import { formatPrice, getSimplifiedId } from 'src/utils'
 import { UserProfile } from 'src/views/User'
 
@@ -40,20 +41,25 @@ export const Cart: React.FC = () => {
   const [user] = useAuth()
   const { t } = useTranslation()
   const [searchParams, setSearchParams] = useSearchParams()
-  const { cartId } = useContext(CartContext)
+  const { cartId, modifyQuantity, removeFromCart } = useContext(CartContext)
   const [cartQuery, { loading, data }] = useLazyQuery<CartQueryQuery>(GET_CART)
-  const { modifyQuantity, removeFromCart } = useContext(CartContext)
   const [showMissingItemsWarning, setShowMissingItemsWarning] = useState<boolean>(false)
   let timeout: ReturnType<typeof setTimeout>
   const client = famousRoastersClient()
   const [userProfile, setUserProfile] = useState<UserProfile>()
+  const { isLoading, setIsLoading } = useContext(LoadingContext)
+  const [cartContents, setCartContents] = useState<CartQueryQuery['cart']>()
 
   useEffect(() => {
     document.title = `${t('brand.name')} | ${t('pages.cart.title')}`
+
+    return () => {
+      clearTimeout(timeout)
+    }
   }, [])
 
   useEffect(() => {
-    if (cartId) {
+    if (cartId && !data) {
       cartQuery({
         variables: {
           id: cartId,
@@ -61,6 +67,12 @@ export const Cart: React.FC = () => {
       })
     }
   }, [cartId])
+
+  useEffect(() => {
+    if (data && data.cart && !cartContents) {
+      setCartContents(data.cart)
+    }
+  }, [data])
 
   useEffect(() => {
     if (searchParams.get('missingItems') === 'true') {
@@ -88,7 +100,7 @@ export const Cart: React.FC = () => {
         })
   }, [user])
 
-  if (loading) {
+  if (loading && !isLoading) {
     return (
       <div className="flex h-64 mb-32 justify-center items-center">
         <Loader />
@@ -157,7 +169,7 @@ export const Cart: React.FC = () => {
   }
 
   const renderCartWithItems = () => {
-    const { lines, cost } = data?.cart || {}
+    const { lines, cost } = cartContents || {}
 
     const vendors = new Set(
       lines?.edges
@@ -294,7 +306,13 @@ export const Cart: React.FC = () => {
         <div className="relative grid gap-4 md:grid-cols-2 md:my-6 md:w-1/2 md:left-1/2">
           <div className="grid md:order-2 justify-items-end">
             <a id="toCheckout" href={generateCheckoutUrl()} className="flex w-full" data-testid="goToCheckout">
-              <Button type="button" emphasis={ButtonEmphasis.Primary} size={ButtonSize.md} fullWidth>
+              <Button
+                type="button"
+                emphasis={ButtonEmphasis.Primary}
+                size={ButtonSize.md}
+                fullWidth
+                onClick={() => setIsLoading(true)}
+              >
                 {t('pages.cart.ctaCheckout')}
               </Button>
             </a>
@@ -331,7 +349,7 @@ export const Cart: React.FC = () => {
           <Typography as={'h1'} type={TypographyType.Heading} size={TypographySize.Small} className="mb-4">
             {t('pages.cart.displayTitle')}
           </Typography>
-          {cartId && data?.cart && data.cart.lines.edges.length > 0 ? renderCartWithItems() : renderEmptyCart()}
+          {cartId && cartContents && cartContents.lines.edges.length > 0 ? renderCartWithItems() : renderEmptyCart()}
         </div>
       </main>
     </Layout>
