@@ -1,3 +1,10 @@
+# [1.99.0](https://github.com/Famous-Roasters/frontend/compare/v1.98.0...v1.99.0) (2022-11-29)
+
+
+### Features
+
+* **catalogue:** add catalogue canonical link ([453ebab](https://github.com/Famous-Roasters/frontend/commit/453ebab6893d9ca22dd6473cbd6294fc7efd7a2f))
+
 # [1.98.0](https://github.com/Famous-Roasters/frontend/compare/v1.97.8...v1.98.0) (2022-11-23)
 
 
