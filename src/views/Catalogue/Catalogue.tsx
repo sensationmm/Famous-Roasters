@@ -100,6 +100,7 @@ export const Catalogue: React.FC = () => {
     <Layout>
       <Helmet>
         <title>{`${t('brand.seo.catalogue')} | ${t('brand.name')}`}</title>
+        <link rel="canonical" href={`${process.env.REACT_APP_DOMAIN_SHOP}/catalogue`} />
       </Helmet>
       <main className="flex flex-grow w-full items-start justify-center bg-white mt-4">
         <div className="w-full max-w-7xl mx-auto px-6 xl:px-8">
