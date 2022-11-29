@@ -9,7 +9,7 @@ exports[`Footer component Renders correctly 1`] = `
       class="w-full max-w-7xl mx-auto mb-8 md:mb-12 lg:mb-16 flex flex-col md:flex-row md:items-center justify-start"
     >
       <a
-        href="//www.60beans.com"
+        href="/"
       >
         <span
           class="sr-only"
@@ -38,7 +38,7 @@ exports[`Footer component Renders correctly 1`] = `
             class="mb-4"
           >
             <a
-              href="//shop.60beans.com/catalogue"
+              href="/catalogue"
               target="_self"
             >
               Shop
@@ -48,7 +48,7 @@ exports[`Footer component Renders correctly 1`] = `
             class="mb-4"
           >
             <a
-              href="//shop.60beans.com/taste-finder"
+              href="/taste-finder"
               target="_self"
             >
               Tastefinder
@@ -72,7 +72,7 @@ exports[`Footer component Renders correctly 1`] = `
             class="mb-4"
           >
             <a
-              href="//www.60beans.com/uber-uns"
+              href="//staging.www.60beans.com/uber-uns"
               target="_self"
             >
               Über uns
@@ -82,7 +82,7 @@ exports[`Footer component Renders correctly 1`] = `
             class="mb-4"
           >
             <a
-              href="//www.60beans.com/roesterei"
+              href="//staging.www.60beans.com/roesterei"
               target="_self"
             >
               Unsere Röster
@@ -92,7 +92,7 @@ exports[`Footer component Renders correctly 1`] = `
             class="mb-4"
           >
             <a
-              href="//blog.60beans.com"
+              href="/blog"
               target="_self"
             >
               Blog
@@ -102,7 +102,7 @@ exports[`Footer component Renders correctly 1`] = `
             class="mb-4"
           >
             <a
-              href="//www.60beans.com/warum-60beans"
+              href="//staging.www.60beans.com/warum-60beans"
               target="_self"
             >
               Für Kaffeeröster
@@ -116,7 +116,7 @@ exports[`Footer component Renders correctly 1`] = `
             class="mb-4"
           >
             <a
-              href="//www.60beans.com/legal/datenschutz"
+              href="//staging.www.60beans.com/legal/datenschutz"
               target="_self"
             >
               Datenschutz
@@ -126,7 +126,7 @@ exports[`Footer component Renders correctly 1`] = `
             class="mb-4"
           >
             <a
-              href="//www.60beans.com/legal/impressum"
+              href="//staging.www.60beans.com/legal/impressum"
               target="_self"
             >
               Impressum
@@ -136,7 +136,7 @@ exports[`Footer component Renders correctly 1`] = `
             class="mb-4"
           >
             <a
-              href="//www.60beans.com/legal/cookie-policy"
+              href="//staging.www.60beans.com/legal/cookie-policy"
               target="_self"
             >
               Cookie Policy
@@ -146,7 +146,7 @@ exports[`Footer component Renders correctly 1`] = `
             class="mb-4"
           >
             <a
-              href="//www.60beans.com/legal/agb"
+              href="//staging.www.60beans.com/legal/agb"
               target="_self"
             >
               Allgemeine Geschäftsbedingungen
@@ -156,7 +156,7 @@ exports[`Footer component Renders correctly 1`] = `
             class="mb-4"
           >
             <a
-              href="//www.60beans.com/legal/widerrufsrecht"
+              href="//staging.www.60beans.com/legal/widerrufsrecht"
               target="_self"
             >
               Widerrufsrecht

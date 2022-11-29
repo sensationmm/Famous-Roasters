@@ -23,8 +23,8 @@ const domainBlog = process.env.REACT_APP_DOMAIN_BLOG
 
 const footerLinks: FooterLink[][] = [
   [
-    { key: 'catalogue', href: `${domainShop}/catalogue` },
-    { key: 'tasteFinder', href: `${domainShop}/taste-finder` },
+    { key: 'catalogue', href: `/catalogue` },
+    { key: 'tasteFinder', href: `/taste-finder` },
     {
       key: 'jobs',
       href: '//www.linkedin.com/jobs/search/?currentJobId=3196130257&f_C=86587560&geoId=92000000',
@@ -32,17 +32,17 @@ const footerLinks: FooterLink[][] = [
     },
   ],
   [
-    { key: 'about', href: '//www.60beans.com/uber-uns' },
-    { key: 'ourRoasters', href: '//www.60beans.com/roesterei' },
-    { key: 'blog', href: `${domainBlog}` },
-    { key: 'forCoffeeRoasters', href: '//www.60beans.com/warum-60beans' },
+    { key: 'about', href: `${domainShop}/uber-uns` },
+    { key: 'ourRoasters', href: `${domainShop}/roesterei` },
+    { key: 'blog', href: `/blog` },
+    { key: 'forCoffeeRoasters', href: `${domainShop}/warum-60beans` },
   ],
   [
-    { key: 'privacy', href: '//www.60beans.com/legal/datenschutz' },
-    { key: 'imprint', href: '//www.60beans.com/legal/impressum' },
-    { key: 'cookiePolicy', href: '//www.60beans.com/legal/cookie-policy' },
-    { key: 'termsAndConditions', href: '//www.60beans.com/legal/agb' },
-    { key: 'refund', href: '//www.60beans.com/legal/widerrufsrecht' },
+    { key: 'privacy', href: `${domainShop}/legal/datenschutz` },
+    { key: 'imprint', href: `${domainShop}/legal/impressum` },
+    { key: 'cookiePolicy', href: `${domainShop}/legal/cookie-policy` },
+    { key: 'termsAndConditions', href: `${domainShop}/legal/agb` },
+    { key: 'refund', href: `${domainShop}/legal/widerrufsrecht` },
   ],
 ]
 
@@ -70,10 +70,10 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-brand-black text-base text-white px-5 lg:px-10 py-12 lg:py-20 z-30">
       <div className="w-full max-w-7xl mx-auto mb-8 md:mb-12 lg:mb-16 flex flex-col md:flex-row md:items-center justify-start">
-        <Link to="//www.60beans.com">
+        <a href="/">
           <span className="sr-only">{t('brand.name')}</span>
           <img src={LogoLight} alt={t('brand.name')} className="h-6" width="118px" height="24px" />
-        </Link>
+        </a>
       </div>
       <div className="w-full max-w-7xl mx-auto flex flex-col xl:flex-row justify-between">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-1 grow">
@@ -85,9 +85,9 @@ export const Footer: React.FC = () => {
                   const { key, href, target = '_self' } = footerItem
                   return (
                     <li key={key} className="mb-4">
-                      <Link to={href} target={target}>
+                      <a href={href} target={target}>
                         {t(`pages.${key}.navigation`)}
-                      </Link>
+                      </a>
                     </li>
                   )
                 })}
@@ -104,9 +104,9 @@ export const Footer: React.FC = () => {
               const { id, href, icon } = socialMediaLink
               return (
                 <li key={id} className="mr-3 hover:text-brand-grey-bombay">
-                  <Link to={href} target="_blank" title={`Go to ${id}`}>
+                  <a href={href} target="_blank" title={`Go to ${id}`}>
                     <Icon name={icon} />
-                  </Link>
+                  </a>
                 </li>
               )
             })}

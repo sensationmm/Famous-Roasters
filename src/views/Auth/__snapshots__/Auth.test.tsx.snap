@@ -57,7 +57,7 @@ exports[`Auth view Renders correctly 1`] = `
               >
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/uber-uns"
+                  href="/uber-uns"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -67,7 +67,7 @@ exports[`Auth view Renders correctly 1`] = `
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/roesterei"
+                  href="/roesterei"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -77,7 +77,7 @@ exports[`Auth view Renders correctly 1`] = `
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//blog.60beans.com"
+                  href="/blog"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -89,7 +89,7 @@ exports[`Auth view Renders correctly 1`] = `
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
-              href="//www.60beans.com"
+              href="/"
             >
               <span
                 class="sr-only"
@@ -115,7 +115,7 @@ exports[`Auth view Renders correctly 1`] = `
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="//shop.60beans.com/taste-finder"
+                    href="/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -126,7 +126,7 @@ exports[`Auth view Renders correctly 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//shop.60beans.com/profile"
+                  href="//staging.www.60beans.com/profile"
                 >
                   <svg
                     class="undefined"

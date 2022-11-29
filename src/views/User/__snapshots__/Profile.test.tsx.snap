@@ -57,7 +57,7 @@ exports[`Profile view Renders correctly 1`] = `
               >
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/uber-uns"
+                  href="/uber-uns"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -67,7 +67,7 @@ exports[`Profile view Renders correctly 1`] = `
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/roesterei"
+                  href="/roesterei"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -77,7 +77,7 @@ exports[`Profile view Renders correctly 1`] = `
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//blog.60beans.com"
+                  href="/blog"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -89,7 +89,7 @@ exports[`Profile view Renders correctly 1`] = `
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
-              href="//www.60beans.com"
+              href="/"
             >
               <span
                 class="sr-only"
@@ -115,7 +115,7 @@ exports[`Profile view Renders correctly 1`] = `
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="//shop.60beans.com/taste-finder"
+                    href="/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -126,7 +126,7 @@ exports[`Profile view Renders correctly 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//shop.60beans.com/profile"
+                  href="//staging.www.60beans.com/profile"
                 >
                   <svg
                     class="undefined"
@@ -765,7 +765,7 @@ exports[`Profile view Renders correctly 1`] = `
               class="grid grid-cols-2 grid-cols-[150px_1fr] gap-4 px-0 py-6 border-b border-brand-grey-bombay md:max-w-sm md:border-0"
             >
               <a
-                href="//blog.60beans.com/de/Zubereitungstipps"
+                href="//staging.www.60beans.com/de/Zubereitungstipps"
               >
                 <img
                   class="w-full"
@@ -800,7 +800,7 @@ exports[`Profile view Renders correctly 1`] = `
         class="w-full max-w-7xl mx-auto mb-8 md:mb-12 lg:mb-16 flex flex-col md:flex-row md:items-center justify-start"
       >
         <a
-          href="//www.60beans.com"
+          href="/"
         >
           <span
             class="sr-only"
@@ -829,7 +829,8 @@ exports[`Profile view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/catalogue"
+                href="/catalogue"
+                target="_self"
               >
                 Shop
               </a>
@@ -838,7 +839,8 @@ exports[`Profile view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/taste-finder"
+                href="/taste-finder"
+                target="_self"
               >
                 Tastefinder
               </a>
@@ -848,6 +850,7 @@ exports[`Profile view Renders correctly 1`] = `
             >
               <a
                 href="//www.linkedin.com/jobs/search/?currentJobId=3196130257&f_C=86587560&geoId=92000000"
+                target="_blank"
               >
                 Karriere bei 60beans
               </a>
@@ -860,7 +863,8 @@ exports[`Profile view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/uber-uns"
+                href="//staging.www.60beans.com/uber-uns"
+                target="_self"
               >
                 Über uns
               </a>
@@ -869,7 +873,8 @@ exports[`Profile view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/roesterei"
+                href="//staging.www.60beans.com/roesterei"
+                target="_self"
               >
                 Unsere Röster
               </a>
@@ -878,7 +883,8 @@ exports[`Profile view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//blog.60beans.com"
+                href="/blog"
+                target="_self"
               >
                 Blog
               </a>
@@ -887,7 +893,8 @@ exports[`Profile view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/warum-60beans"
+                href="//staging.www.60beans.com/warum-60beans"
+                target="_self"
               >
                 Für Kaffeeröster
               </a>
@@ -900,7 +907,8 @@ exports[`Profile view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/legal/datenschutz"
+                href="//staging.www.60beans.com/legal/datenschutz"
+                target="_self"
               >
                 Datenschutz
               </a>
@@ -909,7 +917,8 @@ exports[`Profile view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/legal/impressum"
+                href="//staging.www.60beans.com/legal/impressum"
+                target="_self"
               >
                 Impressum
               </a>
@@ -918,7 +927,8 @@ exports[`Profile view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/legal/cookie-policy"
+                href="//staging.www.60beans.com/legal/cookie-policy"
+                target="_self"
               >
                 Cookie Policy
               </a>
@@ -927,7 +937,8 @@ exports[`Profile view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/legal/agb"
+                href="//staging.www.60beans.com/legal/agb"
+                target="_self"
               >
                 Allgemeine Geschäftsbedingungen
               </a>
@@ -936,7 +947,8 @@ exports[`Profile view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/legal/widerrufsrecht"
+                href="//staging.www.60beans.com/legal/widerrufsrecht"
+                target="_self"
               >
                 Widerrufsrecht
               </a>
@@ -959,6 +971,8 @@ exports[`Profile view Renders correctly 1`] = `
             >
               <a
                 href="//www.facebook.com/60beans.shop"
+                target="_blank"
+                title="Go to facebook"
               >
                 <svg
                   class="undefined"
@@ -983,6 +997,8 @@ exports[`Profile view Renders correctly 1`] = `
             >
               <a
                 href="//www.instagram.com/60beans/"
+                target="_blank"
+                title="Go to instagram"
               >
                 <svg
                   class="undefined"
@@ -1007,6 +1023,8 @@ exports[`Profile view Renders correctly 1`] = `
             >
               <a
                 href="//www.linkedin.com/company/86587560/"
+                target="_blank"
+                title="Go to linkedIn"
               >
                 <svg
                   class="undefined"

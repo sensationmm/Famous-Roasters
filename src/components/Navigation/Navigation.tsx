@@ -42,12 +42,12 @@ const domainBlog = process.env.REACT_APP_DOMAIN_BLOG || ''
 
 const navigationData: NavigationData = {
   pagesPrimary: [
-    { key: 'about', href: '//www.60beans.com/uber-uns' },
-    { key: 'ourRoasters', href: '//www.60beans.com/roesterei' },
-    { key: 'blog', href: domainBlog },
+    { key: 'about', href: '/uber-uns' },
+    { key: 'ourRoasters', href: '/roesterei' },
+    { key: 'blog', href: '/blog' },
   ],
-  pagesSecondary: [{ key: 'tasteFinder', href: `${domainShop}/taste-finder` }],
-  pagesMobile: [{ key: 'profile', href: `${domainShop}/profile` }],
+  pagesSecondary: [{ key: 'tasteFinder', href: `/taste-finder` }],
+  pagesMobile: [{ key: 'profile', href: `/profile` }],
 }
 
 export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps) => {
@@ -190,9 +190,9 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
             <div className="hidden xl:flex-1 xl:block xl:self-stretch">
               <div className="h-full flex space-x-10">
                 {navigationData.pagesPrimary.map((page) => (
-                  <Link
+                  <a
                     key={page.key}
-                    to={page.href}
+                    href={page.href}
                     className="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
                   >
                     <Typography
@@ -203,25 +203,25 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
                     >
                       {t(`pages.${page.key}.navigation`)}
                     </Typography>
-                  </Link>
+                  </a>
                 ))}
               </div>
             </div>
 
             {/* Logo */}
-            <Link to="//www.60beans.com" className="flex h-full items-center pl-2 pr-2">
+            <a href="/" className="flex h-full items-center pl-2 pr-2">
               <span className="sr-only">{t('brand.name')}</span>
               <img src={LogoLight} alt={t('brand.name')} className="h-6" width="118px" height="24px" />
-            </Link>
+            </a>
 
             <div className="flex-1 flow-root flex h-full items-center">
               <div className="flex-1 flex h-full items-center justify-end xl:flex-none">
                 {/* Desktop menu secondary pages */}
                 <div className="hidden h-full xl:flex space-x-8 justify-end">
                   {navigationData.pagesSecondary.map((page) => (
-                    <Link
+                    <a
                       key={page.key}
-                      to={page.href}
+                      href={page.href}
                       className="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
                     >
                       <Typography
@@ -232,7 +232,7 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
                       >
                         {t(`pages.${page.key}.navigation`)}
                       </Typography>
-                    </Link>
+                    </a>
                   ))}
                 </div>
 
