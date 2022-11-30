@@ -1,3 +1,10 @@
+## [1.100.1](https://github.com/Famous-Roasters/frontend/compare/v1.100.0...v1.100.1) (2022-11-30)
+
+
+### Bug Fixes
+
+* **catalogue:** filters persist between tabs ([01079a4](https://github.com/Famous-Roasters/frontend/commit/01079a480c709d8d418c018836fde4a852f25ed9))
+
 # [1.100.0](https://github.com/Famous-Roasters/frontend/compare/v1.99.0...v1.100.0) (2022-11-30)
 
 
