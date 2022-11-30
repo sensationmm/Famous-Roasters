@@ -1,3 +1,10 @@
+# [1.100.0](https://github.com/Famous-Roasters/frontend/compare/v1.99.0...v1.100.0) (2022-11-30)
+
+
+### Features
+
+* **catalog:** product sorts ([94553dc](https://github.com/Famous-Roasters/frontend/commit/94553dc0dd84d6705767bb872347fa9cb104eb2e))
+
 # [1.99.0](https://github.com/Famous-Roasters/frontend/compare/v1.98.0...v1.99.0) (2022-11-29)
 
 
