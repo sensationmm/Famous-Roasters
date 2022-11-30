@@ -58,6 +58,7 @@ const AccessoriesSearch: React.FC = () => {
           <SortBy
             items={[
               { label: t('pages.catalogue.filters.sort.values.none'), value: 'products' },
+              { label: t('pages.catalogue.filters.sort.values.newest'), value: 'products_most_recent' },
               { label: t('pages.catalogue.filters.sort.values.priceAsc'), value: 'products_price_asc' },
               { label: t('pages.catalogue.filters.sort.values.priceDesc'), value: 'products_price_desc' },
             ]}

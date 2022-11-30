@@ -822,7 +822,8 @@
           "values": {
             "priceAsc": "Preis aufsteigend",
             "priceDesc": "Preis absteigend",
-            "none": "Neue zuerst"
+            "newest": "Neue zuerst",
+            "none": "Am beliebtesten"
           }
         },
         "aroma": {
