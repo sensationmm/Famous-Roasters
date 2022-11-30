@@ -1,5 +1,6 @@
+import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Configure, SearchBox, SortBy, useInstantSearch } from 'react-instantsearch-hooks-web'
+import { Configure, SearchBox, SortBy, useClearRefinements, useInstantSearch } from 'react-instantsearch-hooks-web'
 import { useParams } from 'react-router-dom'
 import { capitalize } from 'src/utils/formatters'
 
@@ -14,8 +15,13 @@ const AccessoriesSearch: React.FC = () => {
   const productHits = search?.results?.nbHits
   const numberOfHitsToShow = 12
   const { productType } = useParams()
+  const { refine: clearRefinements } = useClearRefinements()
 
   const collection = productType === 'accessories' ? 'equipment' : productType
+
+  useEffect(() => {
+    clearRefinements()
+  }, [productType])
 
   return (
     <>
