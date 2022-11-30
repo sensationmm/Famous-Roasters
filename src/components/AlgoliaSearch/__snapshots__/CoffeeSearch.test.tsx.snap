@@ -464,6 +464,12 @@ exports[`CoffeeSearch view Renders correctly 1`] = `
             class="ais-SortBy-option"
             value="products"
           >
+            Am beliebtesten
+          </option>
+          <option
+            class="ais-SortBy-option"
+            value="products_most_recent"
+          >
             Neue zuerst
           </option>
           <option

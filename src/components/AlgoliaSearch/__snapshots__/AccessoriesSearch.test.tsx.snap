@@ -171,6 +171,12 @@ exports[`AccessoriesSearch view Renders correctly for accessories 1`] = `
             class="ais-SortBy-option"
             value="products"
           >
+            Am beliebtesten
+          </option>
+          <option
+            class="ais-SortBy-option"
+            value="products_most_recent"
+          >
             Neue zuerst
           </option>
           <option
@@ -1081,6 +1087,12 @@ exports[`AccessoriesSearch view Renders correctly for other 1`] = `
           <option
             class="ais-SortBy-option"
             value="products"
+          >
+            Am beliebtesten
+          </option>
+          <option
+            class="ais-SortBy-option"
+            value="products_most_recent"
           >
             Neue zuerst
           </option>
