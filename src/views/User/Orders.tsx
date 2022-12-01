@@ -1,12 +1,10 @@
 import { Auth } from 'aws-amplify'
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 import {
   Button,
-  ButtonSize,
-  CartContext,
   IconName,
   Input,
   Layout,
@@ -20,9 +18,10 @@ import {
   TypographyType,
 } from 'src/components'
 import { Emphasis } from 'src/components/Button/Button'
-import { CartItem } from 'src/components/CartProvider/CartProvider'
 import { useAuth } from 'src/config/cognito'
 import { formatPrice, getSimplifiedId } from 'src/utils'
+
+import { Reorder } from './'
 
 export type OrderVariant = {
   node: {
@@ -69,10 +68,6 @@ export type Order = {
   }
 }
 
-interface ReorderItem extends CartItem {
-  available: number
-}
-
 export const Orders: React.FC = () => {
   const [user] = useAuth()
   const { t } = useTranslation()
@@ -82,7 +77,6 @@ export const Orders: React.FC = () => {
   const [addingToCart, setAddingToCart] = useState<boolean>(false)
   const [filterOrderId, setFilterOrderId] = useState<string>('')
   const [sortOrder, setSortOrder] = useState<ListBoxItem[]>()
-  const { addToCart } = useContext(CartContext)
 
   useEffect(() => {
     Auth.currentAuthenticatedUser()
@@ -126,34 +120,6 @@ export const Orders: React.FC = () => {
       setOrders(ordersCopy)
     }
   }, [sortOrder])
-
-  const handleReorder = async (items: ReorderItem[]) => {
-    let redirect = '/cart'
-    setAddingToCart(true)
-    if (addToCart) {
-      let i = 0
-      const reorder = async () => {
-        if (items[i].available < items[i].quantity) {
-          redirect = '/cart?missingItems=true'
-        }
-
-        if (items[i].available !== 0) {
-          await addToCart({
-            quantity: items[i].quantity < items[i].available ? items[i].quantity : items[i].available,
-            item: items[i].item,
-          })
-        }
-        if (i + 1 === items.length) {
-          setAddingToCart(false)
-          navigate(redirect)
-        } else {
-          i++
-          reorder()
-        }
-      }
-      await reorder()
-    }
-  }
 
   const ordersToShow = orders?.filter((order) => filterOrderId === '' || order.node.id.includes(filterOrderId)) || []
 
@@ -276,25 +242,7 @@ export const Orders: React.FC = () => {
                       })}
                     </div>
                     <div className="mt-4 flex">
-                      <Button
-                        data-testid={`reorder-btn`}
-                        emphasis={Emphasis.Tertiary}
-                        fullWidth
-                        size={ButtonSize.sm}
-                        onClick={() =>
-                          !addingToCart &&
-                          handleReorder(
-                            order.node.lineItems.edges.map((item) => ({
-                              quantity: item.node.quantity,
-                              item: item.node.variant.id,
-                              available: item.node.variant.inventoryQuantity || 0,
-                            })),
-                          )
-                        }
-                        showLoading={addingToCart}
-                      >
-                        {t('pages.orders.ctaReorder')}
-                      </Button>
+                      <Reorder order={order} loading={addingToCart} setLoading={setAddingToCart} />
                     </div>
                   </div>
                 ))
