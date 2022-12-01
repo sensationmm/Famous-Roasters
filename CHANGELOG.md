@@ -1,3 +1,11 @@
+## [1.100.2](https://github.com/Famous-Roasters/frontend/compare/v1.100.1...v1.100.2) (2022-12-01)
+
+
+### Bug Fixes
+
+* **catalogue:** sort value not reset ([18451d2](https://github.com/Famous-Roasters/frontend/commit/18451d2197467cc5ad105d69d57fa1b20c7b4d91))
+* **jest:** cleanup progress ([e5570d9](https://github.com/Famous-Roasters/frontend/commit/e5570d9733f1b71397ce5ae522ff9e4c3ac5c573))
+
 ## [1.100.1](https://github.com/Famous-Roasters/frontend/compare/v1.100.0...v1.100.1) (2022-11-30)
 
 
