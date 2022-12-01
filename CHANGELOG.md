@@ -1,3 +1,10 @@
+# [1.102.0](https://github.com/Famous-Roasters/frontend/compare/v1.101.0...v1.102.0) (2022-12-01)
+
+
+### Features
+
+* **profile:** add profile reorder button ([13d01a7](https://github.com/Famous-Roasters/frontend/commit/13d01a782a2f283e1706bc7427018580a50ade3e))
+
 # [1.101.0](https://github.com/Famous-Roasters/frontend/compare/v1.100.2...v1.101.0) (2022-12-01)
 
 
