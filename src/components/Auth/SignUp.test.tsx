@@ -86,11 +86,15 @@ describe('SignUp custom auth component', () => {
     mockSignUp.mockResolvedValue(res)
     const { getByTestId } = render(snippet())
 
+    const firstName = getByTestId('firstName')
     const emailInput = getByTestId('email')
     const passwordInput = getByTestId('password')
     const passwordRepeatInput = getByTestId('passwordRepeat')
     const newsletterCheckBox = getByTestId('newsletterSignup')
     const submitBtn = getByTestId('submit')
+
+    fireEvent.click(firstName)
+    fireEvent.change(firstName, { target: { value: 'spongebob' } })
     expect(emailInput).toBeInTheDocument()
     fireEvent.click(emailInput)
     fireEvent.change(emailInput, { target: { value: 'user@60beans.com' } })
@@ -118,10 +122,14 @@ describe('SignUp custom auth component', () => {
     mockSignUp.mockRejectedValue(new Error('UsernameExistsException: text'))
     const { getByTestId } = render(snippet())
 
+    const firstName = getByTestId('firstName')
     const emailInput = getByTestId('email')
     const passwordInput = getByTestId('password')
     const passwordRepeatInput = getByTestId('passwordRepeat')
     const submitBtn = getByTestId('submit')
+
+    fireEvent.click(firstName)
+    fireEvent.change(firstName, { target: { value: 'spongebob' } })
     expect(emailInput).toBeInTheDocument()
     fireEvent.click(emailInput)
     fireEvent.change(emailInput, { target: { value: 'user@60beans.com' } })
@@ -146,10 +154,14 @@ describe('SignUp custom auth component', () => {
     mockSignUp.mockRejectedValue(new Error('An error'))
     const { getByTestId } = render(snippet())
 
+    const firstName = getByTestId('firstName')
     const emailInput = getByTestId('email')
     const passwordInput = getByTestId('password')
     const passwordRepeatInput = getByTestId('passwordRepeat')
     const submitBtn = getByTestId('submit')
+
+    fireEvent.click(firstName)
+    fireEvent.change(firstName, { target: { value: 'spongebob' } })
     expect(emailInput).toBeInTheDocument()
     fireEvent.click(emailInput)
     fireEvent.change(emailInput, { target: { value: 'user@60beans.com' } })

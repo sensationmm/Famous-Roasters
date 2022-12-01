@@ -1,5 +1,6 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import React from 'react'
+import { act } from 'react-dom/test-utils'
 
 import { Notification } from '.'
 
@@ -18,8 +19,10 @@ describe('Notification component', () => {
 
   it('Can be dismissed', async () => {
     render(<Notification heading="Title" body="Content" />)
-    const buttonDismiss = await screen.findByTestId('notification-dismiss')
-    expect(buttonDismiss).toBeInTheDocument()
-    fireEvent.click(buttonDismiss)
+    await act(async () => {
+      const buttonDismiss = await screen.findByTestId('notification-dismiss')
+      expect(buttonDismiss).toBeInTheDocument()
+      fireEvent.click(buttonDismiss)
+    })
   })
 })

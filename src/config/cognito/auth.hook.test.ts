@@ -1,4 +1,4 @@
-import { renderHook } from '@testing-library/react-hooks'
+import { renderHook } from '@testing-library/react'
 import Amplify from 'aws-amplify'
 import { awsconfig } from 'src/config/cognito/auth.hook'
 
