@@ -2,6 +2,7 @@ import { useQuery } from '@apollo/client/react/hooks'
 import { CheckCircleIcon } from '@heroicons/react/outline'
 import { loader } from 'graphql.macro'
 import React, { useEffect } from 'react'
+import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
 import { Link, useParams } from 'react-router-dom'
 import {
@@ -32,10 +33,6 @@ export const FeaturedProduct: React.FC = () => {
   const GET_PRODUCT = loader('src/graphql/queries/product.query.graphql')
   const [tasteFinderDataJSON, setTasteFinderLocalStorage] = useLocalStorage('tasteFinder', '')
   const tasteFinderData = tasteFinderDataJSON && JSON.parse(tasteFinderDataJSON)
-
-  useEffect(() => {
-    document.title = `${t('brand.name')} | ${t('pages.product.title')}`
-  }, [])
 
   const { loading, error, data } = useQuery<ProductQuery>(GET_PRODUCT, {
     variables: {
@@ -208,6 +205,13 @@ export const FeaturedProduct: React.FC = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>
+          {t('brand.name')} | {t('pages.profile.links.tasteProfile')}
+        </title>
+        <link rel="canonical" href={`${process.env.REACT_APP_DOMAIN_SHOP}/featured/${id}`} />
+        <meta name="robots" content="noindex" />
+      </Helmet>
       <main className="flex flex-col w-full bg-white mt-8 mb-8">
         <div className="w-full max-w-7xl mx-auto px-6 xl:px-8">
           {aroma && (

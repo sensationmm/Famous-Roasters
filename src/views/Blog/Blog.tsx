@@ -51,15 +51,15 @@ export const Blog: React.FC<BlogProps> = ({ locale = 'de_de' }) => {
 
   return (
     <Layout navigationTheme={NavigationTheme.Home}>
+      <Helmet>
+        <title>{data.standardBlogPosts[0].seoTitle}</title>
+        <meta name="description" content={data.standardBlogPosts[0].seoMetaDescription} />
+        <link rel="canonical" href={`${process.env.REACT_APP_DOMAIN_BLOG}/${locale}/${category}/${slug}`} />
+      </Helmet>
       <main className="flex-grow flex w-full flex-col">
         <div className="w-full max-w-[688px] mx-auto px-6 xl:px-8 mt-8 mb-16">
           {data.standardBlogPosts.length !== 0 ? (
             <>
-              <Helmet>
-                <title>{data.standardBlogPosts[0].seoTitle}</title>
-                <meta name="description" content={data.standardBlogPosts[0].seoMetaDescription} />
-              </Helmet>
-
               <Typography
                 as="h1"
                 type={TypographyType.Heading}

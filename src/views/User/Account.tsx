@@ -1,5 +1,6 @@
 import { Auth } from 'aws-amplify'
 import React, { useContext, useEffect } from 'react'
+import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 import {
@@ -32,6 +33,13 @@ export const Account: React.FC = () => {
 
   return (
     <Layout navigationTheme={NavigationTheme.Home}>
+      <Helmet>
+        <title>
+          {t('brand.name')} | {t('pages.account.title')}
+        </title>
+        <link rel="canonical" href={`${process.env.REACT_APP_DOMAIN_SHOP}/account`} />
+        <meta name="robots" content="noindex" />
+      </Helmet>
       <main className="flex flex-col flex-grow w-full items-start bg-white mt-4y">
         <div className="w-full max-w-7xl mx-auto px-6 xl:px-8 py-8">
           <div className="md:grid md:grid-cols-2 md:gap-4 xl:grid-cols-[1fr_2fr]">

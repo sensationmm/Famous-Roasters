@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
@@ -9,15 +9,12 @@ export const Error: React.FC = () => {
   const { t } = useTranslation()
   const navigate = useNavigate()
 
-  useEffect(() => {
-    document.title = `${t('brand.name')} | ${t('pages.error.navigation')}`
-  }, [])
-
   return (
     <Layout navigationTheme={NavigationTheme.Home}>
       <Helmet>
         <title>{`${t('pages.error.title')} - ${t('brand.name')}`}</title>
         <meta name="description" content={t('pages.error.title')} />
+        <link rel="canonical" href={`${process.env.REACT_APP_DOMAIN_SHOP}/404`} />
       </Helmet>
       <main className="mx-auto white xs:mt-12 xl:mt-24">
         <div className="grid h-fit mx-auto xs:grid-cols-1 w-[280px] mb-12 md:grid-cols-1 xl:grid-cols-2 w-2/3">

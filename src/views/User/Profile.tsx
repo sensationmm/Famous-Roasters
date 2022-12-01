@@ -3,6 +3,7 @@ import { HubPayload } from '@aws-amplify/core'
 import { Auth, Hub } from 'aws-amplify'
 import { loader } from 'graphql.macro'
 import React, { useEffect, useState } from 'react'
+import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
 import { Link, useNavigate } from 'react-router-dom'
 import CoffeeKnowledge from 'src/assets/images/profile/coffee-knowledge.png'
@@ -85,8 +86,6 @@ export const Profile: React.FC = () => {
   let timeout: ReturnType<typeof setTimeout>
 
   useEffect(() => {
-    document.title = `${t('brand.name')} | ${t('pages.profile.title')}`
-
     accessories.length === 0 && fetchAccessories()
 
     return () => {
@@ -198,6 +197,13 @@ export const Profile: React.FC = () => {
 
   return (
     <Layout navigationTheme={NavigationTheme.Home}>
+      <Helmet>
+        <title>
+          {t('brand.name')} | {t('pages.profile.title')}
+        </title>
+        <link rel="canonical" href={`${process.env.REACT_APP_DOMAIN_SHOP}/profile`} />
+        <meta name="robots" content="noindex" />
+      </Helmet>
       <main className="flex flex-col flex-grow w-full items-start bg-white mt-4y">
         <div className={containerStyle}>
           <div className={`${sectionStyle} ${userProfile ? 'md:grid md:grid-cols-2 md:gap-20' : ''}`}>

@@ -2,6 +2,7 @@ import { HubPayload } from '@aws-amplify/core'
 import { Hub } from 'aws-amplify'
 import { loader } from 'graphql.macro'
 import React, { useEffect } from 'react'
+import { Helmet } from 'react-helmet'
 import { useNavigate } from 'react-router-dom'
 import {
   AuthConfirmSignUp,
@@ -78,18 +79,27 @@ export const Auth: React.FC<AuthProps> = ({ authState = 'signIn' }) => {
       case 'signUp':
         return (
           <Authenticator hideDefault={true} authState="signUp" onStateChange={handleAuthStateChange}>
+            <Helmet>
+              <link rel="canonical" href={`${process.env.REACT_APP_DOMAIN_SHOP}/register`} />
+            </Helmet>
             <AuthSignUp />
           </Authenticator>
         )
       case 'forgotPassword':
         return (
           <Authenticator hideDefault={true} authState="signUp" onStateChange={handleAuthStateChange}>
+            <Helmet>
+              <link rel="canonical" href={`${process.env.REACT_APP_DOMAIN_SHOP}/reset-password`} />
+            </Helmet>
             <AuthForgotPassword />
           </Authenticator>
         )
       case 'confirmSignUp':
         return (
           <Authenticator hideDefault={true} authState="signUp" onStateChange={handleAuthStateChange}>
+            <Helmet>
+              <link rel="canonical" href={`${process.env.REACT_APP_DOMAIN_SHOP}/register-confirm`} />
+            </Helmet>
             <AuthConfirmSignUp />
           </Authenticator>
         )
@@ -97,6 +107,9 @@ export const Auth: React.FC<AuthProps> = ({ authState = 'signIn' }) => {
       default:
         return (
           <Authenticator hideDefault={true} authState="signIn" onStateChange={handleAuthStateChange}>
+            <Helmet>
+              <link rel="canonical" href={`${process.env.REACT_APP_DOMAIN_SHOP}/login`} />
+            </Helmet>
             <AuthSignIn />
           </Authenticator>
         )

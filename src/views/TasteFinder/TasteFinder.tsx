@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { Layout, NavigationTheme, StickyBottomNavigation } from 'src/components'
@@ -164,10 +165,6 @@ export const TasteFinder: React.FC = () => {
   }
 
   useEffect(() => {
-    document.title = `${t('brand.name')} | ${t('pages.tasteFinder.title')}`
-  }, [])
-
-  useEffect(() => {
     const step = searchParams.get('step')
     if (step) {
       setActualStep(step)
@@ -248,6 +245,12 @@ export const TasteFinder: React.FC = () => {
 
   return (
     <Layout navigationTheme={NavigationTheme.Home} showFooter={false}>
+      <Helmet>
+        <title>
+          {t('brand.name')} | {t('pages.tasteFinder.title')}
+        </title>
+        <link rel="canonical" href={`${process.env.REACT_APP_DOMAIN_SHOP}/taste-finder`} />
+      </Helmet>
       <main className="flex flex-col" style={{ minHeight: 'calc(100vh - 66px)' }}>
         {actualStep !== undefined && renderStep(actualStep)}
         {actualStep !== undefined &&

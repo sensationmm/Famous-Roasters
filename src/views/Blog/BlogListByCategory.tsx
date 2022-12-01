@@ -30,7 +30,7 @@ type StandardBlogPosts = {
   updatedBy: { name: string }
 }
 
-export const BlogListByCategory: React.FC<CategoryListProps> = () => {
+export const BlogListByCategory: React.FC<CategoryListProps> = ({ locale = 'de_de' }) => {
   const { category } = useParams()
   const { t } = useTranslation()
   const GET_BLOG_BY_CATEGORY_LIST = loader('src/graphql/queries/blogListByCategory.query.graphql')
@@ -53,109 +53,102 @@ export const BlogListByCategory: React.FC<CategoryListProps> = () => {
     )
   }
   return (
-    <>
+    <Layout navigationTheme={NavigationTheme.Home}>
       <Helmet>
         <title>{`${category} | ${t('brand.name')}`}</title>
+        <link rel="canonical" href={`${process.env.REACT_APP_DOMAIN_BLOG}/${locale}/${category}`} />
       </Helmet>
-
-      <Layout navigationTheme={NavigationTheme.Home}>
-        <div className="flex-grow flex w-full flex-col">
-          <div className="hero w-full bg-brand-grey-whisper">
-            <div className="flex flex-col md:flex-row w-full h-full max-w-5xl mx-auto py-20">
-              <div className="px-6 lg:w-2/3">
-                <Typography
-                  as="h1"
-                  type={TypographyType.Heading}
-                  size={TypographySize.Large}
-                  className="text-[38px] lg:text-[80px] font-semibold font-syne mb-6"
-                >
-                  {category}
-                </Typography>
-                <Typography
-                  as="p"
-                  type={TypographyType.Paragraph}
-                  size={TypographySize.Base}
-                  className="lg:text-2xl lg:font-semibold"
-                >
-                  {data.category.summary}
-                </Typography>
-              </div>
+      <div className="flex-grow flex w-full flex-col">
+        <div className="hero w-full bg-brand-grey-whisper">
+          <div className="flex flex-col md:flex-row w-full h-full max-w-5xl mx-auto py-20">
+            <div className="px-6 lg:w-2/3">
+              <Typography
+                as="h1"
+                type={TypographyType.Heading}
+                size={TypographySize.Large}
+                className="text-[38px] lg:text-[80px] font-semibold font-syne mb-6"
+              >
+                {category}
+              </Typography>
+              <Typography
+                as="p"
+                type={TypographyType.Paragraph}
+                size={TypographySize.Base}
+                className="lg:text-2xl lg:font-semibold"
+              >
+                {data.category.summary}
+              </Typography>
             </div>
           </div>
-          <div className="columns-1 md:columns-2 xl:columns-3 w-full max-w-5xl mx-auto px-6 xl:px-8 md:my-8">
-            {data.standardBlogPosts.length !== 0 ? (
-              data.standardBlogPosts.map((blog: StandardBlogPosts) => {
-                const { title, slug, postType, thumbnail, tags, updatedBy, content } = blog
-                return (
-                  <div
-                    key={title}
-                    className="p-4 w-full hover:bg-coreUI-background-images break-inside-avoid-column duration-500"
-                  >
-                    <Link to={`${slug}`}>
-                      <div className="border-b border-coreUI-border pb-8">
-                        <div className="relative h-52 grid content-center overflow-hidden mb-4">
-                          {postType === 'video' && (
-                            <div className="absolute flex justify-center items-center w-full h-full">
-                              <img src={PlayVideoIcon} className="w-10 h-10" />
-                            </div>
-                          )}
-                          {thumbnail && <img src={thumbnail.url} className="w-full" />}
-                        </div>
-                        <Typography
-                          as="h2"
-                          type={TypographyType.Heading}
-                          size={TypographySize.Base}
-                          className="font-syne mb-4 text-[32px] -tracking-[.02em]"
-                        >
-                          {title}
-                        </Typography>
-                        <div className="text-coreUI-text-secondary">
-                          {[...new Set([...data.category.tags, ...tags])].map((tag: string) => {
-                            return (
-                              <Typography
-                                as="span"
-                                type={TypographyType.Paragraph}
-                                size={TypographySize.Small}
-                                key={tag}
-                              >
-                                #{tag}{' '}
-                              </Typography>
-                            )
-                          })}
-                        </div>
-                        <div className="flex flex-col text-coreUI-text-tertiary mb-6">
-                          {postType === 'article' ? (
-                            <Typography size={TypographySize.Small} type={TypographyType.Paragraph}>
-                              {t('pages.blog.from')} {updatedBy.name} &middot; {readTimeCalculator(content.text)}{' '}
-                              {t('pages.blog.minReadingTime')}
-                            </Typography>
-                          ) : (
-                            <Typography size={TypographySize.Small} type={TypographyType.Paragraph}>
-                              {t('pages.blog.from')} {updatedBy.name}
-                            </Typography>
-                          )}
-                        </div>
-                        <Typography
-                          as="span"
-                          type={TypographyType.Label}
-                          size={TypographySize.Small}
-                          className="underline underline-offset-8"
-                        >
-                          {postType === 'video' ? t('pages.blog.goToVideo') : t('pages.blog.goToArticle')}
-                        </Typography>
-                      </div>
-                    </Link>
-                  </div>
-                )
-              })
-            ) : (
-              <Typography as="p" size={TypographySize.Base} type={TypographyType.Paragraph} className="my-6 md:my-0">
-                {t('pages.blog.noPostsFound')}
-              </Typography>
-            )}
-          </div>
         </div>
-      </Layout>
-    </>
+        <div className="columns-1 md:columns-2 xl:columns-3 w-full max-w-5xl mx-auto px-6 xl:px-8 md:my-8">
+          {data.standardBlogPosts.length !== 0 ? (
+            data.standardBlogPosts.map((blog: StandardBlogPosts) => {
+              const { title, slug, postType, thumbnail, tags, updatedBy, content } = blog
+              return (
+                <div
+                  key={title}
+                  className="p-4 w-full hover:bg-coreUI-background-images break-inside-avoid-column duration-500"
+                >
+                  <Link to={`${slug}`}>
+                    <div className="border-b border-coreUI-border pb-8">
+                      <div className="relative h-52 grid content-center overflow-hidden mb-4">
+                        {postType === 'video' && (
+                          <div className="absolute flex justify-center items-center w-full h-full">
+                            <img src={PlayVideoIcon} className="w-10 h-10" />
+                          </div>
+                        )}
+                        {thumbnail && <img src={thumbnail.url} className="w-full" />}
+                      </div>
+                      <Typography
+                        as="h2"
+                        type={TypographyType.Heading}
+                        size={TypographySize.Base}
+                        className="font-syne mb-4 text-[32px] -tracking-[.02em]"
+                      >
+                        {title}
+                      </Typography>
+                      <div className="text-coreUI-text-secondary">
+                        {[...new Set([...data.category.tags, ...tags])].map((tag: string) => {
+                          return (
+                            <Typography as="span" type={TypographyType.Paragraph} size={TypographySize.Small} key={tag}>
+                              #{tag}{' '}
+                            </Typography>
+                          )
+                        })}
+                      </div>
+                      <div className="flex flex-col text-coreUI-text-tertiary mb-6">
+                        {postType === 'article' ? (
+                          <Typography size={TypographySize.Small} type={TypographyType.Paragraph}>
+                            {t('pages.blog.from')} {updatedBy.name} &middot; {readTimeCalculator(content.text)}{' '}
+                            {t('pages.blog.minReadingTime')}
+                          </Typography>
+                        ) : (
+                          <Typography size={TypographySize.Small} type={TypographyType.Paragraph}>
+                            {t('pages.blog.from')} {updatedBy.name}
+                          </Typography>
+                        )}
+                      </div>
+                      <Typography
+                        as="span"
+                        type={TypographyType.Label}
+                        size={TypographySize.Small}
+                        className="underline underline-offset-8"
+                      >
+                        {postType === 'video' ? t('pages.blog.goToVideo') : t('pages.blog.goToArticle')}
+                      </Typography>
+                    </div>
+                  </Link>
+                </div>
+              )
+            })
+          ) : (
+            <Typography as="p" size={TypographySize.Base} type={TypographyType.Paragraph} className="my-6 md:my-0">
+              {t('pages.blog.noPostsFound')}
+            </Typography>
+          )}
+        </div>
+      </div>
+    </Layout>
   )
 }

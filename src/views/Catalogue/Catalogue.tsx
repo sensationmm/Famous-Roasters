@@ -96,11 +96,19 @@ export const Catalogue: React.FC = () => {
       return { key: tabKey, translationKey: `pages.catalogue.tabs.${tabKey}` }
     })
 
+  const getPath = () => {
+    const pathParts = ['catalogue']
+    if (productType && productType !== 'coffee') {
+      pathParts.push(productType)
+    }
+    return pathParts.join('/')
+  }
+
   return (
     <Layout>
       <Helmet>
         <title>{`${t('brand.seo.catalogue')} | ${t('brand.name')}`}</title>
-        <link rel="canonical" href={`${process.env.REACT_APP_DOMAIN_SHOP}/catalogue`} />
+        <link rel="canonical" href={`${process.env.REACT_APP_DOMAIN_SHOP}/${getPath()}`} />
       </Helmet>
       <main className="flex flex-grow w-full items-start justify-center bg-white mt-4">
         <div className="w-full max-w-7xl mx-auto px-6 xl:px-8">
