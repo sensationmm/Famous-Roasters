@@ -1,3 +1,11 @@
+# [1.101.0](https://github.com/Famous-Roasters/frontend/compare/v1.100.2...v1.101.0) (2022-12-01)
+
+
+### Features
+
+* **auth:** page titles ([95fb7cf](https://github.com/Famous-Roasters/frontend/commit/95fb7cf0b7187f0d4571f1e87d667e765fa4c75e))
+* **site:** add canonical urls to all pages ([65a3483](https://github.com/Famous-Roasters/frontend/commit/65a3483b5eaa0d87112c133c98b242ce8c2fcf19))
+
 ## [1.100.2](https://github.com/Famous-Roasters/frontend/compare/v1.100.1...v1.100.2) (2022-12-01)
 
 
