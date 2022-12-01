@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Reorder button handles mising addToCart 1`] = `
+<div>
+  <button
+    class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-3 py-2 text-sm font-semibold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black w-full md:max-w-xs md:mx-auto"
+    data-testid="reorder-btn"
+    role="button"
+  >
+    Erneut bestellen
+  </button>
+</div>
+`;
+
+exports[`Reorder button renders correctly 1`] = `
+<div>
+  <button
+    class="relative inline-flex flex-row items-center rounded-full border-2 justify-center px-3 py-2 text-sm font-semibold text-brand-black bg-white border-brand-black hover:border-coreUI-text-tertiary active:border-brand-black w-full md:max-w-xs md:mx-auto"
+    data-testid="reorder-btn"
+    role="button"
+  >
+    Erneut bestellen
+  </button>
+</div>
+`;

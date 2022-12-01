@@ -34,10 +34,11 @@ import useBreakpoint from 'src/hooks/useBreakpoint'
 const USER_PROFILE = loader('src/graphql/queries/userProfile.query.graphql')
 const SIGN_UP = loader('src/graphql/queries/signUp.query.graphql')
 import { formatDate, formatPrice, getSimplifiedId } from 'src/utils'
+import { CollectionQuery } from 'src/views/Catalogue'
+import { ProductCustom } from 'src/views/Product'
 
-import { CollectionQuery } from '../Catalogue'
-import { ProductCustom } from '../Product'
-import { Order } from './Orders'
+import { Order } from './'
+import { Reorder } from './'
 
 interface TasteFinderProfile extends TasteProfileProps {
   coffeeType: string
@@ -76,6 +77,7 @@ export const Profile: React.FC = () => {
   const breakpoint = useBreakpoint()
   const [userName, setUserName] = useState<string>()
   const [userProfile, setUserProfile] = useState<UserProfile>()
+  const [addingToCart, setAddingToCart] = useState<boolean>(false)
   const [lastOrder, setLastOrder] = useState<Order['node']>()
   const [ordersLoading, setOrdersLoading] = useState<boolean>(false)
   const [getUserProfile] = useLazyQuery(USER_PROFILE)
@@ -355,6 +357,9 @@ export const Profile: React.FC = () => {
                   })}
                   tile
                 />
+                <div className="mt-4 flex">
+                  <Reorder order={{ node: lastOrder }} loading={addingToCart} setLoading={setAddingToCart} />
+                </div>
               </div>
             </div>
           </div>
