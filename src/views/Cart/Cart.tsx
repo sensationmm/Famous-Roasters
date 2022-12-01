@@ -4,6 +4,7 @@ import { CartQueryQuery } from '@shopify/hydrogen/dist/esnext/components/CartPro
 import { Scalars } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
 import React, { useContext, useEffect, useState } from 'react'
+import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
 import { Link, useSearchParams } from 'react-router-dom'
 import {
@@ -51,8 +52,6 @@ export const Cart: React.FC = () => {
   const [cartContents, setCartContents] = useState<CartQueryQuery['cart']>()
 
   useEffect(() => {
-    document.title = `${t('brand.name')} | ${t('pages.cart.title')}`
-
     return () => {
       clearTimeout(timeout)
     }
@@ -337,6 +336,13 @@ export const Cart: React.FC = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>
+          {t('brand.name')} | {t('pages.cart.displayTitle')}
+        </title>
+        <link rel="canonical" href={`${process.env.REACT_APP_DOMAIN_SHOP}/cart`} />
+        <meta name="robots" content="noindex" />
+      </Helmet>
       {showMissingItemsWarning && (
         <Notification
           heading={t('pages.cart.notification.fail.heading')}

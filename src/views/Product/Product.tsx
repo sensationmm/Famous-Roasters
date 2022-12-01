@@ -680,6 +680,7 @@ export const Product: React.FC = () => {
       <Helmet>
         <title>{titleTag.join(' ')}</title>
         <meta name="description" content={`${descTag.join(' ')}!`} />
+        <link rel="canonical" href={`${process.env.REACT_APP_DOMAIN_SHOP}/product/${id}`} />
       </Helmet>
     )
   }
