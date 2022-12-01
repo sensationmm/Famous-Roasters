@@ -10,6 +10,7 @@ import {
   useCurrentRefinements,
   useInstantSearch,
   useRefinementList,
+  useSortBy,
 } from 'react-instantsearch-hooks-web'
 import { ProductTileLoader, Typography, TypographySize, TypographyType } from 'src/components'
 import CheckboxFilter from 'src/components/AlgoliaSearch/CheckboxFilter'
@@ -75,6 +76,16 @@ export const renderSearchContent = (
   )
 }
 
+export const returnSortItems = () => {
+  const { t } = useTranslation()
+  return [
+    { label: t('pages.catalogue.filters.sort.values.none'), value: 'products' },
+    { label: t('pages.catalogue.filters.sort.values.newest'), value: 'products_most_recent' },
+    { label: t('pages.catalogue.filters.sort.values.priceAsc'), value: 'products_price_asc' },
+    { label: t('pages.catalogue.filters.sort.values.priceDesc'), value: 'products_price_desc' },
+  ]
+}
+
 const CoffeeSearch: React.FC = () => {
   const { t } = useTranslation()
   const search = useInstantSearch()
@@ -87,6 +98,10 @@ const CoffeeSearch: React.FC = () => {
   useRefinementList({ attribute: 'meta.my_fields.body' })
   const { items: activeRefinements } = useCurrentRefinements()
   const { refine: clearRefinements } = useClearRefinements()
+  const sortItems = returnSortItems()
+  const { refine: clearSort } = useSortBy({
+    items: sortItems,
+  })
 
   const getCoffeeText = () => {
     const type = activeRefinements.find((x) => x.label === 'meta.my_fields.coffee_type')?.refinements[1].value
@@ -159,7 +174,14 @@ const CoffeeSearch: React.FC = () => {
           <ListboxFilter attribute="vendor" />
           <AromaFilterButton />
           {activeRefinements.length > 0 && (
-            <button type="button" onClick={() => clearRefinements()} data-testid="button-filters-menu-remove-dt">
+            <button
+              type="button"
+              onClick={() => {
+                clearRefinements()
+                clearSort('products')
+              }}
+              data-testid="button-filters-menu-remove-dt"
+            >
               <span className="sr-only">{t(`pages.catalogue.filters.common.filtersMenu.removeFilter`)}</span>
               <TrashIcon className="h-8 w-8" aria-hidden="true" />
             </button>
@@ -192,12 +214,7 @@ const CoffeeSearch: React.FC = () => {
 
         <div className="w-1/2 flex flex-row justify-end">
           <SortBy
-            items={[
-              { label: t('pages.catalogue.filters.sort.values.none'), value: 'products' },
-              { label: t('pages.catalogue.filters.sort.values.newest'), value: 'products_most_recent' },
-              { label: t('pages.catalogue.filters.sort.values.priceAsc'), value: 'products_price_asc' },
-              { label: t('pages.catalogue.filters.sort.values.priceDesc'), value: 'products_price_desc' },
-            ]}
+            items={sortItems}
             classNames={{
               root: 'chevron w-full md:w-48',
               select: 'rounded-full border border-coreUI-text-tertiary px-4 py-2 bg-white w-full',

@@ -1,10 +1,17 @@
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Configure, SearchBox, SortBy, useClearRefinements, useInstantSearch } from 'react-instantsearch-hooks-web'
+import {
+  Configure,
+  SearchBox,
+  SortBy,
+  useClearRefinements,
+  useInstantSearch,
+  useSortBy,
+} from 'react-instantsearch-hooks-web'
 import { useParams } from 'react-router-dom'
 import { capitalize } from 'src/utils/formatters'
 
-import { renderSearchContent } from './CoffeeSearch'
+import { renderSearchContent, returnSortItems } from './CoffeeSearch'
 import Pagination from './Pagination'
 import SingleSelectFilter from './SingleSelectFilter'
 import Stats from './Stats'
@@ -16,11 +23,16 @@ const AccessoriesSearch: React.FC = () => {
   const numberOfHitsToShow = 12
   const { productType } = useParams()
   const { refine: clearRefinements } = useClearRefinements()
+  const sortItems = returnSortItems()
+  const { refine: clearSort } = useSortBy({
+    items: sortItems,
+  })
 
   const collection = productType === 'accessories' ? 'equipment' : productType
 
   useEffect(() => {
     clearRefinements()
+    clearSort('products')
   }, [productType])
 
   return (
@@ -62,12 +74,7 @@ const AccessoriesSearch: React.FC = () => {
 
         <div className="w-1/2 flex flex-row justify-end">
           <SortBy
-            items={[
-              { label: t('pages.catalogue.filters.sort.values.none'), value: 'products' },
-              { label: t('pages.catalogue.filters.sort.values.newest'), value: 'products_most_recent' },
-              { label: t('pages.catalogue.filters.sort.values.priceAsc'), value: 'products_price_asc' },
-              { label: t('pages.catalogue.filters.sort.values.priceDesc'), value: 'products_price_desc' },
-            ]}
+            items={sortItems}
             classNames={{
               root: 'chevron w-full md:w-48',
               select: 'rounded-full border border-coreUI-text-tertiary px-4 py-2 bg-white w-full',
