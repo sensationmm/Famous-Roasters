@@ -1,3 +1,15 @@
+# [1.103.0](https://github.com/Famous-Roasters/frontend/compare/v1.102.0...v1.103.0) (2022-12-02)
+
+
+### Bug Fixes
+
+* **product:** remove defunct region imagery ([a88f3d2](https://github.com/Famous-Roasters/frontend/commit/a88f3d2bf71c73a7e9fe53b0fd7b24dac3ee47a7))
+
+
+### Features
+
+* **product:** reorder ([805da63](https://github.com/Famous-Roasters/frontend/commit/805da63eb0b900718ef8ab406aaf637b243db449))
+
 # [1.102.0](https://github.com/Famous-Roasters/frontend/compare/v1.101.0...v1.102.0) (2022-12-01)
 
 
