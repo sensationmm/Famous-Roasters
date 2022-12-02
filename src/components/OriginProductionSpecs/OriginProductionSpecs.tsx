@@ -40,7 +40,7 @@ export const OriginProductionSpecs: React.FC<OriginProductionSpecsProps> = ({
         </div>
         <div className="flex flex-col ml-2">
           <Typography as="div" type={TypographyType.Label} className="text-coreUI-text-secondary">
-            {t(`pages.product.originProcessing.characteristics.${key}`)}
+            {t(`pages.product.sections.originProcessing.characteristics.${key}`)}
           </Typography>
           <Typography type={TypographyType.Paragraph}>{value}</Typography>
         </div>

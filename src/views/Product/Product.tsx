@@ -35,7 +35,7 @@ import {
   TypographyType,
 } from 'src/components'
 import useBreakpoint from 'src/hooks/useBreakpoint'
-import { formatPrice, getAPIId, getRegion, parseHtmlSafely, regionImages } from 'src/utils'
+import { formatPrice, getAPIId, parseHtmlSafely } from 'src/utils'
 import { Error } from 'src/views/Error'
 
 import { FindSimilar } from './FindSimilar'
@@ -529,40 +529,26 @@ export const Product: React.FC = () => {
   }
 
   const renderProductBlockContentGetToKnow = () => {
-    const region = getRegion(origin?.value || '')
-    const layout = region ? 'md:grid-cols-2' : ''
-    return (
-      <>
-        <div className={`grid ${layout} gap-6 mb-4`}>
-          {region !== undefined && (
-            <div className="h-[150px] md:h-auto overflow-hidden">
-              <img
-                className="w-full relative top-2/3 md:top-0 -translate-y-1/2 md:translate-y-0"
-                src={regionImages[region]}
-              />
-            </div>
-          )}
-          {/* Characteristics section */}
-          <div>{descriptionHtml && <div dangerouslySetInnerHTML={{ __html: parseHtmlSafely(descriptionHtml) }} />}</div>
-        </div>
+    return descriptionHtml && <div dangerouslySetInnerHTML={{ __html: parseHtmlSafely(descriptionHtml) }} />
+  }
 
-        <Typography
-          as="div"
-          type={TypographyType.Heading}
-          size={TypographySize.Tiny}
-          className="pb-2 mb-4 border-b border-coreUI-border"
-        >
-          {t('pages.product.originProcessing.title')}
-        </Typography>
-        <OriginProductionSpecs
-          flavourNotes={flavourNotes?.value}
-          origin={origin?.value}
-          producer={producer?.value}
-          altitude={altitude?.value}
-          variety={variety?.value}
-          processing={processing?.value}
-        />
-      </>
+  const renderOriginProcessing = () => {
+    const show =
+      flavourNotes?.value || origin?.value || producer?.value || altitude?.value || variety?.value || processing?.value
+
+    return (
+      show && (
+        <div className="mb-4">
+          <OriginProductionSpecs
+            flavourNotes={flavourNotes?.value}
+            origin={origin?.value}
+            producer={producer?.value}
+            altitude={altitude?.value}
+            variety={variety?.value}
+            processing={processing?.value}
+          />
+        </div>
+      )
     )
   }
 
@@ -581,7 +567,7 @@ export const Product: React.FC = () => {
 
   const renderProductCollapsableBlocks = () => {
     const blocksData = isCoffee
-      ? [{ key: 'getToKnow' }, { key: 'meetTheRoaster' }, { key: 'findSimilar' }]
+      ? [{ key: 'originProcessing' }, { key: 'getToKnow' }, { key: 'meetTheRoaster' }, { key: 'findSimilar' }]
       : isAccessory
       ? [{ key: 'aboutProduct' }, { key: 'youMightLike' }]
       : [{ key: 'youMightLike' }]
@@ -590,6 +576,8 @@ export const Product: React.FC = () => {
       switch (key) {
         case 'getToKnow':
           return renderProductBlockContentGetToKnow()
+        case 'originProcessing':
+          return renderOriginProcessing()
         case 'meetTheRoaster':
           return vendor_description?.value && vendor_image?.value ? renderProductBlockContentMeetTheRoaster() : null
         case 'findSimilar':

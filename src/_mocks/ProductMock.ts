@@ -32,7 +32,7 @@ const ProductMockDataBase: ProductCustom = {
       {
         node: {
           id: 'asda',
-          handle: 'example',
+          handle: 'coffee',
           metafields: [],
           __typename: "Collection",
           description: '',
