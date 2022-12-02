@@ -27,7 +27,6 @@ export const Account: React.FC = () => {
     setIsLoading(true)
     await Auth.signOut()
     navigate('/login')
-    window.location.reload()
     window.localStorage.removeItem('authToken')
   }
 

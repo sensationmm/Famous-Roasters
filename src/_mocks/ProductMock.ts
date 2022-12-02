@@ -159,7 +159,6 @@ const AccessoryMockDataBase: ProductCustom = {
   whyThisCoffee: {
     value: '',
   },
-  decaf: undefined,
   variants: {
     edges: [],
     nodes: [],
@@ -258,7 +257,57 @@ const AccessoryMockDataBase: ProductCustom = {
   },
   tags: [],
   updatedAt: '',
-  vendor_description: undefined,
+  vendor_description: {
+    value: ''
+  },
+  vendor_image: {
+    value: ''
+  },
+  aroma: {
+    value: ''
+  },
+  flavourNotes: {
+    value: ''
+  },
+  producer: {
+    value: ''
+  },
+  altitude: {
+    value: ''
+  },
+  variety: {
+    value: ''
+  },
+  processing: {
+    value: ''
+  },
+  sweetness: {
+    value: 0
+  },
+  body: {
+    value: 0
+  },
+  bitterness: {
+    value: 0
+  },
+  acidity: {
+    value: 0
+  },
+  bean_type: {
+    value: ''
+  },
+  coffee_type: {
+    value: ''
+  },
+  origin: {
+    value: ''
+  },
+  pricePerKg: {
+    value: ''
+  },
+  decaf: {
+    value: ''
+  },
 }
 
 const AccessoryMockDataBaseWithVariant: ProductCustom = {

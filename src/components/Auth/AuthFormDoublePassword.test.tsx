@@ -19,12 +19,18 @@ describe('Email and double Password fields group custom auth component', () => {
   })
 
   it('Renders correctly with no form', async () => {
-    const { container } = render(<AuthFormDoublePassword screenKey="signIn" onChange={() => null} />)
+    const { container } = render(
+      <Form name="testAuthFormItemInput" method="POST">
+        <AuthFormDoublePassword screenKey="signIn" onChange={() => null} />
+      </Form>,
+    )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
     expect(container).toMatchSnapshot()
   })
 
   it('Password is too short error', async () => {
+    // needed as async validator throws a console warning on password too short
+    jest.spyOn(console, 'warn').mockImplementation(jest.fn())
     const { container, getByTestId } = render(snippet())
     await act(() => {
       const password = getByTestId('password')
@@ -35,9 +41,12 @@ describe('Email and double Password fields group custom auth component', () => {
       fireEvent.blur(password)
     })
     expect(container).toMatchSnapshot()
+    jest.spyOn(console, 'warn').mockRestore()
   })
 
   it('Password is too long error', async () => {
+    // needed as async validator throws a console warning on password too long
+    jest.spyOn(console, 'warn').mockImplementation(jest.fn())
     const { container, getByTestId } = render(snippet())
     await act(() => {
       const password = getByTestId('password')
@@ -53,6 +62,7 @@ describe('Email and double Password fields group custom auth component', () => {
       fireEvent.blur(password)
     })
     expect(container).toMatchSnapshot()
+    jest.spyOn(console, 'warn').mockRestore()
   })
 
   it('Password must contain an uppercase error', async () => {

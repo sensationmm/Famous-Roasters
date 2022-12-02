@@ -250,6 +250,17 @@ exports[`Product view Renders correctly for a accessories 1`] = `
               </div>
             </div>
             <div
+              class="mt-4"
+            >
+              <div
+                class="inline-flex rounded-full px-3 py-1 bg-brand-grey-bombay"
+              >
+                <span
+                  class="text-xs leading-4"
+                />
+              </div>
+            </div>
+            <div
               class="pt-4 border-b border-brand-grey-whisper"
             >
               <p
