@@ -285,7 +285,7 @@ export const Product: React.FC = () => {
               <Typography type={TypographyType.Heading} size={TypographySize.Small} className="mr-1">
                 {formatPrice((quantity * parseFloat(variantSelected?.price.amount)).toString(), currencyCode)}
               </Typography>
-              {pricePerKg && (
+              {pricePerKg && pricePerKg.value !== '' && (
                 <Typography
                   type={TypographyType.Paragraph}
                   size={TypographySize.Tiny}
@@ -436,16 +436,23 @@ export const Product: React.FC = () => {
             </div>
           )}
           {/* Taste profile */}
-          {sweetness && body && bitterness && acidity && (
-            <div className="mt-4 pb-4 border-b border-brand-grey-whisper">
-              <TasteProfile
-                sweetness={sweetness.value}
-                body={body.value}
-                bitterness={bitterness.value}
-                acidity={acidity.value}
-              />
-            </div>
-          )}
+          {sweetness &&
+            sweetness.value !== 0 &&
+            body &&
+            body.value !== 0 &&
+            bitterness &&
+            bitterness.value !== 0 &&
+            acidity &&
+            acidity.value !== 0 && (
+              <div className="mt-4 pb-4 border-b border-brand-grey-whisper">
+                <TasteProfile
+                  sweetness={sweetness.value}
+                  body={body.value}
+                  bitterness={bitterness.value}
+                  acidity={acidity.value}
+                />
+              </div>
+            )}
 
           {!isCoffee && descriptionHtml && (
             <div
@@ -534,7 +541,12 @@ export const Product: React.FC = () => {
 
   const renderOriginProcessing = () => {
     const show =
-      flavourNotes?.value || origin?.value || producer?.value || altitude?.value || variety?.value || processing?.value
+      (flavourNotes && flavourNotes.value !== '') ||
+      (origin && origin.value !== '') ||
+      (producer && producer.value !== '') ||
+      (altitude && altitude.value !== '') ||
+      (variety && variety.value !== '') ||
+      (processing && processing.value !== '')
 
     return (
       show && (

@@ -35,6 +35,8 @@ describe('ConfirmSignUp custom auth component', () => {
   })
 
   it('Renders correctly with errors', async () => {
+    // needed as async validator throws a console warning on input too short
+    jest.spyOn(console, 'warn').mockImplementation(jest.fn())
     const { container } = render(
       <MockedProvider defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}>
         {
@@ -60,5 +62,6 @@ describe('ConfirmSignUp custom auth component', () => {
       fireEvent.change(input, { target: { value: 'asd' } })
     })
     expect(container).toMatchSnapshot()
+    jest.spyOn(console, 'warn').mockRestore()
   })
 })

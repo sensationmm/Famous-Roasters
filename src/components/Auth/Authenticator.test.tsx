@@ -9,6 +9,8 @@ Amplify.configure(awsconfig)
 
 describe('Authenticator wrapper', () => {
   it('Renders correctly', async () => {
+    // needed as aws package throws console errors when required params and types dont match
+    jest.spyOn(console, 'error').mockImplementation(jest.fn())
     const { container } = render(
       <Authenticator hideDefault={true} authState="signIn" onStateChange={() => null}>
         <div>Custom</div>
@@ -16,5 +18,6 @@ describe('Authenticator wrapper', () => {
     )
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
     expect(container).toMatchSnapshot()
+    jest.spyOn(console, 'error').mockRestore()
   })
 })

@@ -69,10 +69,10 @@ export const Auth: React.FC<AuthProps> = ({ authState = 'signIn' }) => {
       case 'signedIn':
         navigate('/profile')
         break
-      case 'signIn':
       case 'signInError':
-      default:
         window.location.pathname !== '/login' && navigate('/login')
+        break
+      default:
         break
     }
   }

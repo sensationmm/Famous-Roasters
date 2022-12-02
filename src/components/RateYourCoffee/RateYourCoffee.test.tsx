@@ -8,26 +8,12 @@ import { getSimplifiedId } from 'src/utils'
 
 import { RateYourCoffee } from '.'
 
-// const mockQuery = jest.fn().mockImplementation(() => Promise.resolve({ data: {} }))
 const mockQuery = jest.fn()
-
-// act(() => {
-jest.mock('src/config', () => ({
-  ...jest.requireActual('src/config'),
-  storeFrontClient: () => ({
-    query: () =>
-      Promise.resolve({
-        data: { product: { id: MockOrder.result.data.orders.edges[0].node.lineItems.edges[0].node.product.id } },
-      }),
-  }),
-}))
-// })
 
 jest.mock('@apollo/client', () => {
   return {
     __esModule: true,
     ...jest.requireActual('@apollo/client'),
-    // useLazyQuery: jest.fn().mockReturnValue([jest.fn().mockImplementation((args: any) => mockQuery(args))]),
     useLazyQuery: () => [mockQuery.mockImplementation(() => Promise.resolve({ data: {} }))],
   }
 })
@@ -143,9 +129,5 @@ describe('RateYourCoffee component', () => {
         comment: 'comment goes here',
       },
     })
-  })
-
-  afterEach(() => {
-    // jest.resetAllMocks()
   })
 })
