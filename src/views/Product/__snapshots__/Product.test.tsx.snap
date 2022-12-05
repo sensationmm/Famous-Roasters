@@ -2808,7 +2808,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                   />
                 </div>
                 <div
-                  class="order-2 xl:order-1 xl:max-w-screen-xl xl:mx-auto"
+                  class="order-2 xl:order-1"
                 >
                   <p
                     class="text-base leading-6"
@@ -4674,7 +4674,7 @@ exports[`Product view Renders correctly for a successful call with International
                   />
                 </div>
                 <div
-                  class="order-2 xl:order-1 xl:max-w-screen-xl xl:mx-auto"
+                  class="order-2 xl:order-1"
                 >
                   <p
                     class="text-base leading-6"
@@ -6527,7 +6527,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                   />
                 </div>
                 <div
-                  class="order-2 xl:order-1 xl:max-w-screen-xl xl:mx-auto"
+                  class="order-2 xl:order-1"
                 >
                   <p
                     class="text-base leading-6"
