@@ -570,7 +570,7 @@ export const Product: React.FC = () => {
         <div className="order-1 xl:order-2 xl:max-w-screen-xl xl:mx-auto xl:px-24">
           <img src={vendor_image?.value} alt={vendor} />
         </div>
-        <div className="order-2 xl:order-1 xl:max-w-screen-xl xl:mx-auto">
+        <div className="order-2 xl:order-1">
           <Typography as="p">{vendor_description?.value}</Typography>
         </div>
       </div>
