@@ -1,3 +1,10 @@
+## [1.103.2](https://github.com/Famous-Roasters/frontend/compare/v1.103.1...v1.103.2) (2022-12-05)
+
+
+### Bug Fixes
+
+* **product:** standardise text alignment ([db4e5ee](https://github.com/Famous-Roasters/frontend/commit/db4e5ee64e9535a3e18221d85a0f3f6a3ec921c0))
+
 ## [1.103.1](https://github.com/Famous-Roasters/frontend/compare/v1.103.0...v1.103.1) (2022-12-02)
 
 
