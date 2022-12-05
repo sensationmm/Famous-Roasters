@@ -1,3 +1,11 @@
+## [1.103.3](https://github.com/Famous-Roasters/frontend/compare/v1.103.2...v1.103.3) (2022-12-05)
+
+
+### Bug Fixes
+
+* **storybook:** fix broken build ([c042d2d](https://github.com/Famous-Roasters/frontend/commit/c042d2df4a7c3c778a900966bcd9f1a5d31949b2))
+* **storybook:** update to latest package ([be8f7a1](https://github.com/Famous-Roasters/frontend/commit/be8f7a15648ed458f70e9ca067f7c70e7337c05d))
+
 ## [1.103.2](https://github.com/Famous-Roasters/frontend/compare/v1.103.1...v1.103.2) (2022-12-05)
 
 
