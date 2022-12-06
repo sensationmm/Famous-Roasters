@@ -1,10 +1,11 @@
-import { CurrencyCode, Product, WeightUnit } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+/* Needed because @shopify/hydrogen/dist/next/storefront-api-types isnt available in production */
 import { GraphQLError } from 'graphql'
 import { loader } from 'graphql.macro'
 import { ProductCustom } from 'src/views/Product/Product'
 const GET_PRODUCT = loader('src/graphql/queries/product.query.graphql')
 
-const ProductMockDataBase: ProductCustom = {
+const ProductMockDataBase: any = {
   id: "gid://shopify/Product/7655228866776",
   title: 'Espresso Raritäten Set',
   seo: {
@@ -18,11 +19,11 @@ const ProductMockDataBase: ProductCustom = {
   priceRange: {
     maxVariantPrice: {
       amount: '9.99',
-      currencyCode: CurrencyCode.Eur,
+      currencyCode: 'EUR',
     },
     minVariantPrice: {
       amount: '19.99',
-      currencyCode: CurrencyCode.Eur,
+      currencyCode: 'EUR',
     },
   },
   descriptionHtml: '<p>Hello world</p>',
@@ -62,11 +63,11 @@ const ProductMockDataBase: ProductCustom = {
   compareAtPriceRange: {
     maxVariantPrice: {
       amount: '9.99',
-      currencyCode: CurrencyCode.Eur,
+      currencyCode: 'EUR',
     },
     minVariantPrice: {
       amount: '19.99',
-      currencyCode: CurrencyCode.Eur,
+      currencyCode: 'EUR',
     },
   },
   createdAt: '',
@@ -133,7 +134,7 @@ const ProductMockDataBase: ProductCustom = {
   metafields: []
 }
 
-const AccessoryMockDataBase: ProductCustom = {
+const AccessoryMockDataBase: any = {
   id: "gid://shopify/Product/7968366166282",
   title: 'Barista Pinsel | barista.tools',
   seo: {
@@ -146,11 +147,11 @@ const AccessoryMockDataBase: ProductCustom = {
   priceRange: {
     minVariantPrice: {
       amount: '28.5',
-      currencyCode: CurrencyCode.Eur,
+      currencyCode: 'EUR',
     },
     maxVariantPrice: {
       amount: '28.5',
-      currencyCode: CurrencyCode.Eur,
+      currencyCode: 'EUR',
     },
   },
   description: '',
@@ -227,11 +228,11 @@ const AccessoryMockDataBase: ProductCustom = {
   compareAtPriceRange: {
     maxVariantPrice: {
       amount: '28.5',
-      currencyCode: CurrencyCode.Eur,
+      currencyCode: 'EUR',
     },
     minVariantPrice: {
       amount: '28.5',
-      currencyCode: CurrencyCode.Eur,
+      currencyCode: 'EUR',
     },
   },
   createdAt: '',
@@ -321,7 +322,7 @@ const AccessoryMockDataBaseWithVariant: ProductCustom = {
       {
         id: "gid://shopify/ProductVariant/43570607653130",
         availableForSale: true,
-        price: { amount: '28.50', currencyCode: CurrencyCode.Eur},
+        price: { amount: '28.50', currencyCode: 'EUR'},
         package_size: {
           value: '300g',
         },
@@ -335,7 +336,7 @@ const AccessoryMockDataBaseWithVariant: ProductCustom = {
         currentlyNotInStock: false,
         priceV2: {
           amount: '9.99',
-          currencyCode: CurrencyCode.Eur,
+          currencyCode: 'EUR',
         },
         product: AccessoryMockDataBase,
         requiresShipping: true,
@@ -357,7 +358,7 @@ const AccessoryMockDataBaseWithVariant: ProductCustom = {
           },
         },
         title: 'variant',
-        weightUnit: WeightUnit.Kilograms,
+        weightUnit: 'KG',
       },
     ],
     pageInfo: {
@@ -380,10 +381,10 @@ export const ProductMockData: ProductCustom = {
         availableForSale: true,
         currentlyNotInStock: false,
         id: "gid://shopify/ProductVariant/42737527324888",
-        price: { amount: '9.99', currencyCode: CurrencyCode.Eur },
+        price: { amount: '9.99', currencyCode: 'EUR' },
         priceV2: {
           amount: '9.99',
-          currencyCode: CurrencyCode.Eur,
+          currencyCode: 'EUR',
         },
         metafields: [],
         product: ProductMockDataBase,
@@ -406,7 +407,7 @@ export const ProductMockData: ProductCustom = {
           },
         },
         title: 'variant',
-        weightUnit: WeightUnit.Kilograms,
+        weightUnit: 'KG',
         package_size: {
           value: '',
         },
@@ -553,7 +554,7 @@ export const ProductMockDataWithCustomMetadata: ProductCustom = {
   },
 }
 
-export const ProductMockDataNoImage: Product = {
+export const ProductMockDataNoImage: any = {
   ...ProductMockData,
   featuredImage: null,
 }

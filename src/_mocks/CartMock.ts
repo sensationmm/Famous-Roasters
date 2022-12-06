@@ -1,5 +1,5 @@
-import { CartQueryQuery } from '@shopify/hydrogen/dist/esnext/components/CartProvider/graphql/CartQuery'
-import { CartLineEdge, CountryCode, CurrencyCode } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+/* Needed because @shopify/hydrogen/dist/next/storefront-api-types isnt available in production */
 import { GraphQLError } from 'graphql'
 import { loader } from 'graphql.macro'
 
@@ -9,7 +9,7 @@ const GET_CART_LINES_ADD = loader('src/graphql/queries/cartLinesAdd.mutation.gra
 const GET_CART_LINES_UPDATE = loader('src/graphql/queries/cartLinesUpdate.mutation.graphql')
 const GET_CART_LINES_REMOVE = loader('src/graphql/queries/cartLinesRemove.mutation.graphql')
 
-const CartLineEdgeMockData: CartLineEdge = {
+const CartLineEdgeMockData: any = {
   node: {
     id: 'gid://shopify/CartLine/9876543210',
     attributes: [],
@@ -29,7 +29,7 @@ const CartLineEdgeMockData: CartLineEdge = {
       },
       priceV2: {
         amount: '7.2',
-        currencyCode: CurrencyCode.Eur,
+        currencyCode: 'EUR',
       },
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
@@ -54,12 +54,12 @@ const CartLineEdgeMockData: CartLineEdge = {
   },
 }
 
-export const CartMockData: CartQueryQuery = {
+export const CartMockData: any = {
   cart: {
     id: 'gid://shopify/Cart/123456789',
     checkoutUrl: 'https://famousroasters.myshopify.com/cart/c/123456789',
     buyerIdentity: {
-      countryCode: CountryCode.De,
+      countryCode: 'DE',
       email: '',
       phone: '',
     },
@@ -68,11 +68,11 @@ export const CartMockData: CartQueryQuery = {
     cost: {
       subtotalAmount: {
         amount: '10',
-        currencyCode: CurrencyCode.Eur,
+        currencyCode: 'EUR',
       },
       totalAmount: {
         amount: '10',
-        currencyCode: CurrencyCode.Eur,
+        currencyCode: 'EUR',
       },
     },
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -80,11 +80,11 @@ export const CartMockData: CartQueryQuery = {
     estimatedCost: {
       subtotalAmount: {
         amount: '10',
-        currencyCode: CurrencyCode.Eur,
+        currencyCode: 'EUR',
       },
       totalAmount: {
         amount: '10',
-        currencyCode: CurrencyCode.Eur,
+        currencyCode: 'EUR',
       },
     },
     totalQuantity: 0,
