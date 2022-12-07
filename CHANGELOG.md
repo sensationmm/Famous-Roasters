@@ -1,3 +1,11 @@
+## [1.103.5](https://github.com/Famous-Roasters/frontend/compare/v1.103.4...v1.103.5) (2022-12-07)
+
+
+### Bug Fixes
+
+* **loader:** loader hang on signout ([e0505c6](https://github.com/Famous-Roasters/frontend/commit/e0505c65e1b7bdfae54605ec5ebd5003575c82d7))
+* **product:** sonarcloud fix ([f7462fc](https://github.com/Famous-Roasters/frontend/commit/f7462fc8ad376996dddc06153e948261aa99cfb4))
+
 ## [1.103.4](https://github.com/Famous-Roasters/frontend/compare/v1.103.3...v1.103.4) (2022-12-06)
 
 
