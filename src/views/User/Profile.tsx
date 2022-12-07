@@ -271,7 +271,7 @@ export const Profile: React.FC = () => {
           </div>
         </div>
 
-        {ordersLoading && (
+        {userProfile && ordersLoading && (
           <div className={containerStyle}>
             <div className={`${sectionStyle}`}>
               <Loader />
@@ -348,6 +348,7 @@ export const Profile: React.FC = () => {
 
                     return (
                       <OrderTile
+                        key={`order-tile-${item.node.id}`}
                         node={item.node}
                         productId={item.node.product.id}
                         showRate
@@ -365,7 +366,7 @@ export const Profile: React.FC = () => {
           </div>
         )}
 
-        {loadingAccessories && (
+        {userProfile && loadingAccessories && (
           <div className={containerStyle}>
             <div className={`${sectionStyle}`}>
               <Loader />
@@ -430,11 +431,11 @@ export const Profile: React.FC = () => {
                 {t('pages.profile.sections.lastOrder.productSuggestionText')}
               </Typography>
               <div className="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-                {accessories.slice(0, breakpoint === 'lg' ? 3 : 2).map((node: ProductCustom, i: number) => {
+                {accessories.slice(0, breakpoint === 'lg' ? 3 : 2).map((node: ProductCustom) => {
                   const id = getSimplifiedId(node.id)
                   return (
-                    <Link to={`/product/${id}`} key={`product-tile-link-${i}`}>
-                      <ProductTile key={`title-${i}`} productNode={node} />
+                    <Link to={`/product/${id}`} key={`product-tile-link-${id}`}>
+                      <ProductTile key={`title-${id}`} productNode={node} />
                     </Link>
                   )
                 })}
