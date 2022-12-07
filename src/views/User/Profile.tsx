@@ -271,7 +271,7 @@ export const Profile: React.FC = () => {
           </div>
         </div>
 
-        {ordersLoading && (
+        {userProfile && ordersLoading && (
           <div className={containerStyle}>
             <div className={`${sectionStyle}`}>
               <Loader />
@@ -365,7 +365,7 @@ export const Profile: React.FC = () => {
           </div>
         )}
 
-        {loadingAccessories && (
+        {userProfile && loadingAccessories && (
           <div className={containerStyle}>
             <div className={`${sectionStyle}`}>
               <Loader />

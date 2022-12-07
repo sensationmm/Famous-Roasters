@@ -26,6 +26,7 @@ export const Account: React.FC = () => {
   const signOut = async () => {
     setIsLoading(true)
     await Auth.signOut()
+    setIsLoading(false)
     navigate('/login')
     window.localStorage.removeItem('authToken')
   }

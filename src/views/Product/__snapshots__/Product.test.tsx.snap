@@ -245,7 +245,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
                 <p
                   class="text-coreUI-text-secondary text-sm leading-5"
                 >
-                  Tamper
+                  Johann Jacobs Haus | 
                 </p>
               </div>
             </div>
@@ -259,25 +259,6 @@ exports[`Product view Renders correctly for a accessories 1`] = `
                   class="text-xs leading-4"
                 />
               </div>
-            </div>
-            <div
-              class="pt-4 border-b border-brand-grey-whisper"
-            >
-              <p
-                class="mb-4"
-              >
-                Der Naturhaarpinsel von barista.tools ist ideal für das Reinigen des Siebträgers und des Bereichs rund um die Mühle. Gerade für die Arbeit im professionellen Bereich ist dies der optimale Mühlenpinsel - optisch ansprechend, praktisch um schnell Kaffeekrümmel von der Mühle oder dem Arbeitsbereich zu entfernen und liegt gut in der Hand.
-              </p>
-              <p
-                class="mb-4"
-              >
-                Das Naturhaar ist hitzebeständig und der Pinsel langlebig verarbeitet.
-              </p>
-              <p
-                class="mb-4"
-              >
-                 
-              </p>
             </div>
             <div
               class="pt-4"
@@ -580,7 +561,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
                   <span
                     class="text-coreUI-text-secondary text-xs leading-4"
                   >
-                    Wir tun immer unser Bestes, um dein Bestellung rechtzeitig zu bearbeiten und zu versenden. Bitte beachten, dass wir einen Drittanbieter-Kurier verwenden, um das Produkt an dein Haustür zu liefern.
+                    Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu dir. Wir teilen dir den geplanten Liefertermin im nächsten Schritt mit.
                   </span>
                 </div>
               </div>
@@ -666,7 +647,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
           <span
             class="text-coreUI-text-secondary text-xs leading-4"
           >
-            Wir tun immer unser Bestes, um dein Bestellung rechtzeitig zu bearbeiten und zu versenden. Bitte beachten, dass wir einen Drittanbieter-Kurier verwenden, um das Produkt an dein Haustür zu liefern.
+            Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu dir. Wir teilen dir den geplanten Liefertermin im nächsten Schritt mit.
           </span>
         </div>
       </div>
@@ -681,303 +662,100 @@ exports[`Product view Renders correctly for a accessories 1`] = `
           >
             <button
               aria-controls="headlessui-disclosure-panel-:r3b:"
+              aria-expanded="true"
               class="flex w-full justify-between py-2 text-left"
               data-headlessui-state="open"
               data-testid="button-disclosure-toggle"
-              disabled=""
               id="headlessui-disclosure-button-:r3a:"
               type="button"
             >
               <span
                 class="text-xl leading-7 font-semibold"
               >
-                Was dir gefallen könnten
+                Alles zum Kaffee
               </span>
+              <svg
+                aria-hidden="true"
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 12H4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
             </button>
             <div
               class="py-2"
               data-headlessui-state="open"
               id="headlessui-disclosure-panel-:r3b:"
             >
-              <div
-                class="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
+              <div>
+                <p
+                  class="mb-4"
+                >
+                  Der Naturhaarpinsel von barista.tools ist ideal für das Reinigen des Siebträgers und des Bereichs rund um die Mühle. Gerade für die Arbeit im professionellen Bereich ist dies der optimale Mühlenpinsel - optisch ansprechend, praktisch um schnell Kaffeekrümmel von der Mühle oder dem Arbeitsbereich zu entfernen und liegt gut in der Hand.
+                </p>
+                <p
+                  class="mb-4"
+                >
+                  Das Naturhaar ist hitzebeständig und der Pinsel langlebig verarbeitet.
+                </p>
+                <p
+                  class="mb-4"
+                >
+                   
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="border-t border-coreUI-border mx-auto w-full py-4"
+          >
+            <button
+              aria-controls="headlessui-disclosure-panel-:r3d:"
+              class="flex w-full justify-between py-2 text-left"
+              data-headlessui-state="open"
+              data-testid="button-disclosure-toggle"
+              disabled=""
+              id="headlessui-disclosure-button-:r3c:"
+              type="button"
+            >
+              <span
+                class="text-xl leading-7 font-semibold"
               >
-                <a
-                  href="/product/7655228866776"
+                Ähnliche Produkte
+              </span>
+            </button>
+            <div
+              class="py-2"
+              data-headlessui-state="open"
+              id="headlessui-disclosure-panel-:r3d:"
+            >
+              <div
+                class="p-4 border border-coreUI-border bg-white"
+              >
+                <div
+                  class="text-center text-base leading-6"
                 >
-                  <div
-                    class="flex pt-8"
-                  >
-                    <img
-                      alt="Espresso Raritäten Set"
-                      class="hidden"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153&width=150&height=150"
-                    />
-                    <div
-                      class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
-                    >
-                      <div
-                        class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
-                      >
-                        <img
-                          alt="Espresso Raritäten Set"
-                          class="w-28 max-h-28"
-                          height="150px"
-                          src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153&width=150&height=150"
-                          width="150px"
-                        />
-                        <div
-                          class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
-                        >
-                          <span
-                            class="text-xs leading-4"
-                          >
-                            Decaf
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="absolute"
-                    >
-                      <div
-                        class="flex justify-center items-center shrink-0 self-center relative w-36 h-36"
-                      >
-                        <div
-                          class="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36"
-                        >
-                          <div
-                            class="block bg-coreUI-text-tertiary rounded w-2/5 h-3/5"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="flex flex-col w-full justify-center pl-4"
-                    >
-                      <div
-                        class="text-base leading-6 font-semibold"
-                      >
-                        Espresso Raritäten Set
-                      </div>
-                      <div
-                        class="text-coreUI-text-secondary text-base leading-6"
-                      >
-                        60beans
-                      </div>
-                      <div
-                        class="text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Kolumbien
-                      </div>
-                      <div
-                        class="text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Filter
-                      </div>
-                      <div
-                        class="flex items-baseline"
-                      >
-                        <span
-                          class="mr-1 text-base leading-6 font-semibold"
-                        >
-                          19,99 €
-                        </span>
-                        <span
-                          class="text-coreUI-text-secondary text-xs leading-4"
-                        >
-                          (
-                          10,00 €
-                          /kg)
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="/product/7655228866776"
+                  Ein Fehler ist aufgetreten
+                </div>
+                <div
+                  class="mt-4 flex justify-center"
                 >
-                  <div
-                    class="flex pt-8"
+                  <button
+                    class="relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
+                    data-testid="button-prompt"
+                    role="button"
                   >
-                    <img
-                      alt="Espresso Raritäten Set"
-                      class="hidden"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153&width=150&height=150"
-                    />
-                    <div
-                      class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
-                    >
-                      <div
-                        class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
-                      >
-                        <img
-                          alt="Espresso Raritäten Set"
-                          class="w-28 max-h-28"
-                          height="150px"
-                          src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153&width=150&height=150"
-                          width="150px"
-                        />
-                        <div
-                          class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
-                        >
-                          <span
-                            class="text-xs leading-4"
-                          >
-                            Decaf
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="absolute"
-                    >
-                      <div
-                        class="flex justify-center items-center shrink-0 self-center relative w-36 h-36"
-                      >
-                        <div
-                          class="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36"
-                        >
-                          <div
-                            class="block bg-coreUI-text-tertiary rounded w-2/5 h-3/5"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="flex flex-col w-full justify-center pl-4"
-                    >
-                      <div
-                        class="text-base leading-6 font-semibold"
-                      >
-                        Espresso Raritäten Set
-                      </div>
-                      <div
-                        class="text-coreUI-text-secondary text-base leading-6"
-                      >
-                        60beans
-                      </div>
-                      <div
-                        class="text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Kolumbien
-                      </div>
-                      <div
-                        class="text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Filter
-                      </div>
-                      <div
-                        class="flex items-baseline"
-                      >
-                        <span
-                          class="mr-1 text-base leading-6 font-semibold"
-                        >
-                          19,99 €
-                        </span>
-                        <span
-                          class="text-coreUI-text-secondary text-xs leading-4"
-                        >
-                          (
-                          10,00 €
-                          /kg)
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="/product/7655228866776"
-                >
-                  <div
-                    class="flex pt-8"
-                  >
-                    <img
-                      alt="Espresso Raritäten Set"
-                      class="hidden"
-                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153&width=150&height=150"
-                    />
-                    <div
-                      class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
-                    >
-                      <div
-                        class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
-                      >
-                        <img
-                          alt="Espresso Raritäten Set"
-                          class="w-28 max-h-28"
-                          height="150px"
-                          src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153&width=150&height=150"
-                          width="150px"
-                        />
-                        <div
-                          class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
-                        >
-                          <span
-                            class="text-xs leading-4"
-                          >
-                            Decaf
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="absolute"
-                    >
-                      <div
-                        class="flex justify-center items-center shrink-0 self-center relative w-36 h-36"
-                      >
-                        <div
-                          class="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36"
-                        >
-                          <div
-                            class="block bg-coreUI-text-tertiary rounded w-2/5 h-3/5"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="flex flex-col w-full justify-center pl-4"
-                    >
-                      <div
-                        class="text-base leading-6 font-semibold"
-                      >
-                        Espresso Raritäten Set
-                      </div>
-                      <div
-                        class="text-coreUI-text-secondary text-base leading-6"
-                      >
-                        60beans
-                      </div>
-                      <div
-                        class="text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Kolumbien
-                      </div>
-                      <div
-                        class="text-coreUI-text-secondary text-base leading-6"
-                      >
-                        Filter
-                      </div>
-                      <div
-                        class="flex items-baseline"
-                      >
-                        <span
-                          class="mr-1 text-base leading-6 font-semibold"
-                        >
-                          19,99 €
-                        </span>
-                        <span
-                          class="text-coreUI-text-secondary text-xs leading-4"
-                        >
-                          (
-                          10,00 €
-                          /kg)
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </a>
+                    Erneut versuchen
+                  </button>
+                </div>
               </div>
             </div>
           </div>

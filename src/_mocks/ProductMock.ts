@@ -198,7 +198,7 @@ const AccessoryMockDataBase: any = {
       {
         node: {
           id: 'asda',
-          handle: 'example',
+          handle: 'coffee',
           metafields: [],
           __typename: "Collection",
           description: '',
@@ -358,7 +358,7 @@ const AccessoryMockDataBaseWithVariant: ProductCustom = {
           },
         },
         title: 'variant',
-        weightUnit: 'KG',
+        weightUnit: 'KILOGRAMS',
       },
     ],
     pageInfo: {
@@ -407,7 +407,7 @@ export const ProductMockData: ProductCustom = {
           },
         },
         title: 'variant',
-        weightUnit: 'KG',
+        weightUnit: 'KILOGRAMS',
         package_size: {
           value: '',
         },
