@@ -27,7 +27,7 @@ describe('AccessoriesSearch view', () => {
       <ReactRouterDom.BrowserRouter>
         <I18nextProvider i18n={i18n}>
           <InstantSearch indexName="products" searchClient={searchClient}>
-            <AccessoriesSearch getDescription={jest.fn()} />
+            <AccessoriesSearch getDescription={jest.fn().mockReturnValue('Category text here')} />
           </InstantSearch>
         </I18nextProvider>
       </ReactRouterDom.BrowserRouter>,
@@ -44,7 +44,7 @@ describe('AccessoriesSearch view', () => {
       <ReactRouterDom.BrowserRouter>
         <I18nextProvider i18n={i18n}>
           <InstantSearch indexName="products" searchClient={searchClient}>
-            <AccessoriesSearch getDescription={jest.fn()} />
+            <AccessoriesSearch getDescription={jest.fn().mockReturnValue('Category text here')} />
           </InstantSearch>
         </I18nextProvider>
       </ReactRouterDom.BrowserRouter>,

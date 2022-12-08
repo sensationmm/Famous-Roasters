@@ -64,6 +64,10 @@ jest.mock('src/config', () => ({
 }))
 
 describe('Profile view', () => {
+  beforeAll(() => {
+    // needed as console throws error for duplicate product id from mock data
+    jest.spyOn(console, 'error').mockImplementation(jest.fn())
+  })
   it('Renders correctly', async () => {
     const { container } = render(
       <MockedProvider
@@ -145,5 +149,6 @@ describe('Profile view', () => {
 
   afterAll(() => {
     jest.resetAllMocks()
+    jest.spyOn(console, 'error').mockRestore()
   })
 })
