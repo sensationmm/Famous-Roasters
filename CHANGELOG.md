@@ -1,3 +1,15 @@
+# [1.104.0](https://github.com/Famous-Roasters/frontend/compare/v1.103.5...v1.104.0) (2022-12-08)
+
+
+### Bug Fixes
+
+* **catalog:** failed tests ([437f529](https://github.com/Famous-Roasters/frontend/commit/437f5296157e29d36f317d7e832e2fc2fe7f7b7e))
+
+
+### Features
+
+* **catalog:** add category page text ([6f44a31](https://github.com/Famous-Roasters/frontend/commit/6f44a31ae2dc963c4c63c4a16ddf5a370847d5b9))
+
 ## [1.103.5](https://github.com/Famous-Roasters/frontend/compare/v1.103.4...v1.103.5) (2022-12-07)
 
 
