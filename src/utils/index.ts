@@ -1,5 +1,5 @@
 import { toRoundedValueInRealScale, toValueInHumanScale } from './attributeScaleUtils'
-import { formatDate, formatPrice, getAPIId, getAromaKey, getSimplifiedId } from './formatters'
+import { formatDate, formatPrice, getAPIId, getAromaKey, getSimplifiedId, normalizeString } from './formatters'
 import { formatBlogHtmlElement, formatHtmlElement, isAllowedHtmlElement, parseHtmlSafely } from './htmlContentParser'
 import { useLocalStorage } from './localStorage'
 import { readTimeCalculator } from './readTimeCalculator'
@@ -17,3 +17,4 @@ export { isAllowedHtmlElement as isAllowedHtmlElement }
 export { toValueInHumanScale as toValueInHumanScale }
 export { toRoundedValueInRealScale as toRoundedValueInRealScale }
 export { readTimeCalculator as readTimeCalculator }
+export { normalizeString }

@@ -15,6 +15,7 @@ import {
 import { ProductTileLoader, Typography, TypographySize, TypographyType } from 'src/components'
 import CheckboxFilter from 'src/components/AlgoliaSearch/CheckboxFilter'
 import Hit from 'src/components/AlgoliaSearch/Hit'
+import { parseHtmlSafely } from 'src/utils'
 import { YouMightLike } from 'src/views/Product/YouMightLike'
 
 import { AromaFilterButton } from './AromaFilter'
@@ -86,7 +87,11 @@ export const returnSortItems = () => {
   ]
 }
 
-const CoffeeSearch: React.FC = () => {
+export type SearchScreenProps = {
+  getDescription: (filter: string | undefined) => string
+}
+
+const CoffeeSearch: React.FC<SearchScreenProps> = ({ getDescription }) => {
   const { t } = useTranslation()
   const search = useInstantSearch()
   const productHits = search?.results?.nbHits
@@ -103,14 +108,18 @@ const CoffeeSearch: React.FC = () => {
     items: sortItems,
   })
 
+  const type = activeRefinements
+    .find((x) => x.label === 'meta.my_fields.coffee_type')
+    ?.refinements[1].value.toString()
+    .toLowerCase()
+
   const getCoffeeText = () => {
-    const type = activeRefinements.find((x) => x.label === 'meta.my_fields.coffee_type')?.refinements[1].value
     switch (type) {
-      case 'Filter':
+      case 'filter':
         return 'filter'
-      case 'Espresso':
+      case 'espresso':
         return 'espresso'
-      case 'Omni':
+      case 'omni':
         return 'omni'
       default:
         return 'all'
@@ -229,6 +238,13 @@ const CoffeeSearch: React.FC = () => {
 
       {renderSearchContent('coffee', search.results, productHits, numberOfHitsToShow)}
       {productHits > 0 && <Pagination />}
+
+      <div
+        className="my-8"
+        dangerouslySetInnerHTML={{
+          __html: parseHtmlSafely(getDescription(type)),
+        }}
+      />
     </>
   )
 }

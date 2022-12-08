@@ -1,0 +1,10 @@
+query pages {
+  pages(first: 100) {
+    nodes {
+      id
+      handle
+      title
+      body
+    }
+  }
+}

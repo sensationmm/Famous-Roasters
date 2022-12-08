@@ -1162,5 +1162,14 @@ exports[`CoffeeSearch view Renders correctly 1`] = `
       class="ais-Hits-list grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
     />
   </div>
+  <div
+    class="my-8"
+  >
+    <p
+      class="mb-4"
+    >
+      Category text here
+    </p>
+  </div>
 </div>
 `;

@@ -3,6 +3,7 @@ query collections {
     nodes {
       id
       title
+      descriptionHtml
       sortOrder: metafield(namespace: "my_fields", key: "sort_order") {
         value
       }

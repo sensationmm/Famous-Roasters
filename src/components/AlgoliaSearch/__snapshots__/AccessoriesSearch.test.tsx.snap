@@ -854,66 +854,15 @@ exports[`AccessoriesSearch view Renders correctly for accessories 1`] = `
       class="ais-Hits-list grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
     />
   </div>
-  <nav
-    class="border-t border-coreUI-border flex items-center justify-between mb-8"
+  <div
+    class="my-8"
   >
-    <div
-      class="flex-1 flex justify-end mr-2"
+    <p
+      class="mb-4"
     >
-      <button
-        aria-label="Previous Page"
-        class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center font-bold text-coreUI-text-tertiary"
-        data-testid="pagination-previous"
-        disabled=""
-        title="Previous Page"
-      >
-        <svg
-          aria-hidden="true"
-          class="mr-1.5 h-5 w-5"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            clip-rule="evenodd"
-            d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
-    </div>
-    <div
-      class="cursor-pointer w-12 h-10 pt-3.5 text-center font-bold text-coreUI-text-tertiary border-t-2  text-coreUI-text-primary border-black"
-      data-testid="pagination-page-0"
-    >
-      1
-    </div>
-    <div
-      class="flex-1 flex justify-start -mt-0.5 ml-2"
-    >
-      <button
-        aria-label="Next Page"
-        class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center font-bold text-coreUI-text-tertiary"
-        data-testid="pagination-next"
-        disabled=""
-        title="Next Page"
-      >
-        <svg
-          aria-hidden="true"
-          class="ml-1.5 h-5 w-5"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            clip-rule="evenodd"
-            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
-    </div>
-  </nav>
+      Category text here
+    </p>
+  </div>
 </div>
 `;
 
@@ -1771,65 +1720,14 @@ exports[`AccessoriesSearch view Renders correctly for other 1`] = `
       class="ais-Hits-list grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
     />
   </div>
-  <nav
-    class="border-t border-coreUI-border flex items-center justify-between mb-8"
+  <div
+    class="my-8"
   >
-    <div
-      class="flex-1 flex justify-end mr-2"
+    <p
+      class="mb-4"
     >
-      <button
-        aria-label="Previous Page"
-        class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center font-bold text-coreUI-text-tertiary"
-        data-testid="pagination-previous"
-        disabled=""
-        title="Previous Page"
-      >
-        <svg
-          aria-hidden="true"
-          class="mr-1.5 h-5 w-5"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            clip-rule="evenodd"
-            d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
-    </div>
-    <div
-      class="cursor-pointer w-12 h-10 pt-3.5 text-center font-bold text-coreUI-text-tertiary border-t-2  text-coreUI-text-primary border-black"
-      data-testid="pagination-page-0"
-    >
-      1
-    </div>
-    <div
-      class="flex-1 flex justify-start -mt-0.5 ml-2"
-    >
-      <button
-        aria-label="Next Page"
-        class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center font-bold text-coreUI-text-tertiary"
-        data-testid="pagination-next"
-        disabled=""
-        title="Next Page"
-      >
-        <svg
-          aria-hidden="true"
-          class="ml-1.5 h-5 w-5"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            clip-rule="evenodd"
-            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
-    </div>
-  </nav>
+      Category text here
+    </p>
+  </div>
 </div>
 `;
