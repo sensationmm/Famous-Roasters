@@ -41,3 +41,7 @@ export const getAromaKey = (aroma: string) => {
 export const capitalize = (string: string) => {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }
+
+export const normalizeString = (string: string) => {
+  return string.normalize('NFD').replace(/\p{Diacritic}/gu, '')
+}

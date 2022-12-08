@@ -18,7 +18,7 @@ describe('CoffeeSearch view', () => {
       <Router>
         <I18nextProvider i18n={i18n}>
           <InstantSearch indexName="products" searchClient={searchClient}>
-            <CoffeeSearch />
+            <CoffeeSearch getDescription={jest.fn()} />
           </InstantSearch>
         </I18nextProvider>
       </Router>,

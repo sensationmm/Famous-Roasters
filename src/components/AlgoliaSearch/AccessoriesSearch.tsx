@@ -5,28 +5,36 @@ import {
   SearchBox,
   SortBy,
   useClearRefinements,
+  useCurrentRefinements,
   useInstantSearch,
   useSortBy,
 } from 'react-instantsearch-hooks-web'
 import { useParams } from 'react-router-dom'
+import { parseHtmlSafely } from 'src/utils'
 import { capitalize } from 'src/utils/formatters'
 
-import { renderSearchContent, returnSortItems } from './CoffeeSearch'
+import { renderSearchContent, returnSortItems, SearchScreenProps } from './CoffeeSearch'
 import Pagination from './Pagination'
 import SingleSelectFilter from './SingleSelectFilter'
 import Stats from './Stats'
 
-const AccessoriesSearch: React.FC = () => {
+const AccessoriesSearch: React.FC<SearchScreenProps> = ({ getDescription }) => {
   const { t } = useTranslation()
   const search = useInstantSearch()
   const productHits = search?.results?.nbHits
   const numberOfHitsToShow = 12
   const { productType } = useParams()
+  const { items: activeRefinements } = useCurrentRefinements()
   const { refine: clearRefinements } = useClearRefinements()
   const sortItems = returnSortItems()
   const { refine: clearSort } = useSortBy({
     items: sortItems,
   })
+
+  const type = activeRefinements
+    .find((x) => x.label === 'meta.my_fields.accessory_type')
+    ?.refinements[1].value.toString()
+    .toLowerCase()
 
   const collection = productType === 'accessories' ? 'equipment' : productType
 
@@ -84,7 +92,14 @@ const AccessoriesSearch: React.FC = () => {
       </div>
 
       {renderSearchContent('accessory', search.results, productHits, numberOfHitsToShow)}
-      <Pagination />
+      {productHits > 0 && <Pagination />}
+
+      <div
+        className="my-8"
+        dangerouslySetInnerHTML={{
+          __html: parseHtmlSafely(getDescription(type)),
+        }}
+      />
     </>
   )
 }

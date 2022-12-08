@@ -10,6 +10,7 @@ import { useParams } from 'react-router-dom'
 import { ErrorPrompt, Layout, Loader, ProductTileLoader, TabsNavigation } from 'src/components'
 import AccessoriesSearch from 'src/components/AlgoliaSearch/AccessoriesSearch'
 import CoffeeSearch from 'src/components/AlgoliaSearch/CoffeeSearch'
+import { normalizeString } from 'src/utils'
 
 import { ProductCustom } from '../Product'
 
@@ -42,6 +43,11 @@ interface ShopifyCollection {
   }
 }
 
+type ShopifyPage = {
+  body: string
+  handle: string
+}
+
 const searchClient = algoliasearch(
   process.env.REACT_APP_ALGOLIA_APP_ID || '',
   process.env.REACT_APP_ALGOLIA_API_KEY || '',
@@ -61,8 +67,10 @@ export const Catalogue: React.FC = () => {
   const { productType } = useParams()
   const { t } = useTranslation()
   const COLLECTIONS = loader('src/graphql/queries/collections.query.graphql')
+  const PAGES = loader('src/graphql/queries/pages.query.graphql')
 
   const { loading, error, data } = useQuery(COLLECTIONS)
+  const { data: dataPages } = useQuery(PAGES)
 
   if (error) {
     return <ErrorPrompt promptAction={() => history.go(0)} />
@@ -104,6 +112,26 @@ export const Catalogue: React.FC = () => {
     return pathParts.join('/')
   }
 
+  const getDescription = (filter?: string) => {
+    const collectionLabel = productType ? productType : 'coffee'
+    if (filter !== undefined) {
+      const pageData = dataPages?.pages
+        ? dataPages?.pages?.nodes?.filter(
+            (page: ShopifyPage) => page.handle === `${collectionLabel}-${normalizeString(filter)}`,
+          )
+        : []
+      return pageData.length > 0 ? pageData[0].body : ''
+    } else {
+      const collectionData = data?.collections
+        ? data?.collections?.nodes?.filter(
+            (collection: ShopifyCollection) => collection.title.toLowerCase() === collectionLabel,
+          )
+        : []
+
+      return collectionData.length > 0 ? collectionData[0]?.descriptionHtml : ''
+    }
+  }
+
   return (
     <Layout>
       <Helmet>
@@ -114,7 +142,11 @@ export const Catalogue: React.FC = () => {
         <div className="w-full max-w-7xl mx-auto px-6 xl:px-8">
           {data && <TabsNavigation tabsData={tabsData} />}
           <InstantSearch indexName="products" searchClient={searchClient} routing={true}>
-            {!productType || productType === 'coffee' ? <CoffeeSearch /> : <AccessoriesSearch />}
+            {!productType || productType === 'coffee' ? (
+              <CoffeeSearch getDescription={getDescription} />
+            ) : (
+              <AccessoriesSearch getDescription={getDescription} />
+            )}
           </InstantSearch>
         </div>
       </main>
