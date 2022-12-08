@@ -12,6 +12,7 @@ import {
 import { useParams } from 'react-router-dom'
 import { parseHtmlSafely } from 'src/utils'
 import { capitalize } from 'src/utils/formatters'
+import { formatCategoryHtmlElement } from 'src/utils/htmlContentParser'
 
 import { renderSearchContent, returnSortItems, SearchScreenProps } from './CoffeeSearch'
 import Pagination from './Pagination'
@@ -97,7 +98,7 @@ const AccessoriesSearch: React.FC<SearchScreenProps> = ({ getDescription }) => {
       <div
         className="my-8"
         dangerouslySetInnerHTML={{
-          __html: parseHtmlSafely(getDescription(type)),
+          __html: parseHtmlSafely(getDescription(type), formatCategoryHtmlElement),
         }}
       />
     </>

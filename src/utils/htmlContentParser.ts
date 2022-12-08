@@ -73,6 +73,28 @@ export const formatBlogHtmlElement = (el: Element) => {
   }
 }
 
+// used by the category pages from shopify cms
+export const formatCategoryHtmlElement = (el: Element) => {
+  const elementType = el.nodeName
+  switch (elementType) {
+    case 'H1':
+    case 'H2':
+    case 'H3':
+    case 'H4':
+    case 'H5':
+    case 'H6': {
+      el.setAttribute('class', 'mb-4 text-[16px] md:text-[18px] font-semibold')
+      return el
+    }
+    case 'P': {
+      el.setAttribute('class', 'text-[12px] md:text-[14px] mb-3')
+      return el
+    }
+    default:
+      return el
+  }
+}
+
 export const parseHtmlSafely = (html: string, formatter: (el: Element) => Element = formatHtmlElement) => {
   const parser = new DOMParser()
   const children = Array.from(parser.parseFromString(html, 'text/html').body.children)
