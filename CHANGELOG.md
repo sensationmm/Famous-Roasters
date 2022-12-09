@@ -1,3 +1,11 @@
+## [1.104.1](https://github.com/Famous-Roasters/frontend/compare/v1.104.0...v1.104.1) (2022-12-09)
+
+
+### Bug Fixes
+
+* **catalog:** fix styling ([f63f39a](https://github.com/Famous-Roasters/frontend/commit/f63f39ab434bd2159174d44a6284e5f833b364bc))
+* **catalog:** sonarcloud failure ([5cb8ab7](https://github.com/Famous-Roasters/frontend/commit/5cb8ab76c3865b3ed2dbe3d05b8033ef7a90a1e9))
+
 # [1.104.0](https://github.com/Famous-Roasters/frontend/compare/v1.103.5...v1.104.0) (2022-12-08)
 
 
