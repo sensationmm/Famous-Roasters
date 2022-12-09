@@ -1,4 +1,10 @@
-import { formatBlogHtmlElement, formatHtmlElement, isAllowedHtmlElement, parseHtmlSafely } from '.'
+import {
+  formatBlogHtmlElement,
+  formatCategoryHtmlElement,
+  formatHtmlElement,
+  isAllowedHtmlElement,
+  parseHtmlSafely,
+} from '.'
 
 describe('HTML content parser utils', () => {
   it('isAllowedHtmlElement works for allowed elements', () => {
@@ -87,6 +93,20 @@ describe('HTML content parser utils', () => {
     const htmlString = "<h1>Title</h1><script src='verymaliciouscode.js'></script><p>Paragraph</p>"
     expect(parseHtmlSafely(htmlString, formatBlogHtmlElement)).toEqual(
       '<h1 class="mb-8 text-[24px] md:text-[32px] -tracking-[.02em] leading-8 md:leading-9 font-semibold font-syne">Title</h1><p class="text-lg md:text-[20px] -tracking-[.02em] leading-7 mb-6">Paragraph</p>',
+    )
+  })
+
+  it('parseHtmlSafely with img and custom formatter works', () => {
+    const htmlString = "<h1>Title</h1><script src='verymaliciouscode.js'></script><p>Paragraph</p><img src='asd' />"
+    expect(parseHtmlSafely(htmlString, formatBlogHtmlElement)).toEqual(
+      '<h1 class="mb-8 text-[24px] md:text-[32px] -tracking-[.02em] leading-8 md:leading-9 font-semibold font-syne">Title</h1><p class="text-lg md:text-[20px] -tracking-[.02em] leading-7 mb-6">Paragraph</p><div class="flex justify-center h-[304px] md:h-[352px] my-[48px] overflow-hidden"><img src="asd" class="object-cover min-w-full min-h-full"></div>',
+    )
+  })
+
+  it('parseHtmlSafely with custom catalog formatter works', () => {
+    const htmlString = "<h1>Title</h1><script src='verymaliciouscode.js'></script><p>Paragraph</p>"
+    expect(parseHtmlSafely(htmlString, formatCategoryHtmlElement)).toEqual(
+      '<h1 class="mb-4 text-[16px] md:text-[18px] font-semibold">Title</h1><p class="text-[12px] md:text-[14px] mb-3">Paragraph</p>',
     )
   })
 })

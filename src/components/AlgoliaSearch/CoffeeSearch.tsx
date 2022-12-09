@@ -16,6 +16,7 @@ import { ProductTileLoader, Typography, TypographySize, TypographyType } from 's
 import CheckboxFilter from 'src/components/AlgoliaSearch/CheckboxFilter'
 import Hit from 'src/components/AlgoliaSearch/Hit'
 import { parseHtmlSafely } from 'src/utils'
+import { formatCategoryHtmlElement } from 'src/utils/htmlContentParser'
 import { YouMightLike } from 'src/views/Product/YouMightLike'
 
 import { AromaFilterButton } from './AromaFilter'
@@ -242,7 +243,7 @@ const CoffeeSearch: React.FC<SearchScreenProps> = ({ getDescription }) => {
       <div
         className="my-8"
         dangerouslySetInnerHTML={{
-          __html: parseHtmlSafely(getDescription(type)),
+          __html: parseHtmlSafely(getDescription(type), formatCategoryHtmlElement),
         }}
       />
     </>
