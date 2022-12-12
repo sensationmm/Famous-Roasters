@@ -1,3 +1,10 @@
+# [1.105.0](https://github.com/Famous-Roasters/frontend/compare/v1.104.1...v1.105.0) (2022-12-12)
+
+
+### Features
+
+* **product:** seasonal delivery message ([0dd312f](https://github.com/Famous-Roasters/frontend/commit/0dd312f7d8a1962ae32d91ba753cca601a03dea9))
+
 ## [1.104.1](https://github.com/Famous-Roasters/frontend/compare/v1.104.0...v1.104.1) (2022-12-09)
 
 
