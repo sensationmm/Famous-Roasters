@@ -27,6 +27,11 @@ import { dataLayerEvent, getAPIId, toRoundedValueInRealScale, useLocalStorage } 
 import { TasteFinderField } from '../TasteFinder'
 import { ProductQuery } from '.'
 
+interface TasteProfileResult extends TasteProfileProps {
+  grindType: string
+  adventurous: string
+}
+
 export const FeaturedProduct: React.FC = () => {
   const { id } = useParams()
   const { t } = useTranslation()
@@ -54,9 +59,19 @@ export const FeaturedProduct: React.FC = () => {
       const saveAroma = [...tasteFinderData, { name: 'aroma', value: aroma?.value }]
       setTasteFinderLocalStorage(JSON.stringify(saveAroma))
     }
+    aroma &&
+      dataLayerEvent(
+        {
+          ...tasteProfileResults,
+          aroma: aroma.value,
+          coffee: title,
+          matchScore: getMatchScore(),
+        },
+        'tasteFinderResult',
+      )
   }, [aroma])
 
-  const tasteProfileResults: TasteProfileProps = {
+  const tasteProfileResults: TasteProfileResult = {
     acidity: tasteFinderDataJSON
       ? toRoundedValueInRealScale(parseInt(tasteFinderData.find((el: TasteFinderField) => el.name === 'acidity').value))
       : 0,
@@ -73,6 +88,10 @@ export const FeaturedProduct: React.FC = () => {
     body: tasteFinderDataJSON
       ? toRoundedValueInRealScale(parseInt(tasteFinderData.find((el: TasteFinderField) => el.name === 'body').value))
       : 0,
+    grindType: tasteFinderDataJSON ? tasteFinderData.find((el: TasteFinderField) => el.name === 'grindType').value : '',
+    adventurous: tasteFinderDataJSON
+      ? tasteFinderData.find((el: TasteFinderField) => el.name === 'adventurous').value
+      : '',
   }
 
   const getMatchScore = () => {
@@ -170,6 +189,15 @@ export const FeaturedProduct: React.FC = () => {
         },
         'productClick',
       )
+      dataLayerEvent(
+        {
+          ...tasteProfileResults,
+          coffee: title,
+          matchScore: getMatchScore(),
+          action: 'View Coffee',
+        },
+        'tasteFinderAction',
+      )
     }
 
     return (
@@ -229,6 +257,17 @@ export const FeaturedProduct: React.FC = () => {
                 size={ButtonSize.md}
                 className="flex w-full justify-center"
                 data-testid="discoverMore"
+                onClick={() =>
+                  dataLayerEvent(
+                    {
+                      ...tasteProfileResults,
+                      coffee: title,
+                      matchScore: getMatchScore(),
+                      action: 'View More',
+                    },
+                    'tasteFinderAction',
+                  )
+                }
               >
                 {t('pages.featuredProduct.cta.discoverMore')}
               </Button>

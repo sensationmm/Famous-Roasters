@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { Layout, NavigationTheme, StickyBottomNavigation } from 'src/components'
-import { useLocalStorage } from 'src/utils'
+import { dataLayerEvent, useLocalStorage } from 'src/utils'
 
 import {
   Acidity as AcidityPartial,
@@ -33,41 +33,49 @@ const TasteFinderSteps = [
   {
     index: 0,
     step: TasteFinderStepsNames.Welcome,
+    stepID: 'welcome',
     value: 0,
   },
   {
     index: 1,
     step: TasteFinderStepsNames.YourName,
+    stepID: 'name',
     value: 14.3,
   },
   {
     index: 2,
     step: TasteFinderStepsNames.Bitterness,
+    stepID: 'bitterness',
     value: 28.6,
   },
   {
     index: 3,
     step: TasteFinderStepsNames.Sweetness,
+    stepID: 'sweetness',
     value: 42.9,
   },
   {
     index: 4,
     step: TasteFinderStepsNames.Acidity,
+    stepID: 'acidity',
     value: 57.2,
   },
   {
     index: 5,
     step: TasteFinderStepsNames.Body,
+    stepID: 'body',
     value: 71.5,
   },
   {
     index: 6,
     step: TasteFinderStepsNames.Brewing,
+    stepID: 'grindType',
     value: 85.8,
   },
   {
     index: 7,
     step: TasteFinderStepsNames.Adventurous,
+    stepID: 'adventurous',
     value: 100,
   },
 ]
@@ -201,6 +209,15 @@ export const TasteFinder: React.FC = () => {
   const handleNextClicked = (currentStep: string) => {
     const currentStepData = TasteFinderSteps.find((x) => x.step === currentStep)
     currentStepData && navigateTo(currentStepData.index + 1)
+
+    dataLayerEvent(
+      {
+        stepNum: currentStepData?.index,
+        step: currentStepData?.stepID,
+        value: tasteFinderState.find((state) => state.name === currentStepData?.stepID)?.value,
+      },
+      'tasteFinderStep',
+    )
   }
 
   const handlePrevClicked = (currentStep: string) => {

@@ -3,6 +3,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import welcome from 'src/assets/images/tasteFinder/welcome.webp'
 import { Button, ButtonEmphasis, ButtonSize, Typography, TypographySize, TypographyType } from 'src/components'
+import { dataLayerEvent } from 'src/utils'
 
 interface WelcomeProps {
   next: () => void
@@ -12,6 +13,13 @@ export const Welcome: React.FC<WelcomeProps> = ({ next }: WelcomeProps) => {
   const { t } = useTranslation()
 
   const handleNext = () => {
+    dataLayerEvent(
+      {
+        step: 0,
+        value: 'started',
+      },
+      'tasteFinderStep',
+    )
     next()
   }
 
