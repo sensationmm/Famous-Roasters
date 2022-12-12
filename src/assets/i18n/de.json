@@ -1062,6 +1062,10 @@
             "german": "2-5 Tage",
             "international": "5-10 Tage",
             "giftCard": "Geschenkgutschein"
+          },
+          "seasonalWarning": {
+            "message": "Wichtige Informationen über angepasste Lieferzeiten findest du",
+            "link": "hier"
           }
         }
       }

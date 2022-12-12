@@ -4,6 +4,7 @@ import {
   ProductVariant,
   ProductVariantConnection,
 } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
+import { compareAsc } from 'date-fns'
 import { loader } from 'graphql.macro'
 import React, { useContext, useEffect, useRef, useState } from 'react'
 import { Helmet } from 'react-helmet'
@@ -336,6 +337,8 @@ export const Product: React.FC = () => {
   }
 
   const renderCTAFooter = () => {
+    const holidaySeasonEndDate = new Date(2023, 0, 9) // 9th Jan 2023
+    const showSeasonal = compareAsc(new Date(), holidaySeasonEndDate) < 0
     return (
       <>
         <div className="mt-4">
@@ -357,6 +360,21 @@ export const Product: React.FC = () => {
           <Typography type={TypographyType.Paragraph} size={TypographySize.Tiny} className="text-coreUI-text-secondary">
             {t(`pages.product.transactional.qualityNote${!isCoffee ? (isGiftCard ? 'GiftCard' : 'Accessory') : ''}`)}
           </Typography>
+        </div>
+        <div className="mt-1">
+          {showSeasonal && (
+            <Typography
+              type={TypographyType.Paragraph}
+              size={TypographySize.Tiny}
+              className="text-coreUI-text-secondary"
+            >
+              {t('pages.product.transactional.shipping.seasonalWarning.message')}{' '}
+              <a className="underline" href="https://www.60beans.com/angepasste-lieferzeiten" target="_blank">
+                {t('pages.product.transactional.shipping.seasonalWarning.link')}
+              </a>
+              .
+            </Typography>
+          )}
         </div>
       </>
     )
