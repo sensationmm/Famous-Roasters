@@ -564,6 +564,24 @@ exports[`Product view Renders correctly for a accessories 1`] = `
                     Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu dir. Wir teilen dir den geplanten Liefertermin im nächsten Schritt mit.
                   </span>
                 </div>
+                <div
+                  class="mt-1"
+                >
+                  <span
+                    class="text-coreUI-text-secondary text-xs leading-4"
+                  >
+                    Wichtige Informationen über angepasste Lieferzeiten findest du
+                     
+                    <a
+                      class="underline"
+                      href="https://www.60beans.com/angepasste-lieferzeiten"
+                      target="_blank"
+                    >
+                      hier
+                    </a>
+                    .
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -648,6 +666,24 @@ exports[`Product view Renders correctly for a accessories 1`] = `
             class="text-coreUI-text-secondary text-xs leading-4"
           >
             Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu dir. Wir teilen dir den geplanten Liefertermin im nächsten Schritt mit.
+          </span>
+        </div>
+        <div
+          class="mt-1"
+        >
+          <span
+            class="text-coreUI-text-secondary text-xs leading-4"
+          >
+            Wichtige Informationen über angepasste Lieferzeiten findest du
+             
+            <a
+              class="underline"
+              href="https://www.60beans.com/angepasste-lieferzeiten"
+              target="_blank"
+            >
+              hier
+            </a>
+            .
           </span>
         </div>
       </div>
@@ -2089,6 +2125,24 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                     Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu dir. Wir teilen dir den geplanten Liefertermin im nächsten Schritt mit.
                   </span>
                 </div>
+                <div
+                  class="mt-1"
+                >
+                  <span
+                    class="text-coreUI-text-secondary text-xs leading-4"
+                  >
+                    Wichtige Informationen über angepasste Lieferzeiten findest du
+                     
+                    <a
+                      class="underline"
+                      href="https://www.60beans.com/angepasste-lieferzeiten"
+                      target="_blank"
+                    >
+                      hier
+                    </a>
+                    .
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -2180,6 +2234,24 @@ exports[`Product view Renders correctly for a successful call 1`] = `
             class="text-coreUI-text-secondary text-xs leading-4"
           >
             Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu dir. Wir teilen dir den geplanten Liefertermin im nächsten Schritt mit.
+          </span>
+        </div>
+        <div
+          class="mt-1"
+        >
+          <span
+            class="text-coreUI-text-secondary text-xs leading-4"
+          >
+            Wichtige Informationen über angepasste Lieferzeiten findest du
+             
+            <a
+              class="underline"
+              href="https://www.60beans.com/angepasste-lieferzeiten"
+              target="_blank"
+            >
+              hier
+            </a>
+            .
           </span>
         </div>
       </div>
@@ -3955,6 +4027,24 @@ exports[`Product view Renders correctly for a successful call with International
                     Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu dir. Wir teilen dir den geplanten Liefertermin im nächsten Schritt mit.
                   </span>
                 </div>
+                <div
+                  class="mt-1"
+                >
+                  <span
+                    class="text-coreUI-text-secondary text-xs leading-4"
+                  >
+                    Wichtige Informationen über angepasste Lieferzeiten findest du
+                     
+                    <a
+                      class="underline"
+                      href="https://www.60beans.com/angepasste-lieferzeiten"
+                      target="_blank"
+                    >
+                      hier
+                    </a>
+                    .
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -4046,6 +4136,24 @@ exports[`Product view Renders correctly for a successful call with International
             class="text-coreUI-text-secondary text-xs leading-4"
           >
             Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu dir. Wir teilen dir den geplanten Liefertermin im nächsten Schritt mit.
+          </span>
+        </div>
+        <div
+          class="mt-1"
+        >
+          <span
+            class="text-coreUI-text-secondary text-xs leading-4"
+          >
+            Wichtige Informationen über angepasste Lieferzeiten findest du
+             
+            <a
+              class="underline"
+              href="https://www.60beans.com/angepasste-lieferzeiten"
+              target="_blank"
+            >
+              hier
+            </a>
+            .
           </span>
         </div>
       </div>
@@ -5808,6 +5916,24 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                     Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu dir. Wir teilen dir den geplanten Liefertermin im nächsten Schritt mit.
                   </span>
                 </div>
+                <div
+                  class="mt-1"
+                >
+                  <span
+                    class="text-coreUI-text-secondary text-xs leading-4"
+                  >
+                    Wichtige Informationen über angepasste Lieferzeiten findest du
+                     
+                    <a
+                      class="underline"
+                      href="https://www.60beans.com/angepasste-lieferzeiten"
+                      target="_blank"
+                    >
+                      hier
+                    </a>
+                    .
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -5899,6 +6025,24 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
             class="text-coreUI-text-secondary text-xs leading-4"
           >
             Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu dir. Wir teilen dir den geplanten Liefertermin im nächsten Schritt mit.
+          </span>
+        </div>
+        <div
+          class="mt-1"
+        >
+          <span
+            class="text-coreUI-text-secondary text-xs leading-4"
+          >
+            Wichtige Informationen über angepasste Lieferzeiten findest du
+             
+            <a
+              class="underline"
+              href="https://www.60beans.com/angepasste-lieferzeiten"
+              target="_blank"
+            >
+              hier
+            </a>
+            .
           </span>
         </div>
       </div>
