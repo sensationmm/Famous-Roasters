@@ -27,7 +27,7 @@ const AccessoriesSearch: React.FC<SearchScreenProps> = ({ getDescription }) => {
   const { productType } = useParams()
   const { items: activeRefinements } = useCurrentRefinements()
   const { refine: clearRefinements } = useClearRefinements()
-  const sortItems = returnSortItems()
+  const sortItems = returnSortItems(t)
   const { currentRefinement: sortValue, refine: clearSort } = useSortBy({
     items: sortItems,
   })
@@ -106,7 +106,7 @@ const AccessoriesSearch: React.FC<SearchScreenProps> = ({ getDescription }) => {
         </div>
       </div>
 
-      {renderSearchContent('accessory', search.results, productHits, numberOfHitsToShow)}
+      {renderSearchContent(t, 'accessory', search.results, productHits, numberOfHitsToShow)}
       {productHits > 0 && <Pagination />}
 
       <div

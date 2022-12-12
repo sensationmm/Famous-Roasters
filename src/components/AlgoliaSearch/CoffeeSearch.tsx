@@ -1,6 +1,6 @@
 import { TrashIcon } from '@heroicons/react/outline'
 import { useEffect } from 'react'
-import { useTranslation } from 'react-i18next'
+import { useTranslation, UseTranslationResponse } from 'react-i18next'
 import { SearchResults } from 'react-instantsearch-core'
 import {
   Configure,
@@ -34,12 +34,12 @@ interface CustomSearch extends SearchResults {
 }
 
 export const renderSearchContent = (
+  t: UseTranslationResponse<'translation', undefined>['t'],
   type: 'coffee' | 'accessory',
   searchResults: CustomSearch,
   productHits: number,
   numberOfHitsToShow: number,
 ) => {
-  const { t } = useTranslation()
   const finished = typeof searchResults?.exhaustive !== 'undefined'
 
   return (
@@ -79,8 +79,7 @@ export const renderSearchContent = (
   )
 }
 
-export const returnSortItems = () => {
-  const { t } = useTranslation()
+export const returnSortItems = (t: UseTranslationResponse<'translation', undefined>['t']) => {
   return [
     { label: t('pages.catalogue.filters.sort.values.none'), value: 'products' },
     { label: t('pages.catalogue.filters.sort.values.newest'), value: 'products_most_recent' },
@@ -105,7 +104,7 @@ const CoffeeSearch: React.FC<SearchScreenProps> = ({ getDescription }) => {
   useRefinementList({ attribute: 'meta.my_fields.body' })
   const { items: activeRefinements } = useCurrentRefinements()
   const { refine: clearRefinements } = useClearRefinements()
-  const sortItems = returnSortItems()
+  const sortItems = returnSortItems(t)
   const { currentRefinement: sortValue, refine: clearSort } = useSortBy({
     items: sortItems,
   })
@@ -252,7 +251,7 @@ const CoffeeSearch: React.FC<SearchScreenProps> = ({ getDescription }) => {
         <Stats />
       </div>
 
-      {renderSearchContent('coffee', search.results, productHits, numberOfHitsToShow)}
+      {renderSearchContent(t, 'coffee', search.results, productHits, numberOfHitsToShow)}
       {productHits > 0 && <Pagination />}
 
       <div
