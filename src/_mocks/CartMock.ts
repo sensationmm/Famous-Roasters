@@ -38,8 +38,15 @@ const CartLineEdgeMockData: any = {
         handle: '',
         id: 'gid://shopify/Product/7655228866776',
         vendor: 'Cycle Roasters',
-        isGiftCard: false
+        isGiftCard: false,
       },
+      grind_type: {
+        value: 'Ganze Bohne'
+      },
+      package_size: {
+        value: '250g'
+      },
+      equipmentvariant: null,
       selectedOptions: [
         {
           name: 'Gewicht',
@@ -106,8 +113,15 @@ export const CartMockData: any = {
                 handle: '',
                 id: 'gid://shopify/Product/23232323',
                 vendor: 'Cycle Roasters 2',
-                isGiftCard: false
+                isGiftCard: false,
               },
+              grind_type: {
+                value: 'Ganze Bohne'
+              },
+              package_size: {
+                value: '1000g'
+              },
+              equipmentvariant: null,
               selectedOptions: [
                 {
                   name: 'Gewicht',

@@ -1,4 +1,5 @@
 import { TrashIcon } from '@heroicons/react/outline'
+import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { SearchResults } from 'react-instantsearch-core'
 import {
@@ -15,7 +16,7 @@ import {
 import { ProductTileLoader, Typography, TypographySize, TypographyType } from 'src/components'
 import CheckboxFilter from 'src/components/AlgoliaSearch/CheckboxFilter'
 import Hit from 'src/components/AlgoliaSearch/Hit'
-import { parseHtmlSafely } from 'src/utils'
+import { dataLayerEvent, parseHtmlSafely } from 'src/utils'
 import { formatCategoryHtmlElement } from 'src/utils/htmlContentParser'
 import { YouMightLike } from 'src/views/Product/YouMightLike'
 
@@ -105,7 +106,7 @@ const CoffeeSearch: React.FC<SearchScreenProps> = ({ getDescription }) => {
   const { items: activeRefinements } = useCurrentRefinements()
   const { refine: clearRefinements } = useClearRefinements()
   const sortItems = returnSortItems()
-  const { refine: clearSort } = useSortBy({
+  const { currentRefinement: sortValue, refine: clearSort } = useSortBy({
     items: sortItems,
   })
 
@@ -113,6 +114,20 @@ const CoffeeSearch: React.FC<SearchScreenProps> = ({ getDescription }) => {
     .find((x) => x.label === 'meta.my_fields.coffee_type')
     ?.refinements[1].value.toString()
     .toLowerCase()
+
+  useEffect(() => {
+    dataLayerEvent({
+      impressions: search?.results.hits.map((hit, count) => ({
+        name: hit.title,
+        brand: hit.vendor,
+        id: hit.id,
+        position: search?.results?.page * numberOfHitsToShow + (count + 1),
+        list: 'Coffee',
+        category: type || 'All',
+        sort: sortValue,
+      })),
+    })
+  }, [activeRefinements, search?.results?.page, sortValue])
 
   const getCoffeeText = () => {
     switch (type) {

@@ -29,6 +29,15 @@ query cart($id: ID!) {
                 vendor
                 isGiftCard
               }
+              package_size: metafield(namespace: "my_fields", key: "package_size") {
+                value
+              }
+              grind_type: metafield(namespace: "my_fields", key: "grind_type") {
+                value
+              }
+              equipmentvariant: metafield(namespace: "my_fields", key: "equipmentvariant") {
+                value
+              }
               selectedOptions {
                 name
                 value

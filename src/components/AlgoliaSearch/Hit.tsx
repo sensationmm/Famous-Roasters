@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import { formatPrice } from 'src/utils'
+import { dataLayerEvent, formatPrice } from 'src/utils'
 
 import { Tag, TagType } from '../Tag'
 import { Typography, TypographySize, TypographyType } from '../Typography'
@@ -51,7 +51,28 @@ const Hit = ({ hit }: { hit: RawHit }) => {
   const textLineClassNames = outOfStock ? 'text-coreUI-text-tertiary' : 'text-coreUI-text-secondary'
 
   return (
-    <Link key={`product-tile-link-${id}`} to={`/product/${id}`} state={{ prevPath: location.pathname }}>
+    <Link
+      key={`product-tile-link-${id}`}
+      to={`/product/${id}`}
+      state={{ prevPath: location.pathname }}
+      onClick={() =>
+        dataLayerEvent(
+          {
+            click: {
+              actionField: { list: 'Search Results' },
+              products: [
+                {
+                  name: title,
+                  id: id,
+                  brand: vendor,
+                },
+              ],
+            },
+          },
+          'productClick',
+        )
+      }
+    >
       <div className="flex pt-8 md:px-6">
         <div className="flex justify-center items-center shrink-0 relative w-36 h-36">
           <div className="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36">
