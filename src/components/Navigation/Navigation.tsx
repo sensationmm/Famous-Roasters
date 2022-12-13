@@ -38,7 +38,6 @@ interface NavigationData {
 }
 
 const domainShop = process.env.REACT_APP_DOMAIN_SHOP || ''
-const domainBlog = process.env.REACT_APP_DOMAIN_BLOG || ''
 
 const navigationData: NavigationData = {
   pagesPrimary: [

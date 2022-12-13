@@ -1,6 +1,6 @@
 import { ApolloProvider } from '@apollo/client'
 import * as Sentry from '@sentry/react'
-import React, { useEffect, useLayoutEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { CartProvider, Loader } from 'src/components'
@@ -25,13 +25,7 @@ import LoadingContext from './hooks/isLoading'
 import ScrollToTop from './ScrollToTop'
 
 const App = () => {
-  const [isBlog, setIsBlog] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
-
-  useLayoutEffect(() => {
-    const host = window.location.host
-    setIsBlog(host.split('.').includes('blog'))
-  }, [])
 
   useEffect(() => {
     document.body.style.overflow = isLoading ? 'hidden' : 'auto'

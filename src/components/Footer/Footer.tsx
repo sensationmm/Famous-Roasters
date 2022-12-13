@@ -1,6 +1,5 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
 import LogoLight from 'src/assets/images/logo/60beans-light.svg'
 import { Icon, IconName, Typography, TypographyType } from 'src/components'
 
@@ -19,7 +18,6 @@ interface SocialMediaLink {
 }
 
 const domainShop = process.env.REACT_APP_DOMAIN_SHOP
-const domainBlog = process.env.REACT_APP_DOMAIN_BLOG
 
 const footerLinks: FooterLink[][] = [
   [
