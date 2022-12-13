@@ -4,10 +4,14 @@ import { useNavigate } from 'react-router-dom'
 import { Button, ButtonSize } from 'src/components'
 import { Emphasis } from 'src/components/Button/Button'
 import { CartContext, CartItem } from 'src/components/CartProvider/CartProvider'
+// import { dataLayerEvent } from 'src/utils'
 import { Order } from 'src/views/User/Orders'
+
+import { gtaEcommerceObject } from '../Cart/Cart'
 
 interface ReorderItem extends CartItem {
   available: number
+  ecommerceObject?: gtaEcommerceObject
 }
 
 type ReorderProps = {
@@ -36,6 +40,16 @@ export const Reorder: React.FC<ReorderProps> = ({ order, loading, setLoading }) 
             quantity: items[i].quantity < items[i].available ? items[i].quantity : items[i].available,
             item: items[i].item,
           })
+          // Pending completion of task EN-72 to be able to implement
+          // dataLayerEvent(
+          //   {
+          //     currencyCode: 'EUR',
+          //     add: {
+          //       products: items.map((item) => item.ecommerceObject),
+          //     },
+          //   },
+          //   'reorder',
+          // )
         }
         if (i + 1 === items.length) {
           setLoading(false)
@@ -62,6 +76,17 @@ export const Reorder: React.FC<ReorderProps> = ({ order, loading, setLoading }) 
             quantity: item.node.quantity,
             item: item.node.variant.id,
             available: item.node.variant.inventoryQuantity || 0,
+            ecommerceObject: {
+              name: item.node.title,
+              id: item.node.product.id,
+              price: item.node.variant.price,
+              // brand: item.node?.product.vendor, // not provided
+              variant: item.node.variant.id,
+              quantity: item.node.quantity,
+              // packageSize: item.node.variant.package_size?.value,
+              // grindType: item.node.variant.grind_type?.value,
+              // equipmentVariant: item.node.variant.equipmentvariant?.value,
+            },
           })),
         )
       }

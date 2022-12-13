@@ -22,10 +22,15 @@ import {
   TypographySize,
   TypographyType,
 } from 'src/components'
-import { getAPIId, toRoundedValueInRealScale, useLocalStorage } from 'src/utils'
+import { dataLayerEvent, getAPIId, toRoundedValueInRealScale, useLocalStorage } from 'src/utils'
 
 import { TasteFinderField } from '../TasteFinder'
 import { ProductQuery } from '.'
+
+interface TasteProfileResult extends TasteProfileProps {
+  grindType: string
+  adventurous: string
+}
 
 export const FeaturedProduct: React.FC = () => {
   const { id } = useParams()
@@ -54,9 +59,19 @@ export const FeaturedProduct: React.FC = () => {
       const saveAroma = [...tasteFinderData, { name: 'aroma', value: aroma?.value }]
       setTasteFinderLocalStorage(JSON.stringify(saveAroma))
     }
+    aroma &&
+      dataLayerEvent(
+        {
+          ...tasteProfileResults,
+          aroma: aroma.value,
+          coffee: title,
+          matchScore: getMatchScore(),
+        },
+        'tasteFinderResult',
+      )
   }, [aroma])
 
-  const tasteProfileResults: TasteProfileProps = {
+  const tasteProfileResults: TasteProfileResult = {
     acidity: tasteFinderDataJSON
       ? toRoundedValueInRealScale(parseInt(tasteFinderData.find((el: TasteFinderField) => el.name === 'acidity').value))
       : 0,
@@ -73,18 +88,10 @@ export const FeaturedProduct: React.FC = () => {
     body: tasteFinderDataJSON
       ? toRoundedValueInRealScale(parseInt(tasteFinderData.find((el: TasteFinderField) => el.name === 'body').value))
       : 0,
-  }
-
-  if (loading) {
-    return (
-      <div className="flex h-64 mb-32 justify-center items-center">
-        <Loader />
-      </div>
-    )
-  }
-
-  if (error || !data?.product) {
-    return <ErrorPrompt promptAction={() => history.go(0)} />
+    grindType: tasteFinderDataJSON ? tasteFinderData.find((el: TasteFinderField) => el.name === 'grindType').value : '',
+    adventurous: tasteFinderDataJSON
+      ? tasteFinderData.find((el: TasteFinderField) => el.name === 'adventurous').value
+      : '',
   }
 
   const getMatchScore = () => {
@@ -104,6 +111,34 @@ export const FeaturedProduct: React.FC = () => {
     )
   }
 
+  useEffect(() => {
+    dataLayerEvent({
+      impressions: [
+        {
+          name: data?.product.title,
+          brand: data?.product.vendor,
+          id: data?.product.id,
+          position: 1,
+          list: 'Taste Finder',
+          aroma: data?.product?.aroma?.value,
+          matchScore: getMatchScore(),
+        },
+      ],
+    })
+  }, [data])
+
+  if (loading) {
+    return (
+      <div className="flex h-64 mb-32 justify-center items-center">
+        <Loader />
+      </div>
+    )
+  }
+
+  if (error || !data?.product) {
+    return <ErrorPrompt promptAction={() => history.go(0)} />
+  }
+
   const name =
     tasteFinderData && tasteFinderData?.find((el: TasteFinderField) => el.name === 'name')
       ? tasteFinderData.find((el: TasteFinderField) => el.name === 'name').value
@@ -115,6 +150,7 @@ export const FeaturedProduct: React.FC = () => {
         .split('.')
         .map((line) => line.trim())
         .filter((line) => line.length > 0)
+
       return (
         <div>
           <Typography
@@ -137,6 +173,33 @@ export const FeaturedProduct: React.FC = () => {
       )
     }
 
+    const gtaEvent = () => {
+      dataLayerEvent(
+        {
+          click: {
+            actionField: { list: 'Taste Finder' },
+            products: [
+              {
+                name: data?.product.title,
+                id: data?.product.id,
+                brand: data?.product.vendor,
+              },
+            ],
+          },
+        },
+        'productClick',
+      )
+      dataLayerEvent(
+        {
+          ...tasteProfileResults,
+          coffee: title,
+          matchScore: getMatchScore(),
+          action: 'View Coffee',
+        },
+        'tasteFinderAction',
+      )
+    }
+
     return (
       <div>
         <Typography
@@ -154,7 +217,7 @@ export const FeaturedProduct: React.FC = () => {
             </div>
           </Link>
           {data?.product && (
-            <Link to={`/product/${id}`} className="flex flex-col w-fit">
+            <Link to={`/product/${id}`} className="flex flex-col w-fit" onClick={gtaEvent}>
               <ProductTile
                 productNode={data?.product}
                 featured={true}
@@ -176,6 +239,7 @@ export const FeaturedProduct: React.FC = () => {
                 size={ButtonSize.md}
                 className="flex w-full justify-center"
                 data-testid="goToProduct"
+                onClick={gtaEvent}
               >
                 {t('pages.featuredProduct.cta.goToProduct')}
               </Button>
@@ -193,6 +257,17 @@ export const FeaturedProduct: React.FC = () => {
                 size={ButtonSize.md}
                 className="flex w-full justify-center"
                 data-testid="discoverMore"
+                onClick={() =>
+                  dataLayerEvent(
+                    {
+                      ...tasteProfileResults,
+                      coffee: title,
+                      matchScore: getMatchScore(),
+                      action: 'View More',
+                    },
+                    'tasteFinderAction',
+                  )
+                }
               >
                 {t('pages.featuredProduct.cta.discoverMore')}
               </Button>

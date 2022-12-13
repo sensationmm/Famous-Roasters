@@ -1,5 +1,6 @@
 import { TrashIcon } from '@heroicons/react/outline'
-import { useTranslation } from 'react-i18next'
+import { useEffect } from 'react'
+import { useTranslation, UseTranslationResponse } from 'react-i18next'
 import { SearchResults } from 'react-instantsearch-core'
 import {
   Configure,
@@ -15,7 +16,7 @@ import {
 import { ProductTileLoader, Typography, TypographySize, TypographyType } from 'src/components'
 import CheckboxFilter from 'src/components/AlgoliaSearch/CheckboxFilter'
 import Hit from 'src/components/AlgoliaSearch/Hit'
-import { parseHtmlSafely } from 'src/utils'
+import { dataLayerEvent, parseHtmlSafely } from 'src/utils'
 import { formatCategoryHtmlElement } from 'src/utils/htmlContentParser'
 import { YouMightLike } from 'src/views/Product/YouMightLike'
 
@@ -33,12 +34,12 @@ interface CustomSearch extends SearchResults {
 }
 
 export const renderSearchContent = (
+  t: UseTranslationResponse<'translation', undefined>['t'],
   type: 'coffee' | 'accessory',
   searchResults: CustomSearch,
   productHits: number,
   numberOfHitsToShow: number,
 ) => {
-  const { t } = useTranslation()
   const finished = typeof searchResults?.exhaustive !== 'undefined'
 
   return (
@@ -78,8 +79,7 @@ export const renderSearchContent = (
   )
 }
 
-export const returnSortItems = () => {
-  const { t } = useTranslation()
+export const returnSortItems = (t: UseTranslationResponse<'translation', undefined>['t']) => {
   return [
     { label: t('pages.catalogue.filters.sort.values.none'), value: 'products' },
     { label: t('pages.catalogue.filters.sort.values.newest'), value: 'products_most_recent' },
@@ -104,8 +104,8 @@ const CoffeeSearch: React.FC<SearchScreenProps> = ({ getDescription }) => {
   useRefinementList({ attribute: 'meta.my_fields.body' })
   const { items: activeRefinements } = useCurrentRefinements()
   const { refine: clearRefinements } = useClearRefinements()
-  const sortItems = returnSortItems()
-  const { refine: clearSort } = useSortBy({
+  const sortItems = returnSortItems(t)
+  const { currentRefinement: sortValue, refine: clearSort } = useSortBy({
     items: sortItems,
   })
 
@@ -113,6 +113,20 @@ const CoffeeSearch: React.FC<SearchScreenProps> = ({ getDescription }) => {
     .find((x) => x.label === 'meta.my_fields.coffee_type')
     ?.refinements[1].value.toString()
     .toLowerCase()
+
+  useEffect(() => {
+    dataLayerEvent({
+      impressions: search?.results.hits.map((hit, count) => ({
+        name: hit.title,
+        brand: hit.vendor,
+        id: hit.id,
+        position: search?.results?.page * numberOfHitsToShow + (count + 1),
+        list: 'Coffee',
+        category: type || 'All',
+        sort: sortValue,
+      })),
+    })
+  }, [activeRefinements, search?.results?.page, sortValue])
 
   const getCoffeeText = () => {
     switch (type) {
@@ -237,7 +251,7 @@ const CoffeeSearch: React.FC<SearchScreenProps> = ({ getDescription }) => {
         <Stats />
       </div>
 
-      {renderSearchContent('coffee', search.results, productHits, numberOfHitsToShow)}
+      {renderSearchContent(t, 'coffee', search.results, productHits, numberOfHitsToShow)}
       {productHits > 0 && <Pagination />}
 
       <div

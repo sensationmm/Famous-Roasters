@@ -1,10 +1,11 @@
 import { useQuery } from '@apollo/client/react/hooks'
 import { loader } from 'graphql.macro'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ErrorPrompt, Loader, ProductTile } from 'src/components'
 import { shopifyAccessoryCollection, shopifyCoffeeCollection } from 'src/config'
 import useBreakpoint from 'src/hooks/useBreakpoint'
+import { dataLayerEvent } from 'src/utils'
 import { getSimplifiedId } from 'src/utils/formatters'
 import { CollectionQuery } from 'src/views/Catalogue'
 
@@ -69,6 +70,22 @@ export const YouMightLike: React.FC<YouMightLikeProps> = ({ productId, filter }:
     endCursor: null,
   }
 
+  const pageLoaded = data && data2 && !loading && !loading2
+
+  useEffect(() => {
+    pageLoaded &&
+      dataLayerEvent({
+        impressions: productNodes.map((hit, count) => ({
+          name: hit.title,
+          brand: hit.vendor,
+          id: hit.id,
+          position: count + 1,
+          list: 'You Might Like',
+          product: productId,
+        })),
+      })
+  }, [pageLoaded])
+
   if (loading || loading2) {
     return (
       <div className="flex h-64 mb-32 justify-center items-center">
@@ -86,7 +103,27 @@ export const YouMightLike: React.FC<YouMightLikeProps> = ({ productId, filter }:
       {productNodes?.map((node, i: number) => {
         const id = getSimplifiedId(node.id)
         return (
-          <Link to={`/product/${id}`} key={`product-tile-link-${i}`}>
+          <Link
+            to={`/product/${id}`}
+            key={`product-tile-link-${i}`}
+            onClick={() =>
+              dataLayerEvent(
+                {
+                  click: {
+                    actionField: { list: 'You Might Like' },
+                    products: [
+                      {
+                        name: node.title,
+                        id: node.id,
+                        brand: node.vendor,
+                      },
+                    ],
+                  },
+                },
+                'productClick',
+              )
+            }
+          >
             <ProductTile key={`title-${i}`} productNode={node} />
           </Link>
         )

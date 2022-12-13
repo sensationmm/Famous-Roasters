@@ -10,7 +10,7 @@ import {
   useSortBy,
 } from 'react-instantsearch-hooks-web'
 import { useParams } from 'react-router-dom'
-import { parseHtmlSafely } from 'src/utils'
+import { dataLayerEvent, parseHtmlSafely } from 'src/utils'
 import { capitalize } from 'src/utils/formatters'
 import { formatCategoryHtmlElement } from 'src/utils/htmlContentParser'
 
@@ -27,8 +27,8 @@ const AccessoriesSearch: React.FC<SearchScreenProps> = ({ getDescription }) => {
   const { productType } = useParams()
   const { items: activeRefinements } = useCurrentRefinements()
   const { refine: clearRefinements } = useClearRefinements()
-  const sortItems = returnSortItems()
-  const { refine: clearSort } = useSortBy({
+  const sortItems = returnSortItems(t)
+  const { currentRefinement: sortValue, refine: clearSort } = useSortBy({
     items: sortItems,
   })
 
@@ -43,6 +43,20 @@ const AccessoriesSearch: React.FC<SearchScreenProps> = ({ getDescription }) => {
     clearRefinements()
     clearSort('products')
   }, [productType])
+
+  useEffect(() => {
+    dataLayerEvent({
+      impressions: search?.results.hits.map((hit, count) => ({
+        name: hit.title,
+        brand: hit.vendor,
+        id: hit.id,
+        position: search?.results?.page * numberOfHitsToShow + (count + 1),
+        list: 'Coffee',
+        category: type || 'All',
+        sort: sortValue,
+      })),
+    })
+  }, [activeRefinements, search?.results?.page, sortValue])
 
   return (
     <>
@@ -92,7 +106,7 @@ const AccessoriesSearch: React.FC<SearchScreenProps> = ({ getDescription }) => {
         </div>
       </div>
 
-      {renderSearchContent('accessory', search.results, productHits, numberOfHitsToShow)}
+      {renderSearchContent(t, 'accessory', search.results, productHits, numberOfHitsToShow)}
       {productHits > 0 && <Pagination />}
 
       <div

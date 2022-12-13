@@ -36,7 +36,7 @@ import {
   TypographyType,
 } from 'src/components'
 import useBreakpoint from 'src/hooks/useBreakpoint'
-import { formatPrice, getAPIId, parseHtmlSafely } from 'src/utils'
+import { dataLayerEvent, formatPrice, getAPIId, parseHtmlSafely } from 'src/utils'
 import { Error } from 'src/views/Error'
 
 import { FindSimilar } from './FindSimilar'
@@ -274,6 +274,27 @@ export const Product: React.FC = () => {
   }
 
   const handleAddToCart = () => {
+    dataLayerEvent(
+      {
+        currencyCode: 'EUR',
+        add: {
+          products: [
+            {
+              name: data?.product.title,
+              id: data?.product.id,
+              price: variantSelected.price.amount,
+              brand: data?.product.vendor,
+              variant: variantSelected.id,
+              quantity: quantity,
+              packageSize: variantSelected.package_size.value,
+              grindType: variantSelected.grind_type?.value,
+              equipmentVariant: variantSelected.equipmentvariant?.value,
+            },
+          ],
+        },
+      },
+      'addToCart',
+    )
     addToCart && addToCart({ quantity, item: variantSelected.id })
   }
 
