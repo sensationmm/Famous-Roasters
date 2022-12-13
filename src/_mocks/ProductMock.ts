@@ -8,6 +8,7 @@ const GET_PRODUCT = loader('src/graphql/queries/product.query.graphql')
 const ProductMockDataBase: any = {
   id: "gid://shopify/Product/7655228866776",
   title: 'Espresso Raritäten Set',
+  handle: 'espresso-raritaten-set',
   seo: {
     title: 'Hi',
     description: 'Hello World'
@@ -78,7 +79,6 @@ const ProductMockDataBase: any = {
     src: '',
     transformedSrc: '',
   },
-  handle: '',
   images: {
     edges: [],
     nodes: [
@@ -563,12 +563,12 @@ export const ProductMock = {
   request: {
     query: GET_PRODUCT,
     variables: {
-      id: "gid://shopify/Product/123456",
+      id: "espresso-raritaten-set",
     },
   },
   result: {
     data: {
-      product: ProductMockData,
+      productByHandle: ProductMockData,
     },
   },
 }
@@ -577,12 +577,12 @@ export const ProductMockWithCustomMetadata = {
   request: {
     query: GET_PRODUCT,
     variables: {
-      id: "gid://shopify/Product/7655228866776",
+      id: "espresso-raritaten-set",
     },
   },
   result: {
     data: {
-      product: ProductMockDataWithCustomMetadata,
+      productByHandle: ProductMockDataWithCustomMetadata,
     },
   },
 }
@@ -591,12 +591,12 @@ export const ProductMockWithCustomMetadataNoAroma = {
   request: {
     query: GET_PRODUCT,
     variables: {
-      id: "gid://shopify/Product/7655228866776",
+      id: "espresso-raritaten-set",
     },
   },
   result: {
     data: {
-      product: {
+      productByHandle: {
         ...ProductMockDataWithCustomMetadata,
         aroma: null,
       },
@@ -608,12 +608,12 @@ export const ProductMockWithCustomMetadataInternationalVendor = {
   request: {
     query: GET_PRODUCT,
     variables: {
-      id: "gid://shopify/Product/7655228866776",
+      id: "espresso-raritaten-set",
     },
   },
   result: {
     data: {
-      product: {
+      productByHandle: {
         ...ProductMockDataWithCustomMetadata,
         vendor: 'Nomad',
       },
@@ -625,12 +625,12 @@ export const ProductMockAccessory = {
   request: {
     query: GET_PRODUCT,
     variables: {
-      id: "gid://shopify/Product/7655228866776",
+      id: "espresso-raritaten-set",
     },
   },
   result: {
     data: {
-      product: AccessoryMockDataBaseWithVariant,
+      productByHandle: AccessoryMockDataBaseWithVariant,
     },
   },
 }
@@ -639,7 +639,7 @@ export const ProductMockError = {
   request: {
     query: GET_PRODUCT,
     variables: {
-      id: "gid://shopify/Product/123456",
+      id: "espresso-raritaten-set",
     },
   },
   result: {

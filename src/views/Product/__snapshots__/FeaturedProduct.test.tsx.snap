@@ -77,7 +77,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//blog.60beans.com"
+                  href="//www.60beans.com/blog"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -115,7 +115,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="//shop.60beans.com/taste-finder"
+                    href="//www.60beans.com/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -126,7 +126,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//shop.60beans.com/profile"
+                  href="//www.60beans.com/profile"
                 >
                   <svg
                     class="undefined"
@@ -343,7 +343,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
           >
             <a
               class="flex justify-center items-start md:row-start-1 md:row-end-3"
-              href="/product/7655228866776"
+              href="/product/espresso-raritaten-set"
             >
               <div
                 class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-3/4 shrink-0 grow-0"
@@ -357,7 +357,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
             </a>
             <a
               class="flex flex-col w-fit"
-              href="/product/7655228866776"
+              href="/product/espresso-raritaten-set"
             >
               <div
                 class="p-0"
@@ -488,7 +488,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mt-8 col-span-2 md:col-start-2 md:col-span-1"
             >
               <a
-                href="/product/7655228866776"
+                href="/product/espresso-raritaten-set"
               >
                 <button
                   class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
@@ -556,7 +556,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/catalogue"
+                href="//www.60beans.com/catalogue"
                 target="_self"
               >
                 Shop
@@ -566,7 +566,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/taste-finder"
+                href="//www.60beans.com/taste-finder"
                 target="_self"
               >
                 Tastefinder
@@ -610,7 +610,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//blog.60beans.com"
+                href="//www.60beans.com/blog"
                 target="_self"
               >
                 Blog
@@ -891,7 +891,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//blog.60beans.com"
+                  href="//www.60beans.com/blog"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -929,7 +929,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="//shop.60beans.com/taste-finder"
+                    href="//www.60beans.com/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -940,7 +940,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//shop.60beans.com/profile"
+                  href="//www.60beans.com/profile"
                 >
                   <svg
                     class="undefined"
@@ -1157,7 +1157,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
           >
             <a
               class="flex justify-center items-start md:row-start-1 md:row-end-3"
-              href="/product/7655228866776"
+              href="/product/espresso-raritaten-set"
             >
               <div
                 class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-3/4 shrink-0 grow-0"
@@ -1171,7 +1171,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
             </a>
             <a
               class="flex flex-col w-fit"
-              href="/product/7655228866776"
+              href="/product/espresso-raritaten-set"
             >
               <div
                 class="p-0"
@@ -1302,7 +1302,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mt-8 col-span-2 md:col-start-2 md:col-span-1"
             >
               <a
-                href="/product/7655228866776"
+                href="/product/espresso-raritaten-set"
               >
                 <button
                   class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
@@ -1370,7 +1370,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/catalogue"
+                href="//www.60beans.com/catalogue"
                 target="_self"
               >
                 Shop
@@ -1380,7 +1380,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/taste-finder"
+                href="//www.60beans.com/taste-finder"
                 target="_self"
               >
                 Tastefinder
@@ -1424,7 +1424,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//blog.60beans.com"
+                href="//www.60beans.com/blog"
                 target="_self"
               >
                 Blog
@@ -1705,7 +1705,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//blog.60beans.com"
+                  href="//www.60beans.com/blog"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -1743,7 +1743,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="//shop.60beans.com/taste-finder"
+                    href="//www.60beans.com/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -1754,7 +1754,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//shop.60beans.com/profile"
+                  href="//www.60beans.com/profile"
                 >
                   <svg
                     class="undefined"
@@ -1971,7 +1971,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
           >
             <a
               class="flex justify-center items-start md:row-start-1 md:row-end-3"
-              href="/product/7655228866776"
+              href="/product/espresso-raritaten-set"
             >
               <div
                 class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-3/4 shrink-0 grow-0"
@@ -1985,7 +1985,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
             </a>
             <a
               class="flex flex-col w-fit"
-              href="/product/7655228866776"
+              href="/product/espresso-raritaten-set"
             >
               <div
                 class="p-0"
@@ -2116,7 +2116,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mt-8 col-span-2 md:col-start-2 md:col-span-1"
             >
               <a
-                href="/product/7655228866776"
+                href="/product/espresso-raritaten-set"
               >
                 <button
                   class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
@@ -2184,7 +2184,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/catalogue"
+                href="//www.60beans.com/catalogue"
                 target="_self"
               >
                 Shop
@@ -2194,7 +2194,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/taste-finder"
+                href="//www.60beans.com/taste-finder"
                 target="_self"
               >
                 Tastefinder
@@ -2238,7 +2238,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//blog.60beans.com"
+                href="//www.60beans.com/blog"
                 target="_self"
               >
                 Blog
@@ -2519,7 +2519,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//blog.60beans.com"
+                  href="//www.60beans.com/blog"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -2557,7 +2557,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="//shop.60beans.com/taste-finder"
+                    href="//www.60beans.com/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -2568,7 +2568,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//shop.60beans.com/profile"
+                  href="//www.60beans.com/profile"
                 >
                   <svg
                     class="undefined"
@@ -2785,7 +2785,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
           >
             <a
               class="flex justify-center items-start md:row-start-1 md:row-end-3"
-              href="/product/7655228866776"
+              href="/product/espresso-raritaten-set"
             >
               <div
                 class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-3/4 shrink-0 grow-0"
@@ -2799,7 +2799,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
             </a>
             <a
               class="flex flex-col w-fit"
-              href="/product/7655228866776"
+              href="/product/espresso-raritaten-set"
             >
               <div
                 class="p-0"
@@ -2930,7 +2930,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mt-8 col-span-2 md:col-start-2 md:col-span-1"
             >
               <a
-                href="/product/7655228866776"
+                href="/product/espresso-raritaten-set"
               >
                 <button
                   class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
@@ -2998,7 +2998,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/catalogue"
+                href="//www.60beans.com/catalogue"
                 target="_self"
               >
                 Shop
@@ -3008,7 +3008,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/taste-finder"
+                href="//www.60beans.com/taste-finder"
                 target="_self"
               >
                 Tastefinder
@@ -3052,7 +3052,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//blog.60beans.com"
+                href="//www.60beans.com/blog"
                 target="_self"
               >
                 Blog
@@ -3333,7 +3333,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//blog.60beans.com"
+                  href="//www.60beans.com/blog"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -3371,7 +3371,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="//shop.60beans.com/taste-finder"
+                    href="//www.60beans.com/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -3382,7 +3382,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//shop.60beans.com/profile"
+                  href="//www.60beans.com/profile"
                 >
                   <svg
                     class="undefined"
@@ -3599,7 +3599,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
           >
             <a
               class="flex justify-center items-start md:row-start-1 md:row-end-3"
-              href="/product/7655228866776"
+              href="/product/espresso-raritaten-set"
             >
               <div
                 class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-3/4 shrink-0 grow-0"
@@ -3613,7 +3613,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
             </a>
             <a
               class="flex flex-col w-fit"
-              href="/product/7655228866776"
+              href="/product/espresso-raritaten-set"
             >
               <div
                 class="p-0"
@@ -3744,7 +3744,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mt-8 col-span-2 md:col-start-2 md:col-span-1"
             >
               <a
-                href="/product/7655228866776"
+                href="/product/espresso-raritaten-set"
               >
                 <button
                   class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
@@ -3812,7 +3812,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/catalogue"
+                href="//www.60beans.com/catalogue"
                 target="_self"
               >
                 Shop
@@ -3822,7 +3822,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/taste-finder"
+                href="//www.60beans.com/taste-finder"
                 target="_self"
               >
                 Tastefinder
@@ -3866,7 +3866,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//blog.60beans.com"
+                href="//www.60beans.com/blog"
                 target="_self"
               >
                 Blog
@@ -4147,7 +4147,7 @@ exports[`Featured product view Renders correctly for a successful call without a
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//blog.60beans.com"
+                  href="//www.60beans.com/blog"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -4185,7 +4185,7 @@ exports[`Featured product view Renders correctly for a successful call without a
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="//shop.60beans.com/taste-finder"
+                    href="//www.60beans.com/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -4196,7 +4196,7 @@ exports[`Featured product view Renders correctly for a successful call without a
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//shop.60beans.com/profile"
+                  href="//www.60beans.com/profile"
                 >
                   <svg
                     class="undefined"
@@ -4290,7 +4290,7 @@ exports[`Featured product view Renders correctly for a successful call without a
           >
             <a
               class="flex justify-center items-start md:row-start-1 md:row-end-3"
-              href="/product/7655228866776"
+              href="/product/espresso-raritaten-set"
             >
               <div
                 class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-3/4 shrink-0 grow-0"
@@ -4304,7 +4304,7 @@ exports[`Featured product view Renders correctly for a successful call without a
             </a>
             <a
               class="flex flex-col w-fit"
-              href="/product/7655228866776"
+              href="/product/espresso-raritaten-set"
             >
               <div
                 class="p-0"
@@ -4435,7 +4435,7 @@ exports[`Featured product view Renders correctly for a successful call without a
               class="mt-8 col-span-2 md:col-start-2 md:col-span-1"
             >
               <a
-                href="/product/7655228866776"
+                href="/product/espresso-raritaten-set"
               >
                 <button
                   class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
@@ -4503,7 +4503,7 @@ exports[`Featured product view Renders correctly for a successful call without a
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/catalogue"
+                href="//www.60beans.com/catalogue"
                 target="_self"
               >
                 Shop
@@ -4513,7 +4513,7 @@ exports[`Featured product view Renders correctly for a successful call without a
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/taste-finder"
+                href="//www.60beans.com/taste-finder"
                 target="_self"
               >
                 Tastefinder
@@ -4557,7 +4557,7 @@ exports[`Featured product view Renders correctly for a successful call without a
               class="mb-4"
             >
               <a
-                href="//blog.60beans.com"
+                href="//www.60beans.com/blog"
                 target="_self"
               >
                 Blog
@@ -4838,7 +4838,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//blog.60beans.com"
+                  href="//www.60beans.com/blog"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -4876,7 +4876,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="//shop.60beans.com/taste-finder"
+                    href="//www.60beans.com/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -4887,7 +4887,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//shop.60beans.com/profile"
+                  href="//www.60beans.com/profile"
                 >
                   <svg
                     class="undefined"
@@ -5104,7 +5104,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
           >
             <a
               class="flex justify-center items-start md:row-start-1 md:row-end-3"
-              href="/product/7655228866776"
+              href="/product/espresso-raritaten-set"
             >
               <div
                 class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-3/4 shrink-0 grow-0"
@@ -5118,7 +5118,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
             </a>
             <a
               class="flex flex-col w-fit"
-              href="/product/7655228866776"
+              href="/product/espresso-raritaten-set"
             >
               <div
                 class="p-0"
@@ -5249,7 +5249,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
               class="mt-8 col-span-2 md:col-start-2 md:col-span-1"
             >
               <a
-                href="/product/7655228866776"
+                href="/product/espresso-raritaten-set"
               >
                 <button
                   class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
@@ -5317,7 +5317,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/catalogue"
+                href="//www.60beans.com/catalogue"
                 target="_self"
               >
                 Shop
@@ -5327,7 +5327,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/taste-finder"
+                href="//www.60beans.com/taste-finder"
                 target="_self"
               >
                 Tastefinder
@@ -5371,7 +5371,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
               class="mb-4"
             >
               <a
-                href="//blog.60beans.com"
+                href="//www.60beans.com/blog"
                 target="_self"
               >
                 Blog
@@ -5677,7 +5677,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//blog.60beans.com"
+                  href="//www.60beans.com/blog"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -5715,7 +5715,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="//shop.60beans.com/taste-finder"
+                    href="//www.60beans.com/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -5726,7 +5726,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//shop.60beans.com/profile"
+                  href="//www.60beans.com/profile"
                 >
                   <svg
                     class="undefined"
@@ -5943,7 +5943,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
           >
             <a
               class="flex justify-center items-start md:row-start-1 md:row-end-3"
-              href="/product/7655228866776"
+              href="/product/espresso-raritaten-set"
             >
               <div
                 class="flex aspect-1 justify-center items-center rounded-full bg-coreUI-background-images w-3/4 shrink-0 grow-0"
@@ -5957,7 +5957,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
             </a>
             <a
               class="flex flex-col w-fit"
-              href="/product/7655228866776"
+              href="/product/espresso-raritaten-set"
             >
               <div
                 class="p-0"
@@ -6075,7 +6075,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
               class="mt-8 col-span-2 md:col-start-2 md:col-span-1"
             >
               <a
-                href="/product/7655228866776"
+                href="/product/espresso-raritaten-set"
               >
                 <button
                   class="flex w-full justify-center relative inline-flex flex-row items-center rounded-full border-2 px-4 py-2 text-base font-bold disabled:bg-brand-grey-whisper disabled:text-coreUI-text-secondary disabled:cursor-not-allowed text-brand-black bg-primary border-transparent hover:bg-brand-green-starship active:bg-primary"
@@ -6143,7 +6143,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/catalogue"
+                href="//www.60beans.com/catalogue"
                 target="_self"
               >
                 Shop
@@ -6153,7 +6153,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/taste-finder"
+                href="//www.60beans.com/taste-finder"
                 target="_self"
               >
                 Tastefinder
@@ -6197,7 +6197,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
               class="mb-4"
             >
               <a
-                href="//blog.60beans.com"
+                href="//www.60beans.com/blog"
                 target="_self"
               >
                 Blog

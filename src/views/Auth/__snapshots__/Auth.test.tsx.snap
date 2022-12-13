@@ -77,7 +77,7 @@ exports[`Auth view Renders correctly 1`] = `
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//blog.60beans.com"
+                  href="//www.60beans.com/blog"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -115,7 +115,7 @@ exports[`Auth view Renders correctly 1`] = `
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="//shop.60beans.com/taste-finder"
+                    href="//www.60beans.com/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -126,7 +126,7 @@ exports[`Auth view Renders correctly 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//shop.60beans.com/profile"
+                  href="//www.60beans.com/profile"
                 >
                   <svg
                     class="undefined"

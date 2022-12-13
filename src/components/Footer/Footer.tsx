@@ -34,7 +34,7 @@ const footerLinks: FooterLink[][] = [
   [
     { key: 'about', href: '//www.60beans.com/uber-uns' },
     { key: 'ourRoasters', href: '//www.60beans.com/roesterei' },
-    { key: 'blog', href: `${domainBlog}` },
+    { key: 'blog', href: `${domainBlog}/blog` },
     { key: 'forCoffeeRoasters', href: '//www.60beans.com/warum-60beans' },
   ],
   [

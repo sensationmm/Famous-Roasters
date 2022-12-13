@@ -7,6 +7,7 @@ import { Typography, TypographySize, TypographyType } from '../Typography'
 
 type RawHit = {
   id: string
+  handle: string
   title: string
   image: string
   product_image: string
@@ -32,6 +33,7 @@ const Hit = ({ hit }: { hit: RawHit }) => {
   const showFrom = hit.variants_count > 1
   const {
     id,
+    handle,
     image,
     title,
     vendor,
@@ -53,7 +55,7 @@ const Hit = ({ hit }: { hit: RawHit }) => {
   return (
     <Link
       key={`product-tile-link-${id}`}
-      to={`/product/${id}`}
+      to={`/product/${handle}`}
       state={{ prevPath: location.pathname }}
       onClick={() =>
         dataLayerEvent(

@@ -44,7 +44,7 @@ const navigationData: NavigationData = {
   pagesPrimary: [
     { key: 'about', href: '//www.60beans.com/uber-uns' },
     { key: 'ourRoasters', href: '//www.60beans.com/roesterei' },
-    { key: 'blog', href: domainBlog },
+    { key: 'blog', href: `${domainBlog}/blog` },
   ],
   pagesSecondary: [{ key: 'tasteFinder', href: `${domainShop}/taste-finder` }],
   pagesMobile: [{ key: 'profile', href: `${domainShop}/profile` }],

@@ -21,7 +21,7 @@ import { CartProvider } from '.'
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'), // use actual for all non-hook parts
   useParams: () => ({
-    id: '7655228866776',
+    id: 'espresso-raritaten-set',
   }),
 }))
 
@@ -132,7 +132,7 @@ describe('Cart provider component', () => {
       >
         <CartProvider>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/product/7655228866776']}>
+            <MemoryRouter initialEntries={['/product/espresso-raritaten-set']}>
               <Product />
             </MemoryRouter>
           </I18nextProvider>
@@ -156,7 +156,7 @@ describe('Cart provider component', () => {
       >
         <CartProvider>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/product/7655228866776']}>
+            <MemoryRouter initialEntries={['/product/espresso-raritaten-set']}>
               <Product />
             </MemoryRouter>
           </I18nextProvider>

@@ -77,7 +77,7 @@ exports[`Profile view Renders correctly 1`] = `
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//blog.60beans.com"
+                  href="//www.60beans.com/blog"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -115,7 +115,7 @@ exports[`Profile view Renders correctly 1`] = `
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="//shop.60beans.com/taste-finder"
+                    href="//www.60beans.com/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -126,7 +126,7 @@ exports[`Profile view Renders correctly 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//shop.60beans.com/profile"
+                  href="//www.60beans.com/profile"
                 >
                   <svg
                     class="undefined"
@@ -765,7 +765,7 @@ exports[`Profile view Renders correctly 1`] = `
               class="grid grid-cols-2 grid-cols-[150px_1fr] gap-4 px-0 py-6 border-b border-brand-grey-bombay md:max-w-sm md:border-0"
             >
               <a
-                href="//blog.60beans.com/de/Zubereitungstipps"
+                href="//www.60beans.com/de/Zubereitungstipps"
               >
                 <img
                   class="w-full"
@@ -829,7 +829,7 @@ exports[`Profile view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/catalogue"
+                href="//www.60beans.com/catalogue"
               >
                 Shop
               </a>
@@ -838,7 +838,7 @@ exports[`Profile view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/taste-finder"
+                href="//www.60beans.com/taste-finder"
               >
                 Tastefinder
               </a>
@@ -878,7 +878,7 @@ exports[`Profile view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//blog.60beans.com"
+                href="//www.60beans.com/blog"
               >
                 Blog
               </a>

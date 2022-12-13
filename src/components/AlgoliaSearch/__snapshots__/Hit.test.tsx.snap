@@ -3,7 +3,7 @@
 exports[`Hit component Renders correctly 1`] = `
 <div>
   <a
-    href="/product/gid://shopify/Product/7655228866776"
+    href="/product/espresso-raritaten-set"
   >
     <div
       class="flex pt-8 md:px-6"
@@ -73,7 +73,7 @@ exports[`Hit component Renders correctly 1`] = `
 exports[`Hit component Renders correctly for decaf 1`] = `
 <div>
   <a
-    href="/product/gid://shopify/Product/7655228866776"
+    href="/product/espresso-raritaten-set"
   >
     <div
       class="flex pt-8 md:px-6"
@@ -152,7 +152,7 @@ exports[`Hit component Renders correctly for decaf 1`] = `
 exports[`Hit component Renders correctly for out of stock 1`] = `
 <div>
   <a
-    href="/product/gid://shopify/Product/7655228866776"
+    href="/product/espresso-raritaten-set"
   >
     <div
       class="flex pt-8 md:px-6"

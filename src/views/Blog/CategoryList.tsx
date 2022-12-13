@@ -52,7 +52,7 @@ export const CategoryList: React.FC<CategoryListProps> = ({ locale = 'de_de' }) 
     <Layout navigationTheme={NavigationTheme.Home}>
       <Helmet>
         <title>{`${t('pages.blog.ourBlog')} | ${t('brand.name')}`}</title>
-        <link rel="canonical" href={`${process.env.REACT_APP_DOMAIN_BLOG}/${locale}`} />
+        <link rel="canonical" href={`${process.env.REACT_APP_DOMAIN_BLOG}/blog/${locale.split('_')[1]}`} />
       </Helmet>
       <div className="flex-grow flex w-full flex-col">
         <div className="hero w-full h-[624px] md:h-[428px] xl:h-[624px] bg-brand-grey-whisper">

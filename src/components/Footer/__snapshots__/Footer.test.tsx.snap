@@ -38,7 +38,7 @@ exports[`Footer component Renders correctly 1`] = `
             class="mb-4"
           >
             <a
-              href="//shop.60beans.com/catalogue"
+              href="//www.60beans.com/catalogue"
               target="_self"
             >
               Shop
@@ -48,7 +48,7 @@ exports[`Footer component Renders correctly 1`] = `
             class="mb-4"
           >
             <a
-              href="//shop.60beans.com/taste-finder"
+              href="//www.60beans.com/taste-finder"
               target="_self"
             >
               Tastefinder
@@ -92,7 +92,7 @@ exports[`Footer component Renders correctly 1`] = `
             class="mb-4"
           >
             <a
-              href="//blog.60beans.com"
+              href="//www.60beans.com/blog"
               target="_self"
             >
               Blog
