@@ -1,3 +1,16 @@
+# [1.106.0](https://github.com/Famous-Roasters/frontend/compare/v1.105.0...v1.106.0) (2022-12-13)
+
+
+### Bug Fixes
+
+* **catalogue:** sonarcloud bugs ([dfe70dc](https://github.com/Famous-Roasters/frontend/commit/dfe70dcac4a4c6755c6030b0537af5b7c732debf))
+
+
+### Features
+
+* **analytics:** enhanced tag manager for shop activities ([7ee2ea8](https://github.com/Famous-Roasters/frontend/commit/7ee2ea80679452d9bd633fa7f00bac5ddb0c0d8c))
+* **analytics:** taste finder tracking ([c8dfd4c](https://github.com/Famous-Roasters/frontend/commit/c8dfd4c20b590301a0b113fdb4ea3304b78cd7da))
+
 # [1.105.0](https://github.com/Famous-Roasters/frontend/compare/v1.104.1...v1.105.0) (2022-12-12)
 
 
