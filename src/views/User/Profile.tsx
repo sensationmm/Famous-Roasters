@@ -458,7 +458,7 @@ export const Profile: React.FC = () => {
             {/* TODO: make this content dynamic from CMS */}
             <div className="grid w-full md:grid-cols-2">
               <div className="grid grid-cols-2 grid-cols-[150px_1fr] gap-4 px-0 py-6 border-b border-brand-grey-bombay md:max-w-sm md:border-0">
-                <Link to={`${process.env.REACT_APP_DOMAIN_BLOG}/blog/de/Zubereitungstipps`}>
+                <Link to={`/blog/de/Zubereitungstipps`}>
                   <img src={CoffeeKnowledge} className="w-full" />
                 </Link>
                 <div className="flex flex-col justify-center">
@@ -469,7 +469,7 @@ export const Profile: React.FC = () => {
                     data-testid="button-blog"
                     emphasis={ButtonEmphasis.Secondary}
                     size={ButtonSize.xs}
-                    onClick={() => navigate(`${process.env.REACT_APP_DOMAIN_BLOG}/blog/de/Zubereitungstipps`)}
+                    onClick={() => navigate(`/blog/de/Zubereitungstipps`)}
                     center
                   >
                     {t('pages.profile.sections.discover.ctaBlog')}

@@ -765,7 +765,7 @@ exports[`Profile view Renders correctly 1`] = `
               class="grid grid-cols-2 grid-cols-[150px_1fr] gap-4 px-0 py-6 border-b border-brand-grey-bombay md:max-w-sm md:border-0"
             >
               <a
-                href="//blog.60beans.com/blog/de/Zubereitungstipps"
+                href="/blog/de/Zubereitungstipps"
               >
                 <img
                   class="w-full"
