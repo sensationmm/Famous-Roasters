@@ -1,3 +1,10 @@
+# [1.107.0](https://github.com/Famous-Roasters/frontend/compare/v1.106.0...v1.107.0) (2022-12-13)
+
+
+### Features
+
+* **product:** change message ([0c40b9c](https://github.com/Famous-Roasters/frontend/commit/0c40b9c7ea13d9c53306d1eca9a006fa68e4a685))
+
 # [1.106.0](https://github.com/Famous-Roasters/frontend/compare/v1.105.0...v1.106.0) (2022-12-13)
 
 
