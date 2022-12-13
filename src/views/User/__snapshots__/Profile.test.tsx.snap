@@ -126,7 +126,7 @@ exports[`Profile view Renders correctly 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//staging.www.60beans.com/profile"
+                  href="***/profile"
                 >
                   <svg
                     class="undefined"
@@ -765,7 +765,7 @@ exports[`Profile view Renders correctly 1`] = `
               class="grid grid-cols-2 grid-cols-[150px_1fr] gap-4 px-0 py-6 border-b border-brand-grey-bombay md:max-w-sm md:border-0"
             >
               <a
-                href="//staging.www.60beans.com/de/Zubereitungstipps"
+                href="***/de/Zubereitungstipps"
               >
                 <img
                   class="w-full"
@@ -863,7 +863,7 @@ exports[`Profile view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//staging.www.60beans.com/uber-uns"
+                href="***/uber-uns"
                 target="_self"
               >
                 Über uns
@@ -873,7 +873,7 @@ exports[`Profile view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//staging.www.60beans.com/roesterei"
+                href="***/roesterei"
                 target="_self"
               >
                 Unsere Röster
@@ -893,7 +893,7 @@ exports[`Profile view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//staging.www.60beans.com/warum-60beans"
+                href="***/warum-60beans"
                 target="_self"
               >
                 Für Kaffeeröster
@@ -907,7 +907,7 @@ exports[`Profile view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//staging.www.60beans.com/legal/datenschutz"
+                href="***/legal/datenschutz"
                 target="_self"
               >
                 Datenschutz
@@ -917,7 +917,7 @@ exports[`Profile view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//staging.www.60beans.com/legal/impressum"
+                href="***/legal/impressum"
                 target="_self"
               >
                 Impressum
@@ -927,7 +927,7 @@ exports[`Profile view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//staging.www.60beans.com/legal/cookie-policy"
+                href="***/legal/cookie-policy"
                 target="_self"
               >
                 Cookie Policy
@@ -937,7 +937,7 @@ exports[`Profile view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//staging.www.60beans.com/legal/agb"
+                href="***/legal/agb"
                 target="_self"
               >
                 Allgemeine Geschäftsbedingungen
@@ -947,7 +947,7 @@ exports[`Profile view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//staging.www.60beans.com/legal/widerrufsrecht"
+                href="***/legal/widerrufsrecht"
                 target="_self"
               >
                 Widerrufsrecht

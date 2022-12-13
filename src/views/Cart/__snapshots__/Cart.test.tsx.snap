@@ -126,7 +126,7 @@ exports[`Cart view Renders correctly 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//staging.www.60beans.com/profile"
+                  href="***/profile"
                 >
                   <svg
                     class="undefined"
@@ -640,7 +640,7 @@ exports[`Cart view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//staging.www.60beans.com/uber-uns"
+                href="***/uber-uns"
                 target="_self"
               >
                 Über uns
@@ -650,7 +650,7 @@ exports[`Cart view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//staging.www.60beans.com/roesterei"
+                href="***/roesterei"
                 target="_self"
               >
                 Unsere Röster
@@ -670,7 +670,7 @@ exports[`Cart view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//staging.www.60beans.com/warum-60beans"
+                href="***/warum-60beans"
                 target="_self"
               >
                 Für Kaffeeröster
@@ -684,7 +684,7 @@ exports[`Cart view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//staging.www.60beans.com/legal/datenschutz"
+                href="***/legal/datenschutz"
                 target="_self"
               >
                 Datenschutz
@@ -694,7 +694,7 @@ exports[`Cart view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//staging.www.60beans.com/legal/impressum"
+                href="***/legal/impressum"
                 target="_self"
               >
                 Impressum
@@ -704,7 +704,7 @@ exports[`Cart view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//staging.www.60beans.com/legal/cookie-policy"
+                href="***/legal/cookie-policy"
                 target="_self"
               >
                 Cookie Policy
@@ -714,7 +714,7 @@ exports[`Cart view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//staging.www.60beans.com/legal/agb"
+                href="***/legal/agb"
                 target="_self"
               >
                 Allgemeine Geschäftsbedingungen
@@ -724,7 +724,7 @@ exports[`Cart view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//staging.www.60beans.com/legal/widerrufsrecht"
+                href="***/legal/widerrufsrecht"
                 target="_self"
               >
                 Widerrufsrecht
@@ -990,7 +990,7 @@ exports[`Cart view Renders correctly for no cart id 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//staging.www.60beans.com/profile"
+                  href="***/profile"
                 >
                   <svg
                     class="undefined"
@@ -1170,7 +1170,7 @@ exports[`Cart view Renders correctly for no cart id 1`] = `
               class="mb-4"
             >
               <a
-                href="//staging.www.60beans.com/uber-uns"
+                href="***/uber-uns"
                 target="_self"
               >
                 Über uns
@@ -1180,7 +1180,7 @@ exports[`Cart view Renders correctly for no cart id 1`] = `
               class="mb-4"
             >
               <a
-                href="//staging.www.60beans.com/roesterei"
+                href="***/roesterei"
                 target="_self"
               >
                 Unsere Röster
@@ -1200,7 +1200,7 @@ exports[`Cart view Renders correctly for no cart id 1`] = `
               class="mb-4"
             >
               <a
-                href="//staging.www.60beans.com/warum-60beans"
+                href="***/warum-60beans"
                 target="_self"
               >
                 Für Kaffeeröster
@@ -1214,7 +1214,7 @@ exports[`Cart view Renders correctly for no cart id 1`] = `
               class="mb-4"
             >
               <a
-                href="//staging.www.60beans.com/legal/datenschutz"
+                href="***/legal/datenschutz"
                 target="_self"
               >
                 Datenschutz
@@ -1224,7 +1224,7 @@ exports[`Cart view Renders correctly for no cart id 1`] = `
               class="mb-4"
             >
               <a
-                href="//staging.www.60beans.com/legal/impressum"
+                href="***/legal/impressum"
                 target="_self"
               >
                 Impressum
@@ -1234,7 +1234,7 @@ exports[`Cart view Renders correctly for no cart id 1`] = `
               class="mb-4"
             >
               <a
-                href="//staging.www.60beans.com/legal/cookie-policy"
+                href="***/legal/cookie-policy"
                 target="_self"
               >
                 Cookie Policy
@@ -1244,7 +1244,7 @@ exports[`Cart view Renders correctly for no cart id 1`] = `
               class="mb-4"
             >
               <a
-                href="//staging.www.60beans.com/legal/agb"
+                href="***/legal/agb"
                 target="_self"
               >
                 Allgemeine Geschäftsbedingungen
@@ -1254,7 +1254,7 @@ exports[`Cart view Renders correctly for no cart id 1`] = `
               class="mb-4"
             >
               <a
-                href="//staging.www.60beans.com/legal/widerrufsrecht"
+                href="***/legal/widerrufsrecht"
                 target="_self"
               >
                 Widerrufsrecht
