@@ -44,17 +44,17 @@ const App = () => {
           <BrowserRouter>
             <ScrollToTop />
             <Routes>
-              <Route path="/en/" element={<CategoryList locale="de_en" />} />
-              <Route path="/de/" element={<CategoryList locale="de_de" />} />
+              <Route path="/blog/en/" element={<CategoryList locale="de_en" />} />
+              <Route path="/blog/de/" element={<CategoryList locale="de_de" />} />
 
-              <Route path="/en/:category" element={<BlogListByCategory locale="de_en" />} />
-              <Route path="/de/:category" element={<BlogListByCategory locale="de_de" />} />
+              <Route path="/blog/en/:category" element={<BlogListByCategory locale="de_en" />} />
+              <Route path="/blog/de/:category" element={<BlogListByCategory locale="de_de" />} />
 
-              <Route path="/en/:category/:slug" element={<Blog locale="de_en" />} />
-              <Route path="/de/:category/:slug" element={<Blog locale="de_de" />} />
+              <Route path="/blog/en/:category/:slug" element={<Blog locale="de_en" />} />
+              <Route path="/blog/de/:category/:slug" element={<Blog locale="de_de" />} />
 
-              <Route path="/" element={<Navigate to="/de/" replace />} />
-              <Route path="*" element={<Navigate to="/de/" replace />} />
+              <Route path="/blog" element={<Navigate to="/blog/de/" replace />} />
+              <Route path="*" element={<Navigate to="/blog/de/" replace />} />
             </Routes>
           </BrowserRouter>
         </I18nextProvider>
