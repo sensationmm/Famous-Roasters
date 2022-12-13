@@ -126,7 +126,7 @@ exports[`Error view Renders correctly 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="***/profile"
+                  href="//shop.60beans.com/profile"
                 >
                   <svg
                     class="undefined"
@@ -272,7 +272,7 @@ exports[`Error view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="***/uber-uns"
+                href="//shop.60beans.com/uber-uns"
                 target="_self"
               >
                 Über uns
@@ -282,7 +282,7 @@ exports[`Error view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="***/roesterei"
+                href="//shop.60beans.com/roesterei"
                 target="_self"
               >
                 Unsere Röster
@@ -302,7 +302,7 @@ exports[`Error view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="***/warum-60beans"
+                href="//shop.60beans.com/warum-60beans"
                 target="_self"
               >
                 Für Kaffeeröster
@@ -316,7 +316,7 @@ exports[`Error view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="***/legal/datenschutz"
+                href="//shop.60beans.com/legal/datenschutz"
                 target="_self"
               >
                 Datenschutz
@@ -326,7 +326,7 @@ exports[`Error view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="***/legal/impressum"
+                href="//shop.60beans.com/legal/impressum"
                 target="_self"
               >
                 Impressum
@@ -336,7 +336,7 @@ exports[`Error view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="***/legal/cookie-policy"
+                href="//shop.60beans.com/legal/cookie-policy"
                 target="_self"
               >
                 Cookie Policy
@@ -346,7 +346,7 @@ exports[`Error view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="***/legal/agb"
+                href="//shop.60beans.com/legal/agb"
                 target="_self"
               >
                 Allgemeine Geschäftsbedingungen
@@ -356,7 +356,7 @@ exports[`Error view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="***/legal/widerrufsrecht"
+                href="//shop.60beans.com/legal/widerrufsrecht"
                 target="_self"
               >
                 Widerrufsrecht
