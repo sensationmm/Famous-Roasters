@@ -561,7 +561,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
                   <span
                     class="text-coreUI-text-secondary text-xs leading-4"
                   >
-                    Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu dir. Wir teilen dir den geplanten Liefertermin im nächsten Schritt mit.
+                    Der Kaffee wird röstfrisch direkt von der Rösterei verschickt. Wir teilen Dir den Liefertermin in der Versandbestätigung mit.
                   </span>
                 </div>
                 <div
@@ -665,7 +665,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
           <span
             class="text-coreUI-text-secondary text-xs leading-4"
           >
-            Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu dir. Wir teilen dir den geplanten Liefertermin im nächsten Schritt mit.
+            Der Kaffee wird röstfrisch direkt von der Rösterei verschickt. Wir teilen Dir den Liefertermin in der Versandbestätigung mit.
           </span>
         </div>
         <div
@@ -2122,7 +2122,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                   <span
                     class="text-coreUI-text-secondary text-xs leading-4"
                   >
-                    Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu dir. Wir teilen dir den geplanten Liefertermin im nächsten Schritt mit.
+                    Der Kaffee wird röstfrisch direkt von der Rösterei verschickt. Wir teilen Dir den Liefertermin in der Versandbestätigung mit.
                   </span>
                 </div>
                 <div
@@ -2233,7 +2233,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
           <span
             class="text-coreUI-text-secondary text-xs leading-4"
           >
-            Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu dir. Wir teilen dir den geplanten Liefertermin im nächsten Schritt mit.
+            Der Kaffee wird röstfrisch direkt von der Rösterei verschickt. Wir teilen Dir den Liefertermin in der Versandbestätigung mit.
           </span>
         </div>
         <div
@@ -4024,7 +4024,7 @@ exports[`Product view Renders correctly for a successful call with International
                   <span
                     class="text-coreUI-text-secondary text-xs leading-4"
                   >
-                    Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu dir. Wir teilen dir den geplanten Liefertermin im nächsten Schritt mit.
+                    Der Kaffee wird röstfrisch direkt von der Rösterei verschickt. Wir teilen Dir den Liefertermin in der Versandbestätigung mit.
                   </span>
                 </div>
                 <div
@@ -4135,7 +4135,7 @@ exports[`Product view Renders correctly for a successful call with International
           <span
             class="text-coreUI-text-secondary text-xs leading-4"
           >
-            Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu dir. Wir teilen dir den geplanten Liefertermin im nächsten Schritt mit.
+            Der Kaffee wird röstfrisch direkt von der Rösterei verschickt. Wir teilen Dir den Liefertermin in der Versandbestätigung mit.
           </span>
         </div>
         <div
@@ -5913,7 +5913,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                   <span
                     class="text-coreUI-text-secondary text-xs leading-4"
                   >
-                    Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu dir. Wir teilen dir den geplanten Liefertermin im nächsten Schritt mit.
+                    Der Kaffee wird röstfrisch direkt von der Rösterei verschickt. Wir teilen Dir den Liefertermin in der Versandbestätigung mit.
                   </span>
                 </div>
                 <div
@@ -6024,7 +6024,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
           <span
             class="text-coreUI-text-secondary text-xs leading-4"
           >
-            Der Röster röstet deinen Kaffee frisch und schickt dein Paket so früh wie möglich direkt zu dir. Wir teilen dir den geplanten Liefertermin im nächsten Schritt mit.
+            Der Kaffee wird röstfrisch direkt von der Rösterei verschickt. Wir teilen Dir den Liefertermin in der Versandbestätigung mit.
           </span>
         </div>
         <div
