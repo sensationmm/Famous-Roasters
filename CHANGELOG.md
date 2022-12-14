@@ -1,3 +1,11 @@
+## [1.108.1](https://github.com/Famous-Roasters/frontend/compare/v1.108.0...v1.108.1) (2022-12-14)
+
+
+### Bug Fixes
+
+* **product:** missing value breaks add to cart ([b390584](https://github.com/Famous-Roasters/frontend/commit/b390584b028878b13c4490cd47a4f214eb74d353))
+* **test:** temporarily ditch snapshots ([234353a](https://github.com/Famous-Roasters/frontend/commit/234353aca7ec2f53d42be7e7565783c2a93eed60))
+
 # [1.108.0](https://github.com/Famous-Roasters/frontend/compare/v1.107.0...v1.108.0) (2022-12-14)
 
 
