@@ -274,6 +274,7 @@ export const Product: React.FC = () => {
   }
 
   const handleAddToCart = () => {
+    addToCart && addToCart({ quantity, item: variantSelected.id })
     dataLayerEvent(
       {
         currencyCode: 'EUR',
@@ -286,7 +287,7 @@ export const Product: React.FC = () => {
               brand: data?.productByHandle.vendor,
               variant: variantSelected.id,
               quantity: quantity,
-              packageSize: variantSelected.package_size.value,
+              packageSize: variantSelected.package_size?.value,
               grindType: variantSelected.grind_type?.value,
               equipmentVariant: variantSelected.equipmentvariant?.value,
             },
@@ -295,7 +296,6 @@ export const Product: React.FC = () => {
       },
       'addToCart',
     )
-    addToCart && addToCart({ quantity, item: variantSelected.id })
   }
 
   const renderCTAContent = () => {

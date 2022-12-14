@@ -9,7 +9,7 @@ exports[`Footer component Renders correctly 1`] = `
       class="w-full max-w-7xl mx-auto mb-8 md:mb-12 lg:mb-16 flex flex-col md:flex-row md:items-center justify-start"
     >
       <a
-        href="//www.60beans.com"
+        href="/"
       >
         <span
           class="sr-only"
@@ -38,7 +38,7 @@ exports[`Footer component Renders correctly 1`] = `
             class="mb-4"
           >
             <a
-              href="//www.60beans.com/catalogue"
+              href="/catalogue"
               target="_self"
             >
               Shop
@@ -48,7 +48,7 @@ exports[`Footer component Renders correctly 1`] = `
             class="mb-4"
           >
             <a
-              href="//www.60beans.com/taste-finder"
+              href="/taste-finder"
               target="_self"
             >
               Tastefinder
@@ -92,7 +92,7 @@ exports[`Footer component Renders correctly 1`] = `
             class="mb-4"
           >
             <a
-              href="//www.60beans.com/blog"
+              href="/blog"
               target="_self"
             >
               Blog

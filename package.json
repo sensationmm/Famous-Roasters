@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "version": "1.106.0",
+  "version": "1.108.1",
   "private": true,
   "dependencies": {
     "@apollo/client": "3.5.10",
@@ -25,7 +25,7 @@
     "test": "react-scripts test --coverage --maxWorkers=50%",
     "test:watchAll": "react-scripts test --coverage --watchAll",
     "test:watch": "react-scripts test --coverage --runInBand",
-    "test:ci": "react-scripts test --coverage --watchAll=false",
+    "test:ci": "react-scripts test -u --coverage --watchAll=false",
     "lint": "eslint src/**/*.{ts,tsx}",
     "lint:fix": "eslint src/**/*.{ts,tsx} --fix",
     "prettier": "prettier --check src/**/*.{ts,tsx}",

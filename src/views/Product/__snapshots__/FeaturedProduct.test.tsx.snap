@@ -57,7 +57,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               >
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/uber-uns"
+                  href="/uber-uns"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -67,7 +67,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/roesterei"
+                  href="/roesterei"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -77,7 +77,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/blog"
+                  href="/blog"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -89,7 +89,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
-              href="//www.60beans.com"
+              href="/"
             >
               <span
                 class="sr-only"
@@ -115,7 +115,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="//www.60beans.com/taste-finder"
+                    href="/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -527,7 +527,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
         class="w-full max-w-7xl mx-auto mb-8 md:mb-12 lg:mb-16 flex flex-col md:flex-row md:items-center justify-start"
       >
         <a
-          href="//www.60beans.com"
+          href="/"
         >
           <span
             class="sr-only"
@@ -556,7 +556,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/catalogue"
+                href="/catalogue"
                 target="_self"
               >
                 Shop
@@ -566,7 +566,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/taste-finder"
+                href="/taste-finder"
                 target="_self"
               >
                 Tastefinder
@@ -610,7 +610,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/blog"
+                href="/blog"
                 target="_self"
               >
                 Blog
@@ -871,7 +871,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               >
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/uber-uns"
+                  href="/uber-uns"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -881,7 +881,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/roesterei"
+                  href="/roesterei"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -891,7 +891,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/blog"
+                  href="/blog"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -903,7 +903,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
-              href="//www.60beans.com"
+              href="/"
             >
               <span
                 class="sr-only"
@@ -929,7 +929,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="//www.60beans.com/taste-finder"
+                    href="/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -1341,7 +1341,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
         class="w-full max-w-7xl mx-auto mb-8 md:mb-12 lg:mb-16 flex flex-col md:flex-row md:items-center justify-start"
       >
         <a
-          href="//www.60beans.com"
+          href="/"
         >
           <span
             class="sr-only"
@@ -1370,7 +1370,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/catalogue"
+                href="/catalogue"
                 target="_self"
               >
                 Shop
@@ -1380,7 +1380,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/taste-finder"
+                href="/taste-finder"
                 target="_self"
               >
                 Tastefinder
@@ -1424,7 +1424,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/blog"
+                href="/blog"
                 target="_self"
               >
                 Blog
@@ -1685,7 +1685,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               >
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/uber-uns"
+                  href="/uber-uns"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -1695,7 +1695,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/roesterei"
+                  href="/roesterei"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -1705,7 +1705,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/blog"
+                  href="/blog"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -1717,7 +1717,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
-              href="//www.60beans.com"
+              href="/"
             >
               <span
                 class="sr-only"
@@ -1743,7 +1743,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="//www.60beans.com/taste-finder"
+                    href="/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -2155,7 +2155,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
         class="w-full max-w-7xl mx-auto mb-8 md:mb-12 lg:mb-16 flex flex-col md:flex-row md:items-center justify-start"
       >
         <a
-          href="//www.60beans.com"
+          href="/"
         >
           <span
             class="sr-only"
@@ -2184,7 +2184,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/catalogue"
+                href="/catalogue"
                 target="_self"
               >
                 Shop
@@ -2194,7 +2194,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/taste-finder"
+                href="/taste-finder"
                 target="_self"
               >
                 Tastefinder
@@ -2238,7 +2238,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/blog"
+                href="/blog"
                 target="_self"
               >
                 Blog
@@ -2499,7 +2499,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               >
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/uber-uns"
+                  href="/uber-uns"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -2509,7 +2509,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/roesterei"
+                  href="/roesterei"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -2519,7 +2519,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/blog"
+                  href="/blog"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -2531,7 +2531,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
-              href="//www.60beans.com"
+              href="/"
             >
               <span
                 class="sr-only"
@@ -2557,7 +2557,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="//www.60beans.com/taste-finder"
+                    href="/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -2969,7 +2969,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
         class="w-full max-w-7xl mx-auto mb-8 md:mb-12 lg:mb-16 flex flex-col md:flex-row md:items-center justify-start"
       >
         <a
-          href="//www.60beans.com"
+          href="/"
         >
           <span
             class="sr-only"
@@ -2998,7 +2998,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/catalogue"
+                href="/catalogue"
                 target="_self"
               >
                 Shop
@@ -3008,7 +3008,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/taste-finder"
+                href="/taste-finder"
                 target="_self"
               >
                 Tastefinder
@@ -3052,7 +3052,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/blog"
+                href="/blog"
                 target="_self"
               >
                 Blog
@@ -3313,7 +3313,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               >
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/uber-uns"
+                  href="/uber-uns"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -3323,7 +3323,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/roesterei"
+                  href="/roesterei"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -3333,7 +3333,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/blog"
+                  href="/blog"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -3345,7 +3345,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
-              href="//www.60beans.com"
+              href="/"
             >
               <span
                 class="sr-only"
@@ -3371,7 +3371,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="//www.60beans.com/taste-finder"
+                    href="/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -3783,7 +3783,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
         class="w-full max-w-7xl mx-auto mb-8 md:mb-12 lg:mb-16 flex flex-col md:flex-row md:items-center justify-start"
       >
         <a
-          href="//www.60beans.com"
+          href="/"
         >
           <span
             class="sr-only"
@@ -3812,7 +3812,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/catalogue"
+                href="/catalogue"
                 target="_self"
               >
                 Shop
@@ -3822,7 +3822,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/taste-finder"
+                href="/taste-finder"
                 target="_self"
               >
                 Tastefinder
@@ -3866,7 +3866,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/blog"
+                href="/blog"
                 target="_self"
               >
                 Blog
@@ -4127,7 +4127,7 @@ exports[`Featured product view Renders correctly for a successful call without a
               >
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/uber-uns"
+                  href="/uber-uns"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -4137,7 +4137,7 @@ exports[`Featured product view Renders correctly for a successful call without a
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/roesterei"
+                  href="/roesterei"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -4147,7 +4147,7 @@ exports[`Featured product view Renders correctly for a successful call without a
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/blog"
+                  href="/blog"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -4159,7 +4159,7 @@ exports[`Featured product view Renders correctly for a successful call without a
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
-              href="//www.60beans.com"
+              href="/"
             >
               <span
                 class="sr-only"
@@ -4185,7 +4185,7 @@ exports[`Featured product view Renders correctly for a successful call without a
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="//www.60beans.com/taste-finder"
+                    href="/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -4474,7 +4474,7 @@ exports[`Featured product view Renders correctly for a successful call without a
         class="w-full max-w-7xl mx-auto mb-8 md:mb-12 lg:mb-16 flex flex-col md:flex-row md:items-center justify-start"
       >
         <a
-          href="//www.60beans.com"
+          href="/"
         >
           <span
             class="sr-only"
@@ -4503,7 +4503,7 @@ exports[`Featured product view Renders correctly for a successful call without a
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/catalogue"
+                href="/catalogue"
                 target="_self"
               >
                 Shop
@@ -4513,7 +4513,7 @@ exports[`Featured product view Renders correctly for a successful call without a
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/taste-finder"
+                href="/taste-finder"
                 target="_self"
               >
                 Tastefinder
@@ -4557,7 +4557,7 @@ exports[`Featured product view Renders correctly for a successful call without a
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/blog"
+                href="/blog"
                 target="_self"
               >
                 Blog
@@ -4818,7 +4818,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
               >
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/uber-uns"
+                  href="/uber-uns"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -4828,7 +4828,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/roesterei"
+                  href="/roesterei"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -4838,7 +4838,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/blog"
+                  href="/blog"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -4850,7 +4850,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
-              href="//www.60beans.com"
+              href="/"
             >
               <span
                 class="sr-only"
@@ -4876,7 +4876,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="//www.60beans.com/taste-finder"
+                    href="/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -5288,7 +5288,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
         class="w-full max-w-7xl mx-auto mb-8 md:mb-12 lg:mb-16 flex flex-col md:flex-row md:items-center justify-start"
       >
         <a
-          href="//www.60beans.com"
+          href="/"
         >
           <span
             class="sr-only"
@@ -5317,7 +5317,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/catalogue"
+                href="/catalogue"
                 target="_self"
               >
                 Shop
@@ -5327,7 +5327,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/taste-finder"
+                href="/taste-finder"
                 target="_self"
               >
                 Tastefinder
@@ -5371,7 +5371,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/blog"
+                href="/blog"
                 target="_self"
               >
                 Blog
@@ -5657,7 +5657,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
               >
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/uber-uns"
+                  href="/uber-uns"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -5667,7 +5667,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/roesterei"
+                  href="/roesterei"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -5677,7 +5677,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/blog"
+                  href="/blog"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -5689,7 +5689,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
-              href="//www.60beans.com"
+              href="/"
             >
               <span
                 class="sr-only"
@@ -5715,7 +5715,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="//www.60beans.com/taste-finder"
+                    href="/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -6114,7 +6114,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
         class="w-full max-w-7xl mx-auto mb-8 md:mb-12 lg:mb-16 flex flex-col md:flex-row md:items-center justify-start"
       >
         <a
-          href="//www.60beans.com"
+          href="/"
         >
           <span
             class="sr-only"
@@ -6143,7 +6143,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/catalogue"
+                href="/catalogue"
                 target="_self"
               >
                 Shop
@@ -6153,7 +6153,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/taste-finder"
+                href="/taste-finder"
                 target="_self"
               >
                 Tastefinder
@@ -6197,7 +6197,7 @@ exports[`Featured product view renders as expected if no taste finder data exist
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/blog"
+                href="/blog"
                 target="_self"
               >
                 Blog

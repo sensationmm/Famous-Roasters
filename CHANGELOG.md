@@ -1,3 +1,27 @@
+## [1.108.1](https://github.com/Famous-Roasters/frontend/compare/v1.108.0...v1.108.1) (2022-12-14)
+
+
+### Bug Fixes
+
+* **product:** missing value breaks add to cart ([b390584](https://github.com/Famous-Roasters/frontend/commit/b390584b028878b13c4490cd47a4f214eb74d353))
+* **test:** temporarily ditch snapshots ([234353a](https://github.com/Famous-Roasters/frontend/commit/234353aca7ec2f53d42be7e7565783c2a93eed60))
+
+# [1.108.0](https://github.com/Famous-Roasters/frontend/compare/v1.107.0...v1.108.0) (2022-12-14)
+
+
+### Features
+
+* **seo:** routing changes to support unified domain setup ([e6ce8d6](https://github.com/Famous-Roasters/frontend/commit/e6ce8d6c0e11f90d0e802fc24ac1b40a4be1b76e))
+* **seo:** update snapshots ([070aeb2](https://github.com/Famous-Roasters/frontend/commit/070aeb2577200633721e27a3a3801cc863af4e98))
+* **seo:** update snapshots ([c644c48](https://github.com/Famous-Roasters/frontend/commit/c644c48a7667ff353cb5f735f3c10d443daf6817))
+
+# [1.107.0](https://github.com/Famous-Roasters/frontend/compare/v1.106.0...v1.107.0) (2022-12-13)
+
+
+### Features
+
+* **product:** change message ([0c40b9c](https://github.com/Famous-Roasters/frontend/commit/0c40b9c7ea13d9c53306d1eca9a006fa68e4a685))
+
 # [1.106.0](https://github.com/Famous-Roasters/frontend/compare/v1.105.0...v1.106.0) (2022-12-13)
 
 

@@ -54,7 +54,7 @@ exports[`Navigation component Renders correctly with home theme 1`] = `
             >
               <a
                 class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                href="//www.60beans.com/uber-uns"
+                href="/uber-uns"
               >
                 <span
                   class="uppercase text-sm leading-5"
@@ -64,7 +64,7 @@ exports[`Navigation component Renders correctly with home theme 1`] = `
               </a>
               <a
                 class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                href="//www.60beans.com/roesterei"
+                href="/roesterei"
               >
                 <span
                   class="uppercase text-sm leading-5"
@@ -74,7 +74,7 @@ exports[`Navigation component Renders correctly with home theme 1`] = `
               </a>
               <a
                 class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                href="//www.60beans.com/blog"
+                href="/blog"
               >
                 <span
                   class="uppercase text-sm leading-5"
@@ -86,7 +86,7 @@ exports[`Navigation component Renders correctly with home theme 1`] = `
           </div>
           <a
             class="flex h-full items-center pl-2 pr-2"
-            href="//www.60beans.com"
+            href="/"
           >
             <span
               class="sr-only"
@@ -112,7 +112,7 @@ exports[`Navigation component Renders correctly with home theme 1`] = `
               >
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/taste-finder"
+                  href="/taste-finder"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -216,7 +216,7 @@ exports[`Navigation component Renders correctly with shop theme 1`] = `
             >
               <a
                 class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                href="//www.60beans.com/uber-uns"
+                href="/uber-uns"
               >
                 <span
                   class="uppercase text-sm leading-5"
@@ -226,7 +226,7 @@ exports[`Navigation component Renders correctly with shop theme 1`] = `
               </a>
               <a
                 class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                href="//www.60beans.com/roesterei"
+                href="/roesterei"
               >
                 <span
                   class="uppercase text-sm leading-5"
@@ -236,7 +236,7 @@ exports[`Navigation component Renders correctly with shop theme 1`] = `
               </a>
               <a
                 class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                href="//www.60beans.com/blog"
+                href="/blog"
               >
                 <span
                   class="uppercase text-sm leading-5"
@@ -248,7 +248,7 @@ exports[`Navigation component Renders correctly with shop theme 1`] = `
           </div>
           <a
             class="flex h-full items-center pl-2 pr-2"
-            href="//www.60beans.com"
+            href="/"
           >
             <span
               class="sr-only"
@@ -274,7 +274,7 @@ exports[`Navigation component Renders correctly with shop theme 1`] = `
               >
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/taste-finder"
+                  href="/taste-finder"
                 >
                   <span
                     class="uppercase text-sm leading-5"
