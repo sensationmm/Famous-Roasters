@@ -57,7 +57,7 @@ exports[`Layout component Renders correctly 1`] = `
               >
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/uber-uns"
+                  href="/uber-uns"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -67,7 +67,7 @@ exports[`Layout component Renders correctly 1`] = `
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//www.60beans.com/roesterei"
+                  href="/roesterei"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -77,7 +77,7 @@ exports[`Layout component Renders correctly 1`] = `
                 </a>
                 <a
                   class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                  href="//blog.60beans.com"
+                  href="/blog"
                 >
                   <span
                     class="uppercase text-sm leading-5"
@@ -89,7 +89,7 @@ exports[`Layout component Renders correctly 1`] = `
             </div>
             <a
               class="flex h-full items-center pl-2 pr-2"
-              href="//www.60beans.com"
+              href="/"
             >
               <span
                 class="sr-only"
@@ -115,7 +115,7 @@ exports[`Layout component Renders correctly 1`] = `
                 >
                   <a
                     class="flex items-center text-white hover:text-coreUI-text-tertiary pb-1.5 duration-500"
-                    href="//shop.60beans.com/taste-finder"
+                    href="/taste-finder"
                   >
                     <span
                       class="uppercase text-sm leading-5"
@@ -207,7 +207,7 @@ exports[`Layout component Renders correctly 1`] = `
         class="w-full max-w-7xl mx-auto mb-8 md:mb-12 lg:mb-16 flex flex-col md:flex-row md:items-center justify-start"
       >
         <a
-          href="//www.60beans.com"
+          href="/"
         >
           <span
             class="sr-only"
@@ -236,7 +236,7 @@ exports[`Layout component Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/catalogue"
+                href="/catalogue"
                 target="_self"
               >
                 Shop
@@ -246,7 +246,7 @@ exports[`Layout component Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/taste-finder"
+                href="/taste-finder"
                 target="_self"
               >
                 Tastefinder
@@ -270,7 +270,7 @@ exports[`Layout component Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/uber-uns"
+                href="//shop.60beans.com/uber-uns"
                 target="_self"
               >
                 Über uns
@@ -280,7 +280,7 @@ exports[`Layout component Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/roesterei"
+                href="//shop.60beans.com/roesterei"
                 target="_self"
               >
                 Unsere Röster
@@ -290,7 +290,7 @@ exports[`Layout component Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//blog.60beans.com"
+                href="/blog"
                 target="_self"
               >
                 Blog
@@ -300,7 +300,7 @@ exports[`Layout component Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/warum-60beans"
+                href="//shop.60beans.com/warum-60beans"
                 target="_self"
               >
                 Für Kaffeeröster
@@ -314,7 +314,7 @@ exports[`Layout component Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/legal/datenschutz"
+                href="//shop.60beans.com/legal/datenschutz"
                 target="_self"
               >
                 Datenschutz
@@ -324,7 +324,7 @@ exports[`Layout component Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/legal/impressum"
+                href="//shop.60beans.com/legal/impressum"
                 target="_self"
               >
                 Impressum
@@ -334,7 +334,7 @@ exports[`Layout component Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/legal/cookie-policy"
+                href="//shop.60beans.com/legal/cookie-policy"
                 target="_self"
               >
                 Cookie Policy
@@ -344,7 +344,7 @@ exports[`Layout component Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/legal/agb"
+                href="//shop.60beans.com/legal/agb"
                 target="_self"
               >
                 Allgemeine Geschäftsbedingungen
@@ -354,7 +354,7 @@ exports[`Layout component Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//www.60beans.com/legal/widerrufsrecht"
+                href="//shop.60beans.com/legal/widerrufsrecht"
                 target="_self"
               >
                 Widerrufsrecht

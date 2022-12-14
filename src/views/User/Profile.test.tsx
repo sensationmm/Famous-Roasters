@@ -144,7 +144,7 @@ describe('Profile view', () => {
     await waitFor(() => new Promise((res) => setTimeout(res, 0)))
     const button = await screen.findByTestId(`button-blog`)
     button.click()
-    expect(mockUseNavigate).toHaveBeenCalledWith(`${process.env.REACT_APP_DOMAIN_BLOG}/de/Zubereitungstipps`)
+    expect(mockUseNavigate).toHaveBeenCalledWith(`/blog/de/Zubereitungstipps`)
   })
 
   afterAll(() => {
