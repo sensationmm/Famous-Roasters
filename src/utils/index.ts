@@ -1,6 +1,5 @@
 import { toRoundedValueInRealScale, toValueInHumanScale } from './attributeScaleUtils'
 import { formatDate, formatPrice, getAPIId, getAromaKey, getSimplifiedId, normalizeString } from './formatters'
-import { dataLayerEvent } from './gtaDataLayer'
 import {
   formatBlogHtmlElement,
   formatCategoryHtmlElement,
@@ -11,7 +10,6 @@ import {
 import { useLocalStorage } from './localStorage'
 import { readTimeCalculator } from './readTimeCalculator'
 
-export { dataLayerEvent }
 export { formatDate as formatDate }
 export { formatPrice as formatPrice }
 export { getAPIId as getAPIId }

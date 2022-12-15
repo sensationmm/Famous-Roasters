@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { Layout, NavigationTheme, StickyBottomNavigation } from 'src/components'
-import { dataLayerEvent, useLocalStorage } from 'src/utils'
+import { useLocalStorage } from 'src/utils'
 
 import {
   Acidity as AcidityPartial,
@@ -209,15 +209,6 @@ export const TasteFinder: React.FC = () => {
   const handleNextClicked = (currentStep: string) => {
     const currentStepData = TasteFinderSteps.find((x) => x.step === currentStep)
     currentStepData && navigateTo(currentStepData.index + 1)
-
-    dataLayerEvent(
-      {
-        stepNum: currentStepData?.index,
-        step: currentStepData?.stepID,
-        value: tasteFinderState.find((state) => state.name === currentStepData?.stepID)?.value,
-      },
-      'tasteFinderStep',
-    )
   }
 
   const handlePrevClicked = (currentStep: string) => {

@@ -1,11 +1,10 @@
 import { useQuery } from '@apollo/client/react/hooks'
 import { Collection, ProductConnection } from '@shopify/hydrogen/dist/esnext/storefront-api-types'
 import { loader } from 'graphql.macro'
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { ErrorPrompt, Loader, ProductTile } from 'src/components'
 import { shopifyCoffeeCollection } from 'src/config'
-import { dataLayerEvent } from 'src/utils'
 import { getSimplifiedId } from 'src/utils/formatters'
 
 import { ProductCustom } from '../Product'
@@ -56,19 +55,6 @@ export const FindSimilar: React.FC<FindSimilarProps> = ({ aroma, productId }: Fi
     endCursor: null,
   }
 
-  useEffect(() => {
-    dataLayerEvent({
-      impressions: productNodes?.map((hit, count) => ({
-        name: hit.title,
-        brand: hit.vendor,
-        id: hit.id,
-        position: count + 1,
-        list: 'Find Similar',
-        product: productId,
-      })),
-    })
-  }, [productNodes])
-
   if (loading) {
     return (
       <div className="flex h-64 mb-32 justify-center items-center">
@@ -86,27 +72,7 @@ export const FindSimilar: React.FC<FindSimilarProps> = ({ aroma, productId }: Fi
       {productNodes?.map((node, i: number) => {
         const id = getSimplifiedId(node.id)
         return (
-          <Link
-            to={`/product/${id}`}
-            key={`product-tile-link-${i}`}
-            onClick={() =>
-              dataLayerEvent(
-                {
-                  click: {
-                    actionField: { list: 'Find Similar' },
-                    products: [
-                      {
-                        name: node.title,
-                        id: node.id,
-                        brand: node.vendor,
-                      },
-                    ],
-                  },
-                },
-                'productClick',
-              )
-            }
-          >
+          <Link to={`/product/${id}`} key={`product-tile-link-${i}`}>
             <ProductTile key={`title-${i}`} productNode={node} />
           </Link>
         )
