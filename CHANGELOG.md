@@ -1,3 +1,10 @@
+# [1.110.0](https://github.com/Famous-Roasters/frontend/compare/v1.109.0...v1.110.0) (2022-12-15)
+
+
+### Features
+
+* **tracking:** rollback enhanced ga tracking ([1158426](https://github.com/Famous-Roasters/frontend/commit/1158426a78f3903e31de947b10a6e9c5314401e2))
+
 # [1.109.0](https://github.com/Famous-Roasters/frontend/compare/v1.108.1...v1.109.0) (2022-12-15)
 
 
