@@ -110,7 +110,7 @@ export const CartMockData: any = {
               // @ts-ignore
               product: {
                 title: '60beans',
-                handle: '',
+                handle: 'espresso-raritaten-set',
                 id: 'gid://shopify/Product/23232323',
                 vendor: 'Cycle Roasters 2',
                 isGiftCard: false,

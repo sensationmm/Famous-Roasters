@@ -126,7 +126,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//shop.60beans.com/profile"
+                  href="//www.60beans.com/profile"
                 >
                   <svg
                     class="undefined"
@@ -868,7 +868,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/uber-uns"
+                href="//www.60beans.com/uber-uns"
                 target="_self"
               >
                 Über uns
@@ -878,7 +878,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/roesterei"
+                href="//www.60beans.com/roesterei"
                 target="_self"
               >
                 Unsere Röster
@@ -898,7 +898,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/warum-60beans"
+                href="//www.60beans.com/warum-60beans"
                 target="_self"
               >
                 Für Kaffeeröster
@@ -912,7 +912,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/datenschutz"
+                href="//www.60beans.com/legal/datenschutz"
                 target="_self"
               >
                 Datenschutz
@@ -922,7 +922,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/impressum"
+                href="//www.60beans.com/legal/impressum"
                 target="_self"
               >
                 Impressum
@@ -932,7 +932,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/cookie-policy"
+                href="//www.60beans.com/legal/cookie-policy"
                 target="_self"
               >
                 Cookie Policy
@@ -942,7 +942,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/agb"
+                href="//www.60beans.com/legal/agb"
                 target="_self"
               >
                 Allgemeine Geschäftsbedingungen
@@ -952,7 +952,7 @@ exports[`Product view Renders correctly for a accessories 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/widerrufsrecht"
+                href="//www.60beans.com/legal/widerrufsrecht"
                 target="_self"
               >
                 Widerrufsrecht
@@ -1218,7 +1218,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//shop.60beans.com/profile"
+                  href="//www.60beans.com/profile"
                 >
                   <svg
                     class="undefined"
@@ -2694,7 +2694,284 @@ exports[`Product view Renders correctly for a successful call 1`] = `
             >
               <div
                 class="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mb-10"
-              />
+              >
+                <a
+                  href="/product/7655228866776"
+                >
+                  <div
+                    class="flex pt-8"
+                  >
+                    <img
+                      alt="Espresso Raritäten Set"
+                      class="hidden"
+                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153&width=150&height=150"
+                    />
+                    <div
+                      class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+                    >
+                      <div
+                        class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+                      >
+                        <img
+                          alt="Espresso Raritäten Set"
+                          class="w-28 max-h-28"
+                          height="150px"
+                          src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153&width=150&height=150"
+                          width="150px"
+                        />
+                        <div
+                          class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                        >
+                          <span
+                            class="text-xs leading-4"
+                          >
+                            Decaf
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute"
+                    >
+                      <div
+                        class="flex justify-center items-center shrink-0 self-center relative w-36 h-36"
+                      >
+                        <div
+                          class="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36"
+                        >
+                          <div
+                            class="block bg-coreUI-text-tertiary rounded w-2/5 h-3/5"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex flex-col w-full justify-center pl-4"
+                    >
+                      <div
+                        class="text-base leading-6 font-semibold"
+                      >
+                        Espresso Raritäten Set
+                      </div>
+                      <div
+                        class="text-coreUI-text-secondary text-base leading-6"
+                      >
+                        60beans
+                      </div>
+                      <div
+                        class="text-coreUI-text-secondary text-base leading-6"
+                      >
+                        Kolumbien
+                      </div>
+                      <div
+                        class="text-coreUI-text-secondary text-base leading-6"
+                      >
+                        Filter
+                      </div>
+                      <div
+                        class="flex items-baseline"
+                      >
+                        <span
+                          class="mr-1 text-base leading-6 font-semibold"
+                        >
+                          19,99 €
+                        </span>
+                        <span
+                          class="text-coreUI-text-secondary text-xs leading-4"
+                        >
+                          (
+                          10,00 €
+                          /kg)
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="/product/7655228866776"
+                >
+                  <div
+                    class="flex pt-8"
+                  >
+                    <img
+                      alt="Espresso Raritäten Set"
+                      class="hidden"
+                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153&width=150&height=150"
+                    />
+                    <div
+                      class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+                    >
+                      <div
+                        class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+                      >
+                        <img
+                          alt="Espresso Raritäten Set"
+                          class="w-28 max-h-28"
+                          height="150px"
+                          src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153&width=150&height=150"
+                          width="150px"
+                        />
+                        <div
+                          class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                        >
+                          <span
+                            class="text-xs leading-4"
+                          >
+                            Decaf
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute"
+                    >
+                      <div
+                        class="flex justify-center items-center shrink-0 self-center relative w-36 h-36"
+                      >
+                        <div
+                          class="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36"
+                        >
+                          <div
+                            class="block bg-coreUI-text-tertiary rounded w-2/5 h-3/5"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex flex-col w-full justify-center pl-4"
+                    >
+                      <div
+                        class="text-base leading-6 font-semibold"
+                      >
+                        Espresso Raritäten Set
+                      </div>
+                      <div
+                        class="text-coreUI-text-secondary text-base leading-6"
+                      >
+                        60beans
+                      </div>
+                      <div
+                        class="text-coreUI-text-secondary text-base leading-6"
+                      >
+                        Kolumbien
+                      </div>
+                      <div
+                        class="text-coreUI-text-secondary text-base leading-6"
+                      >
+                        Filter
+                      </div>
+                      <div
+                        class="flex items-baseline"
+                      >
+                        <span
+                          class="mr-1 text-base leading-6 font-semibold"
+                        >
+                          19,99 €
+                        </span>
+                        <span
+                          class="text-coreUI-text-secondary text-xs leading-4"
+                        >
+                          (
+                          10,00 €
+                          /kg)
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="/product/7655228866776"
+                >
+                  <div
+                    class="flex pt-8"
+                  >
+                    <img
+                      alt="Espresso Raritäten Set"
+                      class="hidden"
+                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153&width=150&height=150"
+                    />
+                    <div
+                      class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+                    >
+                      <div
+                        class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+                      >
+                        <img
+                          alt="Espresso Raritäten Set"
+                          class="w-28 max-h-28"
+                          height="150px"
+                          src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153&width=150&height=150"
+                          width="150px"
+                        />
+                        <div
+                          class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                        >
+                          <span
+                            class="text-xs leading-4"
+                          >
+                            Decaf
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute"
+                    >
+                      <div
+                        class="flex justify-center items-center shrink-0 self-center relative w-36 h-36"
+                      >
+                        <div
+                          class="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36"
+                        >
+                          <div
+                            class="block bg-coreUI-text-tertiary rounded w-2/5 h-3/5"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex flex-col w-full justify-center pl-4"
+                    >
+                      <div
+                        class="text-base leading-6 font-semibold"
+                      >
+                        Espresso Raritäten Set
+                      </div>
+                      <div
+                        class="text-coreUI-text-secondary text-base leading-6"
+                      >
+                        60beans
+                      </div>
+                      <div
+                        class="text-coreUI-text-secondary text-base leading-6"
+                      >
+                        Kolumbien
+                      </div>
+                      <div
+                        class="text-coreUI-text-secondary text-base leading-6"
+                      >
+                        Filter
+                      </div>
+                      <div
+                        class="flex items-baseline"
+                      >
+                        <span
+                          class="mr-1 text-base leading-6 font-semibold"
+                        >
+                          19,99 €
+                        </span>
+                        <span
+                          class="text-coreUI-text-secondary text-xs leading-4"
+                        >
+                          (
+                          10,00 €
+                          /kg)
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -2770,7 +3047,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/uber-uns"
+                href="//www.60beans.com/uber-uns"
                 target="_self"
               >
                 Über uns
@@ -2780,7 +3057,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/roesterei"
+                href="//www.60beans.com/roesterei"
                 target="_self"
               >
                 Unsere Röster
@@ -2800,7 +3077,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/warum-60beans"
+                href="//www.60beans.com/warum-60beans"
                 target="_self"
               >
                 Für Kaffeeröster
@@ -2814,7 +3091,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/datenschutz"
+                href="//www.60beans.com/legal/datenschutz"
                 target="_self"
               >
                 Datenschutz
@@ -2824,7 +3101,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/impressum"
+                href="//www.60beans.com/legal/impressum"
                 target="_self"
               >
                 Impressum
@@ -2834,7 +3111,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/cookie-policy"
+                href="//www.60beans.com/legal/cookie-policy"
                 target="_self"
               >
                 Cookie Policy
@@ -2844,7 +3121,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/agb"
+                href="//www.60beans.com/legal/agb"
                 target="_self"
               >
                 Allgemeine Geschäftsbedingungen
@@ -2854,7 +3131,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/widerrufsrecht"
+                href="//www.60beans.com/legal/widerrufsrecht"
                 target="_self"
               >
                 Widerrufsrecht
@@ -3120,7 +3397,7 @@ exports[`Product view Renders correctly for a successful call with International
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//shop.60beans.com/profile"
+                  href="//www.60beans.com/profile"
                 >
                   <svg
                     class="undefined"
@@ -4596,7 +4873,284 @@ exports[`Product view Renders correctly for a successful call with International
             >
               <div
                 class="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mb-10"
-              />
+              >
+                <a
+                  href="/product/7655228866776"
+                >
+                  <div
+                    class="flex pt-8"
+                  >
+                    <img
+                      alt="Espresso Raritäten Set"
+                      class="hidden"
+                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153&width=150&height=150"
+                    />
+                    <div
+                      class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+                    >
+                      <div
+                        class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+                      >
+                        <img
+                          alt="Espresso Raritäten Set"
+                          class="w-28 max-h-28"
+                          height="150px"
+                          src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153&width=150&height=150"
+                          width="150px"
+                        />
+                        <div
+                          class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                        >
+                          <span
+                            class="text-xs leading-4"
+                          >
+                            Decaf
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute"
+                    >
+                      <div
+                        class="flex justify-center items-center shrink-0 self-center relative w-36 h-36"
+                      >
+                        <div
+                          class="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36"
+                        >
+                          <div
+                            class="block bg-coreUI-text-tertiary rounded w-2/5 h-3/5"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex flex-col w-full justify-center pl-4"
+                    >
+                      <div
+                        class="text-base leading-6 font-semibold"
+                      >
+                        Espresso Raritäten Set
+                      </div>
+                      <div
+                        class="text-coreUI-text-secondary text-base leading-6"
+                      >
+                        60beans
+                      </div>
+                      <div
+                        class="text-coreUI-text-secondary text-base leading-6"
+                      >
+                        Kolumbien
+                      </div>
+                      <div
+                        class="text-coreUI-text-secondary text-base leading-6"
+                      >
+                        Filter
+                      </div>
+                      <div
+                        class="flex items-baseline"
+                      >
+                        <span
+                          class="mr-1 text-base leading-6 font-semibold"
+                        >
+                          19,99 €
+                        </span>
+                        <span
+                          class="text-coreUI-text-secondary text-xs leading-4"
+                        >
+                          (
+                          10,00 €
+                          /kg)
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="/product/7655228866776"
+                >
+                  <div
+                    class="flex pt-8"
+                  >
+                    <img
+                      alt="Espresso Raritäten Set"
+                      class="hidden"
+                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153&width=150&height=150"
+                    />
+                    <div
+                      class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+                    >
+                      <div
+                        class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+                      >
+                        <img
+                          alt="Espresso Raritäten Set"
+                          class="w-28 max-h-28"
+                          height="150px"
+                          src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153&width=150&height=150"
+                          width="150px"
+                        />
+                        <div
+                          class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                        >
+                          <span
+                            class="text-xs leading-4"
+                          >
+                            Decaf
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute"
+                    >
+                      <div
+                        class="flex justify-center items-center shrink-0 self-center relative w-36 h-36"
+                      >
+                        <div
+                          class="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36"
+                        >
+                          <div
+                            class="block bg-coreUI-text-tertiary rounded w-2/5 h-3/5"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex flex-col w-full justify-center pl-4"
+                    >
+                      <div
+                        class="text-base leading-6 font-semibold"
+                      >
+                        Espresso Raritäten Set
+                      </div>
+                      <div
+                        class="text-coreUI-text-secondary text-base leading-6"
+                      >
+                        60beans
+                      </div>
+                      <div
+                        class="text-coreUI-text-secondary text-base leading-6"
+                      >
+                        Kolumbien
+                      </div>
+                      <div
+                        class="text-coreUI-text-secondary text-base leading-6"
+                      >
+                        Filter
+                      </div>
+                      <div
+                        class="flex items-baseline"
+                      >
+                        <span
+                          class="mr-1 text-base leading-6 font-semibold"
+                        >
+                          19,99 €
+                        </span>
+                        <span
+                          class="text-coreUI-text-secondary text-xs leading-4"
+                        >
+                          (
+                          10,00 €
+                          /kg)
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="/product/7655228866776"
+                >
+                  <div
+                    class="flex pt-8"
+                  >
+                    <img
+                      alt="Espresso Raritäten Set"
+                      class="hidden"
+                      src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153&width=150&height=150"
+                    />
+                    <div
+                      class="flex justify-center items-center shrink-0 self-center relative w-32 h-32"
+                    >
+                      <div
+                        class="flex justify-center items-center rounded-full bg-coreUI-background-images w-32 h-32"
+                      >
+                        <img
+                          alt="Espresso Raritäten Set"
+                          class="w-28 max-h-28"
+                          height="150px"
+                          src="https://cdn.shopify.com/s/files/1/0632/7251/7848/products/ezgif-4-d921ab2e2b.png?v=1649246153&width=150&height=150"
+                          width="150px"
+                        />
+                        <div
+                          class="inline-flex rounded-full px-2 py-0.5 absolute top-2 left-0 bg-tags-santasGray text-white border border-white"
+                        >
+                          <span
+                            class="text-xs leading-4"
+                          >
+                            Decaf
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute"
+                    >
+                      <div
+                        class="flex justify-center items-center shrink-0 self-center relative w-36 h-36"
+                      >
+                        <div
+                          class="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36"
+                        >
+                          <div
+                            class="block bg-coreUI-text-tertiary rounded w-2/5 h-3/5"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex flex-col w-full justify-center pl-4"
+                    >
+                      <div
+                        class="text-base leading-6 font-semibold"
+                      >
+                        Espresso Raritäten Set
+                      </div>
+                      <div
+                        class="text-coreUI-text-secondary text-base leading-6"
+                      >
+                        60beans
+                      </div>
+                      <div
+                        class="text-coreUI-text-secondary text-base leading-6"
+                      >
+                        Kolumbien
+                      </div>
+                      <div
+                        class="text-coreUI-text-secondary text-base leading-6"
+                      >
+                        Filter
+                      </div>
+                      <div
+                        class="flex items-baseline"
+                      >
+                        <span
+                          class="mr-1 text-base leading-6 font-semibold"
+                        >
+                          19,99 €
+                        </span>
+                        <span
+                          class="text-coreUI-text-secondary text-xs leading-4"
+                        >
+                          (
+                          10,00 €
+                          /kg)
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -4672,7 +5226,7 @@ exports[`Product view Renders correctly for a successful call with International
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/uber-uns"
+                href="//www.60beans.com/uber-uns"
                 target="_self"
               >
                 Über uns
@@ -4682,7 +5236,7 @@ exports[`Product view Renders correctly for a successful call with International
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/roesterei"
+                href="//www.60beans.com/roesterei"
                 target="_self"
               >
                 Unsere Röster
@@ -4702,7 +5256,7 @@ exports[`Product view Renders correctly for a successful call with International
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/warum-60beans"
+                href="//www.60beans.com/warum-60beans"
                 target="_self"
               >
                 Für Kaffeeröster
@@ -4716,7 +5270,7 @@ exports[`Product view Renders correctly for a successful call with International
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/datenschutz"
+                href="//www.60beans.com/legal/datenschutz"
                 target="_self"
               >
                 Datenschutz
@@ -4726,7 +5280,7 @@ exports[`Product view Renders correctly for a successful call with International
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/impressum"
+                href="//www.60beans.com/legal/impressum"
                 target="_self"
               >
                 Impressum
@@ -4736,7 +5290,7 @@ exports[`Product view Renders correctly for a successful call with International
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/cookie-policy"
+                href="//www.60beans.com/legal/cookie-policy"
                 target="_self"
               >
                 Cookie Policy
@@ -4746,7 +5300,7 @@ exports[`Product view Renders correctly for a successful call with International
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/agb"
+                href="//www.60beans.com/legal/agb"
                 target="_self"
               >
                 Allgemeine Geschäftsbedingungen
@@ -4756,7 +5310,7 @@ exports[`Product view Renders correctly for a successful call with International
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/widerrufsrecht"
+                href="//www.60beans.com/legal/widerrufsrecht"
                 target="_self"
               >
                 Widerrufsrecht
@@ -5022,7 +5576,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//shop.60beans.com/profile"
+                  href="//www.60beans.com/profile"
                 >
                   <svg
                     class="undefined"
@@ -6533,7 +7087,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/uber-uns"
+                href="//www.60beans.com/uber-uns"
                 target="_self"
               >
                 Über uns
@@ -6543,7 +7097,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/roesterei"
+                href="//www.60beans.com/roesterei"
                 target="_self"
               >
                 Unsere Röster
@@ -6563,7 +7117,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/warum-60beans"
+                href="//www.60beans.com/warum-60beans"
                 target="_self"
               >
                 Für Kaffeeröster
@@ -6577,7 +7131,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/datenschutz"
+                href="//www.60beans.com/legal/datenschutz"
                 target="_self"
               >
                 Datenschutz
@@ -6587,7 +7141,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/impressum"
+                href="//www.60beans.com/legal/impressum"
                 target="_self"
               >
                 Impressum
@@ -6597,7 +7151,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/cookie-policy"
+                href="//www.60beans.com/legal/cookie-policy"
                 target="_self"
               >
                 Cookie Policy
@@ -6607,7 +7161,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/agb"
+                href="//www.60beans.com/legal/agb"
                 target="_self"
               >
                 Allgemeine Geschäftsbedingungen
@@ -6617,7 +7171,7 @@ exports[`Product view Renders correctly for a successful call without aroma 1`] 
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/widerrufsrecht"
+                href="//www.60beans.com/legal/widerrufsrecht"
                 target="_self"
               >
                 Widerrufsrecht

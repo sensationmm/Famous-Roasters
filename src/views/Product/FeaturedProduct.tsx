@@ -22,7 +22,7 @@ import {
   TypographySize,
   TypographyType,
 } from 'src/components'
-import { dataLayerEvent, getAPIId, toRoundedValueInRealScale, useLocalStorage } from 'src/utils'
+import { dataLayerEvent, toRoundedValueInRealScale, useLocalStorage } from 'src/utils'
 
 import { TasteFinderField } from '../TasteFinder'
 import { ProductQuery } from '.'
@@ -41,11 +41,28 @@ export const FeaturedProduct: React.FC = () => {
 
   const { loading, error, data } = useQuery<ProductQuery>(GET_PRODUCT, {
     variables: {
-      id: getAPIId(id || ''),
+      id: id || '',
     },
   })
 
-  const { aroma, images, title, whyThisCoffee } = data?.product || {}
+  const { aroma, images, title, whyThisCoffee } = data?.productByHandle || {}
+
+  const getMatchScore = () => {
+    const recommendations =
+      tasteFinderDataJSON && tasteFinderData.find((el: TasteFinderField) => el.name === 'recommendations')?.value
+    const score =
+      tasteFinderDataJSON && recommendations && recommendations[0]?.score
+        ? Math.round(recommendations[0]?.score * 100)
+        : 0
+
+    if (score === 0) return null
+
+    return (
+      <div className="mt-4">
+        <Tag type={TagType.TasteFinder} value={`${score}% Übereinstimmung`} />
+      </div>
+    )
+  }
 
   useEffect(() => {
     if (tasteFinderDataJSON !== '' && aroma?.value) {
@@ -71,6 +88,22 @@ export const FeaturedProduct: React.FC = () => {
       )
   }, [aroma])
 
+  useEffect(() => {
+    dataLayerEvent({
+      impressions: [
+        {
+          name: data?.productByHandle.title,
+          brand: data?.productByHandle.vendor,
+          id: data?.productByHandle.id,
+          position: 1,
+          list: 'Taste Finder',
+          aroma: data?.productByHandle?.aroma?.value,
+          matchScore: getMatchScore(),
+        },
+      ],
+    })
+  }, [data])
+
   const tasteProfileResults: TasteProfileResult = {
     acidity: tasteFinderDataJSON
       ? toRoundedValueInRealScale(parseInt(tasteFinderData.find((el: TasteFinderField) => el.name === 'acidity').value))
@@ -94,39 +127,6 @@ export const FeaturedProduct: React.FC = () => {
       : '',
   }
 
-  const getMatchScore = () => {
-    const recommendations =
-      tasteFinderDataJSON && tasteFinderData.find((el: TasteFinderField) => el.name === 'recommendations')?.value
-    const score =
-      tasteFinderDataJSON && recommendations && recommendations[0]?.score
-        ? Math.round(recommendations[0]?.score * 100)
-        : 0
-
-    if (score === 0) return null
-
-    return (
-      <div className="mt-4">
-        <Tag type={TagType.TasteFinder} value={`${score}% Übereinstimmung`} />
-      </div>
-    )
-  }
-
-  useEffect(() => {
-    dataLayerEvent({
-      impressions: [
-        {
-          name: data?.product.title,
-          brand: data?.product.vendor,
-          id: data?.product.id,
-          position: 1,
-          list: 'Taste Finder',
-          aroma: data?.product?.aroma?.value,
-          matchScore: getMatchScore(),
-        },
-      ],
-    })
-  }, [data])
-
   if (loading) {
     return (
       <div className="flex h-64 mb-32 justify-center items-center">
@@ -135,8 +135,16 @@ export const FeaturedProduct: React.FC = () => {
     )
   }
 
-  if (error || !data?.product) {
+  if (error || !data?.productByHandle) {
     return <ErrorPrompt promptAction={() => history.go(0)} />
+  }
+
+  if (loading) {
+    return (
+      <div className="flex h-64 mb-32 justify-center items-center">
+        <Loader />
+      </div>
+    )
   }
 
   const name =
@@ -180,9 +188,9 @@ export const FeaturedProduct: React.FC = () => {
             actionField: { list: 'Taste Finder' },
             products: [
               {
-                name: data?.product.title,
-                id: data?.product.id,
-                brand: data?.product.vendor,
+                name: data?.productByHandle.title,
+                id: data?.productByHandle.id,
+                brand: data?.productByHandle.vendor,
               },
             ],
           },
@@ -216,10 +224,10 @@ export const FeaturedProduct: React.FC = () => {
               <img src={images?.nodes[0].url} alt={title} className="w-full w-3/4 h-auto shrink-0 grow-0" />
             </div>
           </Link>
-          {data?.product && (
+          {data?.productByHandle && (
             <Link to={`/product/${id}`} className="flex flex-col w-fit" onClick={gtaEvent}>
               <ProductTile
-                productNode={data?.product}
+                productNode={data?.productByHandle}
                 featured={true}
                 showImage={false}
                 showFrom={true}

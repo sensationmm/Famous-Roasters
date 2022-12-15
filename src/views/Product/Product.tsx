@@ -36,7 +36,7 @@ import {
   TypographyType,
 } from 'src/components'
 import useBreakpoint from 'src/hooks/useBreakpoint'
-import { dataLayerEvent, formatPrice, getAPIId, parseHtmlSafely } from 'src/utils'
+import { dataLayerEvent, formatPrice, parseHtmlSafely } from 'src/utils'
 import { Error } from 'src/views/Error'
 
 import { FindSimilar } from './FindSimilar'
@@ -87,7 +87,7 @@ export interface ProductCustom extends ProductType {
 }
 
 export interface ProductQuery {
-  product: ProductCustom
+  productByHandle: ProductCustom
 }
 
 export const Product: React.FC = () => {
@@ -134,7 +134,7 @@ export const Product: React.FC = () => {
 
   const { loading, error, data } = useQuery<ProductQuery>(GET_PRODUCT, {
     variables: {
-      id: getAPIId(id || ''),
+      id: id || '',
     },
   })
 
@@ -166,7 +166,7 @@ export const Product: React.FC = () => {
     extraDescription,
     pricePerKg,
     isGiftCard,
-  } = data?.product || {}
+  } = data?.productByHandle || {}
 
   const collectionsList = collections?.edges.map((e) => e.node.handle) || []
   const isCoffee = collectionsList.find((el) => el === 'coffee') !== undefined
@@ -189,7 +189,7 @@ export const Product: React.FC = () => {
         : setPackageSizes(packageSizesValues()))
   }, [variantSelected])
 
-  if (data !== undefined && data?.product === null) {
+  if (data !== undefined && data?.productByHandle === null) {
     return <Error />
   }
 
@@ -281,10 +281,10 @@ export const Product: React.FC = () => {
         add: {
           products: [
             {
-              name: data?.product.title,
-              id: data?.product.id,
+              name: data?.productByHandle.title,
+              id: data?.productByHandle.id,
               price: variantSelected.price.amount,
-              brand: data?.product.vendor,
+              brand: data?.productByHandle.vendor,
               variant: variantSelected.id,
               quantity: quantity,
               packageSize: variantSelected.package_size?.value,

@@ -56,7 +56,7 @@ export const BlogListByCategory: React.FC<CategoryListProps> = ({ locale = 'de_d
     <Layout navigationTheme={NavigationTheme.Home}>
       <Helmet>
         <title>{`${category} | ${t('brand.name')}`}</title>
-        <link rel="canonical" href={`${process.env.REACT_APP_DOMAIN_BLOG}/${locale}/${category}`} />
+        <link rel="canonical" href={`${process.env.REACT_APP_DOMAIN_BLOG}/blog/${locale.split('_')[1]}/${category}`} />
       </Helmet>
       <div className="flex-grow flex w-full flex-col">
         <div className="hero w-full bg-brand-grey-whisper">

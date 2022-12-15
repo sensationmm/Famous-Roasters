@@ -126,7 +126,7 @@ exports[`Orders view Handles error call 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//shop.60beans.com/profile"
+                  href="//www.60beans.com/profile"
                 >
                   <svg
                     class="undefined"
@@ -359,7 +359,7 @@ exports[`Orders view Handles error call 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/uber-uns"
+                href="//www.60beans.com/uber-uns"
                 target="_self"
               >
                 Über uns
@@ -369,7 +369,7 @@ exports[`Orders view Handles error call 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/roesterei"
+                href="//www.60beans.com/roesterei"
                 target="_self"
               >
                 Unsere Röster
@@ -389,7 +389,7 @@ exports[`Orders view Handles error call 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/warum-60beans"
+                href="//www.60beans.com/warum-60beans"
                 target="_self"
               >
                 Für Kaffeeröster
@@ -403,7 +403,7 @@ exports[`Orders view Handles error call 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/datenschutz"
+                href="//www.60beans.com/legal/datenschutz"
                 target="_self"
               >
                 Datenschutz
@@ -413,7 +413,7 @@ exports[`Orders view Handles error call 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/impressum"
+                href="//www.60beans.com/legal/impressum"
                 target="_self"
               >
                 Impressum
@@ -423,7 +423,7 @@ exports[`Orders view Handles error call 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/cookie-policy"
+                href="//www.60beans.com/legal/cookie-policy"
                 target="_self"
               >
                 Cookie Policy
@@ -433,7 +433,7 @@ exports[`Orders view Handles error call 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/agb"
+                href="//www.60beans.com/legal/agb"
                 target="_self"
               >
                 Allgemeine Geschäftsbedingungen
@@ -443,7 +443,7 @@ exports[`Orders view Handles error call 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/widerrufsrecht"
+                href="//www.60beans.com/legal/widerrufsrecht"
                 target="_self"
               >
                 Widerrufsrecht
@@ -709,7 +709,7 @@ exports[`Orders view Renders correctly 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//shop.60beans.com/profile"
+                  href="//www.60beans.com/profile"
                 >
                   <svg
                     class="undefined"
@@ -1406,7 +1406,7 @@ exports[`Orders view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/uber-uns"
+                href="//www.60beans.com/uber-uns"
                 target="_self"
               >
                 Über uns
@@ -1416,7 +1416,7 @@ exports[`Orders view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/roesterei"
+                href="//www.60beans.com/roesterei"
                 target="_self"
               >
                 Unsere Röster
@@ -1436,7 +1436,7 @@ exports[`Orders view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/warum-60beans"
+                href="//www.60beans.com/warum-60beans"
                 target="_self"
               >
                 Für Kaffeeröster
@@ -1450,7 +1450,7 @@ exports[`Orders view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/datenschutz"
+                href="//www.60beans.com/legal/datenschutz"
                 target="_self"
               >
                 Datenschutz
@@ -1460,7 +1460,7 @@ exports[`Orders view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/impressum"
+                href="//www.60beans.com/legal/impressum"
                 target="_self"
               >
                 Impressum
@@ -1470,7 +1470,7 @@ exports[`Orders view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/cookie-policy"
+                href="//www.60beans.com/legal/cookie-policy"
                 target="_self"
               >
                 Cookie Policy
@@ -1480,7 +1480,7 @@ exports[`Orders view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/agb"
+                href="//www.60beans.com/legal/agb"
                 target="_self"
               >
                 Allgemeine Geschäftsbedingungen
@@ -1490,7 +1490,7 @@ exports[`Orders view Renders correctly 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/widerrufsrecht"
+                href="//www.60beans.com/legal/widerrufsrecht"
                 target="_self"
               >
                 Widerrufsrecht
@@ -1756,7 +1756,7 @@ exports[`Orders view Renders correctly with no orders 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//shop.60beans.com/profile"
+                  href="//www.60beans.com/profile"
                 >
                   <svg
                     class="undefined"
@@ -1989,7 +1989,7 @@ exports[`Orders view Renders correctly with no orders 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/uber-uns"
+                href="//www.60beans.com/uber-uns"
                 target="_self"
               >
                 Über uns
@@ -1999,7 +1999,7 @@ exports[`Orders view Renders correctly with no orders 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/roesterei"
+                href="//www.60beans.com/roesterei"
                 target="_self"
               >
                 Unsere Röster
@@ -2019,7 +2019,7 @@ exports[`Orders view Renders correctly with no orders 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/warum-60beans"
+                href="//www.60beans.com/warum-60beans"
                 target="_self"
               >
                 Für Kaffeeröster
@@ -2033,7 +2033,7 @@ exports[`Orders view Renders correctly with no orders 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/datenschutz"
+                href="//www.60beans.com/legal/datenschutz"
                 target="_self"
               >
                 Datenschutz
@@ -2043,7 +2043,7 @@ exports[`Orders view Renders correctly with no orders 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/impressum"
+                href="//www.60beans.com/legal/impressum"
                 target="_self"
               >
                 Impressum
@@ -2053,7 +2053,7 @@ exports[`Orders view Renders correctly with no orders 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/cookie-policy"
+                href="//www.60beans.com/legal/cookie-policy"
                 target="_self"
               >
                 Cookie Policy
@@ -2063,7 +2063,7 @@ exports[`Orders view Renders correctly with no orders 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/agb"
+                href="//www.60beans.com/legal/agb"
                 target="_self"
               >
                 Allgemeine Geschäftsbedingungen
@@ -2073,7 +2073,7 @@ exports[`Orders view Renders correctly with no orders 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/widerrufsrecht"
+                href="//www.60beans.com/legal/widerrufsrecht"
                 target="_self"
               >
                 Widerrufsrecht
@@ -2339,7 +2339,7 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//shop.60beans.com/profile"
+                  href="//www.60beans.com/profile"
                 >
                   <svg
                     class="undefined"
@@ -2567,7 +2567,7 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/uber-uns"
+                href="//www.60beans.com/uber-uns"
                 target="_self"
               >
                 Über uns
@@ -2577,7 +2577,7 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/roesterei"
+                href="//www.60beans.com/roesterei"
                 target="_self"
               >
                 Unsere Röster
@@ -2597,7 +2597,7 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/warum-60beans"
+                href="//www.60beans.com/warum-60beans"
                 target="_self"
               >
                 Für Kaffeeröster
@@ -2611,7 +2611,7 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/datenschutz"
+                href="//www.60beans.com/legal/datenschutz"
                 target="_self"
               >
                 Datenschutz
@@ -2621,7 +2621,7 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/impressum"
+                href="//www.60beans.com/legal/impressum"
                 target="_self"
               >
                 Impressum
@@ -2631,7 +2631,7 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/cookie-policy"
+                href="//www.60beans.com/legal/cookie-policy"
                 target="_self"
               >
                 Cookie Policy
@@ -2641,7 +2641,7 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/agb"
+                href="//www.60beans.com/legal/agb"
                 target="_self"
               >
                 Allgemeine Geschäftsbedingungen
@@ -2651,7 +2651,7 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/widerrufsrecht"
+                href="//www.60beans.com/legal/widerrufsrecht"
                 target="_self"
               >
                 Widerrufsrecht
@@ -2917,7 +2917,7 @@ exports[`Orders view sets filter value 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//shop.60beans.com/profile"
+                  href="//www.60beans.com/profile"
                 >
                   <svg
                     class="undefined"
@@ -3145,7 +3145,7 @@ exports[`Orders view sets filter value 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/uber-uns"
+                href="//www.60beans.com/uber-uns"
                 target="_self"
               >
                 Über uns
@@ -3155,7 +3155,7 @@ exports[`Orders view sets filter value 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/roesterei"
+                href="//www.60beans.com/roesterei"
                 target="_self"
               >
                 Unsere Röster
@@ -3175,7 +3175,7 @@ exports[`Orders view sets filter value 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/warum-60beans"
+                href="//www.60beans.com/warum-60beans"
                 target="_self"
               >
                 Für Kaffeeröster
@@ -3189,7 +3189,7 @@ exports[`Orders view sets filter value 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/datenschutz"
+                href="//www.60beans.com/legal/datenschutz"
                 target="_self"
               >
                 Datenschutz
@@ -3199,7 +3199,7 @@ exports[`Orders view sets filter value 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/impressum"
+                href="//www.60beans.com/legal/impressum"
                 target="_self"
               >
                 Impressum
@@ -3209,7 +3209,7 @@ exports[`Orders view sets filter value 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/cookie-policy"
+                href="//www.60beans.com/legal/cookie-policy"
                 target="_self"
               >
                 Cookie Policy
@@ -3219,7 +3219,7 @@ exports[`Orders view sets filter value 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/agb"
+                href="//www.60beans.com/legal/agb"
                 target="_self"
               >
                 Allgemeine Geschäftsbedingungen
@@ -3229,7 +3229,7 @@ exports[`Orders view sets filter value 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/widerrufsrecht"
+                href="//www.60beans.com/legal/widerrufsrecht"
                 target="_self"
               >
                 Widerrufsrecht
@@ -3495,7 +3495,7 @@ exports[`Orders view sets sort newest first 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//shop.60beans.com/profile"
+                  href="//www.60beans.com/profile"
                 >
                   <svg
                     class="undefined"
@@ -4192,7 +4192,7 @@ exports[`Orders view sets sort newest first 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/uber-uns"
+                href="//www.60beans.com/uber-uns"
                 target="_self"
               >
                 Über uns
@@ -4202,7 +4202,7 @@ exports[`Orders view sets sort newest first 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/roesterei"
+                href="//www.60beans.com/roesterei"
                 target="_self"
               >
                 Unsere Röster
@@ -4222,7 +4222,7 @@ exports[`Orders view sets sort newest first 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/warum-60beans"
+                href="//www.60beans.com/warum-60beans"
                 target="_self"
               >
                 Für Kaffeeröster
@@ -4236,7 +4236,7 @@ exports[`Orders view sets sort newest first 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/datenschutz"
+                href="//www.60beans.com/legal/datenschutz"
                 target="_self"
               >
                 Datenschutz
@@ -4246,7 +4246,7 @@ exports[`Orders view sets sort newest first 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/impressum"
+                href="//www.60beans.com/legal/impressum"
                 target="_self"
               >
                 Impressum
@@ -4256,7 +4256,7 @@ exports[`Orders view sets sort newest first 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/cookie-policy"
+                href="//www.60beans.com/legal/cookie-policy"
                 target="_self"
               >
                 Cookie Policy
@@ -4266,7 +4266,7 @@ exports[`Orders view sets sort newest first 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/agb"
+                href="//www.60beans.com/legal/agb"
                 target="_self"
               >
                 Allgemeine Geschäftsbedingungen
@@ -4276,7 +4276,7 @@ exports[`Orders view sets sort newest first 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/widerrufsrecht"
+                href="//www.60beans.com/legal/widerrufsrecht"
                 target="_self"
               >
                 Widerrufsrecht
@@ -4542,7 +4542,7 @@ exports[`Orders view sets sort oldest first 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//shop.60beans.com/profile"
+                  href="//www.60beans.com/profile"
                 >
                   <svg
                     class="undefined"
@@ -5239,7 +5239,7 @@ exports[`Orders view sets sort oldest first 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/uber-uns"
+                href="//www.60beans.com/uber-uns"
                 target="_self"
               >
                 Über uns
@@ -5249,7 +5249,7 @@ exports[`Orders view sets sort oldest first 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/roesterei"
+                href="//www.60beans.com/roesterei"
                 target="_self"
               >
                 Unsere Röster
@@ -5269,7 +5269,7 @@ exports[`Orders view sets sort oldest first 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/warum-60beans"
+                href="//www.60beans.com/warum-60beans"
                 target="_self"
               >
                 Für Kaffeeröster
@@ -5283,7 +5283,7 @@ exports[`Orders view sets sort oldest first 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/datenschutz"
+                href="//www.60beans.com/legal/datenschutz"
                 target="_self"
               >
                 Datenschutz
@@ -5293,7 +5293,7 @@ exports[`Orders view sets sort oldest first 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/impressum"
+                href="//www.60beans.com/legal/impressum"
                 target="_self"
               >
                 Impressum
@@ -5303,7 +5303,7 @@ exports[`Orders view sets sort oldest first 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/cookie-policy"
+                href="//www.60beans.com/legal/cookie-policy"
                 target="_self"
               >
                 Cookie Policy
@@ -5313,7 +5313,7 @@ exports[`Orders view sets sort oldest first 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/agb"
+                href="//www.60beans.com/legal/agb"
                 target="_self"
               >
                 Allgemeine Geschäftsbedingungen
@@ -5323,7 +5323,7 @@ exports[`Orders view sets sort oldest first 1`] = `
               class="mb-4"
             >
               <a
-                href="//shop.60beans.com/legal/widerrufsrecht"
+                href="//www.60beans.com/legal/widerrufsrecht"
                 target="_self"
               >
                 Widerrufsrecht

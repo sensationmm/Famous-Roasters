@@ -32,7 +32,7 @@ window.history = { go: jest.fn() }
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'), // use actual for all non-hook parts
   useParams: () => ({
-    id: '7655228866776',
+    id: 'espresso-raritaten-set',
   }),
 }))
 
@@ -52,7 +52,7 @@ describe('Product view', () => {
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/product/7655228866776']}>
+            <MemoryRouter initialEntries={['/product/espresso-raritaten-set']}>
               <Product />
             </MemoryRouter>
           </I18nextProvider>
@@ -72,7 +72,7 @@ describe('Product view', () => {
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/product/7655228866776']}>
+            <MemoryRouter initialEntries={['/product/espresso-raritaten-set']}>
               <Product />
             </MemoryRouter>
           </I18nextProvider>
@@ -92,7 +92,7 @@ describe('Product view', () => {
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/product/7655228866776']}>
+            <MemoryRouter initialEntries={['/product/espresso-raritaten-set']}>
               <Product />
             </MemoryRouter>
           </I18nextProvider>
@@ -112,7 +112,7 @@ describe('Product view', () => {
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/product/7655228866776']}>
+            <MemoryRouter initialEntries={['/product/espresso-raritaten-set']}>
               <Product />
             </MemoryRouter>
           </I18nextProvider>
@@ -131,7 +131,7 @@ describe('Product view', () => {
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/product/7655228866776']}>
+            <MemoryRouter initialEntries={['/product/espresso-raritaten-set']}>
               <Product />
             </MemoryRouter>
           </I18nextProvider>
@@ -157,7 +157,7 @@ describe('Product view', () => {
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/product/7655228866776']}>
+            <MemoryRouter initialEntries={['/product/espresso-raritaten-set']}>
               <Product />
             </MemoryRouter>
           </I18nextProvider>
@@ -183,7 +183,7 @@ describe('Product view', () => {
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/product/7655228866776']}>
+            <MemoryRouter initialEntries={['/product/espresso-raritaten-set']}>
               <Product />
             </MemoryRouter>
           </I18nextProvider>
@@ -204,7 +204,7 @@ describe('Product view', () => {
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/product/7655228866776']}>
+            <MemoryRouter initialEntries={['/product/espresso-raritaten-set']}>
               <Product />
             </MemoryRouter>
           </I18nextProvider>
@@ -226,7 +226,7 @@ describe('Product view', () => {
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/product/7655228866776']}>
+            <MemoryRouter initialEntries={['/product/espresso-raritaten-set']}>
               <Product />
             </MemoryRouter>
           </I18nextProvider>
@@ -249,7 +249,7 @@ describe('Product view', () => {
       >
         <CartProvider>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/product/7655228866776']}>
+            <MemoryRouter initialEntries={['/product/espresso-raritaten-set']}>
               <Navigation theme={NavigationTheme.Shop} />
               <Product />
             </MemoryRouter>
@@ -277,7 +277,7 @@ describe('Product view', () => {
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/product/7655228866776']}>
+            <MemoryRouter initialEntries={['/product/espresso-raritaten-set']}>
               <Product />
             </MemoryRouter>
           </I18nextProvider>

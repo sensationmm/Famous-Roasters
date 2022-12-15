@@ -25,7 +25,7 @@ window.localStorage.setItem(
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'), // use actual for all non-hook parts
   useParams: () => ({
-    id: '7655228866776',
+    id: 'espresso-raritaten-set',
   }),
 }))
 
@@ -35,10 +35,10 @@ describe('Featured product view', () => {
       ...ProductMockWithCustomMetadata,
       result: {
         data: {
-          product: {
-            ...ProductMockWithCustomMetadata.result.data.product,
+          productByHandle: {
+            ...ProductMockWithCustomMetadata.result.data.productByHandle,
             images: {
-              ...ProductMockWithCustomMetadata.result.data.product.images,
+              ...ProductMockWithCustomMetadata.result.data.productByHandle.images,
               nodes: [
                 {
                   id: '123123',
@@ -64,7 +64,7 @@ describe('Featured product view', () => {
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/featured/7655228866776']}>
+            <MemoryRouter initialEntries={['/featured/espresso-raritaten-set']}>
               <FeaturedProduct />
             </MemoryRouter>
           </I18nextProvider>
@@ -80,10 +80,10 @@ describe('Featured product view', () => {
       ...ProductMockWithCustomMetadata,
       result: {
         data: {
-          product: {
-            ...ProductMockWithCustomMetadata.result.data.product,
+          productByHandle: {
+            ...ProductMockWithCustomMetadata.result.data.productByHandle,
             images: {
-              ...ProductMockWithCustomMetadata.result.data.product.images,
+              ...ProductMockWithCustomMetadata.result.data.productByHandle.images,
               nodes: [
                 {
                   id: '123123',
@@ -109,7 +109,7 @@ describe('Featured product view', () => {
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/featured/7655228866776']}>
+            <MemoryRouter initialEntries={['/featured/espresso-raritaten-set']}>
               <FeaturedProduct />
             </MemoryRouter>
           </I18nextProvider>
@@ -125,10 +125,10 @@ describe('Featured product view', () => {
       ...ProductMockWithCustomMetadata,
       result: {
         data: {
-          product: {
-            ...ProductMockWithCustomMetadata.result.data.product,
+          productByHandle: {
+            ...ProductMockWithCustomMetadata.result.data.productByHandle,
             images: {
-              ...ProductMockWithCustomMetadata.result.data.product.images,
+              ...ProductMockWithCustomMetadata.result.data.productByHandle.images,
               nodes: [
                 {
                   id: '123123',
@@ -154,7 +154,7 @@ describe('Featured product view', () => {
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/featured/7655228866776']}>
+            <MemoryRouter initialEntries={['/featured/espresso-raritaten-set']}>
               <FeaturedProduct />
             </MemoryRouter>
           </I18nextProvider>
@@ -170,10 +170,10 @@ describe('Featured product view', () => {
       ...ProductMockWithCustomMetadata,
       result: {
         data: {
-          product: {
-            ...ProductMockWithCustomMetadata.result.data.product,
+          productByHandle: {
+            ...ProductMockWithCustomMetadata.result.data.productByHandle,
             images: {
-              ...ProductMockWithCustomMetadata.result.data.product.images,
+              ...ProductMockWithCustomMetadata.result.data.productByHandle.images,
               nodes: [
                 {
                   id: '123123',
@@ -199,7 +199,7 @@ describe('Featured product view', () => {
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/featured/7655228866776']}>
+            <MemoryRouter initialEntries={['/featured/espresso-raritaten-set']}>
               <FeaturedProduct />
             </MemoryRouter>
           </I18nextProvider>
@@ -215,10 +215,10 @@ describe('Featured product view', () => {
       ...ProductMockWithCustomMetadata,
       result: {
         data: {
-          product: {
-            ...ProductMockWithCustomMetadata.result.data.product,
+          productByHandle: {
+            ...ProductMockWithCustomMetadata.result.data.productByHandle,
             images: {
-              ...ProductMockWithCustomMetadata.result.data.product.images,
+              ...ProductMockWithCustomMetadata.result.data.productByHandle.images,
               nodes: [
                 {
                   id: '123123',
@@ -244,7 +244,7 @@ describe('Featured product view', () => {
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/featured/7655228866776']}>
+            <MemoryRouter initialEntries={['/featured/espresso-raritaten-set']}>
               <FeaturedProduct />
             </MemoryRouter>
           </I18nextProvider>
@@ -260,10 +260,10 @@ describe('Featured product view', () => {
       ...ProductMockWithCustomMetadata,
       result: {
         data: {
-          product: {
-            ...ProductMockWithCustomMetadata.result.data.product,
+          productByHandle: {
+            ...ProductMockWithCustomMetadata.result.data.productByHandle,
             images: {
-              ...ProductMockWithCustomMetadata.result.data.product.images,
+              ...ProductMockWithCustomMetadata.result.data.productByHandle.images,
               nodes: [
                 {
                   id: '123123',
@@ -287,7 +287,7 @@ describe('Featured product view', () => {
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/featured/7655228866776']}>
+            <MemoryRouter initialEntries={['/featured/espresso-raritaten-set']}>
               <FeaturedProduct />
             </MemoryRouter>
           </I18nextProvider>
@@ -307,7 +307,7 @@ describe('Featured product view', () => {
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/featured/7655228866776']}>
+            <MemoryRouter initialEntries={['/featured/espresso-raritaten-set']}>
               <FeaturedProduct />
             </MemoryRouter>
           </I18nextProvider>
@@ -328,10 +328,10 @@ describe('Featured product view', () => {
       ...ProductMockWithCustomMetadata,
       result: {
         data: {
-          product: {
-            ...ProductMockWithCustomMetadata.result.data.product,
+          productByHandle: {
+            ...ProductMockWithCustomMetadata.result.data.productByHandle,
             images: {
-              ...ProductMockWithCustomMetadata.result.data.product.images,
+              ...ProductMockWithCustomMetadata.result.data.productByHandle.images,
               nodes: [
                 {
                   id: '123123',
@@ -357,7 +357,7 @@ describe('Featured product view', () => {
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/featured/7655228866776']}>
+            <MemoryRouter initialEntries={['/featured/espresso-raritaten-set']}>
               <FeaturedProduct />
             </MemoryRouter>
           </I18nextProvider>
@@ -377,7 +377,7 @@ describe('Featured product view', () => {
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/featured/7655228866776']}>
+            <MemoryRouter initialEntries={['/featured/espresso-raritaten-set']}>
               <FeaturedProduct />
             </MemoryRouter>
           </I18nextProvider>
@@ -396,10 +396,10 @@ describe('Featured product view', () => {
       ...ProductMockWithCustomMetadata,
       result: {
         data: {
-          product: {
-            ...ProductMockWithCustomMetadata.result.data.product,
+          productByHandle: {
+            ...ProductMockWithCustomMetadata.result.data.productByHandle,
             images: {
-              ...ProductMockWithCustomMetadata.result.data.product.images,
+              ...ProductMockWithCustomMetadata.result.data.productByHandle.images,
               nodes: [
                 {
                   id: '123123',
@@ -425,7 +425,7 @@ describe('Featured product view', () => {
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/featured/7655228866776']}>
+            <MemoryRouter initialEntries={['/featured/espresso-raritaten-set']}>
               <FeaturedProduct />
             </MemoryRouter>
           </I18nextProvider>
@@ -437,15 +437,15 @@ describe('Featured product view', () => {
   })
 
   it('renders as expected if no taste finder data exists', async () => {
-    jest.spyOn(Router, 'useParams').mockReturnValue({ id: '7655228866776' })
+    jest.spyOn(Router, 'useParams').mockReturnValue({ id: 'espresso-raritaten-set' })
     window.localStorage.setItem('tasteFinder', JSON.stringify(''))
 
     const ProductMockWithCustomMetadataOtherAroma = {
       ...ProductMockWithCustomMetadata,
       result: {
         data: {
-          product: {
-            ...ProductMockWithCustomMetadata.result.data.product,
+          productByHandle: {
+            ...ProductMockWithCustomMetadata.result.data.productByHandle,
             images: {
               nodes: [
                 {
@@ -472,7 +472,7 @@ describe('Featured product view', () => {
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
           <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/featured/7655228866776']}>
+            <MemoryRouter initialEntries={['/featured/espresso-raritaten-set']}>
               <FeaturedProduct />
             </MemoryRouter>
           </I18nextProvider>
