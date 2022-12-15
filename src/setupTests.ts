@@ -7,7 +7,3 @@ import 'jest-canvas-mock'
 
 import { enableFetchMocks } from 'jest-fetch-mock'
 enableFetchMocks()
-
-const mockDataLayer = jest.fn()
-window.dataLayer = []
-window.dataLayer.push = mockDataLayer

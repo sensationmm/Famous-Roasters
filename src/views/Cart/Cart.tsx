@@ -25,8 +25,7 @@ import {
 import { famousRoastersClient } from 'src/config'
 import { useAuth } from 'src/config/cognito'
 import LoadingContext from 'src/hooks/isLoading'
-import { dataLayerEvent, formatPrice, getSimplifiedId } from 'src/utils'
-import { ProductMeta } from 'src/views/Product'
+import { formatPrice, getSimplifiedId } from 'src/utils'
 import { UserProfile } from 'src/views/User'
 
 const USER_PROFILE = loader('src/graphql/queries/userProfile.query.graphql')
@@ -50,9 +49,6 @@ interface CustomMerchandise {
     value: string
     name: string
   }>
-  grind_type: ProductMeta
-  package_size: ProductMeta
-  equipmentvariant: ProductMeta
 }
 
 export type gtaEcommerceObject = {
@@ -162,17 +158,8 @@ export const Cart: React.FC = () => {
     </div>
   )
 
-  const handleRemoveFromCart = (item: Scalars['ID'], actualQty: number, ecommerceObject: gtaEcommerceObject) => {
+  const handleRemoveFromCart = (item: Scalars['ID'], actualQty: number) => {
     removeFromCart && removeFromCart(item, actualQty)
-
-    dataLayerEvent(
-      {
-        add: {
-          products: [ecommerceObject],
-        },
-      },
-      'removeFromCart',
-    )
   }
 
   const handleModifyQuantity = (item: Scalars['ID'], quantity: number) => {
@@ -219,8 +206,8 @@ export const Cart: React.FC = () => {
         <div className="grid gap-2 grid-cols-1">
           {lines &&
             lines.edges.map((cartEdge, idx: number) => {
-              const { id, product, image, selectedOptions, priceV2, grind_type, package_size, equipmentvariant } =
-                cartEdge.node.merchandise as unknown as CustomMerchandise
+              const { product, image, selectedOptions, priceV2 } = cartEdge.node
+                .merchandise as unknown as CustomMerchandise
               const productId = product.id
               const lineId = cartEdge.node.id
 
@@ -295,19 +282,7 @@ export const Cart: React.FC = () => {
                       />
                       <button
                         type="button"
-                        onClick={() =>
-                          handleRemoveFromCart(lineId, cartEdge.node.quantity, {
-                            name: product.title,
-                            id: product.id,
-                            price: priceV2.amount,
-                            brand: product.vendor,
-                            variant: id,
-                            quantity: cartEdge.node.quantity,
-                            packageSize: package_size?.value,
-                            grindType: grind_type?.value,
-                            equipmentVariant: equipmentvariant?.value,
-                          })
-                        }
+                        onClick={() => handleRemoveFromCart(lineId, cartEdge.node.quantity)}
                         data-testid="button-cart-item-remove"
                         className="ml-2 inline-flex items-center px-4 py-2.5 w-fit rounded-full border border-coreUI-text-tertiary"
                       >

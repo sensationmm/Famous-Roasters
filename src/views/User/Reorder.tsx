@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom'
 import { Button, ButtonSize } from 'src/components'
 import { Emphasis } from 'src/components/Button/Button'
 import { CartContext, CartItem } from 'src/components/CartProvider/CartProvider'
-// import { dataLayerEvent } from 'src/utils'
 import { Order } from 'src/views/User/Orders'
 
 import { gtaEcommerceObject } from '../Cart/Cart'
@@ -40,16 +39,6 @@ export const Reorder: React.FC<ReorderProps> = ({ order, loading, setLoading }) 
             quantity: items[i].quantity < items[i].available ? items[i].quantity : items[i].available,
             item: items[i].item,
           })
-          // Pending completion of task EN-72 to be able to implement
-          // dataLayerEvent(
-          //   {
-          //     currencyCode: 'EUR',
-          //     add: {
-          //       products: items.map((item) => item.ecommerceObject),
-          //     },
-          //   },
-          //   'reorder',
-          // )
         }
         if (i + 1 === items.length) {
           setLoading(false)
