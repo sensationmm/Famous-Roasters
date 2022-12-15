@@ -1,3 +1,16 @@
+# [1.109.0](https://github.com/Famous-Roasters/frontend/compare/v1.108.1...v1.109.0) (2022-12-15)
+
+
+### Bug Fixes
+
+* **app:** blog link ([e0e9e6b](https://github.com/Famous-Roasters/frontend/commit/e0e9e6be200efe17b241a2cca45808d17bedd66f))
+* **tests:** remove temp snapshot fix ([5e158c4](https://github.com/Famous-Roasters/frontend/commit/5e158c495108c7ed7f41421b98db7ecc9f99d3b3))
+
+
+### Features
+
+* **app:** unified url work ([5984485](https://github.com/Famous-Roasters/frontend/commit/5984485c12557648040e9bd884f89060ee4e82b5))
+
 ## [1.108.1](https://github.com/Famous-Roasters/frontend/compare/v1.108.0...v1.108.1) (2022-12-14)
 
 
