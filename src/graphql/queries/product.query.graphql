@@ -88,7 +88,7 @@ query product($id: String!) {
     whyThisCoffee: metafield(namespace: "my_fields", key: "why_this_coffee") {
       value
     }
-    variants(first: 24) {
+    variants(first: 200) {
       nodes {
         id
         availableForSale
