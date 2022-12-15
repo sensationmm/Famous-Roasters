@@ -1,3 +1,10 @@
+## [1.110.1](https://github.com/Famous-Roasters/frontend/compare/v1.110.0...v1.110.1) (2022-12-15)
+
+
+### Bug Fixes
+
+* **product:** increase variant query max ([1ac0a7e](https://github.com/Famous-Roasters/frontend/commit/1ac0a7ed5ed7b36a3ac952bc81ea24c12ca74744))
+
 # [1.110.0](https://github.com/Famous-Roasters/frontend/compare/v1.109.0...v1.110.0) (2022-12-15)
 
 
