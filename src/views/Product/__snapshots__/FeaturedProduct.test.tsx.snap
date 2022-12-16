@@ -126,7 +126,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//www.60beans.com/profile"
+                  href="/profile"
                 >
                   <svg
                     class="undefined"
@@ -940,7 +940,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//www.60beans.com/profile"
+                  href="/profile"
                 >
                   <svg
                     class="undefined"
@@ -1754,7 +1754,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//www.60beans.com/profile"
+                  href="/profile"
                 >
                   <svg
                     class="undefined"
@@ -2568,7 +2568,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//www.60beans.com/profile"
+                  href="/profile"
                 >
                   <svg
                     class="undefined"
@@ -3382,7 +3382,7 @@ exports[`Featured product view Renders correctly for a successful call with arom
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//www.60beans.com/profile"
+                  href="/profile"
                 >
                   <svg
                     class="undefined"
@@ -4196,7 +4196,7 @@ exports[`Featured product view Renders correctly for a successful call without a
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//www.60beans.com/profile"
+                  href="/profile"
                 >
                   <svg
                     class="undefined"
@@ -4887,7 +4887,7 @@ exports[`Featured product view Renders correctly when user name is missing 1`] =
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//www.60beans.com/profile"
+                  href="/profile"
                 >
                   <svg
                     class="undefined"

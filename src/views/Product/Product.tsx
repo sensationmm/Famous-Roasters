@@ -190,6 +190,7 @@ export const Product: React.FC = () => {
   }, [variantSelected])
 
   if (data !== undefined && data?.product === null) {
+    //console.log()
     return <Error />
   }
 

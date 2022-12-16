@@ -235,7 +235,7 @@ export const Navigation: React.FC<NavigationProps> = ({ theme }: NavigationProps
                   ))}
                 </div>
 
-                <Link to={`${domainShop}/profile`} className="hidden xl:block ml-10">
+                <Link to={`/profile`} className="hidden xl:block ml-10">
                   <Icon name={IconName.Profile} />
                 </Link>
 

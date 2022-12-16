@@ -126,7 +126,7 @@ exports[`Blog List By Category View Renders correctly when no results found 1`] 
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//www.60beans.com/profile"
+                  href="/profile"
                 >
                   <svg
                     class="undefined"
@@ -617,7 +617,7 @@ exports[`Blog List By Category View Renders correctly when results found 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//www.60beans.com/profile"
+                  href="/profile"
                 >
                   <svg
                     class="undefined"

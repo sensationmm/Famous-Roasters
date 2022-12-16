@@ -126,7 +126,7 @@ exports[`Cart view Renders correctly 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//www.60beans.com/profile"
+                  href="/profile"
                 >
                   <svg
                     class="undefined"
@@ -990,7 +990,7 @@ exports[`Cart view Renders correctly for no cart id 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//www.60beans.com/profile"
+                  href="/profile"
                 >
                   <svg
                     class="undefined"

@@ -6,6 +6,7 @@ import { MemoryRouter } from 'react-router-dom'
 import { CartMock } from 'src/_mocks'
 import { CartContext } from 'src/components'
 import { i18n } from 'src/config'
+import LoadingContext from 'src/hooks/isLoading'
 
 import { Cart } from '.'
 
@@ -20,11 +21,13 @@ describe('Cart view', () => {
         addTypename={false}
       >
         <CartContext.Provider value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 1 }}>
-          <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/cart']}>
-              <Cart />
-            </MemoryRouter>
-          </I18nextProvider>
+          <LoadingContext.Provider value={{ isLoading: false, setIsLoading: jest.fn }}>
+            <I18nextProvider i18n={i18n}>
+              <MemoryRouter initialEntries={['/cart']}>
+                <Cart />
+              </MemoryRouter>
+            </I18nextProvider>
+          </LoadingContext.Provider>
         </CartContext.Provider>
       </MockedProvider>,
     )
@@ -42,11 +45,13 @@ describe('Cart view', () => {
         addTypename={false}
       >
         <CartContext.Provider value={{ cartId: undefined, cartSize: 1 }}>
-          <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/cart']}>
-              <Cart />
-            </MemoryRouter>
-          </I18nextProvider>
+          <LoadingContext.Provider value={{ isLoading: false, setIsLoading: jest.fn }}>
+            <I18nextProvider i18n={i18n}>
+              <MemoryRouter initialEntries={['/cart']}>
+                <Cart />
+              </MemoryRouter>
+            </I18nextProvider>
+          </LoadingContext.Provider>
         </CartContext.Provider>
       </MockedProvider>,
     )
@@ -66,11 +71,13 @@ describe('Cart view', () => {
         <CartContext.Provider
           value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 2, modifyQuantity: () => alert('test') }}
         >
-          <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/cart']}>
-              <Cart />
-            </MemoryRouter>
-          </I18nextProvider>
+          <LoadingContext.Provider value={{ isLoading: false, setIsLoading: jest.fn }}>
+            <I18nextProvider i18n={i18n}>
+              <MemoryRouter initialEntries={['/cart']}>
+                <Cart />
+              </MemoryRouter>
+            </I18nextProvider>
+          </LoadingContext.Provider>
         </CartContext.Provider>
       </MockedProvider>,
     )
@@ -89,11 +96,13 @@ describe('Cart view', () => {
         <CartContext.Provider
           value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 2, removeFromCart: () => alert('test') }}
         >
-          <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/cart']}>
-              <Cart />
-            </MemoryRouter>
-          </I18nextProvider>
+          <LoadingContext.Provider value={{ isLoading: false, setIsLoading: jest.fn }}>
+            <I18nextProvider i18n={i18n}>
+              <MemoryRouter initialEntries={['/cart']}>
+                <Cart />
+              </MemoryRouter>
+            </I18nextProvider>
+          </LoadingContext.Provider>
         </CartContext.Provider>
       </MockedProvider>,
     )
@@ -112,11 +121,13 @@ describe('Cart view', () => {
         <CartContext.Provider
           value={{ cartId: 'gid://shopify/Cart/123456789', cartSize: 2, removeFromCart: () => alert('test') }}
         >
-          <I18nextProvider i18n={i18n}>
-            <MemoryRouter initialEntries={['/cart?missingItems=true']}>
-              <Cart />
-            </MemoryRouter>
-          </I18nextProvider>
+          <LoadingContext.Provider value={{ isLoading: false, setIsLoading: jest.fn }}>
+            <I18nextProvider i18n={i18n}>
+              <MemoryRouter initialEntries={['/cart?missingItems=true']}>
+                <Cart />
+              </MemoryRouter>
+            </I18nextProvider>
+          </LoadingContext.Provider>
         </CartContext.Provider>
       </MockedProvider>,
     )

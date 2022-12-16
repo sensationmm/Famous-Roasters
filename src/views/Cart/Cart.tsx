@@ -79,6 +79,7 @@ export const Cart: React.FC = () => {
   useEffect(() => {
     return () => {
       clearTimeout(timeout)
+      setIsLoading(false)
     }
   }, [])
 

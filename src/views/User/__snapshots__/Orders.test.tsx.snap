@@ -126,7 +126,7 @@ exports[`Orders view Handles error call 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//www.60beans.com/profile"
+                  href="/profile"
                 >
                   <svg
                     class="undefined"
@@ -709,7 +709,7 @@ exports[`Orders view Renders correctly 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//www.60beans.com/profile"
+                  href="/profile"
                 >
                   <svg
                     class="undefined"
@@ -1756,7 +1756,7 @@ exports[`Orders view Renders correctly with no orders 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//www.60beans.com/profile"
+                  href="/profile"
                 >
                   <svg
                     class="undefined"
@@ -2339,7 +2339,7 @@ exports[`Orders view Renders correctly with no orders and filter set 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//www.60beans.com/profile"
+                  href="/profile"
                 >
                   <svg
                     class="undefined"
@@ -2917,7 +2917,7 @@ exports[`Orders view sets filter value 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//www.60beans.com/profile"
+                  href="/profile"
                 >
                   <svg
                     class="undefined"
@@ -3495,7 +3495,7 @@ exports[`Orders view sets sort newest first 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//www.60beans.com/profile"
+                  href="/profile"
                 >
                   <svg
                     class="undefined"
@@ -4542,7 +4542,7 @@ exports[`Orders view sets sort oldest first 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//www.60beans.com/profile"
+                  href="/profile"
                 >
                   <svg
                     class="undefined"

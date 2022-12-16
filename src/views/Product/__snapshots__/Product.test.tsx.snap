@@ -1440,7 +1440,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                 </div>
                 <a
                   class="hidden xl:block ml-10"
-                  href="//www.60beans.com/profile"
+                  href="/profile"
                 >
                   <svg
                     class="undefined"
