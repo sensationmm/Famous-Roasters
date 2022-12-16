@@ -93,7 +93,7 @@ export const Cart: React.FC = () => {
   }, [cartId])
 
   useEffect(() => {
-    if (data && data.cart && !cartContents) {
+    if (data && data.cart) {
       setCartContents(data.cart)
     }
   }, [data])
