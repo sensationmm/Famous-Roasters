@@ -7,7 +7,6 @@ import { Typography, TypographySize, TypographyType } from '../Typography'
 
 type RawHit = {
   id: string
-  handle: string
   title: string
   image: string
   product_image: string
@@ -33,7 +32,6 @@ const Hit = ({ hit }: { hit: RawHit }) => {
   const showFrom = hit.variants_count > 1
   const {
     id,
-    handle,
     image,
     title,
     vendor,
@@ -53,7 +51,7 @@ const Hit = ({ hit }: { hit: RawHit }) => {
   const textLineClassNames = outOfStock ? 'text-coreUI-text-tertiary' : 'text-coreUI-text-secondary'
 
   return (
-    <Link key={`product-tile-link-${id}`} to={`/product/${handle}`} state={{ prevPath: location.pathname }}>
+    <Link key={`product-tile-link-${id}`} to={`/product/${id}`} state={{ prevPath: location.pathname }}>
       <div className="flex pt-8 md:px-6">
         <div className="flex justify-center items-center shrink-0 relative w-36 h-36">
           <div className="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36">

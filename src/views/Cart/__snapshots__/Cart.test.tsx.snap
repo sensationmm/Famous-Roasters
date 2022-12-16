@@ -349,7 +349,7 @@ exports[`Cart view Renders correctly 1`] = `
             >
               <a
                 class="flex justify-center items-center rounded-full bg-coreUI-background-images w-36 h-36"
-                href="/product/23232323"
+                href="/product/7655228866776"
               >
                 <img
                   alt="60beans"
