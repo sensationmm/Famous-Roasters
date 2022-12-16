@@ -563,12 +563,12 @@ export const ProductMock = {
   request: {
     query: GET_PRODUCT,
     variables: {
-      id: "espresso-raritaten-set",
+      id: "gid://shopify/Product/7655228866776",
     },
   },
   result: {
     data: {
-      productByHandle: ProductMockData,
+      product: ProductMockData,
     },
   },
 }
@@ -577,12 +577,12 @@ export const ProductMockWithCustomMetadata = {
   request: {
     query: GET_PRODUCT,
     variables: {
-      id: "espresso-raritaten-set",
+      id: "gid://shopify/Product/7655228866776",
     },
   },
   result: {
     data: {
-      productByHandle: ProductMockDataWithCustomMetadata,
+      product: ProductMockDataWithCustomMetadata,
     },
   },
 }
@@ -591,12 +591,12 @@ export const ProductMockWithCustomMetadataNoAroma = {
   request: {
     query: GET_PRODUCT,
     variables: {
-      id: "espresso-raritaten-set",
+      id: "gid://shopify/Product/7655228866776",
     },
   },
   result: {
     data: {
-      productByHandle: {
+      product: {
         ...ProductMockDataWithCustomMetadata,
         aroma: null,
       },
@@ -608,12 +608,12 @@ export const ProductMockWithCustomMetadataInternationalVendor = {
   request: {
     query: GET_PRODUCT,
     variables: {
-      id: "espresso-raritaten-set",
+      id: "gid://shopify/Product/7655228866776",
     },
   },
   result: {
     data: {
-      productByHandle: {
+      product: {
         ...ProductMockDataWithCustomMetadata,
         vendor: 'Nomad',
       },
@@ -625,12 +625,12 @@ export const ProductMockAccessory = {
   request: {
     query: GET_PRODUCT,
     variables: {
-      id: "espresso-raritaten-set",
+      id: "gid://shopify/Product/7655228866776",
     },
   },
   result: {
     data: {
-      productByHandle: AccessoryMockDataBaseWithVariant,
+      product: AccessoryMockDataBaseWithVariant,
     },
   },
 }
@@ -639,7 +639,7 @@ export const ProductMockError = {
   request: {
     query: GET_PRODUCT,
     variables: {
-      id: "espresso-raritaten-set",
+      id: "gid://shopify/Product/7655228866776",
     },
   },
   result: {

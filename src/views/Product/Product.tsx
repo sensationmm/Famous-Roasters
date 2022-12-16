@@ -36,7 +36,7 @@ import {
   TypographyType,
 } from 'src/components'
 import useBreakpoint from 'src/hooks/useBreakpoint'
-import { formatPrice, parseHtmlSafely } from 'src/utils'
+import { formatPrice, getAPIId, parseHtmlSafely } from 'src/utils'
 import { Error } from 'src/views/Error'
 
 import { FindSimilar } from './FindSimilar'
@@ -87,7 +87,7 @@ export interface ProductCustom extends ProductType {
 }
 
 export interface ProductQuery {
-  productByHandle: ProductCustom
+  product: ProductCustom
 }
 
 export const Product: React.FC = () => {
@@ -134,7 +134,7 @@ export const Product: React.FC = () => {
 
   const { loading, error, data } = useQuery<ProductQuery>(GET_PRODUCT, {
     variables: {
-      id: id || '',
+      id: getAPIId(id || ''),
     },
   })
 
@@ -166,9 +166,9 @@ export const Product: React.FC = () => {
     extraDescription,
     pricePerKg,
     isGiftCard,
-  } = data?.productByHandle || {}
+  } = data?.product || {}
 
-  const collectionsList = collections?.edges.map((e) => e.node.handle) || []
+  const collectionsList = collections?.edges.map((e) => e.node.id) || []
   const isCoffee = collectionsList.find((el) => el === 'coffee') !== undefined
   const isAccessory = productType === 'Accessories'
   const isInternational = vendor === 'Nomad' // TODO: update to use the backend once updated
@@ -189,7 +189,7 @@ export const Product: React.FC = () => {
         : setPackageSizes(packageSizesValues()))
   }, [variantSelected])
 
-  if (data !== undefined && data?.productByHandle === null) {
+  if (data !== undefined && data?.product === null) {
     return <Error />
   }
 

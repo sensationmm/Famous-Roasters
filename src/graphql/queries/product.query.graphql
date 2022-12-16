@@ -1,5 +1,5 @@
-query product($id: String!) {
-  productByHandle(handle: $id) {
+query product($id: ID!) {
+  product(id: $id) {
     id
     title
     seo {

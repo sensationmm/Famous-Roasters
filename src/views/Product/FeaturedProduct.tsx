@@ -22,7 +22,7 @@ import {
   TypographySize,
   TypographyType,
 } from 'src/components'
-import { toRoundedValueInRealScale, useLocalStorage } from 'src/utils'
+import { getAPIId, toRoundedValueInRealScale, useLocalStorage } from 'src/utils'
 
 import { TasteFinderField } from '../TasteFinder'
 import { ProductQuery } from '.'
@@ -41,11 +41,11 @@ export const FeaturedProduct: React.FC = () => {
 
   const { loading, error, data } = useQuery<ProductQuery>(GET_PRODUCT, {
     variables: {
-      id: id || '',
+      id: getAPIId(id || ''),
     },
   })
 
-  const { aroma, images, title, whyThisCoffee } = data?.productByHandle || {}
+  const { aroma, images, title, whyThisCoffee } = data?.product || {}
 
   const getMatchScore = () => {
     const recommendations =
@@ -109,7 +109,7 @@ export const FeaturedProduct: React.FC = () => {
     )
   }
 
-  if (error || !data?.productByHandle) {
+  if (error || !data?.product) {
     return <ErrorPrompt promptAction={() => history.go(0)} />
   }
 
@@ -171,10 +171,10 @@ export const FeaturedProduct: React.FC = () => {
               <img src={images?.nodes[0].url} alt={title} className="w-full w-3/4 h-auto shrink-0 grow-0" />
             </div>
           </Link>
-          {data?.productByHandle && (
+          {data?.product && (
             <Link to={`/product/${id}`} className="flex flex-col w-fit">
               <ProductTile
-                productNode={data?.productByHandle}
+                productNode={data?.product}
                 featured={true}
                 showImage={false}
                 showFrom={true}
