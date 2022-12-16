@@ -73,13 +73,12 @@ export const Cart: React.FC = () => {
   let timeout: ReturnType<typeof setTimeout>
   const client = famousRoastersClient()
   const [userProfile, setUserProfile] = useState<UserProfile>()
-  const { isLoading, setIsLoading } = useContext(LoadingContext)
+  const { isLoading } = useContext(LoadingContext)
   const [cartContents, setCartContents] = useState<CartQueryQuery['cart']>()
 
   useEffect(() => {
     return () => {
       clearTimeout(timeout)
-      setIsLoading(false)
     }
   }, [])
 
@@ -330,13 +329,7 @@ export const Cart: React.FC = () => {
         <div className="relative grid gap-4 md:grid-cols-2 md:my-6 md:w-1/2 md:left-1/2">
           <div className="grid md:order-2 justify-items-end">
             <a id="toCheckout" href={generateCheckoutUrl()} className="flex w-full" data-testid="goToCheckout">
-              <Button
-                type="button"
-                emphasis={ButtonEmphasis.Primary}
-                size={ButtonSize.md}
-                fullWidth
-                onClick={() => setIsLoading(true)}
-              >
+              <Button type="button" emphasis={ButtonEmphasis.Primary} size={ButtonSize.md} fullWidth>
                 {t('pages.cart.ctaCheckout')}
               </Button>
             </a>
