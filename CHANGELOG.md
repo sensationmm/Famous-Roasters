@@ -1,3 +1,10 @@
+## [1.110.3](https://github.com/Famous-Roasters/frontend/compare/v1.110.2...v1.110.3) (2022-12-16)
+
+
+### Bug Fixes
+
+* **cart:** cart total not updating ([1eeb1a3](https://github.com/Famous-Roasters/frontend/commit/1eeb1a388122da439bccd6c1fdf960d4b5665d25))
+
 ## [1.110.2](https://github.com/Famous-Roasters/frontend/compare/v1.110.1...v1.110.2) (2022-12-16)
 
 
