@@ -1,3 +1,10 @@
+## [1.110.2](https://github.com/Famous-Roasters/frontend/compare/v1.110.1...v1.110.2) (2022-12-16)
+
+
+### Bug Fixes
+
+* **product:** revert product slug in url ([7aba89e](https://github.com/Famous-Roasters/frontend/commit/7aba89ece8313b00d8121db97ba30bf54276df34))
+
 ## [1.110.1](https://github.com/Famous-Roasters/frontend/compare/v1.110.0...v1.110.1) (2022-12-15)
 
 
