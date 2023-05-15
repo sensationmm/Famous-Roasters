@@ -2356,22 +2356,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
                 </div>
                 <div
                   class="mt-1"
-                >
-                  <span
-                    class="text-coreUI-text-secondary text-xs leading-4"
-                  >
-                    Wichtige Informationen über angepasste Lieferzeiten findest du
-                     
-                    <a
-                      class="underline"
-                      href="https://www.60beans.com/angepasste-lieferzeiten"
-                      target="_blank"
-                    >
-                      hier
-                    </a>
-                    .
-                  </span>
-                </div>
+                />
               </div>
             </div>
           </div>
@@ -2467,22 +2452,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
         </div>
         <div
           class="mt-1"
-        >
-          <span
-            class="text-coreUI-text-secondary text-xs leading-4"
-          >
-            Wichtige Informationen über angepasste Lieferzeiten findest du
-             
-            <a
-              class="underline"
-              href="https://www.60beans.com/angepasste-lieferzeiten"
-              target="_blank"
-            >
-              hier
-            </a>
-            .
-          </span>
-        </div>
+        />
       </div>
       <div
         class="w-full max-w-7xl mx-auto px-6 xl:px-8"
@@ -2818,7 +2788,7 @@ exports[`Product view Renders correctly for a successful call 1`] = `
         <span
           class="text-center text-base leading-6"
         >
-          © 2022 60beans. Alle Rechte vorbehalten.
+          © 2023 60beans. Alle Rechte vorbehalten.
         </span>
         <br />
         <span

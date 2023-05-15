@@ -477,7 +477,7 @@ exports[`Blog List By Category View Renders correctly when no results found 1`] 
         <span
           class="text-center text-base leading-6"
         >
-          © 2022 60beans. Alle Rechte vorbehalten.
+          © 2023 60beans. Alle Rechte vorbehalten.
         </span>
         <br />
         <span
@@ -1247,7 +1247,7 @@ exports[`Blog List By Category View Renders correctly when results found 1`] = `
         <span
           class="text-center text-base leading-6"
         >
-          © 2022 60beans. Alle Rechte vorbehalten.
+          © 2023 60beans. Alle Rechte vorbehalten.
         </span>
         <br />
         <span

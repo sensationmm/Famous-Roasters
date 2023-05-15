@@ -282,7 +282,7 @@ exports[`Footer component Renders correctly 1`] = `
       <span
         class="text-center text-base leading-6"
       >
-        © 2022 60beans. Alle Rechte vorbehalten.
+        © 2023 60beans. Alle Rechte vorbehalten.
       </span>
       <br />
       <span
