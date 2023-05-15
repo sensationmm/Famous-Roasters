@@ -1,24 +1,5 @@
 # 60beans - Frontend
 
-<!-- Status -->
-
-## Status
-
-[![Test and Build](https://github.com/Famous-Roasters/frontend/actions/workflows/build.yml/badge.svg)](https://github.com/Famous-Roasters/frontend/actions/workflows/build.yml)
-[![Test, Build and Deploy](https://github.com/Famous-Roasters/frontend/actions/workflows/build_main.yml/badge.svg)](https://github.com/Famous-Roasters/frontend/actions/workflows/build_main.yml)
-
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Famous-Roasters_frontend&metric=sqale_rating&token=d444da0936f388e6ec530f34ff77f9005eb8805d)](https://sonarcloud.io/summary/new_code?id=Famous-Roasters_frontend)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=Famous-Roasters_frontend&metric=reliability_rating&token=d444da0936f388e6ec530f34ff77f9005eb8805d)](https://sonarcloud.io/summary/new_code?id=Famous-Roasters_frontend)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Famous-Roasters_frontend&metric=security_rating&token=d444da0936f388e6ec530f34ff77f9005eb8805d)](https://sonarcloud.io/summary/new_code?id=Famous-Roasters_frontend)
-
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=Famous-Roasters_frontend&metric=bugs&token=d444da0936f388e6ec530f34ff77f9005eb8805d)](https://sonarcloud.io/summary/new_code?id=Famous-Roasters_frontend)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=Famous-Roasters_frontend&metric=coverage&token=d444da0936f388e6ec530f34ff77f9005eb8805d)](https://sonarcloud.io/summary/new_code?id=Famous-Roasters_frontend)
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=Famous-Roasters_frontend&metric=code_smells&token=d444da0936f388e6ec530f34ff77f9005eb8805d)](https://sonarcloud.io/summary/new_code?id=Famous-Roasters_frontend)
-[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=Famous-Roasters_frontend&metric=sqale_index&token=d444da0936f388e6ec530f34ff77f9005eb8805d)](https://sonarcloud.io/summary/new_code?id=Famous-Roasters_frontend)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=Famous-Roasters_frontend&metric=vulnerabilities&token=d444da0936f388e6ec530f34ff77f9005eb8805d)](https://sonarcloud.io/summary/new_code?id=Famous-Roasters_frontend)
-
----
-
 <!-- Environments -->
 
 ## Environments
